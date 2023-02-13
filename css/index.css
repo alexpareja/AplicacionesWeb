@@ -6,7 +6,7 @@
 
 .logo-contenedor img {
 	position:absolute;
-	transform: translate(350%, -100%);
+	transform: translate(350%, -10%);
 	width: 70%;
 	height: 70%;
 }
