@@ -1,27 +1,27 @@
-/*.logo-contenedor {
+.logo-contenedor {
 	position: absolute; 
-	/*posicion del contenedor se ajusta a su imagen de dentro
+	//posicion del contenedor se ajusta a su imagen de dentro
 	top: 10px;
 	rigth: 10px;
-	/*ponemos el contenedor en la esquina con un margen de 10 pixeles
+	//ponemos el contenedor en la esquina con un margen de 10 pixeles
 	width: 40 px;
 	height: 40px;
-	/*ponemos como tamaño de contenedor 40px alto y ancho
-	border-radius: 50%; /*contenedor con forma circular
-	background-color: #fff; /*fondo en blanco
+	//ponemos como tamaño de contenedor 40px alto y ancho
+	border-radius: 50%; //contenedor con forma circular
+	background-color: #fff; //fondo en blanco
 }
 
 .logo-contenedor img {
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	/*se pone la imagen en el centro del contenedor
-	transform: translate(-50%, -50%); /*ajusta la posicion de la imagen
+	//se pone la imagen en el centro del contenedor
+	transform: translate(-50%, -50%); ajusta la posicion de la imagen
 	width: 70%;
 	height: 70%;
-	/*se ajusta el tamaño de la imagen
+	//se ajusta el tamaño de la imagen
 } 
-*/
+
 
 img {
 	position: absolute;
