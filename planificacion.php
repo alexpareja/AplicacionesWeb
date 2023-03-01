@@ -6,17 +6,9 @@
 		<meta charset="UTF-8">
 	</head>
 	<body>
-		<h2>Páginas</h2>
-  		<div id="páginas">
-   			<ul>
-     			<li><a href="index.html">Index</a></li>
-     			<li><a href="detalles.html">Detalles</a></li>
-     			<li><a href="bocetos.html">Bocetos</a></li>
-     			<li><a href="miembros.html">Miembros</a></li>
-     			<li><a href="planificacion.html">Planificación</a></li>
-     			<li><a href="contacto.html">Contacto</a></li>
-  			</ul>
-  		</div>
+	<?php
+		include("includes/comun/cabecera.php");
+	?>
   		<h1>Planificación</h1>
 		<h3>Tareas a realizar</h3>
 		<p>Para comenzar, es necesario formar el grupo de trabajo y presentar una propuesta inicial del proyecto en formato de documento PDF breve. Esto permitirá establecer las bases del proyecto, incluyendo su alcance, objetivos y planificación, y establecer un acuerdo entre los miembros del grupo. Además, esta propuesta inicial proporcionará un marco de referencia para la implementación del proyecto y permitirá la toma de decisiones informadas en etapas posteriores.</p>

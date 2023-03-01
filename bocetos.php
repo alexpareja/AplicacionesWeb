@@ -6,36 +6,28 @@
 	<meta charset="utf-8">
 </head>
 <body>
-	<h2>Páginas</h2>
-    <div id="páginas">
-      <ul>
-        <li><a href="index.html">Index</a></li>
-        <li><a href="detalles.html">Detalles</a></li>
-        <li><a href="bocetos.html">Bocetos</a></li>
-        <li><a href="miembros.html">Miembros</a></li>
-        <li><a href="planificacion.html">Planificación</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-      </ul>
-    </div>
+
+	<?php
+		include("includes/comun/cabecera.php");
+	?>
+	
 	<h1> Bocetos </h1>
 	<h3> Página Principal </h3>
 	<p> Descripción : Página principal de la tienda. En este se mostrará en un lado las cajas de subscripción siempre disponible
-	 con un enlace a la página de registro. En el otro lado estará la caja de temporada, con un enlace a la tienda. En la barra superior
-	 encontramos las páginas principales a las que se puede acceder haciendo click</p>
+	 con un enlace a la página de registro. En el otro lado estará la caja de temporada, con un enlace a la tienda.</p>
 	<img class="boceto" src="img/b_PPrincipal.png" alt="Boceto de la Pagina Principal">
 	
 	<h3> Página de Tienda </h3>
 	<p> Descripcion: Página de la tienda, donde se encontraran todos nuestro productos en orden. El cliente podrá navegar sobre esta, viendo los 
 	distintos productos. En el lado izquierdo de la pagina encontraremos una sección con filtros, pudiendo el cliente seleccionar lo que el desee
-	y mostrandose los productos según dichos criterios. Al seleccionar un producto se redigirá a la página concetra del producto. 
-	En la barra superior encontramos las páginas principales a las que se puede acceder haciendo click. En caso de estar registrado como administrador
-	se dara la opción de modificar las unidades de los productos, eliminarlos o añadir nuevos productos</p>
+	y mostrandose los productos según dichos criterios. Al seleccionar un producto se redigirá a la página concreta del producto.  En caso de estar 
+	registrado como administrador se dara la opción de modificar las unidades de los productos, eliminarlos o añadir nuevos productos</p>
 	<img class="boceto" src="img/b_Tienda.png" alt="Boceto de la Tienda">
 	
 	<h3> Página de Producto </h3>
 	<p> Descripción: Página que muestra un producto en concreto. Encontramos los detalles del producto, una imagen y su precio. Se puede elegir
 		talla y unidades. Si se decide comprar se añade el producto al carrito, si el usuario esta registrado se añadirá al carrito, sino se redigirá
-		a la página de login. Del mismo modo, si esta registrado podrá añadir el producto a la lista de deseaos, sino serán redirigidos a la página de 
+		a la página de login. Del mismo modo, si esta registrado podrá añadir el producto a la lista de deseos, sino serán redirigidos a la página de 
 		login. En la parte inferior se encontrará la parte de comentarios, y se podrá añadir una review en caso de haber comprado el producto anteriormente
 		Como administrador se pueden editar todos los datos posibles de los productos. </p>
 	<img class="boceto" src="img/b_PProducto.png" alt="Boceto de Pag de producto">
@@ -62,14 +54,14 @@
 	<img class="boceto" src="img/b_PPost.png" alt="Boceto de la Pagina de Post del Blog">
 	
 	<h3> Página de Mi Usuario</h3>
-	<p> Descripción: En caso de estar registrado se mostrarán los datos del usuario (nombre, email, comprar y su tipo de suscripción, 
+	<p> Descripción: En caso de estar registrado se mostrarán los datos del usuario (nombre, email, compras y su tipo de suscripción, 
 	que podrá cambiar si desea en la misma página). Desde esta página se puede acceder a la lista de deseos del usuario.  </p>
 	<img class="boceto" src="img/b_PUsuario.png" alt="Boceto de la Pagina de Mi Usuario">
 	
 	<h3> Página de Registro</h3>
-	<p> Descripción: Si el usuario ya está registrado se le redirigirá a la página de usuario. Se pide introducir los datos personales 
-	(nombre, apellidos, email, contraseña, dirección y la casilla de aceptar términos y condiciones). Al pulsar el botón registrarse se 
-	registra el usuario (en caso de que no haya ningún error) Sino, se mostrará el error que el usuario deberá corregir para poder registrarse.</p>
+	<p> Descripción: Se pide introducir los datos personales (nombre, apellidos, email, contraseña, dirección y la casilla de aceptar términos 
+	y condiciones). Al pulsar el botón registrarse se registra el usuario (en caso de que no haya ningún error). Si no, se mostrará el error que 
+	el usuario deberá corregir para poder registrarse.</p>
 	<img class="boceto" src="img/b_PRegistro.png" alt="Boceto de la Pagina de Registro">
 	
 	<h3> Página de Carrito</h3>

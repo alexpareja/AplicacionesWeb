@@ -6,17 +6,9 @@
   <meta charset="UTF-8">
   </head>
   <body>
-    <h2>Páginas</h2>
-  <div id="páginas">
-   <ul>
-     <li><a href="index.html">Index</a></li>
-     <li><a href="detalles.html">Detalles</a></li>
-     <li><a href="bocetos.html">Bocetos</a></li>
-     <li><a href="miembros.html">Miembros</a></li>
-     <li><a href="planificacion.html">Planificación</a></li>
-     <li><a href="contacto.html">Contacto</a></li>
-  </ul>
-  </div>
+	<?php
+		include("includes/comun/cabecera.php");
+	?>
     <h1>Equipo de la Quinta Caja</h1>
     <ul>
       <li><a href="#lucero">Lucero Abregú</a></li>

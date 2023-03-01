@@ -6,17 +6,9 @@
     <meta charset="UTF-8">
   </head>
   <body>
-    <h2>Páginas</h2>
-    <div id="páginas">
-      <ul>
-        <li><a href="index.html">Index</a></li>
-        <li><a href="detalles.html">Detalles</a></li>
-        <li><a href="bocetos.html">Bocetos</a></li>
-        <li><a href="miembros.html">Miembros</a></li>
-        <li><a href="planificacion.html">Planificación</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-      </ul>
-    </div>
+	<?php
+		include("includes/comun/cabecera.php");
+	?>
     <div class="logo-contenedor">
       <img src="img/logo.png" alt="Logo tienda">
     </div>
