@@ -1,0 +1,19 @@
+#pie {
+  text-align: center; /* Centra los elementos de la lista horizontalmente */
+}
+
+.horizontalpie {
+  display: inline-block; /* Hace que los elementos de la lista estén en línea */
+  list-style: none; /* Quita el estilo de viñeta por defecto */
+  padding: 0; /* Quita el relleno por defecto de la lista */
+}
+
+.horizontalpie li {
+  display: inline-block; /* Hace que cada elemento de la lista esté en línea */
+}
+
+.horizontalpie li a {
+  text-decoration: none; /* Quita el subrayado del enlace */
+  padding: 10px; /* Agrega un relleno alrededor del enlace para separarlos */
+  color: #333; /* Cambia el color del texto del enlace */
+}

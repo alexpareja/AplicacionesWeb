@@ -26,10 +26,13 @@
       <p><label for="message">Mensaje:</label></p>
       <p><textarea id="message" name="message" required></textarea></p>
       <p><input type="checkbox" id="terminos" name="terminos" required>
-      <label for="terminos" class="izq">Marque esta casilla para verificar que ha leído nuestros términos y condiciones del servicio</label></p>
+      <label for="terminos" class="izq">Marque esta casilla para verificar que ha leído nuestros <a href="terminosycondiciones.php">términos y condiciones</a> del servicio</label></p>
       <p><input type="submit" value="Enviar"></p>
     </fieldset>  
     </form>
   </div>
+  <?php
+    include("includes/comun/pie.php");
+  ?>
 </body>
 </html>

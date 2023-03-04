@@ -8,7 +8,6 @@
 <body>
 
 <div id="contenedor">
-
 	<?php
 	include("includes/comun/cabecera.php");
 	?>
@@ -19,10 +18,13 @@
 				<p><label>Email:</label> <input type="text" name="email" /></p>
 				<p><label>Contraseña:</label> <input type="password" name="password" /></p>
 				<button type="submit">Entrar</button>
-				<p>No tengo cuenta <a href="registro.php">Regístrate aquí</a></p>
+				<p>No tengo cuenta. <a href="registro.php">Regístrate aquí</a></p>
 			</fieldset>
 		</form>
 	</div>
+	<?php
+	include("includes/comun/pie.php");
+	?>
 </div> 
 </body>
 </html>

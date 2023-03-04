@@ -99,7 +99,9 @@
 		"Sobre Nosotros" se redirige a la página Sobre Nosotros. Si pulsas en el icono del carrito, se redirige a la página de Carrito en caso de que el 
 		usuario	este registrado. En caso contrario, se redirige a la página de Inicio Sesion. Finalmente, si se pulsa el icono de usuario en caso de que
 		el usuario este registrado se le redirige a la página de Mi Usuario, sino se le redirigirá a la página de Inicio Sesión</p>
-
+	<?php
+	include("includes/comun/pie.php");
+	?>
 	
 </body>
 </html>
