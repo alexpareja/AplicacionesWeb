@@ -50,5 +50,8 @@
 				<td> 5 de marzo de 2023 </td>
 			</tr>
 		</table>
+		<?php
+		include("includes/comun/pie.php");
+		?>
 	</body>
 </html>

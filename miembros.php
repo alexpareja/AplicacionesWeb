@@ -88,5 +88,8 @@
     <span class = "negrita"> Descripción: </span>
     En mi tiempo libre me gusta viajar y descubrir sitios nuevos, así como ver fútbol. Me encanta escuchar música y tengo bastante interés en la informática y los ordenadores. Me apasiona aprender cosas nuevas, sobre todo del espacio exterior.  
   </p>
+  <?php
+  include("includes/comun/pie.php");
+  ?>
   </body>
 </html>

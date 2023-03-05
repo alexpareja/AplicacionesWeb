@@ -22,5 +22,8 @@
        <li><span class = "negrita"> Registrado con suscripción premium: </span>además de todas las ventajas de los usuarios registrados también tienen exclusividad para ventas anticipadas, reciben productos continuamente.</li>
        <li><span class = "negrita"> Administrador: </span>pueden añadir, modificar y eliminar tantos productos como artículos del blog. Podrán consultar la lista de compras realizadas por los usuarios para así poder administrar el inventario.</li>
     </ul>
+  <?php
+  include("includes/comun/pie.php");
+  ?>
   </body>
 </html>

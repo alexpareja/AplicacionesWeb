@@ -1,49 +1,47 @@
-<style>
-  #contact-form {
-    width: 500px;
-    margin: 0 auto;
-    text-align: center;
-  }
+#contact-form {
+  width: 500px;
+  margin: 0 auto;
+  text-align: center;
+}
 
-  form {
-    display: inline-block;
-    text-align: left;
-    padding: 20px;
-    background-color: #f2f2f2;
-    border-radius: 10px;
-  }
-
-  label {
-    display: block;
-    margin-bottom: 10px;
-    font-weight: bold;
-  }
-
-  input[type="text"],
-  input[type="email"],
-  textarea {
-    width: 95%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-  }
-
-  input[type="submit"] {
-    background-color: #800080;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 10px;
-  }
-
-  input[type="submit"]:hover {
-    background-color: #572364;
-  }
-
-  label.izq {
+form {
   display: inline-block;
-  }
-</style>
+  text-align: left;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #fff; 
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 95%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+input[type="submit"] {
+  background-color: #800080;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+input[type="submit"]:hover {
+  background-color: #572364;
+}
+
+label.izq {
+display: inline-block;
+}

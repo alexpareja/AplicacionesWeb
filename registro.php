@@ -39,7 +39,7 @@
         </div>
         <div>
             <p><input type="checkbox" id="terms" name="terms" required>
-            <label for="terms">Acepto los términos y condiciones</label></p>
+            <label for="terms">Acepto los <a href="terminosycondiciones.php">términos y condiciones</a></label></p>
         </div>
         <div>
             <button type="submit">Registrarse</button>
@@ -47,6 +47,9 @@
     </fieldset>
     </form>
     </div>
+    <?php
+    include("includes/comun/pie.php");
+    ?>
 </div>
 </body>
 </html>
