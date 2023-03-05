@@ -1,0 +1,15 @@
+.imgProducto {
+	float: left;
+	margin-right: 20px;
+}
+
+.producto {
+	overflow: hidden;
+}
+
+.corazon {
+
+	width: 15px;
+	height: 15px;
+
+}
