@@ -1,0 +1,31 @@
+.entradaBlog {
+	width: 80%;
+	margin: 0 auto;
+}
+
+.entradaBlog h2 {
+	text-align: center; }
+
+.entrada_contenido{
+	display: flex;
+	justify-content: center;
+}
+
+.entrada_texto {
+	width: 60%;
+	margin-right: 20px; }
+
+.entrada_imagen{
+	width: 30%;
+	float: right; }
+
+.entrada_imagen img {
+	max-width: 100%;
+	height: auto;
+}
+
+.entradas_links {
+	width: 20%;
+	float: left;
+	margin-right: 20px;
+}

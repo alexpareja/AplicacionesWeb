@@ -32,7 +32,7 @@
 <div class="comments">
   <h3>Comentarios</h3>
   <ul>
-   <!--aquí se incluirán los comentarios, sacados de la bbdd-->
+  <!--aquí se incluirán los comentarios, sacados de la bbdd-->
   </ul>
 </div>
 <?php
