@@ -18,15 +18,16 @@
 			echo "<div class='saludo'>Bienvenido, {$_SESSION['nombre']}. <a href='logout.php'>Logout</a></div>";
 		}
 	?>
-			<div id="páginas">
+		
 			<ul class='horizontal'>
 				<li><a href="index.php">Index</a></li>
-				<li><a href="detalles.php">Detalles</a></li>
-				<li><a href="bocetos.php">Bocetos</a></li>
-				<li><a href="miembros.php">Miembros</a></li>
-				<li><a href="planificacion.php">Planificación</a></li>
+				<li><a href="tienda.php">Tienda</a></li>
+				<li><a href="blog.php">Blog</a></li>
+				<li><a href="faqs.php">FAQs</a></li>
 				<li><a href="contacto.php">Contacto</a></li>
+				<li><a href="carrito.php">Carrito</a></li>
+
 			</ul>
-		</div>
+		
 		
 </div>
