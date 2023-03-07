@@ -4,9 +4,7 @@
 	<meta charset="utf-8">
 	<title>La Quinta Caja Login</title>
 </head>
-
 <body>
-
 <div id="contenedor">
 	<?php
 	include("includes/comun/cabecera.php");
@@ -17,6 +15,9 @@
 			<legend>Usuario y contraseña</legend>
 				<p><label>Email:</label> <input type="text" name="email" /></p>
 				<p><label>Contraseña:</label> <input type="password" name="password" /></p>
+				<?php if (isset($error)): ?>
+   				<p><?php echo $error; ?></p>
+  				<?php endif; ?>
 				<button type="submit">Entrar</button>
 				<p>No tengo cuenta. <a href="registro.php">Regístrate aquí</a></p>
 			</fieldset>
