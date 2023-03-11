@@ -1,21 +1,12 @@
 #tienda {
-	min-height: 400px;
-	width: 1800px;
-	float:left;
 	background-color: white;
 	text-align: center;
-}
-
-#productos {
-	width: 1800px;
-	height: 500px;
+	
 }
 
 ul.productos {
 	 overflow-x: hidden;
-     overflow-y: scroll;
-	 	height: 500px;
-
+	 	height: 450px;
 }
 
 ul.productos li{
@@ -35,4 +26,12 @@ display:inline-block;
 	width: 400px;
 	height: 200px;
 
+}
+
+.botonCompras {
+padding: 5px 100px;
+}
+
+::-webkit-scrollbar {
+display: none;
 }

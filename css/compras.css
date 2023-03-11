@@ -1,0 +1,32 @@
+#tienda {
+	background-color: white;
+	text-align: center;
+	 	height: 540px;
+}
+
+table.compras {
+	table-layout: fixed;
+	width:70%;
+	border-collapse: collapse;
+	border: 3px solid black;
+	margin: 0 auto;
+}
+
+th{
+  padding: 15px;
+  border:2px solid black;
+  background-color:red;
+}
+
+td{
+  padding: 5px;
+  border:2px solid  black;
+}
+
+.botonTienda {
+padding: 5px 100px;
+}
+
+::-webkit-scrollbar {
+display: none;
+}

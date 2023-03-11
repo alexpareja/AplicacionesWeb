@@ -1,5 +1,21 @@
 div#menuIzqTienda {
 	padding: 20px;
-	width: 100px;
+	width: 300px;
+	height: 500px;
 	float: left;
+	text-align: center;
+
+}
+
+ul.filtros li{
+font-size:20px;
+display:block;
+padding: 3px;
+
+}
+
+ul.tallas li{
+font-size:20px;
+display:inline-block;
+
 }
