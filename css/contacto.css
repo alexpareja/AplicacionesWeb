@@ -1,47 +1,71 @@
-#contact-form {
-  width: 1000px;
+#contacto-form {
   margin: 0 auto;
-  text-align: center;
-}
-
-form {
-  display: inline-block;
-  text-align: left;
+  max-width: 800px;
+  background-color: #fff;
   padding: 20px;
   border-radius: 10px;
-  background-color: #fff; 
+  box-shadow: 0px 0px 10px #ccc;
 }
 
-label {
+#contacto-form fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+#contacto-form legend {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+#contacto-form label {
   display: block;
+  font-size: 1.2em;
+  font-weight: bold;
   margin-bottom: 10px;
+}
+
+#contacto-form input[type="checkbox"] {
+  display: inline;
+  margin-right: 5px;
+}
+
+#contacto-form label.izq {
+  display: inline-block;
+}
+
+#contacto-form label.terminos {
+  display: inline-block;
+}
+
+#contacto-form label.terminos a{
+  color: #800080;
   font-weight: bold;
 }
 
-input[type="text"],
-input[type="email"],
+#contacto-form input[type="text"],
+#contacto-form input[type="email"],
 textarea {
   width: 95%;
   padding: 10px;
   margin-bottom: 20px;
   border-radius: 5px;
   border: 1px solid #ccc;
+  resize: vertical;
 }
 
-input[type="submit"] {
+#contacto-form button[type="submit"] {
   background-color: #800080;
   color: white;
-  padding: 12px 20px;
+  padding: 7px 7px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 1.2em;
 }
 
-input[type="submit"]:hover {
+#contacto-form button[type="submit"]:hover {
   background-color: #572364;
-}
-
-label.izq {
-display: inline-block;
 }
