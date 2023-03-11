@@ -2,6 +2,7 @@
 <html lang="es">
 <head>
   <title>La Quinta Caja Contacto</title>
+  <link href="css/contacto.css" rel="stylesheet" type="text/css">
   <meta charset="UTF-8">
 </head>
 <body>
@@ -11,7 +12,7 @@
   <div id="contact-form">
     <form action="mailto:laquintacaja@gmail.com" method="post">
       <fieldset>
-      <legend>Contacto</legend>
+      <legend> <h2> Contacto </h2></legend>
       <p><label for="name">Nombre:</label>
       <input type="text" id="name" name="name" required></p>
       <p><label for="email">Email:</label>

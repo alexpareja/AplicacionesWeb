@@ -2,6 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
+	<link href="css/login.css" rel="stylesheet" type="text/css">
 	<title>La Quinta Caja Login</title>
 </head>
 <body>
@@ -9,17 +10,25 @@
 	<?php
 	include("includes/comun/cabecera.php");
 	?>
-	<div id="contenido">
-		<form action="procesarLogin.php" method="POST">
+	<div id="login-form">
+		<form action="procesarLogin.php" method="post">
 			<fieldset>
-			<legend>Usuario y contraseña</legend>
-				<p><label>Email:</label> <input type="text" name="email" /></p>
-				<p><label>Contraseña:</label> <input type="password" name="password" /></p>
+			<legend>Iniciar Sesión</legend>
+			<div>
+                <label for="email">Email:</label>
+				<input id="email" type="text" name="nombreUsuario" />
+            </div>
+            <div>
+                <label for="password">Contraseña:</label>
+				<input id="password" type="password" name="password" />
+            </div>
 				<?php if (isset($error)): ?>
-   				<p><?php echo $error; ?></p>
+   				<p class = "error-message"><?php echo $error; ?></p>
   				<?php endif; ?>
+  			<div>
 				<button type="submit">Entrar</button>
-				<p>No tengo cuenta. <a href="registro.php">Regístrate aquí</a></p>
+			</div>
+				<p class="no-account">No tengo cuenta. <a href="registro.php">Regístrate aquí</a></p>
 			</fieldset>
 		</form>
 	</div>

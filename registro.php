@@ -2,6 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
+    <link href="css/registro.css" rel="stylesheet" type="text/css">
     <title>La Quinta Caja Registro</title>
 </head>
 <body>
@@ -9,17 +10,17 @@
     <?php
     include("includes/comun/cabecera.php");
     ?>
-    <div id="contenido">
+    <div id="registro-form">
     <form action="procesarRegistro.php" method="post">
     <fieldset>
-        <legend>Registro Usuario</legend>
+        <legend>Registrar Usuario</legend>
         <div>
             <p><label for="nombre">Nombre:</label>
-            <input type="nombre" id="nombre" name="nombre" required>
+            <input type="text" id="nombre" name="nombre" required>
         </div></p>
         <div>
             <p><label for="apellidos">Apellidos:</label>
-            <input type="apellidos" id="apellidos" name="apellidos" required></p>
+            <input type="text" id="apellidos" name="apellidos" required></p>
         </div>
         <div>
             <p><label for="email">Email:</label>
@@ -35,14 +36,14 @@
         </div>
         <div>
             <p><label for="direccion">Dirección:</label>
-            <input type="direccion" id="direccion" name="direccion" required></p>
+            <input type="text" id="direccion" name="direccion" required></p>
         </div>
         <div>
             <p><input type="checkbox" id="terms" name="terms" required>
-            <label for="terms">Acepto los <a href="terminosycondiciones.php">términos y condiciones</a></label></p>
+            <label for="terms" class="terminos">Acepto los <a href="terminosycondiciones.php">términos y condiciones</a></label></p>
         </div>
         <div>
-            <button type="submit">Registrarse</button>
+            <button type="submit">Registrar</button>
         </div>
     </fieldset>
     </form>

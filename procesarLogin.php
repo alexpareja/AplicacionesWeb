@@ -9,7 +9,7 @@
 	$pass = isset($_POST['password']) ? $_POST['password'] : null;
 
 	if ($email == null or $pass == null) {
-		$error = 'Contraseña y email incorrectos. Por favor, inténtelo de nuevo.';
+		$error = 'Contraseña o email incorrectos. Por favor, inténtelo de nuevo.';
 		include ("login.php");
 	} else {
 		$db = @mysqli_connect('localhost', 'root', '', 'usuarios');
