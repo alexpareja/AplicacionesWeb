@@ -11,7 +11,7 @@ CREATE TABLE `productos` (
   `id` int(10) UNSIGNED NOT NULL,
   `nombre` varchar(20) NOT NULL,
   `descripcion` text NOT NULL,
-  `precio` decimal(10,0) NOT NULL,
+  `precio` float UNSIGNED NOT NULL,
   `stockXS` int(10) UNSIGNED NOT NULL,
   `stockS` int(10) UNSIGNED NOT NULL,
   `stockM` int(10) UNSIGNED NOT NULL,
@@ -29,7 +29,8 @@ CREATE TABLE `usuarios` (
   `id` int(10) UNSIGNED NOT NULL,
   `nombre` varchar(20) NOT NULL,
   `apellido1` varchar(20) NOT NULL,
-  `apellido2` varchar(20) NOT NULL,
+  `apellido2` varchar(20),
+  `password` varchar(30) NOT NULL,
   `correo` varchar(20) NOT NULL,
   `direccion` varchar(35) NOT NULL,
   `rol` enum('A','P','U') NOT NULL
@@ -41,7 +42,7 @@ CREATE TABLE `compras` (
   `producto` int(10) UNSIGNED NOT NULL,
   `fecha` datetime NOT NULL,
   `cantidad` int(10) UNSIGNED NOT NULL,
-  `precio` decimal(10,0) UNSIGNED NOT NULL
+  `precio` float UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -68,7 +69,9 @@ ALTER TABLE `productos`
 --
 ALTER TABLE `usuarios`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `nombreUsuario` (`nombre`);
+  ADD KEY `nombreUsuario` (`nombre`),
+  ADD KEY `correoUsuario` (`correo`);
+
 
 --
 -- AUTO_INCREMENT de las tablas volcadas

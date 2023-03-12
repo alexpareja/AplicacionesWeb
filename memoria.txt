@@ -1,3 +1,40 @@
+
+
+Scripts vista
+
+-MostrarProducto.php
+Esta clase muestra la página de compra de un producto concreto. Se accede desde la página de la tienda, haciendo clic en un producto existente.
+Se mostrará el nombre, descripción, imagen y precio del producto (haciendo uso de la clase Producto).
+Se muestra un formulario para comprar un producto, en el que se escogerá la cantidad. El producto deseado se añadirá al carrito.
+En posteriores versiones se podrán dejar comentarios con valoración en cada producto, además de guardar el producto en favoritos.
+
+
+Scripts adicionales
+
+-Producto.php
+Este script creará una clase producto, con toda la funcionalidad requerida para trabajar con los productos de la tienda. Para acceder a la BBDD
+esta clase hará uso de ProductoDAO.php. Tendrá métodos para mostrar todos los atributos de un producto y tendrá métodos que invocarán
+al DAO para acceder a la base de datos. Estos son buscar, crear, borrar y obtener todos los productos de la tienda.
+
+-ProductoDAO.php
+Este script aplica el patrón DAO, para acceder a la BBDD. Es invocado por Producto.php. Los métodos de Producto.php que necesiten acceder
+a la BBDD, crearán un objeto ProductoDAO que accederá a esta y realizará la consulta correspondiente, devolviendo los resultados necesarios en cada caso.
+            !!!!Tengo que mirar los metodos estaticos, creo que los tengo que quitar
+-Usuario.php
+Este script creará una clase usuario, con toda la funcionalidad requerida para trabajar con los usuarios guardados . Para acceder a la BBDD
+esta clase hará uso de UsuarioDAO.php. Tendrá métodos para mostrar todos los atributos de un usuario y tendrá métodos que invocarán
+al DAO para acceder a la base de datos. Estos son buscar, crear, borrar, cambiar rol y hacer login.
+        
+
+-UsuarioDAO.php
+Este script aplica el patrón DAO, para acceder a la BBDD. Es invocado por Usuario.php. Los métodos de Usuario.php que necesiten acceder
+a la BBDD, crearán un objeto UsuarioDAO que accederá a esta y realizará la consulta correspondiente, devolviendo los resultados necesarios en cada caso.
+            !!!!Tengo que mirar los metodos estaticos, creo que los tengo que quitar
+
+-Aplicacion.php
+
+-configuracion.php
+
 Base de Datos
 La base de datos se creará mediante el archivo crearBBDD.sql
 Esta base de datos se llamará laquintacaja
