@@ -1,0 +1,39 @@
+Base de Datos
+-Tabla Usuarios(id,nombre,apellido1,apellido2,correo,dirección,rol)
+La id será un número incremental autoasignado. Esta será la clave primaria.
+El nombre y el apellido 1 serán obligatorios, y el segundo opcional. Estos tres campos serán strigns. El correo será único y deberá ser de tipo correo.
+La dirección también será de tipo string. 
+Finalmente, rol será un char que indicará el tipo de usuario. 'A' para admin, 'U' para usuario regular, 'P' para usuario premium.
+
+-Tabla Productos(id,nombre,descripción,precio,stockXS,stockS,stockM,stockL,stockXL)
+La id será un número incremental autoasignado. Esta será la clave primaria.
+El nombre será un string que identifique al producto.
+La descripción será un texto, explicando características del producto.
+El precio será un número decimal, que indicará su valor monetario.
+Los campos stockTalla, indican el número de productos disponibles para cada talla de producto.
+
+-Tabla Compras(idCompra,producto,usuario,fecha)
+La id será un número incremental autoasignado. Esta será la clave primaria.
+Producto será un número entero. Esta será una clave foránea, que referencia al id del producto.
+Usuario será un número entero. Esta será una clave foránea, que referencia al id del usuario.
+Fecha será un tipo fecha, que será obtenido con un timestamp al realizar la compra.
+
+-Tabla Blog(id,titulo,contenido)
+La id será un número incremental autoasignado. Esta será la clave primaria.
+El título será un string que identifique a la entrada del blog.
+Contenido será un texto. Este será el contenido de la entrada.
+
+-Tabla ComentariosBlog(id,entradaBlog,usuario,contenido,fecha)
+La id será un número incremental autoasignado. Esta será la clave primaria.
+EntradaBlog será un número entero. Esta será una clave foránea, que referencia al id de la entrada donde se ha comentado.
+Usuario será un número entero. Esta será una clave foránea, que referencia al id del usuario que comente.
+Contenido será un texto, que será el mensaje que deje el usuario.
+Fecha será un tipo fecha, que será obtenido con un timestamp al realizar el comentario.
+
+-Tabla ComentariosProducto(id,producto,usuario,contenido,fecha,review)
+La id será un número incremental autoasignado. Esta será la clave primaria.
+Producto será un número entero. Esta será una clave foránea, que referencia al id del producto valorado.
+Usuario será un número entero. Esta será una clave foránea, que referencia al id del usuario que comente.
+Contenido será un texto, que será el mensaje que deje el usuario.
+Fecha será un tipo fecha, que será obtenido con un timestamp al realizar el comentario.
+Review será un número entre 0 y 5, que identifique la valoración del usuario (0 a 5 estrellas).
