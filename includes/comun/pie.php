@@ -13,7 +13,7 @@
 		</ul>
 		<br>
 		<ul class='horizontalpie'>
-			<li><a href="index.php">Index</a></li>
+			<li><a href="index.php">Propuesta</a></li>
 				<li><a href="detalles.php">Detalles</a></li>
 				<li><a href="bocetos.php">Bocetos</a></li>
 				<li><a href="miembros.php">Miembros</a></li>

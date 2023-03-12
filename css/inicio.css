@@ -1,0 +1,19 @@
+.contenedor-cajas {
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+	justify-content: center;
+	height: 60vh;
+}
+
+.caja1 {
+	margin-right: 10px;
+	width: 20vm;
+	max-width: 50%;
+}
+
+.caja2 {
+	margin-left: 10px;
+	width: 20vm;
+	max-width: 50%;
+}

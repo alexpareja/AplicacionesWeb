@@ -1,12 +1,19 @@
-.logo-contenedor {
-	position: absolute;
-	width: 90px;
-	height: 90px;
+.contenedor-imagen {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 60vh;
 }
 
-.logo-contenedor img {
-	position:absolute;
-	transform: translate(350%, -10%);
-	width: 70%;
-	height: 70%;
+.propuesta {
+	width: 100vm;
+	max-width: 100%;
+}
+
+body p {
+	margin-right: 40px;
+	margin-left: 40px;
+	margin-bottom: 40px;
+	margin-top: 40px;
+	text-align: justify;
 }

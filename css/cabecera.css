@@ -11,21 +11,45 @@ div.saludo {
 	font-size:20px;
 }
 
-
-ul.horizontal{
-margin:0;
-padding:0;
+.paginas{
+	display: flex; //imagen y titulo se alinean y mueven juntos
+	align-items: center; //centrado verticalmente
+	flex-direction: column;
+	justify-content: center; //centrado horizontalmente
+	height: 100vh; //altura del contenedor como el 100% de la ventana
 }
 
-ul.horizontal li{
-font-size:20px;
-display:inline-block;
-padding:0 60px;
+.horizontal{
+	display: flex;
+	list-style: none;
+}
 
+.horizontal li{
+	font-size: 20px;
+	margin: 0px;
 }
 
 .horizontal li a {
   text-decoration: none;
   color: #333;
-
+  padding: 0px 10px;
 }
+
+.contenedor {
+	display: flex; //imagen y titulo se alinean y mueven juntos
+	align-items: center; //centrado verticalmente
+	flex-direction: column;
+	justify-content: center; //centrado horizontalmente
+	height: 100vh; //altura del contenedor como el 100% de la ventana
+}
+
+.logo {
+	width: 90px;
+	height: 90px;
+}
+
+.titulo{
+	font-size: 36px;
+	text-align: center;
+}
+
