@@ -1,4 +1,8 @@
 Base de Datos
+La base de datos se creará mediante el archivo crearBBDD.sql
+Esta base de datos se llamará laquintacaja
+                    !!!!Crear usuario para la BBDD, y así no usar root
+
 -Tabla Usuarios(id,nombre,apellido1,apellido2,correo,dirección,rol)
 La id será un número incremental autoasignado. Esta será la clave primaria.
 El nombre y el apellido 1 serán obligatorios, y el segundo opcional. Estos tres campos serán strigns. El correo será único y deberá ser de tipo correo.
@@ -12,11 +16,14 @@ La descripción será un texto, explicando características del producto.
 El precio será un número decimal, que indicará su valor monetario.
 Los campos stockTalla, indican el número de productos disponibles para cada talla de producto.
 
--Tabla Compras(idCompra,producto,usuario,fecha)
+-Tabla Compras(idCompra,producto,usuario,fecha,cantidad,precio)
 La id será un número incremental autoasignado. Esta será la clave primaria.
 Producto será un número entero. Esta será una clave foránea, que referencia al id del producto.
 Usuario será un número entero. Esta será una clave foránea, que referencia al id del usuario.
 Fecha será un tipo fecha, que será obtenido con un timestamp al realizar la compra.
+Cantidad será un entero que indique el número de productos comprados y precio un double que indique el dinero gastado.
+
+    Estas tres primeras tablas se crearán con el archivo tiendaBBDD.sql
 
 -Tabla Blog(id,titulo,contenido)
 La id será un número incremental autoasignado. Esta será la clave primaria.
@@ -37,3 +44,5 @@ Usuario será un número entero. Esta será una clave foránea, que referencia a
 Contenido será un texto, que será el mensaje que deje el usuario.
 Fecha será un tipo fecha, que será obtenido con un timestamp al realizar el comentario.
 Review será un número entre 0 y 5, que identifique la valoración del usuario (0 a 5 estrellas).
+
+    Estas tres  tablas se crearán con el archivo blogBBDD.sql
