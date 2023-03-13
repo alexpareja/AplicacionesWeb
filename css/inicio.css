@@ -1,19 +1,21 @@
 .contenedor-cajas {
 	display: flex;
-	align-items: center;
 	flex-direction: row;
-	justify-content: center;
-	height: 60vh;
+	text-align: center;
+	align-items: center;
+	height: 70vh;
 }
 
 .caja1 {
-	margin-right: 10px;
-	width: 20vm;
-	max-width: 50%;
+	min-width: 278.47px;
+	min-height: 350px;
+	max-width: 60%;
+	max-height: 60%;
 }
 
 .caja2 {
-	margin-left: 10px;
-	width: 20vm;
-	max-width: 50%;
+	min-width: 278.47px;
+	min-height: 350px;
+	max-width: 60%;
+	max-height: 60%;
 }

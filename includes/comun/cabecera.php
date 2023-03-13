@@ -29,6 +29,7 @@
 			<li><a href="tienda.php">Tienda</a></li>
 			<li><a href="blog.php">Blog</a></li>
 			<li><a href="faqs.php">FAQs</a></li>
+			<li><a href="sobrenosotros.php">Nosotros</a></li>
 			<li><a href="contacto.php">Contacto</a></li>
 			<li><a href="carrito.php">Carrito</a></li>
 		</ul>
