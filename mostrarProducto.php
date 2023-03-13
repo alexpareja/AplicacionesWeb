@@ -4,7 +4,6 @@ include_once ("includes/configuracion.php");
 $id=$_GET ["id"];
 $producto=Producto::buscaPorId($id);
 ?>
-
 <!DOCTYPE html>
 <html lang="es">
     <head>
