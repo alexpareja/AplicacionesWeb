@@ -1,10 +1,8 @@
 div#menuIzqTienda {
 	padding: 20px;
-	width: 300px;
 	height: 500px;
 	float: left;
 	text-align: center;
-
 }
 
 ul.filtros li{
@@ -14,8 +12,23 @@ padding: 3px;
 
 }
 
-ul.tallas li{
+ul.checkfiltros li{
 font-size:20px;
 display:inline-block;
 
+}
+
+#menuIzqTienda button[type="submit"] {
+  background-color: #800080;
+  color: white;
+  padding: 7px 7px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  font-size: 1.2em;
+}
+
+#menuIzqTienda button[type="submit"]:hover {
+  background-color: #572364;
 }

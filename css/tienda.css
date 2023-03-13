@@ -16,6 +16,12 @@ display:inline-block;
 
 }
 
+ul.botones li{
+font-size:20px;
+display:inline-block;
+
+}
+
 .productos li a {
   text-decoration: none;
   color: #333;
@@ -34,4 +40,19 @@ padding: 5px 100px;
 
 ::-webkit-scrollbar {
 display: none;
+}
+
+#tienda button[type="submit"] {
+  background-color: #800080;
+  color: white;
+  padding: 7px 7px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  font-size: 1.2em;
+}
+
+#tienda button[type="submit"]:hover {
+  background-color: #572364;
 }

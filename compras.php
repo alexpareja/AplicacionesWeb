@@ -16,11 +16,12 @@
 		require("includes/comun/menuIzqTienda.php");
 		
 	?>
+	
+	
 	<h2>Compras</h2>
 	<form action="tienda.php">
-		<input class="botonTienda" type="submit" value="Tienda" />
+		<button type="submit">Volver a la tienda</button>
 	</form>
-	
 		<div id="compras">
 				<table class="compras">
 					<tr>

@@ -1,7 +1,7 @@
 #tienda {
 	background-color: white;
 	text-align: center;
-	 	height: 540px;
+	height: 540px;
 }
 
 table.compras {
@@ -23,10 +23,22 @@ td{
   border:2px solid  black;
 }
 
-.botonTienda {
-padding: 5px 100px;
-}
 
 ::-webkit-scrollbar {
 display: none;
+}
+
+#tienda button[type="submit"] {
+  background-color: #800080;
+  color: white;
+  padding: 7px 7px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  font-size: 1.2em;
+}
+
+#tienda button[type="submit"]:hover {
+  background-color: #572364;
 }
