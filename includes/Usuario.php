@@ -82,6 +82,11 @@ class Usuario
         return $this->id;
     }
 
+    public function setId($nuevaId)
+    {
+        $this->id=$nuevaId;
+    }
+
     public function getNombre()
     {
         return $this->nombre;

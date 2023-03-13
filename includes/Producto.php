@@ -44,7 +44,7 @@ class Producto
     public static function buscaPorNombre($nombreProducto)
     {
         $ProductoDAO= new ProductoDAO();
-        return $ProductoDAO->buscaPorNombre($idProducto);
+        return $ProductoDAO->buscaPorNombre($nombreProducto);
     }
 
     //devuelve en un array todos los productos de la tienda
@@ -60,7 +60,7 @@ class Producto
         return $ProductoDAO->crea($nombre, $descripcion, $precio);
     }
 
-    public function borra($usuario)
+    public function borra($producto)
     {
         $ProductoDAO= new ProductoDAO();
         return $ProductoDAO->borra($producto->id);
@@ -70,6 +70,13 @@ class Producto
     {
         return $this->id;
     }
+
+    public function setId($nuevaId)
+    {
+        $this->id=$nuevaId;
+    }
+
+
 
     public function getDescripcion()
     {

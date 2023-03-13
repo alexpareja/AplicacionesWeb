@@ -8,12 +8,11 @@ class UsuarioDAO
     public $conn;
     public function __construct() 
     {
-        $conn = Aplicacion::getInstance()->getConexionBd();
+        $this->conn = Aplicacion::getInstance()->getConexionBd();
     }
     //realiza el login, comprobando que el usuario existe y que la contraseña es correcta
-    public static function login($mailUsuario, $password)
+    public function login($mailUsuario, $password)
     {
-        $conn = Aplicacion::getInstance()->getConexionBd();
         $usuario = self::buscaUsuarioMail($mailUsuario);
         if ($usuario && $usuario->compruebaPassword($password)) {
             return self::cargaRoles($usuario);
@@ -23,11 +22,10 @@ class UsuarioDAO
 
 
     //busca el usuario por el mail
-    public static function buscaUsuarioMail($mailUsuario)
+    public function buscaUsuarioMail($mailUsuario)
     {
-        $conn = Aplicacion::getInstance()->getConexionBd();
         $query = sprintf("SELECT * FROM usuarios U WHERE U.correo='%s'", $conn->real_escape_string($mailUsuario));
-        $rs = $conn->query($query);
+        $rs = $this->conn->query($query);
         if ($rs) {
             $fila = $rs->fetch_assoc();
             $user = new Usuario($fila['id'], $fila['nombre'], $fila['apellido1'], $fila['apellido2'], 
@@ -36,17 +34,16 @@ class UsuarioDAO
 
             return $user;
         } else {
-            error_log("Error BD ({$conn->errno}): {$conn->error}");
+            error_log("Error BD ({$this->conn->errno}): {$this->conn->error}");
         }
         return false;
     }
 
     //busca el usuario por el id
-    public static function buscaPorId($idUsuario)
+    public function buscaPorId($idUsuario)
     {
-        $conn = Aplicacion::getInstance()->getConexionBd();
         $query = sprintf("SELECT * FROM usuarios WHERE id=%d", $idUsuario);
-        $rs = $conn->query($query);
+        $rs = $this->conn->query($query);
         if ($rs) {
             $fila = $rs->fetch_assoc();
             $user = new Usuario($fila['id'], $fila['nombre'], $fila['apellido1'], $fila['apellido2'], 
@@ -55,86 +52,80 @@ class UsuarioDAO
 
             return $user;
         } else {
-            error_log("Error BD ({$conn->errno}): {$conn->error}");
+            error_log("Error BD ({$this->conn->errno}): {$this->conn->error}");
         }
-        return $false;
+        return false;
     }
 
     //crea un nuevo usuario
     public static function crea($nombre, $password, $apellido1,$apellido2,$direccion,$correo)
     {
         $nuevoRol='U';
-        $user = new Usuario($nuevaId,$nombreUsuario,$apellido1,$apellido2, self::hashPassword($password), $correo,$direccion,$nuevoRol);
+        $user = new Usuario($nuevaId=null,$nombreUsuario,$apellido1,$apellido2, self::hashPassword($password), $correo,$direccion,$nuevoRol);
         return self::guarda($user);
     }
 
     //inserta nuevo usuario
-    private static function inserta($usuario)
+    private function inserta($usuario)
     {
-        $conn = Aplicacion::getInstance()->getConexionBd();
         $query=sprintf("INSERT INTO usuarios(nombre, apellido1, apellido2, password, correo, direccion, rol) VALUES ('%s', '%s', '%s','%s', '%s', '%s','%c')"
-            , $conn->real_escape_string($usuario->nombre)
-            , $conn->real_escape_string($usuario->apellido1)
-            , $conn->real_escape_string($usuario->apellido2)
-            , $conn->real_escape_string($usuario->password)
-            , $conn->real_escape_string($usuario->correo)
-            ,$conn->real_escape_string($usuario->direccion)
+            , $this->conn->real_escape_string($usuario->nombre)
+            , $this->conn->real_escape_string($usuario->apellido1)
+            , $this->conn->real_escape_string($usuario->apellido2)
+            , $this->conn->real_escape_string($usuario->password)
+            , $this->conn->real_escape_string($usuario->correo)
+            ,$this->conn->real_escape_string($usuario->direccion)
         );
-        if ( $conn->query($query) ) {
-            $usuario->id = $conn->insert_id;
+        if ( $this->conn->query($query) ) {
+            $usuario->setId($conn->insert_id);
             return $usuario;
         } else {
-            error_log("Error BD ({$conn->errno}): {$conn->error}");
+            error_log("Error BD ({$this->conn->errno}): {$this->conn->error}");
         }
         return $false;
     }
 
 
     //borra el usuario
-    private static function borra($idUsuario)
+    private function borra($idUsuario)
     {
-        $conn = Aplicacion::getInstance()->getConexionBd();
         if (!$idUsuario) {
             return false;
         } 
    
-        $query = sprintf("DELETE FROM usuarios U WHERE U.id = %d"
-            , $idUsuario
-        );
-        if ( ! $conn->query($query) ) {
-            error_log("Error BD ({$conn->errno}): {$conn->error}");
+        $query = sprintf("DELETE FROM usuarios WHERE id =%d", $idUsuario);
+        if ( ! $this->conn->query($query) ) {
+            error_log("Error BD ({$this->conn->errno}): {$this->conn->error}");
             return false;
         }
         return true;
     }
 
     //actualiza el usuario a premium
-    private static function hazPremium($usuario)
+    private function hazPremium($usuario)
     {
-        $conn = Aplicacion::getInstance()->getConexionBd();
-        $query=sprintf("UPDATE usuarios U SET rol = 'P' WHERE U.id=%d"
-        ,$usuario->id
+        $query=sprintf("UPDATE usuarios SET rol = 'P' WHERE id=%d"
+        ,$usuario->getId()
         );
-        if ( $conn->query($query) ) {
+        if ( $this->conn->query($query) ) {
             return $usuario
         } else {
-            error_log("Error BD ({$conn->errno}): {$conn->error}");
+            error_log("Error BD ({$this->conn->errno}): {$this->conn->error}");
         }
         
         return false;
     }
 
      //actualiza el usuario a estandar
-     private static function hazEstandar($usuario)
+     private function hazEstandar($usuario)
      {
-         $conn = Aplicacion::getInstance()->getConexionBd();
-         $query=sprintf("UPDATE usuarios U SET rol = 'U' WHERE U.id=%d"
-         ,$usuario->id
+         $query=sprintf("UPDATE usuarios SET rol = 'U' WHERE id=%d"
+         ,$usuario->getId()
          );
-         if ( $conn->query($query) ) {
+         if ( $this->conn->query($query) ) {
              return $usuario
          } else {
-             error_log("Error BD ({$conn->errno}): {$conn->error}");
+             error_log("Error BD ({$this->conn->errno}): {$this->conn->error}");
          }
          
          return false;
@@ -143,7 +134,7 @@ class UsuarioDAO
     //guarda el usuario en la bbdd. Si existe lo actualiza y si no lo crea
     public function guarda($user)
     {
-        if ($this->id !== null) {
+        if ($user->getId()!== null) {
             //return self::actualiza($user);
         }
         return self::inserta($user);
