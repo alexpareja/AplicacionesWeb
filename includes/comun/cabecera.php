@@ -7,33 +7,27 @@
 
 </head>
 
-
 <div id="cabecera">
 	
 	<div class="contenedor">
+		<a href="tienda.php" class="tienda">Tienda </a>
+		<a href="blog.php" class="blog">Blog </a>
+		<a href="sobrenosotros.php" class="nosotros">Nosotros </a>
 		<img class="logo" src="img/logo.png">
-		<h1 class="titulo">La Quinta Caja</h1>
-	</div>
+		<a href="inicio.php"><h1 class="titulo">LA QUINTA CAJA</h1></a>
+		<a href="faqs.php"><img class="ayuda" src="img/ayuda.jpg"></a>
+		<a href="carrito.php"><img class="carrito" src="img/carrito.jpg"></a>
+		
 
 	<?php
 		if(!isset($_SESSION["login"])){
-			echo "<div class='saludo'>Usuario desconocido. <a href='login.php'>Login</a>	</div>";
+			echo "<a href='login.php'><img class='iniciar' src='img/login.jpg'></a>";
 		}	
 		else{
-			echo "<div class='saludo'>Bienvenido, {$_SESSION['nombre']}. <a href='logout.php'>Logout</a></div>";
+			echo "<a href='logout.php'><img class='iniciar' src='img/logout.jpg'></a>";
 		}
 	?>
-	<div class="paginas">
-		<ul class='horizontal'>
-			<li><a href="inicio.php">Inicio</a></li>
-			<li><a href="tienda.php">Tienda</a></li>
-			<li><a href="blog.php">Blog</a></li>
-			<li><a href="faqs.php">FAQs</a></li>
-			<li><a href="sobrenosotros.php">Nosotros</a></li>
-			<li><a href="contacto.php">Contacto</a></li>
-			<li><a href="carrito.php">Carrito</a></li>
-		</ul>
+
 	</div>
-		
 		
 </div>

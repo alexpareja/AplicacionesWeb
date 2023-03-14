@@ -11,7 +11,6 @@
 			<li><a href="terminosycondiciones.php">Términos y Condiciones</a></li>
 			<li><a href="https://www.instagram.com/laquintacaja/">@laquintacaja</a></li>
 		</ul>
-		<br>
 		<ul class='horizontalpie'>
 			<li><a href="index.php">Propuesta</a></li>
 				<li><a href="detalles.php">Detalles</a></li>

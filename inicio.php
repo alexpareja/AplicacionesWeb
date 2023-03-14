@@ -11,10 +11,10 @@
 	?>
 	<div class="contenedor-cajas">
 		<a href="registro.php">
-        	<img src="img/caja-suscripcion.jpg" class="caja1">
+        	<img src="img/caja-normal.jpg" class="caja1">
         </a>
         <a href="tienda.php">
-        	<img src="img/caja-dorada.jpg" class="caja2">
+        	<img src="img/caja-especial.jpg" class="caja2">
         </a>
     </div>
 	<?php
