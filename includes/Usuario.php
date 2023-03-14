@@ -4,7 +4,7 @@ include_once ("UsuarioDAO.php");
 class Usuario
 {
 
-    public const ROL_ADMIN = 'A';
+    public const ROL_ADMIN= 'A';
 
     public const ROL_USUARIO= 'U';
 
@@ -64,18 +64,40 @@ class Usuario
     }
     
     //cambia el rol del usuario a premium
-    public function hazPremium($usuario)
+    public function hazPremium()
     {
         $usuarioDAO= new UsuarioDAO();
-        return $usuarioDAO->hazPremium($usuario);
+        if($usuarioDAO->hazPremium($this))
+        {
+        $this->rol=self::ROL_PREMIUM;
+        return true;
+        }
+        return false;
     }
 
-     //cambia el rol del usuario a premium
-     public function hazEstandar($usuario)
-     {
-         $usuarioDAO= new UsuarioDAO();
-         return $usuarioDAO->hazEstandar($usuario);
-     }
+    //cambia el rol del usuario a estandar
+    public function hazEstandar()
+    {
+        $usuarioDAO= new UsuarioDAO();
+        if($usuarioDAO->hazEstandar($this))
+        {
+        $this->rol=self::ROL_USUARIO;
+        return true;
+        }
+        return false;
+    }
+
+    //cambia el rol del usuario a admin
+    public function hazAdmin()
+    {
+        $usuarioDAO= new UsuarioDAO();
+        if($usuarioDAO->hazAdmin($this))
+        {
+        $this->rol=self::ROL_ADMIN;
+        return true;
+        }
+        return false;
+    }
 
     public function getId()
     {
@@ -105,6 +127,11 @@ class Usuario
     public function getCorreo()
     {
         return $this->correo;
+    }
+
+    public function getPassword()
+    {
+        return $this->password;
     }
 
     public function getDireccion()

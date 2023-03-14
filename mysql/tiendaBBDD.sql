@@ -25,6 +25,8 @@ CREATE TABLE `productos` (
 -- Estructura de tabla para la tabla `usuarios`
 --
 
+
+--Hacer que correo sea único (ya que en el login se usa el correo)
 CREATE TABLE `usuarios` (
   `id` int(10) UNSIGNED NOT NULL,
   `nombre` varchar(20) NOT NULL,

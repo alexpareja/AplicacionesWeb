@@ -14,8 +14,8 @@ class UsuarioDAO
     public function login($mailUsuario, $password)
     {
         $usuario = self::buscaUsuarioMail($mailUsuario);
-        if ($usuario && $usuario->compruebaPassword($password)) {
-            return self::cargaRoles($usuario);
+        if ($usuario && self::compruebaPassword($password,$usuario)) {
+            return $usuario;
         }
         return false;
     }
@@ -24,7 +24,7 @@ class UsuarioDAO
     //busca el usuario por el mail
     public function buscaUsuarioMail($mailUsuario)
     {
-        $query = sprintf("SELECT * FROM usuarios U WHERE U.correo='%s'", $conn->real_escape_string($mailUsuario));
+        $query = sprintf("SELECT * FROM usuarios WHERE correo='%s'", $this->conn->real_escape_string($mailUsuario));
         $rs = $this->conn->query($query);
         if ($rs) {
             $fila = $rs->fetch_assoc();
@@ -57,27 +57,29 @@ class UsuarioDAO
         return false;
     }
 
-    //crea un nuevo usuario
-    public static function crea($nombre, $password, $apellido1,$apellido2,$direccion,$correo)
+    //crea un nuevo usuario, con el rol por defecto de usuario normal
+    public function crea($nombre, $password, $apellido1,$apellido2,$direccion,$correo)
     {
         $nuevoRol='U';
-        $user = new Usuario($nuevaId=null,$nombreUsuario,$apellido1,$apellido2, self::hashPassword($password), $correo,$direccion,$nuevoRol);
+        $hash=password_hash($password, PASSWORD_BCRYPT);
+        $user = new Usuario($nuevaId=null,$nombre,$apellido1,$apellido2, $hash, $correo,$direccion,$nuevoRol);
         return self::guarda($user);
     }
 
     //inserta nuevo usuario
     private function inserta($usuario)
     {
-        $query=sprintf("INSERT INTO usuarios(nombre, apellido1, apellido2, password, correo, direccion, rol) VALUES ('%s', '%s', '%s','%s', '%s', '%s','%c')"
-            , $this->conn->real_escape_string($usuario->nombre)
-            , $this->conn->real_escape_string($usuario->apellido1)
-            , $this->conn->real_escape_string($usuario->apellido2)
-            , $this->conn->real_escape_string($usuario->password)
-            , $this->conn->real_escape_string($usuario->correo)
-            ,$this->conn->real_escape_string($usuario->direccion)
+        $query=sprintf("INSERT INTO usuarios(nombre, apellido1, apellido2, password, correo, direccion, rol) VALUES ('%s', '%s', '%s','%s', '%s', '%s','%s')"
+            , $this->conn->real_escape_string($usuario->getNombre())
+            , $this->conn->real_escape_string($usuario->getApellido1())
+            , $this->conn->real_escape_string($usuario->getApellido2())
+            , $this->conn->real_escape_string($usuario->getPassword())
+            , $this->conn->real_escape_string($usuario->getCorreo())
+            ,$this->conn->real_escape_string($usuario->getDireccion())
+            ,$this->conn->real_escape_string($usuario->getRol())
         );
         if ( $this->conn->query($query) ) {
-            $usuario->setId($conn->insert_id);
+            $usuario->setId($this->conn->insert_id);
             return $usuario;
         } else {
             error_log("Error BD ({$this->conn->errno}): {$this->conn->error}");
@@ -87,7 +89,7 @@ class UsuarioDAO
 
 
     //borra el usuario
-    private function borra($idUsuario)
+    public function borra($idUsuario)
     {
         if (!$idUsuario) {
             return false;
@@ -102,13 +104,13 @@ class UsuarioDAO
     }
 
     //actualiza el usuario a premium
-    private function hazPremium($usuario)
+    public function hazPremium($usuario)
     {
         $query=sprintf("UPDATE usuarios SET rol = 'P' WHERE id=%d"
         ,$usuario->getId()
         );
         if ( $this->conn->query($query) ) {
-            return $usuario
+            return $usuario;
         } else {
             error_log("Error BD ({$this->conn->errno}): {$this->conn->error}");
         }
@@ -117,19 +119,34 @@ class UsuarioDAO
     }
 
      //actualiza el usuario a estandar
-     private function hazEstandar($usuario)
+     public function hazEstandar($usuario)
      {
          $query=sprintf("UPDATE usuarios SET rol = 'U' WHERE id=%d"
          ,$usuario->getId()
          );
          if ( $this->conn->query($query) ) {
-             return $usuario
+             return $usuario;
          } else {
              error_log("Error BD ({$this->conn->errno}): {$this->conn->error}");
          }
          
          return false;
      }
+
+      //actualiza el usuario a admin
+      public function hazAdmin($usuario)
+      {
+          $query=sprintf("UPDATE usuarios SET rol = 'A' WHERE id=%d"
+          ,$usuario->getId()
+          );
+          if ( $this->conn->query($query) ) {
+              return $usuario;
+          } else {
+              error_log("Error BD ({$this->conn->errno}): {$this->conn->error}");
+          }
+          
+          return false;
+      }
 
     //guarda el usuario en la bbdd. Si existe lo actualiza y si no lo crea
     public function guarda($user)
@@ -142,15 +159,9 @@ class UsuarioDAO
 
 
     //comprueba el hash de la contraseña
-    public function compruebaPassword($password)
+    public function compruebaPassword($password,$usuario)
     {
-        return password_verify($password, $this->password);
-    }
-
-    //hashea la contraseña
-    private static function hashPassword($password)
-    {
-        return password_hash($password, PASSWORD_DEFAULT);
+        return password_verify($password, $usuario->getPassword());
     }
 }
 ?>
