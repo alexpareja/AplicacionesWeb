@@ -84,7 +84,7 @@ class UsuarioDAO
         } else {
             error_log("Error BD ({$this->conn->errno}): {$this->conn->error}");
         }
-        return $false;
+        return false;
     }
 
 

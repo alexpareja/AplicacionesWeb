@@ -25,8 +25,6 @@ CREATE TABLE `productos` (
 -- Estructura de tabla para la tabla `usuarios`
 --
 
-
---Hacer que correo sea único (ya que en el login se usa el correo)
 CREATE TABLE `usuarios` (
   `id` int(10) UNSIGNED NOT NULL,
   `nombre` varchar(20) NOT NULL,
@@ -74,7 +72,7 @@ ALTER TABLE `usuarios`
   ADD KEY `nombreUsuario` (`nombre`),
   ADD KEY `correoUsuario` (`correo`);
 
-
+ALTER TABLE `usuarios` ADD UNIQUE(`correo`);
 --
 -- AUTO_INCREMENT de las tablas volcadas
 --
