@@ -1,9 +1,17 @@
+body h1 {
+	font-family: Verdana, monospace;
+}
+
 body ul {
+	font-family: Verdana, monospace;
+	font-size: 15px;
 	margin-right: 10px;
 	text-align: justify;
 }
 
 body p {
+	font-family: Verdana, monospace;
+	font-size: 15px;
 	margin-right: 10px;
 	margin-left: 10px;
 	text-align: justify;

@@ -6,16 +6,16 @@
 	height: 70vh;
 }
 
-.caja1 {
-	min-width: 278.47px;
-	min-height: 350px;
-	max-width: 60%;
-	max-height: 60%;
+.caja1, .caja2 {
+	max-width: 100%;
+	max-height: 100%;
 }
 
 .caja2 {
-	min-width: 278.47px;
-	min-height: 350px;
-	max-width: 60%;
-	max-height: 60%;
+	margin-left: 2px;
 }
+
+a:hover .caja1, a:hover .caja2 {
+	opacity: 0.9;
+}
+

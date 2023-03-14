@@ -9,10 +9,13 @@
 }
 
 .horizontalpie li {
+  margin-top: 30px;
   display: inline-block; /* Hace que cada elemento de la lista esté en línea */
 }
 
 .horizontalpie li a {
+  font-family: Tahoma;
+  font-size: 13px;
   text-decoration: none; /* Quita el subrayado del enlace */
   padding: 10px; /* Agrega un relleno alrededor del enlace para separarlos */
   color: #333; /* Cambia el color del texto del enlace */

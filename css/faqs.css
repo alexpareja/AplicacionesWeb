@@ -1,0 +1,42 @@
+.tit1 {
+	text-align: center;
+	font-weight: bold;
+	font-family: Monaco;
+	font-size: 15px;
+}
+
+.d1 {
+	text-align: center;
+	font-weight: normal;
+	font-family: Monaco;
+	font-size: 13px;
+}
+
+.tit2 {
+	text-align: justify;
+	font-weight: bold;
+	font-family: Monaco;
+	font-size: 15px;
+}
+
+.rectangulo {
+	margin-top: 40px;
+	background-color: white;
+	height: 130px;
+	width: 100vm;
+	padding: 2px;
+}
+
+hr {
+	border:none;
+	border-bottom: 5px solid #800080;
+	background-color: white;
+}
+
+.referencia {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
