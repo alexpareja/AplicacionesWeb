@@ -1,5 +1,12 @@
 h1 {
+	font-family: Futura;
+	font-size: 35px;
 	font-weight: bold;
+}
+
+p, h3, th, td {
+	font-family: Verdana, monospace;
+  	font-size: 15px;
 }
 
 .tabla-resumen {

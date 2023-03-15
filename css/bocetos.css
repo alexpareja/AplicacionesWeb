@@ -1,4 +1,9 @@
-body h1, h3 {
+body h1 {
+	font-family: Futura;
+	font-size: 35px;
+} 
+
+body h3 {
 	font-family: Verdana, monospace;
 }
 

@@ -8,15 +8,15 @@
 
 <div id="pie">
 		<ul class='horizontalpie'>
-			<li><a href="terminosycondiciones.php">Términos y Condiciones</a></li>
-			<li><a href="https://www.instagram.com/laquintacaja/">@laquintacaja</a></li>
+			<li><a href="terminosycondiciones.php" class="referencia">Términos y Condiciones</a></li>
+			<li><a href="https://www.instagram.com/laquintacaja/" class="referencia">@laquintacaja</a></li>
 		</ul>
 		<ul class='horizontalpie'>
-			<li><a href="index.php">Propuesta</a></li>
-				<li><a href="detalles.php">Detalles</a></li>
-				<li><a href="bocetos.php">Bocetos</a></li>
-				<li><a href="miembros.php">Miembros</a></li>
-				<li><a href="planificacion.php">Planificación</a></li>
-				<li><a href="contacto.php">Contacto</a></li>
+			<li><a href="index.php" class="referencia">Propuesta</a></li>
+				<li><a href="detalles.php" class="referencia">Detalles</a></li>
+				<li><a href="bocetos.php" class="referencia">Bocetos</a></li>
+				<li><a href="miembros.php" class="referencia">Miembros</a></li>
+				<li><a href="planificacion.php" class="referencia">Planificación</a></li>
+				<li><a href="contacto.php" class="referencia">Contacto</a></li>
 		</ul>
 </div>

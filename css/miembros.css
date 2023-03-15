@@ -1,4 +1,4 @@
-img {
+.imagen {
   display: block;
   width: 200px;
   height: 200px;
@@ -6,6 +6,17 @@ img {
   object-fit: cover;
 }
 
-span.negrita {
+.ref, span.negrita {
   font-weight: bold;
+  font-family: Verdana, monospace;
+  font-size: 15px;
+}
+
+h3 {
+  font-family: Verdana, monospace;
+}
+
+h1 {
+  font-family: Futura;
+  font-size: 35px;
 }

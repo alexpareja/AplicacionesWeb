@@ -1,42 +1,60 @@
-.tit1 {
-	text-align: center;
-	font-weight: bold;
-	font-family: Monaco;
-	font-size: 15px;
-}
-
-.d1 {
-	text-align: center;
+.titulo1 {
+	font-family: Futura;
+	font-size: 35px;
 	font-weight: normal;
-	font-family: Monaco;
-	font-size: 13px;
 }
 
-.tit2 {
-	text-align: justify;
+.titulo2 {
+	font-family: Verdana, monospace;
+	font-size: 30px;
 	font-weight: bold;
-	font-family: Monaco;
-	font-size: 15px;
+}
+
+.etiqueta {
+	margin-top: 20px;
+	height: 5px;
+	width: 60px;
+	background-color: #800080;
 }
 
 .rectangulo {
-	margin-top: 40px;
+	height: 150px;
+	margin-left: 5px;
+	margin-right: 5px;
 	background-color: white;
-	height: 130px;
-	width: 100vm;
+	font-family: Verdana, monospace;
+}
+
+.pregunta {
+	height: 20px;
+	width: 80vm;
+	font-size: 15px;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+.respuesta {
+	height: 90px;
+	width: 80vm;
 	padding: 2px;
+	font-size: 13px;
+	font-weight: normal;
+	text-align: justify;
+	background-color: #f2f2f2;
 }
 
-hr {
-	border:none;
-	border-bottom: 5px solid #800080;
-	background-color: white;
+.respuesta p {
+	margin-left: 10px;
+	margin-right: 10px;
 }
 
-.referencia {
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
+.ref {
+	text-decoration: none;
+	color: black;
+	font-weight: bold;
 }
+
+.ref:hover {
+	text-decoration: underline;
+}
+
