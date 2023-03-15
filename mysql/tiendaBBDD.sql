@@ -73,6 +73,7 @@ ALTER TABLE `usuarios`
   ADD KEY `correoUsuario` (`correo`);
 
 ALTER TABLE `usuarios` ADD UNIQUE(`correo`);
+ALTER TABLE `productos` ADD UNIQUE(`nombre`);
 --
 -- AUTO_INCREMENT de las tablas volcadas
 --

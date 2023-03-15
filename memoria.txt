@@ -19,7 +19,7 @@ al DAO para acceder a la base de datos. Estos son buscar, crear, borrar y obtene
 -ProductoDAO.php
 Este script aplica el patrón DAO, para acceder a la BBDD. Es invocado por Producto.php. Los métodos de Producto.php que necesiten acceder
 a la BBDD, crearán un objeto ProductoDAO que accederá a esta y realizará la consulta correspondiente, devolviendo los resultados necesarios en cada caso.
-            !!!!Tengo que mirar los metodos estaticos, creo que los tengo que quitar
+    
 -Usuario.php
 Este script creará una clase usuario, con toda la funcionalidad requerida para trabajar con los usuarios guardados . Para acceder a la BBDD
 esta clase hará uso de UsuarioDAO.php. Tendrá métodos para mostrar todos los atributos de un usuario y tendrá métodos que invocarán
@@ -29,7 +29,18 @@ al DAO para acceder a la base de datos. Estos son buscar, crear, borrar, cambiar
 -UsuarioDAO.php
 Este script aplica el patrón DAO, para acceder a la BBDD. Es invocado por Usuario.php. Los métodos de Usuario.php que necesiten acceder
 a la BBDD, crearán un objeto UsuarioDAO que accederá a esta y realizará la consulta correspondiente, devolviendo los resultados necesarios en cada caso.
-            !!!!Tengo que mirar los metodos estaticos, creo que los tengo que quitar
+           
+
+-Compra.php
+Este script creará una clase compra, con toda la funcionalidad requerida para trabajar con las compras realizadas . Para acceder a la BBDD
+esta clase hará uso de CompraDAO.php. Tendrá métodos para mostrar todos las compras, mostrar todas de un usuario y tendrá métodos que invocarán
+al DAO para acceder a la base de datos. Estos son buscar, crear y borrar.
+        
+
+-CompraDAO.php
+Este script aplica el patrón DAO, para acceder a la BBDD. Es invocado por Compra.php. Los métodos de Compra.php que necesiten acceder
+a la BBDD, crearán un objeto CompraDAO que accederá a esta y realizará la consulta correspondiente, devolviendo los resultados necesarios en cada caso.
+           
 
 -Aplicacion.php
 
