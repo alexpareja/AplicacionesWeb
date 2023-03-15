@@ -54,10 +54,10 @@ class Producto
         return $ProductoDAO->getTienda();
     }
 
-    public static function crea($nombre, $descripcion, $precio)
+    public static function crea($nombre, $descripcion, $precio, $xs, $s, $m, $l, $xl)
     {
         $ProductoDAO= new ProductoDAO();
-        return $ProductoDAO->crea($nombre, $descripcion, $precio);
+        return $ProductoDAO->crea($nombre, $descripcion, $precio, $xs, $s, $m, $l, $xl);
     }
 
     public function borra($producto)
