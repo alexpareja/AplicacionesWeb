@@ -27,7 +27,8 @@ $producto=Producto::buscaPorId($id);
     echo "<h2>$nombre</h2>";
     echo "<p>$desc</p>";
     ?>
-    <form>
+    <form action="carrito.php" method="post">
+      <input type="hidden" name="id" value="<?php echo $id; ?>">
       <label for="talla">Talla:</label>
       <select id="talla" name="size"> <!--las tallas también se sacarán de la base de datos-->
         <option value="xs">XS</option>
