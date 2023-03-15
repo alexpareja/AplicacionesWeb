@@ -22,11 +22,22 @@ require_once __DIR__.'/includes/Producto.php';
 	$l= $_POST['L'];
 	$xl= $_POST['XL'];
 	
-	if(isset($nombre) && isset($precio)){
+	if(isset($nombre) && isset($precio) && isset($_FILES['imagen'])){
+		$imagen = $_FILES['imagen'];
 		$db = @mysqli_connect('localhost', 'root', '', 'laquintacaja');
-		$producto = new Producto("",$nombre,$descripcion,$precio,$xs,$s,$m,$l,$xl);
-		Producto::crea($nombre, $descripcion, $precio, $xs, $s, $m, $l, $xl);
 		
+		$producto = Producto::crea($nombre, $descripcion, $precio, $xs, $s, $m, $l, $xl);
+		
+
+			if($imagen['type'] == 'image/jpeg' || $imagen['type'] == 'image/png') {
+				$nombreImagen = 'producto_'.$producto->getID().'.png'; // Nombre de la imagen que se guardará
+				$ruta = 'img/'.$nombreImagen; // Ruta donde se guardará la imagen
+
+				move_uploaded_file($imagen['tmp_name'], $ruta); // Guardar la imagen en el servidor
+				echo 'La imagen se ha guardado correctamente.';
+			} else {
+				echo 'El archivo seleccionado no es una imagen válida.';
+			}	
 	}
 	else{
 		$error = 'Alguno de los campos obligatorios no ha sido introducido.';
