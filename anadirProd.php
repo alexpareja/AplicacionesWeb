@@ -12,7 +12,7 @@
 	?>
 
 	<div id="newP-form">
-		<form action="procesarNuevoProd.php" method="post">
+		<form action="procesarNuevoProd.php" method="post" enctype="multipart/form-data">
 			<fieldset>
 			<legend>Nuevo Producto</legend>
 			<div>
@@ -28,8 +28,12 @@
 				<p><input id="precio" type="number" step="0.01" min="0" name="precio"/></p>
             </div>
 			<div>
+                <p><label for="imagen">Imagen:</label></p>
+				<p><input id="imagen" type="file" name="imagen"/></p>
+            </div>
+			<div>
                 <p><label>Tallas en Stock:</label></p>
-				<ul class="horizontal">
+				<ul class="botones">
 					<li>
 						<label for="tallas">XS:</label>
 						<input id="tallas" type="number" min="0" max="500" name="XS"/>

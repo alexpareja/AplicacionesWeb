@@ -42,8 +42,8 @@ require_once __DIR__.'/includes/Producto.php';
 						//$prod = Producto::buscaPorId($i);
 						echo
 						'<li>
-						<a href="mostrarProducto.php?id='.$i.'">
-						<img class="imgProducto" src="img/producto_'.$i.'.png" alt="Imagen de Producto '.$i.'" />
+						<a href="mostrarProducto.php?id='.$prod->getId().'">
+						<img class="imgProducto" src="img/producto_'.$prod->getId().'.png" alt="Imagen de Producto '.$prod->getId().'" />
 						</br>'.
 						$prod->getNombre().'
 						</a>

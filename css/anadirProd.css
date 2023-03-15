@@ -27,12 +27,13 @@
   margin-bottom: 10px;
 }
 
-#newP-form input[type="text"]{
+#newP-form input[type="text"], textarea{
   width: 95%;
   padding: 10px;
   margin-bottom: 20px;
   border-radius: 5px;
   border: 1px solid #ccc;
+  resize: vertical;
   
 }
 

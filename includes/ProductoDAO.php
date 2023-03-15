@@ -67,9 +67,9 @@ class ProductoDAO
     }
 
     //crea un nuevo producto, con stock 0 
-    public function crea($nombre, $descripcion, $precio)
+    public function crea($nombre, $descripcion, $precio, $xs, $s, $m, $l, $xl)
     {
-        $prod = new Producto($nuevaId=null,$nombre,$descripcion,$precio,0,0,0,0,0);
+        $prod = new Producto($nuevaId=null,$nombre,$descripcion,$precio,$xs,$s,$m,$l,$xl);
         return self::guarda($prod);
     }
 
@@ -77,17 +77,17 @@ class ProductoDAO
     private function inserta($producto)
     {
         $query=sprintf("INSERT INTO productos(nombre, descripcion, precio, stockXS, stockS, stockM, stockL,stockXL) VALUES ('%s', '%s', '%f','%d', '%d', '%d','%d','%d')"
-            , $conn->real_escape_string($producto->getNombre())
-            , $conn->real_escape_string($producto->getDescripcion())
-            , $conn->real_escape_string($producto->getPrecio())
+            , $this->conn->real_escape_string($producto->getNombre())
+            , $this->conn->real_escape_string($producto->getDescripcion())
+            , $this->conn->real_escape_string($producto->getPrecio())
             , $producto->getStockXS()
             , $producto->getStockS()
             , $producto->getStockM()
             , $producto->getStockL()
             , $producto->getStockXL()
         );
-        if ( $conn->query($query) ) {
-            $producto->setId($conn->insert_id);
+        if ( $this->conn->query($query) ) {
+            $producto->setId($this->conn->insert_id);
             return $producto;
         } else {
             error_log("Error BD ({$conn->errno}): {$conn->error}");
