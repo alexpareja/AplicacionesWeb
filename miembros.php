@@ -11,16 +11,16 @@
 	?>
     <h1>Equipo de la Quinta Caja</h1>
     <ul>
-      <li><a href="#lucero">Lucero Abregú</a></li>
-      <li><a href="#sergio">Sergio Atienza</a></li>
-      <li><a href="#elena">Elena Basca</a></li>
-      <li><a href="#jesus">Jesús Hernández</a></li>
-      <li><a href="#cristina">Cristina Morillo</a></li>
-      <li><a href="#alejandro">Alejandro Pareja</a></li>
+      <li><a href="#lucero" class="ref">Lucero Abregú</a></li>
+      <li><a href="#sergio" class="ref">Sergio Atienza</a></li>
+      <li><a href="#elena" class="ref">Elena Basca</a></li>
+      <li><a href="#jesus" class="ref">Jesús Hernández</a></li>
+      <li><a href="#cristina" class="ref">Cristina Morillo</a></li>
+      <li><a href="#alejandro" class="ref">Alejandro Pareja</a></li>
     </ul>
     <h3 id="lucero">Lucero Abregú</h3>
     <p>
-      <img src="img/lucero.jpg" alt="Lucero">
+      <img src="img/lucero.jpg" alt="Lucero" class="imagen">
       <br>
       <span class = "negrita"> Nombre completo: </span> Lucero Abregú Reátegui
       <br>
@@ -32,7 +32,7 @@
 
     <h3 id="sergio">Sergio Atienza</h3>
     <p>
-      <img src="img/sergio.jpg" alt="Sergio">
+      <img src="img/sergio.jpg" alt="Sergio" class="imagen">
       <br>
       <span class = "negrita"> Nombre completo: </span> Sergio Atienza Fuertes
       <br>
@@ -44,7 +44,7 @@
 	
 	  <h3 id="elena">Elena Basca</h3>
     <p>
-      <img src="img/elena.jpg" alt="Elena">
+      <img src="img/elena.jpg" alt="Elena" class="imagen">
       <br>
       <span class = "negrita"> Nombre completo: </span> Madalina Elena Basca
       <br>
@@ -56,7 +56,7 @@
 
     <h3 id="jesus">Jesús Hernández</h3>
     <p>
-      <img src="img/jesus.jpg" alt="Jesús">
+      <img src="img/jesus.jpg" alt="Jesús" class="imagen">
       <br>
       <span class = "negrita"> Nombre completo: </span> Jesús Hernández Guillamot
       <br>
@@ -67,7 +67,7 @@
 
     <h3 id="cristina">Cristina Morillo</h3>
     <p>
-      <img src="img/cristina.jpg" alt="Cristina">
+      <img src="img/cristina.jpg" alt="Cristina" class="imagen">
       <br>
       <span class = "negrita"> Nombre completo: </span> Cristina Morillo Leal
       <br>
@@ -79,7 +79,7 @@
 	
 	<h3 id="alejandro">Alejandro Pareja</h3>
   <p>
-    <img src="img/alejandro.jpg" alt="Alejandro">
+    <img src="img/alejandro.jpg" alt="Alejandro" class="imagen">
     <br>
     <span class = "negrita"> Nombre completo: </span> Alejandro Pareja Arriaga
     <br>

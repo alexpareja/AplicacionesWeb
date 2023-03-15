@@ -3,6 +3,7 @@ div#menuIzqTienda {
 	height: 500px;
 	float: left;
 	text-align: center;
+  font-family: Verdana, monospace;
 }
 
 ul.filtros li{

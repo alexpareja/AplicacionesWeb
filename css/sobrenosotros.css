@@ -1,11 +1,14 @@
+.titulo1 {
+	font-family: Futura, monospace;
+}
 .titulo1, .titulo2 {
-	font-family: Verdana, monospace;
 	font-size: 30px;
 	line-height: 0.05;
 	color: black;
 }
 
 .titulo2 {
+	font-family: Verdana, monospace;
 	font-weight: bold;
 	font-style: italic;
 }
@@ -28,6 +31,10 @@ body p {
   	margin-bottom: 10px;
   	font-size: 1.2em;
   	margin-left: 30px;
+}
+
+.boton:hover {
+	background-color: #572364;
 }
 
 .texto-imagen {

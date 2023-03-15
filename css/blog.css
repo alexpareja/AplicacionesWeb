@@ -1,6 +1,7 @@
 .titulo1 {
 	font-family: Futura;
 	font-size: 35px;
+	font-weight: normal;
 }
 
 .titulo2 {
@@ -9,7 +10,7 @@
 	font-weight: bold;
 }
 
-.rectangulo1 {
+.rectangulo {
 	margin-top: 40px;
 	background-color: #f2f2f2;
 	height: 130px;
@@ -17,7 +18,7 @@
 	padding: 2px;
 }
 
-.rectangulo2 {
+.etiqueta {
 	background-color: #800080;
 	height: 10px;
 	width: 100vm;

@@ -42,7 +42,9 @@ div#cabecera {
   text-decoration: underline;
 }
 
-.ayuda, .carrito, .iniciar {
-	width: 65px;
-	height: 48.75px;
+.ayuda, .carrito, .cuenta, .iniciar {
+	margin-top: 10px;
+	margin-right: 5px;
+	width: 50px;
+	height: 35.72px;
 }

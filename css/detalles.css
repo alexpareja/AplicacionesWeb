@@ -3,7 +3,7 @@ span.negrita {
 }
 h2.centro {
   color: #800080;
-   text-align: center;
+  text-align: center;
 }
 
 body p, ul {
@@ -11,6 +11,11 @@ body p, ul {
   font-size: 15px;
 }
 
-body h1, h2, h3{
+body h2, h3{
   font-family: Verdana, monospace;
+}
+
+body h1 {
+  font-family: Futura;
+  font-size: 35px;
 }
