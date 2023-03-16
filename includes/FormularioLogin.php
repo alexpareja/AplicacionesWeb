@@ -20,23 +20,25 @@ class FormularioLogin extends Formulario
         // Se genera el HTML asociado a los campos del formulario y los mensajes de error.
         $html = <<<EOF
         $htmlErroresGlobales
-        <fieldset>
-            <legend>Iniciar Sesión</legend>
-            <div>
-                <label for="email">Email:</label>
-                <input id="email" type="text" name="emailUsuario" value="$emailUsuario"/>
+        <form method="post">
+            <fieldset>
+                <legend>Iniciar Sesión</legend>
+                <div>
+                    <label for="email">Email:</label>
+                    <input id="email" type="email" name="emailUsuario" value="$emailUsuario"/>
                     {$erroresCampos['emailUsuario']}
-            </div>
-            <div>
-                <label for="password">Contraseña:</label>
-                <input id="password" type="password" name="password" />
-                {$erroresCampos['password']}
-            </div>
-            <div>
-                <button type="submit">Entrar</button>
-            </div>
-                <p class="no-account">No tengo cuenta. <a href="registro.php">Regístrate aquí</a></p>
-        </fieldset>
+                </div>
+                <div>
+                    <label for="password">Contraseña:</label>
+                    <input id="password" type="password" name="password"/>
+                    {$erroresCampos['password']}
+                </div>
+                <div>
+                    <button type="submit">Entrar</button>
+                </div>
+                    <p class="no-account">No tengo cuenta. <a href="registro.php">Regístrate aquí</a></p>
+            </fieldset>
+        </form>
         EOF;
         return $html;
     }
@@ -64,7 +66,12 @@ class FormularioLogin extends Formulario
             } else {
                 $_SESSION['login'] = true;
                 $_SESSION['nombre'] = $usuario->getNombre();
-                $_SESSION['esAdmin'] = $usuario->tieneRol(Usuario::ADMIN_ROLE);
+                if($usuario->getNombre() == Usuario::ROL_ADMIN) {
+                    $_SESSION['esAdmin'] = true;
+                }
+                else {
+                    $_SESSION['esAdmin'] = false;
+                }
             }
         }
     }
