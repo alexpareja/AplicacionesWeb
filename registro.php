@@ -19,8 +19,12 @@
             <input type="text" id="nombre" name="nombre" required>
         </div></p>
         <div>
-            <p><label for="apellidos">Apellidos:</label>
-            <input type="text" id="apellidos" name="apellidos" required></p>
+            <p><label for="apellido1"> Primer Apellido:</label>
+            <input type="text" id="apellido1" name="apellido1" required></p>
+        </div>
+        <div>
+            <p><label for="apellido2"> Segundo Apellido:</label>
+            <input type="text" id="apellido2" name="apellido2"></p>
         </div>
         <div>
             <p><label for="email">Email:</label>
