@@ -20,7 +20,7 @@ class FormularioLogin extends Formulario
         // Se genera el HTML asociado a los campos del formulario y los mensajes de error.
         $html = <<<EOF
         $htmlErroresGlobales
-        <form method="post">
+        <div id="form">
             <fieldset>
                 <legend>Iniciar Sesión</legend>
                 <div>
@@ -34,11 +34,12 @@ class FormularioLogin extends Formulario
                     {$erroresCampos['password']}
                 </div>
                 <div>
-                    <button type="submit">Entrar</button>
+                    <button type="submit" name="login">Entrar</button>
                 </div>
                     <p class="no-account">No tengo cuenta. <a href="registro.php">Regístrate aquí</a></p>
+                    <p>* Campos obligatorios</p>
             </fieldset>
-        </form>
+        </div>
         EOF;
         return $html;
     }
@@ -66,11 +67,13 @@ class FormularioLogin extends Formulario
             } else {
                 $_SESSION['login'] = true;
                 $_SESSION['nombre'] = $usuario->getNombre();
+                $_SESSION['email'] = $usuario->getCorreo();
+                $_SESSION['direccion'] = $usuario->getDireccion();
                 if($usuario->getNombre() == Usuario::ROL_ADMIN) {
-                    $_SESSION['esAdmin'] = true;
+                    $_SESSION['admin'] = true;
                 }
                 else {
-                    $_SESSION['esAdmin'] = false;
+                    $_SESSION['admin'] = false;
                 }
             }
         }

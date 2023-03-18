@@ -8,7 +8,7 @@ $htmlFormLogin = $form->gestiona();
 
 $tituloPagina = 'Login';
 
-$contenidoPrincipal = <<<EOS
+$contenidoPrincipal .= <<<EOS
 $htmlFormLogin
 EOS;
 

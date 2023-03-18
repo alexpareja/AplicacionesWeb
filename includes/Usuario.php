@@ -142,7 +142,7 @@ class Usuario
 
     public function getDireccion()
     {
-        return $this->correo;
+        return $this->direccion;
     }
 
     public function getRol()
