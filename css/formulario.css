@@ -198,3 +198,63 @@ textarea {
 #registro-form button[type="submit"]:hover {
   background-color: #572364;
 }
+
+#newP-form {
+  margin: 0 auto;
+  max-width: 500px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px #ccc;
+  font-family: Verdana, monospace;
+}
+
+#newP-form fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+#newP-form legend {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+#newP-form label {
+  display: block;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+#newP-form input[type="text"], textarea{
+  width: 95%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  resize: vertical;
+  
+}
+
+#newP-form button[type="submit"] {
+  background-color: #800080;
+  color: white;
+  padding: 7px 7px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  font-size: 1.2em;
+}
+
+#newP-form button[type="submit"]:hover {
+  background-color: #572364;
+}
+
+#newP-form ul.botones li{
+font-size:20px;
+display:inline-block;
+
+}
