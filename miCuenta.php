@@ -8,7 +8,7 @@ if(isset($_SESSION['login'])) {
     $email = $_SESSION['email'];
     $direccion = $_SESSION['direccion'];
 
-    $contenidoPrincipal .= <<<EOS
+    $contenidoPrincipal = <<<EOS
         <div id="sesión_iniciada">
             <h2>Mi Cuenta</h2>
             <p>Bienvenid@, $nombre</p>
@@ -18,7 +18,7 @@ if(isset($_SESSION['login'])) {
         </div>
 EOS;
 } else {
-    $contenidoPrincipal .= <<<EOS
+    $contenidoPrincipal = <<<EOS
         <div id="sesión_no_iniciada">
             <button id="login"><a href="login.php">Iniciar Sesión</a></button>
             <button id="registro"><a href="registro.php">Registrarse</a></button>

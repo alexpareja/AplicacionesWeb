@@ -20,11 +20,11 @@ class FormularioLogin extends Formulario
         // Se genera el HTML asociado a los campos del formulario y los mensajes de error.
         $html = <<<EOF
         $htmlErroresGlobales
-        <div id="form">
+        <div id="login-form">
             <fieldset>
                 <legend>Iniciar Sesión</legend>
                 <div>
-                    <label for="email">Email:</label>
+                    <label for="email">Correo electrónico:</label>
                     <input id="email" type="email" name="emailUsuario" value="$emailUsuario"/>
                     {$erroresCampos['emailUsuario']}
                 </div>

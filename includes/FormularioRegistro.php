@@ -22,7 +22,7 @@ class FormularioRegistro extends Formulario
 
         $html = <<<EOF
         $htmlErroresGlobales
-        <div id = "form">
+        <div id = "registro-form">
             <fieldset>
                 <legend>Registrar Usuario</legend>
                 <div>
@@ -41,7 +41,7 @@ class FormularioRegistro extends Formulario
                 </div>
                 <div>
                     <label for="emailUsuario">Correo electrónico:*</label>
-                    <input id="emailUsuario" type="text" name="emailUsuario" value="$emailUsuario" />
+                    <input id="emailUsuario" type="email" name="emailUsuario" value="$emailUsuario" />
                     {$erroresCampos['emailUsuario']}
                 </div>
                 <div>
