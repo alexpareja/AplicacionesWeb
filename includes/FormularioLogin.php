@@ -37,7 +37,6 @@ class FormularioLogin extends Formulario
                     <button type="submit" name="login">Entrar</button>
                 </div>
                     <p class="no-account">No tengo cuenta. <a href="registro.php">Regístrate aquí</a></p>
-                    <p>* Campos obligatorios</p>
             </fieldset>
         </div>
         EOF;
