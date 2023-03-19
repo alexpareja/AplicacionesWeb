@@ -11,7 +11,7 @@ if(isset($_SESSION['login'])) {
     $contenidoPrincipal .= <<<EOS
         <div id="sesión_iniciada">
             <h2>Mi Cuenta</h2>
-            <p>Bienvenido, $nombre</p>
+            <p>Bienvenid@, $nombre</p>
             <p>Email: $email</p>
             <p>Dirección: $direccion</p>
             <button id="logout"><a href="logout.php">Cerrar Sesión</a></button>
@@ -26,5 +26,5 @@ EOS;
 EOS;
 }
 
-require __DIR__.'/includes/plantilla.php';
+require __DIR__.'/includes/plantillas/plantilla.php';
 ?>

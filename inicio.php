@@ -1,25 +1,18 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-	<title>Inicio</title>
-	<link href="css/inicio.css" rel="stylesheet" type="text/css">
-	<meta charset="UTF-8">
-</head>
-<body>
-	<?php
-		include("includes/comun/cabecera.php");
-	?>
-	<div class="contenedor-cajas">
-		<a href="registro.php">
-        	<img src="img/caja-normal.jpg" class="caja1">
-        </a>
-        <a href="tienda.php">
-        	<img src="img/caja-especial.jpg" class="caja2">
-        </a>
-    </div>
-	<?php
-  		include("includes/comun/pie.php");
- 	?>
-</body>
+<?php
 
-</html>
+require_once __DIR__.'/includes/configuracion.php';
+
+$tituloPagina = 'Login';
+
+$contenidoPrincipal = <<<EOS
+<div class="contenedor-cajas">
+	<a href="registro.php">
+    	<img src="img/caja-normal.jpg" class="caja1">
+    </a>
+    <a href="tienda.php">
+    	<img src="img/caja-especial.jpg" class="caja2">
+    </a>
+</div>
+EOS;
+
+require __DIR__.'/includes/plantillas/plantilla.php';
