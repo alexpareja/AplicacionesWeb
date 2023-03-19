@@ -19,11 +19,13 @@ class ProductoDAO
         $rs = $this->conn->query($query);
         if ($rs->num_rows>0) {
             $fila = $rs->fetch_assoc();
+            if($fila){
             $prod = new Producto($fila['id'], $fila['nombre'], $fila['descripcion'], $fila['precio'], 
             $fila['stockXS'], $fila['stockS'], $fila['stockM'], $fila['stockL'], $fila['stockXL']);
             $rs->free();
 
             return $prod;
+            }
         } else {
             error_log("Error BD ({$conn->errno}): {$conn->error}");
         }
@@ -37,11 +39,13 @@ class ProductoDAO
         $rs = $this->conn->query($query);
         if ($rs->num_rows>0) {
             $fila = $rs->fetch_assoc();
+            if($fila){
             $prod = new Producto($fila['id'], $fila['nombre'], $fila['descripcion'], $fila['precio'], 
             $fila['stockXS'], $fila['stockS'], $fila['stockM'], $fila['stockL'], $fila['stockXL']);
             $rs->free();
 
             return $prod;
+            }
         } else {
             error_log("Error BD ({$this->conn->errno}): {$this->conn->error}");
         }

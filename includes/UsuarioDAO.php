@@ -28,11 +28,12 @@ class UsuarioDAO
         $rs = $this->conn->query($query);
         if ($rs) {
             $fila = $rs->fetch_assoc();
+            if($fila){
             $user = new Usuario($fila['id'], $fila['nombre'], $fila['apellido1'], $fila['apellido2'], 
             $fila['password'], $fila['correo'], $fila['direccion'], $fila['rol']);
             $rs->free();
-
             return $user;
+            }
         } else {
             error_log("Error BD ({$this->conn->errno}): {$this->conn->error}");
         }
@@ -46,11 +47,12 @@ class UsuarioDAO
         $rs = $this->conn->query($query);
         if ($rs) {
             $fila = $rs->fetch_assoc();
+            if($fila){
             $user = new Usuario($fila['id'], $fila['nombre'], $fila['apellido1'], $fila['apellido2'], 
             $fila['password'], $fila['correo'], $fila['direccion'], $fila['rol']);
             $rs->free();
-
             return $user;
+            }
         } else {
             error_log("Error BD ({$this->conn->errno}): {$this->conn->error}");
         }

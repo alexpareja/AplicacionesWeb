@@ -18,11 +18,13 @@ class CompraDAO
         $rs = $this->conn->query($query);
         if ($rs) {
             $fila = $rs->fetch_assoc();
+            if($fila){
             $compra = new Compra($fila['id'], $fila['usuario'], $fila['producto'], $fila['fecha'], 
             $fila['cantidad'], $fila['precio']);
             $rs->free();
 
             return $compra;
+            }
         } else {
             error_log("Error BD ({$this->conn->errno}): {$this->conn->error}");
         }
