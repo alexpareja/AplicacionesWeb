@@ -12,5 +12,5 @@ unset($_SESSION['email']);
 unset($_SESSION['direccion']);
 
 session_destroy(); 
-header("Location: index.php")
+header("Location: inicio.php")
 ?>
