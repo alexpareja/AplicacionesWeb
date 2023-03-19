@@ -126,6 +126,11 @@ class FormularioRegistro extends Formulario
                 $usuario = Usuario::crea($nombreUsuario, $password, $apellido1Usuario, $apellido2Usuario, $direccionUsuario, $emailUsuario);
                 $_SESSION['login'] = true;
                 $_SESSION['nombre'] = $usuario->getNombre();
+                $_SESSION['apellido1'] = $usuario->getApellido1();
+                $_SESSION['apellido2'] = $usuario->getApellido2();
+                $_SESSION['email'] = $usuario->getCorreo();
+                $_SESSION['direccion'] = $usuario->getDireccion();
+                $_SESSION['admin'] = false;
             }
         }
     }
