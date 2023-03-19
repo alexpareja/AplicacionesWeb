@@ -13,5 +13,4 @@ unset($_SESSION['direccion']);
 
 
 session_destroy(); 
-header("Location:index.php")
 ?>
