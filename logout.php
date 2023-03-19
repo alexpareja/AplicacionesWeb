@@ -8,5 +8,6 @@ unset($_SESSION['esAdmin']);
 unset($_SESSION['nombre']);
 
 
-session_destroy();
+session_destroy(); 
+header("Location:index.php")
 ?>

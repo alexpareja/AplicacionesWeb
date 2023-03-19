@@ -30,7 +30,7 @@ CREATE TABLE `usuarios` (
   `nombre` varchar(20) NOT NULL,
   `apellido1` varchar(20) NOT NULL,
   `apellido2` varchar(20),
-  `password` varchar(30) NOT NULL,
+  `password` varchar(60) NOT NULL,
   `correo` varchar(20) NOT NULL,
   `direccion` varchar(35) NOT NULL,
   `rol` enum('A','P','U') NOT NULL
