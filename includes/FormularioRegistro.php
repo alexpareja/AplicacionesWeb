@@ -5,7 +5,7 @@ require_once __DIR__.'/Usuario.php';
 class FormularioRegistro extends Formulario
 {
     public function __construct() {
-        parent::__construct('formRegistro', ['urlRedireccion' => 'index.php']);
+        parent::__construct('formRegistro', ['action' => "mailto:laquintacaja@gmail.com"]);
     }
     
     protected function generaCamposFormulario(&$datos)
