@@ -17,7 +17,7 @@
 		<a href="inicio.php"><h1 class="titulo">LA QUINTA CAJA</h1></a>
 		<a href="faqs.php"><img class="ayuda" src="img/ayuda.jpg"></a>
 		<a href="carrito.php"><img class="carrito" src="img/carrito.jpg"></a>
-		<a href="cuenta.php"><img class="cuenta" src="img/cuenta.jpg"></a>
+		<a href="miCuenta.php"><img class="cuenta" src="img/cuenta.jpg"></a>
 		
 
 	<?php

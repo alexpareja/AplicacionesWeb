@@ -50,6 +50,12 @@ class Usuario
         return $usuarioDAO->buscaPorId($idUsuario);
     }
 
+    public static function buscaUsuarioMail($correo)
+    {
+        $usuarioDAO= new UsuarioDAO();
+        return $usuarioDAO->buscaUsuarioMail($correo);
+    }
+
     public static function crea($nombre, $password, $apellido1,$apellido2,$direccion,$correo)
     {
         $usuarioDAO= new UsuarioDAO();
@@ -136,7 +142,7 @@ class Usuario
 
     public function getDireccion()
     {
-        return $this->correo;
+        return $this->direccion;
     }
 
     public function getRol()
