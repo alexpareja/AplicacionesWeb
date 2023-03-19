@@ -1,61 +1,49 @@
 <?php
 include_once ("includes/Producto.php");
 include_once ("includes/configuracion.php");
+include_once ("includes/FormularioAnadirCarrito.php");
+
+
+echo '<link href="css/producto.css" rel="stylesheet" type="text/css">';
+// La búsqueda de producto debe ir dentro de contenido principal debido a que es necesario pasarsela a formulario y así evitar hacer 2 búsqurdas
+if(isset($_GET['id']) && !empty($_GET['id'])) {
 $id=$_GET ["id"];
-$producto=Producto::buscaPorId($id);
-?>
-<!DOCTYPE html>
-<html lang="es">
-    <head>
-    <title>La Quinta Caja</title>
-    <link href="css/producto.css" rel="stylesheet" type="text/css">
-    <meta charset="UTF-8">
-  </head>
-  <body>
-	<?php
-		include("includes/comun/cabecera.php");
-	?>
-  <?php
-  $imagenProducto = "img/producto_" . $producto->getId() . ".png";
-  echo "<img class='imgProducto' src=$imagenProducto alt='Imagen del producto'>";
-  ?>
-  
-  <div class="producto">
-    <?php
-    $nombre=$producto->getNombre();
-    $desc=$producto->getDescripcion();
-    echo "<h2>$nombre</h2>";
-    echo "<p>$desc</p>";
-    ?>
-    <form action="carrito.php" method="post">
-      <input type="hidden" name="id" value="<?php echo $id; ?>">
-      <label for="talla">Talla:</label>
-      <select id="talla" name="size"> <!--las tallas también se sacarán de la base de datos-->
-        <option value="xs">XS</option>
-        <option value="s">S</option>
-        <option value="m">M</option>
-        <option value="l">L</option>
-        <option value="xl">XL</option>
-      </select>
-      <label for="cantidad">Cantidad:</label>
-      <input type="number" id="quantity" name="quantity" value="1" min="1">
-      <label for="price">Precio:</label>
-      <?php
-      $precio=$producto->getPrecio();
-       echo "<input type='text' id='price' name='price' value=$precio readonly>";
-      ?>
-      
-      <button type="submit">Agregar al carrito</button> <!--esto lo procesará una página de compra-->
-      <img class='corazon' src="img/corazon.png" alt="Añadir a favoritos"><!--esto será procesado para añadir el producto a favs-->
-    </form>
-</div>
-<div class="comments">
-  <h3>Comentarios</h3>
-  <ul>
-  <!--aquí se incluirán los comentarios, sacados de la bbdd-->
-  </ul>
-</div>
-<?php
-	include("includes/comun/pie.php");
-	?>
-</html> 
+$producto=Producto::buscaPorId($id);  
+if($producto)
+{
+$imagenProducto = "img\producto_" . $producto->getId() . ".png";
+$nombre=$producto->getNombre();
+$tituloPagina = $nombre;
+$desc=$producto->getDescripcion();
+$form = new FormularioAnadirCarrito();
+$form->setProducto($producto);
+$htmlFormRegistro = $form->gestiona();
+$contenidoPrincipal = <<<EOS
+    <img class='imgProducto' src="$imagenProducto" alt='Imagen del producto'>
+    <div class="producto">
+    <h2>$nombre</h2>
+    <p>$desc</p>
+    </div>
+    $htmlFormRegistro
+    <div class="comments">
+    <h3>Comentarios</h3>
+    <ul>
+    <!--aquí se incluirán los comentarios, sacados de la bbdd-->
+    </ul>
+    </div>
+    EOS;
+}
+else{ //si no se encuentra el producto
+  $tituloPagina = "Producto no encontrado";
+  $contenidoPrincipal = <<<EOS
+  <h2> No se encuentra el producto </h2>
+  EOS;
+}
+}
+else{ //si no está definido parámetro id en GET
+  $tituloPagina = "Error de búsqueda";
+  $contenidoPrincipal = <<<EOS
+  <h2> Se ha producido un error </h2>
+  EOS;
+}
+require __DIR__.'/includes/plantillas/plantilla.php';

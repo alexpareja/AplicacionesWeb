@@ -1,14 +1,8 @@
-<!DOCTYPE html>
-<html lang="es">
-    <head>
-    <title>La Quinta Caja</title>
-    <link href="css/entradaBlog.css" rel="stylesheet" type="text/css">
-    <meta charset="UTF-8">
-  </head>
-  <body>
-	<?php
-		include("includes/comun/cabecera.php");
-	?>
+<?php
+$tituloPagina = 'entradaBlog';
+echo "<link href='css/entradaBlog.css' rel='stylesheet' type='text/css'>";
+$contenidoPrincipal = '';
+$contenidoPrincipal .= <<<EOS
 <div class="entradaBlog">
   <h2>Título del post</h2>
   <div class="entrada_contenido">
@@ -33,7 +27,7 @@
   <!--aquí se incluirán los comentarios, sacados de la bbdd-->
   </ul>
 </div>
-<?php
-	include("includes/comun/pie.php");
-	?>
-</html> 
+EOS;
+
+require __DIR__.'/includes/plantilla.php';
+?>

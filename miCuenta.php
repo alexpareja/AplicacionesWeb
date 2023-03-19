@@ -26,3 +26,4 @@ EOS;
 }
 
 require __DIR__.'/includes/plantilla.php';
+?>
