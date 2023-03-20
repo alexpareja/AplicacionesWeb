@@ -2,13 +2,12 @@
 require_once __DIR__.'/includes/Producto.php';
 
 
-
 	$tituloPagina = 'Tienda';
 	$contenidoPrincipal = '';
 	$contenidoPrincipal .= <<<EOS
 		<div id="tienda">
 	EOS;
-	if (!isset($_SESSION["admin"])) {
+if (isset($_SESSION['admin']) && $_SESSION['admin']) {
 	$contenidoPrincipal .= <<<EOS
 			<ul class="botones">
 				<li>

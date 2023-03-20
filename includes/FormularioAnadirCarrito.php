@@ -8,7 +8,7 @@ class FormularioAnadirCarrito extends Formulario
     private $producto;
 
     public function __construct() {
-        parent::__construct('formRegistro', ['urlRedireccion' => 'carrito.php']);
+        parent::__construct('formCarrito', ['urlRedireccion' => 'carrito.php']);
     }
     
     public function setProducto($producto) {
@@ -27,28 +27,28 @@ class FormularioAnadirCarrito extends Formulario
         $htmlErroresGlobales = self::generaListaErroresGlobales($this->errores);
         $erroresCampos = self::generaErroresCampos(['cantidad', 'noStock'], $this->errores, 'span', array('class' => 'error'));
 
-        $html = <<<EOF
-        $htmlErroresGlobales
-        <form action="../carrito.php" method="post">
-        <input type="hidden" name="id" value="{$this->producto->getId()}">
-        <input type="hidden" name="name" value="{$this->producto->getNombre()}">
-        <label for="talla">Talla:</label>
-        <select id="talla" name="size"> 
-        <option value="xs">XS</option>
-        <option value="s">S</option>
-        <option value="m">M</option>
-        <option value="l">L</option>
-        <option value="xl">XL</option>
-        </select>
-        <label for="cantidad">Cantidad:</label>
-        <input type="number" id="cantidad" name="quantity" value="1" min="1"> <!-- Con javascript solo se podrá seleccionar como máximo el stock que tenga cada talla-->
-        <label for="precio">Precio:</label>        
-        <input type="text" id="precio" name="price" value="{$this->producto->getPrecio()}" readonly>
-        <button type="submit">Agregar al carrito</button>
-        <img class='corazon' src="img/corazon.png" alt="Añadir a favoritos">
-        </form>
-        EOF;
-        return $html;
+		$html =<<<EOF
+		$htmlErroresGlobales
+		<div id="product-form">
+			<input type="hidden" name="id" value="{$this->producto->getId()}">
+			<input type="hidden" name="name" value="{$this->producto->getNombre()}">
+			<label for="talla">Talla:</label>
+			<select id="talla" name="size"> 
+				<option value="xs">XS</option>
+				<option value="s">S</option>
+				<option value="m">M</option>
+				<option value="l">L</option>
+				<option value="xl">XL</option>
+			</select>
+			<label for="cantidad">Cantidad:</label>
+			<input type="number" id="cantidad" name="quantity" value="1" min="1"> <!-- Con javascript solo se podrá seleccionar como máximo el stock que tenga cada talla-->
+			<label for="precio">Precio:</label>        
+			<input type="text" id="precio" name="price" value="{$this->producto->getPrecio()}" readonly>
+			<button type="submit">Agregar al carrito</button>
+			<img class='corazon' src="img/corazon.png" alt="Añadir a favoritos">
+		</div>
+		EOF;
+		return $html;
     }
     
 
@@ -80,6 +80,26 @@ class FormularioAnadirCarrito extends Formulario
         {
             $this->errores['noStock'] = "No hay suficiente stock en la talla seleccionada. El máximo es ".$this->producto->getStockXL();
         }
+		
+		if (isset($datos['id'])) {
+			$id = $datos['id'];
+			$name = $datos['name'];
+			$quantity = $datos['quantity'];
+			$price = $datos['price'];
+			$size = $datos['size'];
+	// Si el producto ya está en el carrito, se suma la cantidad nueva a la cantidad que ya tiene el producto
+			if(isset($_SESSION['cart'][$id][$size])) {
+				$_SESSION['cart'][$id][$size]['cantidad'] += $quantity;
+			} else {
+			$_SESSION['cart'][$id][$size] = array(
+            'id' => $id,
+            'name' => $name,
+            'price' => $price,
+            'cantidad' => $quantity,
+			'size' => $size,
+        );
+	}
+}
     }
 }
 ?>

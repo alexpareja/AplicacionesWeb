@@ -1,28 +1,6 @@
 <?php
 require_once __DIR__.'/includes/Producto.php';
 
-
-// Añadir un producto al carrito de compras
-if (isset($_POST['id'])) {
-    $id = $_POST['id'];
-    $name = $_POST['name'];
-    $quantity = $_POST['quantity'];
-    $price = $_POST['price'];
-	$size = $_POST['size'];
-	// Si el producto ya está en el carrito, se suma la cantidad nueva a la cantidad que ya tiene el producto
-    if(isset($_SESSION['cart'][$id][$size])) {
-        $_SESSION['cart'][$id][$size]['cantidad'] += $quantity;
-    } else {
-        $_SESSION['cart'][$id][$size] = array(
-            'id' => $id,
-            'name' => $name,
-            'price' => $price,
-            'cantidad' => $quantity,
-			'size' => $size,
-        );
-	}
-}
-
 // Eliminar una cantidad de un producto del carrito de compras
 if (isset($_POST['remove_quantity'])) {
     $product_data = explode('|', $_POST['remove_quantity']);
