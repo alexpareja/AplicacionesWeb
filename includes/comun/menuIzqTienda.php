@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html>
+
 <head>
 	<link rel="stylesheet" type="text/css" href="css/menuIzqTienda.css" />
 	<meta charset="utf-8">
@@ -16,19 +15,19 @@
 				<li>Talla</li>
 				<li>
 					<ul class ="checkfiltros">
-					<li><input type="checkbox" name="tamano" value="S">S</input></li>
-					<li><input type="checkbox" name="tamano" value="M">M</input></li>
-					<li><input type="checkbox" name="tamano" value="L">L</input></li>
-					<li><input type="checkbox" name="tamano" value="XL">XL</input></li>
+					<li><input type="checkbox" name="tamano" value="S">S</li>
+					<li><input type="checkbox" name="tamano" value="M">M</li>
+					<li><input type="checkbox" name="tamano" value="L">L</li>
+					<li><input type="checkbox" name="tamano" value="XL">XL</li>
 					</ul>
 				</li>
 				<li>Precio (menor que)</li>
 				<li>
 					<ul class ="checkfiltros">
-					<li><input type="radio" name="menorque" value="25">25€</input></li>
-					<li><input type="radio" name="menorque" value="50">50€</input></li>
-					<li><input type="radio" name="menorque" value="75">75€</input></li>
-					<li><input type="radio" name="menorque" value="100">100€</input></li>
+					<li><input type="radio" name="menorque" value="25">25€</li>
+					<li><input type="radio" name="menorque" value="50">50€</li>
+					<li><input type="radio" name="menorque" value="75">75€</li>
+					<li><input type="radio" name="menorque" value="100">100€</li>
 					</ul>
 				</li>
 				<li>Filtro 3</li>
