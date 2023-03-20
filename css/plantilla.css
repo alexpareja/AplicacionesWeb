@@ -119,3 +119,50 @@
   display: block; 
   margin: 0 auto;
 }
+
+/*Hoja de estilo Miembros*/
+#miembros .imagen {
+  display: block;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+#miembros .ref, span.negrita {
+  font-weight: bold;
+  font-family: Verdana, monospace;
+  font-size: 15px;
+}
+
+#miembros h3 {
+  font-family: Verdana, monospace;
+}
+
+#miembros h1 {
+  font-family: Futura;
+  font-size: 35px;
+}
+
+/*Hoja de estilo Detalles*/
+#detalles span.negrita {
+  font-weight: bold;
+}
+#detalles h2.centro {
+  color: #800080;
+  text-align: center;
+}
+
+#detalles p, ul {
+  font-family: Verdana, monospace;
+  font-size: 15px;
+}
+
+#detalles h2, h3{
+  font-family: Verdana, monospace;
+}
+
+#detalles h1 {
+  font-family: Futura;
+  font-size: 35px;
+}

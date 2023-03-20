@@ -1,14 +1,10 @@
-<!DOCTYPE html>
-<html lang="es">
-  <head>
-     <title>La Quinta Caja Miembros</title>
-     <link href="css/miembros.css" rel="stylesheet" type="text/css">
-  <meta charset="UTF-8">
-  </head>
-  <body>
-	<?php
-		include("includes/comun/cabecera.php");
-	?>
+<?php
+
+require_once __DIR__.'/includes/configuracion.php';
+
+$tituloPagina = 'Miembros';
+$contenidoPrincipal = <<<EOS
+<div id = "miembros">
     <h1>Equipo de la Quinta Caja</h1>
     <ul>
       <li><a href="#lucero" class="ref">Lucero Abregú</a></li>
@@ -86,10 +82,8 @@
     <span class = "negrita"> Correo electrónico: </span> aparej01@ucm.es
     <br>
     <span class = "negrita"> Descripción: </span>
-    En mi tiempo libre me gusta viajar y descubrir sitios nuevos, así como ver fútbol. Me encanta escuchar música y tengo bastante interés en la informática y los ordenadores. Me apasiona aprender cosas nuevas, sobre todo del espacio exterior.  
-  </p>
-  <?php
-  include("includes/comun/pie.php");
-  ?>
-  </body>
-</html>
+    En mi tiempo libre me gusta viajar y descubrir sitios nuevos, así como ver fútbol. Me encanta escuchar música y tengo bastante interés en la informática y los ordenadores. Me apasiona aprender cosas nuevas, sobre todo del espacio exterior.
+</div> 
+EOS;
+
+require __DIR__.'/includes/plantillas/plantilla.php';
