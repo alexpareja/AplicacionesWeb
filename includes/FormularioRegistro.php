@@ -26,7 +26,7 @@ class FormularioRegistro extends Formulario
             <fieldset>
                 <legend>Registrar Usuario</legend>
                 <div>
-                    <label for="nombreUsuario">Nombre de usuario:*</label>
+                    <label for="nombreUsuario">Nombre:*</label>
                     <input id="nombreUsuario" type="text" name="nombreUsuario" value="$nombreUsuario" />
                     <span id="error">{$erroresCampos['nombreUsuario']}</span>
                 </div>
