@@ -14,11 +14,11 @@ if(isset($_SESSION['login'])) {
             <h2>$nombre</h2>
             <br>
             <p>Aquí puedes encontrar toda tu información:</p>
-            <div id="botones-cuenta">
-                <button type="submit" name="listadeseos"><a href="listadeseos.php">Mi lista de deseos</a></button>
-                <button type="submit" name="miperfil"><a href="miPerfil.php">Mi perfil</a></button>
-                <button type="submit" name="logout"><a href="logout.php">Cerrar Sesión</a></button>
-            </div>
+        </div>
+        <div id="botones-cuenta">
+            <button type="submit" name="listadeseos"><a href="listadeseos.php">Mi lista de deseos</a></button>
+            <button type="submit" name="miperfil"><a href="miPerfil.php">Mi perfil</a></button>
+            <button type="submit" name="logout"><a href="logout.php">Cerrar Sesión</a></button>
         </div>
 EOS;
 } else {

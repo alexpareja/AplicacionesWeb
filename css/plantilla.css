@@ -1,11 +1,13 @@
 /*Hoja de estilo miCuenta*/
 /*Sesión iniciada*/
 #sesion {
-  background-color: #f2f2f2;
+  background-color: #800080; /* Fondo morado */
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  text-align: center;
+  text-align: left; /* Texto alineado a la izquierda */
+  font-family: Verdana;
+  color: white;
 }
 
 #sesion h2 {
@@ -14,13 +16,35 @@
   margin-bottom: 10px;
 }
 
+#botones-cuenta {
+  display: flex;
+  justify-content: center;
+}
+
+#botones-cuenta button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  margin: 10px;
+  background-color: white;
+  font-family: Verdana;
+}
+
 #botones-cuenta button[type="submit"] {
+  background-color: white;
   padding: 7px 7px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   margin-bottom: 10px;
   font-size: 1.2em;
+  margin-right: 10px;
+}
+
+#botones-cuenta button[type="submit"]:hover {
+  background-color: #F8F8FF;
 }
 
 #botones-cuenta a {
