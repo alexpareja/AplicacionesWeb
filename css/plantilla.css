@@ -103,3 +103,19 @@
 #info-perfil .negrita {
   font-weight: bold;
 }
+
+/*Hoja de estilo Lista de deseos*/
+#lista-deseos {
+    text-align: center;
+}
+
+#lista-deseos h2 {
+  text-align: center; 
+}
+
+#lista-deseos img.img-deseos{
+  width: 750px;
+  height: 500px; 
+  display: block; 
+  margin: 0 auto;
+}

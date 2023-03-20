@@ -4,7 +4,8 @@
 }
 
 .entradaBlog h2 {
-	text-align: center; }
+	text-align: center; 
+}
 
 .entrada_contenido{
 	display: flex;
@@ -13,11 +14,13 @@
 
 .entrada_texto {
 	width: 60%;
-	margin-right: 20px; }
+	margin-right: 20px; 
+}
 
-.entrada_imagen{
+.entrada_imagen {
 	width: 30%;
-	float: right; }
+	float: right; 
+}
 
 .entrada_imagen img {
 	max-width: 100%;

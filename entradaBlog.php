@@ -1,4 +1,5 @@
 <?php
+require_once __DIR__.'/includes/configuracion.php';
 $tituloPagina = 'entradaBlog';
 echo "<link href='css/entradaBlog.css' rel='stylesheet' type='text/css'>";
 $contenidoPrincipal = '';
@@ -29,5 +30,5 @@ $contenidoPrincipal .= <<<EOS
 </div>
 EOS;
 
-require __DIR__.'/includes/plantilla.php';
+require __DIR__.'/includes/plantillas/plantilla.php';
 ?>
