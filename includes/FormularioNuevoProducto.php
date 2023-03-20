@@ -90,7 +90,7 @@ class FormularioNuevoProducto extends Formulario
         $nombre = filter_var($nombre, FILTER_SANITIZE_FULL_SPECIAL_CHARS);		
 		
 		$descripcion = trim($datos['descripcion'] ?? '');
-        $descripcion = filter_var($nombre, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+        $descripcion = filter_var($descripcion, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 		
 		$precio= $datos['precio'];
 		
