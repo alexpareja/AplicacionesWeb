@@ -9,19 +9,23 @@ if(isset($_SESSION['login'])) {
     $direccion = $_SESSION['direccion'];
 
     $contenidoPrincipal = <<<EOS
-        <div id="sesión_iniciada">
-            <h2>Mi Cuenta</h2>
-            <p>Bienvenid@, $nombre</p>
-            <p>Email: $email</p>
-            <p>Dirección: $direccion</p>
-            <button id="logout"><a href="logout.php">Cerrar Sesión</a></button>
+        <div id="sesion">
+            <p>Hola,</p>
+            <h2>$nombre</h2>
+            <br>
+            <p>Aquí puedes encontrar toda tu información:</p>
+            <div id="botones-cuenta">
+                <button type="submit" name="listadeseos"><a href="listadeseos.php">Mi lista de deseos</a></button>
+                <button type="submit" name="miperfil"><a href="miPerfil.php">Mi perfil</a></button>
+                <button type="submit" name="logout"><a href="logout.php">Cerrar Sesión</a></button>
+            </div>
         </div>
 EOS;
 } else {
     $contenidoPrincipal = <<<EOS
-        <div id="sesión_no_iniciada">
-            <button id="login"><a href="login.php">Iniciar Sesión</a></button>
-            <button id="registro"><a href="registro.php">Registrarse</a></button>
+        <div id="no-sesion">
+            <button type="submit" name="login"><a href="login.php">Iniciar Sesión</a></button>
+            <button type="submit" name="registro"><a href="registro.php">Registrarse</a></button>
         </div>
 EOS;
 }

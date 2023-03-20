@@ -1,6 +1,7 @@
+/*Hoja de estilo formulario contacto*/
 #contacto-form {
   margin: 0 auto;
-  max-width: 800px;
+  max-width: 850px;
   background-color: #fff;
   padding: 20px;
   border-radius: 10px;
@@ -72,6 +73,7 @@ textarea {
   background-color: #572364;
 }
 
+/*Hoja de estilo formulario login*/
 #login-form {
   margin: 0 auto;
   max-width: 500px;
@@ -100,6 +102,14 @@ textarea {
   font-size: 1.2em;
   font-weight: bold;
   margin-bottom: 10px;
+}
+
+#login-form div {
+  margin: 15px 0;
+}
+
+#login-form #error {
+  color: red;
 }
 
 #login-form input[type="email"],
@@ -131,14 +141,16 @@ textarea {
   font-weight: bold;
 }
 
+/*Hoja de estilo formulario registro*/
 #registro-form {
   margin: 0 auto;
-  max-width: 800px;
+  max-width: 600px;
   background-color: #fff;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0px 0px 10px #ccc;
-  font-family: Verdana, monospace;
+  font-family: Verdana;
+  font-size: 13px;
 }
 
 #registro-form fieldset {
@@ -174,6 +186,14 @@ textarea {
   font-weight: bold;
 }
 
+#registro-form div {
+  margin: 15px 0;
+}
+
+#registro-form #error {
+  color: red;
+}
+
 #registro-form input[type="text"],
 #registro-form input[type="email"],
 #registro-form input[type="password"] {
@@ -199,6 +219,7 @@ textarea {
   background-color: #572364;
 }
 
+/*Hoja de estilo formulario nuevo producto*/
 #newP-form {
   margin: 0 auto;
   max-width: 500px;
@@ -206,7 +227,8 @@ textarea {
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0px 0px 10px #ccc;
-  font-family: Verdana, monospace;
+  font-family: Verdana;
+  font-size: 13px;
 }
 
 #newP-form fieldset {
@@ -254,7 +276,6 @@ textarea {
 }
 
 #newP-form ul.botones li{
-font-size:20px;
-display:inline-block;
-
+  font-size:20px;
+  display:inline-block;
 }

@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
     <title><?= $tituloPagina ?></title>
+    <link rel="stylesheet" type="text/css" href="css/plantilla.css" /> 
 </head>
 <body>
 <div id="contenedor">

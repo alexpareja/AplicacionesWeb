@@ -26,12 +26,12 @@ class FormularioLogin extends Formulario
                 <div>
                     <label for="email">Correo electrónico:</label>
                     <input id="email" type="email" name="emailUsuario" value="$emailUsuario"/>
-                    {$erroresCampos['emailUsuario']}
+                    <span id="error">{$erroresCampos['emailUsuario']}</span>
                 </div>
                 <div>
                     <label for="password">Contraseña:</label>
                     <input id="password" type="password" name="password"/>
-                    {$erroresCampos['password']}
+                    <span id="error">{$erroresCampos['password']}</span>
                 </div>
                 <div>
                     <button type="submit" name="login">Entrar</button>
@@ -49,7 +49,7 @@ class FormularioLogin extends Formulario
         $emailUsuario = trim($datos['emailUsuario'] ?? '');
         $emailUsuario = filter_var($emailUsuario, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
         if ( ! $emailUsuario || empty($emailUsuario) ) {
-            $this->errores['emailUsuario'] = 'El email no puede estar vacío';
+            $this->errores['emailUsuario'] = 'El correo electrónico no puede estar vacío';
         }
         
         $password = trim($datos['password'] ?? '');
@@ -62,7 +62,7 @@ class FormularioLogin extends Formulario
             $usuario = Usuario::login($emailUsuario, $password);
         
             if (!$usuario) {
-                $this->errores[] = "El email o la contraseña no son correctas";
+                $this->errores[] = "El correo electrónico o la contraseña no son correctas";
             } else {
                 $_SESSION['login'] = true;
                 $_SESSION['nombre'] = $usuario->getNombre();

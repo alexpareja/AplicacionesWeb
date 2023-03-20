@@ -28,12 +28,12 @@ class FormularioRegistro extends Formulario
                 <div>
                     <label for="nombreUsuario">Nombre de usuario:*</label>
                     <input id="nombreUsuario" type="text" name="nombreUsuario" value="$nombreUsuario" />
-                    {$erroresCampos['nombreUsuario']}
+                    <span id="error">{$erroresCampos['nombreUsuario']}</span>
                 </div>
                 <div>
                     <label for="apellido1Usuario">Primer apellido:*</label>
                     <input id="apellido1Usuario" type="text" name="apellido1Usuario" value="$apellido1Usuario" />
-                    {$erroresCampos['apellido1Usuario']}
+                    <span id="error">{$erroresCampos['apellido1Usuario']}</span>
                 </div>
                 <div>
                     <label for="apellido2Usuario">Segundo apellido:</label>
@@ -42,22 +42,22 @@ class FormularioRegistro extends Formulario
                 <div>
                     <label for="emailUsuario">Correo electrónico:*</label>
                     <input id="emailUsuario" type="email" name="emailUsuario" value="$emailUsuario" />
-                    {$erroresCampos['emailUsuario']}
+                    <span id="error">{$erroresCampos['emailUsuario']}</span>
                 </div>
                 <div>
                     <label for="password">Contraseña:*</label>
                     <input id="password" type="password" name="password" />
-                    {$erroresCampos['password']}
+                    <span id="error">{$erroresCampos['password']}</span>
                 </div>
                 <div>
                     <label for="password2">Reintroduce la contraseña:*</label>
                     <input id="password2" type="password" name="password2" />
-                    {$erroresCampos['password2']}
+                    <span id="error">{$erroresCampos['password2']}</span>
                 </div>
                 <div>
                     <label for="direccionUsuario">Dirección:*</label>
                     <input id="direccionUsuario" type="text" name="direccionUsuario" value="$direccionUsuario" />
-                    {$erroresCampos['direccionUsuario']}
+                    <span id="error">{$erroresCampos['direccionUsuario']}</span>
                 </div>
                 <div>
                     <input type="checkbox" id="terms" name="terms" required>

@@ -8,7 +8,7 @@ $htmlFormContacto = $form->gestiona();
 
 $tituloPagina = 'Contacto';
 
-$contenidoPrincipal .= <<<EOS
+$contenidoPrincipal = <<<EOS
 $htmlFormContacto
 EOS;
 
