@@ -28,26 +28,28 @@ class FormularioAnadirCarrito extends Formulario
         $erroresCampos = self::generaErroresCampos(['cantidad', 'noStock'], $this->errores, 'span', array('class' => 'error'));
 
 		$html =<<<EOF
-		$htmlErroresGlobales
-		<div id="product-form">
-			<input type="hidden" name="id" value="{$this->producto->getId()}">
-			<input type="hidden" name="name" value="{$this->producto->getNombre()}">
-			<label for="talla">Talla:</label>
-			<select id="talla" name="size"> 
-				<option value="xs">XS</option>
-				<option value="s">S</option>
-				<option value="m">M</option>
-				<option value="l">L</option>
-				<option value="xl">XL</option>
-			</select>
-			<label for="cantidad">Cantidad:</label>
-			<input type="number" id="quantity" name="quantity" value="1" min="1"> <!-- Con javascript solo se podrá seleccionar como máximo el stock que tenga cada talla-->
-			<label for="precio">Precio:</label>        
-			<input type="text" id="precio" name="price" value="{$this->producto->getPrecio()}" readonly>
-			<button type="submit">Agregar al carrito</button>
-			<img class='corazon' src="img/corazon.png" alt="Añadir a favoritos">
-		</div>
-		EOF;
+        $htmlErroresGlobales
+        <div id="product-form">
+        <input type="hidden" name="id" value="{$this->producto->getId()}">
+        <input type="hidden" name="name" value="{$this->producto->getNombre()}">
+        <label for="talla">Talla:</label>
+        <select id="talla" name="size"> 
+        <option value="xs">XS</option>
+        <option value="s">S</option>
+        <option value="m">M</option>
+        <option value="l">L</option>
+        <option value="xl">XL</option>
+        </select>
+        <label for="cantidad">Cantidad:</label>
+        <input type="number" id="quantity" name="quantity" value="0" min="1"> <!-- Con javascript solo se podrá seleccionar como máximo el stock que tenga cada talla-->
+        <label for="precio">Precio:</label>        
+        <input type="text" id="precio" name="price" value="{$this->producto->getPrecio()}" readonly>
+        <button type="submit">Agregar al carrito</button>
+        <img class='corazon' src="img/corazon.png" alt="Añadir a favoritos">
+        </div>
+        <span id="error">{$erroresCampos['noStock']}</span>
+        <span id="error">{$erroresCampos['cantidad']}</span>
+        EOF;
 		return $html;
     }
     
