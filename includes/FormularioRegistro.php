@@ -90,6 +90,9 @@ class FormularioRegistro extends Formulario
             $this->errores['apellido1Usuario'] = 'El primer apellido del usuario no puede estar vacío.';
         }
 
+        $apellido2Usuario = trim($datos['apellido2Usuario'] ?? '');
+        $apellido2Usuario = filter_var($apellido2Usuario, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+
         $emailUsuario = trim($datos['emailUsuario'] ?? '');
         $emailUsuario = filter_var($emailUsuario, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
         if ( ! $emailUsuario || empty($emailUsuario) ) {
