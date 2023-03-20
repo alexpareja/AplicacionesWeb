@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html>
+
 <head>
 	<link rel="stylesheet" type="text/css" href="css/pie.css" />
 	<meta charset="utf-8">

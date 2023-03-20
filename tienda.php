@@ -8,7 +8,7 @@ require_once __DIR__.'/includes/Tienda.php';
 	$contenidoPrincipal .= <<<EOS
 		<div id='tienda'>
 	EOS;
-if (!isset($_SESSION['admin']) || !$_SESSION['admin']) {
+if (isset($_SESSION['admin']) && $_SESSION['admin']) {
 	$contenidoPrincipal .= <<<EOS
 			<ul class='botones'>
 				<li>
