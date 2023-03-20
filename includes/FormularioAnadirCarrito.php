@@ -19,7 +19,7 @@ class FormularioAnadirCarrito extends Formulario
     {
         $id = $datos['id'] ?? '';
         $talla = $datos['talla'] ?? '';
-        $cantidad = $datos['cantidad'] ?? '';
+        $cantidad = $datos['quantity'] ?? '';
         $precio = $datos['precio'] ?? '';
         
 
@@ -41,7 +41,7 @@ class FormularioAnadirCarrito extends Formulario
 				<option value="xl">XL</option>
 			</select>
 			<label for="cantidad">Cantidad:</label>
-			<input type="number" id="cantidad" name="quantity" value="1" min="1"> <!-- Con javascript solo se podrá seleccionar como máximo el stock que tenga cada talla-->
+			<input type="number" id="quantity" name="quantity" value="1" min="1"> <!-- Con javascript solo se podrá seleccionar como máximo el stock que tenga cada talla-->
 			<label for="precio">Precio:</label>        
 			<input type="text" id="precio" name="price" value="{$this->producto->getPrecio()}" readonly>
 			<button type="submit">Agregar al carrito</button>
@@ -55,8 +55,8 @@ class FormularioAnadirCarrito extends Formulario
     protected function procesaFormulario(&$datos)
     {
         $this->errores = [];
-        $cantidad = $datos['cantidad'] ?? '';
-        $talla = $datos['talla'] ?? '';
+        $cantidad = $datos['quantity'] ?? '';
+        $talla = $datos['size'] ?? '';
         if ( ! $cantidad || empty($cantidad)) {
             $this->errores['cantidad'] = 'Se debe especificar el número de productos a comprar.';
         }
@@ -80,7 +80,7 @@ class FormularioAnadirCarrito extends Formulario
         {
             $this->errores['noStock'] = "No hay suficiente stock en la talla seleccionada. El máximo es ".$this->producto->getStockXL();
         }
-		
+        if (count($this->errores) === 0) {
 		if (isset($datos['id'])) {
 			$id = $datos['id'];
 			$name = $datos['name'];
@@ -98,8 +98,9 @@ class FormularioAnadirCarrito extends Formulario
             'cantidad' => $quantity,
 			'size' => $size,
         );
-	}
-}
+	    }
+        }
+        }
     }
 }
 ?>
