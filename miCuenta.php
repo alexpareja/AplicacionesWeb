@@ -5,8 +5,6 @@ $contenidoPrincipal = '';
 
 if(isset($_SESSION['login'])) {
     $nombre = $_SESSION['nombre'];
-    $email = $_SESSION['email'];
-    $direccion = $_SESSION['direccion'];
 
     $contenidoPrincipal = <<<EOS
         <div id="sesion">

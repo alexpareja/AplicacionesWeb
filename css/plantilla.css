@@ -77,3 +77,29 @@
   text-decoration: none;
   color: white;
 }
+
+/*Hoja de estilo miPerfil*/
+#cabecera-perfil {
+  background-color: #800080; /* Fondo morado */
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: left; /* Texto alineado a la izquierda */
+  font-family: Verdana;
+  color: white;
+}
+
+#cabecera-perfil h2 {
+  font-size: 24px;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+#info-perfil {
+  padding: 10px;
+  text-align: left;
+}
+
+#info-perfil .negrita {
+  font-weight: bold;
+}
