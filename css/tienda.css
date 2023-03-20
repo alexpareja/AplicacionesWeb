@@ -56,3 +56,7 @@ display: none;
 #tienda button[type="submit"]:hover {
   background-color: #572364;
 }
+
+.total-price {
+    margin-left: 10px;
+}

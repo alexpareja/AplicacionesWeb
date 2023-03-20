@@ -29,8 +29,9 @@ class FormularioAnadirCarrito extends Formulario
 
         $html = <<<EOF
         $htmlErroresGlobales
-        <form action="carrito.php" method="post">
-        <input type="hidden" name="id" value="{$this->producto->getNombre()}">
+        <form action="../carrito.php" method="post">
+        <input type="hidden" name="id" value="{$this->producto->getId()}">
+        <input type="hidden" name="name" value="{$this->producto->getNombre()}">
         <label for="talla">Talla:</label>
         <select id="talla" name="size"> 
         <option value="xs">XS</option>
@@ -40,9 +41,9 @@ class FormularioAnadirCarrito extends Formulario
         <option value="xl">XL</option>
         </select>
         <label for="cantidad">Cantidad:</label>
-        <input type="number" id="cantidad" name="cantidad" value="1" min="1"> <!-- Con javascript solo se podrá seleccionar como máximo el stock que tenga cada talla-->
+        <input type="number" id="cantidad" name="quantity" value="1" min="1"> <!-- Con javascript solo se podrá seleccionar como máximo el stock que tenga cada talla-->
         <label for="precio">Precio:</label>        
-        <input type="text" id="precio" name="precio" value="{$this->producto->getPrecio()}" readonly>
+        <input type="text" id="precio" name="price" value="{$this->producto->getPrecio()}" readonly>
         <button type="submit">Agregar al carrito</button>
         <img class='corazon' src="img/corazon.png" alt="Añadir a favoritos">
         </form>
