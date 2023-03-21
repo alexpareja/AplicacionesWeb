@@ -63,7 +63,6 @@ class Compra
 	public static function mostrarTablaCompras($compras){
 		$html = '';
 		$html .= <<<EOF
-			<div id="compras">
 				<table class="compras">
 					<tr>
 						<th>Fecha</th>
@@ -97,7 +96,6 @@ class Compra
 		
 		$html .= <<<EOF
 			</table>
-		</div>	
 		EOF;
 		return $html;
 	}

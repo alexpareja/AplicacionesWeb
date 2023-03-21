@@ -19,7 +19,6 @@ display:inline-block;
 ul.botones li{
 font-size:20px;
 display:inline-block;
-
 }
 
 .productos li a {
@@ -59,4 +58,29 @@ display: none;
 
 .total-price {
     margin-left: 10px;
+}
+
+table.compras {
+	table-layout: fixed;
+	width:70%;
+	border-collapse: collapse;
+	border: 3px solid black;
+	margin: 0 auto;
+}
+
+th{
+  padding: 15px;
+  border:2px solid black;
+  background-color:#800080;
+  color: white;
+  font-family: Verdana;
+  font-size: 1.2em;
+
+}
+
+td{
+  padding: 5px;
+  border:2px solid  black;
+  font-family: Verdana;
+  font-size: 1em;
 }
