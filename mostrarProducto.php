@@ -18,7 +18,6 @@ if (isset($_SESSION['admin']) && $_SESSION['admin']) {
 			</ul>
 	EOS;} 
 
-// La búsqueda de producto debe ir dentro de contenido principal debido a que es necesario pasarsela a formulario y así evitar hacer 2 búsqurdas
 if(isset($_GET['id']) && !empty($_GET['id'])) {
 $id=$_GET ["id"];
 $producto=Producto::buscaPorId($id);  
