@@ -92,8 +92,12 @@ EOS;
 
 // Si se hace clic en el botón "Ir a pagar", redirigir a la página de pago
 if (isset($_GET['checkout'])) {
-    header('Location: pago.php');
-    exit;
+    if (empty($_SESSION['cart'])) {
+        $contenidoPrincipal .= '<p>¡No hay nada que comprar!</p>';
+    } else {
+        header('Location: pago.php');
+        exit;
+    }
 }
 
 // Generar la plantilla

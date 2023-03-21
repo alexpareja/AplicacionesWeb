@@ -65,6 +65,7 @@ class FormularioLogin extends Formulario
                 $this->errores[] = "El correo electrónico o la contraseña no son correctas";
             } else {
                 $_SESSION['login'] = true;
+                $_SESSION['id'] = $usuario->getId();
                 $_SESSION['nombre'] = $usuario->getNombre();
                 $_SESSION['apellido1'] = $usuario->getApellido1();
                 $_SESSION['apellido2'] = $usuario->getApellido2();
