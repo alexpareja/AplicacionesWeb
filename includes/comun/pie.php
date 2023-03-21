@@ -1,7 +1,7 @@
 
-<head>
+<div>
 	<link rel="stylesheet" type="text/css" href="css/pie.css">
-</head>
+</div>
 
 <div id="pie">
 		<ul class='horizontalpie'>

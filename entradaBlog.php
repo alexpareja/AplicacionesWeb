@@ -1,7 +1,6 @@
 <?php
 require_once __DIR__.'/includes/configuracion.php';
 $tituloPagina = 'entradaBlog';
-echo "<link href='css/entradaBlog.css' rel='stylesheet' type='text/css'>";
 $contenidoPrincipal = '';
 $contenidoPrincipal .= <<<EOS
 <div class="entradaBlog">
@@ -24,9 +23,8 @@ $contenidoPrincipal .= <<<EOS
   </div>
 <div class="comments">
   <h3>Comentarios</h3>
-  <ul>
   <!--aquí se incluirán los comentarios, sacados de la bbdd-->
-  </ul>
+</div>
 </div>
 EOS;
 

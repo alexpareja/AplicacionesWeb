@@ -4,7 +4,6 @@
 	<meta charset="UTF-8">
     <title><?= $tituloPagina ?></title>
     <link rel="stylesheet" type="text/css" href="css/plantilla.css">
-    <meta charset="UTF-8">
 </head>
 <body>
 <div id="contenedor">

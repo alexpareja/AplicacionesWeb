@@ -1,7 +1,7 @@
 
-<head>
+<div>
 	<link rel="stylesheet" type="text/css" href="css/menuIzqTienda.css">
-</head>
+</div>
 
 
 <div id="menuIzqTienda">

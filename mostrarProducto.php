@@ -23,7 +23,7 @@ $id=$_GET ["id"];
 $producto=Producto::buscaPorId($id);  
 if($producto)
 {
-$imagenProducto = "img\producto_" . $producto->getId() . ".png";
+$imagenProducto = "img/producto_" . $producto->getId() . ".png";
 $nombre=$producto->getNombre();
 $tituloPagina = $nombre;
 $desc=$producto->getDescripcion();
