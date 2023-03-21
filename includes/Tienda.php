@@ -24,9 +24,9 @@ class Tienda {
 
             $html .= <<<EOS
 					<li>
-						<a href=$link>
-						<img class="imgProducto" src=$src alt=$alt />
-						</br>
+						<a href='$link'>
+						<img class='imgProducto' src='$src' alt='$alt'>
+						<br>
 						$nombre
 						</a>
 					</li>

@@ -11,17 +11,20 @@ class Compra
 
     private $idProducto;
 
+    private $talla;
+
     private $fecha;
 
     private $cantidad;
 
     private $precio;
 
-    public function __construct($id=null, $idUsuario, $idProducto, $fecha, $cantidad,$precio)
+    public function __construct($id=null, $idUsuario, $idProducto, $talla, $fecha, $cantidad,$precio)
     {
         $this->id = $id;
         $this->idUsuario = $idUsuario;
         $this->idProducto = $idProducto;
+        $this->talla = $talla;
         $this->fecha = $fecha;
         $this->cantidad = $cantidad;
         $this->precio=$precio;
@@ -33,10 +36,10 @@ class Compra
         return $compraDAO->buscaPorUsuario($idCompra);
     }
 
-    public static function crea($idUsuario, $idProducto, $cantidad,$precio)
+    public static function crea($idUsuario, $idProducto, $talla,$cantidad,$precio)
     {
         $compraDAO= new CompraDAO();
-        return $usuarioDAO->crea($idUsuario, $idProducto, date('Y-m-d H:i:s'),$cantidad,$precio);
+        return $usuarioDAO->crea($idUsuario, $idProducto,$talla, date('Y-m-d H:i:s'),$cantidad,$precio);
     }
 
     //borra la compra
@@ -63,7 +66,6 @@ class Compra
 	public static function mostrarTablaCompras($compras){
 		$html = '';
 		$html .= <<<EOF
-			<div id="compras">
 				<table class="compras">
 					<tr>
 						<th>Fecha</th>
@@ -97,7 +99,6 @@ class Compra
 		
 		$html .= <<<EOF
 			</table>
-		</div>	
 		EOF;
 		return $html;
 	}
@@ -123,7 +124,10 @@ class Compra
     {
         return $this->idProducto;
     }
-
+    public function getTalla()
+    {
+        return $this->talla;
+    }
     public function getFecha()
     {
         return $this->fecha;

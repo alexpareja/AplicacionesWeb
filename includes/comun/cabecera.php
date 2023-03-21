@@ -1,9 +1,6 @@
 
 <head>
-	<link rel="stylesheet" type="text/css" href="css/cabecera.css" />
-	<meta charset="utf-8">
-	<title>Cabecera</title>
-
+	<link rel="stylesheet" type="text/css" href="css/cabecera.css">
 </head>
 
 <div id="cabecera">

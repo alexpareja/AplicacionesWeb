@@ -11,6 +11,8 @@ class FormularioNuevoProducto extends Formulario
     
     protected function generaCamposFormulario(&$datos)
     {
+		$nombre = $datos['nombre'] ?? '';
+		
 		$htmlErroresGlobales = self::generaListaErroresGlobales($this->errores);
 		$erroresCampos = self::generaErroresCampos(['nombre', 'precio', 'imagen'], $this->errores, 'span', array('class' => 'error'));
 
@@ -23,7 +25,7 @@ class FormularioNuevoProducto extends Formulario
 				<legend>Nuevo Producto</legend>
 				<div>
 					<p><label for="nombre">Nombre:</label></p>
-					<p><input id="nombre" type="text" name="nombre" /></p>
+					<p><input id="nombre" type="text" name="nombre" value='$nombre'></p>
 					{$erroresCampos['nombre']}
 				</div>
 				<div>
@@ -32,38 +34,38 @@ class FormularioNuevoProducto extends Formulario
 				</div>
 				<div>
 					<p><label for="precio">Precio:</label></p>
-					<p><input id="precio" type="number" step="0.01" min="0" name="precio"/></p>
+					<p><input id="precio" type="number" step="0.01" min="0" name="precio"></p>
 					{$erroresCampos['precio']}
 				</div>
 				<div>
 					<p><label for="imagen">Imagen:</label></p>
-					<p><input id="imagen" type="file" name="imagen"/></p>
+					<p><input id="imagen" type="file" name="imagen"></p>
 					{$erroresCampos['imagen']}
 				</div>
 				<div>
 					<p><label>Tallas en Stock:</label></p>
 					<ul class="botones">
 						<li>
-							<label for="tallas">XS:</label>
-							<input id="tallas" type="number" min="0" max="500" value="0" name="XS"/>
+							<label for="tallaXS">XS:</label>
+							<input id="tallaXS" type="number" min="0" max="500" value="0" name="XS">
 						</li>
 						<li>
-							<label for="tallas">S:</label>
-							<input id="tallas" type="number" min="0" max="500" value="0" name="S"/>
+							<label for="tallaS">S:</label>
+							<input id="tallaS" type="number" min="0" max="500" value="0" name="S">
 						</li>
 						<li>
-							<label for="tallas">M:</label>
-							<input id="tallas" type="number" min="0" max="500" value="0" name="M"/>
+							<label for="tallaM">M:</label>
+							<input id="tallaM" type="number" min="0" max="500" value="0" name="M">
 						</li>
 						<li>
-							<label for="tallas">L:</label>
-							<input id="tallas" type="number" min="0" max="500" value="0" name="L"/>
+							<label for="tallaL">L:</label>
+							<input id="tallaL" type="number" min="0" max="500" value="0" name="L">
 						</li>
 						<li>
-							<label for="tallas">XL:</label>
-							<input id="tallas" type="number" min="0" max="500" value="0" name="XL"/>
+							<label for="tallaXL">XL:</label>
+							<input id="tallaXL" type="number" min="0" max="500" value="0" name="XL">
 						</li>
-					<ul>
+					</ul>
 				</div>
 				<div>
 					<ul class= "botones">
@@ -73,7 +75,7 @@ class FormularioNuevoProducto extends Formulario
 						<button type="submit" formaction="tienda.php">Volver a la tienda</button>
 						</li>
 						
-					<ul>
+					</ul>
 				</div>
 			</fieldset>
 		</div>

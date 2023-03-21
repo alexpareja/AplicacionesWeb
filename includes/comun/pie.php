@@ -1,8 +1,6 @@
 
 <head>
-	<link rel="stylesheet" type="text/css" href="css/pie.css" />
-	<meta charset="utf-8">
-	<title>Pie</title>
+	<link rel="stylesheet" type="text/css" href="css/pie.css">
 </head>
 
 <div id="pie">

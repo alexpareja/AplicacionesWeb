@@ -40,6 +40,7 @@ CREATE TABLE `compras` (
   `id` int(10) UNSIGNED NOT NULL,
   `usuario` int(10) UNSIGNED NOT NULL,
   `producto` int(10) UNSIGNED NOT NULL,
+  `talla` enum('xs','s','m','l','xl') NOT NULL,
   `fecha` datetime NOT NULL,
   `cantidad` int(10) UNSIGNED NOT NULL,
   `precio` float UNSIGNED NOT NULL
