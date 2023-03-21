@@ -47,6 +47,9 @@ class FormularioAnadirCarrito extends Formulario
         <button type="submit">Agregar al carrito</button>
         <img class='corazon' src="img/corazon.png" alt="Añadir a favoritos">
         </div>
+        <span>Stocks por talla:</span>
+        <span id="stockTallas">XS: {$this->producto->getStockXS()}, S: {$this->producto->getStockS()},
+        M: {$this->producto->getStockM()}, L: {$this->producto->getStockL()}, XL: {$this->producto->getStockXS()} <br></span>
         <span id="error">{$erroresCampos['noStock']}</span>
         <span id="error">{$erroresCampos['cantidad']}</span>
         EOF;
