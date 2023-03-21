@@ -48,9 +48,9 @@
 	<img class="boceto" src="img/b_PProducto.png" alt="Boceto de Pag de producto">
 	
 	<h3> Página de Producto (Administrador) </h3>
-	<p> Descripción: Página que muestra un producto como en el caso del cliente, pero con un botón de editar que redirige al usuario administrador a los datos del producto	
+	<p> Descripción: Página que muestra un producto como en el caso del cliente, pero con un botón de editar que redirige al usurio administrador a la pagina de editar producto
     </p>
-	<img class="boceto" src="img/b_PProducto.png" alt="Boceto de Pag de producto admi">
+	<img class="boceto" src="img/b_PProductoAdmi.png" alt="Boceto de Pag de producto admi">
 	
 	<h3> Página de Editar Producto  </h3>
 	<p> Descripción: Se muestran los datos del producto elegido. Permite al usuario administrador editar todos los datos del producto (nombre, descripción, imagen, precio y stock de cada talla (XS-XL). Pulsando el botón volver se vuelve
@@ -102,7 +102,8 @@ a  la página del producto sin guardar los cambios y si se pulsa el botón de ed
 	<h3> Página de Carrito</h3>
 	<p> Descripción: En esta página aparecerá una lista con los artículos que el usuario ha elegido comprar, con los precios y 
 		características desglosadas.Si ya está registrado, aparecerá un mensaje de confirmación de la compra y se añadirá el pedido 
-		a la lista de pedidos. Como solo aceptamos pagos en efectivo, no será necesario introducir la información de la tarjeta de crédito. </p>
+		a la lista de pedidos. Como solo aceptamos pagos en efectivo, no será necesario introducir la información de la tarjeta de crédito. En caso de no haer inciado sesión 
+se redirige a la página de inicio de sesión, puesto que unicamente los usuario registrados pueden comprar.		</p>
 	<img class="boceto" src="img/b_PCarrito.png" alt="Boceto de la Pagina de Carrito">
 	
 	<h3> Página de Lista de Deseos</h3>
