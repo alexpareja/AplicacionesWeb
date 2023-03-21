@@ -27,7 +27,7 @@
 	<h3> Página de Tienda (administrador) </h3>
 	<p> Descripcion: Se mostrará la página como se le muestra a un cliente normal, pero con un botón de "Añadir producto". Si se pulsa este botón se redigirá a la página de añadir producto. Aparte de este 
 	se muestra el botón "Compras" que redirige al usuario a la página de compras.</p>
-	<img class="boceto" src="img/b_Tiendaadmi.png" alt="Boceto de la Tienda Administrador">
+	<img class="boceto" src="img/b_TiendaAdmi.png" alt="Boceto de la Tienda Administrador">
 	
 	<h3> Página de Compras</h3>
 	<p> Descripcion: Se muestran las compras en caso de que seas usuario administrador. </p>
@@ -50,13 +50,13 @@
 	<h3> Página de Producto (Administrador) </h3>
 	<p> Descripción: Página que muestra un producto como en el caso del cliente, pero con un botón de editar que redirige al usuario administrador a los datos del producto	
     </p>
-	<img class="boceto" src="img/b_PProducto.png" alt="Boceto de Pag de producto">
+	<img class="boceto" src="img/b_PProducto.png" alt="Boceto de Pag de producto admi">
 	
 	<h3> Página de Editar Producto  </h3>
 	<p> Descripción: Se muestran los datos del producto elegido. Permite al usuario administrador editar todos los datos del producto (nombre, descripción, imagen, precio y stock de cada talla (XS-XL). Pulsando el botón volver se vuelve
 a  la página del producto sin guardar los cambios y si se pulsa el botón de editar se aplican los cambios introducidos. 	
     </p>
-	<img class="boceto" src="img/b_EditarProducto.png" alt="Boceto de Pag de producto">
+	<img class="boceto" src="img/b_EditarProducto.png" alt="Boceto de Editar de producto">
 	
 	<h3> Página Sobre Nosotros </h3>
 	<p> Descripción: Página en la que se muestra la información de la empresa “La Quinta Caja”. Si pulsas el botón contáctanos se redigirá a la página
@@ -68,16 +68,25 @@ a  la página del producto sin guardar los cambios y si se pulsa el botón de ed
 	<img class="boceto" src="img/b_PFAQs.png" alt="Boceto de la Pagina de FAQs">
 	
 	<h3> Página del Blog </h3>
-	<p> Descripción: Blog de la web donde se muestran las entradas publicadas	 en orden cronológico con una pequeña previsualización.
-		En caso de estar registrado como administrador se podrán añadir nuevas entradas o eliminar entradas existentes. 
+	<p> Descripción: Blog de la web donde se muestran las entradas publicadas en orden cronológico con una pequeña previsualización.
 		Al hacer click en una de las entradas se redirigirá a esta. </p>
 	<img class="boceto" src="img/b_PBlog.png" alt="Boceto de la Pagina del Blog">
+	
+	<h3> Página del Blog (Administrador) </h3>
+	<p> Descripción: Se muestra el blog de la web como en caso de un usuario normal, pero se muestra el botón de añadir nueva entrada, que redirige a la página de
+	añadir entrada al blog. También se puede eliminar una entrada existente pulsando el botón con un ícono de papelera en la entrada que se desee</p>
+	<img class="boceto" src="img/b_PBlogAdmi.png" alt="Boceto de la Pagina del Blog Administrador">
 	
 	<h3> Página de Post del Blog</h3>
 	<p> Descripcion: Se muestra la entrada del blog, con su texto e imágenes. En el lateral izquierdo se mostrarán los titulares de otras entradas, 
 		siendo redirigido a esta en caso de que se desee. Después de la entrada, en la parte inferior existirá una opción de comentarios, 
-		donde todos los usuarios registrados podrán comentar. En caso de ser administrador se podrá editar el post.</p>
+		donde todos los usuarios registrados podrán comentar.</p>
 	<img class="boceto" src="img/b_PPost.png" alt="Boceto de la Pagina de Post del Blog">
+	
+	<h3> Página de Post del Blog (Administrador)</h3>
+	<p> Descripcion: Se muestra la entrada del blog como un usuario normal, pero se permite editar toda la información (imágen y textos). Pulsando el botón guardar se aplicaran todos los cambios
+	No se muestran los comentarios</p>
+	<img class="boceto" src="img/b_PPostAdmi.png" alt="Boceto de la Pagina de Post del Blog Admi">
 	
 	<h3> Página de Mi Usuario</h3>
 	<p> Descripción: En caso de estar registrado se mostrarán los datos del usuario (nombre, email, compras y su tipo de suscripción, 

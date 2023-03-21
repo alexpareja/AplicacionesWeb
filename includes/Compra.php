@@ -71,6 +71,7 @@ class Compra
 						<th>Fecha</th>
 						<th>Usuario</th>
 						<th>Producto</th>
+						<th>Talla</th>
 						<th>Cantidad</th>
 						<th>Total</th>
 					</tr>
@@ -84,6 +85,8 @@ class Compra
 			$producto = Producto::buscaPorID($c->getIdProducto());
 			$nombreP = $producto->getNombre();
 			
+			$talla = $c->getTalla();
+			
 			$cantidad = $c->getCantidad();
 			$precio = $c->getPrecio();
 			$html .= <<<EOF
@@ -91,6 +94,7 @@ class Compra
 						<td>$fecha</td>
 						<td>$nombreU</td>
 						<td>$nombreP</td>
+						<td>$talla</td>
 						<td>$cantidad</td>
 						<td>$precio €</td>
 					</tr>
