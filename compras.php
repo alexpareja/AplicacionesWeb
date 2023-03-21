@@ -1,3 +1,8 @@
+<?php
+require_once __DIR__.'/includes/Compra.php';
+require_once __DIR__.'/includes/configuracion.php';
+?>
+
 <!DOCTYPE html>
 <html lang="es">
     <head>
@@ -22,32 +27,11 @@
 		<form action="tienda.php">
 			<button type="submit">Volver a la tienda</button>
 		</form>
-	
-		<div id="compras">
-				<table class="compras">
-					<tr>
-						<th>Fecha</th>
-						<th>Usuario</th>
-						<th>Productos</th>
-						<th>Cantidad</th>
-						<th>Total</th>
-					</tr>
-					<tr>
-						<td>10/03/2023</td>
-						<td>alexpareja</td>
-						<td>Caja Premium</td>
-						<td>2</td>
-						<td>59,99€</td>
-					</tr>
-					<tr>
-						<td>11/03/2023</td>
-						<td>helenarious</td>
-						<td>Caja Básica</td>
-						<td>1</td>
-						<td>29,99€</td>
-					</tr>					
-				</table>
-		</div>
+	<?php
+	$compras = Compra::getAllCompras();
+	echo Compra::mostrarTablaCompras($compras);
+	?>
+
 	</div>
 	
 	<?php
