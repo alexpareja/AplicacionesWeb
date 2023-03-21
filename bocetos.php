@@ -14,7 +14,7 @@
 	<h1> Bocetos </h1>
 	<h3> Página Principal </h3>
 	<p> Descripción : Página principal de la tienda. En este se mostrará en un lado las cajas de subscripción siempre disponible
-	 con un enlace a la página de registro. En el otro lado estará la caja de temporada, con un enlace a la tienda.</p>
+	 con un enlace a la página de registro, en caso de que el usuario no esté registrado o en el caso de que este registrado el usuario a la página de su cuenta, donde podrá editar su estado de subsripción (normal o premium). En el otro lado estará la caja de temporada, con un enlace a la tienda.</p>
 	<img class="boceto" src="img/b_PPrincipal.png" alt="Boceto de la Pagina Principal">
 	
 	<h3> Página de Tienda </h3>
