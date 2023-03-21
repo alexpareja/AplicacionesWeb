@@ -30,9 +30,7 @@
 					<li><input type="radio" name="menorque" value="100">100€</li>
 					</ul>
 				</li>
-				<li>Filtro 3</li>
-				<li>Filtro 4</li>
-				<li>Filtro 5</li>
+			
 				<li>
 					<button type="submit">Aplicar filtros</button>
 				</li>

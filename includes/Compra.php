@@ -59,6 +59,49 @@ class Compra
         $compraDAO= new compraDAO();
         return $compraDAO->getAllComprasUsuario($idUsuario);
     }
+	
+	public static function mostrarTablaCompras($compras){
+		$html = '';
+		$html .= <<<EOF
+			<div id="compras">
+				<table class="compras">
+					<tr>
+						<th>Fecha</th>
+						<th>Usuario</th>
+						<th>Producto</th>
+						<th>Cantidad</th>
+						<th>Total</th>
+					</tr>
+		EOF;
+		foreach($compras as $c){
+			$fecha = $c->getFecha();
+			
+			$usuario = Usuario::buscaPorID($c->getIdUsuario());
+			$nombreU = $usuario->getNombre();
+			
+			$producto = Producto::buscaPorID($c->getIdProducto());
+			$nombreP = $producto->getNombre();
+			
+			$cantidad = $c->getCantidad();
+			$precio = $c->getPrecio();
+			$html .= <<<EOF
+			<tr>
+						<td>$fecha</td>
+						<td>$nombreU</td>
+						<td>$nombreP</td>
+						<td>$cantidad</td>
+						<td>$precio €</td>
+					</tr>
+			EOF;	
+		}
+		
+		$html .= <<<EOF
+			</table>
+		</div>	
+		EOF;
+		return $html;
+	}
+	
    
 
     public function getId()
