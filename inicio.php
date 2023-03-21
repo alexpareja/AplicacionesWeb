@@ -5,7 +5,7 @@ require_once __DIR__.'/includes/configuracion.php';
 $tituloPagina = 'Login';
 
 $contenidoPrincipal = <<<EOS
-<div class="contenedor-cajas">
+<div id="inicio">
 	<a href="registro.php">
     	<img src="img/caja-normal.jpg" class="caja1">
     </a>
@@ -16,3 +16,4 @@ $contenidoPrincipal = <<<EOS
 EOS;
 
 require __DIR__.'/includes/plantillas/plantilla.php';
+?>

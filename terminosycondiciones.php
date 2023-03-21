@@ -1,14 +1,11 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-	<title>Términos y Condiciones</title>
-	<link href="css/terminosycondiciones.css" rel="stylesheet" type="text/css">
-	<meta charset="UTF-8">
-</head>
-<body>
-	<?php
-		include("includes/comun/cabecera.php");
-	?>
+<?php
+
+require_once __DIR__.'/includes/configuracion.php';
+
+$tituloPagina = 'terminosycondiciones';
+
+$contenidoPrincipal = <<<EOS
+<div id="terminosycondiciones">
 	<h1>Términos y condiciones</h1>
 	<p>¡Bienvenido a La Quinta Caja!</p>
 	<p>Al realizar una compra en nuestra tienda, usted acepta los siguientes términos y condiciones:</p>
@@ -19,9 +16,8 @@
 	<ul>Garantía: Ofrecemos una garantía limitada de 1 año en todos nuestros productos.</ul>
 	<ul>Privacidad: Nos compremetemos a proteger su privacidad y no compartimos su información personal con terceros.</ul>
 	<p>Al realizar una compra en nuestra tienda, usted acepta estos términos y condiciones. Si tiene alguna pregunta o inquietud, no dude en ponerse en contacto con nosotros.</p>
-	<?php
-  		include("includes/comun/pie.php");
- 	?>
-</body>
+</div>
+EOS;
 
-</html>
+require __DIR__.'/includes/plantillas/plantilla.php';
+?>
