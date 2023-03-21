@@ -13,10 +13,10 @@ $contenidoPrincipal = <<<EOS
     <h2 class = "centro"> ¡En la Quinta Caja, encajamos contigo! </h2>
     <h3> Tipos de usuarios </h3>
     <ul>
-       <li><span class = "negrita"> Sin registrar: </span>es la persona que entra a nuestra página sin registrarse como usuario para que pueda ver todo lo que tiene disponible sin que pueda valorar los productos ni comentar tanto estos como los artículos del blog.</li>
-       <li><span class = "negrita"> Registrado: </span>a diferencia de los usuarios que no se han registrado, aparte de comprar también disponen de una lista de deseos, pueden valorar y comentar productos y artículos del blog.</li>
-       <li><span class = "negrita"> Registrado con suscripción premium: </span>además de todas las ventajas de los usuarios registrados también tienen exclusividad para ventas anticipadas, reciben productos continuamente.</li>
-       <li><span class = "negrita"> Administrador: </span>pueden añadir, modificar y eliminar tantos productos como artículos del blog. Podrán consultar la lista de compras realizadas por los usuarios para así poder administrar el inventario.</li>
+       <li><span class = "negrita"> Sin registrar: </span>es un usuario que accede a la página web sin tener una cuenta de usuario dentro de ella. Puede visualizar el contenido de la página web. Sin embargo, no puede efectuar compras ni dejar valoraciones y comentarios en los productos de la tienda y artículos del blog.</li>
+       <li><span class = "negrita"> Registrado: </span>es un usuario que accede a la página web y tiene una cuenta de usuario en ella. A diferencia del usuario "sin registrar" este puede comprar, valorar y comentar. También, podrá guardar productos en una lista de deseos, a la que tendrá accesos desde la sección "Mi cuenta".</li>
+       <li><span class = "negrita"> Registrado con suscripción premium: </span>es un usuario que, además de tener una cuenta de usuario en la página web, paga una suscripción que le otorga diversas ventajas, como acceso a productos exclusivos y descuentos.</li>
+       <li><span class = "negrita"> Administrador: </span>es un usuario con acceso exclusivo a áreas de administración de la página web. Puede añadir, modificar y eliminar productos de la tienda, así como gestionar el inventario y los artículos del blog. Además, puede consultar un listado con las compras realizadas por los usuarios de la web.</li>
     </ul>
 </div>
 EOS;
