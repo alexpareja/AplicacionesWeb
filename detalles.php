@@ -15,7 +15,7 @@ $contenidoPrincipal = <<<EOS
     <ul>
        <li><span class = "negrita"> Sin registrar: </span>es un usuario que accede a la página web sin tener una cuenta de usuario dentro de ella. Puede visualizar el contenido de la página web. Sin embargo, no puede efectuar compras ni dejar valoraciones y comentarios en los productos de la tienda y artículos del blog.</li>
        <li><span class = "negrita"> Registrado: </span>es un usuario que accede a la página web y tiene una cuenta de usuario en ella. A diferencia del usuario "sin registrar" este puede comprar, valorar y comentar. También, podrá guardar productos en una lista de deseos, a la que tendrá accesos desde la sección "Mi cuenta".</li>
-       <li><span class = "negrita"> Registrado con suscripción premium: </span>es un usuario que, además de tener una cuenta de usuario en la página web, paga una suscripción que le otorga diversas ventajas, como acceso a productos exclusivos y descuentos.</li>
+       <li><span class = "negrita"> Registrado con suscripción premium: </span>es un usuario que, además de tener una cuenta de usuario en la página web, paga una suscripción que le otorga diversas ventajas, como acceso a productos exclusivos y descuentos. Del mismo modo, le llega mensualmente a su domicilio una caja sorpresa gratuita</li>
        <li><span class = "negrita"> Administrador: </span>es un usuario con acceso exclusivo a áreas de administración de la página web. Puede añadir, modificar y eliminar productos de la tienda, así como gestionar el inventario y los artículos del blog. Además, puede consultar un listado con las compras realizadas por los usuarios de la web.</li>
     </ul>
 </div>
