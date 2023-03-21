@@ -361,3 +361,19 @@
   min-width: 185.13px;
   max-width: 70%;
 }
+
+/*Hoja de estilo Editar producto*/
+#editar-prod{
+    text-align: center;
+}
+
+#editar-prod h2 {
+  text-align: center; 
+}
+
+#editar-prod img.img-editarp{
+  width: 750px;
+  height: 500px; 
+  display: block; 
+  margin: 0 auto;
+}

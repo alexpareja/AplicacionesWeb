@@ -13,24 +13,50 @@
 	
 	<h1> Bocetos </h1>
 	<h3> Página Principal </h3>
-	<p> Descripción : Página principal de la tienda. En este se mostrará en un lado las cajas de subscripción siempre disponible
-	 con un enlace a la página de registro, en caso de que el usuario no esté registrado o en el caso de que este registrado el usuario a la página de su cuenta, donde podrá editar su estado de subsripción (normal o premium). En el otro lado estará la caja de temporada, con un enlace a la tienda.</p>
+	<p> Descripción : Página principal de la tienda. En este se mostrará en un lado las cajas de subscripción 
+	 con un enlace a la página de registro en caso de que el usuario no esté registrado, o a la página de su cuenta en el caso de que este registrado, donde podrá editar su estado de subsripción (normal o premium). En el otro lado estará la caja de temporada, con un enlace a la tienda.</p>
 	<img class="boceto" src="img/b_PPrincipal.png" alt="Boceto de la Pagina Principal">
 	
-	<h3> Página de Tienda </h3>
+	<h3> Página de Tienda (cliente) </h3>
 	<p> Descripcion: Página de la tienda, donde se encontraran todos nuestro productos en orden. El cliente podrá navegar sobre esta, viendo los 
 	distintos productos. En el lado izquierdo de la pagina encontraremos una sección con filtros, pudiendo el cliente seleccionar lo que el desee
-	y mostrandose los productos según dichos criterios. Al seleccionar un producto se redigirá a la página concreta del producto.  En caso de estar 
-	registrado como administrador se dara la opción de modificar las unidades de los productos, eliminarlos o añadir nuevos productos</p>
+	y mostrandose los productos según dichos criterios. Al seleccionar un producto se redigirá a la página concreta del producto.  
+	</p>
 	<img class="boceto" src="img/b_Tienda.png" alt="Boceto de la Tienda">
+	
+	<h3> Página de Tienda (administrador) </h3>
+	<p> Descripcion: Se mostrará la página como se le muestra a un cliente normal, pero con un botón de "Añadir producto". Si se pulsa este botón se redigirá a la página de añadir producto. Aparte de este 
+	se muestra el botón "Compras" que redirige al usuario a la página de compras.</p>
+	<img class="boceto" src="img/b_Tiendaadmi.png" alt="Boceto de la Tienda Administrador">
+	
+	<h3> Página de Compras</h3>
+	<p> Descripcion: Se muestran las compras en caso de que seas usuario administrador. </p>
+	<img class="boceto" src="img/b_Compras.png" alt="Boceto de la Pagina de Compras">
+
+	<h3> Página de Añadir Producto</h3>
+	<p> Descripcion: Se muestra un formulario con los datos que el usuario administrador debe introducir para añadir un nuevo producto. Se deberá introducir el
+	nombre del producto, la descripción de este, su precio y las unidades de cada talla (XS-XL) que se quieran añadir. Adicionalmente se deja buscar un archivo en el 
+    dispositivo para añadir una imagen. Los campos de nombre, precio e imagen se deben introducir obligatoriamente</p>
+	<img class="boceto" src="img/b_AnnadirProducto.png" alt="Boceto de la Pagina de Añadir producto">
 	
 	<h3> Página de Producto </h3>
 	<p> Descripción: Página que muestra un producto en concreto. Encontramos los detalles del producto, una imagen y su precio. Se puede elegir
 		talla y unidades. Si se decide comprar se añade el producto al carrito, si el usuario esta registrado se añadirá al carrito, sino se redigirá
 		a la página de login. Del mismo modo, si esta registrado podrá añadir el producto a la lista de deseos, sino serán redirigidos a la página de 
 		login. En la parte inferior se encontrará la parte de comentarios, y se podrá añadir una review en caso de haber comprado el producto anteriormente
-		Como administrador se pueden editar todos los datos posibles de los productos. </p>
+    </p>
 	<img class="boceto" src="img/b_PProducto.png" alt="Boceto de Pag de producto">
+	
+	<h3> Página de Producto (Administrador) </h3>
+	<p> Descripción: Página que muestra un producto como en el caso del cliente, pero con un botón de editar que redirige al usuario administrador a los datos del producto	
+    </p>
+	<img class="boceto" src="img/b_PProducto.png" alt="Boceto de Pag de producto">
+	
+	<h3> Página de Editar Producto  </h3>
+	<p> Descripción: Se muestran los datos del producto elegido. Permite al usuario administrador editar todos los datos del producto (nombre, descripción, imagen, precio y stock de cada talla (XS-XL). Pulsando el botón volver se vuelve
+a  la página del producto sin guardar los cambios y si se pulsa el botón de editar se aplican los cambios introducidos. 	
+    </p>
+	<img class="boceto" src="img/b_EditarProducto.png" alt="Boceto de Pag de producto">
 	
 	<h3> Página Sobre Nosotros </h3>
 	<p> Descripción: Página en la que se muestra la información de la empresa “La Quinta Caja”. Si pulsas el botón contáctanos se redigirá a la página
@@ -89,9 +115,6 @@
 	<p> Descripcion: Se muestran los términos y condiciones de la Quinta Caja	</p>
 	<img class="boceto" src="img/b_Terminos.png" alt="Boceto de la Pagina de Términos y Condiciones">
 	
-	<h3> Página de Compras</h3>
-	<p> Descripcion: Se muestran las compras en caso de que seas usuario administrador	</p>
-	<img class="boceto" src="img/b_Compras.png" alt="Boceto de la Pagina de Compras">
 	
 	<h3> Barra de Menú</h3>
 	<p> Descripcion: El menú de la página contiene diferentes botones que redirigen a diferentes partes. Si se pulsa en "Inicio" se redirige a la página
