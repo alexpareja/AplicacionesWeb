@@ -19,7 +19,7 @@ class CompraDAO
         if ($rs) {
             $fila = $rs->fetch_assoc();
             if($fila){
-            $compra = new Compra($fila['id'], $fila['usuario'], $fila['producto'], $fila['fecha'], 
+            $compra = new Compra($fila['id'], $fila['usuario'], $fila['producto'],$fila['talla'], $fila['fecha'], 
             $fila['cantidad'], $fila['precio']);
             $rs->free();
 
@@ -32,9 +32,9 @@ class CompraDAO
     }
 
     //crea una nueva compra, con la fecha actual 
-    public function crea($idUsuario, $idProducto, $fecha,$cantidad,$precio)
+    public function crea($idUsuario, $idProducto, $talla,$fecha,$cantidad,$precio)
     {
-        $compra = new Compra($nuevaId=null,$idUsuario,$idProducto,$fecha, $cantidad, $precio);
+        $compra = new Compra($nuevaId=null,$idUsuario,$idProducto,$talla,$fecha, $cantidad, $precio);
         return self::guarda($compra);
     }
 
@@ -42,11 +42,12 @@ class CompraDAO
     private function inserta($compra)
     {
         $query=sprintf("INSERT INTO compras(usuario, producto, fecha, cantidad, precio) VALUES ('%d', '%d', '%s','%d', '%f')"
-            , $this->conn->real_escape_string($usuario->getIdUsuario())
-            , $this->conn->real_escape_string($usuario->getIdProducto())
-            , $this->conn->real_escape_string($usuario->getFecha())
-            , $this->conn->real_escape_string($usuario->getCantidad())
-            , $this->conn->real_escape_string($usuario->getPrecio())
+            , $this->conn->real_escape_string($compra->getIdUsuario())
+            , $this->conn->real_escape_string($compra->getIdProducto())
+            , $this->conn->real_escape_string($compra->getTalla())
+            , $this->conn->real_escape_string($compra->getFecha())
+            , $this->conn->real_escape_string($compra->getCantidad())
+            , $this->conn->real_escape_string($compra->getPrecio())
         );
         if ( $this->conn->query($query) ) {
             $compra->setId($this->conn->insert_id);
@@ -73,7 +74,7 @@ class CompraDAO
         return true;
     }
 
-    //guarda el usuario en la bbdd. Si existe lo actualiza y si no lo crea
+    //guarda el usuario en la bbdd. Si existe lo actualiza y si no lo crea. Actualizado no implementado
     public function guarda($compra)
     {
         if ($compra->getId()!== null) {
@@ -93,7 +94,7 @@ class CompraDAO
             while($row=$rs->fetch_assoc())
             {
                 $id=$row['id'];
-                $compras[$id] = new Compra($row['id'], $row['usuario'], $row['producto'], $row['fecha'],
+                $compras[$id] = new Compra($row['id'], $row['usuario'], $row['producto'],$row['talla'], $row['fecha'],
                 $row['cantidad'],$row['precio']);
             }
         }
@@ -110,7 +111,7 @@ class CompraDAO
             while($row=$rs->fetch_assoc())
             {
                 $id=$row['id'];
-                $compras[$id] = new Compra($row['id'], $row['usuario'], $row['producto'], $row['fecha'],
+                $compras[$id] = new Compra($row['id'], $row['usuario'], $row['producto'], $row['talla'],$row['fecha'],
                 $row['cantidad'],$row['precio']);
             }
         }
