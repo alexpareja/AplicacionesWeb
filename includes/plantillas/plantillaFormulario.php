@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html  lang="es">
 <head>
 	<meta charset="UTF-8">
     <title><?= $tituloPagina ?></title>
-    <link rel="stylesheet" type="text/css" href="css/formulario.css" /> 
+    <link rel="stylesheet" type="text/css" href="css/formulario.css"> 
 </head>
 <body>
 <div id="contenedor">

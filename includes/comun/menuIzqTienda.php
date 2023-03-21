@@ -1,8 +1,6 @@
 
 <head>
-	<link rel="stylesheet" type="text/css" href="css/menuIzqTienda.css" />
-	<meta charset="utf-8">
-	<title>Cabecera</title>
+	<link rel="stylesheet" type="text/css" href="css/menuIzqTienda.css">
 </head>
 
 
