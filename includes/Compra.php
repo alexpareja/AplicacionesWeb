@@ -39,6 +39,7 @@ class Compra
     public static function crea($idUsuario, $idProducto, $talla,$cantidad,$precio)
     {
         $compraDAO= new CompraDAO();
+        $producto = Producto::borraCantidad($idProducto, $talla, $cantidad);
         return $compraDAO->crea($idUsuario, $idProducto,$talla, date('Y-m-d H:i:s'),$cantidad,$precio);
     }
 

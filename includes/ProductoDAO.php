@@ -114,6 +114,26 @@ class ProductoDAO
         }
         return true;
     }
+    
+    //borra la cantidad del producto
+    public function borraCantidad($idProducto, $talla, $cantidad)
+    {
+        if (!$idProducto) {
+            return false;
+        } 
+        if (!$talla) {
+            return false;
+        } 
+        $stockColumn = "stock" . strtoupper($talla); // obtener el nombre de la columna de stock correspondiente
+        $query = sprintf("UPDATE productos SET $stockColumn = $stockColumn - %d WHERE id = %d", $cantidad, $idProducto);
+
+        if ( ! $this->conn->query($query) ) {
+            error_log("Error BD ({$conn->errno}): {$conn->error}");
+            return false;
+        }
+        
+        return true;
+    }
 
 
     //funcion para actualizar stock->guardar cantidades en array stock['xs' = $cantidadXS, 's' = $cantidadS...]
