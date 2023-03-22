@@ -49,7 +49,7 @@ class FormularioAnadirCarrito extends Formulario
         </div>
         <span>Stocks por talla:</span>
         <span id="stockTallas">XS: {$this->producto->getStockXS()}, S: {$this->producto->getStockS()},
-        M: {$this->producto->getStockM()}, L: {$this->producto->getStockL()}, XL: {$this->producto->getStockXS()} <br></span>
+        M: {$this->producto->getStockM()}, L: {$this->producto->getStockL()}, XL: {$this->producto->getStockXL()} <br></span>
         <span id="errorNoStock">{$erroresCampos['noStock']}</span>
         <span id="errorNoCantidad">{$erroresCampos['cantidad']}</span>
         EOF;
