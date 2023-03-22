@@ -378,7 +378,7 @@
   margin: 0 auto;
 }
 
-/*Mostrar Producto*/
+/*Hoja de estilo Mostrar Producto*/
 #producto{
 width:100%;
 }
@@ -429,4 +429,106 @@ display:inline-block;
 
 .pago-content form {
     text-align: center;
+}
+
+#blog .titulo1 {
+  font-family: Futura;
+  font-size: 35px;
+}
+
+#blog .titulo2 {
+  font-family: Verdana;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+#rectangulo {
+  margin-top: 40px;
+  background-color: #f2f2f2;
+  height: 20%;
+  width: 100%;
+  padding: 2px;
+}
+
+#rectangulo .t1, .t2, .t3 {
+  margin-left: 15px;
+  font-family: Verdana;
+  font-size: 10px;
+}
+
+#rectangulo .t1 {
+  line-height: 1;
+  font-family: Monaco;
+  font-size: 20px;
+}
+
+#rectangulo .t3 {
+  margin-top: 40px;
+}
+
+#rectangulo a {
+  text-decoration: none;
+  color: black;
+}
+
+#etiqueta {
+  background-color: #800080;
+  height: 10px;
+  width: 100vm;
+}
+
+/*Hoja de estilo Bocetos*/
+#bocetos h1 {
+  font-family: Futura;
+  font-size: 35px;
+}
+
+#bocetos h3 {
+  font-family: Verdana;
+}
+
+#bocetos p {
+  font-family: Verdana;
+  font-size: 15px;
+}
+
+#bocetos img {
+  width: 540px;
+  height: 370px;
+}
+
+/*Hoja de estilo Entrada Blog*/
+#entradaBlog {
+  width: 80%;
+  margin: 0 auto;
+}
+
+#entradaBlog h2 {
+  text-align: center; 
+}
+
+#entrada_contenido{
+  display: flex;
+  justify-content: center;
+}
+
+#entrada_texto {
+  width: 60%;
+  margin-right: 20px; 
+}
+
+#entrada_imagen {
+  width: 30%;
+  float: right; 
+}
+
+#entrada_imagen img {
+  max-width: 100%;
+  height: auto;
+}
+
+#entradas_links {
+  width: 20%;
+  float: left;
+  margin-right: 20px;
 }

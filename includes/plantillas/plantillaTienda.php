@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+	<meta charset="UTF-8">
     <title><?= $tituloPagina ?></title>
 	<link rel="stylesheet" type="text/css" href="css/tienda.css">
-	<meta charset="UTF-8">
 </head>
 <body>
 <div id="contenedor">
