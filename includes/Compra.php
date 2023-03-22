@@ -30,7 +30,7 @@ class Compra
 
     public static function buscaPorID($idCompra)
     {
-        $compraDAO= new compraDAO();
+        $compraDAO= new CompraDAO();
         return $compraDAO->buscaPorUsuario($idCompra);
     }
 
@@ -44,21 +44,21 @@ class Compra
     //borra la compra
     public function borra($compra)
     {
-        $compraDAO= new compraDAO();
+        $compraDAO= new CompraDAO();
         return $compraDAO->borra($compra->id);
     }
    
     //obtiene en un array todas las compras->se puede actualizar para obtener compras concretas (todas las compras del último mes por ej)
     public static function getAllCompras()
     {
-        $compraDAO= new compraDAO();
+        $compraDAO= new CompraDAO();
         return $compraDAO->getAllCompras();
     }
 
     //obtiene en un array todas las compras de un usuario
     public static function getAllComprasUsuario($idUsuario)
     {
-        $compraDAO= new compraDAO();
+        $compraDAO= new CompraDAO();
         return $compraDAO->getAllComprasUsuario($idUsuario);
     }
 	
