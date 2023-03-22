@@ -2,7 +2,7 @@
 require_once __DIR__.'/includes/configuracion.php';
 
 
-	$tituloPagina = 'Tienda';
+	$tituloPagina = 'Compras';
 	//Se muestran la tabla con las compras realizadas hasta el momento de la base de datos de compras
 	$contenidoPrincipal = '';
 	$contenidoPrincipal .= <<<EOS
