@@ -183,6 +183,7 @@
 #faqs .t1 {
   font-family: Futura;
   font-size: 35px;
+  font-weight: normal;
 }
 
 #faqs .t2 {
@@ -191,21 +192,21 @@
   font-weight: bold;
 }
 
-#faqs-etiqueta {
+#faqs-etiqueta1, #faqs-etiqueta2, #faqs-etiqueta3 {
   margin-top: 20px;
   height: 5px;
   width: 60px;
   background-color: #800080;
 }
 
-#faqs-rectangulo {
+#faqs-rectangulo1, #faqs-rectangulo2, #faqs-rectangulo3 {
   height: 15%;
   margin-left: 5px;
   margin-right: 5px;
   font-family: Verdana;
 }
 
-#faqs-preg {
+#faqs-preg1, #faqs-preg2, #faqs-preg3 {
   height: 20%;
   width: 80%;
   font-size: 15px;
@@ -213,7 +214,7 @@
   margin-bottom: 10px;
 }
 
-#faqs-resp {
+#faqs-resp1, #faqs-resp2, #faqs-resp3 {
   height: 20%;
   width: 100%;
   padding: 2px;
@@ -223,7 +224,7 @@
   background-color: #f2f2f2;
 }
 
-#faqs-resp p {
+#faqs-resp1 p, #faqs-resp2 p, #faqs-resp3 p {
   margin-left: 10px;
   margin-right: 10px;
 }
@@ -251,8 +252,13 @@
   text-align: justify;
 }
 
+#propuesta h2 {
+  font-family: Futura;
+  text-align: center;
+}
+
 /*Hoja de estilo planificacion*/
-#planificacion h1 {
+#planificacion h2 {
   font-family: Futura;
   font-size: 35px;
   font-weight: bold;
@@ -273,7 +279,7 @@
 }
 
 /*Hoja de estilo Terminos y Condiciones*/
-#terminosycondiciones h1 {
+#terminosycondiciones h2 {
   font-family: Futura;
   font-size: 35px;
 }
@@ -291,7 +297,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  //height: 100%;
 }
 
 #nosotros-texto {
@@ -304,6 +309,7 @@
   font-size: 30px;
   line-height: 0.05;
   color: black;
+  font-weight: normal;
 }
 
 #nosotros-texto .t2 {
@@ -423,9 +429,12 @@ display:inline-block;
     text-align: center;
 }
 
+/*Hoja de estilo Blog*/
+
 #blog .titulo1 {
   font-family: Futura;
   font-size: 35px;
+  font-weight: normal;
 }
 
 #blog .titulo2 {
@@ -434,7 +443,7 @@ display:inline-block;
   font-weight: bold;
 }
 
-#rectangulo {
+#rectangulo1, #rectangulo2, #rectangulo3 {
   margin-top: 40px;
   background-color: #f2f2f2;
   height: 20%;
@@ -442,28 +451,40 @@ display:inline-block;
   padding: 2px;
 }
 
-#rectangulo .t1, .t2, .t3 {
+#rectangulo1 .t1, .t2, .t3 {
   margin-left: 15px;
   font-family: Verdana;
   font-size: 10px;
 }
 
-#rectangulo .t1 {
+#rectangulo2 .t1, .t2, .t3 {
+  margin-left: 15px;
+  font-family: Verdana;
+  font-size: 10px;
+}
+
+#rectangulo3 .t1, .t2, .t3 {
+  margin-left: 15px;
+  font-family: Verdana;
+  font-size: 10px;
+}
+
+#rectangulo1 .t1, #rectangulo2 .t1, #rectangulo3 .t1  {
   line-height: 1;
   font-family: Monaco;
   font-size: 20px;
 }
 
-#rectangulo .t3 {
+#rectangulo1 .t3, #rectangulo2 .t3,  #rectangulo3 .t3{
   margin-top: 40px;
 }
 
-#rectangulo a {
+#rectangulo1 a, #rectangulo2 a, #rectangulo3 a {
   text-decoration: none;
   color: black;
 }
 
-#etiqueta {
+#etiqueta1, #etiqueta2, #etiqueta3 {
   background-color: #800080;
   height: 10px;
   width: 100vm;

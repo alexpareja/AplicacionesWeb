@@ -7,7 +7,7 @@ $tituloPagina = 'Planificacion';
 
 $contenidoPrincipal = <<<EOS
 <div id="planificacion">
-	<h1>Planificación</h1>
+	<h2>Planificación</h2>
 	<h3>Tareas a realizar</h3>
 	<p>Para comenzar, es necesario formar el grupo de trabajo y presentar una propuesta inicial del proyecto en formato de documento PDF breve. Esto permitirá establecer las bases del proyecto, incluyendo su alcance, objetivos y planificación, y establecer un acuerdo entre los miembros del grupo. Además, esta propuesta inicial proporcionará un marco de referencia para la implementación del proyecto y permitirá la toma de decisiones informadas en etapas posteriores.</p>
 	<p>Después, presentaremos una descripción detallada del proyecto, creando una página web sencilla que incluya varios documentos descriptivos. Esta página web podría contener información sobre los objetivos, alcance, metodología, cronograma y recursos necesarios para llevar a cabo el proyecto.</p>
@@ -75,79 +75,89 @@ $contenidoPrincipal = <<<EOS
 			<td> 24 de febrero de 2023 </td>
 			<td> TODOS </td>
 		</tr>
-		<td> Etapa 2.1 </td>
+		<tr>
+			<td> Etapa 2.1 </td>
 			<td> Creación includes </td>
 			<td> 1 de marzo de 2023 </td>
 			<td> Alejandro Pareja </td>
+		</tr>
 		<tr>
-		<td> Etapa 2.2 </td>
+			<td> Etapa 2.2 </td>
 			<td> Login y Registro </td>
 			<td> 2 de marzo de 2023 </td>
 			<td> Cristina Morillo </td>
+		</tr>
 		<tr>
-		<td> Etapa 2.3 </td>
+			<td> Etapa 2.3 </td>
 			<td> Funcionalidad: mostrar producto </td>
 			<td> 5 de marzo de 2023 </td>
 			<td> Sergio Atienza </td>
+		</tr>
 		<tr>
-		<td> Etapa 2.4 </td>
+			<td> Etapa 2.4 </td>
 			<td> Creación página Tienda </td>
 			<td> 7 de marzo de 2023 </td>
 			<td> Alejandro P y Elena B </td>
+		</tr>
 		<tr>
-		<td> Etapa 2.5 </td>
+			<td> Etapa 2.5 </td>
 			<td> Creación BBDD </td>
 			<td> 12 de marzo de 2023 </td>
 			<td> Sergio Atienza </td>
+		</tr>
 		<tr>
-		<td> Etapa 2.6 </td>
+			<td> Etapa 2.6 </td>
 			<td> Creación páginas en cabecera</td>
 			<td> 14 de marzo de 2023 </td>
 			<td> Lucero Abregú </td>
+		</tr>
 		<tr>
-		<td> Etapa 2.7 </td>
+			<td> Etapa 2.7 </td>
 			<td> Creación página Carrito </td>
 			<td> 20 de marzo de 2023 </td>
 			<td> Jesús Hernández </td>
+		</tr>
 		<tr>
-		<td> Etapa 2.8 </td>
+			<td> Etapa 2.8 </td>
 			<td> Corrección entrega 1 </td>
 			<td> 21 de marzo de 2023 </td>
 			<td> TODOS </td>
-		<tr>
+		</tr>
 		<tr>
 			<td> Entrega práctica 2 </td>
 			<td> Diseño de la aplicación usando HTML, versión mínima del proyecto </td>
 			<td> 23 de marzo de 2023 </td>
 			<td> TODOS </td>
 		</tr>
-		<td> Etapa 3.1 </td>
+		<tr>
+			<td> Etapa 3.1 </td>
 			<td> Funcionalidad Blog </td>
 			<td> 27 de marzo de 2023 </td>
 			<td> Sergio Atienza </td>
+		</tr>
 		<tr>
-		<td> Etapa 3.2 </td>
+			<td> Etapa 3.2 </td>
 			<td> Corrección entrega 2 </td>
 			<td> 1 de abril de 2023 </td>
 			<td> TODOS </td>
-		<tr>
+		</tr>
 		<tr>
 			<td> Entrega práctica 3 </td>
 			<td> Diseño de la apariencia de la app con hojas de estilo </td>
 			<td> 14 de abril de 2023 </td>
-			<td> TODOS </p>
+			<td> TODOS </td>
 		</tr>
 		<tr>
 			<td> Etapa 4.1 </td>
 			<td> Corrección práctica 3 </td>
 			<td> 25 de abril de 2023 </td>
-			<td> TODOS </p>
+			<td> TODOS </td>
 		</tr>
 		<tr>
 			<td> Entrega final </td>
 			<td> Aplicación Web completa y funcional </td>
 			<td> 5 de marzo de 2023 </td>
-			<td> TODOS </p>
+			<td> TODOS </td>
 		</tr>
 	</table>
 </div>
