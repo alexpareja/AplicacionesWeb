@@ -36,7 +36,6 @@ class Tienda {
 			$html .= <<<EOS
 						</ul>        
 						</div>
-					</div>
 				EOS;
         return $html;
     }

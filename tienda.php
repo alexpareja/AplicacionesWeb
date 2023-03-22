@@ -27,6 +27,9 @@ if (isset($_SESSION['admin']) && $_SESSION['admin']) {
 	//Se muestran los porductos de la tienda
 	$tienda = new es\ucm\fdi\aw\Tienda();
 	$contenidoPrincipal .= $tienda->productosEnTienda();
+	$contenidoPrincipal .= <<<EOS
+		</div>
+	EOS;
 
 require __DIR__.'/includes/plantillas/plantillaTienda.php';
 	
