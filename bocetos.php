@@ -102,37 +102,33 @@ se redirige a la página de inicio de sesión, puesto que unicamente los usuario
 	<img src="img/b_PCarrito.png" alt="Boceto de la Pagina de Carrito">
 	
 	<h3> Página de Lista de Deseos</h3>
-	<p> Descripcion: Se muestran los productos añadidos en la lista de deseos de un usuario registrado. </p>
+	<p> Descripción: Se muestran los productos añadidos en la lista de deseos de un usuario registrado. </p>
 	<img src="img/b_PDeseos.png" alt="Boceto de la Pagina de Lista de Deseos">
 	
 	<h3> Página de Inicio Sesion</h3>
-	<p> Descripcion: Se pide al usuario el mail y la contraseña para poder acceder a la página registrado. Cuando se pulsa el botón "Inicio 
+	<p> Descripción: Se pide al usuario el mail y la contraseña para poder acceder a la página registrado. Cuando se pulsa el botón "Inicio 
 	Sesión" se comprueban los datos y se inicia sesión. En caso de no estar registrado, pulsando el botón "Registrarse" se redirige a la página
     de registro.</p>
 	<img src="img/b_PLogin.png" alt="Boceto de la Pagina de Inicio de Sesion">
 	
 	<h3> Página de Contacto</h3>
-	<p> Descripcion: Página en la que cualquier usuario puede contactar con La Quinta Caja. Se deben introducir los datos necesarios (Nombre, Mail, 
+	<p> Descripción: Página en la que cualquier usuario puede contactar con La Quinta Caja. Se deben introducir los datos necesarios (Nombre, Mail, 
 	Motivo y Mensaje) y aceptar los términos y condiciones. Al pulsar enviar se envía la consulta a la Quinta Caja	</p>
 	<img src="img/b_Contacto.png" alt="Boceto de la Pagina de Contacto">
 	
 	<h3> Página de Términos y Condiciones</h3>
-	<p> Descripcion: Se muestran los términos y condiciones de la Quinta Caja.	</p>
+	<p> Descripción: Se muestran los términos y condiciones de la Quinta Caja.	</p>
 	<img src="img/b_Terminos.png" alt="Boceto de la Pagina de Términos y Condiciones">
 	
 	
 	<h3>Cabecera</h3>
-	<p> Descripcion: Desde todas las páginas se podrá acceder a la cabecera. En esta hará varios botenes. El botón "Tienda" dirige al usuario a la página de la Tienda. El botón "Blog" dirige al usuario a la página del Blog
-	El botón "Nosotros" dirige al usuario a la página de Sobre Nosotros. El ícono de interrogación ayuda a los usarios a acceder a la página de  FAQ's. El botón del carrito permite a los usuarios 
-	acceder a su carrito. El bóton del usuario permite a los usuario que hayan iniciado sesión acceder a la página de su cuenta. En caso se no haber iniciado sesión se redirige a una página donde podrán elegir entre
-	iniciar sesión o registrarse. El último ícono redirige a los usuario a inciar sesión, en caso de que no lo hayan hecho, o finalizar sesión en caso contrario. Finalmente si se pulsa sobre "LA QUINTA CAJA" se redirige al usuario
-	a la página de Inicio </p>
+	<p> Descripción: Desde todas las páginas se podrá acceder a la cabecera. En esta habrá varios botones. El botón "Tienda" dirige al usuario a la página de la Tienda. El botón "Blog" dirige al usuario a la página del Blog El botón "Nosotros" dirige al usuario a la página de Sobre Nosotros. El ícono de interrogación ayuda a los usuarios a acceder a la página de FAQ's. El botón del carrito permite a los usuarios acceder a su carrito. El botón del usuario permite a los usuario que hayan iniciado sesión acceder a la página de su cuenta. En caso de no haber iniciado sesión se redirige a una página donde podrán elegir entre iniciar sesión o registrarse. El último ícono redirige a los usuario a iniciar sesión, en caso de que no lo hayan hecho, o finalizar sesión en caso contrario. Finalmente si se pulsa sobre "LA QUINTA CAJA" se redirige al usuario a la página de Inicio
+ </p>
 	
 	
 	<h3>Pie de página</h3>
-	<p> Descripcion: Desde todas las páginas se podrá acceder al pie de página. Este conterá distintos botones. Si se pulsa "Terminos y condiciones" se redirigé a la página de termino y condiciones. Si se pulsa sobre "@laquintacaja" se redirige al Instagram de La Quinta Caja. 
-	Los botenes "Propuesta", "Detakkes", "Bocetos", "Miembros" y "Planificación" dirigen al usuario a dichas páginas que contienen el contenido de la entrega anterior. Finalmente el botón "Contacto" lleva a los usuarios a la 
-	página de Contacto</p>
+	<p> Descripción: Desde todas las páginas se podrá acceder al pie de página. Este contendrá distintos botones. Si se pulsa "Términos y condiciones" se redirige a la página de términos y condiciones. Si se pulsa sobre "@laquintacaja" se redirige al Instagram de La Quinta Caja. Los botones "Propuesta", "Detalles", "Bocetos", "Miembros" y "Planificación" dirigen al usuario a dichas páginas que contienen el contenido de la entrega anterior. Finalmente el botón "Contacto" lleva a los usuarios a la página de Contacto
+</p>
 	<img src="img/b_CabeceraPie.png" alt="Boceto de pie de página">
 </div>
 EOS;
