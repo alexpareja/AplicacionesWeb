@@ -20,7 +20,7 @@ if (isset($_SESSION['cart']) && is_array($_SESSION['cart'])) {
 $contenidoPrincipal = '<div class="pago-content">';
 $contenidoPrincipal .= <<<EOS
     <h2>La compra ha sido realizada</h2>
-    <form method="get" action="inicio.php">
+    <form method="get" action="index.php">
         <button type="submit">Aceptar</button>
     </form>
 EOS;

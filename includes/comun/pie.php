@@ -4,7 +4,7 @@
 			<li><a href="https://www.instagram.com/laquintacaja/" class="referencia">@laquintacaja</a></li>
 		</ul>
 		<ul class='horizontalpie'>
-			<li><a href="index.php" class="referencia">Propuesta</a></li>
+			<li><a href="inicio.php" class="referencia">Propuesta</a></li>
 				<li><a href="detalles.php" class="referencia">Detalles</a></li>
 				<li><a href="bocetos.php" class="referencia">Bocetos</a></li>
 				<li><a href="miembros.php" class="referencia">Miembros</a></li>
