@@ -628,3 +628,7 @@ div#cabecera .ayuda, .carrito, .cuenta, .iniciar {
 #pie .referencia:hover {
   text-decoration: underline;
 }
+
+::-webkit-scrollbar {
+display: none;
+}
