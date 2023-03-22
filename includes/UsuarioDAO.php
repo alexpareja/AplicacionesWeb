@@ -1,7 +1,5 @@
 <?php
-
-include_once ("Usuario.php");
-include_once ("Aplicacion.php");
+namespace es\ucm\fdi\aw;
 
 class UsuarioDAO 
 {

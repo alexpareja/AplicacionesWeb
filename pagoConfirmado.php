@@ -1,5 +1,4 @@
 <?php
-require_once __DIR__.'/includes/Compra.php';
 require_once __DIR__.'/includes/configuracion.php';
 
 
@@ -11,7 +10,7 @@ if (isset($_SESSION['cart']) && is_array($_SESSION['cart'])) {
         foreach ($product as $size => $item) {
             if (is_array($item)) {
 				$total = $item['price'] * $item['cantidad'];
-                $compra = Compra::crea($idUsuario, $item['id'], strtolower($item['size']), $item['cantidad'], $total);
+                $compra = es\ucm\fdi\aw\Compra::crea($idUsuario, $item['id'], strtolower($item['size']), $item['cantidad'], $total);
             }
         }
     }

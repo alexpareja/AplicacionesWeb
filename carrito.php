@@ -1,5 +1,6 @@
 <?php
-require_once __DIR__.'/includes/Producto.php';
+require_once __DIR__.'/includes/configuracion.php';
+
 
 // Eliminar una cantidad de un producto del carrito de compras
 if (isset($_POST['remove_quantity'])) {

@@ -1,5 +1,4 @@
 <?php
-require_once __DIR__.'/includes/Producto.php';
 require_once __DIR__.'/includes/configuracion.php';
 
 $tituloPagina = 'Pago';

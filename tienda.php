@@ -1,6 +1,4 @@
 <?php
-require_once __DIR__.'/includes/Producto.php';
-require_once __DIR__.'/includes/Tienda.php';
 require_once __DIR__.'/includes/configuracion.php';
 
 
@@ -26,7 +24,7 @@ if (isset($_SESSION['admin']) && $_SESSION['admin']) {
 			</ul>
 	EOS;
 	}
-	$tienda = new Tienda();
+	$tienda = new es\ucm\fdi\aw\Tienda();
 	$contenidoPrincipal .= $tienda->productosEnTienda();
 
 require __DIR__.'/includes/plantillas/plantillaTienda.php';

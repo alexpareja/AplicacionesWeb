@@ -1,5 +1,4 @@
 <?php
-require_once __DIR__.'/includes/Compra.php';
 require_once __DIR__.'/includes/configuracion.php';
 
 
@@ -13,8 +12,8 @@ $contenidoPrincipal .= <<<EOS
 			<button type="submit">Volver a la tienda</button>
 		</form>
 EOS;
-	$compras = Compra::getAllCompras();
-	$contenidoPrincipal .= Compra::mostrarTablaCompras($compras);
+	$compras = es\ucm\fdi\aw\Compra::getAllCompras();
+	$contenidoPrincipal .= es\ucm\fdi\aw\Compra::mostrarTablaCompras($compras);
 
 $contenidoPrincipal .= <<<EOS
 		</div>	

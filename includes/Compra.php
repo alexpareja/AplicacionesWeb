@@ -1,7 +1,5 @@
 <?php
-include_once ("CompraDAO.php");
-include_once ("Usuario.php");
-include_once ("Producto.php");
+namespace es\ucm\fdi\aw;
 
 class Compra
 {

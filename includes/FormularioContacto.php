@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__.'/Formulario.php';
+namespace es\ucm\fdi\aw;
 
 class FormularioContacto extends Formulario
 {

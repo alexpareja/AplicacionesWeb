@@ -1,9 +1,8 @@
 <?php
 
 require_once __DIR__.'/includes/configuracion.php';
-require_once __DIR__.'/includes/FormularioRegistro.php';
 
-$form = new FormularioRegistro();
+$form = new es\ucm\fdi\aw\FormularioRegistro();
 $htmlFormRegistro = $form->gestiona();
 
 $tituloPagina = 'Registro';

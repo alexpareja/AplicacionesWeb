@@ -1,5 +1,5 @@
 <?php 
-require_once __DIR__.'/Producto.php';
+namespace es\ucm\fdi\aw;
 
 class Tienda {
 

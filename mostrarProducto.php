@@ -1,7 +1,5 @@
 <?php
-include_once ("includes/Producto.php");
 include_once ("includes/configuracion.php");
-include_once ("includes/FormularioAnadirCarrito.php");
 
 $contenidoPrincipal = <<<EOS
 <div id="producto">
@@ -20,14 +18,14 @@ if (isset($_SESSION['admin']) && $_SESSION['admin']) {
 
 if(isset($_GET['id']) && !empty($_GET['id'])) {
 $id=$_GET ["id"];
-$producto=Producto::buscaPorId($id);  
+$producto=es\ucm\fdi\aw\Producto::buscaPorId($id);  
 if($producto)
 {
 $imagenProducto = "img/producto_" . $producto->getId() . ".png";
 $nombre=$producto->getNombre();
 $tituloPagina = $nombre;
 $desc=$producto->getDescripcion();
-$form = new FormularioAnadirCarrito();
+$form = new es\ucm\fdi\aw\FormularioAnadirCarrito();
 $form->setProducto($producto);
 $htmlFormRegistro = $form->gestiona();
 $contenidoPrincipal .= <<<EOS

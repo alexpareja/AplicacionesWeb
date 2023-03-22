@@ -1,9 +1,8 @@
 <?php
 
 require_once __DIR__.'/includes/configuracion.php';
-require_once __DIR__.'/includes/FormularioNuevoProducto.php';
 
-$form = new FormularioNuevoProducto();
+$form = new es\ucm\fdi\aw\FormularioNuevoProducto();
 $htmlFormNProd = $form->gestiona();
 
 $tituloPagina = 'Nuevo Producto';

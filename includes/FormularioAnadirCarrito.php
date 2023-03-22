@@ -1,6 +1,6 @@
 <?php
-require_once __DIR__.'/Formulario.php';
-require_once __DIR__.'/Producto.php';
+
+namespace es\ucm\fdi\aw;
 
 class FormularioAnadirCarrito extends Formulario
 {

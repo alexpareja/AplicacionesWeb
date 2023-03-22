@@ -1,5 +1,5 @@
 <?php
-include_once ("ProductoDAO.php");
+namespace es\ucm\fdi\aw;
 
 class Producto
 {
