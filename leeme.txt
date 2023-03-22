@@ -1,0 +1,4 @@
+Para esta segunda entrega, se han corregido los errores detectados en las vistas de la primera entrega.
+Se podrá acceder a ellas desde el pie de la página web.
+Por otra parte, se ha añadido la funcionalidad de iniciar sesión, registrarse, comprar, añadir productos nuevos, mostrar la tienda y cerrar sesión.
+El detalle de cómo realizar cada una y en qué consiste cada paso viene especificado en la memoria entregada, en la sección "Casos de Uso".

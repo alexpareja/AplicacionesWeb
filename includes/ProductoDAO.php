@@ -133,11 +133,7 @@ class ProductoDAO
         
         return true;
     }
-
-
-    //funcion para actualizar stock->guardar cantidades en array stock['xs' = $cantidadXS, 's' = $cantidadS...]
-
-
+    
     //guarda el producto en la bbdd. Si existe lo actualiza y si no lo crea
     public function guarda($producto)
     {
