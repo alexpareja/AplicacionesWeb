@@ -43,10 +43,46 @@ CREATE TABLE `comentariosproducto` (
   `fecha` datetime NOT NULL,
   `review` decimal(10,0) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+CREATE TABLE `listadeseos` (
+  `id` int(11) NOT NULL,
+  `usuario` int(10) UNSIGNED NOT NULL,
+  `producto` int(10) UNSIGNED NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Índices para tablas volcadas
 --
+
+--
+-- Indices de la tabla `listadeseos`
+--
+ALTER TABLE `listadeseos`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `usuario` (`usuario`),
+  ADD KEY `producto` (`producto`);
+
+--
+-- AUTO_INCREMENT de las tablas volcadas
+--
+
+--
+-- AUTO_INCREMENT de la tabla `listadeseos`
+--
+ALTER TABLE `listadeseos`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- Restricciones para tablas volcadas
+--
+
+--
+-- Filtros para la tabla `listadeseos`
+--
+ALTER TABLE `listadeseos`
+  ADD CONSTRAINT `listadeseos_ibfk_1` FOREIGN KEY (`producto`) REFERENCES `productos` (`id`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `listadeseos_ibfk_2` FOREIGN KEY (`usuario`) REFERENCES `usuarios` (`id`) ON UPDATE CASCADE;
+COMMIT;
+
 
 --
 -- Indices de la tabla `blog`
