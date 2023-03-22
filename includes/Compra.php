@@ -85,7 +85,7 @@ class Compra
 			$producto = Producto::buscaPorID($c->getIdProducto());
 			$nombreP = $producto->getNombre();
 			
-			$talla = $c->getTalla();
+			$talla = strtoupper($c->getTalla());
 			
 			$cantidad = $c->getCantidad();
 			$precio = $c->getPrecio();

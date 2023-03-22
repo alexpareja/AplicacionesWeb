@@ -2,42 +2,43 @@
 	background-color: white;
 	text-align: center;
 	font-family: Verdana;
+	
 }
 
-ul.productos {
+#tienda ul.productos {
 	 overflow-x: hidden;
 	 	height: 450px;
 }
 
-ul.productos li{
+#tienda ul.productos li{
 font-size:20px;
 display:inline-block;
 	padding:20px;
 
 }
 
-ul.botones li{
+#tienda ul.botones li{
 font-size:20px;
 display:inline-block;
 }
 
-.productos li a {
+#tienda .productos li a {
   text-decoration: none;
   color: #333;
 
 }
 
-.imgProducto {
+#tienda .imgProducto {
 	width: 300px;
 
 
 }
 
-.botonCompras {
+#tienda .botonCompras {
 padding: 5px 100px;
 }
 
-::-webkit-scrollbar {
+#tienda ::-webkit-scrollbar {
 display: none;
 }
 
@@ -56,31 +57,32 @@ display: none;
   background-color: #572364;
 }
 
-.total-price {
+#tienda .total-price {
     margin-left: 10px;
 }
 
-table.compras {
-	table-layout: fixed;
-	width:70%;
+#tienda table.compras {
 	border-collapse: collapse;
 	border: 3px solid black;
 	margin: 0 auto;
+	
 }
 
-th{
+#tienda th{
   padding: 15px;
   border:2px solid black;
   background-color:#800080;
   color: white;
   font-family: Verdana;
   font-size: 1.2em;
-
+	width:10%;
 }
 
-td{
+#tienda td{
   padding: 5px;
   border:2px solid  black;
   font-family: Verdana;
   font-size: 1em;
+	width:10%;
+
 }
