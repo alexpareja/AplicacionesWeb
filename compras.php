@@ -2,20 +2,20 @@
 require_once __DIR__.'/includes/configuracion.php';
 
 
-$tituloPagina = 'Tienda';
-$contenidoPrincipal = '';
-
-$contenidoPrincipal .= <<<EOS
-<div id="tienda">
+	$tituloPagina = 'Tienda';
+	//Se muestran la tabla con las compras realizadas hasta el momento de la base de datos de compras
+	$contenidoPrincipal = '';
+	$contenidoPrincipal .= <<<EOS
+	<div id="tienda">
 		<h2>Compras</h2>
 		<form action="tienda.php">
 			<button type="submit">Volver a la tienda</button>
 		</form>
-EOS;
+	EOS;
 	$compras = es\ucm\fdi\aw\Compra::getAllCompras();
 	$contenidoPrincipal .= es\ucm\fdi\aw\Compra::mostrarTablaCompras($compras);
 
-$contenidoPrincipal .= <<<EOS
+	$contenidoPrincipal .= <<<EOS
 		</div>	
-EOS;
+	EOS;
 require __DIR__.'/includes/plantillas/plantillaTienda.php';
