@@ -419,3 +419,14 @@ display:inline-block;
 #producto button[type="submit"]:hover {
   background-color: #572364;
 }
+
+.pago-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.pago-content form {
+    text-align: center;
+}

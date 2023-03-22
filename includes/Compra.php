@@ -39,7 +39,7 @@ class Compra
     public static function crea($idUsuario, $idProducto, $talla,$cantidad,$precio)
     {
         $compraDAO= new CompraDAO();
-        return $usuarioDAO->crea($idUsuario, $idProducto,$talla, date('Y-m-d H:i:s'),$cantidad,$precio);
+        return $compraDAO->crea($idUsuario, $idProducto,$talla, date('Y-m-d H:i:s'),$cantidad,$precio);
     }
 
     //borra la compra

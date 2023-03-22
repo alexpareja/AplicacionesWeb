@@ -1,6 +1,6 @@
 <?php
 require_once __DIR__.'/includes/Producto.php';
-
+require_once __DIR__.'/includes/configuracion.php';
 
 $tituloPagina = 'Pago';
 $contenidoPrincipal = '';
@@ -32,6 +32,7 @@ foreach ($_SESSION['cart'] as $product) {
 
 
 // Mostrar los productos del carrito con su información
+$contenidoPrincipal .= '<div class="pago-content">';
 $contenidoPrincipal .= '<h2>Resumen de compra</h2>';
 $contenidoPrincipal .= '<ul>';
 foreach ($cart_products as $product) {
@@ -55,10 +56,10 @@ $contenidoPrincipal .= <<<EOS
     </div>
 </div>
 EOS;
+$contenidoPrincipal .= '</div>';
 
 // Vaciar el carrito de compras
 if (isset($_POST['pay'])) {
-    unset($_SESSION['cart']);
     header('Location: pagoConfirmado.php');
     exit;
 }
