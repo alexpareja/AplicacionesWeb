@@ -26,12 +26,12 @@ class FormularioLogin extends Formulario
                 <div>
                     <label for="email">Correo electrónico:</label>
                     <input id="email" type="email" name="emailUsuario" value="$emailUsuario"/>
-                    <span id="error">{$erroresCampos['emailUsuario']}</span>
+                    <span id="errorEmail">{$erroresCampos['emailUsuario']}</span>
                 </div>
                 <div>
                     <label for="password">Contraseña:</label>
                     <input id="password" type="password" name="password"/>
-                    <span id="error">{$erroresCampos['password']}</span>
+                    <span id="errorPass">{$erroresCampos['password']}</span>
                 </div>
                 <div>
                     <button type="submit" name="login">Entrar</button>

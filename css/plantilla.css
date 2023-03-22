@@ -21,35 +21,25 @@
   justify-content: center;
 }
 
-#botones-cuenta button {
+#botones-cuenta a {
+  text-decoration: none;
+  color: #800080;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 10px;
   margin: 10px;
-  background-color: white;
+  font-weight: bold;
   font-family: Verdana;
 }
 
-#botones-cuenta button[type="submit"] {
-  background-color: white;
-  padding: 7px 7px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-bottom: 10px;
-  font-size: 1.2em;
-  margin-right: 10px;
-}
-
-#botones-cuenta button[type="submit"]:hover {
-  background-color: #F8F8FF;
-}
-
-#botones-cuenta a {
-  text-decoration: none;
+#botones-cuenta a:visited {  
   color: #800080;
+}
+
+#botones-cuenta a:visited {  
+  color: #572364;
 }
 
 /*Sesión no iniciada*/
@@ -59,23 +49,25 @@
   gap: 20px;
 }
 
-#no-sesion button[type="submit"] {
-  background-color: #800080;
-  padding: 7px 7px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-bottom: 10px;
-  font-size: 1.2em;
-}
-
-#no-sesion button[type="submit"]:hover {
-  background-color: #572364;
-}
-
 #no-sesion a {
   text-decoration: none;
-  color: white;
+  color: #800080;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  margin: 10px;
+  font-weight: bold;
+  font-family: Verdana;
+}
+
+#no-sesion a:visited {  
+  color: #800080;
+}
+
+#no-sesion a:visited {  
+  color: #572364;
 }
 
 /*Hoja de estilo miPerfil*/

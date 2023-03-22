@@ -13,10 +13,10 @@
 
 	<?php
 		if(!isset($_SESSION["login"])){
-			echo "<a href='login.php'><img class='iniciar' src='img/login.jpg'></a>";
+			echo "<a href='login.php'><img class='iniciar' src='img/login.jpg' alt='Imagen Iniciar'></a>";
 		}	
 		else{
-			echo "<a href='logout.php'><img class='iniciar' src='img/logout.jpg' alt='Imagen Iniciar'></a>";
+			echo "<a href='logout.php'><img class='iniciar' src='img/logout.jpg' alt='Imagen Cerrar'></a>";
 		}
 	?>
 

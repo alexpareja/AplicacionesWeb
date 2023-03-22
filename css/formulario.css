@@ -108,7 +108,11 @@ textarea {
   margin: 15px 0;
 }
 
-#login-form #error {
+#login-form #errorEmail {
+  color: red;
+}
+
+#login-form #errorPass {
   color: red;
 }
 
@@ -190,7 +194,27 @@ textarea {
   margin: 15px 0;
 }
 
-#registro-form #error {
+#registro-form #errorNombre {
+  color: red;
+}
+
+#registro-form #errorApellido {
+  color: red;
+}
+
+#registro-form #errorEmail {
+  color: red;
+}
+
+#registro-form #errorPass {
+  color: red;
+}
+
+#registro-form #errorPass2 {
+  color: red;
+}
+
+#registro-form #errorDir {
   color: red;
 }
 
