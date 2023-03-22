@@ -92,9 +92,15 @@ class FormularioAnadirCarrito extends Formulario
 			$quantity = $datos['quantity'];
 			$price = $datos['price'];
 			$size = $datos['size'];
+			$cogerStockTalla= "getStock$size";
 	// Si el producto ya está en el carrito, se suma la cantidad nueva a la cantidad que ya tiene el producto
 			if(isset($_SESSION['cart'][$id][$size])) {
+				if(($_SESSION['cart'][$datos['id']][$datos['size']]['cantidad'] + $quantity) <= $this->producto->$cogerStockTalla()){
 				$_SESSION['cart'][$id][$size]['cantidad'] += $quantity;
+				}
+				else{
+		       $this->errores['noStock'] = "No hay suficiente stock en la talla seleccionada. El máximo es ".$this->producto->$cogerStockTalla();
+				}
 			} else {
 			$_SESSION['cart'][$id][$size] = array(
             'id' => $id,
