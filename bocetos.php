@@ -13,20 +13,18 @@
 	
 	<h1> Bocetos </h1>
 	<h3> Página Principal </h3>
-	<p> Descripción : Página principal de la tienda. En este se mostrará en un lado las cajas de subscripción 
-	 con un enlace a la página de registro en caso de que el usuario no esté registrado, o a la página de su cuenta en el caso de que este registrado, donde podrá editar su estado de subsripción (normal o premium). En el otro lado estará la caja de temporada, con un enlace a la tienda.</p>
+	<p> Descripción : Página principal de la tienda. En este se mostrará en un lado las cajas de suscripción 
+	 con un enlace a la página de registro en caso de que el usuario no esté registrado, o a la página de su cuenta en el caso de que este registrado, donde podrá editar su estado de susripción (normal o premium). En el otro lado estará la caja de temporada, con un enlace a la tienda.</p>
 	<img class="boceto" src="img/b_PPrincipal.png" alt="Boceto de la Pagina Principal">
 	
-	<h3> Página de Tienda (cliente) </h3>
-	<p> Descripcion: Página de la tienda, donde se encontraran todos nuestro productos en orden. El cliente podrá navegar sobre esta, viendo los 
-	distintos productos. En el lado izquierdo de la pagina encontraremos una sección con filtros, pudiendo el cliente seleccionar lo que el desee
-	y mostrandose los productos según dichos criterios. Al seleccionar un producto se redigirá a la página concreta del producto.  
+	<h3> Página de Tienda </h3>
+	<p> Descripcion: Página de la tienda, donde se encontrarán todos nuestros productos en orden. El cliente podrá navegar sobre esta, viendo los distintos productos. En el lado izquierdo de la página encontraremos una sección con filtros, pudiendo el cliente seleccionar lo que él desee y mostrándose los productos según dichos criterios. Al seleccionar un producto se dirigirá a la página concreta del producto. 
 	</p>
 	<img class="boceto" src="img/b_Tienda.png" alt="Boceto de la Tienda">
 	
 	<h3> Página de Tienda (administrador) </h3>
-	<p> Descripcion: Se mostrará la página como se le muestra a un cliente normal, pero con un botón de "Añadir producto". Si se pulsa este botón se redigirá a la página de añadir producto. Aparte de este 
-	se muestra el botón "Compras" que redirige al usuario a la página de compras.</p>
+	<p> Descripcion: Se mostrará la página como se le muestra a un cliente normal, pero con un botón de "Añadir producto". Si se pulsa este botón se redirigirá a la página de añadir producto. Aparte de este se muestra el botón "Compras" que redirige al usuario a la página de compras.
+</p>
 	<img class="boceto" src="img/b_TiendaAdmi.png" alt="Boceto de la Tienda Administrador">
 	
 	<h3> Página de Compras</h3>
@@ -40,15 +38,12 @@
 	<img class="boceto" src="img/b_AnnadirProducto.png" alt="Boceto de la Pagina de Añadir producto">
 	
 	<h3> Página de Producto </h3>
-	<p> Descripción: Página que muestra un producto en concreto. Encontramos los detalles del producto, una imagen y su precio. Se puede elegir
-		talla y unidades. Si se decide comprar se añade el producto al carrito, si el usuario esta registrado se añadirá al carrito, sino se redigirá
-		a la página de login. Del mismo modo, si esta registrado podrá añadir el producto a la lista de deseos, sino serán redirigidos a la página de 
-		login. En la parte inferior se encontrará la parte de comentarios, y se podrá añadir una review en caso de haber comprado el producto anteriormente
-    </p>
+	<p> Descripción: Página que muestra un producto en concreto. Encontramos los detalles del producto, una imagen y su precio. Se puede elegir talla y unidades. Si se decide comprar se debe pulsar “Añadir a carrito”, si el usuario está registrado se añadirá al carrito, si no se redirigirá a la página de login. Del mismo modo, si está registrado podrá añadir el producto a la lista de deseos, sino serán redirigidos a la página de login. En la parte inferior se encontrará la parte de comentarios, y se podrá añadir una review en caso de haber comprado el producto anteriormente
+</p>
 	<img class="boceto" src="img/b_PProducto.png" alt="Boceto de Pag de producto">
 	
 	<h3> Página de Producto (Administrador) </h3>
-	<p> Descripción: Página que muestra un producto como en el caso del cliente, pero con un botón de editar que redirige al usurio administrador a la pagina de editar producto
+	<p> Descripción: Página que muestra un producto como en el caso del cliente, pero con un botón de editar que redirige al usuario administrador a la página de editar producto
     </p>
 	<img class="boceto" src="img/b_PProductoAdmi.png" alt="Boceto de Pag de producto admi">
 	
@@ -59,8 +54,7 @@ a  la página del producto sin guardar los cambios y si se pulsa el botón de ed
 	<img class="boceto" src="img/b_EditarProducto.png" alt="Boceto de Editar de producto">
 	
 	<h3> Página Sobre Nosotros </h3>
-	<p> Descripción: Página en la que se muestra la información de la empresa “La Quinta Caja”. Si pulsas el botón contáctanos se redigirá a la página
-	de Contacto	</p>
+	<p> Descripción: Página en la que se muestra la información de la empresa “La Quinta Caja”. Si pulsas el botón contáctenos se redirigirá a la página de Contacto.	</p>
 	<img class="boceto" src="img/b_SobreNosotros.png" alt="Boceto de Sobre Nosotros">
 	
 	<h3> Página de FAQs </h3>
@@ -84,7 +78,7 @@ a  la página del producto sin guardar los cambios y si se pulsa el botón de ed
 	<img class="boceto" src="img/b_PPost.png" alt="Boceto de la Pagina de Post del Blog">
 	
 	<h3> Página de Post del Blog (Administrador)</h3>
-	<p> Descripcion: Se muestra la entrada del blog como un usuario normal, pero se permite editar toda la información (imágen y textos). Pulsando el botón guardar se aplicaran todos los cambios
+	<p> Descripción: Se muestra la entrada del blog como un usuario normal, pero se permite editar toda la información (imágen y textos). Pulsando el botón guardar se aplicaran todos los cambios.
 	No se muestran los comentarios</p>
 	<img class="boceto" src="img/b_PPostAdmi.png" alt="Boceto de la Pagina de Post del Blog Admi">
 	
@@ -100,10 +94,7 @@ a  la página del producto sin guardar los cambios y si se pulsa el botón de ed
 	<img class="boceto" src="img/b_PRegistro.png" alt="Boceto de la Pagina de Registro">
 	
 	<h3> Página de Carrito</h3>
-	<p> Descripción: En esta página aparecerá una lista con los artículos que el usuario ha elegido comprar, con los precios y 
-		características desglosadas.Si ya está registrado, aparecerá un mensaje de confirmación de la compra y se añadirá el pedido 
-		a la lista de pedidos. Como solo aceptamos pagos en efectivo, no será necesario introducir la información de la tarjeta de crédito. En caso de no haer inciado sesión 
-se redirige a la página de inicio de sesión, puesto que unicamente los usuario registrados pueden comprar.		</p>
+	<p> Descripción:En esta página aparecerá una lista con los artículos que el usuario ha elegido comprar, con los precios y características desglosadas.Si ya está registrado, aparecerá un mensaje de confirmación de la compra y se añadirá el pedido a la lista de pedidos. Como solo aceptamos pagos en efectivo, no será necesario introducir la información de la tarjeta de crédito. En caso de no haber iniciado sesión se redirige a la página de inicio de sesión, puesto que únicamente los usuario registrados pueden comprar.	</p>
 	<img class="boceto" src="img/b_PCarrito.png" alt="Boceto de la Pagina de Carrito">
 	
 	<h3> Página de Lista de Deseos</h3>
