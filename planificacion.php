@@ -89,36 +89,42 @@ $contenidoPrincipal = <<<EOS
 		</tr>
 		<tr>
 			<td> Etapa 2.3 </td>
-			<td> Funcionalidad: mostrar producto </td>
+			<td> Funcionalidad: realizar compra </td>
 			<td> 5 de marzo de 2023 </td>
-			<td> Sergio Atienza </td>
+			<td> TODOS </td>
 		</tr>
 		<tr>
 			<td> Etapa 2.4 </td>
+			<td> Funcionalidad: añadir producto </td>
+			<td> 6 de marzo de 2023 </td>
+			<td> TODOS </td>
+		</tr>
+		<tr>
+			<td> Etapa 2.5 </td>
 			<td> Creación página Tienda </td>
 			<td> 7 de marzo de 2023 </td>
 			<td> Alejandro P y Elena B </td>
 		</tr>
 		<tr>
-			<td> Etapa 2.5 </td>
+			<td> Etapa 2.6 </td>
 			<td> Creación BBDD </td>
 			<td> 12 de marzo de 2023 </td>
 			<td> Sergio Atienza </td>
 		</tr>
 		<tr>
-			<td> Etapa 2.6 </td>
+			<td> Etapa 2.7 </td>
 			<td> Creación páginas en cabecera</td>
 			<td> 14 de marzo de 2023 </td>
 			<td> Lucero Abregú </td>
 		</tr>
 		<tr>
-			<td> Etapa 2.7 </td>
+			<td> Etapa 2.8 </td>
 			<td> Creación página Carrito </td>
 			<td> 20 de marzo de 2023 </td>
 			<td> Jesús Hernández </td>
 		</tr>
 		<tr>
-			<td> Etapa 2.8 </td>
+			<td> Etapa 2.9 </td>
 			<td> Corrección entrega 1 </td>
 			<td> 21 de marzo de 2023 </td>
 			<td> TODOS </td>
