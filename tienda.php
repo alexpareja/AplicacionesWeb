@@ -1,13 +1,13 @@
 <?php
 require_once __DIR__.'/includes/configuracion.php';
 
-
-
 	$tituloPagina = 'Tienda';
+	
 	$contenidoPrincipal = '';
 	$contenidoPrincipal .= <<<EOS
 		<div id='tienda'>
 	EOS;
+	//Se muestran los botones de control en caso de que el usuario de la sesion sea administrador
 if (isset($_SESSION['admin']) && $_SESSION['admin']) {
 	$contenidoPrincipal .= <<<EOS
 			<ul class='botones'>
@@ -23,9 +23,13 @@ if (isset($_SESSION['admin']) && $_SESSION['admin']) {
 				</li>
 			</ul>
 	EOS;
-	}
+}
+	//Se muestran los porductos de la tienda
 	$tienda = new es\ucm\fdi\aw\Tienda();
 	$contenidoPrincipal .= $tienda->productosEnTienda();
+	$contenidoPrincipal .= <<<EOS
+		</div>
+	EOS;
 
 require __DIR__.'/includes/plantillas/plantillaTienda.php';
 	

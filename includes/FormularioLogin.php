@@ -4,7 +4,7 @@ namespace es\ucm\fdi\aw;
 class FormularioLogin extends Formulario
 {
     public function __construct() {
-        parent::__construct('formLogin', ['urlRedireccion' => 'inicio.php']);
+        parent::__construct('formLogin', ['urlRedireccion' => 'index.php']);
     }
     
     protected function generaCamposFormulario(&$datos)

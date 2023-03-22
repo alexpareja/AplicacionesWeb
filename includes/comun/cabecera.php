@@ -5,7 +5,7 @@
 		<a href="blog.php" class="blog">Blog </a>
 		<a href="sobrenosotros.php" class="nosotros">Nosotros </a>
 		<img class="logo" src="img/logo.png" alt="Imagen Logo">
-		<a href="inicio.php"><h1 class="titulo">LA QUINTA CAJA</h1></a>
+		<a href="index.php"><h1 class="titulo">LA QUINTA CAJA</h1></a>
 		<a href="faqs.php"><img class="ayuda" src="img/ayuda.jpg" alt="Imagen FAQs"></a>
 		<a href="carrito.php"><img class="carrito" src="img/carrito.jpg" alt="Imagen Carrito"></a>
 		<a href="miCuenta.php"><img class="cuenta" src="img/cuenta.jpg" alt="Imagen Cuenta"></a>

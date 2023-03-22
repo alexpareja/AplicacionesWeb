@@ -58,15 +58,15 @@ if (isset($_SESSION['cart'])) {
                 $talla = $item['size'];
                 $contenidoPrincipal .= <<<EOS
                     <li>
-                        <a>
-                        <img class="imgProducto" src=$src alt=$alt />
-                        </br>
+                        
+                        <img class="imgProducto" src='$src' alt='$alt'>
+                        <br>
                         $nombre - Talla: $talla - $precio € - Cantidad: $cantidad
                         <form method="post">
                             <input type="number" name="quantity_to_remove" value = "0" min = "0" max="$cantidad">
                             <button type="submit" name="remove_quantity" value="$id|$size">Eliminar</button>
                         </form>
-                        </a>
+                        
                     </li>
                 EOS;
             }
@@ -88,6 +88,7 @@ $contenidoPrincipal .= <<<EOS
         <button type="submit">Ir a pagar</button>
         <span class="total-price">Total: $total_price €</span>
     </form>
+	</div>
 </div>
 EOS;
 

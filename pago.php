@@ -55,8 +55,6 @@ $contenidoPrincipal .= <<<EOS
     </div>
 </div>
 EOS;
-$contenidoPrincipal .= '</div>';
-
 // Vaciar el carrito de compras
 if (isset($_POST['pay'])) {
     header('Location: pagoConfirmado.php');

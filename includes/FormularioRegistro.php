@@ -4,7 +4,7 @@ namespace es\ucm\fdi\aw;
 class FormularioRegistro extends Formulario
 {
     public function __construct() {
-        parent::__construct('formRegistro', ['urlRedireccion' => 'inicio.php']);
+        parent::__construct('formRegistro', ['urlRedireccion' => 'index.php']);
     }
     
     protected function generaCamposFormulario(&$datos)

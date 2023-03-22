@@ -8,7 +8,7 @@ class Tienda {
     public function __construct() {
         $this->productos = Producto::getTienda();
     }
-
+	//Muestra la imagen, nombre y precio de los productos de la base de datos
     public function productosEnTienda() {
 		$html = '';
 		$html .= <<<EOS
@@ -21,25 +21,22 @@ class Tienda {
             $src = 'img/producto_'.$prod->getId().'.png';
             $alt = 'Imagen de Producto '.$prod->getId();
             $nombre = $prod->getNombre();
+            $precio = $prod->getPrecio();
 
             $html .= <<<EOS
 					<li>
 						<a href='$link'>
 						<img class='imgProducto' src='$src' alt='$alt'>
 						<br>
-						$nombre
+						$nombre  $precio €
 						</a>
 					</li>
 				EOS;
         }
-        $html .= <<<EOS
-					</ul>        
-					</div>
-				</div>
-			EOS;
+			$html .= <<<EOS
+						</ul>        
+						</div>
+				EOS;
         return $html;
     }
-
-    // otros métodos de la clase
-
 }

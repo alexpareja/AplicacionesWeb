@@ -7,8 +7,8 @@ $tituloPagina = 'Nosotros';
 $contenidoPrincipal = <<<EOS
 <div id="nosotros">
 	<div id="nosotros-texto">
-		<p class="t1">Conoce nuestro</p>
-		<p class="t2">Equipo Creativo</p>
+		<h3 class="t1">Conoce nuestro</h3>
+		<h3 class="t2">Equipo Creativo</h3>
 		<p><br><br>Cuando creamos esta web, nos planteamos la idea de "colgar" la historia de #LaQuintaCaja.</p>
 		<p>La historia de cómo habíamos llegado hasta aquí, de cuáles habían sido nuestras motivaciones y cuáles nuestras inquietudes, en definitiva, de abrirnos a vosotros.</p>
 		<p> La Quinta Caja tiene poca ciencia, pero mucha ilusión. Es la ilusión de los que piensan que el mundo es un sitio apasionante pero mejorable. Un lugar donde hay mucho por hacer y mucho por aportar. Un espacio donde prime el respeto a las ideas ajenas y la puesta firme por los valores...</p>
@@ -17,7 +17,7 @@ $contenidoPrincipal = <<<EOS
 		<button onclick="window.location.href='contacto.php'" id="boton">Contacta con nosotros</button>
 	</div>
 	<div id="nosotros-imagen">
-		<img src="img/nosotros.jpg" class="foto">
+		<img src="img/nosotros.jpg" alt="Imagen del equipo" class="foto">
 	</div>
 </div>
 EOS;
