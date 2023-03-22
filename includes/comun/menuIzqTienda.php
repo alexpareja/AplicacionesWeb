@@ -1,9 +1,3 @@
-
-<div>
-	<link rel="stylesheet" type="text/css" href="css/menuIzqTienda.css">
-</div>
-
-
 <div id="menuIzqTienda">
 	<h3>Filtros</h3>
 		<form>

@@ -1,8 +1,3 @@
-
-<div>
-	<link rel="stylesheet" type="text/css" href="css/pie.css">
-</div>
-
 <div id="pie">
 		<ul class='horizontalpie'>
 			<li><a href="terminosycondiciones.php" class="referencia">Términos y Condiciones</a></li>

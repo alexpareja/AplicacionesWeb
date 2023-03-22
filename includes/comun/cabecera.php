@@ -1,8 +1,3 @@
-
-<div>
-	<link rel="stylesheet" type="text/css" href="css/cabecera.css">
-</div>
-
 <div id="cabecera">
 	
 	<div class="contenedor">
