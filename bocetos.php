@@ -121,12 +121,19 @@ se redirige a la página de inicio de sesión, puesto que unicamente los usuario
 	<img src="img/b_Terminos.png" alt="Boceto de la Pagina de Términos y Condiciones">
 	
 	
-	<h3> Barra de Menú</h3>
-	<p> Descripcion: El menú de la página contiene diferentes botones que redirigen a diferentes partes. Si se pulsa en "Inicio" se redirige a la página
-		principal. Si se pulsa el botón "Tienda" se redirige a la página Tienda. Si pulsas el botón Blog te lleva a la Página del Blog. Si pulsas el botón
-		"Sobre Nosotros" se redirige a la página Sobre Nosotros. Si pulsas en el icono del carrito, se redirige a la página de Carrito en caso de que el 
-		usuario	este registrado. En caso contrario, se redirige a la página de Inicio Sesion. Finalmente, si se pulsa el icono de usuario en caso de que
-		el usuario este registrado se le redirige a la página de Mi Usuario, sino se le redirigirá a la página de Inicio Sesión.</p>
+	<h3>Cabecera</h3>
+	<p> Descripcion: Desde todas las páginas se podrá acceder a la cabecera. En esta hará varios botenes. El botón "Tienda" dirige al usuario a la página de la Tienda. El botón "Blog" dirige al usuario a la página del Blog
+	El botón "Nosotros" dirige al usuario a la página de Sobre Nosotros. El ícono de interrogación ayuda a los usarios a acceder a la página de  FAQ's. El botón del carrito permite a los usuarios 
+	acceder a su carrito. El bóton del usuario permite a los usuario que hayan iniciado sesión acceder a la página de su cuenta. En caso se no haber iniciado sesión se redirige a una página donde podrán elegir entre
+	iniciar sesión o registrarse. El último ícono redirige a los usuario a inciar sesión, en caso de que no lo hayan hecho, o finalizar sesión en caso contrario. Finalmente si se pulsa sobre "LA QUINTA CAJA" se redirige al usuario
+	a la página de Inicio </p>
+	
+	
+	<h3>Pie de página</h3>
+	<p> Descripcion: Desde todas las páginas se podrá acceder al pie de página. Este conterá distintos botones. Si se pulsa "Terminos y condiciones" se redirigé a la página de termino y condiciones. Si se pulsa sobre "@laquintacaja" se redirige al Instagram de La Quinta Caja. 
+	Los botenes "Propuesta", "Detakkes", "Bocetos", "Miembros" y "Planificación" dirigen al usuario a dichas páginas que contienen el contenido de la entrega anterior. Finalmente el botón "Contacto" lleva a los usuarios a la 
+	página de Contacto</p>
+	<img src="img/b_CabeceraPie.png" alt="Boceto de pie de página">
 </div>
 EOS;
 require __DIR__.'/includes/plantillas/plantilla.php';
