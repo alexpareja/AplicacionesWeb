@@ -41,7 +41,7 @@ class CompraDAO
     //inserta nuevo usuario
     private function inserta($compra)
     {
-        $query=sprintf("INSERT INTO compras(usuario, producto, fecha, cantidad, precio) VALUES ('%d', '%d', '%s','%d', '%f')"
+        $query=sprintf("INSERT INTO compras(usuario, producto, talla, fecha, cantidad, precio) VALUES ('%d', '%d', '%s', '%s','%d', '%f')"
             , $this->conn->real_escape_string($compra->getIdUsuario())
             , $this->conn->real_escape_string($compra->getIdProducto())
             , $this->conn->real_escape_string($compra->getTalla())

@@ -2,6 +2,7 @@
 require_once __DIR__.'/includes/Compra.php';
 require_once __DIR__.'/includes/configuracion.php';
 
+
 $tituloPagina = 'Pago confirmado';
 
 $idUsuario = $_SESSION['id'];
@@ -9,7 +10,8 @@ if (isset($_SESSION['cart']) && is_array($_SESSION['cart'])) {
     foreach ($_SESSION['cart'] as $product) {
         foreach ($product as $size => $item) {
             if (is_array($item)) {
-                $compra = Compra::crea($idUsuario, $item['id'], strtolower($item['size']), $item['cantidad'], $item['price']);
+				$total = $item['price'] * $item['cantidad'];
+                $compra = Compra::crea($idUsuario, $item['id'], strtolower($item['size']), $item['cantidad'], $total);
             }
         }
     }

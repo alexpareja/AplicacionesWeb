@@ -7,6 +7,7 @@
 				<li>Talla</li>
 				<li>
 					<ul class ="checkfiltros">
+					<li><input type="checkbox" name="tamano" value="S">XS</li>
 					<li><input type="checkbox" name="tamano" value="S">S</li>
 					<li><input type="checkbox" name="tamano" value="M">M</li>
 					<li><input type="checkbox" name="tamano" value="L">L</li>
