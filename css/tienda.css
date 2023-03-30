@@ -145,17 +145,26 @@ div#cabecera .ayuda, .carrito, .cuenta, .iniciar {
 /*pie*/
 
 #pie {
-  text-align: center; /* Centra los elementos de la lista horizontalmente */
+  border-style: solid;
+  border-color:#800080;
+  background-color: #f2f2f2;
+  margin-top:10px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 75px;
 }
 
 #pie .horizontalpie {
-  display: inline-block; /* Hace que los elementos de la lista estén en línea */
   list-style: none; /* Quita el estilo de viñeta por defecto */
   padding: 0; /* Quita el relleno por defecto de la lista */
+  display: flex;
+  margin: 0;
 }
 
 #pie .horizontalpie li {
-  margin-top: 30px;
+  margin: 30px;
   display: inline-block; /* Hace que cada elemento de la lista esté en línea */
 }
 
