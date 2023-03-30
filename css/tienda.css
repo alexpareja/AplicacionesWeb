@@ -5,10 +5,6 @@
 	
 }
 
-#tienda ul.productos {
-	 overflow-x: hidden;
-	 	height: 450px;
-}
 
 #tienda ul.productos li{
 font-size:20px;
@@ -28,10 +24,40 @@ display:inline-block;
 
 }
 
-#tienda .imgProducto {
-	width: 300px;
+#tienda .precio {
+  text-decoration: none;
+  color: #800080;
+  font-size:110%;
+}
 
 
+#tienda .producto-imagen {
+  width: 100%;
+  max-width: 300px;
+  height: 300px;
+  border: 1px solid #800080;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+#tienda .producto-imagen:hover {
+  border: 2px solid #572364;
+}
+
+#tienda .producto-imagen img {
+  display: block;
+  margin: 0 auto;
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  max-width: 300px;
+  max-height: 300px;
+
+}
+
+#tienda .producto-imagen:hover img {
+  transform: scale(1.05);
 }
 
 #tienda .botonCompras {
@@ -154,6 +180,7 @@ div#cabecera .ayuda, .carrito, .cuenta, .iniciar {
   justify-content: center;
   align-items: center;
   height: 75px;
+  width: 100%;
 }
 
 #pie .horizontalpie {
@@ -181,23 +208,23 @@ div#cabecera .ayuda, .carrito, .cuenta, .iniciar {
 }
 
 /*Menu Izq*/
-div#menuIzqTienda {
+#menuIzqTienda {
 	padding: 20px;
 	height: 500px;
 	float: left;
 	text-align: center;
-  font-family: Verdana, monospace;
+  font-family: Verdana;
+  
 }
 
 #menuIzqTienda ul.filtros li{
-font-size:20px;
 display:block;
 padding: 3px;
+
 
 }
 
 #menuIzqTienda ul.checkfiltros li{
-font-size:20px;
 display:inline-block;
 
 }
