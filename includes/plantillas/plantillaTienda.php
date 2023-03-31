@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
     <title><?= $tituloPagina ?></title>
 	<link rel="stylesheet" type="text/css" href="css/tienda.css">
+	<script type="text/javascript" src="js/codigo.js"></script>
 </head>
 <body>
 <div id="contenedor">
