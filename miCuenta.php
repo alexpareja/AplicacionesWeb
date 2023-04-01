@@ -16,7 +16,7 @@ if(isset($_SESSION['login'])) {
         <div id="botones-cuenta">
             <a href="listadeseos.php">Mi lista de deseos</a>
             <a href="miPerfil.php">Mi perfil</a>
-            <a href="logout.php">Cerrar Sesión</a>
+            <a href="misCompras.php">Mis compras</a>
         </div>
 
 

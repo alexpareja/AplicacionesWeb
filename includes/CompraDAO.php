@@ -103,7 +103,7 @@ class CompraDAO
     //obtiene todas las compras en un array
     public function getAllComprasUsuario($idUsuario)
     {
-        $query = sprintf("SELECT * FROM compras WHERE id =%d", $idCompra);
+        $query = sprintf("SELECT * FROM compras WHERE usuario = %d", $idUsuario);
         $rs = $this->conn->query($query);
         $compras=array();
         if($rs->num_rows>0){
