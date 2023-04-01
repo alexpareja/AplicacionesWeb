@@ -22,7 +22,7 @@ require_once __DIR__.'/includes/configuracion.php';
 	EOS;
 	$usuario = $_SESSION['id'];
 	$compras = es\ucm\fdi\aw\Compra::getAllComprasUsuario($usuario);
-	$contenidoPrincipal .= es\ucm\fdi\aw\Compra::mostrarTablaCompras($compras);
+	$contenidoPrincipal .= es\ucm\fdi\aw\Compra::mostrarTablaComprasUsuario($compras);
 
 	$contenidoPrincipal .= <<<EOS
 		</div>	

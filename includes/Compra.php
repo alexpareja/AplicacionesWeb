@@ -106,7 +106,44 @@ class Compra
 		return $html;
 	}
 	
-   
+    public static function mostrarTablaComprasUsuario($compras){
+        $html = '';
+        $html .= <<<EOF
+                <table class="compras">
+                    <tr>
+                        <th>Fecha</th>
+                        <th>Producto</th>
+                        <th>Talla</th>
+                        <th>Cantidad</th>
+                        <th>Total</th>
+                    </tr>
+        EOF;
+        foreach($compras as $c){
+            $fecha = $c->getFecha();
+            
+            $producto = Producto::buscaPorID($c->getIdProducto());
+            $nombreP = $producto->getNombre();
+            
+            $talla = strtoupper($c->getTalla());
+            
+            $cantidad = $c->getCantidad();
+            $precio = $c->getPrecio();
+            $html .= <<<EOF
+            <tr>
+                        <td>$fecha</td>
+                        <td>$nombreP</td>
+                        <td>$talla</td>
+                        <td>$cantidad</td>
+                        <td>$precio €</td>
+                    </tr>
+            EOF;    
+        }
+        
+        $html .= <<<EOF
+            </table>
+        EOF;
+        return $html;
+    }
 
     public function getId()
     {
