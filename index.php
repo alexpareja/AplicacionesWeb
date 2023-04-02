@@ -2,7 +2,7 @@
 
 require_once __DIR__.'/includes/configuracion.php';
 
-$tituloPagina = 'Login';
+$tituloPagina = 'La Quinta Caja';
 $contenidoPrincipal = ''; 
 
 $contenidoPrincipal .= <<<EOS
