@@ -23,7 +23,8 @@ class FormularioRegistro extends Formulario
         $htmlErroresGlobales
         <div id = "registro-form">
             <fieldset>
-                <legend>Registrar Usuario</legend>
+                <legend>¿Nuevo cliente?</legend>
+                <p class="account">Crea tu cuenta aquí. ¿Ya tienes una cuenta? <a href="login.php">Inicia sesión</a></p>
                 <div>
                     <label for="nombreUsuario">Nombre:*</label>
                     <input id="nombreUsuario" type="text" name="nombreUsuario" value="$nombreUsuario" />

@@ -14,30 +14,32 @@ class FormularioLogin extends Formulario
 
         // Se generan los mensajes de error si existen.
         $htmlErroresGlobales = self::generaListaErroresGlobales($this->errores);
-        $erroresCampos = self::generaErroresCampos(['emailUsuario', 'password'], $this->errores, 'span', array('class' => 'error'));
+        $erroresCampos = self::generaErroresCampos(['emailUsuario', 'password' , 'login'], $this->errores, 'span', array('class' => 'error'));
 
         // Se genera el HTML asociado a los campos del formulario y los mensajes de error.
         $html = <<<EOF
         $htmlErroresGlobales
         <div id="login-form">
-            <fieldset>
-                <legend>Iniciar Sesión</legend>
-                <div>
-                    <label for="email">Correo electrónico:</label>
-                    <input id="email" type="email" name="emailUsuario" value="$emailUsuario"/>
-                    <span id="errorEmail">{$erroresCampos['emailUsuario']}</span>
-                </div>
-                <div>
-                    <label for="password">Contraseña:</label>
-                    <input id="password" type="password" name="password"/>
-                    <span id="errorPass">{$erroresCampos['password']}</span>
-                </div>
-                <div>
-                    <button type="submit" name="login">Entrar</button>
-                </div>
-                    <p class="no-account">No tengo cuenta. <a href="registro.php">Regístrate aquí</a></p>
-            </fieldset>
+          <fieldset>
+            <legend>¿Ya estás registrado?</legend>
+            <p class="no-account">Inicia sesión ahora para aprovecharte de todos los beneficios de la cuenta de cliente de La Quinta Caja ¿Nuevo cliente? <a href="registro.php">Regístrate aquí</a></p>
+            <div>
+              <input id="email" type="email" name="emailUsuario" value="$emailUsuario" required>
+              <label for="email">Correo electrónico</label>
+              <span id="errorEmail">{$erroresCampos['emailUsuario']}</span>
+            </div>
+            <div>
+              <input id="password" type="password" name="password" required>
+              <label for="password">Contraseña</label>
+              <span id="errorPass">{$erroresCampos['password']}</span>
+            </div>
+            <span id="errorLogin">{$erroresCampos['login']}</span>
+            <div>
+              <button type="submit" name="login">Iniciar sesión</button>
+            </div>
+          </fieldset>
         </div>
+
         EOF;
         return $html;
     }
@@ -61,7 +63,7 @@ class FormularioLogin extends Formulario
             $usuario = Usuario::login($emailUsuario, $password);
         
             if (!$usuario) {
-                $this->errores[] = "El correo electrónico o la contraseña no son correctas";
+                $this->errores['login'] = "Lamentablemente, ha habido un error en el inicio de sesión. Asegúrate de que estás utilizando la dirección de correo electrónico y la contraseña correctas.";
             } else {
                 $_SESSION['login'] = true;
                 $_SESSION['id'] = $usuario->getId();

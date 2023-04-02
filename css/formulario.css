@@ -1,3 +1,7 @@
+main article {
+  min-height: 1000px;
+}
+
 /*Hoja de estilo formulario contacto*/
 #contacto-form {
   margin: 0 auto;
@@ -98,14 +102,18 @@ textarea {
 }
 
 #login-form label {
-  display: block;
-  font-size: 1.2em;
-  font-weight: bold;
+  font-size: 13px;
+  font-family: Verdana;
   margin-bottom: 10px;
+  position: absolute;
+  pointer-events: none;
+  left: 2%;
+  top: 20%
 }
 
 #login-form div {
   margin: 15px 0;
+  position: relative;
 }
 
 #login-form #errorEmail {
@@ -116,19 +124,31 @@ textarea {
   color: red;
 }
 
+#login-form #errorLogin {
+  color: red;
+}
+
 #login-form input[type="email"],
 #login-form input[type="password"] {
   width: 95%;
   padding: 10px;
   margin-bottom: 20px;
   border-radius: 5px;
-  border: 1px solid #ccc;
+  border: none;
+  border-bottom: 1px solid #ccc;
+}
+
+#login-form input[type="email"]:focus,
+#login-form input[type="password"]:focus {
+  outline: none;
+  border-bottom: 2px solid #ccc;
 }
 
 #login-form button[type="submit"] {
   background-color: #800080;
   color: white;
-  padding: 7px 7px;
+  width: 100%;
+  padding: 15px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -241,6 +261,11 @@ textarea {
 
 #registro-form button[type="submit"]:hover {
   background-color: #572364;
+}
+
+#registro-form p.account a {
+  color: #800080;
+  font-weight: bold;
 }
 
 /*Hoja de estilo formulario nuevo producto*/
