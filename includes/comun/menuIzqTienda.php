@@ -1,34 +1,27 @@
 <div id="menuIzqTienda">
 	<h3>Filtros</h3>
-		<form>
 			<ul class= "filtros">
 				
 
-				<li>Talla</li>
+				<li>Talla:</li>
 				<li>
 					<ul class ="checkfiltros">
-					<li><input type="checkbox" name="tamano" value="S">XS</li>
-					<li><input type="checkbox" name="tamano" value="S">S</li>
-					<li><input type="checkbox" name="tamano" value="M">M</li>
-					<li><input type="checkbox" name="tamano" value="L">L</li>
-					<li><input type="checkbox" name="tamano" value="XL">XL</li>
+					<li><input type="checkbox" name="tamano" value="XS" id="tamano-filtro">XS</li>
+					<li><input type="checkbox" name="tamano" value="S" id="tamano-filtro">S</li>
+					<li><input type="checkbox" name="tamano" value="M" id="tamano-filtro">M</li>
+					<li><input type="checkbox" name="tamano" value="L" id="tamano-filtro">L</li>
+					<li><input type="checkbox" name="tamano" value="XL" id="tamano-filtro">XL</li>
 					</ul>
 				</li>
-				<li>Precio (menor que)</li>
+				<li>Precio:</li>
 				<li>
-					<ul class ="checkfiltros">
-					<li><input type="radio" name="menorque" value="25">25€</li>
-					<li><input type="radio" name="menorque" value="50">50€</li>
-					<li><input type="radio" name="menorque" value="75">75€</li>
-					<li><input type="radio" name="menorque" value="100">100€</li>
-					</ul>
+					<p>Precio máximo: <span id="valor-precio"></span> euros</p>
+					<input type="range" id="slider" min="0" max="100" value="100" step="1">
 				</li>
-			
+				
 				<li>
-					<button type="submit">Aplicar filtros</button>
+					<button type="submit" onclick="mostrarMenu()">Ocultar filtros</button>
 				</li>
 			</ul>
-		</form>
-
-		
 </div>
+

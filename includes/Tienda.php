@@ -14,7 +14,7 @@ class Tienda {
 		$html .= <<<EOS
 				<h2>Productos</h2>
 					<div id="productos">
-					<ul class = "productos">
+					<ul class="lista-productos" id="lista-productos">
 				EOS;
         foreach($this->productos as $prod){
             $link = 'mostrarProducto.php?id='.$prod->getId();
@@ -24,7 +24,7 @@ class Tienda {
             $precio = $prod->getPrecio();
 
             $html .= <<<EOS
-					<li>
+					<li class="producto" data-precio='$precio'>
 						<a href='$link'>
 						<div class="producto-imagen">
 						<img class='imgProducto' src='$src' alt='$alt'>
