@@ -101,14 +101,40 @@ textarea {
   margin-bottom: 20px;
 }
 
-#login-form label {
-  font-size: 13px;
-  font-family: Verdana;
-  margin-bottom: 10px;
+#login-form .inputbox{
+    position: relative;
+    margin: 30px 0;
+}
+
+#login-form .inputbox label[for="email"],
+#login-form .inputbox label[for="password"] {
   position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  color: #000;
+  font-size: 1em;
   pointer-events: none;
-  left: 2%;
-  top: 20%
+  transition: .5s;
+}
+
+#login-form input:focus ~ label[for="email"],
+#login-form input:valid ~ label[for="email"],
+#login-form input:focus ~ label[for="password"],
+#login-form input:valid ~ label[for="password"] {
+  top: -5px;
+}
+
+#login-form .inputbox input {
+    width: 98%;
+    height: 40px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    padding:0 5px 0 5px;
+    color: #000;
+    border-bottom: 1px solid #000;
 }
 
 #login-form div {
@@ -116,32 +142,12 @@ textarea {
   position: relative;
 }
 
-#login-form #errorEmail {
-  color: red;
-}
-
-#login-form #errorPass {
+#login-form .inputbox #errorEmail, #errorPass{
   color: red;
 }
 
 #login-form #errorLogin {
   color: red;
-}
-
-#login-form input[type="email"],
-#login-form input[type="password"] {
-  width: 95%;
-  padding: 10px;
-  margin-bottom: 20px;
-  border-radius: 5px;
-  border: none;
-  border-bottom: 1px solid #ccc;
-}
-
-#login-form input[type="email"]:focus,
-#login-form input[type="password"]:focus {
-  outline: none;
-  border-bottom: 2px solid #ccc;
 }
 
 #login-form button[type="submit"] {

@@ -14,7 +14,7 @@ class FormularioLogin extends Formulario
 
         // Se generan los mensajes de error si existen.
         $htmlErroresGlobales = self::generaListaErroresGlobales($this->errores);
-        $erroresCampos = self::generaErroresCampos(['emailUsuario', 'password' , 'login'], $this->errores, 'span', array('class' => 'error'));
+        $erroresCampos = self::generaErroresCampos(['emailUsuario', 'password', 'login'], $this->errores, 'span', array('class' => 'error'));
 
         // Se genera el HTML asociado a los campos del formulario y los mensajes de error.
         $html = <<<EOF
@@ -23,15 +23,15 @@ class FormularioLogin extends Formulario
           <fieldset>
             <legend>¿Ya estás registrado?</legend>
             <p class="no-account">Inicia sesión ahora para aprovecharte de todos los beneficios de la cuenta de cliente de La Quinta Caja ¿Nuevo cliente? <a href="registro.php">Regístrate aquí</a></p>
-            <div>
-              <input id="email" type="email" name="emailUsuario" value="$emailUsuario" required>
-              <label for="email">Correo electrónico</label>
-              <span id="errorEmail">{$erroresCampos['emailUsuario']}</span>
+            <div class="inputbox">
+                <input id="email" type="email" name="emailUsuario" value="$emailUsuario" required>
+                <label for="email">Correo electrónico</label>
+                <span id="errorEmail">{$erroresCampos['emailUsuario']}</span>
             </div>
-            <div>
-              <input id="password" type="password" name="password" required>
-              <label for="password">Contraseña</label>
-              <span id="errorPass">{$erroresCampos['password']}</span>
+            <div class="inputbox">
+                <input id="password" type="password" name="password" required>
+                <label for="password">Contraseña</label>
+                <span id="errorPass">{$erroresCampos['password']}</span>
             </div>
             <span id="errorLogin">{$erroresCampos['login']}</span>
             <div>
@@ -49,16 +49,17 @@ class FormularioLogin extends Formulario
         $this->errores = [];
         $emailUsuario = trim($datos['emailUsuario'] ?? '');
         $emailUsuario = filter_var($emailUsuario, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
-        if ( ! $emailUsuario || empty($emailUsuario) ) {
+        if (!$emailUsuario || empty($emailUsuario)) {
             $this->errores['emailUsuario'] = 'El correo electrónico no puede estar vacío';
         }
+
         
         $password = trim($datos['password'] ?? '');
         $password = filter_var($password, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
-        if ( ! $password || empty($password) ) {
+        if (!$password || empty($password)) {
             $this->errores['password'] = 'La contraseña no puede estar vacía.';
         }
-        
+ 
         if (count($this->errores) === 0) {
             $usuario = Usuario::login($emailUsuario, $password);
         

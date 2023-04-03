@@ -86,7 +86,7 @@ class FormularioRegistro extends Formulario
 
         $apellido1Usuario = trim($datos['apellido1Usuario'] ?? '');
         $apellido1Usuario = filter_var($apellido1Usuario, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
-        if ( ! $apellido1Usuario || empty($nombreUsuario)) {
+        if ( ! $apellido1Usuario || empty($apellido1Usuario)) {
             $this->errores['apellido1Usuario'] = 'El primer apellido del usuario no puede estar vacío.';
         }
 
