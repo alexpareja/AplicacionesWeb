@@ -25,36 +25,36 @@ class FormularioRegistro extends Formulario
             <fieldset>
                 <legend>¿Nuevo cliente?</legend>
                 <p class="account">Crea tu cuenta aquí. ¿Ya tienes una cuenta? <a href="login.php">Inicia sesión</a></p>
-                <div>
+                <div class="inputbox">
                     <label for="nombreUsuario">Nombre:*</label>
                     <input id="nombreUsuario" type="text" name="nombreUsuario" value="$nombreUsuario" />
                     <span id="errorNombre">{$erroresCampos['nombreUsuario']}</span>
                 </div>
-                <div>
+                <div class="inputbox">
                     <label for="apellido1Usuario">Primer apellido:*</label>
                     <input id="apellido1Usuario" type="text" name="apellido1Usuario" value="$apellido1Usuario" />
                     <span id="errorApellido">{$erroresCampos['apellido1Usuario']}</span>
                 </div>
-                <div>
+                <div class="inputbox">
                     <label for="apellido2Usuario">Segundo apellido:</label>
                     <input id="apellido2Usuario" type="text" name="apellido2Usuario" value="$apellido2Usuario" />
                 </div>
-                <div>
+                <div class="inputbox">
                     <label for="emailUsuario">Correo electrónico:*</label>
                     <input id="emailUsuario" type="email" name="emailUsuario" value="$emailUsuario" />
                     <span id="errorEmail">{$erroresCampos['emailUsuario']}</span>
                 </div>
-                <div>
+                <div class="inputbox">
                     <label for="password">Contraseña:*</label>
                     <input id="password" type="password" name="password" />
                     <span id="errorPass">{$erroresCampos['password']}</span>
                 </div>
-                <div>
+                <div class="inputbox">
                     <label for="password2">Reintroduce la contraseña:*</label>
                     <input id="password2" type="password" name="password2" />
                     <span id="errorPass2">{$erroresCampos['password2']}</span>
                 </div>
-                <div>
+                <div class="inputbox">
                     <label for="direccionUsuario">Dirección:*</label>
                     <input id="direccionUsuario" type="text" name="direccionUsuario" value="$direccionUsuario" />
                     <span id="errorDir">{$erroresCampos['direccionUsuario']}</span>
@@ -64,7 +64,7 @@ class FormularioRegistro extends Formulario
                     <label for="terms" class="terminos">Acepto los <a href="terminosycondiciones.php">términos y condiciones</a>*</label>
                 </div>
                 <div>
-                    <button type="submit" name="registro">Registrar</button>
+                    <button type="submit" name="registro">Registrarse</button>
                 </div>
                 <p>* Campos obligatorios</p>
             </fieldset>

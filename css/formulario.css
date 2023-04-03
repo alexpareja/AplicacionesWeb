@@ -195,11 +195,55 @@ textarea {
   margin-bottom: 20px;
 }
 
-#registro-form label {
-  display: block;
-  font-size: 1.2em;
-  font-weight: bold;
-  margin-bottom: 10px;
+#registro-form .inputbox{
+    position: relative;
+    margin: 30px 0;
+}
+
+#registro-form .inputbox label[for="nombreUsuario"],
+#registro-form .inputbox label[for="apellido1Usuario"],
+#registro-form .inputbox label[for="apellido2Usuario"],
+#registro-form .inputbox label[for="emailUsuario"],
+#registro-form .inputbox label[for="password"],
+#registro-form .inputbox label[for="password2"],
+#registro-form .inputbox label[for="direccionUsuario"] {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  color: #000;
+  font-size: 1em;
+  pointer-events: none;
+  transition: .5s;
+}
+
+#registro-form input:focus ~ label[for="nombreUsuario"],
+#registro-form input:valid ~ label[for="nombreUsuario"],
+#registro-form input:focus ~ label[for="apellido1Usuario"],
+#registro-form input:valid ~ label[for="apellido1Usuario"],
+#registro-form input:focus ~ label[for="apellido2Usuario"],
+#registro-form input:valid ~ label[for="apellido2Usuario"],
+#registro-form input:focus ~ label[for="emailUsuario"],
+#registro-form input:valid ~ label[for="emailUsuario"], 
+#registro-form input:focus ~ label[for="password"],
+#registro-form input:valid ~ label[for="password"],
+#registro-form input:focus ~ label[for="password2"],
+#registro-form input:valid ~ label[for="password2"],
+#registro-form input:focus ~ label[for="direccionUsuario"],
+#registro-form input:valid ~ label[for="direccionUsuario"] {
+  top: -5px;
+}
+
+#registro-form .inputbox input {
+    width: 98%;
+    height: 40px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    padding:0 5px 0 5px;
+    color: #000;
+    border-bottom: 1px solid #000;
 }
 
 #registro-form input[type="checkbox"] {
@@ -244,20 +288,11 @@ textarea {
   color: red;
 }
 
-#registro-form input[type="text"],
-#registro-form input[type="email"],
-#registro-form input[type="password"] {
-  width: 95%;
-  padding: 10px;
-  margin-bottom: 20px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-}
-
 #registro-form button[type="submit"] {
   background-color: #800080;
   color: white;
-  padding: 7px 7px;
+  width: 100%;
+  padding: 15px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
