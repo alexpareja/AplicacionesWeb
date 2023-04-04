@@ -1,32 +1,57 @@
 <?php
 require_once __DIR__.'/includes/configuracion.php';
-$tituloPagina = 'entradaBlog';
-$contenidoPrincipal = '';
+$contenidoPrincipal = <<<EOS
+<div id="entrada">
+EOS; 
+
+if (isset($_SESSION['admin']) && $_SESSION['admin']) {
+	$contenidoPrincipal .= <<<EOS
+			<ul class='botones'>
+				<li>
+					<form action='editarEntrada.php'>
+						<button type="submit">Editar Entrada</button>
+					</form>
+				</li>
+			</ul>
+	EOS;} 
+
+if(isset($_GET['id']) && !empty($_GET['id'])) {
+$id=$_GET ["id"];
+$blog=es\ucm\fdi\aw\Blog::buscaPorId($id);  
+if($blog)
+{
+$imagenEntrada = "img/blog_" . $blog->getId() . ".png";
+$titulo=$blog->getTitulo();
+$tituloPagina = $titulo;
+$cont=$blog->getContenido();
+$autor = es\ucm\fdi\aw\Usuario::buscaPorId($blog->getAutor()); 
 $contenidoPrincipal .= <<<EOS
-<div id="entradaBlog">
-  <h2>Título del post</h2>
-  <div id="entrada_contenido">
-    <div id="entrada_texto">
-      <p>Contenido del post</p> <!--el contenido se sacará de la bbdd, mediante una clase entradaSA, que nos devuelva toda la info de la entrada-->
+    <img class='imgEntrada' src="$imagenEntrada" alt='Imagen de la entrada'>
+    <h2>$titulo</h2>
+    <p>$cont</p>
+    <p>Escrito por $autor</p>
     </div>
-    <div id="entrada_imagen">
-      <img src="img/b_PPost.png" alt="Imagen del post">
-    </div>
-  </div>
-  <div id="entradas_links">
-    <h3>Otras entradas del blog</h3>
-    <ul>
-      <li><a href="#">Enlace 1</a></li>
-      <li><a href="#">Enlace 2</a></li>
-      <li><a href="#">Enlace 3</a></li>
-    </ul>
-  </div>
-  <div id="comments">
+    <div id="comments">
     <h3>Comentarios</h3>
+    <ul>
     <!--aquí se incluirán los comentarios, sacados de la bbdd-->
-  </div>
-</div>
-EOS;
+    </ul>
+    </div>
+    EOS;
+}
+else{ //si no se encuentra el producto
+  $tituloPagina = "Entrada no encontrada";
+  $contenidoPrincipal .= <<<EOS
+  <h2> No se encuentra la entrada</h2>
+  EOS;
+}
+}
+else{ //si no está definido parámetro id en GET
+  $tituloPagina = "Error de búsqueda";
+  $contenidoPrincipal .= <<<EOS
+  <h2> Se ha producido un error </h2>
+  EOS;
+}
 
 require __DIR__.'/includes/plantillas/plantilla.php';
 ?>
