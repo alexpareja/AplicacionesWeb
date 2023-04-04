@@ -12,7 +12,9 @@
 CREATE TABLE `blog` (
   `id` int(10) UNSIGNED NOT NULL,
   `titulo` varchar(20) NOT NULL,
-  `contenido` text NOT NULL
+  `contenido` text NOT NULL,
+  `descripcion` text NOT NULL,
+  `autor` int(10) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -89,7 +91,8 @@ COMMIT;
 --
 ALTER TABLE `blog`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `tituloEntrada` (`titulo`);
+  ADD KEY `tituloEntrada` (`titulo`),
+  ADD KEY `autor` (`autor`) USING BTREE;
 
 --
 -- Indices de la tabla `comentariosblog`
@@ -133,6 +136,10 @@ ALTER TABLE `comentariosproducto`
 -- Restricciones para tablas volcadas
 --
 
+
+ALTER TABLE `blog`
+  ADD CONSTRAINT `blog_ibfk_1` FOREIGN KEY (`autor`) REFERENCES `usuarios` (`id`) ON UPDATE CASCADE;
+COMMIT;
 --
 -- Filtros para la tabla `comentariosblog`
 --
