@@ -11,7 +11,7 @@
 
 CREATE TABLE `blog` (
   `id` int(10) UNSIGNED NOT NULL,
-  `titulo` varchar(20) NOT NULL,
+  `titulo` varchar(40) NOT NULL,
   `contenido` text NOT NULL,
   `descripcion` text NOT NULL,
   `autor` int(10) UNSIGNED NOT NULL
@@ -45,6 +45,7 @@ CREATE TABLE `comentariosproducto` (
   `fecha` datetime NOT NULL,
   `review` decimal(10,0) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
 CREATE TABLE `listadeseos` (
   `id` int(11) NOT NULL,
   `usuario` int(10) UNSIGNED NOT NULL,
