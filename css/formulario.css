@@ -77,8 +77,8 @@ textarea {
   background-color: #572364;
 }
 
-/*Hoja de estilo formulario login*/
-#login-form {
+/*Hoja de estilo formulario login y registro*/
+#login-registro-form {
   margin: 0 auto;
   max-width: 500px;
   background-color: #fff;
@@ -89,25 +89,30 @@ textarea {
   font-size: 13px;
 }
 
-#login-form fieldset {
+#login-registro-form fieldset {
   border: none;
   margin: 0;
   padding: 0;
 }
 
-#login-form legend {
+#login-registro-form legend {
   font-size: 1.5em;
   font-weight: bold;
   margin-bottom: 20px;
 }
 
-#login-form .inputbox{
+#login-registro-form .inputbox{
     position: relative;
     margin: 30px 0;
 }
 
-#login-form .inputbox label[for="email"],
-#login-form .inputbox label[for="password"] {
+#login-registro-form .inputbox label[for="nombreUsuario"],
+#login-registro-form .inputbox label[for="apellido1Usuario"],
+#login-registro-form .inputbox label[for="apellido2Usuario"],
+#login-registro-form .inputbox label[for="emailUsuario"],
+#login-registro-form .inputbox label[for="password"],
+#login-registro-form .inputbox label[for="password2"],
+#login-registro-form .inputbox label[for="direccionUsuario"] {
   position: absolute;
   top: 50%;
   left: 5px;
@@ -118,14 +123,24 @@ textarea {
   transition: .5s;
 }
 
-#login-form input:focus ~ label[for="email"],
-#login-form input:valid ~ label[for="email"],
-#login-form input:focus ~ label[for="password"],
-#login-form input:valid ~ label[for="password"] {
+#login-registro-form input:focus ~ label[for="nombreUsuario"],
+#login-registro-form input:valid ~ label[for="nombreUsuario"],
+#login-registro-form input:focus ~ label[for="apellido1Usuario"],
+#login-registro-form input:valid ~ label[for="apellido1Usuario"],
+#login-registro-form input:focus ~ label[for="apellido2Usuario"],
+#login-registro-form input:valid ~ label[for="apellido2Usuario"],
+#login-registro-form input:focus ~ label[for="emailUsuario"],
+#login-registro-form input:valid ~ label[for="emailUsuario"], 
+#login-registro-form input:focus ~ label[for="password"],
+#login-registro-form input:valid ~ label[for="password"],
+#login-registro-form input:focus ~ label[for="password2"],
+#login-registro-form input:valid ~ label[for="password2"],
+#login-registro-form input:focus ~ label[for="direccionUsuario"],
+#login-registro-form input:valid ~ label[for="direccionUsuario"] {
   top: -5px;
 }
 
-#login-form .inputbox input {
+#login-registro-form .inputbox input {
     width: 98%;
     height: 40px;
     background: transparent;
@@ -137,104 +152,7 @@ textarea {
     border-bottom: 1px solid #000;
 }
 
-#login-form div {
-  margin: 15px 0;
-  position: relative;
-}
-
-#login-form .inputbox #errorEmail, #errorPass{
-  color: red;
-}
-
-#login-form #errorLogin {
-  color: red;
-}
-
-#login-form button[type="submit"] {
-  background-color: #800080;
-  color: white;
-  width: 100%;
-  padding: 15px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-bottom: 10px;
-  font-size: 1.2em;
-}
-
-#login-form button[type="submit"]:hover {
-  background-color: #572364;
-}
-
-#login-form p.no-account a {
-  color: #800080;
-  font-weight: bold;
-}
-
-/*Hoja de estilo formulario registro*/
-#registro-form {
-  margin: 0 auto;
-  max-width: 600px;
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0px 0px 10px #ccc;
-  font-family: Verdana;
-  font-size: 13px;
-}
-
-#registro-form fieldset {
-  border: none;
-  margin: 0;
-  padding: 0;
-}
-
-#registro-form legend {
-  font-size: 1.5em;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
-#registro-form .inputbox{
-    position: relative;
-    margin: 30px 0;
-}
-
-#registro-form .inputbox label[for="nombreUsuario"],
-#registro-form .inputbox label[for="apellido1Usuario"],
-#registro-form .inputbox label[for="apellido2Usuario"],
-#registro-form .inputbox label[for="emailUsuario"],
-#registro-form .inputbox label[for="password"],
-#registro-form .inputbox label[for="password2"],
-#registro-form .inputbox label[for="direccionUsuario"] {
-  position: absolute;
-  top: 50%;
-  left: 5px;
-  transform: translateY(-50%);
-  color: #000;
-  font-size: 1em;
-  pointer-events: none;
-  transition: .5s;
-}
-
-#registro-form input:focus ~ label[for="nombreUsuario"],
-#registro-form input:valid ~ label[for="nombreUsuario"],
-#registro-form input:focus ~ label[for="apellido1Usuario"],
-#registro-form input:valid ~ label[for="apellido1Usuario"],
-#registro-form input:focus ~ label[for="apellido2Usuario"],
-#registro-form input:valid ~ label[for="apellido2Usuario"],
-#registro-form input:focus ~ label[for="emailUsuario"],
-#registro-form input:valid ~ label[for="emailUsuario"], 
-#registro-form input:focus ~ label[for="password"],
-#registro-form input:valid ~ label[for="password"],
-#registro-form input:focus ~ label[for="password2"],
-#registro-form input:valid ~ label[for="password2"],
-#registro-form input:focus ~ label[for="direccionUsuario"],
-#registro-form input:valid ~ label[for="direccionUsuario"] {
-  top: -5px;
-}
-
-#registro-form .inputbox input {
+#login-registro-form .inputbox input {
     width: 98%;
     height: 40px;
     background: transparent;
@@ -246,49 +164,34 @@ textarea {
     border-bottom: 1px solid #000;
 }
 
-#registro-form input[type="checkbox"] {
+#login-registro-form input[type="checkbox"] {
   display: inline;
   margin-right: 5px;
 }
 
-#registro-form label.terminos {
+#login-registro-form label.terminos {
   display: inline-block;
 }
 
-#registro-form label.terminos a{
+#login-registro-form label.terminos a{
   color: #800080;
   font-weight: bold;
 }
 
-#registro-form div {
+#login-registro-form div {
   margin: 15px 0;
+  position: relative;
 }
 
-#registro-form #errorNombre {
+#login-registro-form .inputbox #errorEmail, #errorPass, #errorNombre, #errorApellido, #errorPass, #errorPass2, #errorDir {
   color: red;
 }
 
-#registro-form #errorApellido {
+#login-registro-form #errorLogin {
   color: red;
 }
 
-#registro-form #errorEmail {
-  color: red;
-}
-
-#registro-form #errorPass {
-  color: red;
-}
-
-#registro-form #errorPass2 {
-  color: red;
-}
-
-#registro-form #errorDir {
-  color: red;
-}
-
-#registro-form button[type="submit"] {
+#login-registro-form button[type="submit"] {
   background-color: #800080;
   color: white;
   width: 100%;
@@ -300,11 +203,11 @@ textarea {
   font-size: 1.2em;
 }
 
-#registro-form button[type="submit"]:hover {
+#login-registro-form button[type="submit"]:hover {
   background-color: #572364;
 }
 
-#registro-form p.account a {
+#login-registro-form p.account a {
   color: #800080;
   font-weight: bold;
 }

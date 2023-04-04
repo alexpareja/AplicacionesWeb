@@ -19,17 +19,17 @@ class FormularioLogin extends Formulario
         // Se genera el HTML asociado a los campos del formulario y los mensajes de error.
         $html = <<<EOF
         $htmlErroresGlobales
-        <div id="login-form">
+        <div id="login-registro-form">
           <fieldset>
             <legend>¿Ya estás registrado?</legend>
-            <p class="no-account">Inicia sesión ahora para aprovecharte de todos los beneficios de la cuenta de cliente de La Quinta Caja ¿Nuevo cliente? <a href="registro.php">Regístrate aquí</a></p>
+            <p class="account">Inicia sesión ahora para aprovecharte de todos los beneficios de la cuenta de cliente de La Quinta Caja ¿Nuevo cliente? <a href="registro.php">Regístrate aquí</a></p>
             <div class="inputbox">
-                <input id="email" type="email" name="emailUsuario" value="$emailUsuario" required>
-                <label for="email">Correo electrónico</label>
+                <input id="emailUsuario" type="email" name="emailUsuario" value="$emailUsuario" required/>
+                <label for="emailUsuario">Correo electrónico</label>
                 <span id="errorEmail">{$erroresCampos['emailUsuario']}</span>
             </div>
             <div class="inputbox">
-                <input id="password" type="password" name="password" required>
+                <input id="password" type="password" name="password" required/>
                 <label for="password">Contraseña</label>
                 <span id="errorPass">{$erroresCampos['password']}</span>
             </div>

@@ -21,46 +21,46 @@ class FormularioRegistro extends Formulario
 
         $html = <<<EOF
         $htmlErroresGlobales
-        <div id = "registro-form">
+        <div id = "login-registro-form">
             <fieldset>
                 <legend>¿Nuevo cliente?</legend>
                 <p class="account">Crea tu cuenta aquí. ¿Ya tienes una cuenta? <a href="login.php">Inicia sesión</a></p>
                 <div class="inputbox">
-                    <label for="nombreUsuario">Nombre:*</label>
-                    <input id="nombreUsuario" type="text" name="nombreUsuario" value="$nombreUsuario" />
+                    <input id="nombreUsuario" type="text" name="nombreUsuario" value="$nombreUsuario" required/>
+                    <label for="nombreUsuario">Nombre*</label>
                     <span id="errorNombre">{$erroresCampos['nombreUsuario']}</span>
                 </div>
                 <div class="inputbox">
-                    <label for="apellido1Usuario">Primer apellido:*</label>
-                    <input id="apellido1Usuario" type="text" name="apellido1Usuario" value="$apellido1Usuario" />
+                    <input id="apellido1Usuario" type="text" name="apellido1Usuario" value="$apellido1Usuario" required/>
+                    <label for="apellido1Usuario">Primer apellido*</label>
                     <span id="errorApellido">{$erroresCampos['apellido1Usuario']}</span>
                 </div>
                 <div class="inputbox">
-                    <label for="apellido2Usuario">Segundo apellido:</label>
                     <input id="apellido2Usuario" type="text" name="apellido2Usuario" value="$apellido2Usuario" />
+                    <label for="apellido2Usuario">Segundo apellido</label>
                 </div>
                 <div class="inputbox">
-                    <label for="emailUsuario">Correo electrónico:*</label>
-                    <input id="emailUsuario" type="email" name="emailUsuario" value="$emailUsuario" />
+                    <input id="emailUsuario" type="email" name="emailUsuario" value="$emailUsuario" required/>
+                    <label for="emailUsuario">Correo electrónico*</label>
                     <span id="errorEmail">{$erroresCampos['emailUsuario']}</span>
                 </div>
                 <div class="inputbox">
-                    <label for="password">Contraseña:*</label>
-                    <input id="password" type="password" name="password" />
+                    <input id="password" type="password" name="password" required/>
+                    <label for="password">Contraseña*</label>
                     <span id="errorPass">{$erroresCampos['password']}</span>
                 </div>
-                <div class="inputbox">
-                    <label for="password2">Reintroduce la contraseña:*</label>
-                    <input id="password2" type="password" name="password2" />
+                <div class="inputbox">      
+                    <input id="password2" type="password" name="password2" required/>
+                    <label for="password2">Reintroduce la contraseña*</label>
                     <span id="errorPass2">{$erroresCampos['password2']}</span>
                 </div>
                 <div class="inputbox">
-                    <label for="direccionUsuario">Dirección:*</label>
-                    <input id="direccionUsuario" type="text" name="direccionUsuario" value="$direccionUsuario" />
+                    <input id="direccionUsuario" type="text" name="direccionUsuario" value="$direccionUsuario" required/>
+                    <label for="direccionUsuario">Dirección*</label>
                     <span id="errorDir">{$erroresCampos['direccionUsuario']}</span>
                 </div>
                 <div>
-                    <input type="checkbox" id="terms" name="terms" required>
+                    <input type="checkbox" id="terms" name="terms" required/>
                     <label for="terms" class="terminos">Acepto los <a href="terminosycondiciones.php">términos y condiciones</a>*</label>
                 </div>
                 <div>
