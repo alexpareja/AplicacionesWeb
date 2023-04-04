@@ -41,7 +41,7 @@ class FormularioAnadirCarrito extends Formulario
         <option value="xl">XL</option>
         </select>
         <label for="quantity">Cantidad:</label>
-        <input type="number" id="quantity" name="quantity" value="0" min="1"> <!-- Con javascript solo se podrá seleccionar como máximo el stock que tenga cada talla-->
+        <input type="number" id="quantity" name="quantity" value="0" min="0"> <!-- Con javascript solo se podrá seleccionar como máximo el stock que tenga cada talla-->
         <label for="precio">Precio:</label>        
         <input type="text" id="precio" name="price" value="{$this->producto->getPrecio()}" readonly>
         <button type="submit" name="accion" value="add">Añadir al carrito</button>
