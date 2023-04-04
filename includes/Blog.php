@@ -41,10 +41,10 @@ class Blog
         return $BlogDAO->getBlog();
     }
 
-    public static function crea($descripcion, $titulo, $contenido, $autor)
+    public static function crea($titulo, $contenido, $descripcion, $autor)
     {
         $BlogDAO= new BlogDAO();
-        return $BlogDAO->crea($descripcion, $titulo, $contenido, $autor);
+        return $BlogDAO->crea($titulo, $contenido, $descripcion, $autor);
     }
 
     public function borra($entrada)

@@ -70,9 +70,9 @@ class BlogDAO
     }
 
     //crea una nueva entrada
-    public function crea($descripcion, $titulo, $contenido, $autor)
+    public function crea($titulo, $contenido, $descripcion, $autor)
     {
-        $blog = new Producto($nuevaId=null,$titulo,$contenido,$descripcion,$autor);
+        $blog = new Blog($nuevaId=null,$titulo,$contenido,$descripcion,$autor);
         return self::guarda($blog);
     }
 

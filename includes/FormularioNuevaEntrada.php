@@ -8,15 +8,19 @@ class FormularioNuevaEntrada extends Formulario
         parent::__construct('formNuevaEntrada', array('urlRedireccion' => 'blog.php', 'enctype' => 'multipart/form-data'));
     }
 
-    private $nombreAutor; 
+	private $idAutor; 
 
-	public function setAutor($autor) {
-        $this->nombreAutor=$autor->getNombre();
+	public function setAutor($idAutor) {
+		$this->idAutor=$idAutor;
     }
 
     protected function generaCamposFormulario(&$datos)
     {
 		$titulo = $datos['titulo'] ?? '';
+
+		$descripcion = $datos['descripcion'] ?? '';
+
+		$contenido = $datos['contenido'] ?? '';
 		
 		$htmlErroresGlobales = self::generaListaErroresGlobales($this->errores);
 		$erroresCampos = self::generaErroresCampos(['titulo', 'contenido','descripcion', 'imagen'], $this->errores, 'span', array('class' => 'error'));
@@ -35,12 +39,12 @@ class FormularioNuevaEntrada extends Formulario
 				</div>
 				<div>
 					<p><label for="descripcion">Descripción:</label></p>
-					<p><textarea id="descripcion" name="descripcion"></textarea></p>
+					<p><textarea id="descripcion" name="descripcion" value='$descripcion'></textarea></p>
 					{$erroresCampos['descripcion']}
 				</div>
 				<div>
 					<p><label for="contenido">Contenido:</label></p>
-					<p><textarea id="contenido" name="contenido"></textarea></p>
+					<p><textarea id="contenido" name="contenido" value='$contenido'></textarea></p>
 					{$erroresCampos['contenido']}
 				</div>
 				<div>
@@ -49,12 +53,12 @@ class FormularioNuevaEntrada extends Formulario
 					{$erroresCampos['imagen']}
 				</div>
 				<div>
-				<input type="hidden" name="autor" value="{$this->nombreAutor}">
+				<input type="hidden" name="autor" value="{$this->idAutor}">
 					<ul class= "botones">
 						<li><button type="submit">Añadir Entrada</button>
 						</li>
 						<li>
-						<button type="submit" formaction="tienda.php">Volver a la tienda</button>
+						<button type="submit" formaction="blog.php">Volver al Blog</button>
 						</li>
 					</ul>
 				</div>
@@ -95,8 +99,10 @@ class FormularioNuevaEntrada extends Formulario
 			$rutaArchivo = $imagen['tmp_name'];
 			
 			if($tipoArchivo == 'image/jpeg' || $tipoArchivo == 'image/png') {
-				$blog = Blog::crea($titulo, $contenido, $descripcion, $nombreAutor);
-	
+				$blog = Blog::crea($titulo, $contenido, $descripcion, $this->idAutor);
+				echo $titulo;
+				echo $contenido;
+				echo $descripcion;
 				$nombreImagen = 'blog_'.$blog->getID().'.png'; // Nombre de la imagen que se guardará
 				$ruta = 'img/'.$nombreImagen; // Ruta donde se guardará la imagen
 
