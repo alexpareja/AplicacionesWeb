@@ -80,10 +80,10 @@ class BlogDAO
     private function inserta($blog)
     {
         $query=sprintf("INSERT INTO blog(titulo, contenido, descripcion, autor) VALUES ('%s', '%s', '%s','%d')"
-            , $this->conn->real_escape_string($producto->getTitulo())
-            , $this->conn->real_escape_string($producto->getContenido())
-            , $this->conn->real_escape_string($producto->getDescripcion))
-            , $producto->getAutor()
+            , $this->conn->real_escape_string($blog->getTitulo())
+            , $this->conn->real_escape_string($blog->getContenido())
+            , $this->conn->real_escape_string($blog->getDescripcion())
+            , $blog->getAutor()
         );
         if ( $this->conn->query($query) ) {
             $blog->setId($this->conn->insert_id);

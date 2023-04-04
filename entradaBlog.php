@@ -1,5 +1,6 @@
 <?php
-require_once __DIR__.'/includes/configuracion.php';
+include_once ("includes/configuracion.php");
+
 $contenidoPrincipal = <<<EOS
 <div id="entrada">
 EOS; 
@@ -25,11 +26,12 @@ $titulo=$blog->getTitulo();
 $tituloPagina = $titulo;
 $cont=$blog->getContenido();
 $autor = es\ucm\fdi\aw\Usuario::buscaPorId($blog->getAutor()); 
+$nombreAutor=$autor->getNombre();
 $contenidoPrincipal .= <<<EOS
     <img class='imgEntrada' src="$imagenEntrada" alt='Imagen de la entrada'>
     <h2>$titulo</h2>
     <p>$cont</p>
-    <p>Escrito por $autor</p>
+    <p>Escrito por $nombreAutor</p>
     </div>
     <div id="comments">
     <h3>Comentarios</h3>
