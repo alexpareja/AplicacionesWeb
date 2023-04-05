@@ -443,7 +443,7 @@ display:inline-block;
   font-weight: bold;
 }
 
-#rectangulo1, #rectangulo2, #rectangulo3 {
+#rectangulo {
   margin-top: 40px;
   background-color: #f2f2f2;
   height: 20%;
@@ -451,43 +451,67 @@ display:inline-block;
   padding: 2px;
 }
 
-#rectangulo1 .t1, .t2, .t3 {
+#rectangulo .t1, .t2, .t3 {
   margin-left: 15px;
   font-family: Verdana;
   font-size: 10px;
 }
 
-#rectangulo2 .t1, .t2, .t3 {
-  margin-left: 15px;
-  font-family: Verdana;
-  font-size: 10px;
-}
-
-#rectangulo3 .t1, .t2, .t3 {
-  margin-left: 15px;
-  font-family: Verdana;
-  font-size: 10px;
-}
-
-#rectangulo1 .t1, #rectangulo2 .t1, #rectangulo3 .t1  {
+#rectangulo .t1 {
   line-height: 1;
   font-family: Monaco;
   font-size: 20px;
 }
 
-#rectangulo1 .t3, #rectangulo2 .t3,  #rectangulo3 .t3{
+#rectangulo .t3 {
   margin-top: 40px;
 }
 
-#rectangulo1 a, #rectangulo2 a, #rectangulo3 a {
+#rectangulo a {
   text-decoration: none;
   color: black;
 }
 
-#etiqueta1, #etiqueta2, #etiqueta3 {
+#etiqueta {
   background-color: #800080;
   height: 10px;
   width: 100vm;
+}
+
+#entAdd, #entDel {
+  padding: 7px 7px;
+  background-color: #800080;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  font-size: 1.2em;
+  margin-left: 30px;
+}
+
+#entAdd:hover, #entDel:hover {
+  background-color: #572364;
+}
+
+#botonesBlog li{
+font-size:20px;
+display:inline-block;
+}
+
+#blog button[type="submit"] {
+  background-color: #800080;
+  color: white;
+  padding: 7px 7px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  font-size: 1.2em;
+}
+
+#blog button[type="submit"]:hover {
+  background-color: #572364;
 }
 
 /*Hoja de estilo Bocetos*/
