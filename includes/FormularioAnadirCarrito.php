@@ -133,10 +133,10 @@ class FormularioAnadirCarrito extends Formulario
                             'size' => $size,
                         );
                     } else {
-                        $this->errores['enLista'] = "Este producto ya está en favoritos"
+                        $this->errores['enLista'] = "Este producto ya está en favoritos";
                     }
                 } else {
-                    $this->errores['noSesion'] = "No se puede añadir a favoritos sin iniciar sesión"
+                    $this->errores['noSesion'] = "No se puede añadir a favoritos sin iniciar sesión";
                 }
             }
         }
