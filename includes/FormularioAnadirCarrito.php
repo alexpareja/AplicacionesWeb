@@ -25,21 +25,33 @@ class FormularioAnadirCarrito extends Formulario
 
         // Se generan los mensajes de error si existen.
         $htmlErroresGlobales = self::generaListaErroresGlobales($this->errores);
-        $erroresCampos = self::generaErroresCampos(['cantidad', 'noStock'], $this->errores, 'span', array('class' => 'error'));
+        $erroresCampos = self::generaErroresCampos(['cantidad', 'noStock','talla'], $this->errores, 'span', array('class' => 'error'));
 
 		$html =<<<EOF
         $htmlErroresGlobales
         <div id="product-form">
         <input type="hidden" name="id" value="{$this->producto->getId()}">
         <input type="hidden" name="name" value="{$this->producto->getNombre()}">
-        <label for="talla">Talla:</label>
-        <select id="talla" name="size"> 
-        <option value="xs">XS</option>
-        <option value="s">S</option>
-        <option value="m">M</option>
-        <option value="l">L</option>
-        <option value="xl">XL</option>
-        </select>
+        <label>
+        <input type="radio" id="size" name="size" value="xs">
+         XS
+        </label>
+        <label>
+        <input type="radio" id="size" name="size" value="s">
+         S
+        </label>
+        <label>
+        <input type="radio" id="size" name="size" value="m">
+        M
+        </label>
+        <label>
+        <input type="radio" id="size" name="size" value="l">
+         L
+        </label>
+        <label>
+        <input type="radio" id="size" name="size" value="xl">
+         XL
+        </label>
         <label for="quantity">Cantidad:</label>
         <input type="number" id="quantity" name="quantity" value="0" min="0"> <!-- Con javascript solo se podrá seleccionar como máximo el stock que tenga cada talla-->
         <label for="precio">Precio:</label>        
@@ -51,6 +63,7 @@ class FormularioAnadirCarrito extends Formulario
         <span id="stockTallas">XS: {$this->producto->getStockXS()}, S: {$this->producto->getStockS()},
         M: {$this->producto->getStockM()}, L: {$this->producto->getStockL()}, XL: {$this->producto->getStockXL()} <br></span>
         <span id="errorNoStock">{$erroresCampos['noStock']}</span>
+        <span id="errorNoStock">{$erroresCampos['talla']}</span>
         <span id="errorNoCantidad">{$erroresCampos['cantidad']}</span>
         EOF;
 		return $html;
@@ -65,6 +78,10 @@ class FormularioAnadirCarrito extends Formulario
         if (isset($_POST["accion"]) && $_POST["accion"] == "add") {
             if ( ! $cantidad || empty($cantidad)) {
                 $this->errores['cantidad'] = 'Se debe especificar el número de productos a comprar.';
+            }
+            if($talla=='')
+            {
+                $this->errores['talla'] = "Se debe especificar la talla del producto.";
             }
             if($talla=='xs'and $cantidad>$this->producto->getStockXS())
             {
