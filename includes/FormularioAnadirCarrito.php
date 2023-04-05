@@ -25,7 +25,7 @@ class FormularioAnadirCarrito extends Formulario
 
         // Se generan los mensajes de error si existen.
         $htmlErroresGlobales = self::generaListaErroresGlobales($this->errores);
-        $erroresCampos = self::generaErroresCampos(['cantidad', 'noStock','talla'], $this->errores, 'span', array('class' => 'error'));
+        $erroresCampos = self::generaErroresCampos(['cantidad', 'noStock', 'noSesion','enLista','talla'], $this->errores, 'span', array('class' => 'error'));
 
 		$html =<<<EOF
         $htmlErroresGlobales
@@ -65,6 +65,8 @@ class FormularioAnadirCarrito extends Formulario
         <span id="errorNoStock">{$erroresCampos['noStock']}</span>
         <span id="errorNoStock">{$erroresCampos['talla']}</span>
         <span id="errorNoCantidad">{$erroresCampos['cantidad']}</span>
+        <span id="errorNoLogin">{$erroresCampos['noSesion']}</span>
+        <span id="errorEnLista">{$erroresCampos['enLista']}</span>
         EOF;
 		return $html;
     }
@@ -117,7 +119,7 @@ class FormularioAnadirCarrito extends Formulario
     				$_SESSION['cart'][$id][$size]['cantidad'] += $quantity;
     				}
     				else{
-    		       $this->errores['noStock'] = "No hay suficiente stock en la talla seleccionada. El máximo es ".$this->producto->$cogerStockTalla();
+    		          $this->errores['noStock'] = "No hay suficiente stock en la talla seleccionada. El máximo es ".$this->producto->$cogerStockTalla();
     				}
     			} else {
     			$_SESSION['cart'][$id][$size] = array(
@@ -137,19 +139,24 @@ class FormularioAnadirCarrito extends Formulario
                 $price = $datos['price'];
                 $size = $datos['size'];
                 
-                // Comprueba si el producto no está en la lista de deseos
-                if (!isset($_SESSION['wishlist'][$id][$size])) {
-                    // Añade el producto a la lista de deseos
-                    $_SESSION['wishlist'][$id][$size] = array(
-                        'id' => $id,
-                        'name' => $name,
-                        'price' => $price,
-                        'size' => $size,
-                    );
+                // Comprueba si el producto no está en la lista de deseos y tiene sesión iniciada
+                if(isset($_SESSION['login'])) {
+                     if (!isset($_SESSION['wishlist'][$id][$size])) {
+                        // Añade el producto a la lista de deseos
+                        $_SESSION['wishlist'][$id][$size] = array(
+                            'id' => $id,
+                            'name' => $name,
+                            'price' => $price,
+                            'size' => $size,
+                        );
+                    } else {
+                        $this->errores['enLista'] = "Este producto ya está en favoritos";
+                    }
+                } else {
+                    $this->errores['noSesion'] = "No se puede añadir a favoritos sin iniciar sesión";
                 }
             }
         }
-
     }
 }
 ?>
