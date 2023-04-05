@@ -666,3 +666,99 @@ div#cabecera .ayuda, .carrito, .cuenta, .iniciar {
 ::-webkit-scrollbar {
 display: none;
 }
+
+
+/*mostrar producto*/
+
+h2.error {
+font-size:3em;
+text-align: center;
+margin-bottom: 20%;
+}
+
+
+#producto{
+  align-items: center;
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 20px;
+  font-family: Verdana;
+}
+#producto .imgProducto {
+    width: 40%;
+    height: auto;
+    margin-right: 20px;
+  }
+
+  #producto h2 {
+    margin: 0;
+  font-size: 1.6em;
+margin-bottom: 10px;
+  }
+
+ #producto p {
+  margin: 0;
+  }
+
+  #producto h3, .comments h3 {
+  color: #800080;
+  font-size: 1.2em;
+  }
+
+  #producto .infoProducto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+  }
+
+  #producto .product-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+  }
+  
+    
+  .product-form label.talla {
+    margin-right: 10px;
+    font-size: 16px;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+  
+  }
+
+  
+  .stockTallas {
+    margin-top: 10px;
+    display: inline-block;
+  }
+
+  .stockTallas p {
+    margin-right: 10px;
+    padding: 10px;
+    display: inline-block;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+  }
+
+  input[type="radio"]{
+    accent-color:#800080;
+}
+
+input.quantity {
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #800080;
+  margin-bottom: 10px;
+}
+
+  div.comments {
+    clear: both;
+    text-align: center;
+  }
+

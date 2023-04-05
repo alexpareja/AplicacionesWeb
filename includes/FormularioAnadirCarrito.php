@@ -29,39 +29,45 @@ class FormularioAnadirCarrito extends Formulario
 
 		$html =<<<EOF
         $htmlErroresGlobales
-        <div id="product-form">
+        <div class="product-form">
         <input type="hidden" name="id" value="{$this->producto->getId()}">
         <input type="hidden" name="name" value="{$this->producto->getNombre()}">
-        <label>
-        <input type="radio" id="size" name="size" value="xs">
-         XS
-        </label>
-        <label>
-        <input type="radio" id="size" name="size" value="s">
-         S
-        </label>
-        <label>
-        <input type="radio" id="size" name="size" value="m">
-        M
-        </label>
-        <label>
-        <input type="radio" id="size" name="size" value="l">
-         L
-        </label>
-        <label>
-        <input type="radio" id="size" name="size" value="xl">
-         XL
-        </label>
-        <label for="quantity">Cantidad:</label>
-        <input type="number" id="quantity" name="quantity" value="0" min="0"> <!-- Con javascript solo se podrá seleccionar como máximo el stock que tenga cada talla-->
-        <label for="precio">Precio:</label>        
-        <input type="text" id="precio" name="price" value="{$this->producto->getPrecio()}" readonly>
+        <input type="hidden" name="price" value="{$this->producto->getPrecio()}">
+        <div class="tallas">
+            <label class="talla" for="xs">
+            <input type="radio" id="xs" name="size" value="xs">
+             XS
+            </label>
+            <label class="talla" for="s">
+            <input type="radio" id="s" name="size" value="s">
+             S
+            </label>
+            <label class="talla" for="m">
+            <input type="radio" id="m" name="size" value="m">
+            M
+            </label>
+            <label class="talla" for="l">
+            <input type="radio" id="l" name="size" value="l">
+            L
+            </label>
+            <label class="talla" for="xl">
+            <input type="radio" id="xl" name="size" value="xl">
+            XL
+            </label>
+        </div>
+        <div class="stockTallas">
+            <h3>Stock:</h3>
+            <p>XS: {$this->producto->getStockXS()}</p>
+            <p>S: {$this->producto->getStockS()}</p>
+            <p>M: {$this->producto->getStockM()}</p>
+            <p>L: {$this->producto->getStockL()}</p>
+            <p>XL: {$this->producto->getStockXL()}</p>
+        </div>
+        <label class="quantity" for="quantity"><h3>Cantidad:</h3></label>
+        <input type="number" class="quantity" name="quantity" value="0" min="0"> <!-- Con javascript solo se podrá seleccionar como máximo el stock que tenga cada talla-->
         <button type="submit" name="accion" value="add">Añadir al carrito</button>
         <button type="submit" name="accion" value="favorite">Añadir a favoritos</button>
         </div>
-        <span>Stocks por talla:</span>
-        <span id="stockTallas">XS: {$this->producto->getStockXS()}, S: {$this->producto->getStockS()},
-        M: {$this->producto->getStockM()}, L: {$this->producto->getStockL()}, XL: {$this->producto->getStockXL()} <br></span>
         <span id="errorNoStock">{$erroresCampos['noStock']}</span>
         <span id="errorNoStock">{$erroresCampos['talla']}</span>
         <span id="errorNoCantidad">{$erroresCampos['cantidad']}</span>
