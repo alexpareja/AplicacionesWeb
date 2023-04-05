@@ -612,6 +612,7 @@ div#cabecera .ayuda, .carrito, .cuenta, .iniciar {
   justify-content: center;
   align-items: center;
   height: 75px;
+  clear: both;
 }
 
 #pie .horizontalpie {
