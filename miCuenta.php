@@ -17,32 +17,41 @@ $contenidoPrincipal = <<<EOS
   <li>
     <a href="listadeseos.php">
       <div class="imagen">
-        <img class='imgListaDeseos' src="img/listadeseos.png" alt="Imagen Favoritos">
+        <div class="imagen-contenedor">
+            <img class='imgListaDeseos' src="img/listadeseos.jpg" alt="Imagen Favoritos">
+        </div>
+        <div class="imagen-texto">
+            <p>Mis favoritos</p>
+        </div>
       </div>
-      <br>
-      <p>Mis favoritos</p>
     </a>
   </li>
   <li>
     <a href="miPerfil.php">
       <div class="imagen">
-        <img class='imgMiPerfil' src="img/miPerfil.png" alt="Imagen Mi perfil">
+        <div class="imagen-contenedor">
+            <img class='imgMiPerfil' src="img/miPerfil.jpg" alt="Imagen Mi perfil">
+        </div>
+        <div class="imagen-texto">
+            <p>Mi perfil</p>
+        </div>
       </div>
-      <br>
-      <p>Mi perfil</p>
     </a>
   </li>
   <li>
     <a href="misCompras.php">
       <div class="imagen">
-        <img class='imgMisCompras' src="img/misCompras.png" alt="Imagen Mis compras">
+        <div class="imagen-contenedor">
+            <img class='imgMisCompras' src="img/misCompras.png" alt="Imagen Mis compras">
+        </div>
+        <div class="imagen-texto">
+            <p>Mis compras</p>
+        </div>
       </div>
       <br>
-      <p>Mis compras</p>
     </a>
   </li>
 </ul>
-
 EOS;
 
 require __DIR__.'/includes/plantillas/plantilla.php';
