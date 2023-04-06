@@ -6,11 +6,14 @@ $contenidoPrincipal = <<<EOS
 EOS; 
 
 if (isset($_SESSION['admin']) && $_SESSION['admin']) {
+	$id=$_GET ["id"];
 	$contenidoPrincipal .= <<<EOS
 			<ul class='botones'>
 				<li>
 					<form action='editarProd.php'>
+						<input type="hidden" name="id" value="$id">
 						<button type="submit">Editar Producto</button>
+						
 					</form>
 				</li>
 			</ul>
