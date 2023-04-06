@@ -26,7 +26,7 @@ class Tienda {
             $html .= <<<EOS
 					<li class="producto" data-precio='$precio'>
 						<a href='$link'>
-						<div id="producto-imagen">
+						<div class="producto-imagen">
 						<img class='imgProducto' src='$src' alt='$alt'>
 						</div>
 						<br>
