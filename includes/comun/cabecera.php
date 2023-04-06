@@ -8,7 +8,6 @@
 		<a href="index.php"><h1 class="titulo">LA QUINTA CAJA</h1></a>
 		<a href="faqs.php"><img class="ayuda" src="img/ayuda.jpg" alt="Imagen FAQs"></a>
 		<a href="carrito.php"><img class="carrito" src="img/carrito.jpg" alt="Imagen Carrito"></a>
-		<a href="miCuenta.php"><img class="cuenta" src="img/cuenta.jpg" alt="Imagen Cuenta"></a>
 		
 
 	<?php
@@ -16,6 +15,7 @@
 			echo "<a href='login.php'><img class='iniciar' src='img/login.jpg' alt='Imagen Iniciar'></a>";
 		}	
 		else{
+			echo "<a href='miCuenta.php'><img class='cuenta' src='img/cuenta.jpg' alt='Imagen Cuenta'></a>";
 			echo "<a href='logout.php'><img class='iniciar' src='img/logout.jpg' alt='Imagen Cerrar'></a>";
 		}
 	?>
