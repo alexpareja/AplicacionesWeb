@@ -143,17 +143,15 @@ class FormularioAnadirCarrito extends Formulario
                 $id = $datos['id'];
                 $name = $datos['name'];
                 $price = $datos['price'];
-                $size = $datos['size'];
-                
+
                 // Comprueba si el producto no está en la lista de deseos y tiene sesión iniciada
                 if(isset($_SESSION['login'])) {
-                     if (!isset($_SESSION['wishlist'][$id][$size])) {
+                     if (!isset($_SESSION['wishlist'][$id])) {
                         // Añade el producto a la lista de deseos
-                        $_SESSION['wishlist'][$id][$size] = array(
+                        $_SESSION['wishlist'][$id] = array(
                             'id' => $id,
                             'name' => $name,
                             'price' => $price,
-                            'size' => $size,
                         );
                     } else {
                         $this->errores['enLista'] = "Este producto ya está en favoritos";

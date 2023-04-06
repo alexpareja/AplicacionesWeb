@@ -4,9 +4,8 @@ require_once __DIR__.'/includes/configuracion.php';
 if (isset($_POST['remove'])) {
     $product_data = explode('|', $_POST['remove']);
     $product_id = $product_data[0];
-    $product_size = $product_data[1];
-    if (isset($_SESSION['wishlist'][$product_id][$product_size])) {
-        unset($_SESSION['wishlist'][$product_id][$product_size]);
+    if (isset($_SESSION['wishlist'][$product_id])) {
+        unset($_SESSION['wishlist'][$product_id]);
     }
 }
 
@@ -25,26 +24,23 @@ EOS;
 
 if (isset($_SESSION['wishlist'])) {
     foreach ($_SESSION['wishlist'] as $id => &$producto) {
-        foreach ($producto as $size => &$item) {
-            if (is_array($item)) {
-                $src = 'img/producto_' . $item['id'] . '.png';
-                $alt = 'Imagen de Producto ' . $item['id'];
-                $nombre = $item['name'];
-                $precio = $item['price'];
-                $talla = $item['size'];
-                $contenidoPrincipal .= <<<EOS
-                    <li>
-                        
-                        <img class="imgProducto" src='$src' alt='$alt'>
-                        <br>
-                        $nombre - Talla: $talla - $precio €
-                        <form method="post">
-                            <button type="submit" name="remove" value="$id|$size">Eliminar</button>
-                        </form>
-                        
-                    </li>
-                EOS;
-            }
+        if (is_array($producto)) {
+            $src = 'img/producto_' . $producto['id'] . '.png';
+            $alt = 'Imagen de Producto ' . $producto['id'];
+            $nombre = $producto['name'];
+            $precio = $producto['price'];
+            $contenidoPrincipal .= <<<EOS
+                <li>
+                    
+                    <img class="imgProducto" src='$src' alt='$alt'>
+                    <br>
+                    $nombre - $precio €
+                    <form method="post">
+                        <button type="submit" name="remove" value="$id">Eliminar</button>
+                    </form>
+                    
+                </li>
+            EOS;
         }
     }
 } else {
