@@ -25,20 +25,24 @@ EOS;
 if (isset($_SESSION['wishlist'])) {
     foreach ($_SESSION['wishlist'] as $id => &$producto) {
         if (is_array($producto)) {
+            $link = 'mostrarProducto.php?id='.$producto['id'];
             $src = 'img/producto_' . $producto['id'] . '.png';
             $alt = 'Imagen de Producto ' . $producto['id'];
             $nombre = $producto['name'];
             $precio = $producto['price'];
             $contenidoPrincipal .= <<<EOS
                 <li>
-                    
-                    <img class="imgProducto" src='$src' alt='$alt'>
+                    <div id="producto-imagen">
+                    <img class='imgProducto' src='$src' alt='$alt'>
+                    </div>
                     <br>
-                    $nombre - $precio €
+                    $nombre <span class='precio'> $precio € </span>
                     <form method="post">
                         <button type="submit" name="remove" value="$id">Eliminar</button>
-                    </form>
-                    
+                    </form> 
+                    <form method="post" action='$link'>
+                        <button type="submit" name="comprar">Comprar</button>
+                    </form> 
                 </li>
             EOS;
         }
