@@ -26,7 +26,7 @@ class BlogDAO
             return $blog;
             }
         } else {
-            error_log("Error BD ({$conn->errno}): {$conn->error}");
+            error_log("Error BD ({$this->conn->errno}): {$this->conn->error}");
         }
         return false;
     }
@@ -46,7 +46,7 @@ class BlogDAO
             return $blog;
             }
         } else {
-            error_log("Error BD ({$conn->errno}): {$conn->error}");
+            error_log("Error BD ({$this->conn->errno}): {$this->conn->error}");
         }
         return false;
     }
@@ -104,7 +104,7 @@ class BlogDAO
     
         $query = sprintf("DELETE FROM productos WHERE id =%d",$idProducto);
         if ( ! $this->conn->query($query) ) {
-            error_log("Error BD ({$conn->errno}): {$conn->error}");
+            error_log("Error BD ({$this->conn->errno}): {$this->conn->error}");
             return false;
         }
         return true;

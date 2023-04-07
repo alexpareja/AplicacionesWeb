@@ -4,26 +4,24 @@ include_once ("includes/configuracion.php");
 $contenidoPrincipal = <<<EOS
 <div id="producto">
 EOS; 
-
-if (isset($_SESSION['admin']) && $_SESSION['admin']) {
-	$id=$_GET ["id"];
-	$contenidoPrincipal .= <<<EOS
-			<ul class='botones'>
-				<li>
-					<form action='editarProd.php'>
-						<input type="hidden" name="id" value="$id">
-						<button type="submit">Editar Producto</button>
-						
-					</form>
-				</li>
-			</ul>
-	EOS;} 
-
 if(isset($_GET['id']) && !empty($_GET['id'])) {
 $id=$_GET ["id"];
 $producto=es\ucm\fdi\aw\Producto::buscaPorId($id);  
 if($producto)
 {
+  if (isset($_SESSION['admin']) && $_SESSION['admin']) {
+    $id=$_GET ["id"];
+    $contenidoPrincipal .= <<<EOS
+        <ul class='botones'>
+          <li>
+            <form action='editarProd.php'>
+              <input type="hidden" name="id" value="$id">
+              <button type="submit">Editar Producto</button>
+              
+            </form>
+          </li>
+        </ul>
+    EOS;} 
 $imagenProducto = "img/producto_" . $producto->getId() . ".png";
 $nombre=$producto->getNombre();
 $tituloPagina = $nombre;
