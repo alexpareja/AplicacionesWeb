@@ -3,9 +3,8 @@
 require_once __DIR__.'/includes/configuracion.php';
 
 $tituloPagina = 'La Quinta Caja';
-$contenidoPrincipal = ''; 
 
-$contenidoPrincipal .= <<<EOS
+$contenidoPrincipal = <<<EOS
 <div id="inicio">
 
 EOS;
@@ -29,7 +28,7 @@ EOS;
 } 
 
 $contenidoPrincipal .= <<<EOS
-<a href="tienda.php">
+	<a href="tienda.php">
     	<img src="img/caja-especial.jpg" alt="Imagen de la Caja especial" class="caja2">
     </a>
 	
