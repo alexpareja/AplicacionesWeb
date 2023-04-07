@@ -797,7 +797,7 @@ display:inline-block;
 
 .redSocial a{
   display: block;
-  text-align: center;
+  margin-top: 1rem;
 }
 
 .grupo1 .boxRedes .redSocial a:hover {
@@ -836,10 +836,14 @@ display:inline-block;
     width: 15rem;
     margin-top: 1rem;
   }
-  .twitter{
+  .redSocial{
+    display: flex;
+    justify-content: center;
+    margin-top: 0;
     margin-bottom: 1rem;
   }
 }
+
 
 
 
