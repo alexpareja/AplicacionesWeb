@@ -70,9 +70,9 @@ class ProductoDAO
     }
 
     //crea un nuevo producto, con stock 0 
-    public function crea($nombre, $descripcion, $precio, $xs, $s, $m, $l, $xl)
+    public function crea($id, $nombre, $descripcion, $precio, $xs, $s, $m, $l, $xl)
     {
-        $prod = new Producto($nuevaId=null,$nombre,$descripcion,$precio,$xs,$s,$m,$l,$xl);
+        $prod = new Producto($id,$nombre,$descripcion,$precio,$xs,$s,$m,$l,$xl);
         return self::guarda($prod);
     }
 
@@ -133,14 +133,43 @@ class ProductoDAO
         
         return true;
     }
+	
+	//actualiza el producto
+    public function actualiza($producto)
+    {
+		$idProducto = $producto->getId();
+        if (!$idProducto) {
+            return false;
+        } 
+
+		$query=sprintf("UPDATE productos SET nombre = '%s', descripcion = '%s', precio = '%f', stockXS = '%d', stockS = '%d', stockM = '%d', stockL = '%d',stockXL = '%d' where id = '%d'"
+            , $this->conn->real_escape_string($producto->getNombre())
+            , $this->conn->real_escape_string($producto->getDescripcion())
+            , $this->conn->real_escape_string($producto->getPrecio())
+            , $producto->getStockXS()
+            , $producto->getStockS()
+            , $producto->getStockM()
+            , $producto->getStockL()
+            , $producto->getStockXL()
+			, $idProducto
+        );
+		
+        if ( ! $this->conn->query($query) ) {
+            error_log("Error BD ({$conn->errno}): {$conn->error}");
+            return false;
+        }
+        
+        return true;
+    }
     
     //guarda el producto en la bbdd. Si existe lo actualiza y si no lo crea
     public function guarda($producto)
     {
-        if ($producto->getId() !== null) {
-            //return self::actualiza($producto); 
-        }
-        return self::inserta($producto);
+        if ($producto->getId() != null) {
+            return self::actualiza($producto); 
+        }else{
+			return self::inserta($producto);
+		}
     }
 }
 ?>

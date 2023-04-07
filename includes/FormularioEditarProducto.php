@@ -7,7 +7,7 @@ class FormularioEditarProducto extends Formulario
 	 private $producto;
 
     public function __construct() {
-        parent::__construct('formEditarProd', array('urlRedireccion' => 'mostrarProducto.php', 'enctype' => 'multipart/form-data'));
+        parent::__construct('formEditarProd', array('urlRedireccion' => 'tienda.php', 'enctype' => 'multipart/form-data'));
     }
 	
 	 public function setProducto($producto) {
@@ -29,6 +29,7 @@ class FormularioEditarProducto extends Formulario
 		<div id="product-form">
 			<fieldset>
 				<legend>Editar Producto</legend>
+				<input type="hidden" name="id" value="{$this->producto->getId()}">
 				<div>
 					<p><label for="nombre">Nombre:</label></p>
 					<p><input id="nombre" type="text" name="nombre" value="{$this->producto->getNombre()}"></p>
@@ -41,7 +42,7 @@ class FormularioEditarProducto extends Formulario
 				</div>
 				<div>
 					<p><label for="precio">Precio:</label></p>
-					<p><input id="precio" type="number" step="0.01" min="0" value="{$this->producto->getPrecio()}"></p>
+					<p><input id="precio" type="number" step="0.01" min="0" name="precio" value="{$this->producto->getPrecio()}"></p>
 					{$erroresCampos['precio']}
 				</div>
 				<div>
@@ -106,7 +107,7 @@ class FormularioEditarProducto extends Formulario
         $descripcion = filter_var($descripcion, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 		
 		$precio= $datos['precio'];
-		
+		$id = $datos['id'];
 		$xs= $datos['XS'];
 		$s= $datos['S'];
 		$m= $datos['M'];
@@ -127,9 +128,9 @@ class FormularioEditarProducto extends Formulario
 			$rutaArchivo = $imagen['tmp_name'];
 			
 			if($tipoArchivo == 'image/jpeg' || $tipoArchivo == 'image/png') {
-				$producto = Producto::crea($nombre, $descripcion, $precio, $xs, $s, $m, $l, $xl);
+				$producto = Producto::crea($id, $nombre, $descripcion, $precio, $xs, $s, $m, $l, $xl);
 	
-				$nombreImagen = 'producto_'.$producto->getID().'.png'; // Nombre de la imagen que se guardará
+				$nombreImagen = 'producto_'.$id.'.png'; // Nombre de la imagen que se guardará
 				$ruta = 'img/'.$nombreImagen; // Ruta donde se guardará la imagen
 
 				move_uploaded_file($rutaArchivo, $ruta);
