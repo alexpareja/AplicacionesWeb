@@ -38,6 +38,7 @@ main article {
   text-align: justify;
   font-family: Tahoma;
   margin-left: 50px;
+  margin-bottom: 15px;
   color: white;
 }
 
@@ -110,10 +111,6 @@ main article {
 
 .imagen-contenedor:hover img {
   transform: translate(-50%, -50%) scale(1.05);
-}
-
-.imagen-texto {
-  text-align: center;
 }
 
 /*Hoja de estilo miPerfil*/

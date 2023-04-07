@@ -20,9 +20,6 @@ $contenidoPrincipal = <<<EOS
         <div class="imagen-contenedor">
             <img class='imgListaDeseos' src="img/listadeseos.jpg" alt="Imagen Favoritos">
         </div>
-        <div class="imagen-texto">
-            <p>Mis favoritos</p>
-        </div>
       </div>
     </a>
   </li>
@@ -31,10 +28,7 @@ $contenidoPrincipal = <<<EOS
       <div class="imagen">
         <div class="imagen-contenedor">
             <img class='imgMiPerfil' src="img/miPerfil.jpg" alt="Imagen Mi perfil">
-        </div>
-        <div class="imagen-texto">
-            <p>Mi perfil</p>
-        </div>
+        </div>>
       </div>
     </a>
   </li>
@@ -43,9 +37,6 @@ $contenidoPrincipal = <<<EOS
       <div class="imagen">
         <div class="imagen-contenedor">
             <img class='imgMisCompras' src="img/misCompras.png" alt="Imagen Mis compras">
-        </div>
-        <div class="imagen-texto">
-            <p>Mis compras</p>
         </div>
       </div>
       <br>
