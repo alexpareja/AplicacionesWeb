@@ -43,19 +43,20 @@ main article {
 }
 
 .listaMiCuenta {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -40%);
+  max-width: 1200px; 
+  margin: 0 auto;
   display: flex;
+  flex-wrap: wrap; 
   justify-content: center;
-  z-index: 1;
+  align-items: center;
 }
 
-.listaMiCuenta li{
-  font-size:20px;
-  display: flex;
-  padding:20px;
+.listaMiCuenta li {
+  flex-basis: 33%; 
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+  list-style: none;
 }
 
 .listaMiCuenta li a {
@@ -78,7 +79,7 @@ main article {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #ffffff;
+  background-color: transparent;
   margin-bottom: 20px;
   overflow: hidden;
 }
@@ -88,7 +89,6 @@ main article {
 }
 
 .imagen-contenedor {
-  display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
@@ -111,6 +111,32 @@ main article {
 
 .imagen-contenedor:hover img {
   transform: translate(-50%, -50%) scale(1.05);
+}
+
+#contacto {
+  clear: both;
+  margin-top: 100px;
+  width: 100%;
+  height: 100px;
+}
+
+#contacto h2 {
+  font-size: 30px;
+  line-height: 0.05;
+  margin-left: 50px;
+  color: black;
+  font-family: Verdana;
+  font-weight: bold;
+  font-style: italic;
+}
+
+#contacto p {
+  font-size: 20px;
+  text-align: justify;
+  font-family: Tahoma;
+  margin-left: 50px;
+  margin-bottom: 15px;
+  color: black;
 }
 
 /*Hoja de estilo miPerfil*/

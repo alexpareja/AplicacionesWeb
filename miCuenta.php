@@ -39,10 +39,19 @@ $contenidoPrincipal = <<<EOS
             <img class='imgMisCompras' src="img/misCompras.png" alt="Imagen Mis compras">
         </div>
       </div>
-      <br>
     </a>
   </li>
 </ul>
+
+<div id="contacto">
+    <p>¿Tienes algún problema?</p>
+    <h2>Contacta con nosotros</h2>
+    <a href="contacto.php">
+    <div class="imagen-contacto">
+        <img class='imgContacto' src="img/contacto.png" alt="Imagen Contacto">
+    </div>
+    </a>
+</div>
 EOS;
 
 require __DIR__.'/includes/plantillas/plantilla.php';

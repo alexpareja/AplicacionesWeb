@@ -8,7 +8,12 @@ class FormularioAnadirCarrito extends Formulario
     private $producto;
 
     public function __construct() {
-        parent::__construct('formCarrito', ['urlRedireccion' => 'carrito.php']);
+        if (isset($_POST["accion"]) && $_POST["accion"] == "add") {
+            $url = "carrito.php";
+        } else {
+            $url = "listadeseos.php";
+        }
+        parent::__construct('formCarrito', ['urlRedireccion' => $url]);
     }
     
     public function setProducto($producto) {
