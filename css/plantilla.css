@@ -1,10 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
 main {
-  width: 90%;
+  height: 90%;
   padding: 7rem 0;
 }
 
 main article {
-  min-height: 1000px;
+  min-height: 100vh;
 }
 
 /*Hoja de estilo miCuenta*/
@@ -643,7 +645,7 @@ display:inline-block;
 .letras{
   letter-spacing: 7px;
   text-decoration: none;
-  font-family: helvetica;
+  font-family: 'Open Sans', sans-serif;
   font-weight: bold;
   font-size: 1.2em;
   color: #202020;
@@ -654,7 +656,7 @@ display:inline-block;
 }
 
 .contenedor-flex ul{
-  font-family: helvetica;
+  font-family: 'Open Sans', sans-serif;
   font-weight: bold;
   font-size: 13px;
   letter-spacing: 1px;
@@ -730,47 +732,119 @@ display:inline-block;
 
 
 /*pie*/
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+}
 
 #pie {
-  border-style: solid;
-  border-color:#800080;
-  background-color: #f2f2f2;
-  margin-top:10px;
-  
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 75px;
-  clear: both;
+  width: 100%;
+  background-color: #80008041;
 }
 
-#pie .horizontalpie {
-  list-style: none; /* Quita el estilo de viñeta por defecto */
-  padding: 0; /* Quita el relleno por defecto de la lista */
-  display: flex;
-  margin: 0;
+.grupo1 {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 0;
 }
 
-#pie .horizontalpie li {
-  margin: 30px;
-  display: inline-block; /* Hace que cada elemento de la lista esté en línea */
+.boxLogo, .boxPaginas, .boxRedes{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  text-align: center;
 }
 
-#pie .horizontalpie li a {
-  font-family: Tahoma;
+.logopie {
+  margin-top: 3.5rem;
+  text-align: center;
+  width: 15rem;
+}
+
+.instagram, .twitter{
+  width: 50px;
+  height: 50px;
+  margin-top: 1rem;
+}
+
+.boxPaginas {
+  text-align: center;
+  font-weight: bold;
   font-size: 13px;
-  text-decoration: none; /* Quita el subrayado del enlace */
-  padding: 10px; /* Agrega un relleno alrededor del enlace para separarlos */
-  color: #333; /* Cambia el color del texto del enlace */
+  letter-spacing: 1px;
+  list-style: none;
+} 
+
+.boxPaginas li{
+  display: block;
+  padding: 0.5rem;
 }
 
-#pie .referencia:hover {
-  text-decoration: underline;
+.boxPaginas li a {
+  color: #202020;
+  text-decoration: none;
 }
 
-::-webkit-scrollbar {
-display: none;
+.boxPaginas li a:hover{
+  color: #800080;
 }
+
+.boxRedes h2 {
+  margin-top: 0.5rem;
+  color: #202020;
+  font-size: 13px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.redSocial a{
+  display: block;
+  text-align: center;
+}
+
+.grupo1 .boxRedes .redSocial a:hover {
+  color: #800080;
+}
+
+.grupo2 {
+  color: hsl(0, 50%, 94%);
+  background-color: #572364;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+.grupo2 small {
+  font-size: 15px;
+}
+
+@media only screen and (max-width: 740px){
+  .logopie {
+    margin-top: 3.5rem;
+    width: 10rem;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media only screen and (max-width: 635px){
+  .grupo1 {
+    width: 100%;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .boxLogo{
+    text-align: center;
+  }
+  .logopie{
+    width: 15rem;
+    margin-top: 1rem;
+  }
+  .twitter{
+    margin-bottom: 1rem;
+  }
+}
+
+
 
 
 /*mostrar producto*/
@@ -867,3 +941,6 @@ input.quantity {
     text-align: center;
   }
 
+::-webkit-scrollbar {
+  display: none;
+}
