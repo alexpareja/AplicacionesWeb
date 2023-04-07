@@ -1,3 +1,8 @@
+main {
+  width: 90%;
+  padding: 7rem 0;
+}
+
 main article {
   min-height: 1000px;
 }
@@ -268,7 +273,7 @@ main article {
   margin-right: 10px;
 }
 
-/*Hoja de estilo Index*/
+/*Hoja de estilo Inicio*/
 #propuesta-imagen {
   display: flex;
   align-items: center;
@@ -610,56 +615,117 @@ display:inline-block;
 }
 
 /*Cabecera*/
+*{margin:0;}
 
-div#cabecera {
-	height: 100px;
-	text-align: center;
+#cabecera {
+  background: white;
+  padding: 0.5rem 0;
+  box-shadow: 0 .5rem 1rem #f3eeee;
+
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
 }
 
-div#cabecera .contenedor a {
-	text-decoration: none;
-	color: black;
+.logo{
+  width: 20px;
+  height: 20px;
 }
 
-div#cabecera .contenedor {
-	display: flex; //imagen y titulo se alinean y mueven juntos
-	align-items: center; //centrado verticalmente
-	flex-direction: column;
-	justify-content: center; //centrado horizontalmente
-	height: 100vh; //altura del contenedor como el 100% de la ventana
+.contenedor-flex{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
-div#cabecera .logo {
-	margin-top: 20px;
-	width: 30px;
-	height: 30px;
-	margin-left: 30px;
+.letras{
+  letter-spacing: 7px;
+  text-decoration: none;
+  font-family: helvetica;
+  font-weight: bold;
+  font-size: 1.2em;
+  color: #202020;
 }
 
-div#cabecera .titulo {
-	font-family: Monaco;
-	font-size: 20px;
-	text-align: center;
-	margin-top: 20px;
-	margin-right: 30px;
+.letras:hover{
+  color: #800080;
 }
 
-div#cabecera .tienda, .blog, .nosotros {
-	font-family: Tahoma;
-	font-size: 13px;
-	margin-top: 25px;
-	margin-right: 15px;
+.contenedor-flex ul{
+  font-family: helvetica;
+  font-weight: bold;
+  font-size: 13px;
+  letter-spacing: 1px;
+  margin:0;
+  padding: 0;
+  list-style: none;
 }
 
-div#cabecera .tienda:hover, .blog:hover, .nosotros:hover {
-  text-decoration: underline;
+.contenedor-flex ul li{
+  display: inline-block;
 }
 
-div#cabecera .ayuda, .carrito, .cuenta, .iniciar {
-	margin-top: 10px;
-	margin-right: 5px;
-	width: 50px;
-	height: 35.72px;
+.contenedor-flex ul li a{
+  color: hsl(0, 5%, 19%);
+  text-decoration: none;
+  display: block;
+  padding: 0.5rem 1rem;
+}
+
+.contenedor-flex ul li a:hover{
+  color: #800080;
+}
+
+.ayuda, .carrito, .cuenta, .menu, .iniciar {
+  width: 25px;
+  height: 25px;
+}
+
+.menu{display:none;}
+#menu-icono{display:none;}
+
+
+@media only screen and (max-width: 740px){
+  .contenedor-flex ul li a {
+    padding: 0.5rem 0.5rem;
+  }
+
+  .logo{display:none;}
+}
+
+@media only screen and (max-width: 635px){
+  .menu {
+    display: block;
+    margin: 0.5rem;
+  }
+
+  .menu:hover{
+    cursor: pointer;
+  }
+
+  .paginas{
+    position: absolute;
+    top: 100%; left: 0; right: 0;
+    background: #80008041;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+
+  #menu-icono:checked ~ .paginas{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+
+  .menu{
+    top:0; left:0; right:0;
+  }
+
+  .paginas ul li{
+    margin: 0.5rem;
+    padding: 0.5rem;
+    background: #f3eeee;
+    display: block;
+  }
 }
 
 
