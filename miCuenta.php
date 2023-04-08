@@ -52,7 +52,8 @@ $contenidoPrincipal = <<<EOS
   <li>
     <a href="miPerfil.php">
         <div class="imagen-contenedor">
-            <img class='imgMiPerfil' src="img/miPerfil.jpg" alt="Imagen Mi perfil">
+            <img class='imgMiPerfil' src="img/suscripcion.png" alt="Imagen Mi perfil">
+            <p>Suscripción</p>
         </div>
     </a>
   </li>

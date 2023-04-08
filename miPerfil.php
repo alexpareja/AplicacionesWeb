@@ -12,15 +12,28 @@ $contenidoPrincipal = '';
     $contenidoPrincipal = <<<EOS
         <div id="cabecera-perfil">
             <h2>Mi perfil</h2>
+            <br>
             <p>Aquí puedes encontrar tus datos personales</p>
-            <br>
         </div>
-        <div id="info-perfil">
-            <h3>Información personal</h3>
-            <br>
-            <p class ="negrita">$nombre $apellido1 $apellido2</p>
-            <p>$email</p>
-            <p>$direccion</p>
+        <div class="perfil-contenedor">
+            <div id="info-perfil">
+                <h3>Información personal</h3>
+                <br>
+                <p class ="negrita">Nombre: $nombre</p>
+                <p>Apellidos: $apellido1 $apellido2</p>
+                <p>Correo electrónico: $email</p>
+                <form action='cambiarContraseña.php'>
+                    <button type="submit">Cambiar constraseña</button>
+                </form>
+            </div>
+            <div id="info-dir">
+                <h3>Dirección</h3>
+                <br>
+                <p>$direccion</p>
+                <form action='cambiarDireccion.php'>
+                    <button type="submit">Cambiar dirección</button>
+                </form>
+            </div>
         </div>
 EOS;
 
