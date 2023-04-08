@@ -8,7 +8,7 @@ main article{
 
 /*Hoja de estilo formulario contacto*/
 #contacto-form {
-  margin: 0 auto;
+  margin: 50px auto 0;
   max-width: 850px;
   background-color: #fff;
   padding: 20px;
@@ -34,6 +34,7 @@ main article{
   display: block;
   font-size: 1.2em;
   font-weight: bold;
+  margin-top: 10px;
   margin-bottom: 10px;
 }
 
@@ -56,9 +57,18 @@ main article{
 }
 
 #contacto-form input[type="text"],
-#contacto-form input[type="email"],
-textarea {
-  width: 95%;
+#contacto-form input[type="email"] {
+  width: 97%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  resize: vertical;
+}
+
+#contacto-form textarea {
+  width: 97%;
+  height: 100px;
   padding: 10px;
   margin-bottom: 20px;
   border-radius: 5px;
@@ -69,7 +79,8 @@ textarea {
 #contacto-form button[type="submit"] {
   background-color: #800080;
   color: white;
-  padding: 7px 7px;
+  width: 100%;
+  padding: 15px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -81,9 +92,21 @@ textarea {
   background-color: #572364;
 }
 
+#contacto-form label {
+  cursor: pointer;
+}
+
+#contacto-form input[type="radio"]:checked + label {
+  color: purple;
+}
+
+#contacto-form:hover input[type=radio]:not(:checked) + i{
+  background: #572364;
+}
+
 /*Hoja de estilo formulario login y registro*/
 #login-registro-form {
-  margin: 0 auto;
+  margin: 50px auto 0;
   max-width: 500px;
   background-color: #fff;
   padding: 20px;
@@ -156,18 +179,6 @@ textarea {
     border-bottom: 1px solid #000;
 }
 
-#login-registro-form .inputbox input {
-    width: 98%;
-    height: 40px;
-    background: transparent;
-    border: none;
-    outline: none;
-    font-size: 1em;
-    padding:0 5px 0 5px;
-    color: #000;
-    border-bottom: 1px solid #000;
-}
-
 #login-registro-form input[type="checkbox"] {
   display: inline;
   margin-right: 5px;
@@ -218,7 +229,7 @@ textarea {
 
 /*Hoja de estilo formulario nuevo producto*/
 #newP-form {
-  margin: 0 auto;
+  margin: 50px auto 0;
   max-width: 500px;
   background-color: #fff;
   padding: 20px;
@@ -352,7 +363,7 @@ textarea {
 
 /*Hoja de estilo formulario editar producto*/
 #product-form {
-  margin: 0 auto;
+  margin: 50px auto 0;
   max-width: 500px;
   background-color: #fff;
   padding: 20px;
