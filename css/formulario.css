@@ -245,6 +245,8 @@ textarea {
   font-size: 1.2em;
   font-weight: bold;
   margin-bottom: 10px;
+  margin-top: 5px;
+
 }
 
 #newP-form input[type="text"], textarea{
@@ -252,8 +254,60 @@ textarea {
   padding: 10px;
   margin-bottom: 20px;
   border-radius: 5px;
-  border: 1px solid #ccc;
+  border: 1px solid #800080;
   resize: vertical;
+}
+
+
+.subir-archivo1{
+	display:flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 40px 20px;
+	border: 2px dashed #eee;
+	border-radius:5px;
+}
+
+.subir-archivo1 img {
+  max-width: 100%;
+  max-height: 100%;
+  margin-bottom: 10px;
+}
+
+.subir-archivo1 p {
+  margin: 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.subir-archivo2 {
+	position:relative;
+	background-color: #800080;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	margin-bottom: 10px;
+	font-size: 1.2em;
+}
+
+.upload_button{
+	display: block;
+	text-align: center;
+	padding:10px;
+	cursor: pointer;
+}
+
+.subir-archivo2:hover {
+	background-color:#572364;
+}
+
+
+
+#upload-input{
+	position: absolute;
+	inset: 0;
+	opacity: 0;
 }
 
 #newP-form button[type="submit"] {
@@ -274,8 +328,87 @@ textarea {
 #newP-form ul.botones li{
   font-size:20px;
   display:inline-block;
+  
 }
 
+#newP-form ul.tallas li{
+  font-size:14px;
+  display:inline-block;
+  margin-right: 5px;
+  margin-bottom: 10px;
+  padding: 5px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+}
+
+#newP-form input.quantity {
+  font-size: 14px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #800080;
+  margin-bottom: 10px;
+}
+
+/*Hoja de estilo formulario editar producto*/
+#product-form {
+  margin: 0 auto;
+  max-width: 500px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px #ccc;
+  font-family: Verdana;
+  font-size: 13px;
+}
+
+#product-form fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+#product-form legend {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+#product-form label {
+  display: block;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+#product-form input[type="text"], textarea{
+  width: 95%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  resize: vertical;
+}
+
+#product-form button[type="submit"] {
+  background-color: #800080;
+  color: white;
+  padding: 7px 7px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  font-size: 1.2em;
+}
+
+#product-form button[type="submit"]:hover {
+  background-color: #572364;
+}
+
+#product-form ul.botones li{
+  font-size:20px;
+  display:inline-block;
+}
 
 /*Cabecera*/
 

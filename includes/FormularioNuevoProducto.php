@@ -33,36 +33,48 @@ class FormularioNuevoProducto extends Formulario
 				</div>
 				<div>
 					<p><label for="precio">Precio:</label></p>
-					<p><input id="precio" type="number" step="0.01" min="0" name="precio"></p>
+					<p><input id="precio" class="quantity" type="number" step="0.01" min="0" name="precio"></p>
 					{$erroresCampos['precio']}
 				</div>
+				
 				<div>
-					<p><label for="imagen">Imagen:</label></p>
-					<p><input id="imagen" type="file" name="imagen"></p>
-					{$erroresCampos['imagen']}
+				<label for="imagen">Imagen:</label>
+					<div id='subir-archivo1' class='subir-archivo1'>
+						<p>Previsualización de la imagen</p>
+					</div>
+					
+					<div class="subir-archivo2" onchange="changeHandler(event);">
+						<label for="imagen" class="upload_button">
+						<p>Elige la imagen del producto</p>
+						<input id="upload-input" type="file" name="imagen">
+						</label>
+					</div>
+											{$erroresCampos['imagen']}
+
 				</div>
+				
 				<div>
 					<p><label>Tallas en Stock:</label></p>
-					<ul class="botones">
+					<ul class="tallas">
 						<li>
-							<label for="tallaXS">XS:</label>
-							<input id="tallaXS" type="number" min="0" max="500" value="0" name="XS">
+							<label class="talla" for="tallaXS">XS:</label>
+							<input id="tallaXS" class="quantity" type="number" min="0" max="500" value="0" name="XS">
 						</li>
 						<li>
-							<label for="tallaS">S:</label>
-							<input id="tallaS" type="number" min="0" max="500" value="0" name="S">
+							<label class="talla" for="tallaS">S:</label>
+							<input id="tallaS" class="quantity" type="number" min="0" max="500" value="0" name="S">
 						</li>
 						<li>
-							<label for="tallaM">M:</label>
-							<input id="tallaM" type="number" min="0" max="500" value="0" name="M">
+							<label class="talla" for="tallaM">M:</label>
+							<input id="tallaM" class="quantity" type="number" min="0" max="500" value="0" name="M">
 						</li>
 						<li>
-							<label for="tallaL">L:</label>
-							<input id="tallaL" type="number" min="0" max="500" value="0" name="L">
+							<label class="talla" for="tallaL">L:</label>
+							<input id="tallaL" class="quantity" type="number" min="0" max="500" value="0" name="L">
 						</li>
 						<li>
-							<label for="tallaXL">XL:</label>
-							<input id="tallaXL" type="number" min="0" max="500" value="0" name="XL">
+							<label class="talla" for="tallaXL">XL:</label>
+							<input id="tallaXL" class="quantity" type="number" min="0" max="500" value="0" name="XL">
 						</li>
 					</ul>
 				</div>
@@ -115,7 +127,7 @@ class FormularioNuevoProducto extends Formulario
 			$rutaArchivo = $imagen['tmp_name'];
 			
 			if($tipoArchivo == 'image/jpeg' || $tipoArchivo == 'image/png') {
-				$producto = Producto::crea($nombre, $descripcion, $precio, $xs, $s, $m, $l, $xl);
+				$producto = Producto::crea(null,$nombre, $descripcion, $precio, $xs, $s, $m, $l, $xl);
 	
 				$nombreImagen = 'producto_'.$producto->getID().'.png'; // Nombre de la imagen que se guardará
 				$ruta = 'img/'.$nombreImagen; // Ruta donde se guardará la imagen

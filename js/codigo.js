@@ -53,3 +53,24 @@ function filtrarProductos() {
     }
   }
 }
+
+//mostrar previsualizacion imagen del producto en los formularios
+	
+	function changeHandler(ev) {
+		var archivo = ev.target.files[0];
+		var subirArchivo1 = document.getElementById('subir-archivo1');
+		var reader = new FileReader();
+		reader.onload = function(event) {
+		var imagen = document.createElement('img');
+		imagen.src = event.target.result;
+		subirArchivo1.innerHTML = '';
+		subirArchivo1.appendChild(imagen);
+		var nombreArchivo = document.createElement('p');
+		nombreArchivo.innerHTML = archivo.name;
+		subirArchivo1.appendChild(nombreArchivo);
+		imagenPrevia = imagen;
+		}
+  reader.readAsDataURL(archivo);
+    }
+	
+	
