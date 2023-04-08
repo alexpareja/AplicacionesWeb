@@ -76,10 +76,18 @@ main article {
   border: 1px solid #800080;
   padding: 10px;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .imagen-contenedor:hover {
   border: 2px solid #572364;
+}
+
+.imagen-contenedor p {
+  margin-top: 5px;
+  text-align: center;
 }
 
 .imagen-contenedor img {

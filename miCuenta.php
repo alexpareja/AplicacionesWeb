@@ -18,24 +18,24 @@ $contenidoPrincipal = <<<EOS
     <a href="listadeseos.php">
         <div class="imagen-contenedor">
             <img class='imgListaDeseos' src="img/listadeseos.jpg" alt="Imagen Favoritos">
+            <p>Favoritos</p>
         </div>
-        <p>Favoritos</p>
     </a>
   </li>
   <li>
     <a href="miPerfil.php">
         <div class="imagen-contenedor">
             <img class='imgMiPerfil' src="img/miPerfil.jpg" alt="Imagen Mi perfil">
+            <p>Mi Perfil</p>
         </div>
-        <p>Mi Perfil</p>
     </a>
   </li>
   <li>
     <a href="misCompras.php">
         <div class="imagen-contenedor">
             <img class='imgMisCompras' src="img/misCompras.png" alt="Imagen Mis compras">
+            <p>Mis Compras</p>
         </div>
-        <p>Mis Compras</p>
     </a>
   </li>
 </ul>
@@ -45,8 +45,8 @@ $contenidoPrincipal = <<<EOS
     <a href="contacto.php">
         <div class="imagen-contenedor">
             <img class='imgContacto' src="img/contacto.png" alt="Imagen Contacto">
+            <p>Contacto</p>
         </div>
-        <p>Contacto</p>
     </a>
   </li>
   <li>
@@ -60,8 +60,8 @@ $contenidoPrincipal = <<<EOS
     <a href="logout.php">
         <div class="imagen-contenedor">
             <img class='imgLogout' src="img/logoutMiCuenta.jpg" alt="Imagen Logout">
-        </div>
-        <p>Cerrar Sesión</p>
+            <p>Cerrar Sesión</p>
+        </div>    
     </a>
   </li>
 </ul>
