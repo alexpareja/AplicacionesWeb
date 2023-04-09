@@ -122,52 +122,30 @@ main article{
   padding: 0;
 }
 
+#login-registro-form p {
+  margin-left: 5px;
+}
+
 #login-registro-form legend {
   font-size: 1.5em;
   font-weight: bold;
   margin-bottom: 20px;
 }
 
-#login-registro-form .inputbox{
-    position: relative;
-    margin: 30px 0;
-}
-
-#login-registro-form .inputbox label[for="nombreUsuario"],
-#login-registro-form .inputbox label[for="apellido1Usuario"],
-#login-registro-form .inputbox label[for="apellido2Usuario"],
-#login-registro-form .inputbox label[for="emailUsuario"],
-#login-registro-form .inputbox label[for="password"],
-#login-registro-form .inputbox label[for="password2"],
-#login-registro-form .inputbox label[for="direccionUsuario"] {
+.inputbox label {
   position: absolute;
-  top: 50%;
+  top:-5px;
   left: 5px;
-  transform: translateY(-50%);
   color: #000;
   font-size: 1em;
   pointer-events: none;
-  transition: .5s;
 }
 
-#login-registro-form input:focus ~ label[for="nombreUsuario"],
-#login-registro-form input:valid ~ label[for="nombreUsuario"],
-#login-registro-form input:focus ~ label[for="apellido1Usuario"],
-#login-registro-form input:valid ~ label[for="apellido1Usuario"],
-#login-registro-form input:focus ~ label[for="apellido2Usuario"],
-#login-registro-form input:valid ~ label[for="apellido2Usuario"],
-#login-registro-form input:focus ~ label[for="emailUsuario"],
-#login-registro-form input:valid ~ label[for="emailUsuario"], 
-#login-registro-form input:focus ~ label[for="password"],
-#login-registro-form input:valid ~ label[for="password"],
-#login-registro-form input:focus ~ label[for="password2"],
-#login-registro-form input:valid ~ label[for="password2"],
-#login-registro-form input:focus ~ label[for="direccionUsuario"],
-#login-registro-form input:valid ~ label[for="direccionUsuario"] {
-  top: -5px;
+.inputbox input:focus + label {
+  color: purple;
 }
 
-#login-registro-form .inputbox input {
+.inputbox input {
     width: 98%;
     height: 40px;
     background: transparent;
@@ -198,7 +176,7 @@ main article{
   position: relative;
 }
 
-#login-registro-form .inputbox #errorEmail, #errorPass, #errorNombre, #errorApellido, #errorPass, #errorPass2, #errorDir {
+.inputbox #errorEmail, #errorPass, #errorNombre, #errorApellido, #errorPass, #errorPass2, #errorDir {
   color: red;
 }
 

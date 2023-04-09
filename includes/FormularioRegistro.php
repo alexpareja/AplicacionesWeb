@@ -26,36 +26,36 @@ class FormularioRegistro extends Formulario
                 <legend>¿Nuevo cliente?</legend>
                 <p class="account">Crea tu cuenta aquí. ¿Ya tienes una cuenta? <a href="login.php">Inicia sesión</a></p>
                 <div class="inputbox">
-                    <input id="nombreUsuario" type="text" name="nombreUsuario" value="$nombreUsuario" required>
+                    <input id="nombreUsuario" type="text" name="nombreUsuario" value="$nombreUsuario" placeholder="Introduce tu nombre">
                     <label for="nombreUsuario">Nombre*</label>
                     <span id="errorNombre">{$erroresCampos['nombreUsuario']}</span>
                 </div>
                 <div class="inputbox">
-                    <input id="apellido1Usuario" type="text" name="apellido1Usuario" value="$apellido1Usuario" required>
+                    <input id="apellido1Usuario" type="text" name="apellido1Usuario" value="$apellido1Usuario" placeholder="Introduce tu primer apellido">
                     <label for="apellido1Usuario">Primer apellido*</label>
                     <span id="errorApellido">{$erroresCampos['apellido1Usuario']}</span>
                 </div>
                 <div class="inputbox">
-                    <input id="apellido2Usuario" type="text" name="apellido2Usuario" value="$apellido2Usuario">
+                    <input id="apellido2Usuario" type="text" name="apellido2Usuario" value="$apellido2Usuario" placeholder="Introduce tu segundo apellido">
                     <label for="apellido2Usuario">Segundo apellido</label>
                 </div>
                 <div class="inputbox">
-                    <input id="emailUsuario" type="email" name="emailUsuario" value="$emailUsuario" required>
+                    <input id="emailUsuario" type="email" name="emailUsuario" value="$emailUsuario" placeholder="Introduce tu correo electrónico">
                     <label for="emailUsuario">Correo electrónico*</label>
                     <span id="errorEmail">{$erroresCampos['emailUsuario']}</span>
                 </div>
                 <div class="inputbox">
-                    <input id="password" type="password" name="password" required>
+                    <input id="password" type="password" name="password" placeholder="Introduce tu contraseña">
                     <label for="password">Contraseña*</label>
                     <span id="errorPass">{$erroresCampos['password']}</span>
                 </div>
                 <div class="inputbox">      
-                    <input id="password2" type="password" name="password2" required>
+                    <input id="password2" type="password" name="password2" placeholder="Repite tu contraseña">
                     <label for="password2">Reintroduce la contraseña*</label>
                     <span id="errorPass2">{$erroresCampos['password2']}</span>
                 </div>
                 <div class="inputbox">
-                    <input id="direccionUsuario" type="text" name="direccionUsuario" value="$direccionUsuario" required>
+                    <input id="direccionUsuario" type="text" name="direccionUsuario" value="$direccionUsuario" placeholder="Introduce tu dirección">
                     <label for="direccionUsuario">Dirección*</label>
                     <span id="errorDir">{$erroresCampos['direccionUsuario']}</span>
                 </div>
