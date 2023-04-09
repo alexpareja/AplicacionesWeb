@@ -42,36 +42,49 @@ class FormularioEditarProducto extends Formulario
 				</div>
 				<div>
 					<p><label for="precio">Precio:</label></p>
-					<p><input id="precio" type="number" step="0.01" min="0" name="precio" value="{$this->producto->getPrecio()}"></p>
+					<p><input id="precio" class="quantity" type="number" step="0.01" min="0" name="precio" value="{$this->producto->getPrecio()}"></p>
 					{$erroresCampos['precio']}
 				</div>
+				
 				<div>
-					<p><label for="imagen">Imagen:</label></p>
-					<p><input id="imagen" type="file" name="imagen"></p>
+					<label for="imagen">Imagen:</label>
+					<div id='subir-archivo1' class='subir-archivo1'>
+						<img src='img/producto_{$this->producto->getId()}.png' alt='Producto {$this->producto->getId()}'>
+						<p>producto_{$this->producto->getId()}.png <p>
+					</div>
+					
+					<div class="subir-archivo2" onchange="changeHandler(event);">
+						<label for="imagen" class="upload_button">
+						<p>Elige la imagen del producto</p>
+						<input id="upload-input" type="file" name="imagen" value="img/producto_{$this->producto->getId()}.png">
+						</label>
+					</div>
 					{$erroresCampos['imagen']}
+
 				</div>
+				
 				<div>
 					<p><label>Tallas en Stock:</label></p>
-					<ul class="botones">
+					<ul class="tallas">
 						<li>
-							<label for="tallaXS">XS:</label>
-							<input id="tallaXS" type="number" min="0" max="500" name="XS" value="{$this->producto->getStockXS()}">
+							<label class="talla" for="tallaXS">XS:</label>
+							<input id="tallaXS" class="quantity" type="number" min="0" max="500" name="XS" value="{$this->producto->getStockXS()}">
 						</li>
 						<li>
-							<label for="tallaS">S:</label>
-							<input id="tallaS" type="number" min="0" max="500" name="S" value="{$this->producto->getStockS()}">
+							<label class="talla" for="tallaS">S:</label>
+							<input id="tallaS" class="quantity" type="number" min="0" max="500" name="S" value="{$this->producto->getStockS()}">
 						</li>
 						<li>
-							<label for="tallaM">M:</label>
-							<input id="tallaM" type="number" min="0" max="500" name="M" value="{$this->producto->getStockM()}">
+							<label class="talla" for="tallaM">M:</label>
+							<input id="tallaM" class="quantity" type="number" min="0" max="500" name="M" value="{$this->producto->getStockM()}">
 						</li>
 						<li>
-							<label for="tallaL">L:</label>
-							<input id="tallaL" type="number" min="0" max="500" name="L" value="{$this->producto->getStockL()}">
+							<label class="talla" for="tallaL">L:</label>
+							<input id="tallaL" class="quantity" type="number" min="0" max="500" name="L" value="{$this->producto->getStockL()}">
 						</li>
 						<li>
-							<label for="tallaXL">XL:</label>
-							<input id="tallaXL" type="number" min="0" max="500" name="XL" value="{$this->producto->getStockXL()}">
+							<label class="talla" for="tallaXL">XL:</label>
+							<input id="tallaXL" class="quantity" type="number" min="0" max="500" name="XL" value="{$this->producto->getStockXL()}">
 						</li>
 					</ul>
 				</div>
@@ -124,19 +137,20 @@ class FormularioEditarProducto extends Formulario
         }
 		
         if (count($this->errores) === 0) {
-			$tipoArchivo = $imagen['type'];
-			$rutaArchivo = $imagen['tmp_name'];
-			
-			if($tipoArchivo == 'image/jpeg' || $tipoArchivo == 'image/png') {
-				$producto = Producto::crea($id, $nombre, $descripcion, $precio, $xs, $s, $m, $l, $xl);
-	
-				$nombreImagen = 'producto_'.$id.'.png'; // Nombre de la imagen que se guardará
-				$ruta = 'img/'.$nombreImagen; // Ruta donde se guardará la imagen
-
+			if(isset($imagen['error']) && $imagen['error'] === UPLOAD_ERR_OK){
+				$tipoArchivo = $imagen['type'];
+				$rutaArchivo = $imagen['tmp_name'];				
+				if($tipoArchivo == 'image/jpeg' || $tipoArchivo == 'image/png') {
+					$producto = Producto::crea($id, $nombre, $descripcion, $precio, $xs, $s, $m, $l, $xl);
+					$nombreImagen = 'producto_'.$id.'.png'; // Nombre de la imagen que se guardará
+					$ruta = 'img/'.$nombreImagen; // Ruta donde se guardará la imagen
 				move_uploaded_file($rutaArchivo, $ruta);
-			} else {
+				} else {
 				$this->errores['imagen'] = 'El archivo introducido no es valido';		
-				}	
+				}				
+			}else{
+				$producto = Producto::crea($id, $nombre, $descripcion, $precio, $xs, $s, $m, $l, $xl);	
+			}			
         }
-    }
+	}
 }

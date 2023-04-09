@@ -27,7 +27,7 @@ class Tienda {
 					<li class="producto" data-precio='$precio'>
 						<a href='$link'>
 						<div class="producto-imagen">
-						<img class='imgProducto' src='$src' alt='$alt'>
+						<img class='imgProducto' id='imgProducto' src='$src' alt='$alt'>
 						</div>
 						<br>
 						$nombre <span class='precio'> $precio € </span>

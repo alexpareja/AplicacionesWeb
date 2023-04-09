@@ -49,7 +49,7 @@ class FormularioNuevoProducto extends Formulario
 						<input id="upload-input" type="file" name="imagen">
 						</label>
 					</div>
-											{$erroresCampos['imagen']}
+					{$erroresCampos['imagen']}
 
 				</div>
 				
