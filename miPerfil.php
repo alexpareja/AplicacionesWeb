@@ -22,20 +22,14 @@ $contenidoPrincipal = '';
                 <p class ="negrita">Nombre: $nombre</p>
                 <p>Apellidos: $apellido1 $apellido2</p>
                 <p>Correo electrónico: $email</p>
-                <form action='cambiarContraseña.php'>
-                    <button type="submit">Cambiar constraseña</button>
-                </form>
             </div>
             <div id="info-dir">
-                <h3>Dirección</h3>
+                <h3>Dirección de facturación</h3>
                 <br>
-                <p>$direccion</p>
-                <form action='cambiarDireccion.php'>
-                    <button type="submit">Cambiar dirección</button>
-                </form>
+                <p>Dirección: $direccion</p>
             </div>
         </div>
-EOS;
+    EOS;
 
 require __DIR__.'/includes/plantillas/plantilla.php';
 ?>
