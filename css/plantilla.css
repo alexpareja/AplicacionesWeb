@@ -164,7 +164,7 @@ main article {
 #info-perfil h3, #info-dir h3 {
   font-size: 1.2em;
   margin-bottom: 10px;
-  margin-left: 9px;
+  margin-left: 50px;
   color: #333;
 }
 
@@ -175,6 +175,7 @@ main article {
 #info-perfil p, #info-dir p {
   font-size: 1em;
   margin-bottom: 5px;
+  margin-left: 50px;
   color: #555;
 }
 
@@ -219,26 +220,70 @@ main article {
 }
 
 /*Hoja de estilo Detalles*/
-#detalles span.negrita {
-  font-weight: bold;
-}
-#detalles h2.centro {
-  color: #800080;
-  text-align: center;
-}
-
-#detalles p, ul {
-  font-family: Verdana;
-  font-size: 15px;
-}
-
-#detalles h2, h3{
-  font-family: Verdana;
+#detalles {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: "Verdana", sans-serif;
 }
 
 #detalles h1 {
-  font-family: Futura;
-  font-size: 35px;
+  font-size: 45px;
+  font-weight: bold;
+  color: #3c3c3c;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+#detalles h2 {
+  font-size: 30px;
+  font-weight: bold;
+  color: #800080;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+#detalles h3 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #3c3c3c;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#detalles p {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+#detalles ul {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+#detalles li:before {
+  content: "\2022";
+  color: #800080;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+#detalles .negrita {
+  font-weight: bold;
+}
+
+#detalles .centro {
+  text-align: center;
 }
 
 /*Hoja de estilo inicio*/
