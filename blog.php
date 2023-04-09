@@ -13,13 +13,8 @@ if (isset($_SESSION['admin']) && $_SESSION['admin']) {
 	$contenidoPrincipal .= <<<EOS
 		<ul class='botonesBlog'>
 			<li>
-				<form action='agregarEntrada.php'>
+				<form action='anadirEntrada.php'>
 					<button id="entAdd">Agregar entrada</button>
-				</form>
-			</li>
-			<li>
-				<form action='eliminarEntrada.php'>
-					<button id="entDel">Eliminar entrada</button>
 				</form>
 			</li>
 		</ul>

@@ -15,17 +15,18 @@ class Periodico {
                 <div id="blog">
             EOS;
         foreach($this->entradas as $ent){
-            $link = 'mostrarEntrada.php?id='.$ent->getId();
+            $link = 'entradaBlog.php?id='.$ent->getId();
             $titulo = $ent->getTitulo();
             $descripcion = $ent->getDescripcion();
-            $autor = $ent->getAutor();
+            $idAutor = $ent->getAutor();
+            $autor=Usuario::buscaPorId($idAutor)->getNombre();
 
             $html .= <<<EOS
                         <div id="rectangulo">
                             <a href='$link'>
                                 <p class="t1">$titulo</p>
                                 <p class="t2">$descripcion</p>
-                                <p class="t3">$autor</p>
+                                <p class="t3">Escrito por $autor</p>
                             </a>
                         </div>
                         <div id="etiqueta"></div>

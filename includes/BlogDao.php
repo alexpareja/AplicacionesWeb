@@ -62,8 +62,8 @@ class BlogDAO
             while($row=$rs->fetch_assoc())
             {
                 $id=$row['id'];
-                $blog[$id] = new Blog($fila['id'], $fila['titulo'], $fila['contenido'], $fila['descripcion'], 
-                $fila['autor']);
+                $blog[$id] = new Blog($row['id'], $row['titulo'], $row['contenido'], $row['descripcion'], 
+                $row['autor']);
             }
         }
         return $blog;
