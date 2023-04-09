@@ -17,7 +17,7 @@ class FormularioRegistro extends Formulario
 
         // Se generan los mensajes de error si existen.
         $htmlErroresGlobales = self::generaListaErroresGlobales($this->errores);
-        $erroresCampos = self::generaErroresCampos(['nombreUsuario', 'apellido1Usuario', 'emailUsuario', 'password', 'password2', 'direccionUsuario'], $this->errores, 'span', array('class' => 'error'));
+        $erroresCampos = self::generaErroresCampos(['nombreUsuario', 'apellido1Usuario', 'emailUsuario', 'password', 'password2', 'direccionUsuario', 'registro'], $this->errores, 'span', array('class' => 'error'));
 
         $html = <<<EOF
         $htmlErroresGlobales
@@ -63,6 +63,7 @@ class FormularioRegistro extends Formulario
                     <input type="checkbox" id="terms" name="terms" required>
                     <label for="terms" class="terminos">Acepto los <a href="terminosycondiciones.php">términos y condiciones</a>*</label>
                 </div>
+                <span id="errorRegistro">{$erroresCampos['registro']}</span>
                 <div>
                     <button type="submit" name="registro">Registrarse</button>
                 </div>
@@ -124,7 +125,7 @@ class FormularioRegistro extends Formulario
             $usuario = Usuario::buscaUsuarioMail($emailUsuario);
 	
             if ($usuario) {
-                $this->errores[] = "El usuario ya existe";
+                $this->errores['registro'] = "Ya exite un usuario con ese correo electrónico";
             } else {
                 $usuario = Usuario::crea($nombreUsuario, $password, $apellido1Usuario, $apellido2Usuario, $direccionUsuario, $emailUsuario);
                 $_SESSION['login'] = true;

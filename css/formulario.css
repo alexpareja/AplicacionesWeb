@@ -120,6 +120,7 @@ main article{
   border: none;
   margin: 0;
   padding: 0;
+  z-index: 2;
 }
 
 #login-registro-form p {
@@ -180,7 +181,7 @@ main article{
   color: red;
 }
 
-#login-registro-form #errorLogin {
+#login-registro-form #errorLogin, #errorRegistro {
   color: red;
 }
 
@@ -192,7 +193,6 @@ main article{
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  margin-bottom: 10px;
   font-size: 1.2em;
 }
 
@@ -433,6 +433,7 @@ main article{
   left: 0;
   top: 0;
   width: 100%;
+  z-index: 1;
 }
 
 .logo{
