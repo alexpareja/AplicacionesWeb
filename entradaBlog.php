@@ -16,6 +16,7 @@ if($blog)
         <ul class='botones'>
           <li>
             <form action='editarEntrada.php'>
+            <input type="hidden" name="id" value="$id">
               <button type="submit">Editar Entrada</button>
             </form>
           </li>

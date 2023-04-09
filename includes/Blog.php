@@ -47,6 +47,12 @@ class Blog
         return $BlogDAO->crea($titulo, $contenido, $descripcion, $autor);
     }
 
+    public static function edita($id,$titulo, $contenido, $descripcion)
+    {
+        $BlogDAO= new BlogDAO();
+        return $BlogDAO->edita($id,$titulo, $contenido, $descripcion);
+    }
+
     public function borra($entrada)
     {
         $BlogDAO= new BlogDAO();

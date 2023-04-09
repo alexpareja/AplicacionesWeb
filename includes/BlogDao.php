@@ -73,7 +73,34 @@ class BlogDAO
     public function crea($titulo, $contenido, $descripcion, $autor)
     {
         $blog = new Blog($nuevaId=null,$titulo,$contenido,$descripcion,$autor);
-        return self::guarda($blog);
+        return self::inserta($blog);
+    }
+
+    public function edita($id,$titulo, $contenido, $descripcion)
+    {
+        $blog = new Blog($nuevaId=null,$titulo,$contenido,$descripcion,$autor);
+        return self::actualiza($blog);
+    }
+
+    public function actualiza($blog)
+    {
+		$idBlog = $blog->getId();
+        if (!$idBlog) {
+            return false;
+        } 
+
+		$query=sprintf("UPDATE blog SET titulo = '%s', descripcion = '%s', contenido = '%s' where id = '%d'"
+            , $this->conn->real_escape_string($producto->getTitulo())
+            , $this->conn->real_escape_string($producto->getDescripcion())
+            , $this->conn->real_escape_string($producto->getContenido())
+        );
+		
+        if ( ! $this->conn->query($query) ) {
+            error_log("Error BD ({$this->conn->errno}): {$this->conn->error}");
+            return false;
+        }
+        
+        return true;
     }
 
     //inserta nuevo producto
@@ -108,15 +135,6 @@ class BlogDAO
             return false;
         }
         return true;
-    }
-    
-    //guarda la entrada en la bbdd. Si existe lo actualiza y si no lo crea
-    public function guarda($blog)
-    {
-        if ($blog->getId() !== null) {
-            //return self::actualiza($producto); 
-        }
-        return self::inserta($blog);
     }
 }
 ?>
