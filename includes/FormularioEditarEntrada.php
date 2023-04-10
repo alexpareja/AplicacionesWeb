@@ -59,10 +59,10 @@ class FormularioEditarEntrada extends Formulario
 				</div>
 				<div>
 					<ul class= "botones">
-						<li><button type="submit">Editar Entrada</button>
+						<li><button type="submit" name="accion" value="editar">Editar Entrada</button>
 						</li>
 						<li>
-						<button type="submit">Eliminar Entrada</button>
+						<button type="submit" name="accion" value="eliminar">Eliminar Entrada</button>
 						</li>
 						<li>
 						<button type="submit" formaction="blog.php">Volver al blog</button>
@@ -80,7 +80,7 @@ class FormularioEditarEntrada extends Formulario
 	{
 		
 		$this->errores = [];
-		
+		$id = $datos['id'];
 		$titulo = trim($datos['titulo'] ??   '' );
 		$titulo = filter_var($titulo, FILTER_SANITIZE_FULL_SPECIAL_CHARS);	
 
@@ -91,7 +91,7 @@ class FormularioEditarEntrada extends Formulario
 		$contenido = filter_var($contenido, FILTER_SANITIZE_FULL_SPECIAL_CHARS);	
 		
 		$imagen = $_FILES['imagen'];
-		
+		if (isset($_POST["accion"]) && $_POST["accion"] == "editar") {
 		if ( ! $titulo || empty($titulo)) {
 			$this->errores['titulo'] = 'Se debe especificar el titulo de la entrada.';
 		}
@@ -101,13 +101,13 @@ class FormularioEditarEntrada extends Formulario
 		if ( ! $contenido || empty($contenido)) {
 			$this->errores['contenido'] = 'Se debe especificar el contenido de la entrada.';
 		}
-		
+
 		if (count($this->errores) === 0) {
 			if(isset($imagen['error']) && $imagen['error'] === UPLOAD_ERR_OK){
 				$tipoArchivo = $imagen['type'];
 				$rutaArchivo = $imagen['tmp_name'];				
 				if($tipoArchivo == 'image/jpeg' || $tipoArchivo == 'image/png') {
-					$entrada = Blog::edita($id, $titulo, $descripcion, $contenido);
+					$entrada = Blog::edita($id, $titulo, $contenido, $descripcion);
 					$nombreImagen = 'blog_'.$id.'.png'; // Nombre de la imagen que se guardará
 					$ruta = 'img/'.$nombreImagen; // Ruta donde se guardará la imagen
 				move_uploaded_file($rutaArchivo, $ruta);
@@ -115,9 +115,13 @@ class FormularioEditarEntrada extends Formulario
 				$this->errores['imagen'] = 'El archivo introducido no es valido';		
 				}				
 			}else{
-				$entrada = Blog::edita($id, $titulo, $descripcion, $contenido);
+				$entrada = Blog::edita($id, $titulo, $contenido, $descripcion);
 			}			
 		}
 	}
+	elseif(isset($_POST["accion"]) && $_POST["accion"] == "eliminar") {
+		Blog::borra($id);
+	}
+}
 }
 ?>
