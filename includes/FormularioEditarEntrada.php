@@ -1,25 +1,25 @@
 <?php
 namespace es\ucm\fdi\aw;
-class FormularioEditarProducto extends Formulario
+class FormularioEditarEntrada extends Formulario
 {
 	 private $entrada;
 
-    public function __construct() {
-        parent::__construct('formEditarEntr', array('urlRedireccion' => 'blog.php', 'enctype' => 'multipart/form-data'));
-    }
+	public function __construct() {
+		parent::__construct('formEditarEntr', array('urlRedireccion' => 'blog.php', 'enctype' => 'multipart/form-data'));
+	}
 	
 	 public function setEntrada($entrada) {
-        $this->entrada=$entrada;
-    }
-    
-    protected function generaCamposFormulario(&$datos)
-    {
+		$this->entrada=$entrada;
+	}
+	
+	protected function generaCamposFormulario(&$datos)
+	{
 		$titulo = $datos['titulo'] ?? '';
 		
 		$htmlErroresGlobales = self::generaListaErroresGlobales($this->errores);
 		$erroresCampos = self::generaErroresCampos(['titulo', 'contenido','descripcion','imagen'], $this->errores, 'span', array('class' => 'error'));
 
-        // Se genera el HTML asociado a los campos del formulario y los mensajes de error.
+		// Se genera el HTML asociado a los campos del formulario y los mensajes de error.
 		$html=<<<EOF
 		$htmlErroresGlobales
 		<div id="product-form">
@@ -33,19 +33,19 @@ class FormularioEditarProducto extends Formulario
 				</div>
 				<div>
 				<p><label for="descripcion">Descripción:</label></p>
-	            <p><textarea id="descripcion" name="descripcion">{$this->entrada->getDescripcion()}</textarea></p>
+				<p><textarea id="descripcion" name="descripcion">{$this->entrada->getDescripcion()}</textarea></p>
 				{$erroresCampos['descripcion']}
 				</div>
-                <div>
-                <p><label for="contenido">Contenido:</label></p>
-                <p><textarea id="contenido" name="contenido">{$this->entrada->getContenido()}</textarea></p>
-                {$erroresCampos['contenido']}
-                </div>
+				<div>
+				<p><label for="contenido">Contenido:</label></p>
+				<p><textarea id="contenido" name="contenido">{$this->entrada->getContenido()}</textarea></p>
+				{$erroresCampos['contenido']}
+				</div>
 				<div>
 					<label for="imagen">Imagen:</label>
 					<div id='subir-archivo1' class='subir-archivo1'>
-						<img src='img/producto_{$this->entrada->getId()}.png' alt='Entrada {$this->entrada->getId()}'>
-						<p>producto_{$this->entrada->getId()}.png <p>
+						<img src='img/blog_{$this->entrada->getId()}.png' alt='Entrada {$this->entrada->getId()}'>
+						<p>blog_{$this->entrada->getId()}.png <p>
 					</div>
 					
 					<div class="subir-archivo2" onchange="changeHandler(event);">
@@ -72,37 +72,37 @@ class FormularioEditarProducto extends Formulario
 				</div>
 			</fieldset>
 		</div>
-	    EOF;
-        return $html;
-    }
+		EOF;
+		return $html;
+	}
 
-    protected function procesaFormulario(&$datos)
-    {
+	protected function procesaFormulario(&$datos)
+	{
 		
-        $this->errores = [];
+		$this->errores = [];
 		
 		$titulo = trim($datos['titulo'] ??   '' );
-        $titulo = filter_var($titulo, FILTER_SANITIZE_FULL_SPECIAL_CHARS);	
+		$titulo = filter_var($titulo, FILTER_SANITIZE_FULL_SPECIAL_CHARS);	
 
-        $descripcion = trim($datos['descripcion'] ??   '' );
-        $descripcion = filter_var($descripcion, FILTER_SANITIZE_FULL_SPECIAL_CHARS);	
+		$descripcion = trim($datos['descripcion'] ??   '' );
+		$descripcion = filter_var($descripcion, FILTER_SANITIZE_FULL_SPECIAL_CHARS);	
 
-        $contenido = trim($datos['contenido'] ??   '' );
-        $contenido = filter_var($contenido, FILTER_SANITIZE_FULL_SPECIAL_CHARS);	
+		$contenido = trim($datos['contenido'] ??   '' );
+		$contenido = filter_var($contenido, FILTER_SANITIZE_FULL_SPECIAL_CHARS);	
 		
 		$imagen = $_FILES['imagen'];
 		
 		if ( ! $titulo || empty($titulo)) {
-            $this->errores['titulo'] = 'Se debe especificar el titulo de la entrada.';
-        }
+			$this->errores['titulo'] = 'Se debe especificar el titulo de la entrada.';
+		}
 		if ( ! $descripcion || empty($descripcion)) {
-            $this->errores['descripcion'] = 'Se debe especificar la descripcion de la entrada.';
-        }
-        if ( ! $contenido || empty($contenido)) {
-            $this->errores['contenido'] = 'Se debe especificar el contenido de la entrada.';
-        }
+			$this->errores['descripcion'] = 'Se debe especificar la descripcion de la entrada.';
+		}
+		if ( ! $contenido || empty($contenido)) {
+			$this->errores['contenido'] = 'Se debe especificar el contenido de la entrada.';
+		}
 		
-        if (count($this->errores) === 0) {
+		if (count($this->errores) === 0) {
 			if(isset($imagen['error']) && $imagen['error'] === UPLOAD_ERR_OK){
 				$tipoArchivo = $imagen['type'];
 				$rutaArchivo = $imagen['tmp_name'];				
@@ -117,7 +117,7 @@ class FormularioEditarProducto extends Formulario
 			}else{
 				$entrada = Blog::edita($id, $titulo, $descripcion, $contenido);
 			}			
-        }
+		}
 	}
 }
 ?>
