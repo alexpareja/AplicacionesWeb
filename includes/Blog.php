@@ -50,13 +50,14 @@ class Blog
     public static function edita($id,$titulo, $contenido, $descripcion)
     {
         $BlogDAO= new BlogDAO();
-        return $BlogDAO->edita($id,$titulo, $contenido, $descripcion);
+        if(!$id)  {return true;}
+        return $BlogDAO->actualiza($id,$titulo, $contenido, $descripcion);
     }
 
-    public function borra($entrada)
+    public static function borra($id)
     {
         $BlogDAO= new BlogDAO();
-        return $BlogDAO->borra($entrada->id);
+        return $BlogDAO->borra($id);
     }
     
     

@@ -76,23 +76,16 @@ class BlogDAO
         return self::inserta($blog);
     }
 
-    public function edita($id,$titulo, $contenido, $descripcion)
+    public function actualiza($id,$titulo,$contenido,$descripcion)
     {
-        $blog = new Blog($nuevaId=null,$titulo,$contenido,$descripcion,$autor);
-        return self::actualiza($blog);
-    }
-
-    public function actualiza($blog)
-    {
-		$idBlog = $blog->getId();
-        if (!$idBlog) {
+        if (!$id) {
             return false;
         } 
-
-		$query=sprintf("UPDATE blog SET titulo = '%s', descripcion = '%s', contenido = '%s' where id = '%d'"
-            , $this->conn->real_escape_string($producto->getTitulo())
-            , $this->conn->real_escape_string($producto->getDescripcion())
-            , $this->conn->real_escape_string($producto->getContenido())
+		$query=sprintf("UPDATE blog SET titulo = '%s', contenido = '%s', descripcion = '%s' where id = '%d'"
+            , $this->conn->real_escape_string($titulo)
+            , $this->conn->real_escape_string($contenido)
+            , $this->conn->real_escape_string($descripcion)
+            , $id
         );
 		
         if ( ! $this->conn->query($query) ) {
@@ -123,13 +116,13 @@ class BlogDAO
 
 
     //borra el producto
-    public function borra($idProducto)
+    public function borra($id)
     {
-        if (!$idProducto) {
+        if (!$id) {
             return false;
         } 
     
-        $query = sprintf("DELETE FROM productos WHERE id =%d",$idProducto);
+        $query = sprintf("DELETE FROM blog WHERE id =%d",$id);
         if ( ! $this->conn->query($query) ) {
             error_log("Error BD ({$this->conn->errno}): {$this->conn->error}");
             return false;
