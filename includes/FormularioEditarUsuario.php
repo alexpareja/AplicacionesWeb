@@ -86,10 +86,11 @@ class FormularioEditarUsuario extends Formulario
             $rol = $this->usuario->getRol();
             $usuario = Usuario::editarUsuario($id, $nombreUsuario, $apellido1Usuario, $apellido2Usuario, $password, $correo, $direccionUsuario, $rol);
             if($usuario) {
-                $_SESSION['nombre'] = $this->usuario->getNombre();
-                $_SESSION['apellido1'] = $this->usuario->getApellido1();
-                $_SESSION['apellido2'] = $this->usuario->getApellido2();
-                $_SESSION['direccion'] = $this->usuario->getDireccion();
+                $_SESSION['nombre'] = $nombreUsuario;
+                $_SESSION['apellido1'] = $apellido1Usuario;
+                $_SESSION['apellido2'] = $apellido2Usuario;
+                $_SESSION['direccion'] = $direccionUsuario;
+
             }
         }
     }
