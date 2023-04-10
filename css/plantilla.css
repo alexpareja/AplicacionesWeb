@@ -187,9 +187,18 @@ main article {
   text-decoration: none;
   cursor: pointer;
   border-bottom: 2px solid transparent;
-  margin-left: 50px;
+  margin-left: 57px;
   margin-top: 10px;
   transition: border-bottom-color 0.2s ease-in-out;
+}
+
+.boton-edicion:before {
+  content: "> ";
+  color: purple;
+  position: relative;
+  right: 5px;
+  top: 2px;
+  font-size: 1.4em;
 }
 
 #info-perfil .boton-edicion:hover {
