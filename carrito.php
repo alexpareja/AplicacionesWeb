@@ -100,8 +100,8 @@ EOS;
 
 // Si se hace clic en el botón "Ir a pagar", redirigir a la página de pago
 if (isset($_GET['checkout'])) {
-    if (empty($_SESSION['cart'])) {
-        $contenidoPrincipal .= '<p>¡No hay nada que comprar!</p>';
+    if (empty($_SESSION['cart']) || $total_price <= 0) {
+        
     } else {
         header('Location: pago.php');
         exit;
