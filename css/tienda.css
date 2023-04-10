@@ -254,8 +254,9 @@ padding: 5px 100px;
 }
 
 #pie {
-  width: 100%;
   background-color: #80008041;
+	transition: all 0.3s ease-in-out;
+
 }
 
 .grupo1 {
@@ -380,12 +381,13 @@ padding: 5px 100px;
 }
 
 #pie.mostrarMenu {
-  margin-left: 300px; 
+	width: auto;
+    margin-left: 300px;
 }
 
 #menuIzqTienda.mostrarMenu {
   left: 0;
-  z-index: 1;
+  z-index: 3;
   top: 60px;
 }
 
@@ -395,9 +397,26 @@ padding: 5px 100px;
 
 }
 
+#menuIzqTienda h2{
+	font-family: Futura;
+  font-size: 30px;
+  font-weight: normal;
+  padding-bottom: 10px;
+}
+
+#campo-busqueda {
+  padding: 5px;
+  font-size: 1em;
+  border: 1px solid #800080;
+  border-radius: 5px;
+}
+
 #menuIzqTienda ul.filtros li{
   display:block;
   padding: 3px;
+  font-family: Verdana;
+  font-weight: bold;
+  padding-bottom: 10px;
 }
 
 #menuIzqTienda ul.checkfiltros li{
@@ -413,10 +432,15 @@ padding: 5px 100px;
   cursor: pointer;
   margin-bottom: 10px;
   font-size: 1.2em;
+  width:100%;
 }
 
 #menuIzqTienda button[type="submit"]:hover {
   background-color: #572364;
+}
+
+#menuIzqTienda input[type=checkbox] {
+	margin-right: 10px;
 }
 
 #menuIzqTienda input[type=range] {
