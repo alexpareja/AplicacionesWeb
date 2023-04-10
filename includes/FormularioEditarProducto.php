@@ -95,9 +95,10 @@ class FormularioEditarProducto extends Formulario
 						<li>
 						<button type="submit">Eliminar producto</button>
 						</li>
+						
 					</ul>
 					<button type="submit" formaction="tienda.php">Volver a la tienda</button>
-
+					 
 				</div>
 			</fieldset>
 		</div>

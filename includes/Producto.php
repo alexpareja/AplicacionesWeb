@@ -60,7 +60,7 @@ class Producto
         return $ProductoDAO->crea($id, $nombre, $descripcion, $precio, $xs, $s, $m, $l, $xl);
     }
 
-    public function borra($producto)
+    public static function borra($producto)
     {
         $ProductoDAO= new ProductoDAO();
         return $ProductoDAO->borra($producto->id);
