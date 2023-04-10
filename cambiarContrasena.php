@@ -1,7 +1,7 @@
 <?php
 require_once __DIR__.'/includes/configuracion.php';
 
-	$tituloPagina = 'Editar Usuario';
+	$tituloPagina = 'Cambiar Contraseña';
 	$contenidoPrincipal = '';
 	
 	$id=$_SESSION['id'];
@@ -14,12 +14,12 @@ require_once __DIR__.'/includes/configuracion.php';
 	$email=$usuario->getCorreo();
 	$pass=$usuario->getPassword();
 	$direccion=$usuario->getDireccion();
-	$form = new es\ucm\fdi\aw\FormularioEditarUsuario();
+	$form = new es\ucm\fdi\aw\FormularioCambiarContrasena();
 	$form->setUsuario($usuario);
-	$htmlFormEUsur = $form->gestiona();
-	
+	$htmlFormCPass = $form->gestiona();
+
 	$contenidoPrincipal .= <<<EOS
-	$htmlFormEUsur
+	$htmlFormCPass
 	EOS;
 	
 require __DIR__.'/includes/plantillas/plantillaFormulario.php';

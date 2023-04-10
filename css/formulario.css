@@ -177,7 +177,7 @@ main article{
   position: relative;
 }
 
-.inputbox #errorEmail, #errorPass, #errorNombre, #errorApellido, #errorPass, #errorPass2, #errorDir {
+.inputbox #errorEmail, #errorPass, #errorNombre, #errorApellido, #errorAPass, #errorPass, #errorPass2, #errorDir {
   color: red;
 }
 
