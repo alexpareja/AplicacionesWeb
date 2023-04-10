@@ -44,7 +44,7 @@ EOS;
 $contenidoPrincipal .= <<<EOS
 <h2>Mi carrito</h2>
 <div id="productos">
-    <ul class="productos">
+    <ul class="lista-productos">
 EOS;
 if (isset($_SESSION['cart'])) {
     foreach ($_SESSION['cart'] as $id => &$producto) {
@@ -59,35 +59,41 @@ if (isset($_SESSION['cart'])) {
                 $contenidoPrincipal .= <<<EOS
                     <li>
                         
-                        <img class="imgProducto" src='$src' alt='$alt'>
+                        <img class="producto-imagen" src='$src' alt='$alt'>
                         <br>
-                        $nombre - Talla: $talla - $precio € - Cantidad: $cantidad
+                        $nombre $talla $precio €: $cantidad
+                        <div class="eliminar-producto">
                         <form method="post">
                             <input type="number" name="quantity_to_remove" value = "0" min = "0" max="$cantidad">
                             <button type="submit" name="remove_quantity" value="$id|$size">Eliminar</button>
                         </form>
-                        
+                        </div>
                     </li>
                 EOS;
             }
         }
     }
 } else {
-    $contenidoPrincipal .= '<p>No hay productos en el carrito</p>';
+    $contenidoPrincipal .= <<<EOS
+    <div class="no-prod">
+    <p>No hay productos en el carrito</p>
+    </div>
+    EOS;
 }
 
 $contenidoPrincipal .= <<<EOS
     </ul>
-    <div class="seguir-comprando">
+    <div class="fin-carrito">
         <form action="tienda.php" method="get">
             <button type="submit">Seguir comprando</button>
         </form>
-    </div>
+    
     <form method="get">
         <input type="hidden" name="checkout">
         <button type="submit">Ir a pagar</button>
         <span class="total-price">Total: $total_price €</span>
     </form>
+    </div>
 	</div>
 </div>
 EOS;

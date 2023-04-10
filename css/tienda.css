@@ -11,6 +11,10 @@ main article {
 	text-align: center;
 	font-family: Verdana;
 	transition: all 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
 }
 
 
@@ -126,6 +130,50 @@ padding: 5px 100px;
   font-family: Verdana;
   font-size: 30px;
   font-weight: bold;
+}
+
+#tienda #productos {
+  margin-top: auto;
+}
+
+#tienda .eliminar-producto {
+  margin-top: 10px;
+}
+
+#tienda .eliminar-producto input[type="number"] {
+  width: 60px;
+  height: 20px;
+  font-size: 16px;
+  padding: 5px;
+}
+
+#tienda button[name="remove_quantity"] {
+  font-size: 1em;
+}
+
+#tienda .no-prod {
+  margin-top: 40px;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+#tienda .fin-carrito {
+   display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+  height: 100vh;
+}
+
+#tienda .total-price {
+    padding: 5px;
+  font-family: Verdana;
+  font-size: 1.1em;
+  width:10%;
+  font-weight: bold;
+  display: block;
+  white-space: nowrap;
+  margin-top: 10px;
 }
 
 /*Cabecera*/
