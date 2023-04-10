@@ -8,6 +8,7 @@ $tituloPagina = 'Planificacion';
 $contenidoPrincipal = <<<EOS
 <div id="planificacion">
 	<h2>Planificación</h2>
+	<br>
 	<h3>Tareas a realizar</h3>
 	<p>Para comenzar, es necesario formar el grupo de trabajo y presentar una propuesta inicial del proyecto en formato de documento PDF breve. Esto permitirá establecer las bases del proyecto, incluyendo su alcance, objetivos y planificación, y establecer un acuerdo entre los miembros del grupo. Además, esta propuesta inicial proporcionará un marco de referencia para la implementación del proyecto y permitirá la toma de decisiones informadas en etapas posteriores.</p>
 	<p>Después, presentaremos una descripción detallada del proyecto, creando una página web sencilla que incluya varios documentos descriptivos. Esta página web podría contener información sobre los objetivos, alcance, metodología, cronograma y recursos necesarios para llevar a cabo el proyecto.</p>
@@ -18,7 +19,7 @@ $contenidoPrincipal = <<<EOS
 	<p>Dentro de la primera entrega, lo importante fue crear cada página con el contenido que venía detallado en el campus, para lo cuál, cada miembro del equipo intervino en su realización.</p>
 	<p>Dentro de la segunda entrega, se ha creado una base de datos y las tablas correspondientes para su correcto funcionamiento. Se ha tomado como referencia los bocetos de la entrega anterior para seguir añadiendo apartados y funcionalidades a la página. También se han corregido los errores correspondientes a la entrega anterior.</p>
 	<p>Con respecto a la entrega número 3, se espera seguir añadiendo funcionalidades y solucionando errores no vistos en la entrega anterior. Y, lo mismo sucederá para la última entrega, además de conectar la página al servidor proporcionado por la Facultad de Informática.</p>
-
+	<br>
 	<h3>Tabla resumen</h3>
 	<table id="tabla-resumen">
 		<tr>

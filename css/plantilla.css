@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
 
 main {
-  padding: 3.8rem 0.7rem;
+  padding: 3.7rem 0.7rem;
 }
 
 main article {
@@ -11,21 +11,19 @@ main article {
 /*Hoja de estilo miCuenta*/
 .sesion {
   position: relative;
-  background-color: purple;
+  background-color: #800080;
   color: white;
-  border: 2px solid black;
-  padding: 20px;
-  margin-bottom: 2%;
+  border: 2px solid #572364;
+  padding: 5rem 2rem;
   border-radius: 0;
   width: 100%;
   box-sizing: border-box;
-  height: 300px;
+  height: 17rem;
 }
 
 .sesion h2 {
-  font-size: 30px;
-  line-height: 0.05;
-  margin-left: 50px;
+  font-size: xx-large;
+  line-height: 0.15;
   color: white;
   font-family: 'Ubuntu', sans-serif;
   font-weight: bold;
@@ -33,11 +31,9 @@ main article {
 }
 
 .sesion p {
-  font-size: 20px;
-  text-align: justify;
+  font-size: x-large;
   font-family: 'Ubuntu', sans-serif;
-  margin-left: 50px;
-  margin-bottom: 25px;
+  margin-bottom: 1rem;
   color: white;
 }
 
@@ -51,7 +47,7 @@ main article {
 
 .listaMiCuenta li {
   flex-basis: 33%; 
-  padding: 20px;
+  padding: 1.5rem;
   box-sizing: border-box;
   text-align: center;
   list-style: none;
@@ -402,7 +398,7 @@ main article {
 }
 
 #faqs .t2 {
-  ffont-family: 'Ubuntu', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
   font-size: xx-large;
   font-weight: bold;
 }
@@ -478,42 +474,78 @@ main article {
 }
 
 /*Hoja de estilo planificacion*/
+#planificacion {
+  margin-top: 2rem;
+}
+
+#planificacion h2, #planificacion h3 {
+  padding: 0rem 0.6rem;
+}
+
 #planificacion h2 {
-  font-family: Futura;
-  font-size: 35px;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: xx-large;
   font-weight: bold;
 }
 
+#planificacion h3{
+  font-size: large;
+  padding: 0.5rem 0.6rem;
+}
+
 #planificacion p, h3, th, td {
-  font-family: Verdana;
-    font-size: 15px;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: medium;
 }
 
 #tabla-resumen {
   border-collapse: collapse;
-  background-color: rgba(255,192,203,0.2);
+  background-color: #8000800e;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
 }
 
 #tabla-resumen th, td {
-  border: 2px solid black;
+  border: 2px solid #57236449;
+  color: #202020;
+  padding: 0.5rem 0.5rem;
+  text-align: center;
 }
 
 /*Hoja de estilo Terminos y Condiciones*/
 #terminosycondiciones h2 {
-  font-family: Futura;
-  font-size: 35px;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: xx-large;
+  margin-top: 2rem;
+  padding: 0rem 0.5rem;
 }
 
 #terminosycondiciones ul, p {
-  font-family: Verdana;
-  font-size: 15px;
-  margin-right: 10px;
-  margin-left: 10px;
+  padding: 0rem 0.5rem;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: medium;
   text-align: justify;
 }
 
+#terminosycondiciones ul li{
+  padding: 0.3rem 1rem;
+  list-style: none;
+}
+
 /*Hoja de estilo Sobre Nosotros*/
+.nosotros1 {
+  margin-top: 2rem;
+  width: 100%;
+}
+
+.nosotros h2{
+  font-family: 'Ubuntu', sans-serif;
+  font-size: xx-large;
+  padding: 0rem 0.5rem;
+}
+
 #nosotros {
+  margin-top: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
