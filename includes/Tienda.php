@@ -25,7 +25,8 @@ class Tienda {
             $nombre = $prod->getNombre();
             $precio = $prod->getPrecio();
 			$tallas = $prod->getTallasDisponibles();
-            $html .= <<<EOS
+			if($tallas !== '' || isset($_SESSION['admin']) && $_SESSION['admin']){
+				$html .= <<<EOS
 					<li class="producto" data-precio='$precio' data-talla='$tallas' nombre='$nombre'>
 						<a href='$link'>
 						<div class="producto-imagen">
@@ -36,6 +37,7 @@ class Tienda {
 						</a>
 					</li>
 				EOS;
+			}   
         }
 			$html .= <<<EOS
 						</ul>        

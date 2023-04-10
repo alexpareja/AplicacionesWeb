@@ -1,6 +1,14 @@
 <div id="menuIzqTienda">
 	<h2>Filtros</h2>
 			<ul class= "filtros">
+				<li>Ordenar por:</li>
+				<li><select id="ordenar-productos" name="ordenar-productos">
+						<option value="nombreA">Nombre (A -> Z)</option>
+						<option value="nombreZ">Nombre (Z -> A)</option>
+						<option value="precioA">Precio ascendente</option>
+						<option value="precioD">Precio descendente</option>
+					</select>
+				</li>
 				<li>Buscar:</li>
 				<li>
 				<input type="text" id="campo-busqueda" placeholder="Buscar productos..." oninput="buscarProductos()">
