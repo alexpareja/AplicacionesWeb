@@ -10,7 +10,7 @@ main article {
 }
 
 /*Hoja de estilo miCuenta*/
-#sesion {
+.sesion {
   position: relative;
   background-color: purple;
   color: white;
@@ -23,7 +23,7 @@ main article {
   height: 300px;
 }
 
-#sesion h2 {
+.sesion h2 {
   font-size: 30px;
   line-height: 0.05;
   margin-left: 50px;
@@ -33,12 +33,12 @@ main article {
   font-style: italic;
 }
 
-#sesion p {
+.sesion p {
   font-size: 20px;
   text-align: justify;
   font-family: Tahoma;
   margin-left: 50px;
-  margin-bottom: 15px;
+  margin-bottom: 25px;
   color: white;
 }
 
@@ -177,6 +177,24 @@ main article {
   margin-bottom: 5px;
   margin-left: 50px;
   color: #555;
+}
+
+.boton-edicion {
+  background-color: #800080;
+  color: white;
+  padding: 7px 7px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 25px;
+  font-size: 1.2em;
+  margin-left: 70px;
+  width: 200px;
+}
+
+
+.boton-edicion:hover {
+  background-color: #572364;
 }
 
 /*Hoja de estilo Lista de deseos*/

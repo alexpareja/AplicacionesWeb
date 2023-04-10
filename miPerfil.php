@@ -3,6 +3,7 @@ require_once __DIR__.'/includes/configuracion.php';
 $tituloPagina = 'Mi Perfil';
 $contenidoPrincipal = '';
 
+    $id = $_SESSION['id'];
     $nombre = $_SESSION['nombre'];
     $apellido1 = $_SESSION['apellido1'];
     $apellido2 = $_SESSION['apellido2'];
@@ -28,6 +29,12 @@ $contenidoPrincipal = '';
                 <br>
                 <p>Dirección: $direccion</p>
             </div>
+        </div>
+        <div class="boton-perfil">
+            <form action='editarUsuario.php'>
+                <input type="hidden" name="id" value="$id">
+                <button type="submit" class="boton-edicion">Editar Usuario</button>
+            </form>
         </div>
     EOS;
 

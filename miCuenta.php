@@ -6,7 +6,7 @@ $contenidoPrincipal = '';
 $nombre = $_SESSION['nombre'];
 
 $contenidoPrincipal = <<<EOS
-<div id="sesion">
+<div class="sesion">
   <p>Hola,</p>
   <h2>$nombre</h2>
   <br>

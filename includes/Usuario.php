@@ -62,6 +62,12 @@ class Usuario
         return $usuarioDAO->crea($nombre, $password, $apellido1,$apellido2,$direccion,$correo);
     }
 
+    public static function editarUsuario($id, $nombre, $apellido1, $apellido2, $password, $correo, $direccion, $rol)
+    {
+        $usuarioDAO = new UsuarioDAO();
+        return $usuarioDAO->editarUsuario($id, $nombre, $apellido1, $apellido2, $password, $correo, $direccion, $rol);
+    }
+
     //borra el usuario
     public function borra($usuario)
     {

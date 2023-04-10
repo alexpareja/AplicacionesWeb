@@ -66,6 +66,36 @@ class UsuarioDAO
         return self::guarda($user);
     }
 
+    public function editarUsuario($id, $nombre, $apellido1, $apellido2, $password, $correo, $direccion, $rol)
+    {
+        $hash = password_hash($password, PASSWORD_BCRYPT);
+        $user = new Usuario($id, $nombre, $apellido1, $apellido2, $hash, $correo, $direccion, $rol);
+        return self::actualiza($user);
+    }
+
+    public function actualiza($usuario)
+    {
+        $idUser = $usuario->getId();
+        if (!$idUser) {
+            return false;
+        } 
+
+        $query = sprintf("UPDATE usuarios SET nombre = '%s', apellido1 = '%s', apellido2 = '%s', direccion = '%s' WHERE id = '%s'"
+            , $this->conn->real_escape_string($usuario->getNombre())
+            , $this->conn->real_escape_string($usuario->getApellido1())
+            , $this->conn->real_escape_string($usuario->getApellido2())
+            , $this->conn->real_escape_string($usuario->getDireccion())
+            , $this->conn->real_escape_string($usuario->getId())
+        );
+        
+        if (!$this->conn->query($query)) {
+            error_log("Error BD ({$this->conn->errno}): {$this->conn->error}");
+            return false;
+        }
+        
+        return true;
+    }
+
     //inserta nuevo usuario
     private function inserta($usuario)
     {
