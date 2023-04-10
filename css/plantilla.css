@@ -1,8 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
 
 main {
-  height: 90%;
-  padding: 7rem 0;
+  padding: 3.8rem 0.7rem;
 }
 
 main article {
@@ -28,7 +27,7 @@ main article {
   line-height: 0.05;
   margin-left: 50px;
   color: white;
-  font-family: Verdana;
+  font-family: 'Ubuntu', sans-serif;
   font-weight: bold;
   font-style: italic;
 }
@@ -36,14 +35,13 @@ main article {
 .sesion p {
   font-size: 20px;
   text-align: justify;
-  font-family: Tahoma;
+  font-family: 'Ubuntu', sans-serif;
   margin-left: 50px;
   margin-bottom: 25px;
   color: white;
 }
 
 .listaMiCuenta {
-  max-width: 1200px; 
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap; 
@@ -66,6 +64,7 @@ main article {
 
 .listaMiCuenta li p {
   text-align: center;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 .imagen-contenedor {
@@ -103,7 +102,6 @@ main article {
   width: 80%;
   height: 80%;
   object-fit: contain;
-  z-index: 1;
 }
 
 .imagen-contenedor:hover img {
@@ -130,7 +128,7 @@ main article {
   margin-left: 50px;
   margin-top:30px;
   color: white;
-  font-family: Verdana;
+  font-family: 'Ubuntu', sans-serif;
   font-weight: bold;
   font-style: italic;
 }
@@ -138,7 +136,7 @@ main article {
 #cabecera-perfil p {
   font-size: 20px;
   text-align: justify;
-  font-family: Tahoma;
+  font-family: 'Ubuntu', sans-serif;
   margin-left: 50px;
   margin-bottom: 15px;
   color: white;
@@ -166,6 +164,7 @@ main article {
   margin-bottom: 10px;
   margin-left: 50px;
   color: #333;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 #info-perfil .negrita {
@@ -177,6 +176,7 @@ main article {
   margin-bottom: 5px;
   margin-left: 50px;
   color: #555;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 #info-perfil .boton-edicion {
@@ -212,6 +212,11 @@ main article {
 
 #lista-deseos h2 {
   text-align: center; 
+  font-family: 'Ubuntu', sans-serif;
+}
+
+#lista-deseos p {
+  font-family: 'Ubuntu', sans-serif;
 }
 
 #lista-deseos img.img-deseos{
@@ -221,13 +226,16 @@ main article {
   margin: 0 auto;
 }
 
+#productos {
+  font-family: 'Ubuntu', sans-serif;
+}
+
 /*Hoja de estilo Miembros*/
 #miembros {
   max-width: 1000px;
   margin: 0 auto;
   padding: 50px 20px;
   background-color: #FFF;
-  font-family: "Verdana", sans-serif;
 }
 
 #miembros h1 {
@@ -235,6 +243,7 @@ main article {
   font-weight: bold;
   text-align: center;
   margin-bottom: 50px;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 #miembros h3 {
@@ -242,12 +251,14 @@ main article {
   font-weight: bold;
   margin-top: 40px;
   margin-bottom: 20px;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 #miembros p {
   font-size: 18px;
   line-height: 1.5;
   color: #555;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 #miembros .imagen {
@@ -264,6 +275,7 @@ main article {
   font-weight: bold;
   font-size: 16px;
   color: #333;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 #miembros .ref:hover {
@@ -285,6 +297,7 @@ main article {
 
 #miembros a {
   text-decoration: none;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 /*Hoja de estilo Detalles*/
@@ -292,7 +305,6 @@ main article {
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
-  font-family: "Verdana", sans-serif;
 }
 
 #detalles h1 {
@@ -301,6 +313,7 @@ main article {
   color: #3c3c3c;
   text-align: center;
   margin-bottom: 40px;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 #detalles h2 {
@@ -309,6 +322,7 @@ main article {
   color: #800080;
   margin-top: 40px;
   margin-bottom: 20px;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 #detalles h3 {
@@ -321,12 +335,14 @@ main article {
   display: flex;
   align-items: center;
   justify-content: center;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 #detalles p {
   font-size: 18px;
   line-height: 1.5;
   margin-bottom: 20px;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 #detalles ul {
@@ -337,6 +353,7 @@ main article {
   line-height: 1.5;
   margin-bottom: 20px;
   text-align: justify;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 #detalles li:before {
@@ -344,19 +361,19 @@ main article {
   color: #800080;
   display: inline-block;
   width: 1em;
-  margin-left: -1em;
 }
 
 #detalles .negrita {
   font-size: 18px;
   font-weight: bold;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 #detalles .centro {
   text-align: center;
 }
 
-/*Hoja de estilo inicio*/
+/*Hoja de estilo Index*/
 #inicio {
   display: flex;
   flex-direction: row;
@@ -378,19 +395,21 @@ main article {
 
 /*Hoja de estilo faqs*/
 #faqs .t1 {
-  font-family: Futura;
-  font-size: 35px;
+  margin-top: 2rem;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: xx-large;
   font-weight: normal;
 }
 
 #faqs .t2 {
-  font-family: Verdana;
-  font-size: 30px;
+  ffont-family: 'Ubuntu', sans-serif;
+  font-size: xx-large;
   font-weight: bold;
 }
 
 #faqs-etiqueta1, #faqs-etiqueta2, #faqs-etiqueta3 {
   margin-top: 20px;
+  margin-bottom: 5px;
   height: 5px;
   width: 60px;
   background-color: #800080;
@@ -398,9 +417,7 @@ main article {
 
 #faqs-rectangulo1, #faqs-rectangulo2, #faqs-rectangulo3 {
   height: 15%;
-  margin-left: 5px;
-  margin-right: 5px;
-  font-family: Verdana;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 #faqs-preg1, #faqs-preg2, #faqs-preg3 {
@@ -411,10 +428,14 @@ main article {
   margin-bottom: 10px;
 }
 
+#faqs-preg1 p, #faqs-preg2 p, #faqs-preg3 p{
+  font-family: 'Ubuntu', sans-serif;
+}
+
 #faqs-resp1, #faqs-resp2, #faqs-resp3 {
   height: 20%;
   width: 100%;
-  padding: 2px;
+  padding: 1rem 1rem;
   font-size: 13px;
   font-weight: normal;
   text-align: justify;
@@ -422,11 +443,11 @@ main article {
 }
 
 #faqs-resp1 p, #faqs-resp2 p, #faqs-resp3 p {
-  margin-left: 10px;
-  margin-right: 10px;
+  padding: 0.5rem 0.5rem;
+  font-family: 'Ubuntu', sans-serif;
 }
 
-/*Hoja de estilo Inicio*/
+/*Hoja de estilo Propuesta*/
 #propuesta-imagen {
   display: flex;
   align-items: center;
@@ -440,17 +461,19 @@ main article {
 }
 
 #propuesta {
-  font-family: Verdana;
+  font-family: 'Ubuntu', sans-serif;
   font-size: 15px;
   margin-right: 40px;
-  margin-left: 40px;
-  margin-bottom: 40px;
   margin-top: 40px;
   text-align: justify;
 }
 
+#propuesta p{
+  font-family: 'Ubuntu', sans-serif;
+}
+
 #propuesta h2 {
-  font-family: Futura;
+  font-family: 'Ubuntu', sans-serif;
   text-align: center;
 }
 
@@ -797,7 +820,7 @@ display:inline-block;
 .letras{
   letter-spacing: 7px;
   text-decoration: none;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
   font-weight: bold;
   font-size: 1.2em;
   color: #202020;
@@ -808,7 +831,7 @@ display:inline-block;
 }
 
 .contenedor-flex ul{
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
   font-weight: bold;
   font-size: 13px;
   letter-spacing: 1px;
@@ -835,6 +858,10 @@ display:inline-block;
 .ayuda, .carrito, .cuenta, .menu, .iniciar {
   width: 25px;
   height: 25px;
+}
+
+.ayuda:hover, .carrito:hover, .cuenta:hover, .menu:hover, .iniciar:hover {
+  transform: scale(1.1);
 }
 
 .menu{display:none;}
@@ -887,7 +914,7 @@ display:inline-block;
 *{
   margin: 0;
   padding: 0;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 #pie {
@@ -923,7 +950,7 @@ display:inline-block;
 .boxPaginas {
   text-align: center;
   font-weight: bold;
-  font-size: 13px;
+  font-size: small;
   letter-spacing: 1px;
   list-style: none;
 } 
@@ -948,6 +975,7 @@ display:inline-block;
   font-size: 13px;
   font-weight: bold;
   text-align: center;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 .redSocial a{
@@ -957,6 +985,10 @@ display:inline-block;
 
 .grupo1 .boxRedes .redSocial a:hover {
   color: #800080;
+}
+
+.instagram:hover, .twitter:hover{
+  transform: scale(1.1);
 }
 
 .grupo2 {
