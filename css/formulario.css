@@ -255,7 +255,8 @@ main article{
   border-radius: 5px;
   cursor: pointer;
   margin-bottom: 10px;
-  font-size: 1.2em;
+  font-size: 20px;
+  width:100%;
 }
 
 #newP-form button[type="submit"]:hover {
@@ -263,9 +264,8 @@ main article{
 }
 
 #newP-form ul.botones li{
-  font-size:20px;
   display:inline-block;
-  
+  width:49.6%;
 }
 
 #newP-form ul.tallas li{
@@ -389,7 +389,8 @@ main article{
   border-radius: 5px;
   cursor: pointer;
   margin-bottom: 10px;
-  font-size: 1.2em;
+  font-size: 20px;
+  width:100%;
 }
 
 #product-form button[type="submit"]:hover {
@@ -397,8 +398,8 @@ main article{
 }
 
 #product-form ul.botones li{
-  font-size:20px;
   display:inline-block;
+  width:49.6%;
 }
 
 #product-form ul.tallas li{
