@@ -80,11 +80,12 @@ class UsuarioDAO
             return false;
         } 
 
-        $query = sprintf("UPDATE usuarios SET nombre = '%s', apellido1 = '%s', apellido2 = '%s', direccion = '%s' WHERE id = '%s'"
+        $query = sprintf("UPDATE usuarios SET nombre = '%s', apellido1 = '%s', apellido2 = '%s', direccion = '%s', password = '%s' WHERE id = '%s'"
             , $this->conn->real_escape_string($usuario->getNombre())
             , $this->conn->real_escape_string($usuario->getApellido1())
             , $this->conn->real_escape_string($usuario->getApellido2())
             , $this->conn->real_escape_string($usuario->getDireccion())
+            , $this->conn->real_escape_string($usuario->getPassword())
             , $this->conn->real_escape_string($usuario->getId())
         );
         

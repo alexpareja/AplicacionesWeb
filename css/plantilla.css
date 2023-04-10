@@ -179,6 +179,11 @@ main article {
   font-family: 'Ubuntu', sans-serif;
 }
 
+#info-perfil .botones {
+  margin-top: 10px;
+  margin-left: 57px;
+}
+
 #info-perfil .boton-edicion {
   background-color: transparent;
   border: none;
@@ -187,8 +192,6 @@ main article {
   text-decoration: none;
   cursor: pointer;
   border-bottom: 2px solid transparent;
-  margin-left: 57px;
-  margin-top: 10px;
   transition: border-bottom-color 0.2s ease-in-out;
 }
 

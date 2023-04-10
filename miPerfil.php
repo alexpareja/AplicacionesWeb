@@ -23,10 +23,16 @@ $contenidoPrincipal = '';
                 <p class ="negrita">Nombre: $nombre</p>
                 <p>Apellidos: $apellido1 $apellido2</p>
                 <p>Correo electrónico: $email</p>
-                <form action='editarUsuario.php'>
-                    <input type="hidden" name="id" value="$id">
-                    <button type="submit" class="boton-edicion">Editar</button>
-                </form>
+                <div class="botones">
+                    <form action='editarUsuario.php'>
+                        <input type="hidden" name="id" value="$id">
+                        <button type="submit" class="boton-edicion">Editar</button>
+                    </form>
+                    <form action='cambiarContrasena.php'>
+                        <input type="hidden" name="id" value="$id">
+                        <button type="submit" class="boton-edicion">Cambiar Contraseña</button>
+                    </form>
+                </div>
             </div>
             <div id="info-dir">
                 <h3>Dirección de facturación</h3>
