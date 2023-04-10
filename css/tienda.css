@@ -176,6 +176,12 @@ padding: 5px 100px;
   margin-top: 10px;
 }
 
+#tienda .fin-carrito p {
+  font-size: 1.2em;
+  color: red;
+  text-align: center;
+}
+
 /*Cabecera*/
 
 *{margin:0;}

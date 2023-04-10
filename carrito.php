@@ -94,16 +94,24 @@ $contenidoPrincipal .= <<<EOS
         <button type="submit">Ir a pagar</button>
         <span class="total-price">Total: $total_price €</span>
     </form>
-    </div>
-	</div>
-</div>
+    
 EOS;
 
 // Si se hace clic en el botón "Ir a pagar", redirigir a la página de pago
 if (isset($_GET['checkout'])) {
     if (empty($_SESSION['cart']) || $total_price <= 0) {
-        
+        $contenidoPrincipal .= <<<EOS
+        <p> ¡No hay nada que comprar! </p>
+        </div>
+        </div>
+        </div>
+        EOS;
     } else {
+        $contenidoPrincipal .= <<<EOS
+        </div>
+        </div>
+        </div>
+        EOS;
         header('Location: pago.php');
         exit;
     }
