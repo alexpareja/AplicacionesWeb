@@ -179,22 +179,21 @@ main article {
   color: #555;
 }
 
-.boton-edicion {
-  background-color: #800080;
-  color: white;
-  padding: 7px 7px;
+#info-perfil .boton-edicion {
+  background-color: transparent;
   border: none;
-  border-radius: 5px;
+  color: inherit;
+  font-size: 0.8em;
+  text-decoration: none;
   cursor: pointer;
-  margin-top: 25px;
-  font-size: 1.2em;
-  margin-left: 70px;
-  width: 200px;
+  border-bottom: 2px solid transparent;
+  margin-left: 50px;
+  margin-top: 10px;
+  transition: border-bottom-color 0.2s ease-in-out;
 }
 
-
-.boton-edicion:hover {
-  background-color: #572364;
+#info-perfil .boton-edicion:hover {
+  border-bottom-color: purple;
 }
 
 /*Hoja de estilo Lista de deseos*/
