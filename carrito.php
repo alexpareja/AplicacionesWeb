@@ -56,12 +56,13 @@ if (isset($_SESSION['cart'])) {
                 $precio = $item['price'];
                 $cantidad = $item['cantidad'];
                 $talla = $item['size'];
+                $talla = strtoupper($talla);
                 $contenidoPrincipal .= <<<EOS
                     <li>
                         
                         <img class="producto-imagen" src='$src' alt='$alt'>
                         <br>
-                        $nombre $talla $precio €: $cantidad
+                        <p>$nombre ($talla, $precio €): $cantidad</p>
                         <div class="eliminar-producto">
                         <form method="post">
                             <input type="number" name="quantity_to_remove" value = "0" min = "0" max="$cantidad">
