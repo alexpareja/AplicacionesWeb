@@ -36,26 +36,88 @@ window.onload = function() {
 function filtrarProductos() {
   // Obtener el valor máximo del precio
   var precioMaximo = document.getElementById("slider").value;
+  
+  // Obtener las tallas seleccionadas
+  var tallasSeleccionadas = [];
+  var opcionesTalla = document.getElementsByName("tamano");
+  for (var i = 0; i < opcionesTalla.length; i++) {
+    if (opcionesTalla[i].checked) {
+      tallasSeleccionadas.push(opcionesTalla[i].value);
+    }
+  }
 
   // Obtener la lista de productos y los elementos de la lista
   var listaProductos = document.getElementById("lista-productos");
   var elementosLista = listaProductos.getElementsByTagName("li");
   
   for (var i = 0; i < elementosLista.length; i++) {
+	var mostrar = true; 
     var elemento = elementosLista[i];
     var precio = parseFloat(elemento.getAttribute("data-precio"));
+	var tallas = elemento.getAttribute("data-talla").split(",");
 
+	for (var j = 0; j < tallasSeleccionadas.length; j++) {
+      if (!tallas.includes(tallasSeleccionadas[j])) {
+        mostrar = false;
+      }
+	  else{
+		mostrar = true;
+		break;
+	  }
+    }
+	
+	if(precio > precioMaximo){
+		mostrar=false;
+	}
+	
     // Mostrar u ocultar el elemento según el precio
-    if (precio > precioMaximo) {
-      elemento.style.display = "none";
+    if (mostrar) {
+      elemento.style.display =  "inline-block";
     } else {
-      elemento.style.display = "inline-block";
+      elemento.style.display = "none";
     }
   }
 }
 
-//mostrar previsualizacion imagen del producto en los formularios
+function buscarProductos() {
+  var input = document.getElementById("campo-busqueda");
+  var filtro = input.value.toUpperCase();
+  
+  var listaProductos = document.getElementById("lista-productos");
+  var elementosLista = listaProductos.getElementsByTagName("li");
+
+  for (var i = 0; i < elementosLista.length; i++) {
+    var elemento = elementosLista[i];
+    var nombre = elemento.getAttribute("nombre").toUpperCase();
 	
+    if (nombre.indexOf(filtro) > -1) {
+      elemento.style.display = "inline-block";
+    } else {
+      elemento.style.display = "none";
+	}
+  }
+}
+
+function quitarFiltros(){
+	var slider = document.getElementById("slider");
+	var valorPrecio = document.getElementById("valor-precio");
+
+	slider.value = 100;
+	valorPrecio.innerText = slider.value;  
+	
+	var tallas = document.getElementsByName("tamano");
+	for (var i = 0; i < tallas.length; i++) {
+    tallas[i].checked = false;
+  }
+  
+	document.getElementById("campo-busqueda").value = "";
+  
+  filtrarProductos();
+}
+
+
+
+//mostrar previsualizacion imagen del producto en los formularios
 	function changeHandler(ev) {
 		var archivo = ev.target.files[0];
 		var subirArchivo1 = document.getElementById('subir-archivo1');

@@ -122,5 +122,26 @@ class Producto
     {
         return $this->stockXL;
     }
+	
+	function getTallasDisponibles() {
+    $tallas = array();
+	if($this->stockXS > 0){
+		$tallas[] = 'XS';
+	}
+	if($this->stockS > 0){
+		$tallas[] = 'S';
+	}
+	if($this->stockM > 0){
+		$tallas[] = 'M';
+	}
+	if($this->stockL > 0){
+		$tallas[] = 'L';
+	}
+	if($this->stockXL > 0){
+		$tallas[] = 'XL';
+	}
+
+    return implode(",", $tallas);
+}
 }
 ?>

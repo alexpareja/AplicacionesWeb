@@ -24,9 +24,9 @@ class Tienda {
             $alt = 'Imagen de Producto '.$prod->getId();
             $nombre = $prod->getNombre();
             $precio = $prod->getPrecio();
-
+			$tallas = $prod->getTallasDisponibles();
             $html .= <<<EOS
-					<li class="producto" data-precio='$precio'>
+					<li class="producto" data-precio='$precio' data-talla='$tallas' nombre='$nombre'>
 						<a href='$link'>
 						<div class="producto-imagen">
 						<img class='imgProducto' id='imgProducto' src='$src' alt='$alt'>
