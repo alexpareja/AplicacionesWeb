@@ -90,10 +90,11 @@ class FormularioEditarProducto extends Formulario
 				</div>
 				<div>
 					<ul class= "botones">
-						<li><button type="submit">Editar Producto</button>
+						<li>
+						<button type="submit" name="edit">Editar Producto</button>
 						</li>
 						<li>
-						<button type="submit">Eliminar producto</button>
+						<button type="submit" name="delete">Eliminar producto</button>
 						</li>
 						
 					</ul>
@@ -108,8 +109,12 @@ class FormularioEditarProducto extends Formulario
 
     protected function procesaFormulario(&$datos)
     {
-		
-        $this->errores = [];
+		if(isset($datos['delete'])){
+			$id = $datos['id'];
+			$producto=Producto::buscaPorId($id);  
+			Producto::borra($producto);
+		}else{
+			   $this->errores = [];
 		
 		$nombre = trim($datos['nombre'] ??   '' );
         $nombre = filter_var($nombre, FILTER_SANITIZE_FULL_SPECIAL_CHARS);	
@@ -151,5 +156,6 @@ class FormularioEditarProducto extends Formulario
 				$producto = Producto::crea($id, $nombre, $descripcion, $precio, $xs, $s, $m, $l, $xl);	
 			}			
         }
+		}
 	}
 }
