@@ -7,7 +7,7 @@ class FormularioEditarProducto extends Formulario
 	 private $producto;
 
     public function __construct() {
-        parent::__construct('formEditarProd', array('urlRedireccion' => 'tienda.php', 'enctype' => 'multipart/form-data'));
+        parent::__construct('formEditarProd', array('urlRedireccion' => 'editarConfirmado.php', 'enctype' => 'multipart/form-data'));
     }
 	
 	 public function setProducto($producto) {
@@ -93,8 +93,10 @@ class FormularioEditarProducto extends Formulario
 						<li>
 						<button type="submit" name="edit">Editar Producto</button>
 						</li>
-						<li>
-						<button type="submit" name="delete" onclick="return confirm('¿Estás seguro de que deseas eliminar el producto?')">Eliminar producto</button>
+						<form action="eliminarConfirmado.php">
+						<input type="hidden" name="id" value="{$this->producto->getId()}">
+						<button type="submit" name="delete">Eliminar producto</button>
+						</form>
 						</li>
 						
 					</ul>

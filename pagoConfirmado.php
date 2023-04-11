@@ -17,9 +17,9 @@ if (isset($_SESSION['cart']) && is_array($_SESSION['cart'])) {
     unset($_SESSION['cart']);
 }
 
-$contenidoPrincipal = '<div class="pago-content">';
+$contenidoPrincipal = '<div class="confirm">';
 $contenidoPrincipal .= <<<EOS
-    <h2>La compra ha sido realizada</h2>
+    <h1>La compra ha sido realizada</h2>
     <form method="get" action="index.php">
         <button type="submit">Aceptar</button>
     </form>
