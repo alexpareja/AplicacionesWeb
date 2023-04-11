@@ -31,19 +31,25 @@ foreach ($_SESSION['cart'] as $product) {
 
 
 // Mostrar los productos del carrito con su información
-$contenidoPrincipal .= '<div class="pago-content">';
-$contenidoPrincipal .= '<h2>Resumen de compra</h2>';
-$contenidoPrincipal .= '<ul>';
+$contenidoPrincipal .= <<<EOS
+    <div id="pago">
+    <h2>Resumen de compra</h2>
+    <ul class="resumen-pago">
+    EOS;
 foreach ($cart_products as $product) {
-    $contenidoPrincipal .= '<li>';
-    $contenidoPrincipal .= '<strong>' . $product['name'] . ' - Talla: ' . $product['size'] . '</strong>';
-    $contenidoPrincipal .= '<br>';
-    $contenidoPrincipal .= 'Precio unitario: ' . $product['price'] . ' €';
-    $contenidoPrincipal .= '<br>';
-    $contenidoPrincipal .= 'Cantidad: ' . $product['cantidad'];
-    $contenidoPrincipal .= '<br>';
-    $contenidoPrincipal .= 'Precio total: ' . $product['price'] * $product['cantidad'] . ' €';
-    $contenidoPrincipal .= '</li>';
+    $precioTotal = $product['price'] * $product['cantidad'];
+    $talla = strtoupper($product['size']);
+    $contenidoPrincipal .= <<<EOS
+    <li>
+        <strong>{$product['name']} ({$talla})</strong>
+        <br>
+        Precio unitario: {$product['price']} €
+        <br>
+        Cantidad: {$product['cantidad']}
+        <br>
+        Precio total: {$precioTotal} €
+    </li>
+EOS;
 }
 $contenidoPrincipal .= <<<EOS
     </ul>
