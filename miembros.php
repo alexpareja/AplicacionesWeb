@@ -4,7 +4,7 @@ require_once __DIR__.'/includes/configuracion.php';
 
 $tituloPagina = 'Miembros';
 $contenidoPrincipal = <<<EOS
-<div id = "miembros">
+<div class = "miembros">
     <h1>Equipo de la Quinta Caja</h1>
     <ul>
       <li><a href="#lucero" class="ref">Lucero Abregú</a></li>

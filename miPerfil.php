@@ -11,13 +11,13 @@ $contenidoPrincipal = '';
     $direccion = $_SESSION['direccion'];
 
     $contenidoPrincipal = <<<EOS
-        <div id="cabecera-perfil">
+        <div class="cabecera-perfil">
             <h2>Mi perfil</h2>
             <br>
             <p>Aquí puedes encontrar tus datos personales</p>
         </div>
         <div class="perfil-contenedor">
-            <div id="info-perfil">
+            <div class="info-perfil">
                 <h3>Información personal</h3>
                 <br>
                 <p class ="negrita">Nombre: $nombre</p>
@@ -30,7 +30,7 @@ $contenidoPrincipal = '';
                     </form>
                 </div>
             </div>
-            <div id="info-dir">
+            <div class="info-dir">
                 <h3>Dirección de facturación</h3>
                 <br>
                 <p>Dirección: $direccion</p>
