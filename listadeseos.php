@@ -50,7 +50,11 @@ if (isset($_SESSION['wishlist'])) {
         }
     }
 } else {
-    $contenidoPrincipal .= '<p>No hay productos en la lista de deseos</p>';
+    $contenidoPrincipal .= <<<EOS
+    <div class="no-prod">
+    <p>No hay productos en la lista de deseos</p>
+    </div>
+    EOS;
 }
 
 require __DIR__.'/includes/plantillas/plantillaCarrito.php';
