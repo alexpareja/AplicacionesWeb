@@ -11,16 +11,11 @@ EOS;
 //Se muestran los botones de añadir y eliminar entrada en caso de que el usuario de la sesion sea administrador
 if (isset($_SESSION['admin']) && $_SESSION['admin']) {
 	$contenidoPrincipal .= <<<EOS
-		<ul class='botonesBlog'>
-			<li>
-				<form action='anadirEntrada.php'>
-					<button id="entAdd">Agregar entrada</button>
-				</form>
-			</li>
-		</ul>
+			<form action='anadirEntrada.php'>
+				<button id="entAdd">Agregar entrada</button>
+			</form>
 	EOS;
 }
-
 
 //Se muestran las entradas del blog
 $blog = new es\ucm\fdi\aw\Periodico();

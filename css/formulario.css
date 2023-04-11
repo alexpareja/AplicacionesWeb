@@ -1,9 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
 main {
-  padding: 3.8rem 0;
+  padding: 3.7rem 0.7rem;
 }
 
-main article{
-  min-height: 100vh;
+main article {
+  min-height: 81vh;
 }
 
 /*Hoja de estilo formulario contacto*/
@@ -422,7 +424,6 @@ main article{
 }
 
 /*Cabecera*/
-
 *{margin:0;}
 
 #cabecera {
@@ -434,7 +435,7 @@ main article{
   left: 0;
   top: 0;
   width: 100%;
-  z-index: 1;
+  z-index: 2;
 }
 
 .logo{
@@ -452,9 +453,9 @@ main article{
 .letras{
   letter-spacing: 7px;
   text-decoration: none;
-  font-family: helvetica;
+  font-family: 'Ubuntu', sans-serif;
   font-weight: bold;
-  font-size: 1.2em;
+  font-size: large;
   color: #202020;
 }
 
@@ -463,9 +464,9 @@ main article{
 }
 
 .contenedor-flex ul{
-  font-family: helvetica;
+  font-family: 'Ubuntu', sans-serif;
   font-weight: bold;
-  font-size: 13px;
+  font-size: small;
   letter-spacing: 1px;
   margin:0;
   padding: 0;
@@ -492,58 +493,19 @@ main article{
   height: 25px;
 }
 
+.ayuda:hover, .carrito:hover, .cuenta:hover, .menu:hover, .iniciar:hover {
+  transform: scale(1.1);
+}
+
 .menu{display:none;}
 #menu-icono{display:none;}
 
 
-@media only screen and (max-width: 740px){
-  .contenedor-flex ul li a {
-    padding: 0.5rem 0.5rem;
-  }
-
-  .logo{display:none;}
-}
-
-@media only screen and (max-width: 635px){
-  .menu {
-    display: block;
-    margin: 0.5rem;
-  }
-
-  .menu:hover{
-    cursor: pointer;
-  }
-
-  .paginas{
-    position: absolute;
-    top: 100%; left: 0; right: 0;
-    background: #80008041;
-    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-  }
-
-  #menu-icono:checked ~ .paginas{
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-  }
-
-  .menu{
-    top:0; left:0; right:0;
-  }
-
-  .paginas ul li{
-    margin: 0.5rem;
-    padding: 0.5rem;
-    background: #f3eeee;
-    display: block;
-  }
-}
-
-
 /*pie*/
-
 *{
   margin: 0;
   padding: 0;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 #pie {
@@ -579,7 +541,7 @@ main article{
 .boxPaginas {
   text-align: center;
   font-weight: bold;
-  font-size: 13px;
+  font-size: small;
   letter-spacing: 1px;
   list-style: none;
 } 
@@ -604,6 +566,7 @@ main article{
   font-size: 13px;
   font-weight: bold;
   text-align: center;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 .redSocial a{
@@ -615,6 +578,10 @@ main article{
   color: #800080;
 }
 
+.instagram:hover, .twitter:hover{
+  transform: scale(1.1);
+}
+
 .grupo2 {
   color: hsl(0, 50%, 94%);
   background-color: #572364;
@@ -623,10 +590,17 @@ main article{
 }
 
 .grupo2 small {
-  font-size: 15px;
+  font-size: small;
 }
 
-@media only screen and (max-width: 740px){
+@media only screen and (max-width: 735px){
+  /*CABECERA*/
+  .contenedor-flex ul li a {
+    padding: 0.5rem 0.5rem;
+  }
+  .logo{display:none;}
+
+  /*PIE*/
   .logopie {
     margin-top: 3.5rem;
     width: 10rem;
@@ -636,6 +610,39 @@ main article{
 }
 
 @media only screen and (max-width: 635px){
+  /*CABECERA*/
+  .menu {
+    display: block;
+    margin: 0.5rem;
+  }
+
+  .menu:hover{
+    cursor: pointer;
+  }
+
+  .paginas{
+    position: absolute;
+    top: 100%; left: 0; right: 0;
+    background: #80008041;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+
+  #menu-icono:checked ~ .paginas{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+
+  .menu{
+    top:0; left:0; right:0;
+  }
+
+  .paginas ul li{
+    margin: 0.5rem;
+    padding: 0.5rem;
+    background: #f3eeee;
+    display: block;
+  }
+
+  /*PIE*/
   .grupo1 {
     width: 100%;
     grid-template-columns: repeat(1, 1fr);

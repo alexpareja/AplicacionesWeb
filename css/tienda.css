@@ -1,20 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
 main {
-  padding:7rem 0;
+  padding: 7rem 0.7rem;
 }
 
 main article {
-  min-height: 100vh;
+  min-height: 81vh;
 }
 
 #tienda {
 	background-color: white;
 	text-align: center;
-	font-family: Verdana;
+	font-family: 'Ubuntu', sans-serif;
 	transition: all 0.3s ease-in-out;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
 }
 
 
@@ -90,7 +92,7 @@ padding: 5px 100px;
 }
 
 #tienda .total-price {
-    margin-left: 10px;
+  margin-left: 10px;
 }
 
 #tienda table.compras {
@@ -104,7 +106,7 @@ padding: 5px 100px;
   border:2px solid black;
   background-color:#800080;
   color: white;
-  font-family: Verdana;
+  font-family: 'Ubuntu', sans-serif;
   font-size: 1.2em;
 	width:10%;
 }
@@ -112,7 +114,7 @@ padding: 5px 100px;
 #tienda td{
   padding: 5px;
   border:2px solid  black;
-  font-family: Verdana;
+  font-family: 'Ubuntu', sans-serif;
   font-size: 1em;
 	width:10%;
 }
@@ -122,13 +124,13 @@ padding: 5px 100px;
 }
 
 #tienda .titulo1 {
-  font-family: Futura;
-  font-size: 35px;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: xx-large;
   font-weight: normal;
 }
 #tienda .titulo2 {
-  font-family: Verdana;
-  font-size: 30px;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: xx-large;
   font-weight: bold;
 }
 
@@ -166,8 +168,8 @@ padding: 5px 100px;
 }
 
 #tienda .total-price {
-    padding: 5px;
-  font-family: Verdana;
+  padding: 5px;
+  font-family: 'Ubuntu', sans-serif;
   font-size: 1.1em;
   width:10%;
   font-weight: bold;
@@ -183,7 +185,6 @@ padding: 5px 100px;
 }
 
 /*Cabecera*/
-
 *{margin:0;}
 
 #cabecera {
@@ -195,8 +196,7 @@ padding: 5px 100px;
   left: 0;
   top: 0;
   width: 100%;
-  z-index: 1;
-
+  z-index: 2;
 }
 
 .logo{
@@ -214,9 +214,9 @@ padding: 5px 100px;
 .letras{
   letter-spacing: 7px;
   text-decoration: none;
-  font-family: helvetica;
+  font-family: 'Ubuntu', sans-serif;
   font-weight: bold;
-  font-size: 1.2em;
+  font-size: large;
   color: #202020;
 }
 
@@ -225,11 +225,11 @@ padding: 5px 100px;
 }
 
 .contenedor-flex ul{
-  font-family: helvetica;
+  font-family: 'Ubuntu', sans-serif;
   font-weight: bold;
-  font-size: 13px;
+  font-size: small;
   letter-spacing: 1px;
-  margin: 0;
+  margin:0;
   padding: 0;
   list-style: none;
 }
@@ -254,63 +254,24 @@ padding: 5px 100px;
   height: 25px;
 }
 
+.ayuda:hover, .carrito:hover, .cuenta:hover, .menu:hover, .iniciar:hover {
+  transform: scale(1.1);
+}
+
 .menu{display:none;}
 #menu-icono{display:none;}
 
 
-@media only screen and (max-width: 740px){
-  .contenedor-flex ul li a {
-    padding: 0.5rem 0.5rem;
-  }
-
-  .logo{display:none;}
-}
-
-@media only screen and (max-width: 635px){
-  .menu {
-    display: block;
-    margin: 0.5rem;
-  }
-
-  .menu:hover{
-    cursor: pointer;
-  }
-
-  .paginas{
-    position: absolute;
-    top: 100%; left: 0; right: 0;
-    background: #80008041;
-    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-  }
-
-  #menu-icono:checked ~ .paginas{
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-  }
-
-  .menu{
-    top:0; left:0; right:0;
-  }
-
-  .paginas ul li{
-    margin: 0.5rem;
-    padding: 0.5rem;
-    background: #f3eeee;
-    display: block;
-  }
-}
-
 /*pie*/
-
 *{
   margin: 0;
   padding: 0;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 #pie {
+  width: 100%;
   background-color: #80008041;
-	transition: all 0.3s ease-in-out;
-
 }
 
 .grupo1 {
@@ -341,7 +302,7 @@ padding: 5px 100px;
 .boxPaginas {
   text-align: center;
   font-weight: bold;
-  font-size: 13px;
+  font-size: small;
   letter-spacing: 1px;
   list-style: none;
 } 
@@ -366,6 +327,7 @@ padding: 5px 100px;
   font-size: 13px;
   font-weight: bold;
   text-align: center;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 .redSocial a{
@@ -377,6 +339,10 @@ padding: 5px 100px;
   color: #800080;
 }
 
+.instagram:hover, .twitter:hover{
+  transform: scale(1.1);
+}
+
 .grupo2 {
   color: hsl(0, 50%, 94%);
   background-color: #572364;
@@ -385,10 +351,17 @@ padding: 5px 100px;
 }
 
 .grupo2 small {
-  font-size: 15px;
+  font-size: small;
 }
 
-@media only screen and (max-width: 740px){
+@media only screen and (max-width: 735px){
+  /*CABECERA*/
+  .contenedor-flex ul li a {
+    padding: 0.5rem 0.5rem;
+  }
+  .logo{display:none;}
+
+  /*PIE*/
   .logopie {
     margin-top: 3.5rem;
     width: 10rem;
@@ -398,6 +371,39 @@ padding: 5px 100px;
 }
 
 @media only screen and (max-width: 635px){
+  /*CABECERA*/
+  .menu {
+    display: block;
+    margin: 0.5rem;
+  }
+
+  .menu:hover{
+    cursor: pointer;
+  }
+
+  .paginas{
+    position: absolute;
+    top: 100%; left: 0; right: 0;
+    background: #80008041;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+
+  #menu-icono:checked ~ .paginas{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+
+  .menu{
+    top:0; left:0; right:0;
+  }
+
+  .paginas ul li{
+    margin: 0.5rem;
+    padding: 0.5rem;
+    background: #f3eeee;
+    display: block;
+  }
+
+  /*PIE*/
   .grupo1 {
     width: 100%;
     grid-template-columns: repeat(1, 1fr);
@@ -419,7 +425,7 @@ padding: 5px 100px;
 
 /*Menu Izq*/
 #menuIzqTienda {
-  font-family: Verdana;
+  font-family: 'Ubuntu', sans-serif;
   position: fixed;
   top: 0;
   width: 300px;
@@ -436,7 +442,7 @@ padding: 5px 100px;
 
 #pie.mostrarMenu {
 	width: auto;
-    margin-left: 300px;
+  margin-left: 300px;
 }
 
 #menuIzqTienda.mostrarMenu {
@@ -452,8 +458,8 @@ padding: 5px 100px;
 }
 
 #menuIzqTienda h2{
-	font-family: Futura;
-  font-size: 30px;
+	font-family: 'Ubuntu', sans-serif;
+  font-size: xx-large;
   font-weight: normal;
   padding-bottom: 10px;
 }
@@ -468,7 +474,7 @@ padding: 5px 100px;
 #menuIzqTienda ul.filtros li{
   display:block;
   padding: 3px;
-  font-family: Verdana;
+  font-family: 'Ubuntu', sans-serif;
   font-weight: bold;
   padding-bottom: 10px;
 }

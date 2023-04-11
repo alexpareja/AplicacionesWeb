@@ -5,7 +5,7 @@ main {
 }
 
 main article {
-  min-height: 100vh;
+  min-height: 81vh;
 }
 
 /*Hoja de estilo miCuenta*/
@@ -68,7 +68,7 @@ main article {
   max-width: 300px;
   height: 250px;
   border: 1px solid #800080;
-  padding: 10px;
+  padding: 0.5rem;
   box-sizing: border-box;
   position: relative;
   display: inline-block;
@@ -119,10 +119,10 @@ main article {
 }
 
 #cabecera-perfil h2 {
-  font-size: 30px;
+  font-size: xx-large;
   line-height: 0.05;
   margin-left: 50px;
-  margin-top:30px;
+  margin-top: 30px;
   color: white;
   font-family: 'Ubuntu', sans-serif;
   font-weight: bold;
@@ -130,7 +130,7 @@ main article {
 }
 
 #cabecera-perfil p {
-  font-size: 20px;
+  font-size: x-large;
   text-align: justify;
   font-family: 'Ubuntu', sans-serif;
   margin-left: 50px;
@@ -156,7 +156,7 @@ main article {
 }
 
 #info-perfil h3, #info-dir h3 {
-  font-size: 1.2em;
+  font-size: large;
   margin-bottom: 10px;
   margin-left: 50px;
   color: #333;
@@ -168,7 +168,7 @@ main article {
 }
 
 #info-perfil p, #info-dir p {
-  font-size: 1em;
+  font-size: medium;
   margin-bottom: 5px;
   margin-left: 50px;
   color: #555;
@@ -197,7 +197,7 @@ main article {
   position: relative;
   right: 5px;
   top: 2px;
-  font-size: 1.4em;
+  font-size: large;
 }
 
 #info-perfil .boton-edicion:hover {
@@ -206,7 +206,7 @@ main article {
 
 /*Hoja de estilo Lista de deseos*/
 #lista-deseos {
-    text-align: center;
+  text-align: center;
 }
 
 #lista-deseos h2 {
@@ -238,7 +238,7 @@ main article {
 }
 
 #miembros h1 {
-  font-size: 40px;
+  font-size: xx-large;
   font-weight: bold;
   text-align: center;
   margin-bottom: 50px;
@@ -246,7 +246,7 @@ main article {
 }
 
 #miembros h3 {
-  font-size: 24px;
+  font-size: large;
   font-weight: bold;
   margin-top: 40px;
   margin-bottom: 20px;
@@ -254,7 +254,7 @@ main article {
 }
 
 #miembros p {
-  font-size: 18px;
+  font-size: medium;
   line-height: 1.5;
   color: #555;
   font-family: 'Ubuntu', sans-serif;
@@ -272,7 +272,7 @@ main article {
 
 #miembros .ref, span.negrita {
   font-weight: bold;
-  font-size: 16px;
+  font-size: medium;
   color: #333;
   font-family: 'Ubuntu', sans-serif;
 }
@@ -307,7 +307,7 @@ main article {
 }
 
 #detalles h1 {
-  font-size: 45px;
+  font-size: xx-large;
   font-weight: bold;
   color: #3c3c3c;
   text-align: center;
@@ -316,7 +316,7 @@ main article {
 }
 
 #detalles h2 {
-  font-size: 30px;
+  font-size: xx-large;
   font-weight: bold;
   color: #800080;
   margin-top: 40px;
@@ -325,7 +325,7 @@ main article {
 }
 
 #detalles h3 {
-  font-size: 24px;
+  font-size: large;
   font-weight: bold;
   color: #3c3c3c;
   text-align: center;
@@ -338,7 +338,7 @@ main article {
 }
 
 #detalles p {
-  font-size: 18px;
+  font-size: medium;
   line-height: 1.5;
   margin-bottom: 20px;
   font-family: 'Ubuntu', sans-serif;
@@ -348,7 +348,7 @@ main article {
   list-style: none;
   margin-left: 0;
   padding-left: 0;
-  font-size: 18px;
+  font-size: medium;
   line-height: 1.5;
   margin-bottom: 20px;
   text-align: justify;
@@ -363,7 +363,7 @@ main article {
 }
 
 #detalles .negrita {
-  font-size: 18px;
+  font-size: medium;
   font-weight: bold;
   font-family: 'Ubuntu', sans-serif;
 }
@@ -379,17 +379,16 @@ main article {
   align-items: center;
 }
 
-#inicio .caja1, .caja2 {
-  max-width: 100%;
-  max-height: 100%;
+#inicio .caja1{
+  width: 100%;
 }
 
 #inicio .caja2 {
-  margin-left: 2px;
+  width: 100%;
 }
 
 #inicio a:hover .caja1, a:hover .caja2 {
-  opacity: 0.9;
+  filter: brightness(0.9);
 }
 
 /*Hoja de estilo faqs*/
@@ -415,7 +414,7 @@ main article {
 }
 
 #faqs-rectangulo1, #faqs-rectangulo2, #faqs-rectangulo3 {
-  height: 15%;
+  margin-right: 2rem;
   font-family: 'Ubuntu', sans-serif;
 }
 
@@ -536,55 +535,57 @@ main article {
 }
 
 /*Hoja de estilo Sobre Nosotros*/
-.nosotros1 {
+.n1{
   margin-top: 2rem;
-  width: 100%;
-}
-
-.nosotros h2{
   font-family: 'Ubuntu', sans-serif;
   font-size: xx-large;
-  padding: 0rem 0.5rem;
-}
-
-#nosotros {
-  margin-top: 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-#nosotros-texto {
-  float: left;
-  width: 60%;
-}
-
-#nosotros-texto .t1 {
-  font-family: Futura;
-  font-size: 30px;
-  line-height: 0.05;
-  color: black;
   font-weight: normal;
+  text-align: center;
 }
 
-#nosotros-texto .t2 {
-  font-size: 30px;
-  line-height: 0.05;
-  color: black;
-  font-family: Verdana;
+.n2{
+  font-family: 'Ubuntu', sans-serif;
+  font-size: xx-large;
   font-weight: bold;
-  font-style: italic;
+  text-align: center;
 }
 
-#nosotros-texto p {
-  text-align: justify;
-  font-family: Tahoma;
-  margin-left: 30px;
-  margin-right: 30px;
-  color: #333;
+.nosotros2{
+  position: relative;
+  display: inline-block;
 }
 
-#boton {
+.nosotrosTexto{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.nosotrosTexto, .nosotrosImagen{
+  padding: 1rem 0rem;
+}
+
+.nosotrosTexto p{
+  font-family: 'Ubuntu', sans-serif;
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px 4px #413a41;
+  letter-spacing: 2px;
+}
+
+.nosotros{
+  width: 100%;
+  filter: brightness(0.3)opacity(0.7);
+}
+
+.nosotros3 p, #nosotrosBoton {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: medium;
+}
+
+#nosotrosBoton {
   padding: 7px 7px;
   background-color: #800080;
   color: white;
@@ -592,27 +593,12 @@ main article {
   border-radius: 5px;
   cursor: pointer;
   margin-bottom: 10px;
-  font-size: 1.2em;
+  font-size: large;
   margin-left: 30px;
 }
 
-#boton:hover {
+#nosotrosBoton:hover {
   background-color: #572364;
-}
-
-#nosotros-imagen {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  width: 30%;
-  text-align: right;
-  margin-right: 30px;
-}
-
-#nosotros-imagen .foto {
-  min-height: 380px;
-  min-width: 185.13px;
-  max-width: 70%;
 }
 
 /*Hoja de estilo Editar producto*/
@@ -632,30 +618,16 @@ main article {
 }
 
 /*Hoja de estilo Mostrar Producto*/
-#producto{
-width:100%;
-}
-
 #producto .imgProducto {
 	float: left;
-	margin-right: 20px;
-	width: 400px;
 }
 
 #producto .producto {
 	overflow: hidden;
 }
 
-#producto .corazon {
-
-	width: 15px;
-	height: 15px;
-
-}
-
 #producto ul.botones li{
-font-size:20px;
-display:inline-block;
+  display: inline-block;
 }
 
 #producto button[type="submit"] {
@@ -666,35 +638,29 @@ display:inline-block;
   border-radius: 5px;
   cursor: pointer;
   margin-bottom: 10px;
-  font-size: 1.2em;
+  font-size: large;
 }
 
 #producto button[type="submit"]:hover {
   background-color: #572364;
 }
 
-.pago-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.pago-content form {
-    text-align: center;
-}
 
 /*Hoja de estilo Blog*/
+#blog{
+  padding: 2rem 1rem;
+}
 
 #blog .titulo1 {
-  font-family: Futura;
-  font-size: 35px;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: xx-large;
   font-weight: normal;
+  margin-top: 1rem;
 }
 
 #blog .titulo2 {
-  font-family: Verdana;
-  font-size: 30px;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: xx-large;
   font-weight: bold;
 }
 
@@ -708,13 +674,13 @@ display:inline-block;
 
 #rectangulo .t1, .t2, .t3 {
   margin-left: 15px;
-  font-family: Verdana;
+  font-family: 'Ubuntu', sans-serif;
   font-size: 10px;
 }
 
 #rectangulo .t1 {
   line-height: 1;
-  font-family: Monaco;
+  font-family: 'Ubuntu', sans-serif;
   font-size: 20px;
 }
 
@@ -741,7 +707,7 @@ display:inline-block;
   border-radius: 5px;
   cursor: pointer;
   margin-bottom: 10px;
-  font-size: 1.2em;
+  font-size: large;
   margin-left: 30px;
 }
 
@@ -749,39 +715,26 @@ display:inline-block;
   background-color: #572364;
 }
 
-#botonesBlog li{
-font-size:20px;
-display:inline-block;
-}
-
-#blog button[type="submit"] {
-  background-color: #800080;
-  color: white;
-  padding: 7px 7px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-bottom: 10px;
-  font-size: 1.2em;
-}
-
-#blog button[type="submit"]:hover {
-  background-color: #572364;
-}
-
 /*Hoja de estilo Bocetos*/
+#bocetos{
+  margin-top: 2rem;
+}
+
 #bocetos h1 {
-  font-family: Futura;
-  font-size: 35px;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: xx-large;
+  margin-left: 0.5rem;
 }
 
 #bocetos h3 {
-  font-family: Verdana;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: large;
+  padding: 0.5rem;
 }
 
 #bocetos p {
-  font-family: Verdana;
-  font-size: 15px;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: medium;
 }
 
 #bocetos img {
@@ -797,6 +750,7 @@ display:inline-block;
 
 #entradaBlog h2 {
   text-align: center; 
+  font-family: 'Ubuntu', sans-serif;
 }
 
 #entrada_contenido{
@@ -837,7 +791,7 @@ display:inline-block;
   left: 0;
   top: 0;
   width: 100%;
-  z-index: 1;
+  z-index: 2;
 }
 
 .logo{
@@ -857,7 +811,7 @@ display:inline-block;
   text-decoration: none;
   font-family: 'Ubuntu', sans-serif;
   font-weight: bold;
-  font-size: 1.2em;
+  font-size: large;
   color: #202020;
 }
 
@@ -868,7 +822,7 @@ display:inline-block;
 .contenedor-flex ul{
   font-family: 'Ubuntu', sans-serif;
   font-weight: bold;
-  font-size: 13px;
+  font-size: small;
   letter-spacing: 1px;
   margin:0;
   padding: 0;
@@ -901,48 +855,6 @@ display:inline-block;
 
 .menu{display:none;}
 #menu-icono{display:none;}
-
-
-@media only screen and (max-width: 740px){
-  .contenedor-flex ul li a {
-    padding: 0.5rem 0.5rem;
-  }
-
-  .logo{display:none;}
-}
-
-@media only screen and (max-width: 635px){
-  .menu {
-    display: block;
-    margin: 0.5rem;
-  }
-
-  .menu:hover{
-    cursor: pointer;
-  }
-
-  .paginas{
-    position: absolute;
-    top: 100%; left: 0; right: 0;
-    background: #80008041;
-    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-  }
-
-  #menu-icono:checked ~ .paginas{
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-  }
-
-  .menu{
-    top:0; left:0; right:0;
-  }
-
-  .paginas ul li{
-    margin: 0.5rem;
-    padding: 0.5rem;
-    background: #f3eeee;
-    display: block;
-  }
-}
 
 
 /*pie*/
@@ -1034,10 +946,17 @@ display:inline-block;
 }
 
 .grupo2 small {
-  font-size: 15px;
+  font-size: small;
 }
 
-@media only screen and (max-width: 740px){
+@media only screen and (max-width: 735px){
+  /*CABECERA*/
+  .contenedor-flex ul li a {
+    padding: 0.5rem 0.5rem;
+  }
+  .logo{display:none;}
+
+  /*PIE*/
   .logopie {
     margin-top: 3.5rem;
     width: 10rem;
@@ -1047,6 +966,44 @@ display:inline-block;
 }
 
 @media only screen and (max-width: 635px){
+  /*CABECERA*/
+  .menu {
+    display: block;
+    margin: 0.5rem;
+  }
+
+  .menu:hover{
+    cursor: pointer;
+  }
+
+  .paginas{
+    position: absolute;
+    top: 100%; left: 0; right: 0;
+    background: #80008041;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+
+  #menu-icono:checked ~ .paginas{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+
+  .menu{
+    top:0; left:0; right:0;
+  }
+
+  .paginas ul li{
+    margin: 0.5rem;
+    padding: 0.5rem;
+    background: #f3eeee;
+    display: block;
+  }
+
+  /*SOBRE NOSOTROS*/
+  .nosotrosTexto p{
+    font-size: small;
+  }
+
+  /*PIE*/
   .grupo1 {
     width: 100%;
     grid-template-columns: repeat(1, 1fr);
@@ -1067,164 +1024,155 @@ display:inline-block;
 }
 
 
-
-
-
 /*mostrar producto*/
-
 h2.error {
-font-size:3em;
-text-align: center;
-margin-bottom: 20%;
+  font-size: large;
+  text-align: center;
+  margin-bottom: 20%;
 }
-
 
 #producto{
   align-items: center;
   margin: 0 auto;
-  max-width: 800px;
+  max-width: 900px;
   padding: 20px;
-  font-family: Verdana;
+  font-family: 'Ubuntu', sans-serif;
 }
+
 #producto .imgProducto {
-    width: 40%;
-    height: auto;
-    margin-right: 20px;
-  }
-
-  #producto h2 {
-    margin: 0;
-  font-size: 1.6em;
-margin-bottom: 10px;
-  }
-
- #producto p {
-  margin: 0;
-  }
-
-  #producto h3, .comments h3 {
-  color: #800080;
-  font-size: 1.2em;
-  }
-
-  #producto .infoProducto {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    
-  }
-
-  #producto .product-form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    
-  }
-  
-    
-  .product-form label.talla {
-    margin-right: 10px;
-    font-size: 16px;
-    padding: 10px;
-    border: 2px solid #ccc;
-    border-radius: 5px;
-    cursor: pointer;
-    display: inline-block;
-  
-  }
-
-  .stockTallas {
-    margin-top: 10px;
-    display: inline-block;
-  }
-
-  .stockTallas p {
-    margin-right: 10px;
-    padding: 10px;
-    display: inline-block;
-    border: 2px solid #ccc;
-    border-radius: 5px;
-  }
-
-  input[type="radio"]{
-    accent-color:#800080;
+  width: 40%;
+  height: auto;
+  margin-right: 20px;
 }
 
-input.quantity {
-  font-size: 16px;
-  padding: 10px;
-  border-radius: 5px;
-  border: 1px solid #800080;
+#producto h2 {
+  font-size: x-large;
   margin-bottom: 10px;
 }
 
-  div.comments {
-    clear: both;
-    text-align: center;
-  }
+#producto h3{
+  color: #800080;
+  font-size: large;
+  padding: 0.5rem;
+}
+
+.comments h3{
+  color: #800080;
+  font-size: x-large;
+}
+
+#producto .infoProducto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#producto .product-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.product-form label.talla {
+  font-size: medium;
+  padding: 0.5rem 0.5rem;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.stockTallas {
+  margin-top: 0.5rem;
+  display: inline-block;
+}
+
+.stockTallas p {
+  padding: 0.5rem 0.5rem;
+  display: inline-block;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+}
+
+input[type="radio"]{
+  accent-color:#800080;
+}
+
+input.quantity {
+  font-size: medium;
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid #800080;
+  margin-bottom: 0.5rem;
+}
+
+div.comments {
+  clear: both;
+  text-align: center;
+}
 
 ::-webkit-scrollbar {
   display: none;
 }
 
 /*mostrar entrada blog*/
-  
-  #entrada{
-    align-items: center;
-    margin: 0 auto;
-    max-width: 800px;
-    padding: 20px;
-    font-family: Verdana;
-  }
-  #entrada .imgEntrada {
-    display: block;
-    width: 100%;
-    height: auto;
-    margin: 0 auto;
-    max-width: 600px;
-    }
+#entrada{
+  align-items: center;
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 20px;
+  font-family: 'Ubuntu', sans-serif;
+}
 
-    #entrada button[type="submit"] {
-      background-color: #800080;
-      color: white;
-      padding: 7px 7px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      margin-bottom: 10px;
-      font-size: 1.2em;
-    }
+#entrada .imgEntrada {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  max-width: 600px;
+}
 
-    #entrada ul.botones li{
-      font-size:20px;
-      display:inline-block;
-      }
+#entrada button[type="submit"] {
+  background-color: #800080;
+  color: white;
+  padding: 7px 7px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+  font-size: large;
+}
 
-      #entrada ul{
-       text-align: center;
-        }
-     
-      #entrada button[type="submit"]:hover {
-        background-color: #572364;
-      }
+#entrada ul.botones li{
+  font-size: medium;
+  display: inline-block;
+}
 
-      #entrada h2 {
-        font-size: 2rem;
-        font-weight: bold;
-        margin: 1.5rem 0;
-        text-align: center;
-      }
+#entrada ul{
+  text-align: center;
+}
 
-      #entrada p {
-        font-size: 1.2rem;
-        line-height: 1.5;
-        margin: 1.5rem 0;
-        text-align: justify;
-        
-      }
-     #entrada .autor {
-        font-size: 1rem;
-        font-style: italic;
-        text-align: right;
-        margin-top: 1.5rem;
-      }
+#entrada button[type="submit"]:hover {
+  background-color: #572364;
+}
+
+#entrada h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 1.5rem 0;
+  text-align: center;
+}
+
+#entrada p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin: 1.5rem 0;
+  text-align: justify;
+}
+
+#entrada .autor {
+  font-size: 1rem;
+  font-style: italic;
+  text-align: right;
+  margin-top: 1.5rem;
+}
