@@ -1,11 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
 
 main {
-  padding: 3.7rem 0.7rem;
-}
-
-main article {
-  min-height: 81vh;
+  min-height: 100vh;
+  margin-top: 3.7rem;
 }
 
 /*Hoja de estilo miCuenta*/
@@ -300,6 +297,7 @@ main article {
 }
 
 .detalles h1 {
+  margin-top: 2rem;
   font-size: xx-large;
   font-weight: bold;
   color: #3c3c3c;
@@ -366,33 +364,167 @@ main article {
 }
 
 /*Hoja de estilo Index*/
-#inicio {
+*{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+
+.Inicio{
+  text-align: center;
+  font-family: 'Ubuntu', sans-serif;
+  background-color: #80008041;
+}
+
+.header{
   display: flex;
-  flex-direction: row;
+  justify-content: center;
+  align-items: center;}
+
+.header{
+  height: 60vh !important;
+  background: url("http://localhost/AplicacionesWeb/img/fondoGris.jpg") no-repeat center;
+  background-size: cover;
+}
+
+.tituloInicio{
+  margin-bottom: 40px;
+  font-size: 60px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: white;
+  text-shadow: 2px 2px 4px #413a41;
+}
+
+.Inicio p{
+  margin-bottom: 40px;
+  font-size: 18px;
+  color: white;
+  padding: 0 100px;
+  text-align: center;
+  text-shadow: 2px 2px 4px #383138;
+}
+
+.btnInicio{
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 40px;
+  border: 2px solid #800080;
+  color: white;
+  text-decoration: none;
+  background: #800080;
+  text-shadow: 2px 2px 4px #383138;
+}
+
+.btnInicio:hover {
+  background: none;
+}
+
+.btn-home{
+  display: flex;
+}
+
+.btn-home a{
+  margin: 0 10px;
+}
+
+.content{
+  height: 65vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
-#inicio .caja1{
+.sau{
+  padding: 100px 0px;
+  background: #2e032e;
+}
+
+.box-container{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.box-container .boxInicio{
+  height: 11rem;
+  width: 17rem;
+  background: #412947;
+  text-align: center;
+  border-radius: 1rem;
+  box-shadow: 0 0.3rem 5rem rgba(0, 0, 0, 0.836);
+  margin: 2rem;
+}
+
+.box-container .boxInicio i{
+  height: 3rem;
+  width: 3rem;
+  line-height: 3rem;
+  text-align: center;
+  border-radius: 50%;
+  color: white;
+  background: #800080;
+  font-size: 2rem;
+  margin: 1rem 0;
+}
+
+.box-container .boxInicio h3{
+  font-size: 20px;
+  color: whitesmoke;
+}
+
+.box-container .boxInicio p{
+  padding: 0 15px;
+  font-size: 16px;
+} 
+
+.about{
+  background: #412947;
+}
+
+.price{
+  background: url("http://localhost/AplicacionesWeb/img/content-price.jpg") no-repeat center;
+  background-attachment: fixed;
+  background-size: cover;
+  text-align: center;
+}
+
+.news{
+  padding-top: 60px;
+  background: #412947;
+  padding-bottom: 60px;
+}
+
+.inicioBlog{
+  height: 250px;
   width: 100%;
 }
 
-#inicio .caja2 {
-  width: 100%;
-}
-
-#inicio a:hover .caja1, a:hover .caja2 {
-  filter: brightness(0.9);
+@media only screen and (max-with: 672px) {
+  .tituloInicio{
+    font-size: 40px;
+  }
+  .sau{
+    height: 80vh;
+  }
 }
 
 /*Hoja de estilo faqs*/
 #faqs .t1 {
-  margin-top: 2rem;
+  margin-left: 2rem;
+  margin-top: 5rem;
   font-family: 'Ubuntu', sans-serif;
   font-size: xx-large;
   font-weight: normal;
 }
 
 #faqs .t2 {
+  margin-left: 2rem;
   font-family: 'Ubuntu', sans-serif;
   font-size: xx-large;
   font-weight: bold;
@@ -401,19 +533,18 @@ main article {
 #faqs-etiqueta1, #faqs-etiqueta2, #faqs-etiqueta3 {
   margin-top: 20px;
   margin-bottom: 5px;
+  margin-left: 2rem;
   height: 5px;
   width: 60px;
   background-color: #800080;
 }
 
 #faqs-rectangulo1, #faqs-rectangulo2, #faqs-rectangulo3 {
-  margin-right: 2rem;
+  padding: 0rem 2rem;
   font-family: 'Ubuntu', sans-serif;
 }
 
 #faqs-preg1, #faqs-preg2, #faqs-preg3 {
-  height: 20%;
-  width: 80%;
   font-size: 15px;
   font-weight: bold;
   margin-bottom: 10px;
@@ -424,8 +555,6 @@ main article {
 }
 
 #faqs-resp1, #faqs-resp2, #faqs-resp3 {
-  height: 20%;
-  width: 100%;
   padding: 1rem 1rem;
   font-size: 13px;
   font-weight: normal;
@@ -440,6 +569,7 @@ main article {
 
 /*Hoja de estilo Propuesta*/
 #propuesta-imagen {
+  margin-top: 3.7rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -452,10 +582,10 @@ main article {
 }
 
 #propuesta {
+  margin-top: 2rem;
+  padding: 0 0.9rem;
   font-family: 'Ubuntu', sans-serif;
   font-size: 15px;
-  margin-right: 40px;
-  margin-top: 40px;
   text-align: justify;
 }
 
@@ -470,7 +600,8 @@ main article {
 
 /*Hoja de estilo planificacion*/
 #planificacion {
-  margin-top: 2rem;
+  margin-top: 5rem;
+  padding: 0 1rem;
 }
 
 #planificacion h2, #planificacion h3 {
@@ -485,7 +616,7 @@ main article {
 
 #planificacion h3{
   font-size: large;
-  padding: 0.5rem 0.6rem;
+  padding: 0.6rem 0.6rem;
 }
 
 #planificacion p, h3, th, td {
@@ -496,8 +627,7 @@ main article {
 #tabla-resumen {
   border-collapse: collapse;
   background-color: #8000800e;
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
+  padding: 0 0.5rem;
 }
 
 #tabla-resumen th, td {
@@ -508,6 +638,11 @@ main article {
 }
 
 /*Hoja de estilo Terminos y Condiciones*/
+#terminosycondiciones {
+  margin-top: 5rem;
+  padding: 0 0.9rem;
+}
+
 #terminosycondiciones h2 {
   font-family: 'Ubuntu', sans-serif;
   font-size: xx-large;
@@ -529,7 +664,7 @@ main article {
 
 /*Hoja de estilo Sobre Nosotros*/
 .n1{
-  margin-top: 2rem;
+  margin-top: 5rem;
   font-family: 'Ubuntu', sans-serif;
   font-size: xx-large;
   font-weight: normal;
@@ -710,7 +845,8 @@ main article {
 
 /*Hoja de estilo Bocetos*/
 #bocetos{
-  margin-top: 2rem;
+  margin-top: 5rem;
+  padding: 0 0.9rem;
 }
 
 #bocetos h1 {

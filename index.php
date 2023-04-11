@@ -5,36 +5,85 @@ require_once __DIR__.'/includes/configuracion.php';
 $tituloPagina = 'La Quinta Caja';
 
 $contenidoPrincipal = <<<EOS
-<div id="inicio">
-
+<div class="Inicio">
+	<section class="content header">
+		<h2 class="tituloInicio">La Quinta Caja</h2>
+		<p>
+			Nos dedicamos a la venta de cajas sorpresa. ¡De segunda mano!¡Sostenibles!
+			Podeis comprar las cajas individualmente o mediante suscripciones mensuales...
+			¡En la Quinta Caja, encajamos contigo!
+		</p>
+		<div class="btn-home">
+			<a href="contacto.php" class="btnInicio">Contactanos</a>
 EOS;
 
 if(isset($_SESSION['login'])){
-	
 	$contenidoPrincipal .= <<<EOS
-	<a href="miCuenta.php">
-    	<img src="img/caja-normal.jpg" alt="Imagen de la Caja normal" class="caja1">
-    </a> 
-	
+			<a href="miCuenta.php" class="btnInicio">Mi cuenta</a>
 EOS;
-	
-} else {
+}
+
+else {
 	$contenidoPrincipal .= <<<EOS
-	<a href="registro.php">
-    	<img src="img/caja-normal.jpg" alt="Imagen de la Caja normal" class="caja1">
-    </a> 
-	
+			<a href="registro.php" class="btnInicio">Suscribete</a>
 EOS;
 } 
 
 $contenidoPrincipal .= <<<EOS
-	<a href="tienda.php">
-    	<img src="img/caja-especial.jpg" alt="Imagen de la Caja especial" class="caja2">
-    </a>
-	
+		</div>
+	</section>
+	<section class="content sau">
+        <h2 class="tituloInicio">Cajas</h2>
+        <p>
+            Hoy en dia la contaminacion provocada por el
+            fast fashion esta en aumento, naciendo asi esta empresa sostenible,
+            dedicada a la venta de cajas de segunda mano
+        </p>
+        <div class="box-container">
+            <div class="boxInicio">
+                <i class="fas fa-plus"></i>
+                <h3>Caja normal</h3>
+                <p>Caja disponible con la suscripcion basica</p>
+            </div>
+            <div class="boxInicio">
+                <i class="fas fa-star"></i>
+                <h3>Caja especial</h3>
+                <p>Caja disponible con la suscripcion premium</p>
+            </div>
+        </div>
+        <a href="tienda.php" class="btnInicio">Ir a la tienda</a>
+    </section>
+	<section class="content about">
+        <h2 class="tituloInicio">Nosotros</h2>
+        <p>
+            Somos un grupo de jovenes apasionados por la moda y el reciclaje,
+            siempre teniendo en cuenta las tendencias del momento
+        </p>
+        <a href="sobrenosotros.php" class="btnInicio">Saber mas</a>
+    </section>
+	<section class="content price">
+		<article class="contain">
+			<h2 class="tituloInicio">Suscripciones</h2>
+			<p>
+				Tenemos dos tipos de suscripciones, la normal
+				y la premium
+			</p>
+			<a href="detalles.php" class="btnInicio">Saber mas</a>
+		</article>
+    </section>
+	<section class="content news">
+        <h2 class="tituloInicio">Blog</h2>
+        <p>
+            Tambien contamos con un blog donde estaran
+            las noticias favoritas de nuestro equipo creativo
+        </p>
+        <figure class="blogear">
+            <img src="img/content-news.jpg" class="inicioBlog" alt="blogear">
+        </figure>
+    </section>
 </div>
-EOS;
 
+EOS;
 
 require __DIR__.'/includes/plantillas/plantilla.php';
 ?>

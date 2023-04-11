@@ -2,11 +2,12 @@
 <html lang="es">
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-    <title><?= $tituloPagina ?></title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 	<link rel="stylesheet" type="text/css" href="css/tienda.css">
 	<script type="text/javascript" src="js/codigo.js"></script>
-</head>
+	<title><?= $tituloPagina ?></title></head>
 <body>
 <div id="contenedor">
 <?php
