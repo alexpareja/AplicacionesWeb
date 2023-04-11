@@ -21,7 +21,7 @@ class FormularioRegistro extends Formulario
 
         $html = <<<EOF
         $htmlErroresGlobales
-        <div id = "login-registro-form">
+        <div class = "login-registro-form">
             <fieldset>
                 <legend>¿Nuevo cliente?</legend>
                 <p class="account">Crea tu cuenta aquí. ¿Ya tienes una cuenta? <a href="login.php">Inicia sesión</a></p>
