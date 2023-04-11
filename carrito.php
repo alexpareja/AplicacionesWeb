@@ -46,7 +46,7 @@ $contenidoPrincipal .= <<<EOS
 <div id="productos">
     <ul class="lista-productos">
 EOS;
-if (isset($_SESSION['cart'])) {
+if (isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
     foreach ($_SESSION['cart'] as $id => &$producto) {
         foreach ($producto as $size => &$item) {
             if (is_array($item)) {

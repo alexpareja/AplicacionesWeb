@@ -22,7 +22,7 @@ $contenidoPrincipal .= <<<EOS
     <ul class="lista-productos">
 EOS;
 
-if (isset($_SESSION['wishlist'])) {
+if (isset($_SESSION['wishlist']) && !empty($_SESSION['wishlist'])) {
     foreach ($_SESSION['wishlist'] as $id => &$producto) {
         if (is_array($producto)) {
             $link = 'mostrarProducto.php?id='.$producto['id'];
