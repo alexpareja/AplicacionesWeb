@@ -38,7 +38,7 @@ main article {
 }
 
 .listaMiCuenta {
-  margin: 0 auto;
+  margin: 1.25rem auto 0;
   display: flex;
   flex-wrap: wrap; 
   justify-content: center;
@@ -46,8 +46,8 @@ main article {
 }
 
 .listaMiCuenta li {
-  flex-basis: 33%; 
-  padding: 1.5rem;
+  flex-basis: 25%;
+  padding: 0.75rem;
   box-sizing: border-box;
   text-align: center;
   list-style: none;
