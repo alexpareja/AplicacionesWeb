@@ -5,7 +5,7 @@ $contenidoPrincipal = <<<EOS
 <div id="cabecera-perfil">
   <h2>Zona Suscripción</h2>
   <br>
-  <p>Aquí puedes encontrar toda la información sobre tu suscripción:</p>
+  <p>Aquí puedes encontrar toda la información sobre tu suscripción</p>
 </div>
 EOS;
 

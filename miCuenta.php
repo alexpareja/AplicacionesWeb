@@ -10,7 +10,7 @@ $contenidoPrincipal = <<<EOS
   <p>Hola,</p>
   <h2>$nombre</h2>
   <br>
-  <p>Aquí puedes encontrar toda tu información:</p>
+  <p>Aquí puedes encontrar toda tu información</p>
 </div>
 
 <ul class="listaMiCuenta">

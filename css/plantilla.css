@@ -11,19 +11,23 @@ main article {
 /*Hoja de estilo miCuenta*/
 .sesion {
   position: relative;
-  background-color: #800080;
+  background-color: purple;
   color: white;
-  border: 2px solid #572364;
-  padding: 5rem 2rem;
+  border: 2px solid black;
+  padding: 20px;
+  margin-top: 1.25rem;
+  margin-bottom: 2%;
   border-radius: 0;
   width: 100%;
   box-sizing: border-box;
-  height: 17rem;
+  height: 200px;;
 }
 
 .sesion h2 {
   font-size: xx-large;
-  line-height: 0.15;
+  line-height: 0.05;
+  margin-left: 3.5rem;
+  margin-top: 1.2rem;
   color: white;
   font-family: 'Ubuntu', sans-serif;
   font-weight: bold;
@@ -32,7 +36,9 @@ main article {
 
 .sesion p {
   font-size: x-large;
+  text-align: justify;
   font-family: 'Ubuntu', sans-serif;
+  margin-left: 3rem;
   margin-bottom: 1rem;
   color: white;
 }
@@ -109,6 +115,7 @@ main article {
   position: relative;
   background-color: purple;
   color: white;
+  margin-top: 1.25rem;
   border: 2px solid black;
   padding: 20px;
   margin-bottom: 2%;
@@ -121,8 +128,8 @@ main article {
 #cabecera-perfil h2 {
   font-size: xx-large;
   line-height: 0.05;
-  margin-left: 50px;
-  margin-top: 30px;
+  margin-left: 3.5rem;
+  margin-top: 2rem;
   color: white;
   font-family: 'Ubuntu', sans-serif;
   font-weight: bold;
@@ -133,8 +140,8 @@ main article {
   font-size: x-large;
   text-align: justify;
   font-family: 'Ubuntu', sans-serif;
-  margin-left: 50px;
-  margin-bottom: 15px;
+  margin-left: 3rem;
+  margin-bottom: 1rem;
   color: white;
 }
 
@@ -157,8 +164,8 @@ main article {
 
 #info-perfil h3, #info-dir h3 {
   font-size: large;
-  margin-bottom: 10px;
-  margin-left: 50px;
+  margin-bottom: 0.75rem;
+  margin-left: 3.5rem;
   color: #333;
   font-family: 'Ubuntu', sans-serif;
 }
@@ -169,15 +176,15 @@ main article {
 
 #info-perfil p, #info-dir p {
   font-size: medium;
-  margin-bottom: 5px;
-  margin-left: 50px;
+  margin-bottom: 0.3rem;
+  margin-left: 3rem;
   color: #555;
   font-family: 'Ubuntu', sans-serif;
 }
 
 #info-perfil .botones {
-  margin-top: 10px;
-  margin-left: 57px;
+  margin-top: 0.75rem;
+  margin-left: 3.8rem;
 }
 
 #info-perfil .boton-edicion {
