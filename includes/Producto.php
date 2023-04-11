@@ -65,11 +65,18 @@ class Producto
         $ProductoDAO= new ProductoDAO();
         return $ProductoDAO->borra($producto->id);
     }
+	
+
     
     public static function borraCantidad($productoId, $talla, $cantidad){
         $ProductoDAO= new ProductoDAO();
         return $ProductoDAO->borraCantidad($productoId, $talla, $cantidad);
     }
+	
+	public function vaciarStock($productoId){
+		  $ProductoDAO= new ProductoDAO();
+        return $ProductoDAO->borrarStock($productoId);
+	}
     
     public function getId()
     {

@@ -134,6 +134,31 @@ class ProductoDAO
         return true;
     }
 	
+	  //borra la cantidad del producto
+    public function borrarStock($idProducto)
+    {
+        if (!$idProducto) {
+            return false;
+        } 
+       
+
+       $query=sprintf("UPDATE productos SET stockXS = '%d', stockS = '%d', stockM = '%d', stockL = '%d',stockXL = '%d' where id = '%d'"
+            , 0
+            , 0
+            , 0
+            , 0
+            , 0
+			, $idProducto
+        );
+
+        if ( ! $this->conn->query($query) ) {
+            error_log("Error BD ({$conn->errno}): {$conn->error}");
+            return false;
+        }
+        
+        return true;
+    }
+	
 	//actualiza el producto
     public function actualiza($producto)
     {

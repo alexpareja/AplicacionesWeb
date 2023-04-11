@@ -28,11 +28,18 @@ class Compra
         $this->precio=$precio;
     }
 
-    public static function buscaPorID($idCompra)
+    public static function buscaPorId($idCompra)
     {
         $compraDAO= new CompraDAO();
-        return $compraDAO->buscaPorUsuario($idCompra);
+        return $compraDAO->buscaPorId($idCompra);
     }
+	
+	public static function buscaPorProducto($idProducto)
+    {
+        $compraDAO= new CompraDAO();
+        return $compraDAO->buscaPorProducto($idProducto);
+    }
+
 
     public static function crea($idUsuario, $idProducto, $talla,$cantidad,$precio)
     {

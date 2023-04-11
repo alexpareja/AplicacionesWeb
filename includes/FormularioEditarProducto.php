@@ -112,7 +112,14 @@ class FormularioEditarProducto extends Formulario
 		if(isset($datos['delete'])){
 			$id = $datos['id'];
 			$producto=Producto::buscaPorId($id);  
-			Producto::borra($producto);
+			$compra=Compra::buscaPorProducto($id);
+			
+		
+			if(!$compra){
+			Producto::borra($producto);} 
+			else {
+				$producto->vaciarStock($id); 
+			}
 		}else{
 			   $this->errores = [];
 		
