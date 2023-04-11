@@ -64,17 +64,17 @@ main article {
   padding: 0.625rem;
   margin-bottom: 1.25rem;
   border-radius: 0.312rem;
-  border: 0.0625rem solid #ccc;
+  border: 0.0625rem solid #800080;
   resize: vertical;
 }
 
 .contacto-form textarea {
   width: 97%;
-  height: 100px;
+  height: 6.25rem;
   padding: 0.625rem;
   margin-bottom: 1.25rem;
   border-radius: 0.312rem;
-  border: 0.0625rem solid #ccc;
+  border: 0.0625rem solid #800080;
   resize: vertical;
 }
 
@@ -98,7 +98,7 @@ button[type="submit"]:hover {
 }
 
 .contacto-form input[type="radio"]:checked + label {
-  color: purple;
+  color: #800080;
 }
 
 .contacto-form:hover input[type=radio]:not(:checked) + i{
@@ -112,7 +112,7 @@ button[type="submit"]:hover {
   background-color: #fff;
   padding: 1.25rem;
   border-radius: 0.625rem;
-  box-shadow: 0px 0px 0.625rem #ccc;
+  box-shadow: 0 0 0.625rem #ccc;
   font-family: Verdana;
   font-size: 0.812rem;
 }
