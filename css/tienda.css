@@ -156,8 +156,17 @@ padding: 5px 100px;
   padding: 5px;
 }
 
-#tienda button[name="remove_quantity"] {
+#tienda button[name="remove_quantity", "comprar", "remove"] {
   font-size: 1em;
+}
+
+#tienda .comprar-eliminar-producto{
+    justify-content: center;
+    gap: 0.625em;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    margin-top: 10px;
 }
 
 #tienda .no-prod {
