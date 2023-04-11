@@ -1193,10 +1193,13 @@ div.comments {
         padding-left: 1.563em;
         margin-bottom: 0.625em;
         text-align: left;
+        line-height: 1.4em;
     }
     
     #pago .total-price p {
         text-align: center;
+        font-size: 1.25em;
+        font-weight: bold;
     }
     
     #pago .total-price form button {
