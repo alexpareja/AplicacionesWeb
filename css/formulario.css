@@ -11,7 +11,7 @@ main article {
 /*Hoja de estilo formulario contacto*/
 .contacto-form {
   margin: 3.125rem auto 0;
-  max-width: 53.125rem;
+  max-width: 43.2rem;
   background-color: #fff;
   padding: 1.25rem;
   border-radius: 0.625rem;
@@ -185,21 +185,6 @@ button[type="submit"]:hover {
 
 #errorLogin, #errorRegistro {
   color: red;
-}
-
-button[type="submit"] {
-  background-color: #800080;
-  color: white;
-  width: 100%;
-  padding: 1rem;
-  border: none;
-  border-radius: 0.312rem;
-  cursor: pointer;
-  font-size: 1.2em;
-}
-
-button[type="submit"]:hover {
-  background-color: #572364;
 }
 
 .login-registro-form p.account a {
