@@ -32,9 +32,9 @@ if (isset($_SESSION['wishlist']) && !empty($_SESSION['wishlist'])) {
             $precio = $producto['price'];
             $contenidoPrincipal .= <<<EOS
                 <li>
-                    
-                    <img class='producto-imagen' src='$src' alt='$alt'>
-                    
+                    <div class="producto-imagen">
+                    <img class='imgProducto' id='imgProducto' src='$src' alt='$alt'>
+                    </div>
                     <br>
                     $nombre <span class='precio'> $precio € </span>
                     <div class="comprar-eliminar-producto">
