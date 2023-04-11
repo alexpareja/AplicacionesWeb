@@ -48,9 +48,18 @@ class FormularioNuevaEntrada extends Formulario
 					{$erroresCampos['contenido']}
 				</div>
 				<div>
-					<p><label for="imagen">Imagen:</label></p>
-					<p><input id="imagen" type="file" name="imagen"></p>
+				<label for="imagen">Imagen:</label>
+					<div id='subir-archivo1' class='subir-archivo1'>
+						<p>Previsualización de la imagen</p>
+					</div>
+					<div class="subir-archivo2" onchange="changeHandler(event);">
+						<label for="imagen" class="upload_button">
+						<p>Elige la imagen de la entrada</p>
+						<input id="upload-input" type="file" name="imagen">
+						</label>
+					</div>
 					{$erroresCampos['imagen']}
+
 				</div>
 				<div>
 				<input type="hidden" name="autor" value="{$this->idAutor}">
