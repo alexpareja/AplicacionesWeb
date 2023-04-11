@@ -9,136 +9,136 @@ main article {
 }
 
 /*Hoja de estilo formulario contacto*/
-#contacto-form {
-  margin: 50px auto 0;
-  max-width: 850px;
+.contacto-form {
+  margin: 3.125rem auto 0;
+  max-width: 43.2rem;
   background-color: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0px 0px 10px #ccc;
+  padding: 1.25rem;
+  border-radius: 0.625rem;
+  box-shadow: 0px 0px 0.625rem #ccc;
   font-family: Verdana;
-  font-size: 13px;
+  font-size: 0.812rem;
 }
 
-#contacto-form fieldset {
+.contacto-form fieldset {
   border: none;
   margin: 0;
   padding: 0;
 }
 
-#contacto-form legend {
+.contacto-form legend {
   font-size: 1.5em;
   font-weight: bold;
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
 }
 
-#contacto-form label {
+.contacto-form label {
   display: block;
   font-size: 1.2em;
   font-weight: bold;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 0.625rem;
+  margin-bottom: 0.625rem;
 }
 
-#contacto-form input[type="checkbox"] {
+.contacto-form input[type="checkbox"] {
   display: inline;
-  margin-right: 5px;
+  margin-right: 0.312rem;
 }
 
-#contacto-form label.izq {
+.contacto-form label.izq {
   display: inline-block;
 }
 
-#contacto-form label.terminos {
+.contacto-form label.terminos {
   display: inline-block;
 }
 
-#contacto-form label.terminos a{
+.contacto-form label.terminos a{
   color: #800080;
   font-weight: bold;
 }
 
-#contacto-form input[type="text"],
-#contacto-form input[type="email"] {
+.contacto-form input[type="text"],
+.contacto-form input[type="email"] {
   width: 97%;
-  padding: 10px;
-  margin-bottom: 20px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
+  padding: 0.625rem;
+  margin-bottom: 1.25rem;
+  border-radius: 0.312rem;
+  border: 0.0625rem solid #800080;
   resize: vertical;
 }
 
-#contacto-form textarea {
+.contacto-form textarea {
   width: 97%;
-  height: 100px;
-  padding: 10px;
-  margin-bottom: 20px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
+  height: 6.25rem;
+  padding: 0.625rem;
+  margin-bottom: 1.25rem;
+  border-radius: 0.312rem;
+  border: 0.0625rem solid #800080;
   resize: vertical;
 }
 
-#contacto-form button[type="submit"] {
+button[type="submit"] {
   background-color: #800080;
   color: white;
   width: 100%;
-  padding: 15px;
+  padding: 1rem;
   border: none;
-  border-radius: 5px;
+  border-radius: 0.312rem;
   cursor: pointer;
-  margin-bottom: 10px;
   font-size: 1.2em;
 }
 
-#contacto-form button[type="submit"]:hover {
+button[type="submit"]:hover {
   background-color: #572364;
 }
 
-#contacto-form label {
+.contacto-form label {
   cursor: pointer;
 }
 
-#contacto-form input[type="radio"]:checked + label {
-  color: purple;
+.contacto-form input[type="radio"]:checked + label {
+  color: #800080;
 }
 
-#contacto-form:hover input[type=radio]:not(:checked) + i{
+.contacto-form:hover input[type=radio]:not(:checked) + i{
   background: #572364;
 }
 
 /*Hoja de estilo formulario login y registro*/
-#login-registro-form {
-  margin: 50px auto 0;
-  max-width: 500px;
+.login-registro-form {
+  margin: 3.125rem auto 0;
+  max-width: 31.25rem;
   background-color: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0px 0px 10px #ccc;
+  padding: 1.25rem;
+  border-radius: 0.625rem;
+  box-shadow: 0 0 0.625rem #ccc;
   font-family: Verdana;
-  font-size: 13px;
+  font-size: 0.812rem;
 }
 
-#login-registro-form fieldset {
+.login-registro-form fieldset {
   border: none;
   margin: 0;
   padding: 0;
   z-index: 2;
 }
 
-#login-registro-form p {
-  margin-left: 5px;
+.login-registro-form p {
+  margin-left: 0.3rem;
 }
 
-#login-registro-form legend {
+.login-registro-form legend {
   font-size: 1.5em;
   font-weight: bold;
-  margin-bottom: 20px;
+  margin-left: 0.3rem;
+  margin-bottom: 1.25rem;
 }
 
 .inputbox label {
   position: absolute;
-  top:-5px;
-  left: 5px;
+  top:-0.312rem;
+  left: 0.312rem;
   color: #000;
   font-size: 1em;
   pointer-events: none;
@@ -150,32 +150,32 @@ main article {
 
 .inputbox input {
     width: 98%;
-    height: 40px;
+    height: 2.5rem;
     background: transparent;
     border: none;
     outline: none;
     font-size: 1em;
-    padding:0 5px 0 5px;
+    padding:0 0.312rem 0 0.312rem;
     color: #000;
-    border-bottom: 1px solid #000;
+    border-bottom: 0.0625rem solid #000;
 }
 
-#login-registro-form input[type="checkbox"] {
+.login-registro-form input[type="checkbox"] {
   display: inline;
-  margin-right: 5px;
+  margin-right: 0.312rem;
 }
 
-#login-registro-form label.terminos {
+.login-registro-form label.terminos {
   display: inline-block;
 }
 
-#login-registro-form label.terminos a{
+.login-registro-form label.terminos a{
   color: #800080;
   font-weight: bold;
 }
 
-#login-registro-form div {
-  margin: 15px 0;
+.login-registro-form div {
+  margin: 1rem 0;
   position: relative;
 }
 
@@ -183,32 +183,17 @@ main article {
   color: red;
 }
 
-#login-registro-form #errorLogin, #errorRegistro {
+#errorLogin, #errorRegistro {
   color: red;
 }
 
-#login-registro-form button[type="submit"] {
-  background-color: #800080;
-  color: white;
-  width: 100%;
-  padding: 15px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 1.2em;
-}
-
-#login-registro-form button[type="submit"]:hover {
-  background-color: #572364;
-}
-
-#login-registro-form p.account a {
+.login-registro-form p.account a {
   color: #800080;
   font-weight: bold;
 }
 
 /*Hoja de estilo formulario nuevo producto*/
-#newP-form {
+#newP-form, #newE-form {
   margin: 50px auto 0;
   max-width: 500px;
   background-color: #fff;
@@ -219,19 +204,19 @@ main article {
   font-size: 13px;
 }
 
-#newP-form fieldset {
+#newP-form fieldset, #newE-form fieldset {
   border: none;
   margin: 0;
   padding: 0;
 }
 
-#newP-form legend {
+#newP-form legend, #newE-form legend {
   font-size: 1.5em;
   font-weight: bold;
   margin-bottom: 20px;
 }
 
-#newP-form label {
+#newP-form label, #newE-form label {
   display: block;
   font-size: 1.2em;
   font-weight: bold;
@@ -240,7 +225,7 @@ main article {
 
 }
 
-#newP-form input[type="text"], textarea{
+#newP-form input[type="text"], textarea, #newE-form input[type="text"]{
   width: 95%;
   padding: 10px;
   margin-bottom: 20px;
@@ -249,7 +234,7 @@ main article {
   resize: vertical;
 }
 
-#newP-form button[type="submit"] {
+#newP-form button[type="submit"], #newE-form button[type="submit"]  {
   background-color: #800080;
   color: white;
   padding: 7px 7px;
@@ -261,11 +246,11 @@ main article {
   width:100%;
 }
 
-#newP-form button[type="submit"]:hover {
+#newP-form button[type="submit"]:hover, #newE-form button[type="submit"]:hover {
   background-color: #572364;
 }
 
-#newP-form ul.botones li{
+#newP-form ul.botones li, #newE-form ul.botones li{
   display:inline-block;
   width:49.6%;
 }
@@ -281,7 +266,7 @@ main article {
   text-align: center;
 }
 
-#newP-form input.quantity {
+#newP-form input.quantity{
   font-size: 14px;
   padding: 5px;
   border-radius: 5px;
@@ -381,6 +366,10 @@ main article {
   border-radius: 5px;
   border: 1px solid #800080;
   resize: vertical;
+}
+
+#contenido{
+  height: 20vh
 }
 
 #product-form button[type="submit"] {

@@ -19,7 +19,7 @@ class FormularioLogin extends Formulario
         // Se genera el HTML asociado a los campos del formulario y los mensajes de error.
         $html = <<<EOF
         $htmlErroresGlobales
-        <div id="login-registro-form">
+        <div class="login-registro-form">
           <fieldset>
             <legend>¿Ya estás registrado?</legend>
             <p class="account">Inicia sesión ahora para aprovecharte de todos los beneficios de la cuenta de cliente de La Quinta Caja ¿Nuevo cliente? <a href="registro.php">Regístrate aquí</a></p>

@@ -46,7 +46,7 @@ $contenidoPrincipal .= <<<EOS
 <div id="productos">
     <ul class="lista-productos">
 EOS;
-if (isset($_SESSION['cart'])) {
+if (isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
     foreach ($_SESSION['cart'] as $id => &$producto) {
         foreach ($producto as $size => &$item) {
             if (is_array($item)) {
@@ -59,8 +59,9 @@ if (isset($_SESSION['cart'])) {
                 $talla = strtoupper($talla);
                 $contenidoPrincipal .= <<<EOS
                     <li>
-                        
-                        <img class="producto-imagen" src='$src' alt='$alt'>
+                        <div class="producto-imagen">
+                        <img class='imgProducto' id='imgProducto' src='$src' alt='$alt'>
+                        </div>
                         <br>
                         <p>$nombre ($talla, $precio €): $cantidad</p>
                         <div class="eliminar-producto">

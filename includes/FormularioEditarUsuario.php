@@ -21,7 +21,7 @@ class FormularioEditarUsuario extends Formulario
 
         $html = <<<EOF
         $htmlErroresGlobales
-        <div id = "login-registro-form">
+        <div class = "login-registro-form">
             <fieldset>
                 <legend>Información usuario</legend>
                 <div class="inputbox">

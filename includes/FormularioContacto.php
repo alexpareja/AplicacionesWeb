@@ -10,7 +10,7 @@ class FormularioContacto extends Formulario
     protected function generaCamposFormulario(&$datos)
     {
         $html = <<<EOF
-        <div id="contacto-form">
+        <div class="contacto-form">
         <fieldset>
             <legend>Contacto</legend>
             <div>

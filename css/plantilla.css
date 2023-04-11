@@ -1316,34 +1316,37 @@ div.comments {
     #pago h2 {
         font-weight: bold;
         font-size: 2em;
-        margin-top: 20px;
-        margin-bottom: 20px;
+        margin-top: 1.25em;
+        margin-bottom: 1.25em;
     }
     
     #pago ul.resumen-pago {
         font-size: 1.1em;
-        border: 1px solid black;
-        padding: 10px;
+        border: 0.063em solid black;
+        padding: 0.625em;
         display: inline-block;
         box-sizing: border-box;
-        padding-left: 25px;
-        margin-bottom: 10px;
+        padding-left: 1.563em;
+        margin-bottom: 0.625em;
         text-align: left;
+        line-height: 1.4em;
     }
     
     #pago .total-price p {
         text-align: center;
+        font-size: 1.25em;
+        font-weight: bold;
     }
     
     #pago .total-price form button {
         background-color: #800080;
         color: white;
-        padding: 7px 7px;
+        padding: 0.438em 0.438em;
         border: none;
-        border-radius: 5px;
+        border-radius: 0.313em;
         cursor: pointer;
         font-size: 1.2em;
-        margin-top: 20px;
+        margin-top: 1.25em;
     }
 	
 /*estilos páginas de confirmación*/
