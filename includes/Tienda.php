@@ -30,10 +30,25 @@ class Tienda {
 					<li class="producto" data-precio='$precio' data-talla='$tallas' nombre='$nombre'>
 						<a href='$link'>
 						<div class="producto-imagen">
-						<img class='imgProducto' id='imgProducto' src='$src' alt='$alt'>
+						<img class='imgProducto
+			EOS;
+			if($tallas == ''){
+				$html .= <<<EOS
+					img-sin-stock
+				EOS;
+			}
+			$html .= <<<EOS
+				' id='imgProducto' src='$src' alt='$alt'>
 						</div>
 						<br>
-						$nombre <span class='precio'> $precio € </span>
+						$nombre <span class='precio'> $precio € </span>						
+			EOS;
+				if($tallas == ''){
+					$html .= <<<EOS
+					<span class = "sin-stock"> sin stock </span>
+					EOS;
+				}
+				$html .= <<<EOS
 						</a>
 					</li>
 				EOS;
