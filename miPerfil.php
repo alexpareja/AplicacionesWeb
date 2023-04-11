@@ -28,10 +28,6 @@ $contenidoPrincipal = '';
                         <input type="hidden" name="id" value="$id">
                         <button type="submit" class="boton-edicion">Editar</button>
                     </form>
-                    <form action='cambiarContrasena.php'>
-                        <input type="hidden" name="id" value="$id">
-                        <button type="submit" class="boton-edicion">Cambiar Contraseña</button>
-                    </form>
                 </div>
             </div>
             <div id="info-dir">
