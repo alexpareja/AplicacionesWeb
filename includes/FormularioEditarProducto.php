@@ -94,7 +94,7 @@ class FormularioEditarProducto extends Formulario
 						<button type="submit" name="edit">Editar Producto</button>
 						</li>
 						<li>
-						<button type="submit" name="delete">Eliminar producto</button>
+						<button type="submit" name="delete" onclick="return confirm('¿Estás seguro de que deseas eliminar el producto?')">Eliminar producto</button>
 						</li>
 						
 					</ul>
