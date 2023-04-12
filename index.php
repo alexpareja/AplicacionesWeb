@@ -10,11 +10,11 @@ $contenidoPrincipal = <<<EOS
 		<h2 class="tituloInicio">La Quinta Caja</h2>
 		<p>
 			Nos dedicamos a la venta de cajas sorpresa. ¡De segunda mano!¡Sostenibles!
-			Podeis comprar las cajas individualmente o mediante suscripciones mensuales...
+			Podéis comprar las cajas individualmente o mediante suscripciones mensuales...
 			¡En la Quinta Caja, encajamos contigo!
 		</p>
 		<div class="btn-home">
-			<a href="contacto.php" class="btnInicio">Contactanos</a>
+			<a href="contacto.php" class="btnInicio">Contáctanos</a>
 EOS;
 
 if(isset($_SESSION['login'])){
@@ -25,7 +25,7 @@ EOS;
 
 else {
 	$contenidoPrincipal .= <<<EOS
-			<a href="registro.php" class="btnInicio">Suscribete</a>
+			<a href="registro.php" class="btnInicio">Suscríbete</a>
 EOS;
 } 
 
@@ -35,20 +35,20 @@ $contenidoPrincipal .= <<<EOS
 	<section class="content sau">
         <h2 class="tituloInicio">Cajas</h2>
         <p>
-            Hoy en dia la contaminacion provocada por el
-            fast fashion esta en aumento, naciendo asi esta empresa sostenible,
+            Hoy en día la contaminación provocada por el
+            fast fashion está en aumento, naciendo así esta empresa sostenible,
             dedicada a la venta de cajas de segunda mano
         </p>
         <div class="box-container">
             <div class="boxInicio">
                 <i class="fas fa-plus"></i>
                 <h3>Caja normal</h3>
-                <p>Caja disponible con la suscripcion basica</p>
+                <p>Caja disponible con la suscripción básica</p>
             </div>
             <div class="boxInicio">
                 <i class="fas fa-star"></i>
                 <h3>Caja especial</h3>
-                <p>Caja disponible con la suscripcion premium</p>
+                <p>Caja disponible con la suscripción premium</p>
             </div>
         </div>
         <a href="tienda.php" class="btnInicio">Ir a la tienda</a>
@@ -59,7 +59,7 @@ $contenidoPrincipal .= <<<EOS
             Somos un grupo de jovenes apasionados por la moda y el reciclaje,
             siempre teniendo en cuenta las tendencias del momento
         </p>
-        <a href="sobrenosotros.php" class="btnInicio">Saber mas</a>
+        <a href="sobrenosotros.php" class="btnInicio">Saber más</a>
     </section>
 	<section class="content price">
 		<article class="contain">
@@ -68,13 +68,13 @@ $contenidoPrincipal .= <<<EOS
 				Tenemos dos tipos de suscripciones, la normal
 				y la premium
 			</p>
-			<a href="detalles.php" class="btnInicio">Saber mas</a>
+			<a href="detalles.php" class="btnInicio">Saber más</a>
 		</article>
     </section>
 	<section class="content news">
         <h2 class="tituloInicio">Blog</h2>
         <p>
-            Tambien contamos con un blog donde estaran
+            También contamos con un blog donde estarán
             las noticias favoritas de nuestro equipo creativo
         </p>
         <figure class="blogear">

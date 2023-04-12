@@ -40,7 +40,7 @@ $contenidoPrincipal = <<<EOS
                     <div class="timeline-date">8 feb</div>
                     <div class="timeline-content">
                         <h3 class="tituloTime">Etapa 0</h3>
-                        <p class="descripcionTime">Formación de grupos y realización de la propuesta inicial del proyecto.</p>
+                        <p class="descripcionTime">Formación de grupos y realización de la propuesta inicial del proyecto</p>
                         <p class="miembrosTime">TODOS</p>
                     </div>
                 </div>
@@ -58,7 +58,7 @@ $contenidoPrincipal = <<<EOS
                     <div class="timeline-date">10 feb</div>
                     <div class="timeline-content">
                         <h3 class="tituloTime">Etapa 1.2</h3>
-                        <p class="descripcionTime">Creación de la página con nombre "Detalles".</p>
+                        <p class="descripcionTime">Creación de la página con nombre "Detalles"</p>
                         <p class="miembrosTime">Cristina Morillo</p>
                     </div>
                 </div>
@@ -67,16 +67,25 @@ $contenidoPrincipal = <<<EOS
                     <div class="timeline-date">11 feb</div>
                     <div class="timeline-content">
                         <h3 class="tituloTime">Etapa 1.3</h3>
-                        <p class="descripcionTime">Creación de la página con nombre "Planificacion".</p>
+                        <p class="descripcionTime">Creación de la página con nombre "Planificacion"</p>
                         <p class="miembrosTime">Lucero Abregú</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">12 feb</div>
+                    <div class="timeline-content">
+                        <h3 class="tituloTime">Etapa 1.4</h3>
+                        <p class="descripcionTime">Creación de la página con nombre "Contacto"</p>
+                        <p class="miembrosTime">Cristina Morillo</p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-date">13 feb</div>
                     <div class="timeline-content">
-                        <h3 class="tituloTime">Etapa 1.4</h3>
-                        <p class="descripcionTime">Creación de la página con nombre "Index".</p>
+                        <h3 class="tituloTime">Etapa 1.5</h3>
+                        <p class="descripcionTime">Creación de la página con nombre "Index"</p>
                         <p class="miembrosTime">Jesús Hernández</p>
                     </div>
                 </div>
@@ -84,8 +93,8 @@ $contenidoPrincipal = <<<EOS
                     <div class="timeline-dot"></div>
                     <div class="timeline-date">20 feb</div>
                     <div class="timeline-content">
-                        <h3 class="tituloTime">Etapa 1.5</h3>
-                        <p class="descripcionTime">Creación de la página con nombre "Bocetos".</p>
+                        <h3 class="tituloTime">Etapa 1.6</h3>
+                        <p class="descripcionTime">Creación de la página con nombre "Bocetos"</p>
                         <p class="miembrosTime">Elena Basca</p>
                     </div>
                 </div>
@@ -93,8 +102,8 @@ $contenidoPrincipal = <<<EOS
                     <div class="timeline-dot"></div>
                     <div class="timeline-date">22 feb</div>
                     <div class="timeline-content">
-                        <h3 class="tituloTime">Etapa 1.6</h3>
-                        <p class="descripcionTime">Validación de HTML.</p>
+                        <h3 class="tituloTime">Etapa 1.7</h3>
+                        <p class="descripcionTime">Validación de HTML</p>
                         <p class="miembrosTime">Alejandro Pareja</p>
                     </div>
                 </div>
@@ -103,7 +112,7 @@ $contenidoPrincipal = <<<EOS
                     <div class="timeline-date">24 feb</div>
                     <div class="timeline-content">
                         <h3 class="tituloTime">Entrega práctica 1</h3>
-                        <p class="descripcionTime">Descripción detallada del proyecto.</p>
+                        <p class="descripcionTime">Descripción detallada del proyecto</p>
                         <p class="miembrosTime">TODOS</p>
                     </div>
                 </div>
