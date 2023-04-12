@@ -99,14 +99,14 @@ class FavoritosDAO
         return false;
     }
 
-    public function borra($id)
+    public function borra($idUsuario, $idProducto)
     {
-        if (!$id) {
+        if (!$idProducto || !$idUsuario) {
             return false;
-        } 
-    
-        $query = sprintf("DELETE FROM listadeseos WHERE id =%d",$id);
-        if ( ! $this->conn->query($query) ) {
+        }
+
+        $query = sprintf("DELETE FROM listadeseos WHERE usuario=%d AND producto=%d", $idUsuario, $idProducto);
+        if (!$this->conn->query($query)) {
             error_log("Error BD ({$this->conn->errno}): {$this->conn->error}");
             return false;
         }

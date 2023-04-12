@@ -1,9 +1,14 @@
 <?php
+use es\ucm\fdi\aw\Favoritos;
 require_once __DIR__.'/includes/configuracion.php';
+require_once __DIR__.'/includes/Favoritos.php';
 
 if (isset($_POST['remove'])) {
     $product_data = explode('|', $_POST['remove']);
     $product_id = $product_data[0];
+    $usuario_id = $_SESSION['id'];
+    $favoritos = Favoritos::borra($usuario_id, $product_id);
+
     if (isset($_SESSION['wishlist'][$product_id])) {
         unset($_SESSION['wishlist'][$product_id]);
     }

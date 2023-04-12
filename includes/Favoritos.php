@@ -53,10 +53,10 @@ class Favoritos
         return $FavoritosDAO->actualiza($id, $usuario, $producto);
     }
 
-    public static function borra($id)
+    public static function borra($idUsuario, $idProducto)
     {
         $FavoritosDAO= new FavoritosDAO();
-        return $FavoritosDAO->borra($id);
+        return $FavoritosDAO->borra($idUsuario, $idProducto);
     }
     
     public function getId()
