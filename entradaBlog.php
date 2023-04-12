@@ -2,7 +2,7 @@
 include_once ("includes/configuracion.php");
 
 $contenidoPrincipal = <<<EOS
-<div id="entrada">
+<div class="entrada">
 EOS; 
 
 

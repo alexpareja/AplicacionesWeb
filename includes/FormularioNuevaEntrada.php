@@ -29,7 +29,7 @@ class FormularioNuevaEntrada extends Formulario
         // Se genera el HTML asociado a los campos del formulario y los mensajes de error.
 		$html=<<<EOF
 		$htmlErroresGlobales
-		<div id="newE-form">
+		<div class="newE-form">
 			<fieldset>
 				<legend>Nueva Entrada</legend>
 				<div>

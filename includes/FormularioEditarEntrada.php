@@ -22,7 +22,7 @@ class FormularioEditarEntrada extends Formulario
 		// Se genera el HTML asociado a los campos del formulario y los mensajes de error.
 		$html=<<<EOF
 		$htmlErroresGlobales
-		<div id="product-form">
+		<div class="product-form">
 			<fieldset>
 				<legend>Editar Entrada</legend>
 				<input type="hidden" name="id" value="{$this->entrada->getId()}">
@@ -38,7 +38,7 @@ class FormularioEditarEntrada extends Formulario
 				</div>
 				<div>
 				<p><label for="contenido">Contenido:</label></p>
-				<p><textarea id="contenido" name="contenido">{$this->entrada->getContenido()}</textarea></p>
+				<p><textarea id="contenido" name="contenido" class="contenido">{$this->entrada->getContenido()}</textarea></p>
 				{$erroresCampos['contenido']}
 				</div>
 				<div>

@@ -858,35 +858,6 @@ text-shadow: 2px 2px 4px #383138;
   margin: 0 auto;
 }
 
-/*Hoja de estilo Mostrar Producto*/
-#producto .imgProducto {
-	float: left;
-}
-
-#producto .producto {
-	overflow: hidden;
-}
-
-#producto ul.botones li{
-  display: inline-block;
-}
-
-#producto button[type="submit"] {
-  background-color: #800080;
-  color: white;
-  padding: 7px 7px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-bottom: 10px;
-  font-size: large;
-}
-
-#producto button[type="submit"]:hover {
-  background-color: #572364;
-}
-
-
 /*Hoja de estilo Blog*/
 #blog{
   padding: 2rem 1rem;
@@ -1273,43 +1244,41 @@ h2.error {
   margin-bottom: 20%;
 }
 
-#producto{
+.producto{
   align-items: center;
   margin: 0 auto;
-  max-width: 900px;
-  padding: 20px;
+  max-width: 50%;
+  padding: 5%;
   font-family: 'Ubuntu', sans-serif;
 }
 
-#producto .imgProducto {
+.producto .imgProducto {
   width: 40%;
   height: auto;
-  margin-right: 20px;
+  margin-right: 5%;
+  float: left;
 }
 
-#producto h2 {
+.producto h2 {
   font-size: x-large;
-  margin-bottom: 10px;
+  margin-bottom: 5%;
 }
 
-#producto h3{
+.producto h3{
   color: #800080;
   font-size: large;
   padding: 0.5rem;
 }
 
-.comments h3{
-  color: #800080;
-  font-size: x-large;
-}
 
-#producto .infoProducto {
+
+.producto .infoProducto {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-#producto .product-form {
+.producto .product-form {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1348,25 +1317,21 @@ input.quantity {
   margin-bottom: 0.5rem;
 }
 
-div.comments {
-  clear: both;
-  text-align: center;
-}
 
 ::-webkit-scrollbar {
   display: none;
 }
 
 /*mostrar entrada blog*/
-#entrada{
+.entrada{
   align-items: center;
   margin: 0 auto;
-  max-width: 800px;
-  padding: 20px;
+  max-width: 80%;
+  padding: 5%;
   font-family: 'Ubuntu', sans-serif;
 }
 
-#entrada .imgEntrada {
+.entrada .imgEntrada {
   display: block;
   width: 100%;
   height: auto;
@@ -1374,45 +1339,21 @@ div.comments {
   max-width: 600px;
 }
 
-#entrada button[type="submit"] {
-  background-color: #800080;
-  color: white;
-  padding: 7px 7px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-bottom: 0.5rem;
-  font-size: large;
-}
-
-#entrada ul.botones li{
-  font-size: medium;
-  display: inline-block;
-}
-
-#entrada ul{
-  text-align: center;
-}
-
-#entrada button[type="submit"]:hover {
-  background-color: #572364;
-}
-
-#entrada h2 {
+.entrada h2 {
   font-size: 2rem;
   font-weight: bold;
   margin: 1.5rem 0;
   text-align: center;
 }
 
-#entrada p {
+.entrada p {
   font-size: 1.2rem;
   line-height: 1.5;
   margin: 1.5rem 0;
   text-align: justify;
 }
 
-#entrada .autor {
+.entrada .autor {
   font-size: 1rem;
   font-style: italic;
   text-align: right;
@@ -1499,4 +1440,62 @@ div.comments {
 
 .confirm button[type="submit"]:hover {
   background-color: #572364;
+}
+
+
+
+/*botones */
+
+.entrada button[type="submit"] {
+  background-color: #800080;
+  color: white;
+  padding: 7px 7px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+  font-size: large;
+}
+
+.entrada ul.botones li{
+  font-size: medium;
+  display: inline-block;
+}
+
+.entrada ul{
+  text-align: center;
+}
+
+.entrada button[type="submit"]:hover {
+  background-color: #572364;
+}
+
+.producto ul.botones li{
+  display: inline-block;
+}
+
+.producto button[type="submit"] {
+  background-color: #800080;
+  color: white;
+  padding: 7px 7px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  font-size: large;
+}
+
+.producto button[type="submit"]:hover {
+  background-color: #572364;
+}
+
+/*comentarios*/
+
+.comments h3{
+  color: #800080;
+  font-size: x-large;
+}
+div.comments {
+  clear: both;
+  text-align: center;
 }

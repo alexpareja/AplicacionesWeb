@@ -193,7 +193,7 @@ button[type="submit"]:hover {
 }
 
 /*Hoja de estilo formulario nuevo producto*/
-#newP-form, #newE-form {
+.newP-form, .newE-form {
   margin: 50px auto 0;
   max-width: 500px;
   background-color: #fff;
@@ -204,19 +204,19 @@ button[type="submit"]:hover {
   font-size: 13px;
 }
 
-#newP-form fieldset, #newE-form fieldset {
+.newP-form fieldset, .newE-form fieldset {
   border: none;
   margin: 0;
   padding: 0;
 }
 
-#newP-form legend, #newE-form legend {
+.newP-form legend, .newE-form legend {
   font-size: 1.5em;
   font-weight: bold;
   margin-bottom: 20px;
 }
 
-#newP-form label, #newE-form label {
+.newP-form label, .newE-form label {
   display: block;
   font-size: 1.2em;
   font-weight: bold;
@@ -225,7 +225,7 @@ button[type="submit"]:hover {
 
 }
 
-#newP-form input[type="text"], textarea, #newE-form input[type="text"]{
+.newP-form input[type="text"], textarea, .newE-form input[type="text"]{
   width: 95%;
   padding: 10px;
   margin-bottom: 20px;
@@ -234,7 +234,7 @@ button[type="submit"]:hover {
   resize: vertical;
 }
 
-#newP-form button[type="submit"], #newE-form button[type="submit"]  {
+.newP-form button[type="submit"], .newE-form button[type="submit"]  {
   background-color: #800080;
   color: white;
   padding: 7px 7px;
@@ -246,16 +246,16 @@ button[type="submit"]:hover {
   width:100%;
 }
 
-#newP-form button[type="submit"]:hover, #newE-form button[type="submit"]:hover {
+.newP-form button[type="submit"]:hover, .newE-form button[type="submit"]:hover {
   background-color: #572364;
 }
 
-#newP-form ul.botones li, #newE-form ul.botones li{
+.newP-form ul.botones li, .newE-form ul.botones li{
   display:inline-block;
   width:49.6%;
 }
 
-#newP-form ul.tallas li{
+.newP-form ul.tallas li{
   font-size:14px;
   display:inline-block;
   margin-right: 5px;
@@ -266,7 +266,7 @@ button[type="submit"]:hover {
   text-align: center;
 }
 
-#newP-form input.quantity{
+.newP-form input.quantity{
   font-size: 14px;
   padding: 5px;
   border-radius: 5px;
@@ -328,7 +328,7 @@ button[type="submit"]:hover {
 
 
 /*Hoja de estilo formulario editar producto*/
-#product-form {
+.product-form {
   margin: 50px auto 0;
   max-width: 500px;
   background-color: #fff;
@@ -339,19 +339,19 @@ button[type="submit"]:hover {
   font-size: 13px;
 }
 
-#product-form fieldset {
+.product-form fieldset {
   border: none;
   margin: 0;
   padding: 0;
 }
 
-#product-form legend {
+.product-form legend {
   font-size: 1.5em;
   font-weight: bold;
   margin-bottom: 20px;
 }
 
-#product-form label {
+.product-form label {
   display: block;
   font-size: 1.2em;
   font-weight: bold;
@@ -359,7 +359,7 @@ button[type="submit"]:hover {
   margin-top: 5px;
 }
 
-#product-form input[type="text"], textarea{
+.product-form input[type="text"], textarea{
   width: 95%;
   padding: 10px;
   margin-bottom: 20px;
@@ -368,11 +368,11 @@ button[type="submit"]:hover {
   resize: vertical;
 }
 
-#contenido{
+.contenido{
   height: 20vh
 }
 
-#product-form button[type="submit"] {
+.product-form button[type="submit"] {
   background-color: #800080;
   color: white;
   padding: 7px 7px;
@@ -384,16 +384,16 @@ button[type="submit"]:hover {
   width:100%;
 }
 
-#product-form button[type="submit"]:hover {
+.product-form button[type="submit"]:hover {
   background-color: #572364;
 }
 
-#product-form ul.botones li{
+.product-form ul.botones li{
   display:inline-block;
   width:49.6%;
 }
 
-#product-form ul.tallas li{
+.product-form ul.tallas li{
   font-size:14px;
   display:inline-block;
   margin-right: 5px;
@@ -404,7 +404,7 @@ button[type="submit"]:hover {
   text-align: center;
 }
 
-#product-form input.quantity {
+.product-form input.quantity {
   font-size: 14px;
   padding: 5px;
   border-radius: 5px;

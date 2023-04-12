@@ -2,7 +2,7 @@
 include_once ("includes/configuracion.php");
 
 $contenidoPrincipal = <<<EOS
-<div id="producto">
+<div class="producto">
 EOS; 
 if(isset($_GET['id']) && !empty($_GET['id'])) {
 $id=$_GET ["id"];

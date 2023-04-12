@@ -26,7 +26,7 @@ class FormularioEditarProducto extends Formulario
         // Se genera el HTML asociado a los campos del formulario y los mensajes de error.
 		$html=<<<EOF
 		$htmlErroresGlobales
-		<div id="product-form">
+		<div class="product-form">
 			<fieldset>
 				<legend>Editar Producto</legend>
 				<input type="hidden" name="id" value="{$this->producto->getId()}">
