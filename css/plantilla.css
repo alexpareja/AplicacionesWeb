@@ -386,7 +386,9 @@ main {
 
 .header{
   height: 60vh !important;
-  background: url("http://localhost/AplicacionesWeb/img/fondoGris.jpg") no-repeat center;
+  background-image: url("../img/fondoGris.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
 }
 
@@ -440,7 +442,7 @@ main {
 }
 
 .sau{
-  padding: 100px 0px;
+  padding: 220px 0px;
   background: #2e032e;
 }
 
@@ -488,7 +490,9 @@ main {
 }
 
 .price{
-  background: url("http://localhost/AplicacionesWeb/img/content-price.jpg") no-repeat center;
+  background-image: url("../img/content-price.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
   text-align: center;
@@ -503,15 +507,6 @@ main {
 .inicioBlog{
   height: 250px;
   width: 100%;
-}
-
-@media only screen and (max-with: 672px) {
-  .tituloInicio{
-    font-size: 40px;
-  }
-  .sau{
-    height: 80vh;
-  }
 }
 
 /*Hoja de estilo faqs*/
@@ -599,42 +594,160 @@ main {
 }
 
 /*Hoja de estilo planificacion*/
-#planificacion {
-  margin-top: 5rem;
-  padding: 0 1rem;
+*{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
 }
 
-#planificacion h2, #planificacion h3 {
-  padding: 0rem 0.6rem;
-}
-
-#planificacion h2 {
+.Planificacion{
+  margin-top: 3.7rem;
   font-family: 'Ubuntu', sans-serif;
-  font-size: xx-large;
-  font-weight: bold;
+  background-color: #151a1f;
 }
 
-#planificacion h3{
-  font-size: large;
-  padding: 0.6rem 0.6rem;
+.plan{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-#planificacion p, h3, th, td {
-  font-family: 'Ubuntu', sans-serif;
-  font-size: medium;
+.content{
+  height: 65vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-#tabla-resumen {
-  border-collapse: collapse;
-  background-color: #8000800e;
-  padding: 0 0.5rem;
+.plan{
+  height: 80vh;
+  background-image: url("../img/planificacion.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-#tabla-resumen th, td {
-  border: 2px solid #57236449;
-  color: #202020;
-  padding: 0.5rem 0.5rem;
-  text-align: center;
+.plan .tituloPlan{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 60px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: black;
+  text-shadow: 2px 2px 4px #413a41;
+}
+
+.plan p{
+  margin-bottom: 10px;
+font-size: 18px;
+color: black;
+
+padding: 0 70px;
+text-align: center;
+text-shadow: 2px 2px 4px #383138;
+}
+
+.timeline-section{
+  min-height: 100vh;
+  padding: 100px 15px;
+}
+
+.timeline-items{
+  max-width: 1000px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.timeline-items::before{
+  content:'';
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  background-color: #1e2a35;
+  left: calc(50% - 1px);
+}
+
+.timeline-item{
+  margin-bottom: 40px;
+  width: 100%;
+  position: relative;
+}
+
+.timeline-item:last-child{
+  margin-bottom: 0;
+}
+
+.timeline-item:nth-child(odd){
+  padding-right: calc(50% + 30px);
+  text-align: right;
+}
+
+.timeline-item:nth-child(even){
+  padding-left: calc(50% + 30px);
+}
+
+.timeline-dot{
+  height: 16px;
+  width: 16px;
+  background-color: rgb(136, 255, 0);
+  position: absolute;
+  left: calc(50% - 8px);
+  border-radius: 50%;
+  top: 10px;
+}
+
+.timeline-date{
+  font-size: 18px;
+  color: rgb(136, 255, 0);
+  margin: 6px 0 15px;
+}
+
+.timeline-content{
+  background-color: #1e2a35;
+  padding: 18px;
+  border-radius: 5px;
+}
+
+.timeline-content h3{
+  font-size: 20px;
+  color: white;
+  margin: 0 0 10px;
+  text-transform: capitalize;
+  font-weight: 500;
+}
+
+.timeline-content p{
+  color: #bec1c4;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 22px;
+}
+
+@media (max-width:767px){
+  .timeline-items::before{
+      left: 7px;
+  }
+  .timeline-item:nth-child(odd){
+      padding-right: 0;
+      text-align: left;
+  }
+  .timeline-item:nth-child(odd), .timeline-item:nth-child(even){
+      padding-left: 37px;
+  }
+  .timeline-dot{
+      left: 0;
+  }
+  .plan .tituloPlan{
+      font-size: 40px;
+  }
+  .plan p{
+      font-size: 15px;
+  }
 }
 
 /*Hoja de estilo Terminos y Condiciones*/
