@@ -72,7 +72,7 @@ class FavoritosDAO
             while($row=$rs->fetch_assoc())
             {
                 $id=$row['id'];
-                $favs[$id] = new Favoritos($fila['id'], $fila['usuario'], $fila['producto']);
+                $favs[$id] = new Favoritos($row['id'], $row['usuario'], $row['producto']);
             }
         }
         return $favs;
