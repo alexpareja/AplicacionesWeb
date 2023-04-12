@@ -63,7 +63,7 @@ class FavoritosDAO
         return $favs;
     }
 
-    public function getFavoritosUsurio($idUsuario)
+    public function getFavoritosUsuario($idUsuario)
     {
         $query = sprintf("SELECT * FROM listadeseos WHERE usuario = %d", $idUsuario);
         $rs = $this->conn->query($query);

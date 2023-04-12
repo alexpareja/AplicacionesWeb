@@ -158,6 +158,8 @@ class FormularioAnadirCarrito extends Formulario
                             'name' => $name,
                             'price' => $price,
                         );
+                        $idUsuario = $_SESSION['id'];
+                        $favs = Favoritos::crea($idUsuario, $id);
                     } else {
                         $this->errores['enLista'] = "Este producto ya está en favoritos";
                     }

@@ -34,6 +34,12 @@ class Favoritos
         return $FavoritosDAO->getFavoritos();
     }
 
+    public static function getFavoritosUsuario($idUsuario)
+    {
+        $FavoritosDAO= new FavoritosDAO();
+        return $FavoritosDAO->getFavoritosUsuario($idUsuario);
+    }
+
     public static function crea($usuario, $producto)
     {
         $FavoritosDAO= new FavoritosDAO();
