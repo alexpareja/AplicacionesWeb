@@ -393,32 +393,32 @@ main {
 }
 
 .tituloInicio{
-  margin-bottom: 40px;
-  font-size: 60px;
+  margin-bottom: 2.5rem;
+  font-size: 3.75rem;
   font-weight: 600;
   text-transform: uppercase;
   color: white;
-  text-shadow: 2px 2px 4px #413a41;
+  text-shadow: 0.13rem 0.13rem 0.3rem #413a41;
 }
 
 .Inicio p{
-  margin-bottom: 40px;
-  font-size: 18px;
+  margin-bottom: 2.5rem;
+  font-size: 1.125rem;
   color: white;
-  padding: 0 100px;
+  padding: 0 6.25rem;
   text-align: center;
-  text-shadow: 2px 2px 4px #383138;
+  text-shadow: 0.13rem 0.13rem 0.3rem #383138;
 }
 
 .btnInicio{
   display: inline-block;
-  margin-top: 15px;
-  padding: 10px 40px;
-  border: 2px solid #800080;
+  margin-top: 0.94rem;
+  padding: 0.625rem 2.5rem;
+  border: 0.125rem solid #800080;
   color: white;
   text-decoration: none;
   background: #800080;
-  text-shadow: 2px 2px 4px #383138;
+  text-shadow: 0.125rem 0.125rem 0.25rem #383138;
 }
 
 .btnInicio:hover {
@@ -430,7 +430,7 @@ main {
 }
 
 .btn-home a{
-  margin: 0 10px;
+  margin: 0 0.625rem;
 }
 
 .content{
@@ -442,7 +442,7 @@ main {
 }
 
 .sau{
-  padding: 220px 0px;
+  padding: 13.75rem 0;
   background: #2e032e;
 }
 
@@ -476,13 +476,13 @@ main {
 }
 
 .box-container .boxInicio h3{
-  font-size: 20px;
+  font-size: 1.25rem;
   color: whitesmoke;
 }
 
 .box-container .boxInicio p{
-  padding: 0 15px;
-  font-size: 16px;
+  padding: 0 0.95rem;
+  font-size: 1rem;
 } 
 
 .about{
@@ -499,68 +499,79 @@ main {
 }
 
 .news{
-  padding-top: 60px;
+  padding-top: 3.75rem;
   background: #412947;
-  padding-bottom: 60px;
+  padding-bottom: 3.75rem;
 }
 
 .inicioBlog{
-  height: 250px;
+  height: 15.625rem;
   width: 100%;
 }
 
+.blogear{
+  position: relative;
+  display: inline-block;
+}
+
+.btnImagen{
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0.625rem 2.5rem;
+  border: 0.125rem solid #412947;
+  color: white;
+  text-decoration: none;
+  background: #412947;
+  text-shadow: 2px 2px 4px #383138;
+}
+
+.btnImagen:hover{
+  background: none;
+}
+
 /*Hoja de estilo faqs*/
-#faqs .t1 {
-  margin-left: 2rem;
-  margin-top: 5rem;
+.faqs{
+  margin: 0;
+  padding: 0;
+}
+
+.tituloFaqs{
   font-family: 'Ubuntu', sans-serif;
-  font-size: xx-large;
-  font-weight: normal;
+  font-size: 2.5rem;
+  text-align: center;
 }
 
-#faqs .t2 {
-  margin-left: 2rem;
-  font-family: 'Ubuntu', sans-serif;
-  font-size: xx-large;
-  font-weight: bold;
+.menuFaqs ul li span i{
+  float: right;
+  font-size: 1rem;
 }
 
-#faqs-etiqueta1, #faqs-etiqueta2, #faqs-etiqueta3 {
-  margin-top: 20px;
-  margin-bottom: 5px;
-  margin-left: 2rem;
-  height: 5px;
-  width: 60px;
-  background-color: #800080;
+.menuFaqs ul{
+  width: 30%;
+  background-color: #80008042;
+  list-style: none;
+  margin: 20px 30px;
 }
 
-#faqs-rectangulo1, #faqs-rectangulo2, #faqs-rectangulo3 {
-  padding: 0rem 2rem;
-  font-family: 'Ubuntu', sans-serif;
+.menuFaqs ul li{
+  border-bottom: 1px solid rgb(255,255,255, 0.1);
 }
 
-#faqs-preg1, #faqs-preg2, #faqs-preg3 {
-  font-size: 15px;
-  font-weight: bold;
-  margin-bottom: 10px;
+.mrnuFaqs span{
+  color: white;
+  text-decoration: none;
+  padding: 18px;
+  font-size: 20px;
+  display: block;
 }
 
-#faqs-preg1 p, #faqs-preg2 p, #faqs-preg3 p{
-  font-family: 'Ubuntu', sans-serif;
+.menuFaqs ul li a_hover{
+  background-color: whitesmoke;
 }
-
-#faqs-resp1, #faqs-resp2, #faqs-resp3 {
-  padding: 1rem 1rem;
-  font-size: 13px;
-  font-weight: normal;
-  text-align: justify;
-  background-color: #f2f2f2;
-}
-
-#faqs-resp1 p, #faqs-resp2 p, #faqs-resp3 p {
-  padding: 0.5rem 0.5rem;
-  font-family: 'Ubuntu', sans-serif;
-}
+.
 
 /*Hoja de estilo Propuesta*/
 #propuesta-imagen {
@@ -1008,8 +1019,8 @@ text-shadow: 2px 2px 4px #383138;
 }
 
 .logo{
-  width: 20px;
-  height: 20px;
+  width: 3rem;
+  height: 3rem;
 }
 
 .contenedor-flex{
@@ -1019,24 +1030,11 @@ text-shadow: 2px 2px 4px #383138;
   align-items: center;
 }
 
-.letras{
-  letter-spacing: 7px;
-  text-decoration: none;
-  font-family: 'Ubuntu', sans-serif;
-  font-weight: bold;
-  font-size: large;
-  color: #202020;
-}
-
-.letras:hover{
-  color: #800080;
-}
-
 .contenedor-flex ul{
   font-family: 'Ubuntu', sans-serif;
   font-weight: bold;
   font-size: small;
-  letter-spacing: 1px;
+  letter-spacing: 0.125rem;
   margin:0;
   padding: 0;
   list-style: none;
@@ -1053,20 +1051,32 @@ text-shadow: 2px 2px 4px #383138;
   padding: 0.5rem 1rem;
 }
 
-.contenedor-flex ul li a:hover{
+.fas{
+  font-family: "Font Awesome 5 Free", 'Ubuntu';
+  font-size: x-large;
+  letter-spacing: 0.125rem;
+  color: hsl(0, 5%, 19%);
+}
+
+.menu:hover, .contenedor-flex ul li a:hover, .letras:hover{
   color: #800080;
-}
-
-.ayuda, .carrito, .cuenta, .menu, .iniciar {
-  width: 25px;
-  height: 25px;
-}
-
-.ayuda:hover, .carrito:hover, .cuenta:hover, .menu:hover, .iniciar:hover {
   transform: scale(1.1);
 }
 
-.menu{display:none;}
+.contenedor-flex ul li a i:hover{
+  color: #800080;
+}
+
+.letras{
+  font-size: 1.2rem;
+  letter-spacing: 0.2rem;
+  font-family: 'Ubuntu', sans-serif;
+  text-decoration: none;
+  font-weight: bold;
+  color: #333;
+}
+
+.menu{display:none; width: 1.5625rem; height: 1.5625rem;}
 #menu-icono{display:none;}
 
 
@@ -1102,8 +1112,8 @@ text-shadow: 2px 2px 4px #383138;
 }
 
 .instagram, .twitter{
-  width: 50px;
-  height: 50px;
+  width: 3.125rem;
+  height: 3.125rem;
   margin-top: 1rem;
 }
 
@@ -1111,7 +1121,7 @@ text-shadow: 2px 2px 4px #383138;
   text-align: center;
   font-weight: bold;
   font-size: small;
-  letter-spacing: 1px;
+  letter-spacing: 0.0625rem;
   list-style: none;
 } 
 
@@ -1132,7 +1142,7 @@ text-shadow: 2px 2px 4px #383138;
 .boxRedes h2 {
   margin-top: 0.5rem;
   color: #202020;
-  font-size: 13px;
+  font-size: 0.8125rem;
   font-weight: bold;
   text-align: center;
   font-family: 'Ubuntu', sans-serif;
@@ -1167,7 +1177,6 @@ text-shadow: 2px 2px 4px #383138;
   .contenedor-flex ul li a {
     padding: 0.5rem 0.5rem;
   }
-  .logo{display:none;}
 
   /*PIE*/
   .logopie {

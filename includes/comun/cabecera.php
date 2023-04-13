@@ -14,21 +14,19 @@
 			</nav>
 		</div>
 		<div class="principal">
-			<a href="index.php"><img src="img/logo.png" class="logo" alt="Imagen Logo"></a>
 			<a href="index.php" class="letras">LA QUINTA CAJA</a>
 		</div>
 		<div class="iconos">
 			<ul>
-				<li><a href="faqs.php"><img src="img/ayuda.png" class="ayuda" alt="Imagen ayuda"></a></li>
-				<li><a href="carrito.php"><img src="img/carrito.png" class="carrito" alt="Imagen carrito"></a></li>
+				<li><a href="faqs.php"><i class="fas fa-question-circle"></i></a></li>
+				<li><a href="carrito.php"><i class="fas fa-shopping-cart"></i></a></li>
 
 				<?php
 					if(!isset($_SESSION["login"])){
-						echo "<li><a href='login.php'><img src='img/login.png' class='iniciar' alt='Imagen Iniciar'></a></li>";
+						echo "<li><a href='login.php'><i class='fas fa-sign-in'></i></a></li>";
 					}
 					else{
-						echo "<li><a href='miCuenta.php'><img src='img/cuenta.png' class='cuenta' alt='Imagen Cuenta'></a></li>";
-						echo "<li><a href='logout.php'><img src='img/logout.png' class='iniciar' alt='Imagen Cerrar'></a></li>";
+						echo "<li><a href='miCuenta.php'><i class='fas fa-user'></i></a></li>";
 					}
 				?>
 			</ul>

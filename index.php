@@ -46,7 +46,7 @@ $contenidoPrincipal .= <<<EOS
                 <p>Caja disponible con la suscripción básica</p>
             </div>
             <div class="boxInicio">
-                <i class="fas fa-star"></i>
+                <i class="fas fa-star-of-david"></i>
                 <h3>Caja especial</h3>
                 <p>Caja disponible con la suscripción premium</p>
             </div>
@@ -77,9 +77,10 @@ $contenidoPrincipal .= <<<EOS
             También contamos con un blog donde estarán
             las noticias favoritas de nuestro equipo creativo
         </p>
-        <figure class="blogear">
+        <div class="blogear">
             <img src="img/content-news.jpg" class="inicioBlog" alt="blogear">
-        </figure>
+            <a href="blog.php" class="btnImagen">Ir al blog</a>
+        </div>
     </section>
 </div>
 
