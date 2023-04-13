@@ -6,8 +6,7 @@ require_once __DIR__.'/includes/configuracion.php';
 	//Se muestran la tabla con las compras realizadas hasta el momento de la base de datos de compras
 	$contenidoPrincipal = '';
 	$contenidoPrincipal .= <<<EOS
-	<div id="tienda">
-		<h2>Compras</h2>
+	<div id="tienda" class="tienda">
 		<ul class='botones'>
 		<li>
 			<button id="boton-filtros" type="submit" onclick="mostrarMenu()">Mostrar filtros</button>
@@ -19,6 +18,8 @@ require_once __DIR__.'/includes/configuracion.php';
 		</li>
 		
 		</ul>
+		<h2 class="titulo1">Compras</h2>
+		<h2 class="titulo2">de La Quinta Caja</h2>
 	EOS;
 	$compras = es\ucm\fdi\aw\Compra::getAllCompras();
 	$contenidoPrincipal .= es\ucm\fdi\aw\Compra::mostrarTablaCompras($compras);

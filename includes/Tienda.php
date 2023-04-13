@@ -12,9 +12,6 @@ class Tienda {
     public function productosEnTienda() {
 		$html = '';
 		$html .= <<<EOS
-				<h2 class="titulo1">Productos</h2>
-				<h2 class="titulo2">de La Quinta Caja</h2>
-
 					<div id="productos">
 					<ul class="lista-productos" id="lista-productos">
 				EOS;

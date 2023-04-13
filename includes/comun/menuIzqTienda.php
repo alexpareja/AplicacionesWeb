@@ -1,5 +1,5 @@
-<div id="menuIzqTienda">
-	<h2>Filtros</h2>
+<div id="menuIzqTienda" class='mostrarMenu-not'>
+	<h2 class="tit-filtros">Filtros</h2>
 			<ul class= "filtros">
 				<li>Ordenar por:</li>
 				<li><select id="ordenar-productos" name="ordenar-productos">
@@ -11,7 +11,7 @@
 				</li>
 				<li>Buscar:</li>
 				<li>
-				<input type="text" id="campo-busqueda" placeholder="Buscar productos..." oninput="buscarProductos()">
+				<input type="text" id="campo-busqueda" class="campo-busqueda" placeholder="Buscar productos..." oninput="buscarProductos()">
 				</li>
 				<li>Talla:</li>
 				<li>
@@ -28,10 +28,10 @@
 					<input type="range" id="slider" min="0" max="100" value="100" step="1">
 				</li>
 				<li>
-					<button type="submit" onclick="quitarFiltros()">Resetear filtros</button>
+					<button type="submit" class="botones-filtros" onclick="quitarFiltros()">Resetear filtros</button>
 				</li>
 				<li>
-					<button type="submit" onclick="mostrarMenu()">Ocultar filtros</button>
+					<button type="submit" class="botones-filtros" onclick="mostrarMenu()">Ocultar filtros</button>
 				</li>
 			</ul>
 </div>

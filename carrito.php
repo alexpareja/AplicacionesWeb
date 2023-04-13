@@ -38,7 +38,7 @@ if (isset($_SESSION['cart'])) {
 $tituloPagina = 'Carrito';
 $contenidoPrincipal = '';
 $contenidoPrincipal .= <<<EOS
-<div id="tienda">
+<div id="tienda" class="tienda">
 EOS;
 
 $contenidoPrincipal .= <<<EOS

@@ -1,203 +1,246 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
 
 main {
-  padding: 7rem 0.7rem;
+	padding: 7rem 0.7rem;
 }
 
 main article {
-  min-height: 81vh;
+	min-height: 81vh;
 }
-
-#tienda {
-	background-color: white;
+/*tienda y carrito*/
+.tienda {
 	text-align: center;
-	font-family: 'Ubuntu', sans-serif;
 	transition: all 0.3s ease-in-out;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
 }
 
-
-#tienda ul.lista-productos li{
-  font-size:20px;
-  display:inline-block;
-  padding:20px;
+ul.botones li{
+	font-size:20px;
+	display:inline-block;
 }
 
-#tienda ul.botones li{
-  font-size:20px;
-  display:inline-block;
+ul.lista-productos li{
+	font-size:20px;
+	display:inline-block;
+	padding:20px;
 }
 
-#tienda .lista-productos li a {
-  text-decoration: none;
-  color: #333;
+.lista-productos li a {
+	text-decoration: none;
+	color: #333;
 }
 
-#tienda .precio {
-  text-decoration: none;
-  color: #800080;
-  font-size:110%;
+.producto-imagen {
+	width: 100%;
+	max-width: 300px;
+	height: 300px;
+	border: 1px solid #800080;
+	padding: 10px;
+	box-sizing: border-box;
 }
 
-#tienda .sin-stock{
+.producto-imagen:hover {
+	border: 2px solid #572364;
+}
+
+.producto-imagen img {
+	margin: 0 auto;
+	transition: all 0.3s ease-in-out;
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+
+.producto-imagen:hover img {
+	transform: scale(1.05);
+}
+
+.precio {
+	text-decoration: none;
+	color: #800080;
+	font-size:110%;
+}
+
+.sin-stock{
 	color: red;
 }
 
-#tienda .producto-imagen {
-  width: 100%;
-  max-width: 300px;
-  height: 300px;
-  border: 1px solid #800080;
-  padding: 10px;
-  box-sizing: border-box;
-}
-
-#tienda .producto-imagen:hover {
-  border: 2px solid #572364;
-}
-
-#tienda .producto-imagen img {
-  margin: 0 auto;
-  transition: all 0.3s ease-in-out;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
-#tienda .img-sin-stock {
+.img-sin-stock {
 	opacity: 0.5;
 }
 
-#tienda .producto-imagen:hover img {
-  transform: scale(1.05);
-}
-
-#tienda .botonCompras {
-padding: 5px 100px;
-}
-
 ::-webkit-scrollbar {
-  display: none;
+	display: none;
 }
 
-#tienda button[type="submit"] {
-  background-color: #800080;
-  color: white;
-  padding: 7px 7px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-bottom: 10px;
-  font-size: 1.2em;
+button[type="submit"] {
+	background-color: #800080;
+	color: white;
+	padding: 7px 7px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	margin-bottom: 10px;
+	font-size: 1.2em;
 }
 
-#tienda button[type="submit"]:hover {
-  background-color: #572364;
+button[type="submit"]:hover {
+	background-color: #572364;
 }
 
-#tienda .total-price {
-  margin-left: 10px;
-}
-
-#tienda table.compras {
+/*compras*/
+table.compras {
 	border-collapse: collapse;
 	border: 3px solid black;
-	margin: 0 auto;
+	margin-top: 20px;
 }
 
-#tienda th{
-  padding: 15px;
-  border:2px solid black;
-  background-color:#800080;
-  color: white;
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 1.2em;
+table.compras th{
+	padding: 15px;
+	border:2px solid black;
+	background-color:#800080;
+	color: white;
+	font-size: 1.2em;
+}
+
+table.compras td{
+	padding: 5px;
+	border:2px solid  black;
 	width:10%;
 }
 
-#tienda td{
-  padding: 5px;
-  border:2px solid  black;
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 1em;
+table.compras tr:hover {
+	background-color: #f5f5f5;
+}
+
+.titulo1 {
+	font-size: xx-large;
+	font-weight: normal;
+}
+.titulo2 {
+	font-size: xx-large;
+
+}
+/*carrito*/
+.eliminar-producto {
+	margin-top: 10px;
+}
+
+.eliminar-producto input[type="number"] {
+	width: 60px;
+	height: 20px;
+	font-size: 16px;
+	padding: 5px;
+}
+
+.no-prod {
+	margin-top: 40px;
+	font-weight: bold;
+	font-size: 18px;
+}
+
+.total-price {
+	padding: 5px;
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 1.1em;
 	width:10%;
+	font-weight: bold;
+	display: block;
+	white-space: nowrap;
+	margin-top: 10px;
+	margin-left: 10px;
 }
 
-#tienda tr:hover {
-  background-color: #f5f5f5;
+.fin-carrito {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 50px;
+	height: 100vh;
 }
 
-#tienda .titulo1 {
-  font-family: 'Ubuntu', sans-serif;
-  font-size: xx-large;
-  font-weight: normal;
-}
-#tienda .titulo2 {
-  font-family: 'Ubuntu', sans-serif;
-  font-size: xx-large;
-  font-weight: bold;
+.fin-carrito p {
+	font-size: 1.2em;
+	color: red;
+	text-align: center;
 }
 
-#tienda #productos {
-  margin-top: auto;
+/*Menu Izq*/
+.mostrarMenu {
+	margin-left: 300px;
+	width: auto;
 }
 
-#tienda .eliminar-producto {
-  margin-top: 10px;
+.mostrarMenu-izq {
+	position: fixed;
+	width: 300px;
+	height: 100%;
+	background-color: #f5f5f5;
+	padding: 20px;
+	box-sizing: border-box;
+	transition: all 0.3s ease-in-out;
+	left: 0;
+	top: 50px;
 }
 
-#tienda .eliminar-producto input[type="number"] {
-  width: 60px;
-  height: 20px;
-  font-size: 16px;
-  padding: 5px;
+.mostrarMenu-not {
+	position: fixed;
+	width: 300px;
+	height: 100%;
+	left: -300px;
+	top: 50px;
+	box-sizing: border-box;
+	transition: all 0.3s ease-in-out;
 }
 
-#tienda button[name="remove_quantity", "comprar", "remove"] {
-  font-size: 1em;
+.tit-filtros{
+	font-size: xx-large;
+	font-weight: normal;
+	padding-bottom: 10px;
 }
 
-#tienda .comprar-eliminar-producto{
-    justify-content: center;
-    gap: 0.625em;
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-    margin-top: 10px;
+.campo-busqueda {
+	padding: 5px;
+	font-size: 1em;
+	border: 1px solid #800080;
+	border-radius: 5px;
 }
 
-#tienda .no-prod {
-  margin-top: 40px;
-  font-weight: bold;
-  font-size: 18px;
+ .filtros li{
+	display:block;
+	padding: 3px;
+	font-weight: bold;
+	padding-bottom: 10px;
 }
 
-#tienda .fin-carrito {
-   display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 50px;
-  height: 100vh;
+ .checkfiltros li{
+	display:inline-block;
 }
 
-#tienda .total-price {
-  padding: 5px;
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 1.1em;
-  width:10%;
-  font-weight: bold;
-  display: block;
-  white-space: nowrap;
-  margin-top: 10px;
+ .botones-filtros{
+	width:100%;
 }
 
-#tienda .fin-carrito p {
-  font-size: 1.2em;
-  color: red;
-  text-align: center;
+input[type=checkbox] {
+	margin-right: 10px;
+}
+
+input[type=range] {
+	-webkit-appearance: none;
+	width: 100%;
+	height: 8px;
+	margin-top: 10px;
+	margin-bottom: 20px;
+	background-color: #800080;	
+	border-radius: 5px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	width: 20px;
+	height: 20px;
+	background-color: #800080;
+	border: none;
+	border-radius: 50%;
 }
 
 /*Cabecera*/
@@ -286,8 +329,9 @@ padding: 5px 100px;
 }
 
 #pie {
-  width: 100%;
   background-color: #80008041;
+  	transition: all 0.3s ease-in-out;
+
 }
 
 .grupo1 {
@@ -438,108 +482,3 @@ padding: 5px 100px;
     margin-bottom: 1rem;
   }
 }
-
-/*Menu Izq*/
-#menuIzqTienda {
-  font-family: 'Ubuntu', sans-serif;
-  position: fixed;
-  top: 0;
-  width: 300px;
-  height: 100%;
-  background-color: #f5f5f5;
-  padding: 20px;
-  box-sizing: border-box;
-  transition: all 0.3s ease-in-out;
-}
-
-#tienda.mostrarMenu {
-  margin-left: 300px; 
-}
-
-#pie.mostrarMenu {
-	width: auto;
-  margin-left: 300px;
-}
-
-#menuIzqTienda.mostrarMenu {
-  left: 0;
-  z-index: 3;
-  top: 60px;
-}
-
-#menuIzqTienda:not(.mostrarMenu) {
-  left: -300px;
-  top: 60px;
-
-}
-
-#menuIzqTienda h2{
-	font-family: 'Ubuntu', sans-serif;
-  font-size: xx-large;
-  font-weight: normal;
-  padding-bottom: 10px;
-}
-
-#campo-busqueda {
-  padding: 5px;
-  font-size: 1em;
-  border: 1px solid #800080;
-  border-radius: 5px;
-}
-
-#menuIzqTienda ul.filtros li{
-  display:block;
-  padding: 3px;
-  font-family: 'Ubuntu', sans-serif;
-  font-weight: bold;
-  padding-bottom: 10px;
-}
-
-#menuIzqTienda ul.checkfiltros li{
-  display:inline-block;
-}
-
-#menuIzqTienda button[type="submit"] {
-  background-color: #800080;
-  color: white;
-  padding: 7px 7px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-bottom: 10px;
-  font-size: 1.2em;
-  width:100%;
-}
-
-#menuIzqTienda button[type="submit"]:hover {
-  background-color: #572364;
-}
-
-#menuIzqTienda input[type=checkbox] {
-	margin-right: 10px;
-}
-
-#menuIzqTienda input[type=range] {
-  -webkit-appearance: none;
-  width: 100%;
-  height: 8px;
-  margin-top: 10px;
-  margin-bottom: 20px;
-  background-color: #800080;
-  border-radius: 5px;
-  outline: none;
-}
-
-input[type=range]::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  width: 20px;
-  height: 20px;
-  background-color: #800080;
-  border: none;
-  border-radius: 50%;
-}
-
-
-
-
-

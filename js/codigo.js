@@ -5,14 +5,17 @@ function mostrarMenu() {
   var pie = document.getElementById("pie");
   var botonFiltros = document.getElementById("boton-filtros");
   
-    if (menu.classList.contains("mostrarMenu")) {
+    if (menu.classList.contains("mostrarMenu-izq")) {
         botonFiltros.textContent = "Mostrar filtros";
       } else {
         botonFiltros.textContent = "Ocultar filtros";
       }
+	  
+  menu.classList.toggle("mostrarMenu-not");
+  menu.classList.toggle("mostrarMenu-izq");
   
-  menu.classList.toggle("mostrarMenu");
   tienda.classList.toggle("mostrarMenu");
+  
   pie.classList.toggle("mostrarMenu");
 }
 
