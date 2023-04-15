@@ -2,6 +2,9 @@
 require_once __DIR__.'/includes/configuracion.php';
 $tituloPagina = 'Mi Perfil';
 $contenidoPrincipal = '';
+$contenidoPrincipal .= <<<EOS
+        <div id='perfil' class='perfil'>
+EOS;
 
     $id = $_SESSION['id'];
     $nombre = $_SESSION['nombre'];
@@ -36,6 +39,18 @@ $contenidoPrincipal = '';
                 <p>Dirección: $direccion</p>
             </div>
         </div>
+    EOS;
+
+    $contenidoPrincipal .= <<<EOS
+        <h2 class="titulo1">Sugerencias</h2>
+        <h2 class="titulo2">de La Quinta Caja</h2>
+    EOS;
+    //Se muestran los porductos de la tienda
+    $tienda = new es\ucm\fdi\aw\Tienda();
+    $contenidoPrincipal .= $tienda->productosAleatoriosEnTienda();
+    $contenidoPrincipal .= <<<EOS
+        </div>
+
     EOS;
 
 require __DIR__.'/includes/plantillas/plantilla.php';

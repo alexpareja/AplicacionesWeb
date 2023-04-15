@@ -57,4 +57,60 @@ class Tienda {
 				EOS;
         return $html;
     }
+
+    public function productosAleatoriosEnTienda() {
+    $html = '';
+    $html .= <<<EOS
+        <div id="productos">
+        <ul class="lista-productos" id="lista-productos">
+    EOS;
+    
+    // Obtener una lista aleatoria de tres productos
+    $productos_aleatorios = array_rand($this->productos, 3);
+    
+    foreach($productos_aleatorios as $key => $value) {
+        $prod = $this->productos[$value];
+        $link = 'mostrarProducto.php?id='.$prod->getId();
+        $src = 'img/producto_'.$prod->getId().'.png';
+        $alt = 'Imagen de Producto '.$prod->getId();
+        $nombre = $prod->getNombre();
+        $precio = $prod->getPrecio();
+        $tallas = $prod->getTallasDisponibles();
+        if($tallas !== '' || isset($_SESSION['admin']) && $_SESSION['admin']){
+            $html .= <<<EOS
+                <li class="producto" data-precio='$precio' data-talla='$tallas' nombre='$nombre'>
+                    <a href='$link'>
+                    <div class="producto-imagen">
+                    <img class='imgProducto
+            EOS;
+            if($tallas == ''){
+                $html .= <<<EOS
+                    img-sin-stock
+                EOS;
+            }
+            $html .= <<<EOS
+                ' id='imgProducto' src='$src' alt='$alt'>
+                    </div>
+                    <br>
+                    $nombre <span class='precio'> $precio € </span>                        
+            EOS;
+            if($tallas == ''){
+                $html .= <<<EOS
+                <span class = "sin-stock"> sin stock </span>
+                EOS;
+            }
+            $html .= <<<EOS
+                    </a>
+                </li>
+            EOS;
+        }   
+    }
+    
+    $html .= <<<EOS
+            </ul>        
+            </div>
+    EOS;
+    return $html;
+}
+
 }
