@@ -92,7 +92,9 @@ class Tienda {
                 ' id='imgProducto' src='$src' alt='$alt'>
                     </div>
                     <br>
-                    $nombre <span class='precio'> $precio € </span>                        
+                    <div class=info-prod>
+                    	$nombre <span class='precio'> $precio € </span>
+                    </div>                       
             EOS;
             if($tallas == ''){
                 $html .= <<<EOS

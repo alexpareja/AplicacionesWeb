@@ -195,9 +195,8 @@ main {
   border-bottom-color: purple;
 }
 
-.perfil {
-  text-align: center;
-  transition: all 0.3s ease-in-out;
+ul.lista-productos {
+  margin-left: 2.4rem;
 }
 
 ul.lista-productos li{
@@ -218,25 +217,32 @@ ul.lista-productos li{
   border: 1px solid #800080;
   padding: 10px;
   box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.producto-imagen img {
+  transition: all 0.3s ease-in-out;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  transform: scale(2.4);
 }
 
 .producto-imagen:hover {
   border: 2px solid #572364;
 }
 
-.producto-imagen img {
-  margin: 0 auto;
-  transition: all 0.3s ease-in-out;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
 .producto-imagen:hover img {
-  transform: scale(1.05);
+  transform: scale(2.5);
 }
 
-.precio {
+.info-prod {
+  text-align: center;
+}
+
+.info-prod .precio {
   text-decoration: none;
   color: #800080;
   font-size:110%;

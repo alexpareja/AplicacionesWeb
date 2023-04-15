@@ -2,9 +2,6 @@
 require_once __DIR__.'/includes/configuracion.php';
 $tituloPagina = 'Mi Perfil';
 $contenidoPrincipal = '';
-$contenidoPrincipal .= <<<EOS
-        <div id='perfil' class='perfil'>
-EOS;
 
     $id = $_SESSION['id'];
     $nombre = $_SESSION['nombre'];
@@ -48,10 +45,6 @@ EOS;
     //Se muestran los porductos de la tienda
     $tienda = new es\ucm\fdi\aw\Tienda();
     $contenidoPrincipal .= $tienda->productosAleatoriosEnTienda();
-    $contenidoPrincipal .= <<<EOS
-        </div>
-
-    EOS;
 
 require __DIR__.'/includes/plantillas/plantilla.php';
 ?>
