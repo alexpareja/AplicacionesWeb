@@ -1,0 +1,3 @@
+INSERT INTO `blog` (`id`, `titulo`, `contenido`, `descripcion`, `autor`) VALUES
+(1, 'Bienvenido a la Quinta Caja', 'Con esta entrada damos la bienvenida al nuevo blog de La Quinta Caja. A partir de ahora, los administradores subirán regularmente entradas al blog oficial. Recuerda entrar regularmente para estar al tanto de nuestras últimas novedades, además de aprender las mejores técnicas de moda sostenible. ', 'Saluda al blog de La Quinta Caja', 1),
+(2, 'Nuevas cajas de temporada', 'Ha llegado el buen tiempo, y con ello, las nuevas cajas de la nueva temporada Primavera-Verano 2023. Con nuestras nuevas y renovadas prendas ser&aacute;s el m&aacute;s estiloso de todos.', 'Han llegado las nuevas cajas de la temporada Primavera-Verano', 1);
