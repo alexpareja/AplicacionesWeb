@@ -60,7 +60,7 @@ if (isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
                 $contenidoPrincipal .= <<<EOS
                     <li>
                         <div class="producto-imagen">
-                        <img class='imgProducto' id='imgProducto' src='$src' alt='$alt'>
+                        <img class='imgProducto' src='$src' alt='$alt'>
                         </div>
                         <br>
                         <p>$nombre ($talla, $precio €): $cantidad</p>
@@ -95,6 +95,9 @@ $contenidoPrincipal .= <<<EOS
         <button type="submit">Ir a pagar</button>
         <span class="total-price">Total: $total_price €</span>
     </form>
+	    </div>
+        </div>
+        </div>
     
 EOS;
 
@@ -102,17 +105,11 @@ EOS;
 if (isset($_GET['checkout'])) {
     if (empty($_SESSION['cart']) || $total_price <= 0) {
         $contenidoPrincipal .= <<<EOS
+        <div class="no-compra">
         <p> ¡No hay nada que comprar! </p>
-        </div>
-        </div>
         </div>
         EOS;
     } else {
-        $contenidoPrincipal .= <<<EOS
-        </div>
-        </div>
-        </div>
-        EOS;
         header('Location: pago.php');
         exit;
     }

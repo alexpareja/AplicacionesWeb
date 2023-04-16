@@ -93,6 +93,7 @@ class FormularioEditarProducto extends Formulario
 						<li>
 						<button type="submit" name="edit">Editar Producto</button>
 						</li>
+						<li>
 						<form action="eliminarConfirmado.php">
 						<input type="hidden" name="id" value="{$this->producto->getId()}">
 						<button type="submit" name="delete">Eliminar producto</button>

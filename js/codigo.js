@@ -91,7 +91,7 @@ function buscarProductos() {
 
   for (var i = 0; i < elementosLista.length; i++) {
     var elemento = elementosLista[i];
-    var nombre = elemento.getAttribute("nombre").toUpperCase();
+    var nombre = elemento.getAttribute("data-nombre").toUpperCase();
 	
     if (nombre.indexOf(filtro) > -1) {
       elemento.style.display = "inline-block";

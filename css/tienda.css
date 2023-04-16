@@ -141,6 +141,11 @@ table.compras tr:hover {
 	padding: 5px;
 }
 
+.no-compra{
+	text-align: center;
+	color: red;
+}
+
 .no-prod {
 	margin-top: 40px;
 	font-weight: bold;
@@ -164,7 +169,6 @@ table.compras tr:hover {
 	flex-direction: column;
 	align-items: center;
 	margin-top: 50px;
-	height: 100vh;
 }
 
 .fin-carrito p {

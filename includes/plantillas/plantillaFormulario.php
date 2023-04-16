@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="css/formulario.css"> 
-    <script type="text/javascript" src="js/codigo.js"></script>
+	<link rel="shortcut icon" href="img/logo.ico" type="image/x-icon">
+    <script src="js/codigo.js"></script>
  	<title><?= $tituloPagina ?></title>
 </head>
 <body>

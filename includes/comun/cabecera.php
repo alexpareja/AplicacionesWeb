@@ -1,7 +1,7 @@
 <header id="cabecera">
 	<div class="contenedor-flex">
 		<div class="oculto">
-			<input type="checkbox" name="menu-icono" id="menu-icono"/>
+			<input type="checkbox" name="menu-icono" id="menu-icono">
 			<label for="menu-icono">
 				<img src="img/menu.png" class="menu" alt="Imagen Menu">
 			</label>

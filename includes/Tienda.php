@@ -24,7 +24,7 @@ class Tienda {
 			$tallas = $prod->getTallasDisponibles();
 			if($tallas !== '' || isset($_SESSION['admin']) && $_SESSION['admin']){
 				$html .= <<<EOS
-					<li class="producto" data-precio='$precio' data-talla='$tallas' nombre='$nombre'>
+					<li class="producto" data-precio='$precio' data-talla='$tallas' data-nombre='$nombre'>
 						<a href='$link'>
 						<div class="producto-imagen">
 						<img class='imgProducto
@@ -35,7 +35,7 @@ class Tienda {
 				EOS;
 			}
 			$html .= <<<EOS
-				' id='imgProducto' src='$src' alt='$alt'>
+				' src='$src' alt='$alt'>
 						</div>
 						<br>
 						$nombre <span class='precio'> $precio € </span>						

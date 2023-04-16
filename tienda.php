@@ -28,7 +28,7 @@ if (isset($_SESSION['admin']) && $_SESSION['admin']) {
 						<button type="submit"> Añadir Producto</button>
 					</form>
 				</li>
-			</ul>
+			
 	EOS;
 }
 	$contenidoPrincipal .= <<<EOS
