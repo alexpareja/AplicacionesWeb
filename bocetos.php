@@ -5,7 +5,7 @@ require_once __DIR__.'/includes/configuracion.php';
 $tituloPagina = 'Bocetos';
 
 $contenidoPrincipal = <<<EOS
-<div id="bocetos">
+<div class="bocetos">
 	<h1> Bocetos </h1>
 	<h3> Página Principal </h3>
 	<p> Descripción : Página principal de la tienda. En este se mostrará en un lado las cajas de subscripción 

@@ -5,7 +5,7 @@ require_once __DIR__.'/includes/configuracion.php';
 $tituloPagina = 'terminosycondiciones';
 
 $contenidoPrincipal = <<<EOS
-<div id="terminosycondiciones">
+<div class="terminosycondiciones">
 	<h2>Términos y condiciones</h2>
 	<br>
 	<p>¡Bienvenido a La Quinta Caja!</p>
