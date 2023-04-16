@@ -242,7 +242,7 @@ ul.lista-productos li{
   text-align: center;
 }
 
-.info-prod .precio {
+.precio {
   text-decoration: none;
   color: #800080;
   font-size:110%;
