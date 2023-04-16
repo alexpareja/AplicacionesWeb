@@ -7,17 +7,12 @@ require_once __DIR__.'/includes/configuracion.php';
 	$contenidoPrincipal = '';
 	$contenidoPrincipal .= <<<EOS
 	<div id="tienda" class="tienda">
-		<ul class='botones'>
-		<li>
-			<button id="boton-filtros" type="submit" onclick="mostrarMenu()">Mostrar filtros</button>
-		</li>
-		<li>
+		<button id="boton-filtros" type="submit" onclick="mostrarMenu()" class="boton-filtros"><i class="fas fa-sliders-h white"></i></button>
+
 		<form action="tienda.php">
 			<button type="submit">Volver a la tienda</button>
 		</form>
-		</li>
 		
-		</ul>
 		<h2 class="titulo1">Compras</h2>
 		<h2 class="titulo2">de La Quinta Caja</h2>
 	EOS;

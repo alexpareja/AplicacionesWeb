@@ -14,7 +14,6 @@ main article {
 }
 
 ul.botones li{
-	font-size:20px;
 	display:inline-block;
 }
 
@@ -86,6 +85,14 @@ button[type="submit"] {
 button[type="submit"]:hover {
 	background-color: #572364;
 }
+
+.boton-filtros{
+	position: absolute;
+	left:100px;
+	transition: all 0.3s ease-in-out;
+}
+
+
 
 /*compras*/
 table.compras {
@@ -203,6 +210,8 @@ table.compras tr:hover {
 	top: 50px;
 	box-sizing: border-box;
 	transition: all 0.3s ease-in-out;
+	z-index:2;
+
 }
 
 .tit-filtros{
@@ -330,6 +339,10 @@ input[type=range]::-webkit-slider-thumb {
 }
 
 .menu{display:none; width: 1.5625rem; height: 1.5625rem;}
+.white{
+	color: white;
+}
+
 #menu-icono{display:none;}
 
 

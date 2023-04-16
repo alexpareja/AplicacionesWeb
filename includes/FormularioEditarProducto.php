@@ -56,7 +56,7 @@ class FormularioEditarProducto extends Formulario
 					<div class="subir-archivo2" onchange="changeHandler(event);">
 						<label for="imagen" class="upload_button">
 						<p>Elige la imagen del producto</p>
-						<input id="upload-input" type="file" name="imagen" value="img/producto_{$this->producto->getId()}.png">
+						<input id="imagen" type="file" name="imagen" value="img/producto_{$this->producto->getId()}.png" class="upload">
 						</label>
 					</div>
 					{$erroresCampos['imagen']}

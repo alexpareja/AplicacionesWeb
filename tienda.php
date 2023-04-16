@@ -10,14 +10,13 @@ require_once __DIR__.'/includes/configuracion.php';
 	//Se muestran los botones de control en caso de que el usuario de la sesion sea administrador
 	
 	$contenidoPrincipal .= <<<EOS
-			<ul class='botones'>
-				<li>
-					<button id="boton-filtros" type="submit" onclick="mostrarMenu()">Mostrar filtros</button>
-				</li>
+					<button id="boton-filtros" type="submit" onclick="mostrarMenu()" class="boton-filtros"><i class="fas fa-sliders-h white"></i></button>
+				
 	EOS;
 	
 if (isset($_SESSION['admin']) && $_SESSION['admin']) {
 	$contenidoPrincipal .= <<<EOS
+			<ul class='botones'>
 				<li>
 					<form action='compras.php'>
 						<button type="submit">Compras</button>
