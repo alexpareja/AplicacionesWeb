@@ -354,8 +354,9 @@ input[type=range]::-webkit-slider-thumb {
 }
 
 #pie {
-  width: 100%;
   background-color: #80008041;
+  transition: all 0.3s ease-in-out;
+
 }
 
 .grupo1 {
