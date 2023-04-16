@@ -12,8 +12,10 @@ $contenidoPrincipal = <<<EOS
 	<nav class="menuFaqs">
 		<ul>
 			<li class="opcion">
-				¿CÓMO RECIBIRÉ EL IMPORTE DE MI DEVOLUCIÓN?
-				<span><i class="fas fa-chevron-down"></i></span>
+				<button class="pregunta">
+					¿CÓMO RECIBIRÉ EL IMPORTE DE MI DEVOLUCIÓN?
+					<span><i class="fas fa-chevron-down"></i></span>
+				</button>
 				<div class="submenuFaqs">
 					Una vez recibido/s el/los productos, La Quinta Caja verificará que están en buen
 					estado, y de ser así, procederá al reembolso del importe en el mismo método de
@@ -21,8 +23,10 @@ $contenidoPrincipal = <<<EOS
 				</div>
 			</li>
 			<li class="opcion">
-				¿TENGO QUE PAGAR ALGO POR MI DEVOLUCIÓN?
-				<span><i class="fas fa-chevron-down"></i></span>
+				<button class="pregunta">
+					¿TENGO QUE PAGAR ALGO POR MI DEVOLUCIÓN?
+					<span><i class="fas fa-chevron-down"></i></span>
+				</button>
 				<div class="submenuFaqs">
 					Si realizas tu devolución en tienda, la devolución es gratuita, pero si tienes que realizar
 					la devolución enviándolo a nuestro almacén, los gastos de envío serán a cargo del
@@ -30,8 +34,10 @@ $contenidoPrincipal = <<<EOS
 				</div>
 			</li>
 			<li class="opcion">
-				¿CUÁL ES EL PLAZO PARA PODER REALIZAR UNA DEVOLUCIÓN?
-				<span><i class="fas fa-chevron-down"></i></span>
+				<button class="pregunta">
+					¿CUÁL ES EL PLAZO PARA PODER REALIZAR UNA DEVOLUCIÓN?
+					<span><i class="fas fa-chevron-down"></i></span>
+				</button>
 				<div class="submenuFaqs">
 					Dispones de 15 días naturales desde la fecha de entrega para la devolución o cambio de un
 					artículo, salvo en período de Navidades, ampliándose el período de devolución
@@ -39,8 +45,10 @@ $contenidoPrincipal = <<<EOS
 				</div>
 			</li>
 			<li class="opcion">
-				¿CÓMO PUEDO DEVOLVER UN ARTÍCULO?
-				<span><i class="fas fa-chevron-down"></i></span>
+				<button class="pregunta">
+					¿CÓMO PUEDO DEVOLVER UN ARTÍCULO?
+					<span><i class="fas fa-chevron-down"></i></span>
+				</button>
 				<div class="submenuFaqs">
 					Puedes acercar el producto y el formulario de devolución con su código a una tienda de La
 					Quinta Caja.También puedes enviarlo a nuestro almacén online introduciendo las prendas
@@ -49,8 +57,10 @@ $contenidoPrincipal = <<<EOS
 				</div>
 			</li>
 			<li class="opcion">
-				¿CÓMO SE REALIZA UN PEDIDO?
-				<span><i class="fas fa-chevron-down"></i></span>
+				<button class="pregunta">
+					¿CÓMO SE REALIZA UN PEDIDO?
+					<span><i class="fas fa-chevron-down"></i></span>
+				</button>
 				<div class="submenuFaqs">
 					Cuando veas un producto que te gusta, selecciona la talla y dale a "Añadir al Carrito".
 					Comprueba que los productos que hay en la cesta son los que deseas. Si es así, te tienes que
@@ -58,8 +68,10 @@ $contenidoPrincipal = <<<EOS
 				</div>
 			</li>
 			<li class="opcion">
-				¿CUÁNDO RECIBIRÉ EL IMPORTE DE MI DEVOLUCIÓN?
-				<span><i class="fas fa-chevron-down"></i></span>
+				<button class="pregunta>
+					¿CUÁNDO RECIBIRÉ EL IMPORTE DE MI DEVOLUCIÓN?
+					<span><i class="fas fa-chevron-down"></i></span>
+				</button>
 				<div class="submenuFaqs">
 					Una vez recibido/s el/los productos, La Quinta Caja nos comprometemos a verificar
 					el buen estado de las prendas lo más pronto posible. El proceso suele tardar entre
@@ -67,8 +79,10 @@ $contenidoPrincipal = <<<EOS
 				</div>
 			</li>
 			<li class="opcion">
-				¿DÓNDE PUEDO RECIBIR MI PEDIDO?
-				<span><i class="fas fa-chevron-down"></i></span>
+				<button class="pregunta">
+					¿DÓNDE PUEDO RECIBIR MI PEDIDO?
+					<span><i class="fas fa-chevron-down"></i></span>
+				</button>
 				<div class="submenuFaqs">
 					Actualmente realizamos envíos a España, Portugal, Alemania, Austria, Bélgica, Francia,
 					Irlanda, Italia, Países Bajos y Reino Unido. También puedes hacer una compra
@@ -77,8 +91,10 @@ $contenidoPrincipal = <<<EOS
 				</div>
 			</li>
 			<li class="opcion">
-				¿PUEDEN EXISTIR VARIACIONES ENTRE LA FOTO Y EL PRODUCTO?
-				<span><i class="fas fa-chevron-down"></i></span>
+				<button class="pregunta">
+					¿PUEDEN EXISTIR VARIACIONES ENTRE LA FOTO Y EL PRODUCTO?
+					<span><i class="fas fa-chevron-down"></i></span>
+				</button>
 				<div class="submenuFaqs">
 					Las fotos las realizaremos teniendo en cuenta que el color se parezca lo más posible
 					al producto en la realidad, sin embargo, debes tener en cuenta que la configuración

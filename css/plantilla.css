@@ -600,44 +600,54 @@ ul.lista-productos li{
 
 /*Hoja de estilo faqs*/
 .faqs{
-  margin: 0;
-  padding: 0;
+  position: relative;
+  width: 45rem;
+  left: 50%;
+  transform: translate(-50%);
 }
 
 .tituloFaqs{
-  font-family: 'Ubuntu', sans-serif;
+  margin-top: 7.5rem;
+  margin-bottom: 4.5rem;
   font-size: 2.5rem;
   text-align: center;
+  color: #333;
+}
+
+.menuFaqs{
+  text-align: center;
+}
+
+.menuFaqs ul li{
+  list-style: none;
+  text-decoration: none;
+}
+
+.menuFaqs .opcion{
+  margin-bottom: 1rem;
+}
+
+.menuFaqs .pregunta{
+  text-align: left;
+  background-color: #80008017;
+  padding: 1rem;
+  color: #333;
+  cursor: pointer;
+  width: 100%;
 }
 
 .menuFaqs ul li span i{
   float: right;
   font-size: 1rem;
+  color: #333;
 }
 
-.menuFaqs ul{
-  width: 30%;
-  background-color: #80008042;
-  list-style: none;
-  margin: 20px 30px;
+.menuFaqs .submenuFaqs{
+  padding: 1rem;
+  text-align: justify;
+  
 }
 
-.menuFaqs ul li{
-  border-bottom: 1px solid rgb(255,255,255, 0.1);
-}
-
-.mrnuFaqs span{
-  color: white;
-  text-decoration: none;
-  padding: 18px;
-  font-size: 20px;
-  display: block;
-}
-
-.menuFaqs ul li a_hover{
-  background-color: whitesmoke;
-}
-.
 
 /*Hoja de estilo Propuesta*/
 #propuesta-imagen {
@@ -1242,6 +1252,11 @@ text-shadow: 2px 2px 4px #383138;
   /*CABECERA*/
   .contenedor-flex ul li a {
     padding: 0.5rem 0.5rem;
+  }
+
+  /*FAQS*/
+  .faqs{
+    width: 100%;
   }
 
   /*PIE*/
