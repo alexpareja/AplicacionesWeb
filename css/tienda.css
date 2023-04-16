@@ -257,19 +257,14 @@ input[type=range]::-webkit-slider-thumb {
 
 #cabecera {
   background: white;
+  box-shadow: 0 0.5rem 1rem #f3eeee;
   padding: 0.5rem 0;
-  box-shadow: 0 .5rem 1rem #f3eeee;
 
   position: fixed;
   left: 0;
   top: 0;
   width: 100%;
-  z-index: 2;
-}
-
-.logo{
-  width: 20px;
-  height: 20px;
+  z-index: 4;
 }
 
 .contenedor-flex{
@@ -279,24 +274,11 @@ input[type=range]::-webkit-slider-thumb {
   align-items: center;
 }
 
-.letras{
-  letter-spacing: 7px;
-  text-decoration: none;
-  font-family: 'Ubuntu', sans-serif;
-  font-weight: bold;
-  font-size: large;
-  color: #202020;
-}
-
-.letras:hover{
-  color: #800080;
-}
-
 .contenedor-flex ul{
   font-family: 'Ubuntu', sans-serif;
   font-weight: bold;
   font-size: small;
-  letter-spacing: 1px;
+  letter-spacing: 0.125rem;
   margin:0;
   padding: 0;
   list-style: none;
@@ -313,20 +295,37 @@ input[type=range]::-webkit-slider-thumb {
   padding: 0.5rem 1rem;
 }
 
+.fas{
+  font-family: "Font Awesome 5 Free", 'Ubuntu';
+  font-size: x-large;
+  letter-spacing: 0.125rem;
+  color: hsl(0, 5%, 19%);
+}
+
+.menu:hover, .letras:hover{
+  color: #800080;
+  transform: scale(1.1);
+}
+
 .contenedor-flex ul li a:hover{
   color: #800080;
 }
 
-.ayuda, .carrito, .cuenta, .menu, .iniciar {
-  width: 25px;
-  height: 25px;
-}
-
-.ayuda:hover, .carrito:hover, .cuenta:hover, .menu:hover, .iniciar:hover {
+.contenedor-flex ul li a i:hover{
+  color: #800080;
   transform: scale(1.1);
 }
 
-.menu{display:none;}
+.letras{
+  font-size: 1.2rem;
+  letter-spacing: 0.2rem;
+  font-family: 'Ubuntu', sans-serif;
+  text-decoration: none;
+  font-weight: bold;
+  color: #333;
+}
+
+.menu{display:none; width: 1.5625rem; height: 1.5625rem;}
 #menu-icono{display:none;}
 
 
@@ -338,9 +337,8 @@ input[type=range]::-webkit-slider-thumb {
 }
 
 #pie {
+  width: 100%;
   background-color: #80008041;
-  	transition: all 0.3s ease-in-out;
-
 }
 
 .grupo1 {
@@ -363,8 +361,8 @@ input[type=range]::-webkit-slider-thumb {
 }
 
 .instagram, .twitter{
-  width: 50px;
-  height: 50px;
+  width: 3.125rem;
+  height: 3.125rem;
   margin-top: 1rem;
 }
 
@@ -372,7 +370,7 @@ input[type=range]::-webkit-slider-thumb {
   text-align: center;
   font-weight: bold;
   font-size: small;
-  letter-spacing: 1px;
+  letter-spacing: 0.0625rem;
   list-style: none;
 } 
 
@@ -393,7 +391,7 @@ input[type=range]::-webkit-slider-thumb {
 .boxRedes h2 {
   margin-top: 0.5rem;
   color: #202020;
-  font-size: 13px;
+  font-size: 0.8125rem;
   font-weight: bold;
   text-align: center;
   font-family: 'Ubuntu', sans-serif;
@@ -428,7 +426,6 @@ input[type=range]::-webkit-slider-thumb {
   .contenedor-flex ul li a {
     padding: 0.5rem 0.5rem;
   }
-  .logo{display:none;}
 
   /*PIE*/
   .logopie {

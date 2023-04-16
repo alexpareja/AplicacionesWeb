@@ -1074,19 +1074,14 @@ text-shadow: 2px 2px 4px #383138;
 
 #cabecera {
   background: white;
+  box-shadow: 0 0.5rem 1rem #f3eeee;
   padding: 0.5rem 0;
-  box-shadow: 0 .5rem 1rem #f3eeee;
 
   position: fixed;
   left: 0;
   top: 0;
   width: 100%;
-  z-index: 2;
-}
-
-.logo{
-  width: 3rem;
-  height: 3rem;
+  z-index: 4;
 }
 
 .contenedor-flex{
@@ -1124,13 +1119,18 @@ text-shadow: 2px 2px 4px #383138;
   color: hsl(0, 5%, 19%);
 }
 
-.menu:hover, .contenedor-flex ul li a:hover, .letras:hover{
+.menu:hover, .letras:hover{
   color: #800080;
   transform: scale(1.1);
 }
 
+.contenedor-flex ul li a:hover{
+  color: #800080;
+}
+
 .contenedor-flex ul li a i:hover{
   color: #800080;
+  transform: scale(1.1);
 }
 
 .letras{

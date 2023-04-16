@@ -417,19 +417,14 @@ button[type="submit"]:hover {
 
 #cabecera {
   background: white;
+  box-shadow: 0 0.5rem 1rem #f3eeee;
   padding: 0.5rem 0;
-  box-shadow: 0 .5rem 1rem #f3eeee;
 
   position: fixed;
   left: 0;
   top: 0;
   width: 100%;
-  z-index: 2;
-}
-
-.logo{
-  width: 20px;
-  height: 20px;
+  z-index: 4;
 }
 
 .contenedor-flex{
@@ -439,24 +434,11 @@ button[type="submit"]:hover {
   align-items: center;
 }
 
-.letras{
-  letter-spacing: 7px;
-  text-decoration: none;
-  font-family: 'Ubuntu', sans-serif;
-  font-weight: bold;
-  font-size: large;
-  color: #202020;
-}
-
-.letras:hover{
-  color: #800080;
-}
-
 .contenedor-flex ul{
   font-family: 'Ubuntu', sans-serif;
   font-weight: bold;
   font-size: small;
-  letter-spacing: 1px;
+  letter-spacing: 0.125rem;
   margin:0;
   padding: 0;
   list-style: none;
@@ -473,20 +455,37 @@ button[type="submit"]:hover {
   padding: 0.5rem 1rem;
 }
 
+.fas{
+  font-family: "Font Awesome 5 Free", 'Ubuntu';
+  font-size: x-large;
+  letter-spacing: 0.125rem;
+  color: hsl(0, 5%, 19%);
+}
+
+.menu:hover, .letras:hover{
+  color: #800080;
+  transform: scale(1.1);
+}
+
 .contenedor-flex ul li a:hover{
   color: #800080;
 }
 
-.ayuda, .carrito, .cuenta, .menu, .iniciar {
-  width: 25px;
-  height: 25px;
-}
-
-.ayuda:hover, .carrito:hover, .cuenta:hover, .menu:hover, .iniciar:hover {
+.contenedor-flex ul li a i:hover{
+  color: #800080;
   transform: scale(1.1);
 }
 
-.menu{display:none;}
+.letras{
+  font-size: 1.2rem;
+  letter-spacing: 0.2rem;
+  font-family: 'Ubuntu', sans-serif;
+  text-decoration: none;
+  font-weight: bold;
+  color: #333;
+}
+
+.menu{display:none; width: 1.5625rem; height: 1.5625rem;}
 #menu-icono{display:none;}
 
 
@@ -522,8 +521,8 @@ button[type="submit"]:hover {
 }
 
 .instagram, .twitter{
-  width: 50px;
-  height: 50px;
+  width: 3.125rem;
+  height: 3.125rem;
   margin-top: 1rem;
 }
 
@@ -531,7 +530,7 @@ button[type="submit"]:hover {
   text-align: center;
   font-weight: bold;
   font-size: small;
-  letter-spacing: 1px;
+  letter-spacing: 0.0625rem;
   list-style: none;
 } 
 
@@ -552,7 +551,7 @@ button[type="submit"]:hover {
 .boxRedes h2 {
   margin-top: 0.5rem;
   color: #202020;
-  font-size: 13px;
+  font-size: 0.8125rem;
   font-weight: bold;
   text-align: center;
   font-family: 'Ubuntu', sans-serif;
@@ -587,7 +586,6 @@ button[type="submit"]:hover {
   .contenedor-flex ul li a {
     padding: 0.5rem 0.5rem;
   }
-  .logo{display:none;}
 
   /*PIE*/
   .logopie {
@@ -650,6 +648,7 @@ button[type="submit"]:hover {
     margin-bottom: 1rem;
   }
 }
+
 
 ::-webkit-scrollbar {
   display: none;

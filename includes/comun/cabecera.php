@@ -23,7 +23,7 @@
 
 				<?php
 					if(!isset($_SESSION["login"])){
-						echo "<li><a href='login.php'><i class='fas fa-sign-in'></i></a></li>";
+						echo "<li><a href='login.php'><i class='fas fa-sign-in-alt'></i></a></li>";
 					}
 					else{
 						echo "<li><a href='miCuenta.php'><i class='fas fa-user'></i></a></li>";
