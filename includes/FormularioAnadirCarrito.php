@@ -151,14 +151,9 @@ class FormularioAnadirCarrito extends Formulario
 
                 // Comprueba si el producto no está en la lista de deseos y tiene sesión iniciada
                 if(isset($_SESSION['login'])) {
-                     if (!isset($_SESSION['wishlist'][$id])) {
-                        // Añade el producto a la lista de deseos
-                        $_SESSION['wishlist'][$id] = array(
-                            'id' => $id,
-                            'name' => $name,
-                            'price' => $price,
-                        );
-                        $idUsuario = $_SESSION['id'];
+                    $idUsuario = $_SESSION['id'];
+                    $existe=Favoritos::buscaPorUsuarioYProducto($idUsuario, $id);
+                     if (!$existe) {
                         $favs = Favoritos::crea($idUsuario, $id);
                     } else {
                         $this->errores['enLista'] = "Este producto ya está en favoritos";

@@ -3,15 +3,11 @@ use es\ucm\fdi\aw\Favoritos;
 require_once __DIR__.'/includes/configuracion.php';
 require_once __DIR__.'/includes/Favoritos.php';
 
-if (isset($_POST['remove'])) {
-    $product_data = explode('|', $_POST['remove']);
-    $product_id = $product_data[0];
+if (isset($_POST["remove"])) {
+    $product_id = $_POST["remove"];
     $usuario_id = $_SESSION['id'];
     $favoritos = Favoritos::borra($usuario_id, $product_id);
-
-    if (isset($_SESSION['wishlist'][$product_id])) {
-        unset($_SESSION['wishlist'][$product_id]);
-    }
+    $contenidoPrincipal .="<p>holaaaaaaaaaa</p>";
 }
 
 $tituloPagina = 'Lista de deseos';
@@ -26,15 +22,16 @@ $contenidoPrincipal .= <<<EOS
 <div id="productos">
     <ul class="lista-productos">
 EOS;
-
-if (isset($_SESSION['wishlist']) && !empty($_SESSION['wishlist'])) {
-    foreach ($_SESSION['wishlist'] as $id => &$producto) {
-        if (is_array($producto)) {
-            $link = 'mostrarProducto.php?id='.$producto['id'];
-            $src = 'img/producto_' . $producto['id'] . '.png';
-            $alt = 'Imagen de Producto ' . $producto['id'];
-            $nombre = $producto['name'];
-            $precio = $producto['price'];
+$favs= Favoritos::getFavoritos($_SESSION['id']);
+if ($favs) {
+    foreach ($favs as $fav) {
+            $prod= es\ucm\fdi\aw\Producto::buscaPorId($fav->getProducto());
+            $link = 'mostrarProducto.php?id='.$fav->getProducto();
+            $src = 'img/producto_' . $fav->getProducto(). '.png';
+            $alt = 'Imagen de Producto ' . $fav->getProducto();
+            $nombre = $prod->getNombre();
+            $precio = $prod->getPrecio();
+            $idProd=$prod->getId();
             $contenidoPrincipal .= <<<EOS
                 <li>
                     <div class="producto-imagen">
@@ -44,7 +41,7 @@ if (isset($_SESSION['wishlist']) && !empty($_SESSION['wishlist'])) {
                     $nombre <span class='precio'> $precio € </span>
                     <div class="comprar-eliminar-producto">
                     <form method="post">
-                        <button type="submit" name="remove" value="$id">Eliminar</button>
+                        <button type="submit" name="remove" value="$idProd">Eliminar</button>
                     </form> 
                     <form method="post" action='$link'>
                         <button type="submit" name="comprar">Comprar</button>
@@ -52,7 +49,7 @@ if (isset($_SESSION['wishlist']) && !empty($_SESSION['wishlist'])) {
                     </div>
                 </li>
             EOS;
-        }
+        
     }
 } else {
     $contenidoPrincipal .= <<<EOS

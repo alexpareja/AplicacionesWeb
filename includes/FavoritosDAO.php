@@ -29,6 +29,24 @@ class FavoritosDAO
         return false;
     }
 
+    public function buscaPorUsuarioYProducto($usuario,$producto)
+    {
+        $query = sprintf("SELECT * FROM listadeseos WHERE usuario=%d AND producto=%d", $usuario,$producto);
+        $rs = $this->conn->query($query);
+        if ($rs->num_rows>0) {
+            $fila = $rs->fetch_assoc();
+            if($fila){
+            $fav = new Favoritos($fila['id'], $fila['usuario'], $fila['producto']);
+            $rs->free();
+
+            return $fav;
+            }
+        } else {
+            error_log("Error BD ({$this->conn->errno}): {$this->conn->error}");
+        }
+        return false;
+    }
+
     public function buscaPorId($idFav)
     {
         $query = sprintf("SELECT * FROM listadeseos WHERE id=%d", $idFav);
@@ -47,16 +65,16 @@ class FavoritosDAO
         return false;
     }
 
-    public function getFavoritos()
+    public function getFavoritos($usuario)
     {
-        $query = "SELECT * FROM listadeseos";
+        $query = sprintf("SELECT * FROM listadeseos where usuario=%d",$usuario);
 
         $rs = $this->conn->query($query);
         $favs=array();
         if($rs->num_rows>0){
-            while($row=$rs->fetch_assoc())
+            while($fila=$rs->fetch_assoc())
             {
-                $id=$row['id'];
+                $id=$fila['id'];
                 $favs[$id] = new Favoritos($fila['id'], $fila['usuario'], $fila['producto']);
             }
         }

@@ -22,16 +22,22 @@ class Favoritos
         return $FavoritosDAO->buscaPorId($idFav);
     }
 
+    public static function buscaPorUsuarioYProducto($usuario,$producto)
+    {
+        $FavoritosDAO= new FavoritosDAO();
+        return $FavoritosDAO->buscaPorUsuarioYProducto($usuario,$producto);
+    }
+
     public static function buscaPorTitulo($tituloFav)
     {
         $FavoritosDAO= new FavoritosDAO();
         return $FavoritosDAO->buscaPorTitulo($tituloFav);
     }
 
-    public static function getFavoritos()
+    public static function getFavoritos($usuario)
     {
         $FavoritosDAO= new FavoritosDAO();
-        return $FavoritosDAO->getFavoritos();
+        return $FavoritosDAO->getFavoritos($usuario);
     }
 
     public static function getFavoritosUsuario($idUsuario)
