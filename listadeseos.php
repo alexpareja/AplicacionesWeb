@@ -47,16 +47,23 @@ if ($favs) {
                     </form> 
                     </div>
                 </li>
+                </ul>
             EOS;
         
     }
 } else {
     $contenidoPrincipal .= <<<EOS
+    </ul>
     <div class="no-prod">
     <p>No hay productos en la lista de deseos</p>
     </div>
     EOS;
 }
+
+$contenidoPrincipal .= <<<EOS
+</div>
+</div>
+EOS;
 
 require __DIR__.'/includes/plantillas/plantillaCarrito.php';
 ?>

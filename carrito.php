@@ -71,12 +71,14 @@ if (isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
                         </form>
                         </div>
                     </li>
+                </ul>
                 EOS;
             }
         }
     }
 } else {
     $contenidoPrincipal .= <<<EOS
+    </ul>
     <div class="no-prod">
     <p>No hay productos en el carrito</p>
     </div>
@@ -84,7 +86,6 @@ if (isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
 }
 
 $contenidoPrincipal .= <<<EOS
-    </ul>
     <div class="fin-carrito">
         <form action="tienda.php" method="get">
             <button type="submit">Seguir comprando</button>
