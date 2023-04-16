@@ -73,29 +73,6 @@ class FormularioLogin extends Formulario
                 $_SESSION['apellido2'] = $usuario->getApellido2();
                 $_SESSION['email'] = $usuario->getCorreo();
                 $_SESSION['direccion'] = $usuario->getDireccion();
-                // Obtener los favoritos del usuario
-                $idUsuario = $_SESSION['id'];
-                $favs = Favoritos::getFavoritosUsuario($idUsuario);
-
-                // Construir el array de wishlist
-                $wishlist = array();
-                foreach ($favs as $id => $favorito) {
-                    // Obtener la información del producto correspondiente
-                    $producto = Producto::buscaPorId($favorito->getProducto());
-
-                    // Crear un nuevo array con la información del producto
-                    $item = array(
-                        'id' => $producto->getId(),
-                        'name' => $producto->getNombre(),
-                        'price' => $producto->getPrecio(),
-                    );
-
-                    // Agregar el elemento al array de wishlist
-                    $wishlist[$id] = $item;
-                }
-
-                // Establecer la variable de sesión $_SESSION['wishlist']
-                $_SESSION['wishlist'] = $wishlist;
 
                 if($usuario->getRol() == Usuario::ROL_ADMIN) {
                     $_SESSION['admin'] = true;

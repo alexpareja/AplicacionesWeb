@@ -7,7 +7,6 @@ if (isset($_POST["remove"])) {
     $product_id = $_POST["remove"];
     $usuario_id = $_SESSION['id'];
     $favoritos = Favoritos::borra($usuario_id, $product_id);
-    $contenidoPrincipal .="<p>holaaaaaaaaaa</p>";
 }
 
 $tituloPagina = 'Lista de deseos';
