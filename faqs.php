@@ -68,7 +68,7 @@ $contenidoPrincipal = <<<EOS
 				</div>
 			</li>
 			<li class="opcion">
-				<button class="pregunta>
+				<button class="pregunta">
 					¿CUÁNDO RECIBIRÉ EL IMPORTE DE MI DEVOLUCIÓN?
 					<span><i class="fas fa-chevron-down"></i></span>
 				</button>

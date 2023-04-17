@@ -2,7 +2,7 @@
 
 main {
   min-height: 100vh;
-  margin-top: 3.7rem;
+  margin-top: 3.5rem;
 }
 
 /*Hoja de estilo miCuenta*/
@@ -624,7 +624,7 @@ ul.lista-productos li{
 }
 
 .menuFaqs .opcion{
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 .menuFaqs .pregunta{
@@ -863,7 +863,142 @@ text-shadow: 2px 2px 4px #383138;
 }
 
 /*Hoja de estilo Sobre Nosotros*/
+.sobrenosotros{
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
 
+.tituloNosotros{
+  margin-top: 3rem;
+  font-size: 3rem;
+  color:#333;
+}
+
+.contenidoNosotros{
+  padding: 0.5rem 1rem;
+}
+
+.nosotros1{
+  width: 100%;
+  background-color: #88aeff;
+  text-shadow: 0.125rem 0.125rem 0.25rem #646364;
+}
+
+.fotoTit{
+  width: 30rem;
+  margin-bottom: 3rem;
+}
+
+.nosotros1 .tituloNosotros{
+  color: white;
+}
+
+.nosotros2{
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  width: 45rem;
+  align-items: center;
+}
+
+.btnNosotros{
+  display: inline-block;
+  margin: 3rem 0;
+  background-color: #c0a3c0;
+  padding: 0.625rem 2.5rem;
+  color: white;
+  text-decoration: none;
+  border: 0.125rem solid #c0a3c0;
+  text-shadow: 0.125rem 0.125rem 0.25rem #383138;
+  width: 10rem;
+}
+
+.btnNosotros:hover{
+  background: none;
+  color:#555;
+}
+
+.nosotros3{
+  background: url("../img/fondoNosotros.jpg");
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  font-size: 1.5rem;
+  color: white;
+  text-shadow: 0.125rem 0.125rem 0.25rem #383138;
+
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 0;
+}
+
+.nosotros3 ul li{
+  list-style: none;
+  padding: 0.5rem;
+}
+
+.nosotros3 ul{
+  padding: 1rem 0;
+}
+
+.numero1{
+  font-size: 4rem;
+  color: rgb(158, 30, 152);
+  font-weight: bold;
+}
+
+.numero2{
+  font-size: 4rem;
+  color: rgb(236, 236, 43);
+  font-weight: bold;
+}
+
+.numero3{
+  font-size: 4rem;
+  color: rgb(245, 75, 103);
+  font-weight: bold;
+}
+
+.nosotros4{
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  width: 45rem;
+  align-items: center;
+}
+
+.nos1, .nos2{
+  width: 20rem;
+}
+
+.fotoNosotros{
+  padding: 2rem 0;
+}
+
+.nosotros5{
+  width: 100%;
+  background-image: url("../img/fondoNosotros2.jpg");
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #555;
+  text-shadow: 0.125rem 0.125rem 0.25rem white;
+}
+
+.nosotros5 .contenidoNosotros{
+  margin-top: 4rem;
+  width: 30rem;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+}
 
 /*Hoja de estilo Editar producto*/
 #editar-prod{
@@ -1156,6 +1291,14 @@ text-shadow: 2px 2px 4px #383138;
   /*FAQS*/
   .faqs{
     width: 100%;
+  }
+
+  /*SOBRENOSOTROS*/
+  .nosotros2, .nosotros4{
+    width: 30rem;
+  }
+  .nosotros3{
+    grid-template-columns: repeat(1, 1fr);
   }
 
   /*PIE*/
