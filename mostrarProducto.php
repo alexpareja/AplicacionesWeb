@@ -60,4 +60,13 @@ else{ //si no está definido parámetro id en GET
   <h2 class="error"> Se ha producido un error </h2>
   EOS;
 }
+
+$contenidoPrincipal .= <<<EOS
+        <h2 class="titulo1">Sugerencias</h2>
+        <h2 class="titulo2">de La Quinta Caja</h2>
+    EOS;
+    //Se muestran los porductos de la tienda
+    $tienda = new es\ucm\fdi\aw\Tienda();
+    $contenidoPrincipal .= $tienda->productosAleatoriosEnTienda();
+    
 require __DIR__.'/includes/plantillas/plantilla.php';
