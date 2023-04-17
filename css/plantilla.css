@@ -202,7 +202,6 @@ ul.lista-productos {
 ul.lista-productos li{
   font-size:1.25rem;
   display:inline-block;
-  padding:1.25rem;
 }
 
 .lista-productos li a {
@@ -210,10 +209,11 @@ ul.lista-productos li{
   color: #333;
 }
 
+
 .producto-imagen {
   width: 100%;
-  max-width: 18.75rem;
-  height: 18.75rem;
+  max-width: 10.75rem;
+  height: 10.75rem;
   border: 0.0625rem solid #800080;
   padding: 0.625rem;
   box-sizing: border-box;
@@ -252,12 +252,16 @@ ul.lista-productos li{
   font-size: xx-large;
   font-weight: normal;
   margin-left: 3.5rem;
+  text-align:center;
   
 }
 .titulo2 {
   font-size: xx-large;
   margin-left: 3.5rem;
+    text-align:center;
+
 }
+
 
 
 /*Hoja de estilo Lista de deseos*/
@@ -283,6 +287,7 @@ ul.lista-productos li{
 
 .productos {
   font-family: 'Ubuntu', sans-serif;
+  text-align: center;
 }
 
 /*Hoja de estilo Miembros*/
@@ -508,7 +513,7 @@ ul.lista-productos li{
 
 .sau{
   padding: 13.75rem 0;
-  background: #a6c90c;
+  background: #096441;
 }
 
 .box-container{
@@ -1447,6 +1452,8 @@ h2.error {
   cursor: pointer;
   display: inline-block;
 }
+
+
 
 .stockTallas {
   margin-top: 0.5rem;
