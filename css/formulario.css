@@ -397,7 +397,7 @@ input.quantity{
 /*Cabecera*/
 *{margin:0;}
 
-#cabecera {
+.cabecera {
   background: white;
   box-shadow: 0 0.5rem 1rem #f3eeee;
   padding: 0.5rem 0;
@@ -478,7 +478,7 @@ input.quantity{
   font-family: 'Ubuntu', sans-serif;
 }
 
-#pie {
+.pie {
   width: 100%;
   background-color: #80008041;
 }

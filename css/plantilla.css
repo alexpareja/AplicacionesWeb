@@ -261,27 +261,27 @@ ul.lista-productos li{
 
 
 /*Hoja de estilo Lista de deseos*/
-#lista-deseos {
+.lista-deseos {
   text-align: center;
 }
 
-#lista-deseos h2 {
+.lista-deseos h2 {
   text-align: center; 
   font-family: 'Ubuntu', sans-serif;
 }
 
-#lista-deseos p {
+.lista-deseos p {
   font-family: 'Ubuntu', sans-serif;
 }
 
-#lista-deseos img.img-deseos{
+.lista-deseos img.img-deseos{
   width: 46.875rem;
   height: 31.35rem; 
   display: block; 
   margin: 0 auto;
 }
 
-#productos {
+.productos {
   font-family: 'Ubuntu', sans-serif;
 }
 
@@ -1119,21 +1119,6 @@ text-shadow: 0.125rem 0.125rem 0.25rem #383138;
   margin-bottom: 3rem;
 }
 
-#entAdd, #entDel {
-  padding: 7px 7px;
-  background-color: #800080;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-bottom: 10px;
-  font-size: large;
-  margin-left: 30px;
-}
-
-#entAdd:hover, #entDel:hover {
-  background-color: #572364;
-}
 
 /*Hoja de estilo Bocetos*/
 .bocetos{
@@ -1166,7 +1151,7 @@ text-shadow: 0.125rem 0.125rem 0.25rem #383138;
 /*Cabecera*/
 *{margin:0;}
 
-#cabecera {
+.cabecera {
   background: white;
   box-shadow: 0 0.5rem 1rem #f3eeee;
   padding: 0.5rem 0;
@@ -1247,7 +1232,7 @@ text-shadow: 0.125rem 0.125rem 0.25rem #383138;
   font-family: 'Ubuntu', sans-serif;
 }
 
-#pie {
+.pie {
   width: 100%;
   background-color: #80008041;
 }
@@ -1542,58 +1527,21 @@ input.quantity {
   margin-top: 1.5rem;
 }
 
-/*Hoja de estilo Entrada Blog*/
-#entradaBlog {
-  width: 80%;
-  margin: 0 auto;
-}
-
-#entradaBlog h2 {
-  text-align: center; 
-  font-family: 'Ubuntu', sans-serif;
-}
-
-#entrada_contenido{
-  display: flex;
-  justify-content: center;
-}
-
-#entrada_texto {
-  width: 60%;
-  margin-right: 1.25rem; 
-}
-
-#entrada_imagen {
-  width: 30%;
-  float: right; 
-}
-
-#entrada_imagen img {
-  max-width: 100%;
-  height: auto;
-}
-
-#entradas_links {
-  width: 20%;
-  float: left;
-  margin-right: 1.25rem;
-}
-
 /* Estilos para el contenido de la página de pago */
-    #pago {
+    .pago {
         background-color: white;
         text-align: center;
         font-family: Verdana;
         transition: all 0.3s ease-in-out;
     }
-    #pago h2 {
+    .pago h2 {
         font-weight: bold;
         font-size: 2em;
         margin-top: 1.25em;
         margin-bottom: 1.25em;
     }
     
-    #pago ul.resumen-pago {
+    .pago ul.resumen-pago {
         font-size: 1.1em;
         border: 0.063em solid black;
         padding: 0.625em;
@@ -1605,13 +1553,13 @@ input.quantity {
         line-height: 1.4em;
     }
     
-    #pago .total-price p {
+    .pago .total-price p {
         text-align: center;
         font-size: 1.25em;
         font-weight: bold;
     }
     
-    #pago .total-price form button {
+    .pago .total-price form button {
         background-color: #800080;
         color: white;
         padding: 0.438em 0.438em;

@@ -1,4 +1,4 @@
-<header id="cabecera">
+<header class="cabecera">
 	<div class="contenedor-flex">
 		<div class="oculto">
 			<input type="checkbox" name="menu-icono" id="menu-icono">

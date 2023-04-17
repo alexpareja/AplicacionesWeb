@@ -13,12 +13,12 @@ $tituloPagina = 'Lista de deseos';
 $contenidoPrincipal = '';
 
 $contenidoPrincipal .= <<<EOS
-<div id="tienda">
+<div class="tienda">
 EOS;
 
 $contenidoPrincipal .= <<<EOS
 <h2>Mi Lista de deseos</h2>
-<div id="productos">
+<div class="productos">
     <ul class="lista-productos">
 EOS;
 $favs= Favoritos::getFavoritos($_SESSION['id']);

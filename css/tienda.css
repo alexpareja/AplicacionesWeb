@@ -268,7 +268,7 @@ input[type=range]::-webkit-slider-thumb {
 /*Cabecera*/
 *{margin:0;}
 
-#cabecera {
+.cabecera {
   background: white;
   box-shadow: 0 0.5rem 1rem #f3eeee;
   padding: 0.5rem 0;
@@ -353,7 +353,7 @@ input[type=range]::-webkit-slider-thumb {
   font-family: 'Ubuntu', sans-serif;
 }
 
-#pie {
+.pie {
   background-color: #80008041;
   transition: all 0.3s ease-in-out;
 

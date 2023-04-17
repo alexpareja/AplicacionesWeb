@@ -1,4 +1,4 @@
-<footer id="pie">
+<footer class="pie">
 	<div class="grupo1">
 		<div class="boxLogo">
 			<a href="index.php">

@@ -32,7 +32,7 @@ foreach ($_SESSION['cart'] as $product) {
 
 // Mostrar los productos del carrito con su información
 $contenidoPrincipal .= <<<EOS
-    <div id="pago">
+    <div class="pago">
     <h2>Resumen de compra</h2>
     <ul class="resumen-pago">
     EOS;
