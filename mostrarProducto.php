@@ -35,12 +35,12 @@ $contenidoPrincipal .= <<<EOS
     <div class="infoProducto">
     <h2>$nombre</h2>
     <p>$desc</p>
-    <h3>$precio</h3>
+    <h3>$precio €</h3>
     </div>
     $htmlFormRegistro
     </div>
     <div class="comments">
-    <h3>Comentarios</h3>
+    </br>
     <ul>
     <!--aquí se incluirán los comentarios, sacados de la bbdd-->
     </ul>
@@ -60,7 +60,6 @@ else{ //si no está definido parámetro id en GET
   <h2 class="error"> Se ha producido un error </h2>
   EOS;
 }
-
 $contenidoPrincipal .= <<<EOS
         <h2 class="titulo1">Sugerencias</h2>
         <h2 class="titulo2">de La Quinta Caja</h2>

@@ -61,7 +61,7 @@ class Tienda {
     public function productosAleatoriosEnTienda() {
     $html = '';
     $html .= <<<EOS
-        <div id="productos">
+        <div class="productos">
         <ul class="lista-productos" id="lista-productos">
     EOS;
     
