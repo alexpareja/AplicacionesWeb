@@ -10,7 +10,7 @@ class Periodico {
 
     public function entradasEnBlog() {
         $html = <<<EOS
-                <section class="panelBlog">
+                <div class="panelBlog">
             EOS;
         foreach($this->entradas as $ent){
             $link = 'entradaBlog.php?id='.$ent->getId();
@@ -34,7 +34,7 @@ class Periodico {
         }
 
         $html .= <<<EOS
-            </section>
+            </div>
         EOS;
         return $html;
     }

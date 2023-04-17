@@ -7,7 +7,7 @@ $tituloPagina = 'Planificacion';
 
 $contenidoPrincipal = <<<EOS
 <div class="Planificacion">
-        <section class="content plan">
+        <div class="content plan">
             <h2 class="tituloPlan">Planificación</h2>
             <div class="contenidoPlan">
                 <p>
@@ -32,7 +32,7 @@ $contenidoPrincipal = <<<EOS
                     proporcionado por la Facultad de Informática.
                 </p>
             </div>
-        </section>
+        </div>
         <section class="timeline-section">
             <div class="timeline-items">
                 <div class="timeline-item">

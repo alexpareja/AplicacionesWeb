@@ -34,7 +34,7 @@ $contenidoPrincipal .= <<<EOS
 		<h2 class="subtituloBlog">
 			ÚLTIMAS NOTICIAS
 		</h2>
-	<section>
+	</section>
 	EOS;
 
 //Se muestran las entradas del blog

@@ -6,7 +6,7 @@ $tituloPagina = 'La Quinta Caja';
 
 $contenidoPrincipal = <<<EOS
 <div class="Inicio">
-	<section class="content header">
+	<div class="content header">
 		<h2 class="tituloInicio">La Quinta Caja</h2>
 		<p>
 			Nos dedicamos a la venta de cajas sorpresa. ¡De segunda mano!¡Sostenibles!
@@ -31,8 +31,8 @@ EOS;
 
 $contenidoPrincipal .= <<<EOS
 		</div>
-	</section>
-	<section class="content sau">
+	</div>
+	<div class="content sau">
         <h2 class="tituloInicio">Cajas</h2>
         <p>
             Hoy en día la contaminación provocada por el
@@ -52,16 +52,16 @@ $contenidoPrincipal .= <<<EOS
             </div>
         </div>
         <a href="tienda.php" class="btnInicio">Ir a la tienda</a>
-    </section>
-	<section class="content about">
+    </div>
+	<div class="content about">
         <h2 class="tituloInicio">Nosotros</h2>
         <p>
             Somos un grupo de jovenes apasionados por la moda y el reciclaje,
             siempre teniendo en cuenta las tendencias del momento
         </p>
         <a href="sobrenosotros.php" class="btnInicio">Saber más</a>
-    </section>
-	<section class="content price">
+    </div>
+	<div class="content price">
 		<article class="contain">
 			<h2 class="tituloInicio">Suscripciones</h2>
 			<p>
@@ -70,8 +70,8 @@ $contenidoPrincipal .= <<<EOS
 			</p>
 			<a href="detalles.php" class="btnInicio">Saber más</a>
 		</article>
-    </section>
-	<section class="content news">
+    </div>
+	<div class="content news">
         <h2 class="tituloInicio">Blog</h2>
         <p>
             También contamos con un blog donde estarán
@@ -81,7 +81,7 @@ $contenidoPrincipal .= <<<EOS
             <img src="img/content-news.jpg" class="inicioBlog" alt="blogear">
             <a href="blog.php" class="btnImagen">Ir al blog</a>
         </div>
-    </section>
+    </div>
 </div>
 
 EOS;

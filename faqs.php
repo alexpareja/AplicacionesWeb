@@ -6,9 +6,9 @@ $tituloPagina = 'Faqs';
 
 $contenidoPrincipal = <<<EOS
 <div class="faqs">
-	<section class="tituloFaqs">
+	<div class="tituloFaqs">
 		<h2>Ayuda</h2>
-	</section>
+	</div>
 	<nav class="menuFaqs">
 		<ul>
 			<li class="opcion">

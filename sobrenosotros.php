@@ -7,15 +7,15 @@ $tituloPagina = 'Nosotros';
 $contenidoPrincipal = <<<EOS
 
 <div class="sobrenosotros">
-	<section class="nosotros1">
+	<div class="nosotros1">
 		<h2 class="tituloNosotros">
 			Sobre nosotros
 		</h2>
 		<figure class="fotoTitulo">
 			<img src="img/nosotros.jpg" class="fotoTit" alt="Foto principal Sobre nosotros">
 		</figure>
-	</section>
-	<section class="nosotros2">
+	</div>
+	<div class="nosotros2">
 		<p class="contenidoNosotros">
 			Cuando creamos esta web, nos planteamos la idea de "colgar" la
 			historia de #LaQuintaCaja.
@@ -42,8 +42,8 @@ $contenidoPrincipal = <<<EOS
 			en visitar nuestro blog.
 		</p>
 		<a href="blog.php" class="btnNosotros">Leer el blog</a>
-	</section>
-	<section class="nosotros3">
+	</div>
+	<div class="nosotros3">
 		<ul class="boxEquipo">
 			<li class="numero1">6</li>
 			<li class="palabra">compañeros de equipo</li>
@@ -56,8 +56,8 @@ $contenidoPrincipal = <<<EOS
 			<li class="numero3">20,000+</li>
 			<li class="palabra">Usuarios</li>
 		</ul>
-	</section>
-	<section class="nosotros4">
+	</div>
+	<div class="nosotros4">
 		<h2 class="tituloNosotros">
 			Equipo
 		</h2>
@@ -72,14 +72,14 @@ $contenidoPrincipal = <<<EOS
 			<img src="img/nos1.png" class="nos1" alt="Imagen 2 de nosotros">
 		</div>
 		<a href="contacto.php" class="btnNosotros">Conócenos mejor</a>
-	</section>
-	<section class="nosotros5">
+	</div>
+	<div class="nosotros5">
 		<p class="contenidoNosotros">
 			Más de 20,000 personas como tú compra en La Quinta Caja
 			para ayudar al medio ambiente
 		</p>
 		<a href="tienda.php" class="btnNosotros">Empieza ahora</a>
-	</section>
+	</div>
 </div>
 
 EOS;

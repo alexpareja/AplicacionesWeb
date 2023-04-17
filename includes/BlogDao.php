@@ -109,7 +109,7 @@ class BlogDAO
             $blog->setId($this->conn->insert_id);
             return $blog;
         } else {
-            error_log("Error BD ({$conn->errno}): {$conn->error}");
+            error_log("Error BD ({$this->conn->errno}): {$this->conn->error}");
         }
         return false;
     }
