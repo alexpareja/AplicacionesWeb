@@ -14,7 +14,7 @@ class Periodico {
             EOS;
         foreach($this->entradas as $ent){
             $link = 'entradaBlog.php?id='.$ent->getId();
-            $src = "img/blog_" . $ent->getId() . ".png";
+            $src = 'img/blog_' . $ent->getId() . '.png';
             $alt = 'Imagen de Blog '.$ent->getId();
             $titulo = $ent->getTitulo();
             $descripcion = $ent->getDescripcion();
@@ -24,7 +24,7 @@ class Periodico {
             $html .= <<<EOS
                         <div class="articulo">
                             <a href="$link">
-                                <img scr="$src" alt="$alt" class="imagenBlog">
+                                <img src="$src" alt="$alt" class="imagenBlog">
                                 <p class="tituloArt">$titulo</p>
                                 <p class="descripcionArt">$descripcion</p>
                                 <p class="autorArt">Escrito por $autor</p>
