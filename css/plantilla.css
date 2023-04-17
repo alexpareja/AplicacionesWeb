@@ -133,7 +133,7 @@ main {
   justify-content: space-between;
   align-items: center;
   background-color: #f2f2f2;
-  border: 1px solid #ccc;
+  border: 0.0625rem solid #ccc;
   padding: 1.25rem;
   margin-bottom: 2rem;
 }
@@ -178,7 +178,7 @@ main {
   font-size: 0.8em;
   text-decoration: none;
   cursor: pointer;
-  border-bottom: 2px solid transparent;
+  border-bottom: 0.125rem solid transparent;
   transition: border-bottom-color 0.2s ease-in-out;
 }
 
@@ -200,9 +200,9 @@ ul.lista-productos {
 }
 
 ul.lista-productos li{
-  font-size:20px;
+  font-size:1.25rem;
   display:inline-block;
-  padding:20px;
+  padding:1.25rem;
 }
 
 .lista-productos li a {
@@ -212,10 +212,10 @@ ul.lista-productos li{
 
 .producto-imagen {
   width: 100%;
-  max-width: 300px;
-  height: 300px;
-  border: 1px solid #800080;
-  padding: 10px;
+  max-width: 18.75rem;
+  height: 18.75rem;
+  border: 0.0625rem solid #800080;
+  padding: 0.625rem;
   box-sizing: border-box;
   display: flex;
   justify-content: center;
@@ -231,7 +231,7 @@ ul.lista-productos li{
 }
 
 .producto-imagen:hover {
-  border: 2px solid #572364;
+  border: 0.125rem solid #572364;
 }
 
 .producto-imagen:hover img {
@@ -275,8 +275,8 @@ ul.lista-productos li{
 }
 
 #lista-deseos img.img-deseos{
-  width: 750px;
-  height: 500px; 
+  width: 46.875rem;
+  height: 31.35rem; 
   display: block; 
   margin: 0 auto;
 }
@@ -357,7 +357,7 @@ ul.lista-productos li{
 
 /*Hoja de estilo Detalles*/
 .detalles {
-  max-width: 800px;
+  max-width: 50rem;
   margin: 0 auto;
   padding: 1.25rem;
 }
@@ -666,7 +666,7 @@ ul.lista-productos li{
   margin-top: 2rem;
   padding: 0 0.9rem;
   font-family: 'Ubuntu', sans-serif;
-  font-size: 15px;
+  font-size: 1rem;
   text-align: justify;
 }
 
@@ -717,32 +717,31 @@ ul.lista-productos li{
 }
 
 .plan .tituloPlan{
-  margin-top: 20px;
-  margin-bottom: 20px;
-  font-size: 60px;
+  padding: 1.25rem 0;
+  font-size: 3.75rem;
   font-weight: 600;
   text-transform: uppercase;
   color: black;
-  text-shadow: 2px 2px 4px #413a41;
+  text-shadow: 0.125rem 0.125rem 0.25rem #413a41;
 }
 
 .plan p{
-  margin-bottom: 10px;
-font-size: 18px;
+  margin-bottom: 0.625rem;
+font-size: 1.125rem;
 color: black;
 
-padding: 0 70px;
+padding: 0 4.375rem;
 text-align: center;
-text-shadow: 2px 2px 4px #383138;
+text-shadow: 0.125rem 0.125rem 0.25rem #383138;
 }
 
 .timeline-section{
   min-height: 100vh;
-  padding: 100px 15px;
+  padding: 6.25rem 1rem;
 }
 
 .timeline-items{
-  max-width: 1000px;
+  max-width: 62.5rem;
   margin: auto;
   display: flex;
   flex-wrap: wrap;
@@ -752,14 +751,14 @@ text-shadow: 2px 2px 4px #383138;
 .timeline-items::before{
   content:'';
   position: absolute;
-  width: 2px;
+  width: 0.125rem;
   height: 100%;
   background-color: #1e2a35;
-  left: calc(50% - 1px);
+  left: calc(50% - 0.0625rem);
 }
 
 .timeline-item{
-  margin-bottom: 40px;
+  margin-bottom: 2.5rem;
   width: 100%;
   position: relative;
 }
@@ -769,70 +768,70 @@ text-shadow: 2px 2px 4px #383138;
 }
 
 .timeline-item:nth-child(odd){
-  padding-right: calc(50% + 30px);
+  padding-right: calc(50% + 1.875rem);
   text-align: right;
 }
 
 .timeline-item:nth-child(even){
-  padding-left: calc(50% + 30px);
+  padding-left: calc(50% + 1.875rem);
 }
 
 .timeline-dot{
-  height: 16px;
-  width: 16px;
+  height: 1rem;
+  width: 1rem;
   background-color: rgb(136, 255, 0);
   position: absolute;
-  left: calc(50% - 8px);
+  left: calc(50% - 0.5rem);
   border-radius: 50%;
   top: 10px;
 }
 
 .timeline-date{
-  font-size: 18px;
+  font-size: 1.125rem;
   color: rgb(136, 255, 0);
-  margin: 6px 0 15px;
+  margin: 0.375rem 0 1rem;
 }
 
 .timeline-content{
   background-color: #1e2a35;
-  padding: 18px;
-  border-radius: 5px;
+  padding: 1.125rem;
+  border-radius: 0.3125rem;
 }
 
 .timeline-content h3{
-  font-size: 20px;
+  font-size: 1.25rem;
   color: white;
-  margin: 0 0 10px;
+  margin: 0 0 0.625rem;
   text-transform: capitalize;
   font-weight: 500;
 }
 
 .timeline-content p{
   color: #bec1c4;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 300;
-  line-height: 22px;
+  line-height: 1.375rem;
 }
 
 @media (max-width:767px){
   .timeline-items::before{
-      left: 7px;
+      left: 0.4375rem;
   }
   .timeline-item:nth-child(odd){
       padding-right: 0;
       text-align: left;
   }
   .timeline-item:nth-child(odd), .timeline-item:nth-child(even){
-      padding-left: 37px;
+      padding-left: 2.3125rem;
   }
   .timeline-dot{
       left: 0;
   }
   .plan .tituloPlan{
-      font-size: 40px;
+      font-size: 2.5rem;
   }
   .plan p{
-      font-size: 15px;
+      font-size: 1rem;
   }
 }
 
@@ -1089,11 +1088,12 @@ text-shadow: 2px 2px 4px #383138;
   text-decoration: none;
   color: #333;
   margin-bottom: 2rem;
-  margin-right: 0.1rem;
+  margin-right: 1rem;
 }
 
 .imagenBlog{
-  width: 25rem;
+  width: 30rem;
+  height: 20rem;
 }
 .articulo a{
   text-decoration: none;
@@ -1159,8 +1159,8 @@ text-shadow: 2px 2px 4px #383138;
 }
 
 .bocetos img {
-  width: 540px;
-  height: 370px;
+  width: 33.75rem;
+  height: 23.125rem;
 }
 
 /*Cabecera*/
@@ -1469,8 +1469,8 @@ h2.error {
 .product-form label.talla {
   font-size: medium;
   padding: 0.5rem 0.5rem;
-  border: 2px solid #ccc;
-  border-radius: 5px;
+  border: 0.125rem solid #ccc;
+  border-radius: 0.3125rem;
   cursor: pointer;
   display: inline-block;
 }
@@ -1483,7 +1483,7 @@ h2.error {
 .stockTallas p {
   padding: 0.5rem 0.5rem;
   display: inline-block;
-  border: 2px solid #ccc;
+  border: 0.125rem solid #ccc;
   border-radius: 5px;
 }
 
@@ -1494,8 +1494,8 @@ input[type="radio"]{
 input.quantity {
   font-size: medium;
   padding: 0.5rem;
-  border-radius: 5px;
-  border: 1px solid #800080;
+  border-radius: 0.3125rem;
+  border: 0.0625rem solid #800080;
   margin-bottom: 0.5rem;
 }
 
@@ -1518,7 +1518,7 @@ input.quantity {
   width: 100%;
   height: auto;
   margin: 0 auto;
-  max-width: 600px;
+  max-width: 37.5rem;
 }
 
 .entrada h2 {
@@ -1560,7 +1560,7 @@ input.quantity {
 
 #entrada_texto {
   width: 60%;
-  margin-right: 20px; 
+  margin-right: 1.25rem; 
 }
 
 #entrada_imagen {
@@ -1576,7 +1576,7 @@ input.quantity {
 #entradas_links {
   width: 20%;
   float: left;
-  margin-right: 20px;
+  margin-right: 1.25rem;
 }
 
 /* Estilos para el contenido de la página de pago */
@@ -1627,10 +1627,10 @@ input.quantity {
 	.confirm {
 	text-align: center;
     margin: 0 auto;
-	max-width: 800px;
-	padding: 20px;
+	max-width: 50rem;
+	padding: 1.25rem;
 	font-family: 'Ubuntu', sans-serif;	
-	margin-top: 200px;
+	margin-top: 12.5rem;
 	align-items: center;
 	} 
 	
@@ -1641,19 +1641,19 @@ input.quantity {
 	
 	.confirm h2{
 		font-size: 1.2em;
-		margin-top: 50px; 			
+		margin-top: 3.125rem; 			
 	}
 	
 	.confirm button[type="submit"] {
  
-	margin-top: 50px; 
+	margin-top: 3.125rem; 
   background-color: #800080;
   color: white;
-  padding: 7px 7px;
+  padding: 0.4375rem 0.4375rem;
   border: none;
-  border-radius: 5px;
+  border-radius: 0.3125rem;
   cursor: pointer;
-  margin-bottom: 10px;
+  margin-bottom: 0.625rem;
   font-size: large;
 }
 
@@ -1668,9 +1668,9 @@ input.quantity {
 .entrada button[type="submit"] {
   background-color: #800080;
   color: white;
-  padding: 7px 7px;
+  padding: 0.4375rem 0.4375rem;
   border: none;
-  border-radius: 5px;
+  border-radius: 0.3125rem;
   cursor: pointer;
   margin-bottom: 0.5rem;
   font-size: large;
@@ -1696,11 +1696,11 @@ input.quantity {
 .producto button[type="submit"] {
   background-color: #800080;
   color: white;
-  padding: 7px 7px;
+  padding: 0.4375rem 0.4375rem;
   border: none;
-  border-radius: 5px;
+  border-radius: 0.3125rem;
   cursor: pointer;
-  margin-bottom: 10px;
+  margin-bottom: 0.625rem;
   font-size: large;
 }
 

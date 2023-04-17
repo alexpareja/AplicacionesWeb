@@ -18,9 +18,9 @@ ul.botones li{
 }
 
 ul.lista-productos li{
-	font-size:20px;
+	font-size:1.25rem;
 	display:inline-block;
-	padding:20px;
+	padding:1.25rem;
 }
 
 .lista-productos li a {
@@ -30,15 +30,15 @@ ul.lista-productos li{
 
 .producto-imagen {
 	width: 100%;
-	max-width: 300px;
-	height: 300px;
-	border: 1px solid #800080;
-	padding: 10px;
+	max-width: 18.75rem;
+	height: 18.75rem;
+	border: 0.0625rem solid #800080;
+	padding: 0.625rem;
 	box-sizing: border-box;
 }
 
 .producto-imagen:hover {
-	border: 2px solid #572364;
+	border: 0.125rem solid #572364;
 }
 
 .producto-imagen img {
@@ -74,11 +74,11 @@ ul.lista-productos li{
 button[type="submit"] {
 	background-color: #800080;
 	color: white;
-	padding: 7px 7px;
+	padding: 0.4375rem 0.4375rem;
 	border: none;
-	border-radius: 5px;
+	border-radius: 0.3125rem;
 	cursor: pointer;
-	margin-bottom: 10px;
+	margin-bottom: 0.625rem;
 	font-size: 1.2em;
 }
 
@@ -88,7 +88,7 @@ button[type="submit"]:hover {
 
 .boton-filtros{
 	position: absolute;
-	left:100px;
+	left:6.25rem;
 	transition: all 0.3s ease-in-out;
 }
 
@@ -138,14 +138,14 @@ table.compras tr:hover {
 
 /*carrito*/
 .eliminar-producto {
-	margin-top: 10px;
+	margin-top: 0.625rem;
 }
 
 .eliminar-producto input[type="number"] {
-	width: 60px;
-	height: 20px;
-	font-size: 16px;
-	padding: 5px;
+	width: 3.75rem;
+	height: 1.25rem;
+	font-size: 1rem;
+	padding: 0.3125rem;
 }
 
 .no-compra{
@@ -154,28 +154,28 @@ table.compras tr:hover {
 }
 
 .no-prod {
-	margin-top: 40px;
+	margin-top: 2.5rem;
 	font-weight: bold;
-	font-size: 18px;
+	font-size: 1.125rem;
 }
 
 .total-price {
-	padding: 5px;
+	padding: 0.3125rem;
 	font-family: 'Ubuntu', sans-serif;
 	font-size: 1.1em;
 	width:10%;
 	font-weight: bold;
 	display: block;
 	white-space: nowrap;
-	margin-top: 10px;
-	margin-left: 10px;
+	margin-top: 0.625rem;
+	margin-left: 0.625rem;
 }
 
 .fin-carrito {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	margin-top: 50px;
+	margin-top: 3.125rem;
 }
 
 .fin-carrito p {
@@ -186,28 +186,28 @@ table.compras tr:hover {
 
 /*Menu Izq*/
 .mostrarMenu {
-	margin-left: 300px;
+	margin-left: 18.75rem;
 	width: auto;
 }
 
 .mostrarMenu-izq {
 	position: fixed;
-	width: 300px;
+	width: 18.75rem;
 	height: 100%;
 	background-color: #f5f5f5;
-	padding: 20px;
+	padding: 1.25rem;
 	box-sizing: border-box;
 	transition: all 0.3s ease-in-out;
 	left: 0;
-	top: 50px;
+	top: 3.125rem;
 }
 
 .mostrarMenu-not {
 	position: fixed;
-	width: 300px;
+	width: 18.75rem;
 	height: 100%;
-	left: -300px;
-	top: 50px;
+	left: -18.75rem;
+	top: 3.125rem;
 	box-sizing: border-box;
 	transition: all 0.3s ease-in-out;
 	z-index:2;
@@ -217,21 +217,21 @@ table.compras tr:hover {
 .tit-filtros{
 	font-size: xx-large;
 	font-weight: normal;
-	padding-bottom: 10px;
+	padding-bottom: 0.625rem;
 }
 
 .campo-busqueda {
-	padding: 5px;
+	padding: 0.3125rem;
 	font-size: 1em;
-	border: 1px solid #800080;
-	border-radius: 5px;
+	border: 0.0625rem solid #800080;
+	border-radius: 0.3125rem;
 }
 
  .filtros li{
 	display:block;
-	padding: 3px;
+	padding: 0.1875rem;
 	font-weight: bold;
-	padding-bottom: 10px;
+	padding-bottom: 0.625rem;
 }
 
  .checkfiltros li{
@@ -243,23 +243,23 @@ table.compras tr:hover {
 }
 
 input[type=checkbox] {
-	margin-right: 10px;
+	margin-right: 0.625rem;
 }
 
 input[type=range] {
 	-webkit-appearance: none;
 	width: 100%;
-	height: 8px;
-	margin-top: 10px;
-	margin-bottom: 20px;
+	height: 0.5rem;
+	margin-top: 0.625rem;
+	margin-bottom: 1.25rem;
 	background-color: #800080;	
-	border-radius: 5px;
+	border-radius: 0.3125rem;
 }
 
 input[type=range]::-webkit-slider-thumb {
 	-webkit-appearance: none;
-	width: 20px;
-	height: 20px;
+	width: 1.25rem;
+	height: 1.25rem;
 	background-color: #800080;
 	border: none;
 	border-radius: 50%;
