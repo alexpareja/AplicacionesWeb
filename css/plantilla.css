@@ -998,20 +998,8 @@ text-shadow: 0.125rem 0.125rem 0.25rem #383138;
   text-align: center;
 }
 
-/*Hoja de estilo Editar producto*/
-#editar-prod{
-    text-align: center;
-}
-
-#editar-prod h2 {
-  text-align: center; 
-}
-
-#editar-prod img.img-editarp{
-  width: 750px;
-  height: 500px; 
-  display: block; 
-  margin: 0 auto;
+.error{
+	color:red;
 }
 
 /*Hoja de estilo Blog*/

@@ -73,11 +73,11 @@ class FormularioAnadirCarrito extends Formulario
         <button type="submit" name="accion" value="add">Añadir al carrito</button>
         <button type="submit" name="accion" value="favorite">Añadir a favoritos</button>
         </div>
-        <span id="errorNoStock">{$erroresCampos['noStock']}</span>
-        <span id="errorNoStock">{$erroresCampos['talla']}</span>
-        <span id="errorNoCantidad">{$erroresCampos['cantidad']}</span>
-        <span id="errorNoLogin">{$erroresCampos['noSesion']}</span>
-        <span id="errorEnLista">{$erroresCampos['enLista']}</span>
+        <span class="error">{$erroresCampos['noStock']}</span>
+        <span class="error">{$erroresCampos['talla']}</span>
+        <span class="error">{$erroresCampos['cantidad']}</span>
+        <span class="error">{$erroresCampos['noSesion']}</span>
+        <span class="error">{$erroresCampos['enLista']}</span>
         EOF;
 		return $html;
     }
