@@ -1016,56 +1016,107 @@ text-shadow: 2px 2px 4px #383138;
 }
 
 /*Hoja de estilo Blog*/
-#blog{
-  padding: 2rem 1rem;
+.blog{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-#blog .titulo1 {
-  font-family: 'Ubuntu', sans-serif;
-  font-size: xx-large;
-  font-weight: normal;
-  margin-top: 1rem;
-}
-
-#blog .titulo2 {
-  font-family: 'Ubuntu', sans-serif;
-  font-size: xx-large;
-  font-weight: bold;
-}
-
-#rectangulo {
-  margin-top: 40px;
-  background-color: #f2f2f2;
-  height: 20%;
+.cabeceraBlog{
+  background-image: url("../img/portadaBlog.jpg");
+  background-position: center;
+  background-size: cover;
+  color: whitesmoke;
+  text-shadow: 0.125rem 0.125rem 0.25rem black;
   width: 100%;
-  padding: 2px;
+  align-items: center;
+  text-align: center;
 }
 
-#rectangulo .t1, .t2, .t3 {
-  margin-left: 15px;
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 10px;
+.tituloBlog{
+  font-size: 6rem;
+  padding: 2rem 1rem;
+  text-align: justify;
 }
 
-#rectangulo .t1 {
-  line-height: 1;
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 20px;
+.subtituloBlog{
+  font-size: 2.5rem;
+  padding: 1rem 1rem;
+  text-align: justify;
 }
 
-#rectangulo .t3 {
-  margin-top: 40px;
+.contenidoBlog{
+  color: white;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  padding: 1rem 1rem;
+  letter-spacing: 0.1rem;
 }
 
-#rectangulo a {
-  text-decoration: none;
-  color: black;
-}
-
-#etiqueta {
+.btnBlog{
+  display: inline-block;
+  margin: 3rem 0;
   background-color: #800080;
-  height: 10px;
-  width: 100vm;
+  padding: 0.625rem 2.5rem;
+  color: white;
+  text-decoration: none;
+  border: 0.125rem solid #800080;
+  text-shadow: 0.125rem 0.125rem 0.25rem #383138;
+  width: 10rem;
+}
+
+.btnBlog:hover{
+  background: none;
+}
+
+.titBlog .subtituloBlog{
+  text-align: center;
+  padding: 3rem 0;
+}
+
+.panelBlog{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  
+}
+
+.articulo{
+  width: 30rem;
+  background-color: #80008017;
+  text-decoration: none;
+  color: #333;
+  margin-bottom: 2rem;
+  margin-right: 0.1rem;
+}
+
+.imagenBlog{
+  width: 25rem;
+}
+.articulo a{
+  text-decoration: none;
+  color: #151a1f;
+}
+
+.tituloArt{
+  margin-top: 2rem;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.descripcionArt{
+  padding: 0.5rem;
+  text-align: justify;
+}
+
+.autorArt{
+  padding:0.5rem;
+  font-weight: 600;
+  font-size: 0.8rem;
+  margin-bottom: 3rem;
 }
 
 #entAdd, #entDel {

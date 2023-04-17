@@ -10,31 +10,31 @@ class Periodico {
 
     public function entradasEnBlog() {
         $html = <<<EOS
-                <h2 class="titulo1">Una caja</h2>
-                <h2 class="titulo2">de blogs</h2>
-                <div id="blog">
+                <section class="panelBlog">
             EOS;
         foreach($this->entradas as $ent){
             $link = 'entradaBlog.php?id='.$ent->getId();
+            $src = "img/blog_" . $ent->getId() . ".png";
+            $alt = 'Imagen de Blog '.$ent->getId();
             $titulo = $ent->getTitulo();
             $descripcion = $ent->getDescripcion();
             $idAutor = $ent->getAutor();
             $autor=Usuario::buscaPorId($idAutor)->getNombre();
 
             $html .= <<<EOS
-                        <div id="rectangulo">
-                            <a href='$link'>
-                                <p class="t1">$titulo</p>
-                                <p class="t2">$descripcion</p>
-                                <p class="t3">Escrito por $autor</p>
+                        <div class="articulo">
+                            <a href="$link">
+                                <img scr="$src" alt="$alt" class="imagenBlog">
+                                <p class="tituloArt">$titulo</p>
+                                <p class="descripcionArt">$descripcion</p>
+                                <p class="autorArt">Escrito por $autor</p>
                             </a>
                         </div>
-                        <div id="etiqueta"></div>
                 EOS;
         }
 
         $html .= <<<EOS
-            </div>
+            </section>
         EOS;
         return $html;
     }
