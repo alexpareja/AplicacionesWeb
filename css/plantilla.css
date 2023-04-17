@@ -442,7 +442,6 @@ ul.lista-productos li{
 .Inicio{
   text-align: center;
   font-family: 'Ubuntu', sans-serif;
-  background-color: #80008041;
 }
 
 .header{
@@ -509,7 +508,7 @@ ul.lista-productos li{
 
 .sau{
   padding: 13.75rem 0;
-  background: #2e032e;
+  background: #a6c90c;
 }
 
 .box-container{
@@ -552,7 +551,7 @@ ul.lista-productos li{
 } 
 
 .about{
-  background: #412947;
+  background: #bb063c;
 }
 
 .price{
@@ -566,7 +565,7 @@ ul.lista-productos li{
 
 .news{
   padding-top: 3.75rem;
-  background: #412947;
+  background: #bb063c;
   padding-bottom: 3.75rem;
 }
 
@@ -587,10 +586,10 @@ ul.lista-productos li{
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 0.625rem 2.5rem;
-  border: 0.125rem solid #412947;
+  border: 0.125rem solid #800080;
   color: white;
   text-decoration: none;
-  background: #412947;
+  background: #800080;
   text-shadow: 2px 2px 4px #383138;
 }
 
@@ -651,7 +650,7 @@ ul.lista-productos li{
 
 /*Hoja de estilo Propuesta*/
 .propuesta-imagen {
-  margin-top: 3.7rem;
+  margin-top: 3.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -690,7 +689,7 @@ ul.lista-productos li{
 }
 
 .Planificacion{
-  margin-top: 3.7rem;
+  margin-top: 3.5rem;
   font-family: 'Ubuntu', sans-serif;
   background-color: #151a1f;
 }
@@ -883,17 +882,13 @@ text-shadow: 2px 2px 4px #383138;
 
 .nosotros1{
   width: 100%;
-  background-color: #88aeff;
+  background-color: #80008071;
   text-shadow: 0.125rem 0.125rem 0.25rem #646364;
 }
 
 .fotoTit{
   width: 30rem;
-  margin-bottom: 3rem;
-}
-
-.nosotros1 .tituloNosotros{
-  color: white;
+  padding: 3rem 0;
 }
 
 .nosotros2{
@@ -907,11 +902,11 @@ text-shadow: 2px 2px 4px #383138;
 .btnNosotros{
   display: inline-block;
   margin: 3rem 0;
-  background-color: #c0a3c0;
+  background-color: #800080;
   padding: 0.625rem 2.5rem;
   color: white;
   text-decoration: none;
-  border: 0.125rem solid #c0a3c0;
+  border: 0.125rem solid #800080;
   text-shadow: 0.125rem 0.125rem 0.25rem #383138;
   width: 10rem;
 }
@@ -969,6 +964,10 @@ text-shadow: 2px 2px 4px #383138;
   flex-direction: column;
   width: 45rem;
   align-items: center;
+}
+
+.nosotros4 .tituloNosotros{
+  margin-bottom: 2rem;
 }
 
 .nos1, .nos2{

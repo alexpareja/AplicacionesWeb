@@ -12,7 +12,7 @@ $contenidoPrincipal = <<<EOS
 			Sobre nosotros
 		</h2>
 		<figure class="fotoTitulo">
-			<img src="img/nosotros.png" class="fotoTit" alt="Foto principal Sobre nosotros">
+			<img src="img/nosotros.jpg" class="fotoTit" alt="Foto principal Sobre nosotros">
 		</figure>
 	</section>
 	<section class="nosotros2">

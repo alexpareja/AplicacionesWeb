@@ -116,6 +116,267 @@ $contenidoPrincipal = <<<EOS
                         <p class="miembrosTime">TODOS</p>
                     </div>
                 </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">01 marzo</div>
+                    <div class="timeline-content">
+                        <h3 class="tituloTime">Etapa 2.1</h3>
+                        <p class="descripcionTime">Creación includes</p>
+                        <p class="miembrosTime">Alejandro Pareja</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">02 marzo</div>
+                    <div class="timeline-content">
+                        <h3 class="tituloTime">Etapa 2.2</h3>
+                        <p class="descripcionTime">Login y Registro</p>
+                        <p class="miembrosTime">Cristina Morillo</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">05 marzo</div>
+                    <div class="timeline-content">
+                        <h3 class="tituloTime">Etapa 2.3</h3>
+                        <p class="descripcionTime">Funcionalidad: realizar compra</p>
+                        <p class="miembrosTime">TODOS</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">06 marzo</div>
+                    <div class="timeline-content">
+                        <h3 class="tituloTime">Etapa 2.4</h3>
+                        <p class="descripcionTime">Funcionalidad: añadir producto</p>
+                        <p class="miembrosTime">TODOS</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">07 marzo</div>
+                    <div class="timeline-content">
+                        <h3 class="tituloTime">Etapa 2.5</h3>
+                        <p class="descripcionTime">Creación página Tienda</p>
+                        <p class="miembrosTime">Alejandro Pareja y Elena Basca</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">12 marzo</div>
+                    <div class="timeline-content">
+                        <h3 class="tituloTime">Etapa 2.6</h3>
+                        <p class="descripcionTime">Creación BBDD</p>
+                        <p class="miembrosTime">Sergio Atienza</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">14 marzo</div>
+                    <div class="timeline-content">
+                        <h3 class="tituloTime">Etapa 2.7</h3>
+                        <p class="descripcionTime">Creación páginas en cabecera</p>
+                        <p class="miembrosTime">Lucero Abregú</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">20 marzo</div>
+                    <div class="timeline-content">
+                        <h3 class="tituloTime">Etapa 2.8</h3>
+                        <p class="descripcionTime">Creación página Carrito</p>
+                        <p class="miembrosTime">Jesús Hernández</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">21 marzo</div>
+                    <div class="timeline-content">
+                        <h3 class="tituloTime">Etapa 2.9</h3>
+                        <p class="descripcionTime">Corrección entrega 1</p>
+                        <p class="miembrosTime">TODOS</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">23 marzo</div>
+                    <div class="timeline-content">
+                        <h3 class="tituloTime">Entrega práctica 2</h3>
+                        <p class="descripcionTime">Diseño de la aplicación usando HTML, versión mínima del proyecto</p>
+                        <p class="miembrosTime">TODOS</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">31 marzo</div>
+                    <div class="timeline-content">
+                        <h3 class="tituloTime">Etapa 3.1</h3>
+                        <p class="descripcionTime">CSS de los filtros añadido JavaScript</p>
+                        <p class="miembrosTime">Alejandro Pareja y Elena Basca</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">01 abril</div>
+                    <div class="timeline-content">
+                        <h3 class="tituloTime">Etapa 3.2</h3>
+                        <p class="descripcionTime">Creación de la sección de compras y usuario</p>
+                        <p class="miembrosTime">Cristina Morillo</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">03 abril</div>
+                    <div class="timeline-content">
+                        <h3 class="tituloTime">Etapa 3.3</h3>
+                        <p class="descripcionTime">CSS de página Login terminado</p>
+                        <p class="miembrosTime">Cristina Morillo</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">04 abril</div>
+                    <div class="timeline-content">
+                        <h3 class="tituloTime">Etapa 3.4</h3>
+                        <p class="descripcionTime">Creación de página Lista de deseos</p>
+                        <p class="miembrosTime">Cristina Morillo y Jesús Hernández</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">05 abril</div>
+                    <div class="timeline-content">
+                        <h3 class="tituloTime">Etapa 3.5</h3>
+                        <p class="descripcionTime">Funcionalidad: Blog</p>
+                        <p class="miembrosTime">Sergio Atienza y Lucero Abregú</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">07 abril</div>
+                    <div class="timeline-content">
+                        <h3 class="tituloTime">Etapa 3.6</h3>
+                        <p class="descripcionTime">Cabecera y Pie de página responsive</p>
+                        <p class="miembrosTime">Lucero Abregú</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">08 abril</div>
+                    <div class="timeline-content">
+                        <h3 class="tituloTime">Etapa 3.7</h3>
+                        <p class="descripcionTime">Funcionalidad: Editar producto</p>
+                        <p class="miembrosTime">Alejandro Pareja y Elena Basca</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">09 abril</div>
+                    <div class="timeline-content">
+                        <h3 class="tituloTime">Etapa 3.8</h3>
+                        <p class="descripcionTime">CSS de página Mi Cuenta</p>
+                        <p class="miembrosTime">Cristina Morillo</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">10 abril</div>
+                    <div class="timeline-content">
+                        <h3 class="tituloTime">Etapa 3.9</h3>
+                        <p class="descripcionTime">CSS editar producto, tienda, carrito, compras</p>
+                        <p class="miembrosTime">Alejandro Pareja y Elena Basca</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">11 abril</div>
+                    <div class="timeline-content">
+                        <h3 class="tituloTime">Etapa 3.10</h3>
+                        <p class="descripcionTime">CSS página Contacto, miPerfil, Miembros, Login, Registro, sugerencias</p>
+                        <p class="miembrosTime">Cristina Morillo</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">12 abril</div>
+                    <div class="timeline-content">
+                        <h3 class="tituloTime">Etapa 3.11</h3>
+                        <p class="descripcionTime">CSS página Entrada de Blog</p>
+                        <p class="miembrosTime">Sergio Atienza</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">13 abril</div>
+                    <div class="timeline-content">
+                        <h3 class="tituloTime">Etapa 3.12</h3>
+                        <p class="descripcionTime">Funcionalidad: editar y eliminar entrada, plantilla datos iniciales Blog</p>
+                        <p class="miembrosTime">Sergio Atienza</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">14 abril</div>
+                    <div class="timeline-content">
+                        <h3 class="tituloTime">Etapa 3.13</h3>
+                        <p class="descripcionTime">Funcionalidad: añadir entrada, CSS páginas: index, sobrenosotros, faqs, blog, planificación</p>
+                        <p class="miembrosTime">Lucero Abregú</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">15 abril</div>
+                    <div class="timeline-content">
+                        <h3 class="tituloTime">Etapa 3.14</h3>
+                        <p class="descripcionTime">CSS de página Carrito, pago, lista de deseos</p>
+                        <p class="miembrosTime">Jesús Hernández</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">15 abril</div>
+                    <div class="timeline-content">
+                        <h3 class="tituloTime">Etapa 3.15</h3>
+                        <p class="descripcionTime">Funcionalidad: eliminar producto, CSS página de confirmación</p>
+                        <p class="miembrosTime">Elena Basca</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">16 abril</div>
+                    <div class="timeline-content">
+                        <h3 class="tituloTime">Etapa 3.16</h3>
+                        <p class="descripcionTime">Validación HTML</p>
+                        <p class="miembrosTime">TODOS</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">17 abril</div>
+                    <div class="timeline-content">
+                        <h3 class="tituloTime">Entrega práctica 3</h3>
+                        <p class="descripcionTime">Diseño visual del proyecto usando CSS, versión del 50% de la funcionalidad final</p>
+                        <p class="miembrosTime">TODOS</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">25 abril</div>
+                    <div class="timeline-content">
+                        <h3 class="tituloTime">Etapa 4.1</h3>
+                        <p class="descripcionTime">Corrección práctica 3</p>
+                        <p class="miembrosTime">TODOS</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">05 mayo</div>
+                    <div class="timeline-content">
+                        <h3 class="tituloTime">Entrega final</h3>
+                        <p class="descripcionTime">Aplicación Web completa y funcional</p>
+                        <p class="miembrosTime">TODOS</p>
+                    </div>
+                </div>
             </div>
         </section>
     </div>
