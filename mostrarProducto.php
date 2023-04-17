@@ -40,7 +40,6 @@ $contenidoPrincipal .= <<<EOS
     $htmlFormRegistro
     </div>
     <div class="comments">
-    </br>
     <ul>
     <!--aquí se incluirán los comentarios, sacados de la bbdd-->
     </ul>
