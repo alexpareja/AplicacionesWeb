@@ -36,7 +36,6 @@ class FormularioEditarProducto extends Formulario
 					{$erroresCampos['nombre']}
 				</div>
 				<div>
-			  
 					<p><label for="descripcion">Descripción:</label></p>
 					 <p><textarea id="descripcion" name="descripcion">{$this->producto->getDescripcion()}</textarea></p>
 				</div>
@@ -55,8 +54,8 @@ class FormularioEditarProducto extends Formulario
 					
 					<div class="subir-archivo2" onchange="changeHandler(event);">
 						<label for="imagen" class="upload_button">
-						<p>Elige la imagen del producto</p>
-						<input id="imagen" type="file" name="imagen" value="img/producto_{$this->producto->getId()}.png" class="upload">
+						Elige la imagen del producto
+						<input id="imagen" type="file" name="imagen" class="upload">
 						</label>
 					</div>
 					{$erroresCampos['imagen']}
@@ -99,10 +98,8 @@ class FormularioEditarProducto extends Formulario
 						<button type="submit" name="delete">Eliminar producto</button>
 						</form>
 						</li>
-						
 					</ul>
 					<button type="submit" formaction="tienda.php">Volver a la tienda</button>
-					 
 				</div>
 			</fieldset>
 		</div>

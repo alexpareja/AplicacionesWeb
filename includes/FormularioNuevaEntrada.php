@@ -34,28 +34,28 @@ class FormularioNuevaEntrada extends Formulario
 				<legend>Nueva Entrada</legend>
 				<div>
 					<p><label for="titulo">Titulo:</label></p>
-					<p><input id="titulo" type="text" name="titulo" value='$titulo'></p>
+					<p><input id="titulo" type="text" name="titulo"></p>
 					{$erroresCampos['titulo']}
 				</div>
 				<div>
 					<p><label for="descripcion">Descripción:</label></p>
-					<p><textarea id="descripcion" name="descripcion" value='$descripcion'></textarea></p>
+					<p><textarea id="descripcion" name="descripcion"></textarea></p>
 					{$erroresCampos['descripcion']}
 				</div>
 				<div>
 					<p><label for="contenido">Contenido:</label></p>
-					<p><textarea id="contenido" name="contenido" value='$contenido'></textarea></p>
+					<p><textarea id="contenido" name="contenido"></textarea></p>
 					{$erroresCampos['contenido']}
 				</div>
 				<div>
-				<label for="imagen">Imagen:</label>
+				<label>Imagen:</label>
 					<div id='subir-archivo1' class='subir-archivo1'>
 						<p>Previsualización de la imagen</p>
 					</div>
 					<div class="subir-archivo2" onchange="changeHandler(event);">
 						<label for="imagen" class="upload_button">
-						<p>Elige la imagen de la entrada</p>
-						<input id="upload-input" type="file" name="imagen">
+						Elige la imagen de la entrada
+						<input id="imagen" type="file" name="imagen" class="upload">
 						</label>
 					</div>
 					{$erroresCampos['imagen']}

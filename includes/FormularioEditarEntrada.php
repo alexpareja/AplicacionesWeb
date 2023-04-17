@@ -42,7 +42,7 @@ class FormularioEditarEntrada extends Formulario
 				{$erroresCampos['contenido']}
 				</div>
 				<div>
-					<label for="imagen">Imagen:</label>
+					<label>Imagen:</label>
 					<div id='subir-archivo1' class='subir-archivo1'>
 						<img src='img/blog_{$this->entrada->getId()}.png' alt='Entrada {$this->entrada->getId()}'>
 						<p>blog_{$this->entrada->getId()}.png <p>
@@ -50,8 +50,8 @@ class FormularioEditarEntrada extends Formulario
 					
 					<div class="subir-archivo2" onchange="changeHandler(event);">
 						<label for="imagen" class="upload_button">
-						<p>Elige la imagen de la entrada</p>
-						<input id="upload-input" type="file" name="imagen" value="img/blog{$this->entrada->getId()}.png">
+						Elige la imagen de la entrada
+						<input id="imagen" type="file" name="imagen" class="upload">
 						</label>
 					</div>
 					{$erroresCampos['imagen']}
