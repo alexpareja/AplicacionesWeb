@@ -96,7 +96,7 @@ class Compra
 			$cantidad = $c->getCantidad();
 			$precio = $c->getPrecio();
 			$html .= <<<EOF
-					<tr data-fecha=$fecha data-user=$nombreU data-prod=$nombreP data-talla=$talla data-cantidad=$cantidad data-precio=$precio>
+					<tr data-fecha=$fecha data-user='$nombreU' data-nombre='$nombreP' data-talla=$talla data-cantidad=$cantidad data-precio=$precio>
 						<td>$fecha</td>
 						<td>$nombreU</td>
 						<td>$nombreP</td>
@@ -136,7 +136,7 @@ class Compra
             $cantidad = $c->getCantidad();
             $precio = $c->getPrecio();
             $html .= <<<EOF
-                    <tr data-fecha=$fecha data-prod=$nombreP data-talla=$talla data-cantidad=$cantidad data-precio=$precio>
+                    <tr data-fecha=$fecha data-nombre='$nombreP' data-talla=$talla data-cantidad=$cantidad data-precio=$precio>
                         <td>$fecha</td>
                         <td>$nombreP</td>
                         <td>$talla</td>

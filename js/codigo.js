@@ -86,7 +86,7 @@ function filtrarProductos() {
 			var precio = parseFloat(elemento.getAttribute("data-precio"));
 			var talla = elemento.getAttribute("data-talla");
 
-			for (var j = 0; j < tallasSeleccionadas.length; j++) {
+			for (var j = 1; j < tallasSeleccionadas.length; j++) {
 				if (talla !== tallasSeleccionadas[j] && talla !== null) {
 				mostrar = false;
 				}
@@ -115,16 +115,32 @@ function buscarProductos() {
   var filtro = input.value.toUpperCase();
   
   var listaProductos = document.getElementById("lista-productos");
-  var elementosLista = listaProductos.getElementsByTagName("li");
+  var tablaCompras = document.getElementById("tabla-compras");
 
-  for (var i = 0; i < elementosLista.length; i++) {
-    var elemento = elementosLista[i];
-    var nombre = elemento.getAttribute("data-nombre").toUpperCase();
-	
-    if (nombre.indexOf(filtro) > -1) {
-      elemento.style.display = "inline-block";
-    } else {
-      elemento.style.display = "none";
+  if(listaProductos !== null){
+	var elementosLista = listaProductos.getElementsByTagName("li");
+	for (var i = 0; i < elementosLista.length; i++) {
+		var elemento = elementosLista[i];
+		var nombre = elemento.getAttribute("data-nombre").toUpperCase();
+		if (nombre.indexOf(filtro) > -1) {
+			elemento.style.display = "inline-block";
+		} else {
+			elemento.style.display = "none";
+		}
+	}
+  }
+  
+  if(tablaCompras !== null){
+	var elementosTabla = tablaCompras.getElementsByTagName("tr");
+	for (var i = 1; i < elementosTabla.length; i++) {
+		var elemento = elementosTabla[i];
+		var nombre = elemento.getAttribute("data-nombre").toUpperCase();
+
+		if (nombre.indexOf(filtro) > -1) {
+			elemento.style.display = "table-row";
+		} else {
+			elemento.style.display = "none";
+		}
 	}
   }
 }
@@ -133,7 +149,7 @@ function quitarFiltros(){
 	var slider = document.getElementById("slider");
 	var valorPrecio = document.getElementById("valor-precio");
 
-	slider.value = 100;
+	slider.value = 200;
 	valorPrecio.innerText = slider.value;  
 	
 	var tallas = document.getElementsByName("tamano");
