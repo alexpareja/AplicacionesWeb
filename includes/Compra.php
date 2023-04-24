@@ -72,7 +72,7 @@ class Compra
 	public static function mostrarTablaCompras($compras){
 		$html = '';
 		$html .= <<<EOF
-				<table class="compras">
+				<table class="compras" id="tabla-compras">
 					<tr>
 						<th>Fecha</th>
 						<th>Usuario</th>
@@ -96,7 +96,7 @@ class Compra
 			$cantidad = $c->getCantidad();
 			$precio = $c->getPrecio();
 			$html .= <<<EOF
-			<tr>
+					<tr data-fecha=$fecha data-user='$nombreU' data-nombre='$nombreP' data-talla=$talla data-cantidad=$cantidad data-precio=$precio>
 						<td>$fecha</td>
 						<td>$nombreU</td>
 						<td>$nombreP</td>
@@ -116,7 +116,7 @@ class Compra
     public static function mostrarTablaComprasUsuario($compras){
         $html = '';
         $html .= <<<EOF
-                <table class="compras">
+                <table class="compras" id="tabla-compras">
                     <tr>
                         <th>Fecha</th>
                         <th>Producto</th>
@@ -136,7 +136,7 @@ class Compra
             $cantidad = $c->getCantidad();
             $precio = $c->getPrecio();
             $html .= <<<EOF
-            <tr>
+                    <tr data-fecha=$fecha data-nombre='$nombreP' data-talla=$talla data-cantidad=$cantidad data-precio=$precio>
                         <td>$fecha</td>
                         <td>$nombreP</td>
                         <td>$talla</td>

@@ -9,10 +9,12 @@
 						<option value="precioD">Precio descendente</option>
 					</select>
 				</li>
-				<li>Buscar:</li>
+				
+				<li>Buscador de productos:</li>
 				<li>
-				<input type="text" id="campo-busqueda" class="campo-busqueda" placeholder="Buscar productos..." oninput="buscarProductos()">
+				<input type="text" id="campo-busqueda" class="campo-busqueda" placeholder="Buscar..." oninput="buscarProductos()">
 				</li>
+				
 				<li>Talla:</li>
 				<li>
 					<ul class ="checkfiltros">
@@ -23,13 +25,16 @@
 					<li><input type="checkbox" name="tamano" value="XL" onclick="filtrarProductos()">XL</li>
 					</ul>
 				</li>
+				
 				<li>
-					<p>Precio máximo: <span id="valor-precio"></span> euros</p>
-					<input type="range" id="slider" min="0" max="100" value="100" step="1">
+					<p>Precio máximo: <span id="valor-precio">200</span> euros</p>
+					<input type="range" id="slider" min="0" max="200" value="200" step="1">
 				</li>
+				
 				<li>
 					<button type="submit" class="botones-filtros" onclick="quitarFiltros()">Resetear filtros</button>
 				</li>
+				
 				<li>
 					<button type="submit" class="botones-filtros" onclick="mostrarMenu()">Ocultar filtros</button>
 				</li>
