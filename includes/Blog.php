@@ -50,7 +50,6 @@ class Blog
     public static function edita($id,$titulo, $contenido, $descripcion)
     {
         $BlogDAO= new BlogDAO();
-        if(!$id)  {return true;}
         return $BlogDAO->actualiza($id,$titulo, $contenido, $descripcion);
     }
 

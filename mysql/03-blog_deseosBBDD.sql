@@ -28,8 +28,10 @@ CREATE TABLE `comentariosblog` (
   `entradaBlog` int(10) UNSIGNED NOT NULL,
   `usuario` int(10) UNSIGNED NOT NULL,
   `contenido` varchar(200) NOT NULL,
-  `fecha` datetime NOT NULL
+  `fecha` datetime NOT NULL,
+  `respuesta` int(10) UNSIGNED DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
 
 -- --------------------------------------------------------
 
@@ -43,7 +45,8 @@ CREATE TABLE `comentariosproducto` (
   `usuario` int(10) UNSIGNED NOT NULL,
   `contenido` varchar(200) NOT NULL,
   `fecha` datetime NOT NULL,
-  `review` decimal(10,0) NOT NULL
+  `review` decimal(10,0) NOT NULL,
+  `respuesta` int(10) UNSIGNED DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 CREATE TABLE `listadeseos` (
@@ -101,15 +104,17 @@ ALTER TABLE `blog`
 ALTER TABLE `comentariosblog`
   ADD PRIMARY KEY (`id`),
   ADD KEY `idEntradaBlog` (`entradaBlog`),
-  ADD KEY `idUsuario` (`usuario`);
+  ADD KEY `idUsuario` (`usuario`),
+  ADD KEY `respuesta` (`respuesta`);
 
---
+
 -- Indices de la tabla `comentariosproducto`
 --
 ALTER TABLE `comentariosproducto`
   ADD PRIMARY KEY (`id`),
   ADD KEY `idProducto` (`producto`),
-  ADD KEY `idUsuario` (`usuario`);
+  ADD KEY `idUsuario` (`usuario`),
+  ADD KEY `respuesta` (`respuesta`);
 
 --
 -- AUTO_INCREMENT de las tablas volcadas
@@ -146,12 +151,15 @@ COMMIT;
 --
 ALTER TABLE `comentariosblog`
   ADD CONSTRAINT `comentariosblog_ibfk_1` FOREIGN KEY (`entradaBlog`) REFERENCES `blog` (`id`) ON UPDATE CASCADE,
-  ADD CONSTRAINT `comentariosblog_ibfk_2` FOREIGN KEY (`usuario`) REFERENCES `usuarios` (`id`) ON UPDATE CASCADE;
+  ADD CONSTRAINT `comentariosblog_ibfk_2` FOREIGN KEY (`usuario`) REFERENCES `usuarios` (`id`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `comentariosblog_ibfk_3` FOREIGN KEY (`respuesta`) REFERENCES `comentariosblog` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+COMMIT;
 
 --
 -- Filtros para la tabla `comentariosproducto`
 --
 ALTER TABLE `comentariosproducto`
   ADD CONSTRAINT `comentariosproducto_ibfk_1` FOREIGN KEY (`producto`) REFERENCES `productos` (`id`) ON UPDATE CASCADE,
-  ADD CONSTRAINT `comentariosproducto_ibfk_2` FOREIGN KEY (`usuario`) REFERENCES `usuarios` (`id`) ON UPDATE CASCADE;
+  ADD CONSTRAINT `comentariosproducto_ibfk_2` FOREIGN KEY (`usuario`) REFERENCES `usuarios` (`id`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `comentariosproducto_ibfk_3` FOREIGN KEY (`respuesta`) REFERENCES `comentariosproducto` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
