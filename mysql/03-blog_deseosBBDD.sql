@@ -151,8 +151,7 @@ COMMIT;
 --
 ALTER TABLE `comentariosblog`
   ADD CONSTRAINT `comentariosblog_ibfk_1` FOREIGN KEY (`entradaBlog`) REFERENCES `blog` (`id`) ON UPDATE CASCADE,
-  ADD CONSTRAINT `comentariosblog_ibfk_2` FOREIGN KEY (`usuario`) REFERENCES `usuarios` (`id`) ON UPDATE CASCADE,
-  ADD CONSTRAINT `comentariosblog_ibfk_3` FOREIGN KEY (`respuesta`) REFERENCES `comentariosblog` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `comentariosblog_ibfk_2` FOREIGN KEY (`usuario`) REFERENCES `usuarios` (`id`) ON UPDATE CASCADE;
 COMMIT;
 
 --
@@ -160,6 +159,5 @@ COMMIT;
 --
 ALTER TABLE `comentariosproducto`
   ADD CONSTRAINT `comentariosproducto_ibfk_1` FOREIGN KEY (`producto`) REFERENCES `productos` (`id`) ON UPDATE CASCADE,
-  ADD CONSTRAINT `comentariosproducto_ibfk_2` FOREIGN KEY (`usuario`) REFERENCES `usuarios` (`id`) ON UPDATE CASCADE,
-  ADD CONSTRAINT `comentariosproducto_ibfk_3` FOREIGN KEY (`respuesta`) REFERENCES `comentariosproducto` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `comentariosproducto_ibfk_2` FOREIGN KEY (`usuario`) REFERENCES `usuarios` (`id`) ON UPDATE CASCADE;
 COMMIT;
