@@ -34,13 +34,13 @@ class ComentariosBlog
     public static function buscaPorEntrada($idBlog)
     {
         $ComentariosBlogDAO= new ComentariosBlogDAO();
-        return $BlogDAO->buscaPorTitulo($idBlog);
+        return $ComentariosBlogDAO->buscaPorEntrada($idBlog);
     }
 
     public static function buscaPorRespuesta($idRespuesta)
     {
         $ComentariosBlogDAO= new ComentariosBlogDAO();
-        return $BlogDAO->buscaPorTitulo($idRespuesta);
+        return $ComentariosBlogDAO->buscaPorRespuesta($idRespuesta);
     }
 
     

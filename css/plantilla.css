@@ -1657,7 +1657,94 @@ input.quantity {
   color: #800080;
   font-size: x-large;
 }
-div.comments {
+
+.comments{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
   clear: both;
   text-align: center;
+}
+
+
+.comentario {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 90%;
+  max-width: 600px;
+}
+
+.comentario-autor {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.comentario-cuerpo {
+  margin-bottom: 10px;
+}
+
+.comentario-responder {
+  background-color: #800080;
+  color: white;
+  padding: 0.4375rem 0.4375rem;
+  border: none;
+  border-radius: 0.3125rem;
+  cursor: pointer;
+  margin-bottom: 0.625rem;
+  font-size: medium;
+}
+
+.respuestas {
+  border-left: 1px solid #ccc;
+  margin: 5px;
+  padding: 5px;
+}
+
+.comentario-mostrarRespuestas {
+  background-color: #fff;
+  color: #800080;
+  border: none;
+  cursor: pointer;
+}
+
+.comentario-mostrarRespuestas:hover {
+  text-decoration: underline;
+}
+
+.comentariosBlog-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  width: 90%;
+  max-width: 600px;
+}
+
+.comentariosBlog-form input,
+.comentariosBlog-form textarea {
+  margin-bottom: 10px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.comentariosBlog-form button {
+  background-color: #800080;
+  color: white;
+  padding: 0.4375rem 0.4375rem;
+  border: none;
+  border-radius: 0.3125rem;
+  cursor: pointer;
+  margin-bottom: 0.625rem;
+  font-size: medium;
+}
+
+.comentariosBlog-form button:hover, .comentario-responder:hover {
+  background-color: #572364;
 }

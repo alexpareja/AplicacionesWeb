@@ -14,21 +14,21 @@ class ComentariosBlogDAO
     //busca los comentarios de la entrada del blog
     public function buscaPorEntrada($idBlog)
     {
-        $query = sprintf("SELECT * FROM comentariosblog WHERE entradaBlog='%d'", $idBlog);
+        $query = sprintf("SELECT * FROM comentariosblog WHERE entradaBlog='%d' AND respuesta='%d'", $idBlog,0);
         $rs = $this->conn->query($query);
         $comentarios=array();
         if($rs->num_rows>0){
             while($row=$rs->fetch_assoc())
             {
                 $id=$row['id'];
-                $comentarios[$id] = new ComentariosBlog($fila['id'], $fila['entradaBlog'], $fila['usuario'], $fila['contenido'], 
-                $fila['fecha'], $fila['respuesta']);
+                $comentarios[$id] = new ComentariosBlog($row['id'], $row['entradaBlog'], $row['usuario'], $row['contenido'], 
+                $row['fecha'], $row['respuesta']);
             }
         
         } else {
             error_log("Error BD ({$this->conn->errno}): {$this->conn->error}");
         }
-        return false;
+        return  $comentarios;
     }
 
      //busca los comentarios respuesta de otro comentario
@@ -41,14 +41,14 @@ class ComentariosBlogDAO
              while($row=$rs->fetch_assoc())
              {
                  $id=$row['id'];
-                 $comentarios[$id] = new ComentariosBlog($fila['id'], $fila['entradaBlog'], $fila['usuario'], $fila['contenido'], 
-                 $fila['fecha'], $fila['respuesta']);
+                 $comentarios[$id] = new ComentariosBlog($row['id'], $row['entradaBlog'], $row['usuario'], $row['contenido'], 
+                 $row['fecha'], $row['respuesta']);
              }
          
          } else {
              error_log("Error BD ({$this->conn->errno}): {$this->conn->error}");
          }
-         return false;
+         return  $comentarios;
      }
 
     //busca la entrada por el id
@@ -100,11 +100,11 @@ class ComentariosBlogDAO
     private function inserta($comentario)
     {
         $query=sprintf("INSERT INTO comentariosblog(entradaBlog, usuario, contenido, fecha, respuesta) VALUES ('%d', '%d', '%s','%s','%d')"
-            , $this->conn->real_escape_string($blog->getEntradaBlog())
-            , $this->conn->real_escape_string($blog->getUsuario())
-            , $this->conn->real_escape_string($blog->getContenido())
-            , $this->conn->real_escape_string($blog->getFecha())
-            , $this->conn->real_escape_string($blog->getRespuesta())
+            , $this->conn->real_escape_string($comentario->getEntradaBlog())
+            , $this->conn->real_escape_string($comentario->getUsuario())
+            , $this->conn->real_escape_string($comentario->getContenido())
+            , $this->conn->real_escape_string($comentario->getFecha())
+            , $this->conn->real_escape_string($comentario->getRespuesta())
         );
         if ( $this->conn->query($query) ) {
             $comentario->setId($this->conn->insert_id);
