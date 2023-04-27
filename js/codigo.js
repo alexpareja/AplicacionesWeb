@@ -12,12 +12,31 @@ function mostrarMenu() {
   botonFiltros.classList.toggle("mostrarMenu"); 
   pie.classList.toggle("mostrarMenu");
 }
-
 //Slider precio se actualiza automáticamente
 window.onload = function() {
   // Obtener el control deslizante de rango y el elemento de valor
   var slider = document.getElementById("slider");
   var valorPrecio = document.getElementById("valor-precio");
+  
+  var listaProductos = document.getElementById("lista-productos");
+  var tablaCompras = document.getElementById("tabla-compras");
+  
+  if(listaProductos !== null){
+	var precios = Array.from(listaProductos.getElementsByTagName("li")).map(function(li) {
+    return parseFloat(li.getAttribute("data-precio")) || 0;
+  });
+  }
+  
+  if(tablaCompras !== null){
+	var precios = Array.from(tablaCompras.getElementsByTagName("tr")).map(function(tr) {
+    return parseFloat(tr.getAttribute("data-precio")) || 0;
+  });  
+  }
+  
+  var precioMaximo = Math.max.apply(Math, precios);
+  slider.max = (precioMaximo + 0.5) | 0;
+  valorPrecio.innerText = (precioMaximo + 0.5) | 0;
+  slider.value = (precioMaximo + 0.5) | 0;
 
   // Inicializar el rango
   slider.oninput = function() {
@@ -28,8 +47,7 @@ window.onload = function() {
   // Filtrar los productos iniciales
   filtrarProductos();
 }
-
-//filtrar Productos, de momento solo por el precio
+//filtrar productos por talla y precio en Tienda y en Compras
 function filtrarProductos() {
   // Obtener el valor máximo del precio
   var precioMaximo = document.getElementById("slider").value;
@@ -85,8 +103,7 @@ function filtrarProductos() {
 			var elemento = elementosTabla[i];
 			var precio = parseFloat(elemento.getAttribute("data-precio"));
 			var talla = elemento.getAttribute("data-talla");
-
-			for (var j = 1; j < tallasSeleccionadas.length; j++) {
+			for (var j = 0; j < tallasSeleccionadas.length; j++) {
 				if (talla !== tallasSeleccionadas[j] && talla !== null) {
 				mostrar = false;
 				}
@@ -109,7 +126,7 @@ function filtrarProductos() {
 		}
 	}
 }
-
+//Buscador de productos en Tienda y en Compras
 function buscarProductos() {
   var input = document.getElementById("campo-busqueda");
   var filtro = input.value.toUpperCase();
@@ -144,7 +161,7 @@ function buscarProductos() {
 	}
   }
 }
-
+//Resetear filtros
 function quitarFiltros(){
 	var slider = document.getElementById("slider");
 	var valorPrecio = document.getElementById("valor-precio");
@@ -162,7 +179,79 @@ function quitarFiltros(){
   filtrarProductos();
 }
 
+function ordenarProductos() {
+  // Obtener la lista de productos y los elementos de la lista
+  var listaProductos = document.getElementById("lista-productos");
+  var tablaCompras = document.getElementById("tabla-compras");
 
+  // Obtener el valor seleccionado en el menú desplegable "Ordenar por"
+  var ordenSeleccionado = document.getElementById("ordenar-productos").value;
+
+  // Convertir la lista de elementos a un array para poder ordenarla
+  if(listaProductos !== null){
+	var elementosLista = listaProductos.getElementsByTagName("li");
+	var arrayElementos = Array.prototype.slice.call(elementosLista);
+  }else{
+  	var elementosTabla = tablaCompras.getElementsByTagName("tr");
+	var arrayElementos = Array.prototype.slice.call(elementosTabla);
+  }
+
+  // Ordenar el array según el valor seleccionado en el menú desplegable
+  switch (ordenSeleccionado) {
+	case 'nombreA':
+		arrayElementos.sort(function(a, b) {
+			var nombreA = a.getAttribute("data-nombre");
+			var nombreB = b.getAttribute("data-nombre");
+			if (nombreA < nombreB) {
+				return -1;
+			}
+			if (nombreA > nombreB) {
+				return 1;
+			}
+			return 0;
+		});
+    break;
+	case 'nombreZ':
+		arrayElementos.sort(function(a, b) {
+			var nombreA = a.getAttribute('data-nombre');
+			var nombreB = b.getAttribute('data-nombre');
+			if (nombreA > nombreB) {
+				return -1;
+			}
+			if (nombreA < nombreB) {
+				return 1;
+			}
+			return 0;
+		});
+    break;
+	case 'precioA':
+		arrayElementos.sort(function(a, b) {
+			var precioA = parseFloat(a.getAttribute('data-precio'));
+			var precioB = parseFloat(b.getAttribute('data-precio'));
+			return precioA - precioB;
+		});
+    break;
+  case 'precioD':
+		arrayElementos.sort(function(a, b) {
+			var precioA = parseFloat(a.getAttribute('data-precio'));
+			var precioB = parseFloat(b.getAttribute('data-precio'));
+			return precioB - precioA;
+		});
+    break;
+  default:
+    break;
+}
+
+  // Volver a agregar los elementos ordenados a la lista
+  for (var i = 1; i < arrayElementos.length; i++) {
+	if(listaProductos !== null){
+		listaProductos.appendChild(arrayElementos[i]);
+	}
+	else{
+		tablaCompras.appendChild(arrayElementos[i]);
+	}
+  }
+}
 
 //mostrar previsualizacion imagen del producto en los formularios
 	function changeHandler(ev) {
@@ -181,5 +270,3 @@ function quitarFiltros(){
 		}
   reader.readAsDataURL(archivo);
     }
-	
-	

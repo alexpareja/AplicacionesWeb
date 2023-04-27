@@ -2,7 +2,7 @@
 	<h2 class="tit-filtros">Filtros</h2>
 			<ul class= "filtros">
 				<li>Ordenar por:</li>
-				<li><select id="ordenar-productos" name="ordenar-productos">
+				<li><select id="ordenar-productos" name="ordenar-productos" onchange="ordenarProductos()">
 						<option value="nombreA">Nombre (A -> Z)</option>
 						<option value="nombreZ">Nombre (Z -> A)</option>
 						<option value="precioA">Precio ascendente</option>
@@ -28,7 +28,7 @@
 				
 				<li>
 					<p>Precio máximo: <span id="valor-precio">200</span> euros</p>
-					<input type="range" id="slider" min="0" max="200" value="200" step="1">
+					<input type="range" id="slider" min="0" step="1">
 				</li>
 				
 				<li>
