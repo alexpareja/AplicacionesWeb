@@ -1554,7 +1554,7 @@ input.quantity {
         font-weight: bold;
     }
     
-    .pago .total-price form button {
+    .pago button {
         background-color: #800080;
         color: white;
         padding: 0.438em 0.438em;
@@ -1562,8 +1562,43 @@ input.quantity {
         border-radius: 0.313em;
         cursor: pointer;
         font-size: 1.2em;
-        margin-top: 1.25em;
+        margin-top: 0.25em;
+		margin-bottom: 0.5em;
+
     }
+	
+.fieldset-cupon{
+	border: 0.063em solid black;
+	display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+	margin: 0 30%;
+}
+	
+input[type="text"].cupon-input {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    padding: 10px 12px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    border: 1px solid #d9d9d9;
+    border-radius: 4px;
+    background-color: #fff;
+    color: #333;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="text"].cupon-input:focus {
+    border-color: #009688;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset;
+    outline: none;
+}
+
+input[type="text"].cupon-input:valid {
+    border-color: #4CAF50;
+}
 	
 /*estilos páginas de confirmación*/
 
