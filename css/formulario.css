@@ -192,6 +192,28 @@ button[type="submit"]:hover {
   font-weight: bold;
 }
 
+.inputbox .input-error {
+  width: 98%;
+  height: 2.5rem;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 1em;
+  padding:0 0.312rem 0 0.312rem;
+  border-bottom: 0.0625rem solid #FF0000;
+}
+
+.inputbox .input-correcto {
+  width: 98%;
+  height: 2.5rem;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 1em;
+  padding:0 0.312rem 0 0.312rem;
+  border-bottom: 0.0625rem solid #00cc32;
+}
+
 /*Hoja de estilo formulario nuevo producto*/
 .newP-form, .newE-form {
   margin: 3.125rem auto 0;

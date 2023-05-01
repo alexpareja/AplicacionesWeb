@@ -40,17 +40,17 @@ class FormularioRegistro extends Formulario
                     <label for="apellido2Usuario">Segundo apellido</label>
                 </div>
                 <div class="inputbox">
-                    <input id="emailUsuario" type="email" name="emailUsuario" value="$emailUsuario" placeholder="Introduce tu correo electrónico">
+                    <input id="emailUsuario" type="email" name="emailUsuario" value="$emailUsuario" placeholder="Introduce tu correo electrónico" class="">
                     <label for="emailUsuario">Correo electrónico*</label>
                     <span id="errorEmail">{$erroresCampos['emailUsuario']}</span>
                 </div>
                 <div class="inputbox">
-                    <input id="password" type="password" name="password" placeholder="Introduce tu contraseña">
+                    <input id="password" type="password" name="password" placeholder="Introduce tu contraseña" class="">
                     <label for="password">Contraseña*</label>
                     <span id="errorPass">{$erroresCampos['password']}</span>
                 </div>
                 <div class="inputbox">      
-                    <input id="password2" type="password" name="password2" placeholder="Repite tu contraseña">
+                    <input id="password2" type="password" name="password2" placeholder="Repite tu contraseña" class="">
                     <label for="password2">Reintroduce la contraseña*</label>
                     <span id="errorPass2">{$erroresCampos['password2']}</span>
                 </div>
@@ -106,13 +106,13 @@ class FormularioRegistro extends Formulario
             $this->errores['password'] = 'La contraseña no puede estar vacía.';
         }
         if ( ! $password || mb_strlen($password) < 8 ) {
-            $this->errores['password'] = 'La contraseña tiene que tener una longitud de al menos 8 caracteres.';
+            $this->errores['password'] = 'La contraseña debe tener al menos 8 caracteres.';
         }
 
         $password2 = trim($datos['password2'] ?? '');
         $password2 = filter_var($password2, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
         if ( ! $password2 || $password != $password2 ) {
-            $this->errores['password2'] = 'Las contraseñas deben coincidir.';
+            $this->errores['password2'] = 'Las contraseñas no coinciden.';
         }
 
         $direccionUsuario = trim($datos['direccionUsuario'] ?? '');

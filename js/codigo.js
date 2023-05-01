@@ -270,3 +270,47 @@ function ordenarProductos() {
 		}
   reader.readAsDataURL(archivo);
     }
+
+$(document).ready(function() {
+  $('input').blur(function() {
+    var valor = $(this).val();
+    var id = $(this).attr('id');
+    // Validamos el campo
+    switch (id) {
+      case 'emailUsuario':
+        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (emailRegex.test(valor)) {
+          // Email válido, cambiamos el estilo del campo
+          $(this).removeClass('input-error').addClass('input-correcto');
+          $('#errorEmail').text('');
+        } else {
+          // Email inválido, cambiamos el estilo del campo
+          $(this).removeClass('input-correcto').addClass('input-error');
+          $('#errorEmail').text('Introduce un email válido.');
+        }
+        break;
+      case 'password':
+        if (valor.length >= 8) {
+          // Contraseña válida, cambiamos el estilo del campo
+          $(this).removeClass('input-error').addClass('input-correcto');
+          $('#errorPass').text('');
+        } else {
+          // Contraseña inválida, cambiamos el estilo del campo
+          $(this).removeClass('input-correcto').addClass('input-error');
+          $('#errorPass').text('La contraseña debe tener al menos 8 caracteres.');
+        }
+        break;
+      case 'password2':
+        if (valor.length >= 8 && valor === $('#password').val()) {
+          // Contraseñas coinciden y son válidas, cambiamos el estilo del campo
+          $(this).removeClass('input-error').addClass('input-correcto');
+          $('#errorPass2').text('');
+        } else {
+          // Contraseñas no coinciden o no son válidas, cambiamos el estilo del campo
+          $(this).removeClass('input-correcto').addClass('input-error');
+          $('#errorPass2').text('Las contraseñas no coinciden.');
+        }
+        break;
+    }
+  });
+});
