@@ -271,7 +271,6 @@ function ordenarProductos() {
   reader.readAsDataURL(archivo);
     }
 
-<<<<<<< HEAD
 	$(document).ready(function(){
 		var urlParams = new URLSearchParams(window.location.search);
 		var id = urlParams.get('id');
@@ -423,7 +422,6 @@ function mostrarComentario(comentario,listaComentarios) {
 	  // Agregar el comentario a la lista de comentarios
 	  listaComentarios.append(divComentario);
 }
-=======
 $(document).ready(function() {
   $('input').blur(function() {
     var valor = $(this).val();
@@ -467,4 +465,3 @@ $(document).ready(function() {
     }
   });
 });
->>>>>>> cdab39b288c2e6b3425088cbe0a47854afe449cf
