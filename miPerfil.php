@@ -12,12 +12,15 @@ $direccion = $_SESSION['direccion'];
 
 include("includes/comun/menuIzqCuenta.php");
 
-if ($_SESSION['rol'] == 'U' || $_SESSION['rol'] == 'A') {
+if ($_SESSION['rol'] == 'U') {
   $suscripcionCabecera = '<h4>La Quinta Caja Free</h4>';
   $suscripcionContenido = '<p>Información sobre la cuenta gratuita</p><a href="suscripcion.php" class="boton-suscripcion">Suscribirse</a>';
 } elseif ($_SESSION['rol'] == 'P') {
   $suscripcionCabecera = '<h4>La Quinta Caja Premium</h4>';
-  $suscripcionContenido = '<p>Información sobre la cuenta premium</p><a href="suscripcion.php" class="boton-baja">Darse de baja</a>';
+  $suscripcionContenido = '<p>Información sobre la cuenta premium</p><a href="suscripcion.php" class="boton-suscripcion">Darse de baja</a>';
+} elseif ($_SESSION['rol'] == 'A') {
+$suscripcionCabecera = '<h4>La Quinta Caja Administrados</h4>';
+  $suscripcionContenido = '<p>Información sobre la cuenta de administrador</p><a href="suscripcion.php" class="boton-suscripcion">Ver suscripciones</a>';
 }
 
 $contenidoPrincipal = <<<EOS
