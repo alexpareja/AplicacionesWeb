@@ -35,7 +35,7 @@ $contenidoPrincipal .= <<<EOS
     <p>$cont</p>
     <p class="autor">Escrito por $nombreAutor</p>
     </div>
-    <div class="comments">
+    <div class="comentarios">
     <h3>Comentarios</h3>
     EOS;
     if (!isset($_SESSION['login'])) {
@@ -51,12 +51,11 @@ $contenidoPrincipal .= <<<EOS
     </form>
     EOS;
   }
-  $comentarios= es\ucm\fdi\aw\ComentariosBlog::buscaPorEntrada($blog->getId());
-  if($comentarios){
-      foreach ($comentarios as $comentario) {
-        $contenidoPrincipal.= mostrarComentario($comentario);
-      }
-    }
+  $contenidoPrincipal .= <<<EOS
+  <ul class="listaComentarios">
+  </ul>
+  EOS;
+    
 }
 else{ //si no se encuentra el producto
   $tituloPagina = "Entrada no encontrada";
@@ -70,41 +69,6 @@ else{ //si no está definido parámetro id en GET
   $contenidoPrincipal .= <<<EOS
   <h2 class="error"> Se ha producido un error </h2>
   EOS;
-}
-
-
-//funcion para mostrar los comentarios
-function mostrarComentario($comentario) {
-  $autorComentario=es\ucm\fdi\aw\Usuario::buscaPorId($comentario->getUsuario())->getNombre();
-  $idComentario=$comentario->getId();
-  $contenidoComentario=$comentario->getContenido();
-  $fechaComentario=$comentario->getFecha();
-  $contenidoPrincipal="";
-  $contenidoPrincipal .= <<<EOS
-  <div class="comentario" idComentario="$idComentario">
-  <div class="comentario-autor">$autorComentario</div>
-  <div class="comentario-cuerpo">$contenidoComentario</div>
-  <div class="comentario-fecha">$fechaComentario</div>
-  <button class="comentario-responder">Responder</button>
-  EOS;
-  $respuestas=es\ucm\fdi\aw\ComentariosBlog::buscaPorRespuesta($comentario->getId());
-  if ($respuestas) {
-    $cantidadRespuestas = count($respuestas);
-    $contenidoPrincipal .= <<<EOS
-    <button class="comentario-mostrarRespuestas">Mostrar respuestas</button>
-    <div class="respuestas">
-    EOS;
-    foreach ($respuestas as $respuesta){
-      $contenidoPrincipal .= mostrarComentario($respuesta);
-    }
-    $contenidoPrincipal .= <<<EOS
-    </div>
-    EOS;
-  }
-  $contenidoPrincipal .= <<<EOS
-  </div>
-  EOS;
-  return $contenidoPrincipal;
 }
 
 require __DIR__.'/includes/plantillas/plantilla.php';

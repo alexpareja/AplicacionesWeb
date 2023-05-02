@@ -270,3 +270,155 @@ function ordenarProductos() {
 		}
   reader.readAsDataURL(archivo);
     }
+
+	$(document).ready(function(){
+		var urlParams = new URLSearchParams(window.location.search);
+		var id = urlParams.get('id');
+		var comentarios=[];
+		var listaComentarios=$('.listaComentarios');
+		var numComentariosMostrados=0;
+		const botonMostrarMas = document.createElement('button');
+		$.ajax({
+			url:"procesaComentariosBlog.php?id="+id,
+			method:"GET",
+		  }).done(function(res){
+			comentarios=JSON.parse(res);
+			var comentariosTotal=comentarios.length;
+			numComentariosMostrados = Math.min(5,comentariosTotal);
+			
+			for (let i = 0; i < numComentariosMostrados;i++) {
+				var comentario = comentarios[i];
+				mostrarComentario(comentario,listaComentarios);
+			}
+			if (comentariosTotal > numComentariosMostrados) {
+				botonMostrarMas.classList.add("comentario-mostrarMas");
+				botonMostrarMas.textContent = 'Mostrar más comentarios';
+				botonMostrarMas.setAttribute("type", "submit");
+				listaComentarios.after(botonMostrarMas);
+				botonMostrarMas.style.display = 'block';
+			  }
+		  });
+		
+		  $(document).on('click', '.comentario-mostrarMas', function() {
+			// Código para mostrar más comentarios
+				const comentariosRestantes = comentarios.slice(numComentariosMostrados);
+				var numComentariosRestantes=comentariosRestantes.length;
+				var comentariosAMostrar = Math.min(5,numComentariosRestantes);
+				for (let i = 0; i < comentariosAMostrar;i++) {
+					var comentario = comentariosRestantes[i];
+					mostrarComentario(comentario,listaComentarios);
+				}
+				numComentariosMostrados+=comentariosAMostrar;
+				// Ocultar el botón "Mostrar más" si ya se mostraron todos
+				if (comentarios.length == numComentariosMostrados) {
+					botonMostrarMas.style.display = 'none';
+				}
+		  
+		});
+
+		$(document).on('click', '.comentario-mostrarRespuestas', function() {
+			const comentarioPadre = this.parentNode;
+			const ulRespuestas = document.createElement('ul');
+			ulRespuestas.classList.add('respuestas');
+			const idPadre = comentarioPadre.getAttribute("idComentario");
+			for (let i = 0; i < comentarios.length;i++) {
+				var comentario = comentarios[i];
+				if(comentario.id=idPadre){
+					break;
+				}
+			}
+			var respuestas=comentario.respuestas;
+			for (let i = 0; i < respuestas.length;i++) {
+				var respuesta = respuestas[i];
+				mostrarRespuestas(respuesta,ulRespuestas);
+			}
+			comentarioPadre.append(ulRespuestas);
+			comentarioPadre.querySelector('.comentario-ocultarRespuestas').style.display = 'block';
+			this.style.display = 'none';
+		});
+
+		$(document).on('click', '.comentario-ocultarRespuestas', function() {
+			const comentarioPadre = this.parentNode;
+			comentarioPadre.querySelector('.respuestas').remove();
+ 			comentarioPadre.querySelector('.comentario-mostrarRespuestas').style.display = 'block';
+  			this.style.display = 'none';
+		});
+});
+
+function mostrarComentario(comentario,listaComentarios) {
+		const divComentario = document.createElement('div');
+  		divComentario.classList.add('comentario');
+  		divComentario.setAttribute('idComentario', comentario.id);
+
+  		const divAutor = document.createElement('div');
+  		divAutor.classList.add('comentario-autor');
+  		divAutor.textContent = comentario.usuario;
+
+  		const divCuerpo = document.createElement('div');
+  		divCuerpo.classList.add('comentario-cuerpo');
+  		divCuerpo.textContent = comentario.contenido;
+
+  		const divFecha = document.createElement('div');
+  		divFecha.classList.add('comentario-fecha');
+  		divFecha.textContent = comentario.fecha;
+
+  		const botonResponder = document.createElement('button');
+  		botonResponder.classList.add('comentario-responder');
+  		botonResponder.textContent = 'Responder';
+	
+  		// Agregar los elementos al comentario
+  		divComentario.appendChild(divAutor);
+  		divComentario.appendChild(divCuerpo);
+  		divComentario.appendChild(divFecha);
+  		divComentario.appendChild(botonResponder);
+
+		  var respuestas=comentario.respuestas;
+		  if(respuestas.length>0){
+		  const botonRespuestas= document.createElement('button');
+		  const botonOcultarRespuestas= document.createElement('button');
+		  botonRespuestas.classList.add('comentario-mostrarRespuestas');
+		  botonRespuestas.textContent = 'Mostrar Respuestas';
+		  divComentario.appendChild(botonRespuestas);
+		  botonOcultarRespuestas.classList.add('comentario-ocultarRespuestas');
+		  botonOcultarRespuestas.textContent = 'Ocultar Respuestas';
+		  botonOcultarRespuestas.style.display="none";
+		  divComentario.appendChild(botonOcultarRespuestas);
+		  }
+		  
+
+  		// Agregar el comentario a la lista de comentarios
+  		listaComentarios.append(divComentario);
+  }
+
+  function mostrarRespuestas(comentario,listaComentarios) {
+	const divComentario = document.createElement('div');
+	  divComentario.classList.add('comentario');
+	  divComentario.setAttribute('idComentario', comentario.id);
+
+	  const divAutor = document.createElement('div');
+	  divAutor.classList.add('comentario-autor');
+	  divAutor.textContent = comentario.usuario;
+
+	  const divCuerpo = document.createElement('div');
+	  divCuerpo.classList.add('comentario-cuerpo');
+	  divCuerpo.textContent = comentario.contenido;
+
+	  const divFecha = document.createElement('div');
+	  divFecha.classList.add('comentario-fecha');
+	  divFecha.textContent = comentario.fecha;
+
+	  const botonResponder = document.createElement('button');
+	  botonResponder.classList.add('comentario-responder');
+	  botonResponder.textContent = 'Responder';
+
+	  // Agregar los elementos al comentario
+	  divComentario.appendChild(divAutor);
+	  divComentario.appendChild(divCuerpo);
+	  divComentario.appendChild(divFecha);
+	  divComentario.appendChild(botonResponder);
+
+	  var respuestas=comentario.respuestas;
+	
+	  // Agregar el comentario a la lista de comentarios
+	  listaComentarios.append(divComentario);
+}

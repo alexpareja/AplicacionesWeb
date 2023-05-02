@@ -1653,12 +1653,12 @@ input.quantity {
 
 /*comentarios*/
 
-.comments h3{
+.comentarios h3{
   color: #800080;
   font-size: x-large;
 }
 
-.comments{
+.listaComentarios, .comentarios{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1706,14 +1706,14 @@ input.quantity {
   padding: 5px;
 }
 
-.comentario-mostrarRespuestas {
+.comentario-mostrarRespuestas, .comentario-ocultarRespuestas{
   background-color: #fff;
   color: #800080;
   border: none;
   cursor: pointer;
 }
 
-.comentario-mostrarRespuestas:hover {
+.comentario-mostrarRespuestas:hover, .comentario-ocultarRespuestas:hover {
   text-decoration: underline;
 }
 
