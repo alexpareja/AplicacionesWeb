@@ -17,13 +17,13 @@ include("includes/comun/menuIzqCuenta.php");
 
 $contenidoPrincipal = <<<EOS
 	<div class ="hazte-premium">
-		<h3>Hazte premimum</h3>
+		<h3>Hazte premium</h3>
 		<p>¿Estás seguro que quieres hacerte premium?</p>
 		<form method="post">
-            <button type="submit" name="premium">Hazte premium</button>
+            <button type="submit" name="premium" class="premium">Hazte premium</button>
         </form> 
         <form method="post" action='suscripcion.php'>
-            <button type="submit" name="volver">Volver</button>
+            <button type="submit" name="volver" class="volver">Volver</button>
         </form> 
 	</div>
 EOS;

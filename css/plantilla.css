@@ -1732,3 +1732,44 @@ input[type="text"].cupon-input:valid {
 .comentariosBlog-form button:hover, .comentario-responder:hover {
   background-color: #572364;
 }
+
+.hazte-premium {
+    text-align: center;
+    padding: 1.875rem;
+    max-width: 31.25rem;
+    margin: 0 auto;
+}
+    
+.hazte-premium h3 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+}
+
+.hazte-premium p{
+    font-size: 1.2rem;
+    margin-bottom: 2.5rem;
+    text-align: center;
+}
+
+.hazte-premium button {
+    font-size: 1.125rem;
+    padding: 1rem 2rem;
+    margin: 0 0.625rem;
+    border-radius: 2.5rem;
+    border: none;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.hazte-premium button.cancel, button.premium {
+    background-color: #800080;
+    color: #FFFFFF;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.15);
+    margin-bottom: 1rem;
+}
+
+.hazte-premium button.volver {
+    background-color: #FFFFFF;
+    color: #191414;
+    border: 0.125rem solid #800080;
+}

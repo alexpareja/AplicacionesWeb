@@ -16,14 +16,14 @@ $tituloPagina = 'Darse de Baja';
 include("includes/comun/menuIzqCuenta.php");
 
 $contenidoPrincipal = <<<EOS
-	<div class ="hazte-estandar">
-		<h3>Hazte premimum</h3>
+	<div class ="hazte-premium">
+		<h3>Darse de baja</h3>
 		<p>¿Estás seguro que quieres darte de baja de La Quinta Caja Premium?</p>
 		<form method="post">
-            <button type="submit" name="baja">Darse de baja</button>
+            <button type="submit" name="baja" class="cancel">Darse de baja</button>
         </form> 
         <form method="post" action='suscripcion.php'>
-            <button type="submit" name="volver">Volver</button>
+            <button type="submit" name="volver" class="volver">Volver</button>
         </form> 
 	</div>
 EOS;
