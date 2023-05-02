@@ -24,12 +24,12 @@ class FormularioLogin extends Formulario
             <legend>¿Ya estás registrado?</legend>
             <p class="account">Inicia sesión ahora para aprovecharte de todos los beneficios de la cuenta de cliente de La Quinta Caja ¿Nuevo cliente? <a href="registro.php">Regístrate aquí</a></p>
             <div class="inputbox">
-                <input id="emailUsuario" type="email" name="emailUsuario" value="$emailUsuario" placeholder="Introduce tu correo electrónico">
+                <input id="emailUsuario" type="email" name="emailUsuario" value="$emailUsuario" placeholder="Introduce tu correo electrónico" class="">
                 <label for="emailUsuario">Correo electrónico</label>
                 <span id="errorEmail">{$erroresCampos['emailUsuario']}</span>
             </div>
             <div class="inputbox">
-                <input id="password" type="password" name="password" placeholder="Introduce tu contraseña">
+                <input id="password" type="password" name="password" placeholder="Introduce tu contraseña" class="">
                 <label for="password">Contraseña</label>
                 <span id="errorPass">{$erroresCampos['password']}</span>
             </div>
@@ -73,6 +73,7 @@ class FormularioLogin extends Formulario
                 $_SESSION['apellido2'] = $usuario->getApellido2();
                 $_SESSION['email'] = $usuario->getCorreo();
                 $_SESSION['direccion'] = $usuario->getDireccion();
+                $_SESSION['rol'] = $usuario->getRol();
 
                 if($usuario->getRol() == Usuario::ROL_ADMIN) {
                     $_SESSION['admin'] = true;

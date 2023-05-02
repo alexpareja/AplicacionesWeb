@@ -271,6 +271,7 @@ function ordenarProductos() {
   reader.readAsDataURL(archivo);
     }
 
+<<<<<<< HEAD
 	$(document).ready(function(){
 		var urlParams = new URLSearchParams(window.location.search);
 		var id = urlParams.get('id');
@@ -422,3 +423,48 @@ function mostrarComentario(comentario,listaComentarios) {
 	  // Agregar el comentario a la lista de comentarios
 	  listaComentarios.append(divComentario);
 }
+=======
+$(document).ready(function() {
+  $('input').blur(function() {
+    var valor = $(this).val();
+    var id = $(this).attr('id');
+    // Validamos el campo
+    switch (id) {
+      case 'emailUsuario':
+        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (emailRegex.test(valor)) {
+          // Email válido, cambiamos el estilo del campo
+          $(this).removeClass('input-error').addClass('input-correcto');
+          $('#errorEmail').text('');
+        } else {
+          // Email inválido, cambiamos el estilo del campo
+          $(this).removeClass('input-correcto').addClass('input-error');
+          $('#errorEmail').text('Introduce un email válido.');
+        }
+        break;
+      case 'password':
+        if (valor.length >= 8) {
+          // Contraseña válida, cambiamos el estilo del campo
+          $(this).removeClass('input-error').addClass('input-correcto');
+          $('#errorPass').text('');
+        } else {
+          // Contraseña inválida, cambiamos el estilo del campo
+          $(this).removeClass('input-correcto').addClass('input-error');
+          $('#errorPass').text('La contraseña debe tener al menos 8 caracteres.');
+        }
+        break;
+      case 'password2':
+        if (valor.length >= 8 && valor === $('#password').val()) {
+          // Contraseñas coinciden y son válidas, cambiamos el estilo del campo
+          $(this).removeClass('input-error').addClass('input-correcto');
+          $('#errorPass2').text('');
+        } else {
+          // Contraseñas no coinciden o no son válidas, cambiamos el estilo del campo
+          $(this).removeClass('input-correcto').addClass('input-error');
+          $('#errorPass2').text('Las contraseñas no coinciden.');
+        }
+        break;
+    }
+  });
+});
+>>>>>>> cdab39b288c2e6b3425088cbe0a47854afe449cf
