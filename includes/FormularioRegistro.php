@@ -135,6 +135,7 @@ class FormularioRegistro extends Formulario
                 $_SESSION['apellido2'] = $usuario->getApellido2();
                 $_SESSION['email'] = $usuario->getCorreo();
                 $_SESSION['direccion'] = $usuario->getDireccion();
+                $_SESSION['rol'] = $usuario->getRol();
                 $_SESSION['admin'] = false;
             }
         }
