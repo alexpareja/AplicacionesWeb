@@ -6,65 +6,75 @@ include("includes/comun/menuIzqCuenta.php");
 
 if ($_SESSION['rol'] == 'U') {
   $contenidoPrincipal = <<<EOS
+  <div class="tipos-suscripcion">
     <div class="suscripcion-contenedor">
       <div class="cabecera-premium">
-        <h4>La Quinta Caja Premium</h4>
+        <h2>La Quinta Caja Premium</h2>
       </div>
-      <div class="cuenta-premium">
+      <div class="cuenta>
         <p>Información sobre la cuenta premium</p>
-        <a href="hacersePremium.php" class="boton-suscripcion">Hacerse Premium</a>
+        <form method="post" action='hacersePremium.php'>
+            <button type="submit" name="premium" class="haz-premium">Hazte premium</button>
+        </form> 
       </div>
     </div>
     <br>
     <div class="suscripcion-contenedor">
       <div class="cabecera-free">
-        <h4>La Quinta Caja Free</h4>
+        <h2>La Quinta Caja Free</h2>
       </div>
-      <div class="cuenta-gratuita">
+      <div class="cuenta">
         <p>Información sobre la cuenta gratuita</p>
       </div>
     </div>
+  </div>
 EOS;
 } else if ($_SESSION['rol'] == 'P') {
   $contenidoPrincipal = <<<EOS
-  <div class="suscripcion-contenedor">
+  <div class="tipos-suscripcion">
+    <div class="suscripcion-contenedor">
       <div class="cabecera-premium">
-        <h4>La Quinta Caja Premium</h4>
+        <h2>La Quinta Caja Premium</h2>
       </div>
-      <div class="cuenta-premium">
+      <div class="cuenta">
         <p>Información sobre la cuenta premium</p>
       </div>
     </div>
+    <br>
     <div class="suscripcion-contenedor">
       <div class="cabecera-free">
-        <h4>La Quinta Caja Free</h4>
+        <h2>La Quinta Caja Free</h2>
       </div>
-      <div class="cuenta-gratuita">
+      <div class="cuenta">
         <p>Información sobre la cuenta gratuita</p>
-        <a href="darseDeBaja.php" class="boton-baja">Darse de baja</a>
+        <form method="post" action='darseDeBaja.php'>
+            <button type="submit" name="baja" class="darse-baja">Darse de baja</button>
+        </form> 
       </div>
     </div>
-    <br>
+  </div>
 EOS;
 } else if ($_SESSION['rol'] == 'A') {
   $contenidoPrincipal = <<<EOS
-  <div class="suscripcion-contenedor">
+  <div class="tipos-suscripcion">
+    <div class="suscripcion-contenedor">
       <div class="cabecera-premium">
-        <h4>La Quinta Caja Premium</h4>
+        <h2>La Quinta Caja Premium</h2>
       </div>
-      <div class="cuenta-premium">
+      <div class="cuenta">
         <p>Información sobre la cuenta premium</p>
       </div>
     </div>
+    <br>
     <div class="suscripcion-contenedor">
       <div class="cabecera-free">
-        <h4>La Quinta Caja Free</h4>
+        <h2>La Quinta Caja Free</h2>
       </div>
-      <div class="cuenta-gratuita">
+      <div class="cuenta">
         <p>Información sobre la cuenta gratuita</p>
       </div>
     </div>
-    <br>
+  </div>
 EOS;
 }
 

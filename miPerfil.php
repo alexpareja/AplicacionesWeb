@@ -13,14 +13,17 @@ $direccion = $_SESSION['direccion'];
 include("includes/comun/menuIzqCuenta.php");
 
 if ($_SESSION['rol'] == 'U') {
-  $suscripcionCabecera = '<h4>La Quinta Caja Free</h4>';
-  $suscripcionContenido = '<p>Información sobre la cuenta gratuita</p><a href="suscripcion.php" class="boton-suscripcion">Suscribirse</a>';
+    $suscripcionCabecera = '<h2>La Quinta Caja Free</h2>';
+    $suscripcionContenido = '<p>Información sobre la cuenta gratuita</p><a href="suscripcion.php" class="boton-suscripcion">Suscribirse</a>';
+    $claseCabecera = "cabecera-free";
+
 } elseif ($_SESSION['rol'] == 'P') {
-  $suscripcionCabecera = '<h4>La Quinta Caja Premium</h4>';
-  $suscripcionContenido = '<p>Información sobre la cuenta premium</p><a href="suscripcion.php" class="boton-suscripcion">Darse de baja</a>';
+    $suscripcionCabecera = '<h2>La Quinta Caja Premium</h2>';
+    $suscripcionContenido = '<p>Información sobre la cuenta premium</p><a href="suscripcion.php" class="boton-suscripcion">Darse de baja</a>';
+    $claseCabecera = "cabecera-premium";
 } elseif ($_SESSION['rol'] == 'A') {
-$suscripcionCabecera = '<h4>La Quinta Caja Administrados</h4>';
-  $suscripcionContenido = '<p>Información sobre la cuenta de administrador</p><a href="suscripcion.php" class="boton-suscripcion">Ver suscripciones</a>';
+    $suscripcionCabecera = '<h2>La Quinta Caja Administrados</h2>';
+    $suscripcionContenido = '<p>Información sobre la cuenta de administrador</p><a href="suscripcion.php" class="boton-suscripcion">Ver suscripciones</a>';
 }
 
 $contenidoPrincipal = <<<EOS
@@ -52,15 +55,17 @@ $contenidoPrincipal = <<<EOS
     </div>
   </div>
   <br>
-  <div class="suscripcion-contenedor">
-    <h3>Plan suscripción</h3>
-    <div class="cabecera-suscripcion">
-      $suscripcionCabecera
+  <div class="tipos-suscripcion">
+      <div class="suscripcion-contenedor">
+        <h3>Plan suscripción</h3>
+        <div class=$claseCabecera>
+          $suscripcionCabecera
+        </div>
+        <div class="cuenta">
+          $suscripcionContenido
+        </div>
     </div>
-    <div class="info-suscripcion">
-      $suscripcionContenido
-    </div>
-  </div>
+</div>
 EOS;
 
 require __DIR__.'/includes/plantillas/plantilla.php';
