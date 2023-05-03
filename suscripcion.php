@@ -11,11 +11,9 @@ if ($_SESSION['rol'] == 'U') {
       <div class="cabecera-premium">
         <h2>La Quinta Caja Premium</h2>
       </div>
-      <div class="cuenta>
+      <div class="cuenta">
         <p>Información sobre la cuenta premium</p>
-        <form method="post" action='hacersePremium.php'>
-            <button type="submit" name="premium" class="haz-premium">Hazte premium</button>
-        </form> 
+        <a href="hacersePremium.php" class="boton-suscripcion">Hacerse Premium</a> 
       </div>
     </div>
     <br>
@@ -47,9 +45,7 @@ EOS;
       </div>
       <div class="cuenta">
         <p>Información sobre la cuenta gratuita</p>
-        <form method="post" action='darseDeBaja.php'>
-            <button type="submit" name="baja" class="darse-baja">Darse de baja</button>
-        </form> 
+        <a href="darseDeBaja.php" class="boton-baja">Cancelar premium</a>
       </div>
     </div>
   </div>
