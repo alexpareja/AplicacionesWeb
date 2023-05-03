@@ -278,6 +278,7 @@ function ordenarProductos() {
 		var listaComentarios=$('.listaComentarios');
 		var numComentariosMostrados=0;
 		const botonMostrarMas = document.createElement('button');
+		
 		$.ajax({
 			url:"procesaComentariosBlog.php?id="+id,
 			method:"GET",
@@ -289,6 +290,7 @@ function ordenarProductos() {
 			for (let i = 0; i < numComentariosMostrados;i++) {
 				var comentario = comentarios[i];
 				mostrarComentario(comentario,listaComentarios);
+				
 			}
 			if (comentariosTotal > numComentariosMostrados) {
 				botonMostrarMas.classList.add("comentario-mostrarMas");
@@ -304,6 +306,7 @@ function ordenarProductos() {
 				const comentariosRestantes = comentarios.slice(numComentariosMostrados);
 				var numComentariosRestantes=comentariosRestantes.length;
 				var comentariosAMostrar = Math.min(5,numComentariosRestantes);
+			
 				for (let i = 0; i < comentariosAMostrar;i++) {
 					var comentario = comentariosRestantes[i];
 					mostrarComentario(comentario,listaComentarios);
@@ -321,12 +324,16 @@ function ordenarProductos() {
 			const ulRespuestas = document.createElement('ul');
 			ulRespuestas.classList.add('respuestas');
 			const idPadre = comentarioPadre.getAttribute("idComentario");
+			var encontrado=false;
 			for (let i = 0; i < comentarios.length;i++) {
 				var comentario = comentarios[i];
-				if(comentario.id=idPadre){
+				if(comentario.id==idPadre){
+					encontrado=true;
 					break;
 				}
 			}
+			if(encontrado)
+			{
 			var respuestas=comentario.respuestas;
 			for (let i = 0; i < respuestas.length;i++) {
 				var respuesta = respuestas[i];
@@ -335,6 +342,18 @@ function ordenarProductos() {
 			comentarioPadre.append(ulRespuestas);
 			comentarioPadre.querySelector('.comentario-ocultarRespuestas').style.display = 'block';
 			this.style.display = 'none';
+			}
+			else{
+			var comentario = buscaPadre(idPadre,comentarios);
+			var respuestas=comentario.respuestas;
+			for (let i = 0; i < respuestas.length;i++) {
+				var respuesta = respuestas[i];
+				mostrarRespuestas(respuesta,ulRespuestas);
+			}
+			comentarioPadre.append(ulRespuestas);
+			comentarioPadre.querySelector('.comentario-ocultarRespuestas').style.display = 'block';
+			this.style.display = 'none';
+			}
 		});
 
 		$(document).on('click', '.comentario-ocultarRespuestas', function() {
@@ -416,12 +435,44 @@ function mostrarComentario(comentario,listaComentarios) {
 	  divComentario.appendChild(divCuerpo);
 	  divComentario.appendChild(divFecha);
 	  divComentario.appendChild(botonResponder);
-
-	  var respuestas=comentario.respuestas;
 	
+	  var respuestas=comentario.respuestas;
+	  if(respuestas.length>0){
+		const botonRespuestas= document.createElement('button');
+		const botonOcultarRespuestas= document.createElement('button');
+		botonRespuestas.classList.add('comentario-mostrarRespuestas');
+		botonRespuestas.textContent = 'Mostrar Respuestas';
+		divComentario.appendChild(botonRespuestas);
+		botonOcultarRespuestas.classList.add('comentario-ocultarRespuestas');
+		botonOcultarRespuestas.textContent = 'Ocultar Respuestas';
+		botonOcultarRespuestas.style.display="none";
+		divComentario.appendChild(botonOcultarRespuestas);
+		}
+
 	  // Agregar el comentario a la lista de comentarios
 	  listaComentarios.append(divComentario);
 }
+
+function buscaPadre(idComentario,comentarios) {
+	// Buscamos el comentario con el id indicado
+			for (let i = 0; i < comentarios.length;i++) {
+				var comentario = comentarios[i];
+				if(comentario.respuestas.length>0){
+					
+					if(comentario.id==idComentario)
+					{
+						
+						return comentario;
+					}
+					
+					if(comentario=buscaPadre(idComentario,comentario.respuestas))
+					{return comentario;}
+				}
+			}
+	return null;
+}
+
+
 $(document).ready(function() {
   $('input').blur(function() {
     var valor = $(this).val();
