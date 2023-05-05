@@ -16,7 +16,6 @@ if ($_SESSION['rol'] == 'U') {
         <a href="hacersePremium.php" class="boton-suscripcion">Hacerse Premium</a> 
       </div>
     </div>
-    <br>
     <div class="suscripcion-contenedor">
       <div class="cabecera-free">
         <h2>La Quinta Caja Free</h2>
@@ -38,7 +37,6 @@ EOS;
         <p>Información sobre la cuenta premium</p>
       </div>
     </div>
-    <br>
     <div class="suscripcion-contenedor">
       <div class="cabecera-free">
         <h2>La Quinta Caja Free</h2>
@@ -61,7 +59,6 @@ EOS;
         <p>Información sobre la cuenta premium</p>
       </div>
     </div>
-    <br>
     <div class="suscripcion-contenedor">
       <div class="cabecera-free">
         <h2>La Quinta Caja Free</h2>

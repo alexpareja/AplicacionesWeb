@@ -22,11 +22,13 @@ if ($_SESSION['rol'] == 'U') {
     $suscripcionContenido = '<p>Información sobre la cuenta premium</p><a href="suscripcion.php" class="boton-suscripcion">Darse de baja</a>';
     $claseCabecera = "cabecera-premium";
 } elseif ($_SESSION['rol'] == 'A') {
-    $suscripcionCabecera = '<h2>La Quinta Caja Administrados</h2>';
+    $suscripcionCabecera = '<h2>La Quinta Caja Administrador</h2>';
     $suscripcionContenido = '<p>Información sobre la cuenta de administrador</p><a href="suscripcion.php" class="boton-suscripcion">Ver suscripciones</a>';
+    $claseCabecera = "cabecera-admin";
 }
 
 $contenidoPrincipal = <<<EOS
+<div class="perfil">
   <div class="perfil-contenedor">
     <h2>Perfil</h2>
     <h3>Información personal</h3>
@@ -53,11 +55,10 @@ $contenidoPrincipal = <<<EOS
         <button type="submit" class="boton-edicion">Editar</button>
       </form>
     </div>
+    <h3>Plan suscripción</h3>
   </div>
-  <br>
   <div class="tipos-suscripcion">
       <div class="suscripcion-contenedor">
-        <h3>Plan suscripción</h3>
         <div class=$claseCabecera>
           $suscripcionCabecera
         </div>
@@ -65,6 +66,7 @@ $contenidoPrincipal = <<<EOS
           $suscripcionContenido
         </div>
     </div>
+</div>
 </div>
 EOS;
 
