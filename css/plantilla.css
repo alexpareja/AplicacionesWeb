@@ -1890,3 +1890,16 @@ ul.lista-productos li{
   color: #800080;
   font-size:110%;
 }
+
+.titulo1 {
+  font-size: xx-large;
+  font-weight: normal;
+  margin-left: 3.5rem;
+  text-align:center;
+}
+
+.titulo2 {
+  font-size: xx-large;
+  margin-left: 3.5rem;
+  text-align:center;
+}
