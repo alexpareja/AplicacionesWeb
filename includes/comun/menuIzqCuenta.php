@@ -5,7 +5,7 @@
 		<li><a href="listadeseos.php">Favoritos</a></li>
 		<li><a href="misCompras.php">Mis compras</a></li>
 		<li><a href="contacto.php">Contacto</a></li>
-		<li><a href="suscripcion.php">Suscripción</a></li>
+		<li><a href="suscripcion.php">Planes suscripción</a></li>
 		<li><a href="logout.php">Cerrar sesión</a></li>
 	</ul>
 </div>

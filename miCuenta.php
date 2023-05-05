@@ -53,7 +53,7 @@ $contenidoPrincipal = <<<EOS
     <a href="suscripcion.php">
         <div class="imagen-contenedor">
             <img class='imgMiPerfil' src="img/suscripcion.png" alt="Imagen Mi perfil">
-            <p>Suscripción</p>
+            <p>Planes suscripción</p>
         </div>
     </a>
   </li>
