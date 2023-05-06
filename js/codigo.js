@@ -516,3 +516,56 @@ $(document).ready(function() {
     }
   });
 });
+
+//canjear cupones de descuento
+$(document).ready(function() {
+	var cuponUtilizado = false;
+	var mensajeError = $("#mensaje_error");
+	var mensajeCupon = $("#mensaje_cupon");
+
+	var botonValidar = $("#validar_cupon");
+
+
+	botonValidar.click(function() {
+		if (cuponUtilizado) {
+			mostrarMensajeError("Solo se puede utilizar un cupón por compra.");
+		}
+		else{
+			var codigo_cupon = $("#codigo_cupon").val();
+			var url="verificar_cupon.php?codigo_cupon=" + codigo_cupon;
+			$.get(url,canjearCupon);
+		}
+	});
+	
+	function canjearCupon(response) {
+		var cupon = JSON.parse(response);
+		if (cupon.valido == true) {
+			
+			var fechaExpiracion = new Date(cupon.fechaExpiracion);
+			
+			if (fechaExpiracion < new Date()) {
+				mostrarMensajeError("El cupón ha caducado.");
+			}else{
+				mostrarMensajeError("");
+				mostrarDescuentoAplicado("Se aplicó un descuento del " + cupon.descuento + "%.");
+				
+				var totalActual = parseFloat($("#total_compra").text());
+				var montoDescuento = totalActual * (cupon.descuento / 100);
+				var totalConDescuento = totalActual - montoDescuento;
+				totalConDescuento = totalConDescuento.toFixed(2);
+				$("#total_compra").text(totalConDescuento);
+				cuponUtilizado = true;
+			}
+
+		} else {
+			mostrarMensajeError("El cupón no es válido.");
+		}
+	}
+	 function mostrarMensajeError(mensaje) {
+		mensajeError.text(mensaje);
+	}
+	function mostrarDescuentoAplicado(mensaje) {
+		mensajeCupon.text(mensaje);
+	}
+});
+

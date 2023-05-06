@@ -51,10 +51,21 @@ foreach ($cart_products as $product) {
     </li>
 EOS;
 }
+
+
 $contenidoPrincipal .= <<<EOS
     </ul>
+	
+    <fieldset class="fieldset-cupon">
+		<legend> Introduce tu codigo de descuento:	</legend>
+		<input type="text" id="codigo_cupon" class="cupon-input" name="codigo_cupon">
+		<p id="mensaje_error"></p>
+		<p id="mensaje_cupon"></p>
+		<button type="button" id="validar_cupon">Validar cupón</button>
+	</fieldset>
+	
     <div class="total-price">
-        <p>Total a pagar: $total_price €</p>
+        <p>Total a pagar: <span id="total_compra">$total_price </span> €</p>
         <form method="post">
             <button type="submit" name="pay">Pagar</button>
         </form>

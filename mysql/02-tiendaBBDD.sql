@@ -46,6 +46,14 @@ CREATE TABLE `compras` (
   `precio` float UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+
+CREATE TABLE `cupones` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `codigo` varchar(30) NOT NULL,
+  `descuento` float UNSIGNED NOT NULL,
+  `fechaExpiracion` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
 --
 -- Índices para tablas volcadas
 --
@@ -75,6 +83,13 @@ ALTER TABLE `usuarios`
 
 ALTER TABLE `usuarios` ADD UNIQUE(`correo`);
 ALTER TABLE `productos` ADD UNIQUE(`nombre`);
+
+-- Indices de la tabla `cupones`
+
+ALTER TABLE `cupones`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `codigoCupon` (`codigo`);
+  
 --
 -- AUTO_INCREMENT de las tablas volcadas
 --
