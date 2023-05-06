@@ -13,17 +13,37 @@ $direccion = $_SESSION['direccion'];
 include("includes/comun/menuIzqCuenta.php");
 
 if ($_SESSION['rol'] == 'U') {
-    $suscripcionCabecera = '<h2>La Quinta Caja Free</h2>';
-    $suscripcionContenido = '<p>Información sobre la cuenta gratuita</p><a href="suscripcion.php" class="boton-suscripcion">Suscribirse</a>';
+    $suscripcionCabecera = '<h2>La Quinta Caja Free:</h2>';
+    $suscripcionContenido = '<p>Información sobre la cuenta gratuita:</p>
+                             <ul>
+                                <li>Comprar en La Quinta Caja.</li>
+                                <li>Acceso a la zona Mi Cuenta (favoritos, ver compras realizadas, perfil y plan de suscripción).</li>
+                                <li>Dejar comentarios en los productos de la tienda y entradas del blog.</li>
+                             </ul>
+                             <a href="suscripcion.php" class="boton-suscripcion">Suscribirse</a>';
     $claseCabecera = "cabecera-free";
 
 } elseif ($_SESSION['rol'] == 'P') {
-    $suscripcionCabecera = '<h2>La Quinta Caja Premium</h2>';
-    $suscripcionContenido = '<p>Información sobre la cuenta premium</p><a href="suscripcion.php" class="boton-suscripcion">Darse de baja</a>';
+    $suscripcionCabecera = '<h2>La Quinta Caja Premium:</h2>';
+    $suscripcionContenido = '<p>Información sobre la cuenta premium:</p>
+                             <ul>
+                                <li>Ventajas de usuario La Quinta Caja Free.</li>
+                                <li>10% de descuento en todas las compras.</li>
+                                <li>Caja gratuita de forma mensual</li>
+                             </ul>
+                             <h3>Precio: 7,99€</h3>
+                             <a href="suscripcion.php" class="boton-suscripcion">Darse de baja</a>';
     $claseCabecera = "cabecera-premium";
 } elseif ($_SESSION['rol'] == 'A') {
     $suscripcionCabecera = '<h2>La Quinta Caja Administrador</h2>';
-    $suscripcionContenido = '<p>Información sobre la cuenta de administrador</p><a href="suscripcion.php" class="boton-suscripcion">Ver suscripciones</a>';
+    $suscripcionContenido = '<p>Información sobre la cuenta de administrador:</p>
+                             <ul>
+                                <li>Ventajas de usuario La Quinta Caja Free.</li>
+                                <li>Añadir, editar y elimnar productos en la tienda</li>
+                                <li>Añadir, editar y elimnar entradas en el blog</li>
+                                <li>Ver compras realizadas por los clientes</li>
+                             </ul>
+                             <a href="suscripcion.php" class="boton-suscripcion">Ver suscripciones</a>';
     $claseCabecera = "cabecera-admin";
 }
 
@@ -55,7 +75,7 @@ $contenidoPrincipal = <<<EOS
         <button type="submit" class="boton-edicion">Editar</button>
       </form>
     </div>
-    <h3>Plan suscripción</h3>
+    <h3>Plan usuario</h3>
   </div>
   <div class="tipos-suscripcion">
       <div class="suscripcion-contenedor-perfil">

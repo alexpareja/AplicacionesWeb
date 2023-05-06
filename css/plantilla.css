@@ -1849,6 +1849,49 @@ input[type="text"].cupon-input:valid {
   font-size: xx-large; 
 }
 
+.tipos-suscripcion .cuenta p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #555;
+  margin-left: 1rem;
+  margin-top: 1rem;
+}
+
+.tipos-suscripcion .cuenta ul {
+  list-style: disc;
+  margin: 1.2rem 0;
+  padding-left: 1.2rem;
+  margin-left: 1rem;
+}
+
+.tipos-suscripcion .cuenta li {
+  font-size: 0.8rem;
+  line-height: 1.3;
+  color: #777;
+}
+
+.tipos-suscripcion .cuenta h3 {
+  font-size: 1.5rem;
+  line-height: 1.2;
+  color: #222;
+  margin: 1.875rem 0 1.25rem;
+  margin-left: 1.5rem;
+}
+
+.tipos-suscripcion .cuenta a {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #FFFFFF;
+  color: #191414;
+  border: 0.125rem solid #800080;
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: bold;
+  border-radius: 3rem;
+  margin-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
 /*productos recomendados*/
 
 ul.lista-productos {
