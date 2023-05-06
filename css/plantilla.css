@@ -1888,6 +1888,15 @@ input[type="text"].cupon-input:valid {
   margin-top: 1rem;
 }
 
+.tipos-suscripcion .cuenta .caja{
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #555;
+  margin-left: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
 .tipos-suscripcion .cuenta ul {
   list-style: disc;
   margin: 1.2rem 0;

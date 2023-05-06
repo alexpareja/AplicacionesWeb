@@ -1,5 +1,8 @@
 <?php
+use es\ucm\fdi\aw\CajaSuscripcion;
 require_once __DIR__.'/includes/configuracion.php';
+require_once __DIR__.'/includes/CajaSuscripcion.php';
+
 $tituloPagina = 'Mi Perfil';
 $contenidoPrincipal = '';
 
@@ -24,15 +27,27 @@ if ($_SESSION['rol'] == 'U') {
     $claseCabecera = "cabecera-free";
 
 } elseif ($_SESSION['rol'] == 'P') {
+    $caja = CajaSuscripcion::buscaPorUsuario($id);
+    $idCaja = $caja->getId();
+    $fechaCaja = $caja->getFechaCaja();
+    $fechaActual = new DateTime();
+    $fechaCajaFormato = DateTime::createFromFormat('Y-m-d H:i:s', $fechaCaja);
+    
+    if ($fechaActual->format('Y-m-d') === $fechaCajaFormato->format('Y-m-d')) {
+      $fechaActualMasUnMes = $fechaActual->modify('+1 month')->format('Y-m-d H:i:s');
+      $caja = CajaSuscripcion::edita($idCaja, $id, $fechaActualMasUnMes);
+      $fechaCaja = $caja->getFechaCaja();
+    }
+
     $suscripcionCabecera = '<h2>La Quinta Caja Premium:</h2>';
     $suscripcionContenido = '<p>Información sobre la cuenta premium:</p>
-                             <ul>
-                                <li>Ventajas de usuario La Quinta Caja Free.</li>
-                                <li>10% de descuento en todas las compras.</li>
-                                <li>Caja gratuita de forma mensual.</li>
-                             </ul>
-                             <h3>Precio: 7,99€/mes</h3>
-                             <a href="suscripcion.php" class="boton-suscripcion">Darse de baja</a>';
+                         <ul>
+                            <li>Ventajas de usuario La Quinta Caja Free.</li>
+                            <li>10% de descuento en todas las compras.</li>
+                            <li>Caja gratuita de forma mensual.</li>
+                         </ul>
+                         <p class="caja">Fecha de la próxima caja gratuita: ' . date("d/m/Y", strtotime($fechaCaja)) . '</p>
+                         <a href="suscripcion.php" class="boton-suscripcion">Darse de baja</a>';
     $claseCabecera = "cabecera-premium";
 } elseif ($_SESSION['rol'] == 'A') {
     $suscripcionCabecera = '<h2>La Quinta Caja Administrador</h2>';
