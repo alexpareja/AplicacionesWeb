@@ -664,7 +664,7 @@ main {
 .Planificacion{
   margin-top: 3.5rem;
   font-family: 'Ubuntu', sans-serif;
-  background-color: #151a1f;
+  background-color: whitesmoke;
 }
 
 .plan{
@@ -683,7 +683,7 @@ main {
 
 .plan{
   height: 80vh;
-  background-image: url("../img/planificacion.jpg");
+  background-color: #f0e8e0ff;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -694,18 +694,18 @@ main {
   font-size: 3.75rem;
   font-weight: 600;
   text-transform: uppercase;
-  color: black;
+  color: #202020;
   text-shadow: 0.125rem 0.125rem 0.25rem #413a41;
 }
 
 .plan p{
   margin-bottom: 0.625rem;
 font-size: 1.125rem;
-color: black;
+color: #202020;
 
 padding: 0 4.375rem;
 text-align: center;
-text-shadow: 0.125rem 0.125rem 0.25rem #383138;
+text-shadow: 0.125rem 0.125rem 0.25rem #38313839;
 }
 
 .timeline-section{
@@ -726,7 +726,7 @@ text-shadow: 0.125rem 0.125rem 0.25rem #383138;
   position: absolute;
   width: 0.125rem;
   height: 100%;
-  background-color: #1e2a35;
+  background-color: #f0e8e0ff;
   left: calc(50% - 0.0625rem);
 }
 
@@ -752,7 +752,7 @@ text-shadow: 0.125rem 0.125rem 0.25rem #383138;
 .timeline-dot{
   height: 1rem;
   width: 1rem;
-  background-color: rgb(136, 255, 0);
+  background-color:#84c3be;
   position: absolute;
   left: calc(50% - 0.5rem);
   border-radius: 50%;
@@ -761,26 +761,26 @@ text-shadow: 0.125rem 0.125rem 0.25rem #383138;
 
 .timeline-date{
   font-size: 1.125rem;
-  color: rgb(136, 255, 0);
+  color: #84c3be;
   margin: 0.375rem 0 1rem;
 }
 
 .timeline-content{
-  background-color: #1e2a35;
+  background-color: #f0e8e0ff;
   padding: 1.125rem;
   border-radius: 0.3125rem;
 }
 
 .timeline-content h3{
   font-size: 1.25rem;
-  color: white;
+  color: rgb(52, 55, 55);
   margin: 0 0 0.625rem;
   text-transform: capitalize;
   font-weight: 500;
 }
 
 .timeline-content p{
-  color: #bec1c4;
+  color: rgb(52, 55, 55);
   font-size: 1rem;
   font-weight: 300;
   line-height: 1.375rem;
