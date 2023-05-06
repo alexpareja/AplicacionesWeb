@@ -111,6 +111,14 @@ ALTER TABLE `productos`
 --
 ALTER TABLE `usuarios`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  
+  
+  --
+-- AUTO_INCREMENT de la tabla `cupones`
+--
+  ALTER TABLE `cupones`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
 
 --
 -- Restricciones para tablas volcadas
