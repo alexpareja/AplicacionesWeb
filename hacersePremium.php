@@ -10,7 +10,7 @@ $id = $_SESSION['id'];
 if (isset($_POST["premium"])) {
    $usuario = Usuario::buscaPorID($id);
 	$usuario->hazPremium();
-	$fecha = date('Y-m-d', strtotime('+1 month'));
+	$fecha = date('Y-m-d H:i:s', strtotime('+1 month'));
 	$caja = CajaSuscripcion::crea($id, $fecha);
 	$_SESSION['rol'] = $usuario->getRol();
 	header("Location: suscripcion.php");

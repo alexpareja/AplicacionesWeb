@@ -23,7 +23,7 @@ class CajaSuscripcion
     public static function buscaPorUsuario($usuario)
     {
         $CajaSuscripcionDAO= new CajaSuscripcionDAO();
-        return $CajaSuscripcionDAO->CajaSuscripcionDAO($usuario);
+        return $CajaSuscripcionDAO->buscaPorUsuario($usuario);
     }
     
     public static function crea($usuario, $fechaCaja)

@@ -13,36 +13,16 @@ class CajaSuscripcionDAO
     //busca la caja por usuario
     public function buscaPorUsuario($usuario)
     {
-        $query = sprintf("SELECT * FROM suscripcion WHERE usuario='%s' ", $usuario);
+        $query = sprintf("SELECT * FROM suscripcion WHERE usuario='%d' ", $usuario);
         $rs = $this->conn->query($query);
         
         if($rs->num_rows>0){
             $row=$rs->fetch_assoc();
 			if($row){
-            $cajaSuscripcion = new cajaSuscripcion($row['id'], $row['usuario'], $row['fechaCaja']);
+            $cajaSuscripcion = new CajaSuscripcion($row['id'], $row['usuario'], $row['fechaCaja']);
 			$rs->free();
 			return $cajaSuscripcion;
 			}
-        } else {
-            error_log("Error BD ({$this->conn->errno}): {$this->conn->error}");
-        }
-        return false;
-    }
-
-
-    //busca la caja por el id
-    public function buscaPorId($id)
-    {
-        $query = sprintf("SELECT * FROM suscripcion WHERE id=%d", $id);
-        $rs = $this->conn->query($query);
-        if ($rs->num_rows>0) {
-            $row = $rs->fetch_assoc();
-            if($row){
-              $cajaSuscripcion = new cajaSuscripcion($row['id'], $row['usuario'], $row['fechaCaja']);
-            $rs->free();
-
-            return $cajaSuscripcion;
-            }
         } else {
             error_log("Error BD ({$this->conn->errno}): {$this->conn->error}");
         }
