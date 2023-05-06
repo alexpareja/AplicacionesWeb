@@ -19,7 +19,7 @@ if ($_SESSION['rol'] == 'U') {
           <li>Caja gratuita de forma mensual.</li>
         </ul>
         <h3>Precio: 7,99€/mes</h3>
-        <a href="hacersePremium.php" class="boton-suscripcion">Hacerse Premium</a> 
+        <a href="hacersePremium.php" class="boton-suscripcion">Hazte premium</a> 
       </div>
     </div>
     <div class="suscripcion-contenedor">
@@ -52,6 +52,7 @@ EOS;
           <li>Caja gratuita de forma mensual.</li>
         </ul>
         <h3>Precio: 7,99€/mes</h3>
+        <a href="darseDeBaja.php" class="boton-baja">Darse de baja</a>
       </div>
     </div>
     <div class="suscripcion-contenedor">
@@ -64,8 +65,7 @@ EOS;
           <li>Comprar en La Quinta Caja.</li>
           <li>Acceso a la zona Mi Cuenta (favoritos, ver compras realizadas, perfil y plan de suscripción).</li>
           <li>Dejar comentarios en los productos de la tienda y entradas del blog.</li>
-        </ul>
-        <a href="darseDeBaja.php" class="boton-baja">Cancelar premium</a>
+        </ul>     
       </div>
     </div>
   </div>

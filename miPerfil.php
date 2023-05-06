@@ -23,7 +23,7 @@ if ($_SESSION['rol'] == 'U') {
                                 <li>Acceso a la zona Mi Cuenta (favoritos, ver compras realizadas, perfil y plan de suscripción).</li>
                                 <li>Dejar comentarios en los productos de la tienda y entradas del blog.</li>
                              </ul>
-                             <a href="suscripcion.php" class="boton-suscripcion">Suscribirse</a>';
+                             <a href="suscripcion.php" class="boton-suscripcion">Hazte premium</a>';
     $claseCabecera = "cabecera-free";
 
 } elseif ($_SESSION['rol'] == 'P') {
