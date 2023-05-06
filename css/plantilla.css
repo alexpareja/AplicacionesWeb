@@ -409,6 +409,7 @@ main {
 .Inicio{
   text-align: center;
   font-family: 'Ubuntu', sans-serif;
+  justify-content: center;
 }
 
 .header{
@@ -418,7 +419,7 @@ main {
 
 .header{
   height: 60vh !important;
-  background-image: url("../img/fondoGris.jpg");
+  background-color: #f0e8e0ff;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -429,17 +430,18 @@ main {
   font-size: 3.75rem;
   font-weight: 600;
   text-transform: uppercase;
-  color: white;
+  color: #383138;
   text-shadow: 0.13rem 0.13rem 0.3rem #413a41;
 }
 
 .Inicio p{
   margin-bottom: 2.5rem;
   font-size: 1.125rem;
-  color: white;
+  color: #383138;
   padding: 0 6.25rem;
   text-align: center;
-  text-shadow: 0.13rem 0.13rem 0.3rem #383138;
+  text-shadow: 0.13rem 0.13rem 0.3rem #38313860;
+  font-weight: 600;
 }
 
 .btnInicio{
@@ -450,23 +452,16 @@ main {
   color: white;
   text-decoration: none;
   background: #800080;
-  text-shadow: 0.125rem 0.125rem 0.25rem #383138;
+  text-shadow: 0.125rem 0.125rem 0.25rem #38313860;
+  border-radius: 0.3125rem;
 }
 
 .btnInicio:hover {
   background: none;
-}
-
-.btn-home{
-  display: flex;
-}
-
-.btn-home a{
-  margin: 0 0.625rem;
+  color: #383138;
 }
 
 .content{
-  height: 65vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -474,8 +469,7 @@ main {
 }
 
 .sau{
-  padding: 13.75rem 0;
-  background: #096441;
+  padding: 1rem 0;
 }
 
 .box-container{
@@ -493,6 +487,12 @@ main {
   border-radius: 1rem;
   box-shadow: 0 0.3rem 5rem rgba(0, 0, 0, 0.836);
   margin: 2rem;
+  color: white;
+}
+.box-container .boxInicio p{
+  margin-top: 1rem;
+  color: whitesmoke;
+  font-weight: normal;
 }
 
 .box-container .boxInicio i{
@@ -518,7 +518,13 @@ main {
 } 
 
 .about{
-  background: #bb063c;
+  height: 42vh !important;
+  background: #f0e8e0ff;
+}
+
+.price p, .price .tituloInicio{
+  color:whitesmoke;
+  text-shadow: 0.13rem 0.13rem 0.3rem #413a41;
 }
 
 .price{
@@ -528,12 +534,11 @@ main {
   background-attachment: fixed;
   background-size: cover;
   text-align: center;
+  height: 38vh !important;
 }
 
 .news{
-  padding-top: 3.75rem;
-  background: #bb063c;
-  padding-bottom: 3.75rem;
+  background: #f0e8e0ff;
 }
 
 .inicioBlog{
@@ -557,7 +562,8 @@ main {
   color: white;
   text-decoration: none;
   background: #800080;
-  text-shadow: 2px 2px 4px #383138;
+  text-shadow: 0.13rem 0.13rem 0.3rem #413a41;
+  border-radius: 0.3125rem;
 }
 
 .btnImagen:hover{
@@ -848,7 +854,7 @@ text-shadow: 0.125rem 0.125rem 0.25rem #383138;
 
 .nosotros1{
   width: 100%;
-  background-color: #80008071;
+  background-color: #f0e8e0ff;
   text-shadow: 0.125rem 0.125rem 0.25rem #646364;
 }
 
@@ -875,6 +881,7 @@ text-shadow: 0.125rem 0.125rem 0.25rem #383138;
   border: 0.125rem solid #800080;
   text-shadow: 0.125rem 0.125rem 0.25rem #383138;
   width: 10rem;
+  border-radius: 0.3125rem;
 }
 
 .btnNosotros:hover{
@@ -946,7 +953,7 @@ text-shadow: 0.125rem 0.125rem 0.25rem #383138;
 
 .nosotros5{
   width: 100%;
-  background-image: url("../img/fondoNosotros2.jpg");
+  background-color: #f0e8e0ff;
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
@@ -978,33 +985,35 @@ text-shadow: 0.125rem 0.125rem 0.25rem #383138;
 }
 
 .cabeceraBlog{
-  background-image: url("../img/portadaBlog.jpg");
+  background-color: #f0e8e0ff;
   background-position: center;
   background-size: cover;
-  color: whitesmoke;
-  text-shadow: 0.125rem 0.125rem 0.25rem black;
   width: 100%;
   align-items: center;
   text-align: center;
+  text-shadow: 0.13rem 0.13rem 0.3rem #413a415a;
 }
 
 .tituloBlog{
   font-size: 6rem;
   padding: 2rem 1rem;
   text-align: justify;
+  color: #383138;
+  text-shadow: 0.125rem 0.125rem 0.25rem black;
 }
 
 .subtituloBlog{
   font-size: 2.5rem;
-  padding: 1rem 1rem;
+  padding: 1rem 3rem;
   text-align: justify;
+  color: #383138;
 }
 
 .contenidoBlog{
-  color: white;
+  color: #383138;
   font-weight: 600;
   margin-bottom: 2rem;
-  padding: 1rem 1rem;
+  padding: 1rem 3rem;
   letter-spacing: 0.1rem;
 }
 
@@ -1018,10 +1027,12 @@ text-shadow: 0.125rem 0.125rem 0.25rem #383138;
   border: 0.125rem solid #800080;
   text-shadow: 0.125rem 0.125rem 0.25rem #383138;
   width: 10rem;
+  border-radius: 0.3125rem;
 }
 
 .btnBlog:hover{
   background: none;
+  color: #383138;
 }
 
 .titBlog .subtituloBlog{
@@ -1038,10 +1049,11 @@ text-shadow: 0.125rem 0.125rem 0.25rem #383138;
 }
 
 .articulo{
+  border-radius: 1rem;
   width: 30rem;
-  background-color: #80008017;
+  background-color: #84c3be;
   text-decoration: none;
-  color: #333;
+  color: white;
   margin-bottom: 2rem;
   margin-right: 1rem;
 }
@@ -1049,10 +1061,12 @@ text-shadow: 0.125rem 0.125rem 0.25rem #383138;
 .imagenBlog{
   width: 30rem;
   height: 20rem;
+  border-top-left-radius: 0.3125rem;
+  border-top-right-radius: 0.3125rem;
 }
 .articulo a{
   text-decoration: none;
-  color: #151a1f;
+  color: rgb(52, 55, 55);
 }
 
 .tituloArt{
@@ -1298,6 +1312,10 @@ text-shadow: 0.125rem 0.125rem 0.25rem #383138;
     justify-content: center;
     align-items: center;
   }
+
+  .sau{
+    padding: 8.5rem 0;
+  }
 }
 
 @media only screen and (max-width: 635px){
@@ -1355,6 +1373,10 @@ text-shadow: 0.125rem 0.125rem 0.25rem #383138;
     justify-content: center;
     margin-top: 0;
     margin-bottom: 1rem;
+  }
+
+  .sau{
+    padding: 11rem 0;
   }
 }
 
@@ -1518,15 +1540,20 @@ input.quantity {
     
     .pago button {
         background-color: #800080;
+        border: 0.125rem solid #800080;
         color: white;
         padding: 0.438em 0.438em;
-        border: none;
         border-radius: 0.313em;
         cursor: pointer;
         font-size: 1.2em;
         margin-top: 0.25em;
 		margin-bottom: 0.5em;
 
+    }
+
+    .pago button:hover{
+      background: none;
+      color: #202020;
     }
 	
 .fieldset-cupon{
@@ -1590,7 +1617,7 @@ input[type="text"].cupon-input:valid {
   background-color: #800080;
   color: white;
   padding: 0.4375rem 0.4375rem;
-  border: none;
+  border: 0.125rem solid #800080;
   border-radius: 0.3125rem;
   cursor: pointer;
   margin-bottom: 0.625rem;
@@ -1598,7 +1625,8 @@ input[type="text"].cupon-input:valid {
 }
 
 .confirm button[type="submit"]:hover {
-  background-color: #572364;
+  background: none;
+  color: #202020;
 }
 
 
@@ -1609,7 +1637,7 @@ input[type="text"].cupon-input:valid {
   background-color: #800080;
   color: white;
   padding: 0.4375rem 0.4375rem;
-  border: none;
+  border: 0.125rem solid #800080;
   border-radius: 0.3125rem;
   cursor: pointer;
   margin-bottom: 0.5rem;
@@ -1626,7 +1654,8 @@ input[type="text"].cupon-input:valid {
 }
 
 .entrada button[type="submit"]:hover {
-  background-color: #572364;
+  background: none;
+  color: #202020;
 }
 
 .producto ul.botones li{
@@ -1637,7 +1666,7 @@ input[type="text"].cupon-input:valid {
   background-color: #800080;
   color: white;
   padding: 0.4375rem 0.4375rem;
-  border: none;
+  border: 0.125rem solid #800080;
   border-radius: 0.3125rem;
   cursor: pointer;
   margin-bottom: 0.625rem;
@@ -1645,7 +1674,8 @@ input[type="text"].cupon-input:valid {
 }
 
 .producto button[type="submit"]:hover {
-  background-color: #572364;
+  background: none;
+  color:#202020;
 }
 
 /*comentarios*/
@@ -1735,7 +1765,7 @@ input[type="text"].cupon-input:valid {
   background-color: #800080;
   color: white;
   padding: 0.4375rem 0.4375rem;
-  border: none;
+  border: 0.125rem solid #800080;
   border-radius: 0.3125rem;
   cursor: pointer;
   margin-bottom: 0.625rem;
@@ -1743,7 +1773,8 @@ input[type="text"].cupon-input:valid {
 }
 
 .comentariosBlog-form button:hover, .comentario-responder:hover {
-  background-color: #572364;
+  background: none;
+  color: #202020;
 }
 
 /*confirmación premium y darse de baja*/
@@ -1847,6 +1878,42 @@ input[type="text"].cupon-input:valid {
   padding: 2.5rem 0; 
   margin-left: 1.5rem;
   font-size: xx-large; 
+}
+
+.tipos-suscripcion .cuenta p{
+  font-size: 1rem;
+  line-height: 1.5;
+  color:#555;
+  margin-left: 1rem;
+  margin-top: 1rem;
+}
+
+.tipos-suscripcion .cuenta li {
+  font-size: 0.8rem;
+  line-height: 1.2;
+  color: #777;
+}
+
+.tipos-suscripcion .cuenta h3{
+  font-size: 1.5rem;
+  line-height: 1.2;
+  color: #222;
+  margin: 1.875rem 0 1.25rem;
+  margin-left: 1.5rem;
+}
+
+.tipos-suscripcion .cuenta a{
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #FFFFFF;
+  color: #191414;
+  border: 0.125rem solid #800080;
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: bold;
+  border-radius: 3rem;
+  margin-left: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 /*productos recomendados*/

@@ -73,9 +73,9 @@ ul.lista-productos li{
 
 button[type="submit"] {
 	background-color: #800080;
+  border: 0.125rem solid #800080;
 	color: white;
 	padding: 0.4375rem 0.4375rem;
-	border: none;
 	border-radius: 0.3125rem;
 	cursor: pointer;
 	margin-bottom: 0.625rem;
@@ -83,13 +83,20 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
-	background-color: #572364;
+	background: none;
+  color:#202020;
+}
+
+.boton-filtros i:hover{
+  color:#202020;
+  text-shadow: none;
 }
 
 .boton-filtros{
 	position: absolute;
 	left:6.25rem;
-	transition: all 0.3s ease-in-out;
+	transition: all 0.2s ease-in-out;
+  text-shadow: 0.13rem 0.13rem 0.3rem #332e33;
 }
 
 
