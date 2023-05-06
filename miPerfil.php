@@ -29,9 +29,9 @@ if ($_SESSION['rol'] == 'U') {
                              <ul>
                                 <li>Ventajas de usuario La Quinta Caja Free.</li>
                                 <li>10% de descuento en todas las compras.</li>
-                                <li>Caja gratuita de forma mensual</li>
+                                <li>Caja gratuita de forma mensual.</li>
                              </ul>
-                             <h3>Precio: 7,99€</h3>
+                             <h3>Precio: 7,99€/mes</h3>
                              <a href="suscripcion.php" class="boton-suscripcion">Darse de baja</a>';
     $claseCabecera = "cabecera-premium";
 } elseif ($_SESSION['rol'] == 'A') {
@@ -39,9 +39,9 @@ if ($_SESSION['rol'] == 'U') {
     $suscripcionContenido = '<p>Información sobre la cuenta de administrador:</p>
                              <ul>
                                 <li>Ventajas de usuario La Quinta Caja Free.</li>
-                                <li>Añadir, editar y elimnar productos en la tienda</li>
-                                <li>Añadir, editar y elimnar entradas en el blog</li>
-                                <li>Ver compras realizadas por los clientes</li>
+                                <li>Añadir, editar y eliminar productos en la tienda.</li>
+                                <li>Añadir, editar y eliminar entradas en el blog.</li>
+                                <li>Ver compras realizadas por los clientes.</li>
                              </ul>
                              <a href="suscripcion.php" class="boton-suscripcion">Ver suscripciones</a>';
     $claseCabecera = "cabecera-admin";

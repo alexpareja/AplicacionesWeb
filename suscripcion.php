@@ -16,9 +16,9 @@ if ($_SESSION['rol'] == 'U') {
         <ul>
           <li>Ventajas de usuario La Quinta Caja Free.</li>
           <li>10% de descuento en todas las compras.</li>
-          <li>Caja gratuita de forma mensual</li>
+          <li>Caja gratuita de forma mensual.</li>
         </ul>
-        <h3>Precio: 7,99€</h3>
+        <h3>Precio: 7,99€/mes</h3>
         <a href="hacersePremium.php" class="boton-suscripcion">Hacerse Premium</a> 
       </div>
     </div>
@@ -49,9 +49,9 @@ EOS;
         <ul>
           <li>Ventajas de usuario La Quinta Caja Free.</li>
           <li>10% de descuento en todas las compras.</li>
-          <li>Caja gratuita de forma mensual</li>
+          <li>Caja gratuita de forma mensual.</li>
         </ul>
-        <h3>Precio: 7,99€</h3>
+        <h3>Precio: 7,99€/mes</h3>
       </div>
     </div>
     <div class="suscripcion-contenedor">
@@ -82,9 +82,9 @@ EOS;
         <ul>
           <li>Ventajas de usuario La Quinta Caja Free.</li>
           <li>10% de descuento en todas las compras.</li>
-          <li>Caja gratuita de forma mensual</li>
+          <li>Caja gratuita de forma mensual.</li>
         </ul>
-        <h3>Precio: 7,99€</h3>
+        <h3>Precio: 7,99€/mes</h3>
       </div>
     </div>
     <div class="suscripcion-contenedor">

@@ -1,13 +1,17 @@
 <?php
 use es\ucm\fdi\aw\Usuario;
+use es\ucm\fdi\aw\CajaSuscripcion;
 require_once __DIR__.'/includes/configuracion.php';
 require_once __DIR__.'/includes/Usuario.php';
+require_once __DIR__.'/includes/CajaSuscripcion.php';
 
 $id = $_SESSION['id'];
 
 if (isset($_POST["premium"])) {
    $usuario = Usuario::buscaPorID($id);
 	$usuario->hazPremium();
+	$fecha = date('Y-m-d', strtotime('+1 month'));
+	$caja = CajaSuscripcion::crea($id, $fecha);
 	$_SESSION['rol'] = $usuario->getRol();
 	header("Location: suscripcion.php");
 }
