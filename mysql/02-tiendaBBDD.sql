@@ -51,7 +51,7 @@ CREATE TABLE `cupones` (
   `id` int(10) UNSIGNED NOT NULL,
   `codigo` varchar(30) NOT NULL,
   `descuento` float UNSIGNED NOT NULL,
-  `fechaExpiracion` datetime NOT NULL
+  `fechaExpiracion` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
