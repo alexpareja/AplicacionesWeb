@@ -67,7 +67,7 @@ $contenidoPrincipal .= <<<EOS
     <div class="total-price">
         <p>Total a pagar: <span id="total_compra">$total_price </span> €</p>
         <form method="post">
-            <button type="submit" name="pay">Pagar</button>
+            <button type="submit" name="pay" id="validar_compra">Pagar</button>
         </form>
     </div>
 </div>

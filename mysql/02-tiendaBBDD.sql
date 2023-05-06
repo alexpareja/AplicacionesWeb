@@ -43,7 +43,8 @@ CREATE TABLE `compras` (
   `talla` enum('xs','s','m','l','xl') NOT NULL,
   `fecha` datetime NOT NULL,
   `cantidad` int(10) UNSIGNED NOT NULL,
-  `precio` float UNSIGNED NOT NULL
+  `precio` float UNSIGNED NOT NULL,
+  `cupon` int(10) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 
@@ -129,6 +130,7 @@ ALTER TABLE `usuarios`
 --
 ALTER TABLE `compras`
   ADD CONSTRAINT `compras_ibfk_1` FOREIGN KEY (`usuario`) REFERENCES `usuarios` (`id`) ON UPDATE CASCADE,
-  ADD CONSTRAINT `compras_ibfk_2` FOREIGN KEY (`producto`) REFERENCES `productos` (`id`) ON UPDATE CASCADE;
+  ADD CONSTRAINT `compras_ibfk_2` FOREIGN KEY (`producto`) REFERENCES `productos` (`id`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `compras_ibfk_3` FOREIGN KEY (`cupon`) REFERENCES `cupones` (`id`) ON UPDATE CASCADE;
 COMMIT;
 

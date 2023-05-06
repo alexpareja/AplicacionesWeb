@@ -520,13 +520,14 @@ $(document).ready(function() {
 //canjear cupones de descuento
 $(document).ready(function() {
 	var cuponUtilizado = false;
+	var descuentoSeleccionado = 0;
 	var mensajeError = $("#mensaje_error");
 	var mensajeCupon = $("#mensaje_cupon");
 
-	var botonValidar = $("#validar_cupon");
+	var botonValidarCupon = $("#validar_cupon");
+	var botonValidarCompra = $("#validar_compra");
 
-
-	botonValidar.click(function() {
+	botonValidarCupon.click(function() {
 		if (cuponUtilizado) {
 			mostrarMensajeError("Solo se puede utilizar un cupón por compra.");
 		}
@@ -537,7 +538,15 @@ $(document).ready(function() {
 		}
 	});
 	
+	botonValidarCompra.click(function() {
+			if(cuponUtilizado === true){
+				var url="procesar_cupon.php?idCupon=" + descuentoSeleccionado;
+				$.get(url,procesaCompra);
+			}
+	});
+	
 	function canjearCupon(response) {
+		
 		var cupon = JSON.parse(response);
 		if (cupon.valido == true) {
 			
@@ -555,13 +564,17 @@ $(document).ready(function() {
 				totalConDescuento = totalConDescuento.toFixed(2);
 				$("#total_compra").text(totalConDescuento);
 				cuponUtilizado = true;
+				descuentoSeleccionado = cupon.id;
 			}
 
 		} else {
 			mostrarMensajeError("El cupón no es válido.");
 		}
 	}
-	 function mostrarMensajeError(mensaje) {
+	function procesaCompra(response) {
+		console.log("HOLA");
+	}
+	function mostrarMensajeError(mensaje) {
 		mensajeError.text(mensaje);
 	}
 	function mostrarDescuentoAplicado(mensaje) {

@@ -16,8 +16,10 @@ class Compra
     private $cantidad;
 
     private $precio;
+	
+	private $idCupon;
 
-    public function __construct($id=null, $idUsuario, $idProducto, $talla, $fecha, $cantidad,$precio)
+    public function __construct($id=null, $idUsuario, $idProducto, $talla, $fecha, $cantidad, $precio,$idCupon)
     {
         $this->id = $id;
         $this->idUsuario = $idUsuario;
@@ -26,6 +28,7 @@ class Compra
         $this->fecha = $fecha;
         $this->cantidad = $cantidad;
         $this->precio=$precio;
+		$this->idCupon=$idCupon;
     }
 
     public static function buscaPorId($idCompra)
@@ -41,11 +44,11 @@ class Compra
     }
 
 
-    public static function crea($idUsuario, $idProducto, $talla,$cantidad,$precio)
+    public static function crea($idUsuario, $idProducto, $talla, $cantidad, $precio, $idCupon)
     {
         $compraDAO= new CompraDAO();
         $producto = Producto::borraCantidad($idProducto, $talla, $cantidad);
-        return $compraDAO->crea($idUsuario, $idProducto,$talla, date('Y-m-d H:i:s'),$cantidad,$precio);
+        return $compraDAO->crea($idUsuario, $idProducto,$talla, date('Y-m-d H:i:s'),$cantidad,$precio, $idCupon);
     }
 
     //borra la compra
@@ -80,6 +83,8 @@ class Compra
 						<th>Talla</th>
 						<th>Cantidad</th>
 						<th>Total</th>
+						<th>Codigo descuento</th>
+						<th>Total con descuento</th>
 					</tr>
 		EOF;
 		foreach($compras as $c){
@@ -95,6 +100,17 @@ class Compra
 			
 			$cantidad = $c->getCantidad();
 			$precio = $c->getPrecio();
+			
+			if($c->getIdCupon() !== null){
+				$cupon = Cupon::buscaPorId($c->getIdCupon());
+				$nombreC = $cupon->getDescuento();
+				$totalConDesc= (100 - floatval($nombreC)) * floatval($precio) /100;
+				$totalConDescRed= round($totalConDesc, 2);
+			}
+			else{
+				$nombreC = 0;
+			}
+			
 			$html .= <<<EOF
 					<tr data-fecha=$fecha data-user='$nombreU' data-nombre='$nombreP' data-talla=$talla data-cantidad=$cantidad data-precio=$precio>
 						<td>$fecha</td>
@@ -103,6 +119,8 @@ class Compra
 						<td>$talla</td>
 						<td>$cantidad</td>
 						<td>$precio €</td>
+						<td>$nombreC %</td>
+						<td>$totalConDescRed €</td>
 					</tr>
 			EOF;	
 		}
@@ -123,6 +141,8 @@ class Compra
                         <th>Talla</th>
                         <th>Cantidad</th>
                         <th>Total</th>
+                        <th>Descuento</th>
+                        <th>Total con descuento</th>
                     </tr>
         EOF;
         foreach($compras as $c){
@@ -130,11 +150,24 @@ class Compra
             
             $producto = Producto::buscaPorID($c->getIdProducto());
             $nombreP = $producto->getNombre();
+			
+
             
             $talla = strtoupper($c->getTalla());
             
             $cantidad = $c->getCantidad();
             $precio = $c->getPrecio();
+			
+			if($c->getIdCupon() !== null){
+				$cupon = Cupon::buscaPorId($c->getIdCupon());
+				$nombreC = $cupon->getDescuento();
+				$totalConDesc= (100 - floatval($nombreC)) * floatval($precio) /100;
+				$totalConDescRed= round($totalConDesc, 2);
+			}
+			else{
+				$nombreC = 0;
+			}			
+			
             $html .= <<<EOF
                     <tr data-fecha=$fecha data-nombre='$nombreP' data-talla=$talla data-cantidad=$cantidad data-precio=$precio>
                         <td>$fecha</td>
@@ -142,6 +175,8 @@ class Compra
                         <td>$talla</td>
                         <td>$cantidad</td>
                         <td>$precio €</td>
+                        <td>$nombreC %</td>
+                        <td>$totalConDescRed €</td>
                     </tr>
             EOF;    
         }
@@ -188,6 +223,10 @@ class Compra
     public function getPrecio()
     {
         return $this->precio;
+    }
+	public function getIdCupon()
+    {
+        return $this->idCupon;
     }
 }
 ?>

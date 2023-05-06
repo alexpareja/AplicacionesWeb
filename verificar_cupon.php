@@ -10,9 +10,9 @@ if (isset($_GET['codigo_cupon'])) {
 	function parseaCupon($cupon){
 		
 		if($cupon !== false){
-		
 			return array(
 				'valido' => true,
+				'id' => $cupon->getId(),
 				'descuento' => $cupon->getDescuento(),
 				'fechaExpiracion' => $cupon->getFechaExpiracion(),
 			);

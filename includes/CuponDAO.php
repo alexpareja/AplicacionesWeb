@@ -36,12 +36,12 @@ class CuponDAO
         $query = sprintf("SELECT * FROM cupones WHERE id=%d", $id);
         $rs = $this->conn->query($query);
         if ($rs->num_rows>0) {
-            $fila = $rs->fetch_assoc();
-            if($fila){
+            $row = $rs->fetch_assoc();
+            if($row){
               $cupon = new Cupon($row['id'], $row['codigo'], $row['descuento'], $row['fechaExpiracion']);
             $rs->free();
 
-            return $comentario;
+            return $cupon;
             }
         } else {
             error_log("Error BD ({$this->conn->errno}): {$this->conn->error}");

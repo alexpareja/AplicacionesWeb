@@ -19,7 +19,7 @@ class CompraDAO
             $fila = $rs->fetch_assoc();
             if($fila){
             $compra = new Compra($fila['id'], $fila['usuario'], $fila['producto'],$fila['talla'], $fila['fecha'], 
-            $fila['cantidad'], $fila['precio']);
+            $fila['cantidad'], $fila['precio'], $fila['cupon']);
             $rs->free();
 
             return $compra;
@@ -39,7 +39,7 @@ class CompraDAO
             $fila = $rs->fetch_assoc();
             if($fila){
             $compra = new Compra($fila['id'], $fila['usuario'], $fila['producto'],$fila['talla'], $fila['fecha'], 
-            $fila['cantidad'], $fila['precio']);
+            $fila['cantidad'], $fila['precio'], $fila['cupon']);
             $rs->free();
 
             return $compra;
@@ -52,22 +52,23 @@ class CompraDAO
 
 
     //crea una nueva compra, con la fecha actual 
-    public function crea($idUsuario, $idProducto, $talla,$fecha,$cantidad,$precio)
+    public function crea($idUsuario, $idProducto, $talla,$fecha,$cantidad,$precio,$idCupon)
     {
-        $compra = new Compra($nuevaId=null,$idUsuario,$idProducto,$talla,$fecha, $cantidad, $precio);
+        $compra = new Compra($nuevaId=null,$idUsuario,$idProducto,$talla,$fecha, $cantidad, $precio, $idCupon);
         return self::guarda($compra);
     }
 
     //inserta nuevo usuario
     private function inserta($compra)
     {
-        $query=sprintf("INSERT INTO compras(usuario, producto, talla, fecha, cantidad, precio) VALUES ('%d', '%d', '%s', '%s','%d', '%f')"
+        $query=sprintf("INSERT INTO compras(usuario, producto, talla, fecha, cantidad, precio, cupon) VALUES ('%d', '%d', '%s', '%s','%d', '%f', '%d')"
             , $this->conn->real_escape_string($compra->getIdUsuario())
             , $this->conn->real_escape_string($compra->getIdProducto())
             , $this->conn->real_escape_string($compra->getTalla())
             , $this->conn->real_escape_string($compra->getFecha())
             , $this->conn->real_escape_string($compra->getCantidad())
             , $this->conn->real_escape_string($compra->getPrecio())
+			, $this->conn->real_escape_string($compra->getIdCupon())
         );
         if ( $this->conn->query($query) ) {
             $compra->setId($this->conn->insert_id);
@@ -115,7 +116,7 @@ class CompraDAO
             {
                 $id=$row['id'];
                 $compras[$id] = new Compra($row['id'], $row['usuario'], $row['producto'],$row['talla'], $row['fecha'],
-                $row['cantidad'],$row['precio']);
+                $row['cantidad'],$row['precio'], $row['cupon']);
             }
         }
         return $compras;
@@ -132,7 +133,7 @@ class CompraDAO
             {
                 $id=$row['id'];
                 $compras[$id] = new Compra($row['id'], $row['usuario'], $row['producto'], $row['talla'],$row['fecha'],
-                $row['cantidad'],$row['precio']);
+                $row['cantidad'],$row['precio'], $row['cupon']);
             }
         }
         return $compras;
