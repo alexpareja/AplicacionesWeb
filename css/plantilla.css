@@ -1800,12 +1800,24 @@ input[type="text"].cupon-input:valid {
 }
 
 .suscripcion-contenedor {
-  width: 40vw; 
-  height: 25rem; 
+  width: 40vw;
+  height: 25rem;
   background-color: #ffffff;
   border-radius: 0.6rem;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
-  margin: 1.2rem;
+  margin: 1.2rem; 
+  margin-top: 3.3rem; 
+  margin-bottom: 2.5rem; 
+  z-index: 2;
+}
+
+.suscripcion-contenedor-perfil {
+  width: 40vw;
+  height: 25rem;
+  background-color: #ffffff;
+  border-radius: 0.6rem;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  margin: 1.2rem; 
   z-index: 2;
 }
 

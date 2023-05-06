@@ -58,7 +58,7 @@ $contenidoPrincipal = <<<EOS
     <h3>Plan suscripción</h3>
   </div>
   <div class="tipos-suscripcion">
-      <div class="suscripcion-contenedor">
+      <div class="suscripcion-contenedor-perfil">
         <div class=$claseCabecera>
           $suscripcionCabecera
         </div>
