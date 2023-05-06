@@ -19,10 +19,13 @@ EOS;
 $contenidoPrincipal .= <<<EOS
 <h2>Mi Lista de deseos</h2>
 <div class="productos">
-    <ul class="lista-productos">
 EOS;
 $favs= Favoritos::getFavoritos($_SESSION['id']);
 if ($favs) {
+	$contenidoPrincipal .= <<<EOS
+    <ul class="lista-productos">
+EOS;
+
     foreach ($favs as $fav) {
             $prod= es\ucm\fdi\aw\Producto::buscaPorId($fav->getProducto());
             $link = 'mostrarProducto.php?id='.$fav->getProducto();
@@ -47,13 +50,15 @@ if ($favs) {
                     </form> 
                     </div>
                 </li>
-                </ul>
             EOS;
         
     }
+	$contenidoPrincipal .= <<<EOS
+        </ul>
+    EOS;
+
 } else {
     $contenidoPrincipal .= <<<EOS
-    </ul>
     <div class="no-prod">
     <p>No hay productos en la lista de deseos</p>
     </div>

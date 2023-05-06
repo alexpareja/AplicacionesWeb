@@ -44,9 +44,11 @@ EOS;
 $contenidoPrincipal .= <<<EOS
 <h2>Mi carrito</h2>
 <div id="productos">
-    <ul class="lista-productos">
 EOS;
 if (isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
+	$contenidoPrincipal .= <<<EOS
+		<ul class="lista-productos">
+	EOS;
     foreach ($_SESSION['cart'] as $id => &$producto) {
         foreach ($producto as $size => &$item) {
             if (is_array($item)) {
@@ -71,14 +73,15 @@ if (isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
                         </form>
                         </div>
                     </li>
-                </ul>
                 EOS;
             }
         }
     }
+	$contenidoPrincipal .= <<<EOS
+        </ul>
+    EOS;
 } else {
     $contenidoPrincipal .= <<<EOS
-    </ul>
     <div class="no-prod">
     <p>No hay productos en el carrito</p>
     </div>
