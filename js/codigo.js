@@ -582,3 +582,27 @@ $(document).ready(function() {
 	}
 });
 
+function toggleAccesibilidad() {
+  var btnaccesibilidad = $("#accesibilidad-btn");
+  var accesibilidad = $("#divAccess");
+  if(accesibilidad.css("display") === "none"){
+	    accesibilidad.show();
+		btnaccesibilidad.hide();
+
+  }else{
+	    accesibilidad.hide();
+		btnaccesibilidad.show();
+
+  }
+}
+
+function activarAltoContraste() {
+  var elementoHtml = document.querySelector('main');
+  elementoHtml.classList.toggle('alto-contraste');
+}
+
+function aumentarTamanoFuente() {
+  var elementoHtml = document.querySelector('html');
+  elementoHtml.classList.toggle('tamano-grande');
+}
+
