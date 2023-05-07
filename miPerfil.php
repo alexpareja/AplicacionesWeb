@@ -35,7 +35,7 @@ if ($_SESSION['rol'] == 'U') {
     
     if ($fechaActual->format('Y-m-d') === $fechaCajaFormato->format('Y-m-d')) {
       $fechaActualMasUnMes = $fechaActual->modify('+1 month')->format('Y-m-d H:i:s');
-      $caja = CajaSuscripcion::edita($idCaja, $id, $fechaActualMasUnMes);
+      CajaSuscripcion::edita($idCaja, $id, $fechaActualMasUnMes);
       $fechaCaja = $caja->getFechaCaja();
     }
 

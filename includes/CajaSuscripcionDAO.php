@@ -41,10 +41,10 @@ class CajaSuscripcionDAO
         if (!$id) {
             return false;
         } 
-		$query=sprintf("UPDATE suscripcion SET (usuario, fechaCaja) VALUES ('%d', '%s') where id = '%d'"
-            , $this->conn->real_escape_string($usuario)
-			, $this->conn->real_escape_string($fechaCaja)
-            , $id
+		$query = sprintf("UPDATE suscripcion SET usuario = '%d', fechaCaja = '%s' WHERE id = '%d'",
+            $this->conn->real_escape_string($usuario),
+            $this->conn->real_escape_string($fechaCaja),
+            $id
         );
 		
         if ( ! $this->conn->query($query) ) {
