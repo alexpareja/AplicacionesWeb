@@ -811,3 +811,7 @@ function aumentarTamanoFuente() {
   elementoHtml.classList.toggle('tamano-grande');
 }
 
+//Ventana pago confirmado
+function aceptarCompra(){
+    window.alert("Pago confirmado");
+}
