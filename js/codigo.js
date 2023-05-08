@@ -357,14 +357,15 @@ function ordenarProductos() {
 
 		$(document).on('click', '.comentario-ocultarRespuestas', function() {
 			const comentarioPadre = this.parentNode;
-			comentarioPadre.querySelector('.respuestas').remove();
+			if(comentarioPadre.querySelector('.respuestas')!=null)
+			{comentarioPadre.querySelector('.respuestas').remove();}
  			comentarioPadre.querySelector('.comentario-mostrarRespuestas').style.display = 'block';
   			this.style.display = 'none';
 		});
 
 		$(".comentariosBlog-form").submit(function(event) {
 			event.preventDefault(); // evita el envío del formulario por defecto
-
+			
 			var formData = $(this).serialize(); // serializa los datos del formulario
 			$.ajax({
 			  type: "POST",
@@ -375,7 +376,7 @@ function ordenarProductos() {
 					id: response,
 					usuario: $('input[name="autor"]').val(),
 					contenido: $('textarea[name="comentarioBlog"]').val(),
-					comentarios: [],
+					respuestas: [],
 					fecha: $('input[name="fecha"]').val()
 				  };
 
@@ -389,6 +390,130 @@ function ordenarProductos() {
 			  }
 			});
 		  });
+
+
+		  $(document).on('click', '.comentario-responder', function(){
+			if (!$(this).parent().has('.responder-form').length) {
+			var form = $("<form>");
+			form.attr("class", "responder-form");
+			form.attr("method", "post");
+			const formulario = $('.comentariosBlog-form');
+
+			// Obtener los valores de los campos
+			const idValor = formulario.find('input[name="id"]').val();
+			const autorValor = formulario.find('input[name="autor"]').val();
+			const entradaValor = formulario.find('input[name="entrada"]').val();
+			const fechaValor = formulario.find('input[name="fecha"]').val();
+  			var id = $("<input>").attr("type", "hidden").attr("name", "id").val(idValor);
+			var autor = $("<input>").attr("type", "hidden").attr("name", "autor").val(autorValor);
+			var entrada = $("<input>").attr("type", "hidden").attr("name", "entrada").val(entradaValor);
+			var fecha = $("<input>").attr("type", "hidden").attr("name", "fecha").val(fechaValor);
+			var comentarioPadre=$(this).parent().attr("idcomentario");
+			var respuesta = $("<input>").attr("type", "hidden").attr("name", "respuesta").val(comentarioPadre);
+			var textarea = $("<textarea>").addClass("textoRespuesta").attr("name", "textoRespuesta").attr("required", true).attr("placeholder", "Escribe aquí tu comentario");
+			var enviar = $("<button>").attr("type", "submit").text("Enviar comentario");
+			var cancelar = $("<button>").attr("type", "button").text("Cancelar");
+
+			// agrega los elementos al formulario
+			form.append(id);
+			form.append(autor);
+			form.append(entrada);
+			form.append(fecha);
+			form.append(respuesta);
+			form.append(textarea);
+			form.append(enviar);
+			form.append(cancelar);
+			var mensajeError = $("<div>").addClass("mensajeError").css("display", "none");
+			form.append(mensajeError);
+			// agrega el formulario al DOM
+			$(this).after(form);
+
+			// agrega un evento para el botón de cancelar
+			cancelar.click(function() {
+				form.remove(); // oculta el formulario
+			});
+
+			enviar.click(function() {
+				
+				if ($('.textoRespuesta').val().trim() == '') {
+					mensajeError.text('Debes ingresar un comentario').show();
+					return false;
+				} else {
+					mensajeError.hide();
+				}
+			var formData = form.serialize(); // serializa los datos del formulario
+			
+			$.ajax({
+			  type: "POST",
+			  url: "creaRespuestasBlog.php",
+			  dataType: "json",
+			  data: formData,
+			  success: function(response) {
+				var nuevaRespuesta = {
+					id: response.id,
+					usuario: $('input[name="autor"]').val(),
+					contenido: response.respuesta,
+					respuestas: [],
+					fecha: $('input[name="fecha"]').val(),
+					respuesta: $('input[name="respuesta"]').val()
+				  };
+				  var divPadre = $('div[idcomentario=' + comentarioPadre + ']');
+				  const ulRespuestas = document.createElement('ul');
+				  ulRespuestas.classList.add('respuestas');
+				  var encontrado=false;
+				  for (let i = 0; i < comentarios.length;i++) {
+					  var comentario = comentarios[i];
+					  if(comentario.id==comentarioPadre){
+						  encontrado=true;
+						  break;
+					  }
+				  }
+				  
+				  if(encontrado)
+				  {
+				  var respuestas=comentario.respuestas;
+				  respuestas.push(nuevaRespuesta);
+				  divPadre.find('.comentario-ocultarRespuestas').css('display','block');
+				  divPadre.find('.comentario-mostrarRespuestas').css('display','none');
+				  for (let i = 0; i < respuestas.length;i++) {
+					  var respuesta = respuestas[i];
+					  mostrarRespuestas(respuesta,ulRespuestas);
+				  }
+				  divPadre.find('.respuestas').remove();
+				  divPadre.append(ulRespuestas);
+				  
+				  }
+				  else{
+			
+				  var comentario = buscaPadre(comentarioPadre,comentarios);
+				
+				  var respuestas=comentario.respuestas;
+				  
+				  respuestas.push(nuevaRespuesta);
+				  divPadre.find('.comentario-ocultarRespuestas').css('display','block');
+				  divPadre.find('.comentario-mostrarRespuestas').css('display','none');
+				  for (let i = 0; i < respuestas.length;i++) {
+					  var respuesta = respuestas[i];
+					  mostrarRespuestas(respuesta,ulRespuestas);
+				  }
+				  divPadre.find('.respuestas').remove();
+				  divPadre.append(ulRespuestas);
+				 
+				
+			  }
+			  alert("Tu respuesta ha sido enviada con éxito");
+			},
+			  error: function(jqXHR, textStatus, errorThrown) {
+				
+				alert("Ha ocurrido un error al enviar tu comentario: " + textStatus + " " + errorThrown);
+			  }
+			});
+				form.remove(); 
+			});
+			}
+		  });
+
+		  
 });
 
 function mostrarComentario(comentario,listaComentarios) {
@@ -411,7 +536,8 @@ function mostrarComentario(comentario,listaComentarios) {
   		const botonResponder = document.createElement('button');
   		botonResponder.classList.add('comentario-responder');
   		botonResponder.textContent = 'Responder';
-	
+		botonResponder.setAttribute("type", "submit");
+
   		// Agregar los elementos al comentario
   		divComentario.appendChild(divAutor);
   		divComentario.appendChild(divCuerpo);
@@ -419,7 +545,7 @@ function mostrarComentario(comentario,listaComentarios) {
   		divComentario.appendChild(botonResponder);
 
 		  var respuestas=comentario.respuestas;
-		  if(respuestas.length>0){
+		  
 		  const botonRespuestas= document.createElement('button');
 		  const botonOcultarRespuestas= document.createElement('button');
 		  botonRespuestas.classList.add('comentario-mostrarRespuestas');
@@ -429,6 +555,8 @@ function mostrarComentario(comentario,listaComentarios) {
 		  botonOcultarRespuestas.textContent = 'Ocultar Respuestas';
 		  botonOcultarRespuestas.style.display="none";
 		  divComentario.appendChild(botonOcultarRespuestas);
+		  if(respuestas.length<=0){
+			botonRespuestas.style.display="none";
 		  }
 		  
 
@@ -453,16 +581,24 @@ function mostrarComentario(comentario,listaComentarios) {
 	  divFecha.classList.add('comentario-fecha');
 	  divFecha.textContent = comentario.fecha;
 
-	  const botonResponder = document.createElement('button');
-	  botonResponder.classList.add('comentario-responder');
-	  botonResponder.textContent = 'Responder';
-
 	  // Agregar los elementos al comentario
 	  divComentario.appendChild(divAutor);
 	  divComentario.appendChild(divCuerpo);
 	  divComentario.appendChild(divFecha);
 	  divComentario.appendChild(botonResponder);
 
+	  const botonRespuestas= document.createElement('button');
+	  const botonOcultarRespuestas= document.createElement('button');
+	  botonRespuestas.classList.add('comentario-mostrarRespuestas');
+	  botonRespuestas.textContent = 'Mostrar Respuestas';
+	  divComentario.appendChild(botonRespuestas);
+	  botonOcultarRespuestas.classList.add('comentario-ocultarRespuestas');
+	  botonOcultarRespuestas.textContent = 'Ocultar Respuestas';
+	  botonOcultarRespuestas.style.display="none";
+	  divComentario.appendChild(botonOcultarRespuestas);
+	  if(respuestas.length<=0){
+		botonRespuestas.style.display="none";
+	  }
 	  // Agregar el comentario a la lista de comentarios
 	  listaComentarios.prepend(divComentario);
 }
@@ -487,6 +623,8 @@ function mostrarComentario(comentario,listaComentarios) {
 	  const botonResponder = document.createElement('button');
 	  botonResponder.classList.add('comentario-responder');
 	  botonResponder.textContent = 'Responder';
+	  botonResponder.setAttribute("type", "submit");
+
 
 	  // Agregar los elementos al comentario
 	  divComentario.appendChild(divAutor);
@@ -495,24 +633,28 @@ function mostrarComentario(comentario,listaComentarios) {
 	  divComentario.appendChild(botonResponder);
 	
 	  var respuestas=comentario.respuestas;
-	  if(respuestas.length>0){
-		const botonRespuestas= document.createElement('button');
-		const botonOcultarRespuestas= document.createElement('button');
-		botonRespuestas.classList.add('comentario-mostrarRespuestas');
-		botonRespuestas.textContent = 'Mostrar Respuestas';
-		divComentario.appendChild(botonRespuestas);
-		botonOcultarRespuestas.classList.add('comentario-ocultarRespuestas');
-		botonOcultarRespuestas.textContent = 'Ocultar Respuestas';
-		botonOcultarRespuestas.style.display="none";
-		divComentario.appendChild(botonOcultarRespuestas);
-		}
-
+	
+	  const botonRespuestas= document.createElement('button');
+		  const botonOcultarRespuestas= document.createElement('button');
+		  botonRespuestas.classList.add('comentario-mostrarRespuestas');
+		  botonRespuestas.textContent = 'Mostrar Respuestas';
+		  divComentario.appendChild(botonRespuestas);
+		  botonOcultarRespuestas.classList.add('comentario-ocultarRespuestas');
+		  botonOcultarRespuestas.textContent = 'Ocultar Respuestas';
+		  botonOcultarRespuestas.style.display="none";
+		  divComentario.appendChild(botonOcultarRespuestas);
+		  if(respuestas.length<=0){
+			botonRespuestas.style.display="none";
+		  }
+		  console.log(botonOcultarRespuestas);
+		  console.log(botonRespuestas);
 	  // Agregar el comentario a la lista de comentarios
 	  listaComentarios.append(divComentario);
 }
 
 function buscaPadre(idComentario,comentarios) {
 	// Buscamos el comentario con el id indicado
+	
 			for (let i = 0; i < comentarios.length;i++) {
 				var comentario = comentarios[i];
 				if(comentario.respuestas.length>0){
@@ -527,6 +669,11 @@ function buscaPadre(idComentario,comentarios) {
 					{return comentario;}
 				}
 			}
+			if(comentario.id==idComentario)
+					{
+						
+						return comentario;
+					}
 	return null;
 }
 
