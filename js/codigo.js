@@ -290,7 +290,6 @@ function ordenarProductos() {
 			for (let i = 0; i < numComentariosMostrados;i++) {
 				var comentario = comentarios[i];
 				mostrarComentario(comentario,listaComentarios);
-				
 			}
 			if (comentariosTotal > numComentariosMostrados) {
 				botonMostrarMas.classList.add("comentario-mostrarMas");
@@ -362,6 +361,34 @@ function ordenarProductos() {
  			comentarioPadre.querySelector('.comentario-mostrarRespuestas').style.display = 'block';
   			this.style.display = 'none';
 		});
+
+		$(".comentariosBlog-form").submit(function(event) {
+			event.preventDefault(); // evita el envío del formulario por defecto
+
+			var formData = $(this).serialize(); // serializa los datos del formulario
+			$.ajax({
+			  type: "POST",
+			  url: "creaComentariosBlog.php",
+			  data: formData,
+			  success: function(response) {
+				var nuevoComentario = {
+					id: response,
+					usuario: $('input[name="autor"]').val(),
+					contenido: $('textarea[name="comentarioBlog"]').val(),
+					comentarios: [],
+					fecha: $('input[name="fecha"]').val()
+				  };
+
+				insertaNuevoComentario(nuevoComentario,listaComentarios);  
+				listaComentarios.push(nuevoComentario);
+				alert("Tu comentario ha sido enviado con éxito");
+			  },
+			  error: function(jqXHR, textStatus, errorThrown) {
+				
+				alert("Ha ocurrido un error al enviar tu comentario: " + textStatus + " " + errorThrown);
+			  }
+			});
+		  });
 });
 
 function mostrarComentario(comentario,listaComentarios) {
@@ -408,6 +435,37 @@ function mostrarComentario(comentario,listaComentarios) {
   		// Agregar el comentario a la lista de comentarios
   		listaComentarios.append(divComentario);
   }
+
+  function insertaNuevoComentario(comentario,listaComentarios) {
+	const divComentario = document.createElement('div');
+	  divComentario.classList.add('comentario');
+	  divComentario.setAttribute('idComentario', comentario.id);
+
+	  const divAutor = document.createElement('div');
+	  divAutor.classList.add('comentario-autor');
+	  divAutor.textContent = comentario.usuario;
+
+	  const divCuerpo = document.createElement('div');
+	  divCuerpo.classList.add('comentario-cuerpo');
+	  divCuerpo.textContent = comentario.contenido;
+
+	  const divFecha = document.createElement('div');
+	  divFecha.classList.add('comentario-fecha');
+	  divFecha.textContent = comentario.fecha;
+
+	  const botonResponder = document.createElement('button');
+	  botonResponder.classList.add('comentario-responder');
+	  botonResponder.textContent = 'Responder';
+
+	  // Agregar los elementos al comentario
+	  divComentario.appendChild(divAutor);
+	  divComentario.appendChild(divCuerpo);
+	  divComentario.appendChild(divFecha);
+	  divComentario.appendChild(botonResponder);
+
+	  // Agregar el comentario a la lista de comentarios
+	  listaComentarios.prepend(divComentario);
+}
 
   function mostrarRespuestas(comentario,listaComentarios) {
 	const divComentario = document.createElement('div');

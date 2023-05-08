@@ -44,8 +44,13 @@ $contenidoPrincipal .= <<<EOS
     EOS;
   }
   else{
+    $fechaNuevoComentario=date('Y-m-d H:i:s');
     $contenidoPrincipal .= <<<EOS
     <form class="comentariosBlog-form" method="post">
+    <input type="hidden" name="id" value="{$_SESSION['id']}">
+    <input type="hidden" name="autor" value="{$_SESSION['nombre']}">
+    <input type="hidden" name="entrada" value="{$blog->getId()}">
+    <input type="hidden" name="fecha" value="{$fechaNuevoComentario}">
     <textarea class="comentarioBlog" name="comentarioBlog" required placeholder="Escribe aquí tu comentario"></textarea>
     <button type="submit">Enviar comentario</button>
     </form>
