@@ -2,7 +2,6 @@
 require_once __DIR__.'/includes/configuracion.php';
 
 $tituloPagina = 'Suscripción';
-include("includes/comun/menuIzqCuenta.php");
 
 if ($_SESSION['rol'] == 'U') {
   $contenidoPrincipal = <<<EOS
@@ -104,5 +103,5 @@ EOS;
 EOS;
 }
 
-require __DIR__.'/includes/plantillas/plantilla.php';
+require __DIR__.'/includes/plantillas/plantillaPerfil.php';
 ?>

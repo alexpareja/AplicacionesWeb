@@ -17,7 +17,6 @@ if (isset($_POST["baja"])) {
 }
 
 $tituloPagina = 'Darse de Baja';
-include("includes/comun/menuIzqCuenta.php");
 
 $contenidoPrincipal = <<<EOS
 	<div class ="hazte-premium">
@@ -32,5 +31,5 @@ $contenidoPrincipal = <<<EOS
 	</div>
 EOS;
 
-require __DIR__.'/includes/plantillas/plantilla.php';
+require __DIR__.'/includes/plantillas/plantillaPerfil.php';
 ?>

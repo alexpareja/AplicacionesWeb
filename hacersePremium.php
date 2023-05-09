@@ -17,14 +17,13 @@ if (isset($_POST["premium"])) {
 }
 
 $tituloPagina = 'Hazte Premium';
-include("includes/comun/menuIzqCuenta.php");
 
 $contenidoPrincipal = <<<EOS
 	<div class ="hazte-premium">
 		<h3>Hazte premium</h3>
 		<p>¿Estás seguro que quieres hacerte premium?</p>
 		<form method="post">
-            <button type="submit" name="premium" class="premium">Hazte premium</button>
+            <button type="submit" name="premium" class="premium" onclick="aceptarCompra()">Hazte premium</button>
         </form> 
         <form method="post" action='suscripcion.php'>
             <button type="submit" name="volver" class="volver">Volver</button>
@@ -32,5 +31,5 @@ $contenidoPrincipal = <<<EOS
 	</div>
 EOS;
 
-require __DIR__.'/includes/plantillas/plantilla.php';
+require __DIR__.'/includes/plantillas/plantillaPerfil.php';
 ?>

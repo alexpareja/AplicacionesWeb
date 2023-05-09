@@ -13,8 +13,6 @@ $apellido2 = $_SESSION['apellido2'];
 $email = $_SESSION['email'];
 $direccion = $_SESSION['direccion'];
 
-include("includes/comun/menuIzqCuenta.php");
-
 if ($_SESSION['rol'] == 'U') {
     $suscripcionCabecera = '<h2>La Quinta Caja Free:</h2>';
     $suscripcionContenido = '<p>Información sobre la cuenta gratuita:</p>
@@ -105,5 +103,5 @@ $contenidoPrincipal = <<<EOS
 </div>
 EOS;
 
-require __DIR__.'/includes/plantillas/plantilla.php';
+require __DIR__.'/includes/plantillas/plantillaPerfil.php';
 ?>
