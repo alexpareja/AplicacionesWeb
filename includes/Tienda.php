@@ -124,8 +124,8 @@ class Tienda {
     public function productosAleatoriosEnTienda() {
     $html = '';
     $html .= <<<EOS
-        <div class="productos-premium">
-        <ul class="lista-productos-premium" id="lista-productos">
+        <div class="productos">
+        <ul class="lista-productos" id="lista-productos">
     EOS;
     
     // Obtener una lista aleatoria de tres productos

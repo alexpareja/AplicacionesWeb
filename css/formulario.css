@@ -279,6 +279,15 @@ button[type="submit"]:hover {
   width:49.6%;
 }
 
+.newP-form label.izq {
+  display: inline-block;
+  margin-right: 0.8rem;
+}
+
+.newP-form input[type="radio"]:checked + label {
+  color: #800080;
+}
+
 ul.tallas li{
   display:inline-block;
   margin-right: 0.0625rem;
@@ -391,6 +400,15 @@ input.quantity{
   border-radius: 0.3125rem;
   border: 0.0625rem solid #800080;
   resize: vertical;
+}
+
+.product-form label.izq {
+  display: inline-block;
+  margin-right: 0.8rem;
+}
+
+.product-form input[type="radio"]:checked + label {
+  color: #800080;
 }
 
 .contenido{

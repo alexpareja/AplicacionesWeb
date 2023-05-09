@@ -21,7 +21,13 @@ class FormularioEditarProducto extends Formulario
 		$htmlErroresGlobales = self::generaListaErroresGlobales($this->errores);
 		$erroresCampos = self::generaErroresCampos(['nombre', 'precio', 'imagen', 'oferta'], $this->errores, 'span', array('class' => 'error'));
 
-		
+		if($this->producto->getPremium()) {
+			$checkedSi = 'checked';
+			$checkedNo = '';
+		} else {
+			$checkedNo = 'checked';
+			$checkedSi = '';
+		}
 
         // Se genera el HTML asociado a los campos del formulario y los mensajes de error.
 		$html=<<<EOF
@@ -49,6 +55,14 @@ class FormularioEditarProducto extends Formulario
 					<p><label for="oferta">Oferta:</label></p>
 					<p><input id="oferta" class="quantity" type="number" step="0.01" min="0" max = 100 name="oferta" value="{$this->producto->getOferta()}"></p>
 					{$erroresCampos['oferta']}
+				</div>
+
+				<div>
+				    <p><label for="premium">Premium:</label> 
+				    <input type="radio" id="si" name="premium" value="1" $checkedSi>
+				    <label for="si" class="izq">Sí</label>
+				    <input type="radio" id="no" name="premium" value="0" $checkedNo>
+				    <label for="no" class="izq">No</label></p>
 				</div>
 				
 				<div>
@@ -135,6 +149,7 @@ class FormularioEditarProducto extends Formulario
 		
 		$precio= $datos['precio'];
 		$oferta= $datos['oferta'];
+		$premium = $datos['premium'];
 		$id = $datos['id'];
 		$xs= $datos['XS'];
 		$s= $datos['S'];
@@ -167,7 +182,7 @@ class FormularioEditarProducto extends Formulario
 				$this->errores['imagen'] = 'El archivo introducido no es valido';		
 				}				
 			}else{
-				$producto = Producto::crea($id, $nombre, $descripcion, $precio, $oferta, $xs, $s, $m, $l, $xl);	
+				$producto = Producto::crea($id, $nombre, $descripcion, $precio, $oferta, $premium, $xs, $s, $m, $l, $xl);	
 			}			
         }
 		}

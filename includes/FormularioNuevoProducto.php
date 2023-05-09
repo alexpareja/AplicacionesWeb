@@ -41,6 +41,15 @@ class FormularioNuevoProducto extends Formulario
 					<p><input id="oferta" class="quantity" type="number" step="0.01" min="0" max="100" name="oferta"></p>
 					{$erroresCampos['oferta']}
 				</div>
+
+				<div>
+				    <p><label for="premium">Premium:</label> 
+				    <input type="radio" id="si" name="premium" value="1" >
+				    <label for="si" class="izq">Sí</label>
+				    <input type="radio" id="no" name="premium" value="0" checked>
+				    <label for="no" class="izq">No</label></p>
+				</div>
+
 				<div>
 				<label>Imagen:</label>
 					<div id='subir-archivo1' class='subir-archivo1'>
@@ -111,7 +120,7 @@ class FormularioNuevoProducto extends Formulario
 		
 		$precio= $datos['precio'];
 		$oferta= $datos['oferta'];
-		
+		$premium = $datos['premium'];
 		$xs= $datos['XS'];
 		$s= $datos['S'];
 		$m= $datos['M'];
@@ -135,7 +144,7 @@ class FormularioNuevoProducto extends Formulario
 			$rutaArchivo = $imagen['tmp_name'];
 			
 			if($tipoArchivo == 'image/jpeg' || $tipoArchivo == 'image/png') {
-				$producto = Producto::crea(null,$nombre, $descripcion, $precio, $oferta, $xs, $s, $m, $l, $xl);
+				$producto = Producto::crea(null,$nombre, $descripcion, $precio, $oferta, $premium, $xs, $s, $m, $l, $xl);
 	
 				$nombreImagen = 'producto_'.$producto->getID().'.png'; // Nombre de la imagen que se guardará
 				$ruta = 'img/'.$nombreImagen; // Ruta donde se guardará la imagen
