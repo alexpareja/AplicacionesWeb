@@ -13,6 +13,7 @@ CREATE TABLE `productos` (
   `descripcion` text NOT NULL,
   `precio` float UNSIGNED NOT NULL,
   `oferta` float UNSIGNED NOT NULL,
+  `premium` tinyint(1) NOT NULL,
   `stockXS` int(10) UNSIGNED NOT NULL,
   `stockS` int(10) UNSIGNED NOT NULL,
   `stockM` int(10) UNSIGNED NOT NULL,

@@ -41,7 +41,7 @@ if ($_SESSION['rol'] == 'U') {
     $suscripcionContenido = '<p>Información sobre la cuenta premium:</p>
                          <ul>
                             <li>Ventajas de usuario La Quinta Caja Free.</li>
-                            <li>10% de descuento en todas las compras.</li>
+                            <li>10% de descuento en todas las compras y acceso a productos exclusivos.</li>
                             <li>Caja gratuita de forma mensual.</li>
                          </ul>
                          <p class="caja">Fecha de la próxima caja gratuita: ' . date("d/m/Y", strtotime($fechaCaja)) . '</p>
@@ -55,6 +55,7 @@ if ($_SESSION['rol'] == 'U') {
                                 <li>Añadir, editar y eliminar productos en la tienda.</li>
                                 <li>Añadir, editar y eliminar entradas en el blog.</li>
                                 <li>Ver compras realizadas por los clientes.</li>
+                                <li>Acceso a productos exclusivos.</li>
                              </ul>
                              <a href="suscripcion.php" class="boton-suscripcion">Ver suscripciones</a>';
     $claseCabecera = "cabecera-admin";

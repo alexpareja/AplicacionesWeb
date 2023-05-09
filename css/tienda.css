@@ -28,6 +28,17 @@ ul.lista-productos li{
 	color: #333;
 }
 
+ul.lista-productos-premium li{
+  font-size:1.25rem;
+  display:inline-block;
+  padding:1.25rem;
+}
+
+.lista-productos-premium li a {
+  text-decoration: none;
+  color: #333;
+}
+
 .producto-imagen {
 	width: 100%;
 	max-width: 18.75rem;
