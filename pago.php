@@ -54,6 +54,12 @@ foreach ($cart_products as $product) {
 EOS;
 }
 
+$descuentoPremium = 0;
+if ($_SESSION['rol'] == 'P') {
+    $descuentoPremium = $total_price * 0.1;
+}
+
+$total_price = round($total_price - $descuentoPremium, 2);
 
 $contenidoPrincipal .= <<<EOS
     </ul>
@@ -87,7 +93,7 @@ if (isset($_POST['pay'])) {
         foreach ($_SESSION['cart'] as $product) {
             foreach ($product as $size => $item) {
                 if (is_array($item)) {
-                    $total = $item['price'] * $item['cantidad'];
+                    $total = round($item['price'] * $item['cantidad'] - $descuentoPremium, 2);
                     $compra = es\ucm\fdi\aw\Compra::crea($idUsuario, $item['id'], strtolower($item['size']), $item['cantidad'], $total, $descuento);
                 }
             }
