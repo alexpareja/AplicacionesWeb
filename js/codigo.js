@@ -281,6 +281,7 @@ function ordenarProductos() {
 		
 		$.ajax({
 			url:"procesaComentariosBlog.php?id="+id,
+			contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
 			method:"GET",
 		  }).done(function(res){
 			comentarios=JSON.parse(res);
@@ -370,18 +371,20 @@ function ordenarProductos() {
 			$.ajax({
 			  type: "POST",
 			  url: "creaComentariosBlog.php",
+			  contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
 			  data: formData,
 			  success: function(response) {
+
 				var nuevoComentario = {
 					id: response,
 					usuario: $('input[name="autor"]').val(),
 					contenido: $('textarea[name="comentarioBlog"]').val(),
-					respuestas: [],
+					respuestas: Array(),
 					fecha: $('input[name="fecha"]').val()
 				  };
-
+				  
 				insertaNuevoComentario(nuevoComentario,listaComentarios);  
-				listaComentarios.push(nuevoComentario);
+				comentarios.push(nuevoComentario);
 				alert("Tu comentario ha sido enviado con éxito");
 			  },
 			  error: function(jqXHR, textStatus, errorThrown) {
@@ -413,7 +416,7 @@ function ordenarProductos() {
 			var textarea = $("<textarea>").addClass("textoRespuesta").attr("name", "textoRespuesta").attr("required", true).attr("placeholder", "Escribe aquí tu comentario");
 			var enviar = $("<button>").attr("type", "submit").text("Enviar comentario");
 			var cancelar = $("<button>").attr("type", "button").text("Cancelar");
-
+			
 			// agrega los elementos al formulario
 			form.append(id);
 			form.append(autor);
@@ -446,17 +449,20 @@ function ordenarProductos() {
 			$.ajax({
 			  type: "POST",
 			  url: "creaRespuestasBlog.php",
+			  contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
 			  dataType: "json",
 			  data: formData,
 			  success: function(response) {
+				
 				var nuevaRespuesta = {
 					id: response.id,
 					usuario: $('input[name="autor"]').val(),
 					contenido: response.respuesta,
-					respuestas: [],
+					respuestas: Array(),
 					fecha: $('input[name="fecha"]').val(),
 					respuesta: $('input[name="respuesta"]').val()
 				  };
+				  
 				  var divPadre = $('div[idcomentario=' + comentarioPadre + ']');
 				  const ulRespuestas = document.createElement('ul');
 				  ulRespuestas.classList.add('respuestas');
@@ -471,8 +477,8 @@ function ordenarProductos() {
 				  
 				  if(encontrado)
 				  {
+				  comentario.respuestas.push(nuevaRespuesta);
 				  var respuestas=comentario.respuestas;
-				  respuestas.push(nuevaRespuesta);
 				  divPadre.find('.comentario-ocultarRespuestas').css('display','block');
 				  divPadre.find('.comentario-mostrarRespuestas').css('display','none');
 				  for (let i = 0; i < respuestas.length;i++) {
@@ -487,9 +493,8 @@ function ordenarProductos() {
 			
 				  var comentario = buscaPadre(comentarioPadre,comentarios);
 				
+				  comentario.respuestas.push(nuevaRespuesta);
 				  var respuestas=comentario.respuestas;
-				  
-				  respuestas.push(nuevaRespuesta);
 				  divPadre.find('.comentario-ocultarRespuestas').css('display','block');
 				  divPadre.find('.comentario-mostrarRespuestas').css('display','none');
 				  for (let i = 0; i < respuestas.length;i++) {
@@ -581,6 +586,11 @@ function mostrarComentario(comentario,listaComentarios) {
 	  divFecha.classList.add('comentario-fecha');
 	  divFecha.textContent = comentario.fecha;
 
+	  const botonResponder = document.createElement('button');
+  	  botonResponder.classList.add('comentario-responder');
+  	  botonResponder.textContent = 'Responder';
+	  botonResponder.setAttribute("type", "submit");
+
 	  // Agregar los elementos al comentario
 	  divComentario.appendChild(divAutor);
 	  divComentario.appendChild(divCuerpo);
@@ -596,9 +606,7 @@ function mostrarComentario(comentario,listaComentarios) {
 	  botonOcultarRespuestas.textContent = 'Ocultar Respuestas';
 	  botonOcultarRespuestas.style.display="none";
 	  divComentario.appendChild(botonOcultarRespuestas);
-	  if(respuestas.length<=0){
-		botonRespuestas.style.display="none";
-	  }
+	  botonRespuestas.style.display="none";
 	  // Agregar el comentario a la lista de comentarios
 	  listaComentarios.prepend(divComentario);
 }
@@ -646,8 +654,7 @@ function mostrarComentario(comentario,listaComentarios) {
 		  if(respuestas.length<=0){
 			botonRespuestas.style.display="none";
 		  }
-		  console.log(botonOcultarRespuestas);
-		  console.log(botonRespuestas);
+		  
 	  // Agregar el comentario a la lista de comentarios
 	  listaComentarios.append(divComentario);
 }
@@ -657,23 +664,19 @@ function buscaPadre(idComentario,comentarios) {
 	
 			for (let i = 0; i < comentarios.length;i++) {
 				var comentario = comentarios[i];
-				if(comentario.respuestas.length>0){
-					
-					if(comentario.id==idComentario)
+				if(comentario.id==idComentario)
 					{
 						
 						return comentario;
 					}
-					
-					if(comentario=buscaPadre(idComentario,comentario.respuestas))
+				if(comentario.respuestas.length>0){
+				
+					comentario=buscaPadre(idComentario,comentario.respuestas);
+					if(comentario!=null)
 					{return comentario;}
 				}
 			}
-			if(comentario.id==idComentario)
-					{
-						
-						return comentario;
-					}
+			
 	return null;
 }
 

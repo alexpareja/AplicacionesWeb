@@ -59,6 +59,7 @@ $contenidoPrincipal .= <<<EOS
   $contenidoPrincipal .= <<<EOS
   <ul class="listaComentarios">
   </ul>
+  </div>
   EOS;
     
 }

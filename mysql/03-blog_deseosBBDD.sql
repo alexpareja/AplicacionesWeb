@@ -45,8 +45,7 @@ CREATE TABLE `comentariosproducto` (
   `usuario` int(10) UNSIGNED NOT NULL,
   `contenido` varchar(200) NOT NULL,
   `fecha` datetime NOT NULL,
-  `review` decimal(10,0) NOT NULL,
-  `respuesta` int(10) UNSIGNED DEFAULT NULL
+  `review` decimal(10,0) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 CREATE TABLE `listadeseos` (
@@ -114,7 +113,7 @@ ALTER TABLE `comentariosproducto`
   ADD PRIMARY KEY (`id`),
   ADD KEY `idProducto` (`producto`),
   ADD KEY `idUsuario` (`usuario`),
-  ADD KEY `respuesta` (`respuesta`);
+  ADD KEY `review` (`review`);
 
 --
 -- AUTO_INCREMENT de las tablas volcadas
