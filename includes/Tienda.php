@@ -4,9 +4,11 @@ namespace es\ucm\fdi\aw;
 class Tienda {
 
     private $productos;
+    private $recomendados;
 
-    public function __construct() {
+   	public function __construct() {
         $this->productos = Producto::getTienda();
+        $this->recomendados = Producto::getRecomendados();
     }
 
 	//Muestra la imagen, nombre y precio de los productos de la base de datos
@@ -137,10 +139,10 @@ class Tienda {
     EOS;
     
     // Obtener una lista aleatoria de tres productos
-    $productos_aleatorios = array_rand($this->productos, 3);
+    $productos_aleatorios = array_rand($this->recomendados, 3);
     
     foreach($productos_aleatorios as $key => $value) {
-        $prod = $this->productos[$value];
+        $prod = $this->recomendados[$value];
         $link = 'mostrarProducto.php?id='.$prod->getId();
         $src = 'img/producto_'.$prod->getId().'.png';
         $alt = 'Imagen de Producto '.$prod->getId();

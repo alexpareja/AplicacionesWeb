@@ -2025,13 +2025,26 @@ input[type="text"].cupon-input:valid {
 
 /*productos recomendados*/
 
-ul.lista-productos {
-  margin-left: 2.4rem;
+.productos {
+  text-align: center;
 }
 
-ul.lista-productos li{
-  font-size:1.25rem;
-  display:inline-block;
+ul.lista-productos {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  white-space: nowrap;
+  max-width: 100%;
+}
+
+ul.lista-productos li {
+  display: inline-block;
+  margin-right: 2rem;
+  white-space: normal;
+  vertical-align: top;
 }
 
 .lista-productos li a {
@@ -2040,9 +2053,8 @@ ul.lista-productos li{
 }
 
 .producto-imagen {
-  width: 100%;
-  max-width: 10.75rem;
-  height: 10.75rem;
+  width: 14rem;
+  height: 14rem;
   border: 0.0625rem solid #800080;
   padding: 0.625rem;
   box-sizing: border-box;
@@ -2056,7 +2068,7 @@ ul.lista-productos li{
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
-  transform: scale(2.4);
+  transform: scale(2.3);
 }
 
 .producto-imagen:hover {
@@ -2080,12 +2092,11 @@ ul.lista-productos li{
 .titulo1 {
   font-size: xx-large;
   font-weight: normal;
-  margin-left: 3.5rem;
-  text-align:center;
+  text-align: center;
 }
 
 .titulo2 {
+  margin-top: 5rem;
   font-size: xx-large;
-  margin-left: 3.5rem;
-  text-align:center;
+  text-align: center;
 }

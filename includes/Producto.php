@@ -59,6 +59,12 @@ class Producto
         return $ProductoDAO->getTienda();
     }
 
+    public static function getRecomendados()
+    {
+        $ProductoDAO= new ProductoDAO();
+        return $ProductoDAO->getRecomendados();
+    }
+
     public static function crea($id, $nombre, $descripcion, $precio,$oferta, $premium, $xs, $s, $m, $l, $xl)
     {
         $ProductoDAO= new ProductoDAO();
@@ -71,7 +77,6 @@ class Producto
         return $ProductoDAO->borra($producto->id);
     }
 	
-
     
     public static function borraCantidad($productoId, $talla, $cantidad){
         $ProductoDAO= new ProductoDAO();

@@ -69,6 +69,25 @@ class ProductoDAO
         return $productos;
     }
 
+    //devuelve todos los productos en un array
+    public function getRecomendados()
+    {
+        $query = "SELECT * FROM productos WHERE premium = 0";
+
+        $rs = $this->conn->query($query);
+        $productos=array();
+        if($rs->num_rows>0){
+            while($row=$rs->fetch_assoc())
+            {
+                $id = $row['id'];
+                $productos[$id] = new Producto($id, $row['nombre'], $row['descripcion'], $row['precio'], $row['oferta'], $row['premium'],
+                $row['stockXS'], $row['stockS'], $row['stockM'], $row['stockL'], $row['stockXL']);
+            }
+        }
+        return $productos;
+    }
+
+
     //crea un nuevo producto, con stock 0 
     public function crea($id, $nombre, $descripcion, $precio, $oferta, $premium, $xs, $s, $m, $l, $xl)
     {

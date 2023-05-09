@@ -41,6 +41,8 @@ if (isset($_SESSION['admin']) && $_SESSION['admin']) {
 
 	if($_SESSION['rol'] == 'A' || $_SESSION['rol'] == 'P') {
 		$contenidoPrincipal .= <<<EOS
+		<br>
+		<br>
 			<h2 class="titulo1">Productos Premium</h2>
 			<h2 class="titulo2">de La Quinta Caja</h2>
 		EOS;
