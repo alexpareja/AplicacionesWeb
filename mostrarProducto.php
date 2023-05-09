@@ -37,15 +37,21 @@ $htmlFormRegistro = $form->gestiona();
 $contenidoPrincipal .= <<<EOS
             <img class='imgProducto' src="$imagenProducto" alt='Imagen del producto'>
             <div class="infoProducto">
+			<fieldset>
             <h2>$nombre</h2>
             <p>$desc</p>
+			</fieldset>
             <div class="precioProducto">
-            <span class="precioOriginal">$precio €</span>
 EOS;
-            if($precioF>0){
+            if($oferta>0){
 $contenidoPrincipal .= <<<EOS
+			<span class="precioOriginal">$precio €</span>
             <span class="precioConOferta">$precioF €</span>
             <span class="oferta">($oferta% de descuento)</span>
+EOS;
+} else {
+	$contenidoPrincipal .= <<<EOS
+			<span class="precio">$precio €</span>
 EOS;
 }
 $contenidoPrincipal .= <<<EOS

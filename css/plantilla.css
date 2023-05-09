@@ -1422,6 +1422,10 @@ h2.error {
   flex-direction: column;
   justify-content: center;
 }
+.infoProducto p{
+	margin-bottom: 1.5rem;
+}
+
 
 .precioProducto {
   display: flex;
@@ -1431,19 +1435,19 @@ h2.error {
 }
 
 .precioOriginal {
-  font-size: 20px;
+  font-size:  120%;
   text-decoration: line-through;
   color: black;
   margin-right: 10px;
 }
 
 .precioConOferta {
-  font-size: 30px;
+  font-size: 150%;
   color: red;
 }
 
 .oferta {
-  font-size: 12px;
+  font-size: 80%;
   color: gray;
   margin-left: 10px;
 }
@@ -1458,13 +1462,47 @@ h2.error {
 }
 
 .product-form label.talla {
-  font-size: medium;
-  padding: 0.5rem 0.5rem;
-  border: 0.125rem solid #ccc;
-  border-radius: 0.3125rem;
-  cursor: pointer;
-  display: inline-block;
+    display: inline-block;
+    position: relative;
+    padding: 0.5rem 1rem;
+    margin: 2rem 0;
+    border: 1px solid #ccc;
+    border-radius: 0.3125rem;
+    cursor: pointer;
+    text-align: center;
 }
+
+.product-form label.talla input[type="radio"] {
+    display: none;
+}
+
+.product-form label.talla span {
+    display: block;
+}
+
+.product-form label.talla::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: transparent;
+    border-radius: 0.3125rem;
+    border: 1px solid #ccc;
+}
+
+.product-form label.talla:hover {
+    background-color: #f5f5f5;
+}
+
+.product-form label.talla input[type="radio"]:checked + span {
+    font-weight: bold;
+	color: #6f42c1;
+}
+
+
 
 
 
@@ -2086,7 +2124,7 @@ ul.lista-productos li {
 .precio {
   text-decoration: none;
   color: #800080;
-  font-size:110%;
+  font-size:150%;
 }
 
 .titulo1 {

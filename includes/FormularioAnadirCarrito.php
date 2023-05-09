@@ -43,23 +43,23 @@ class FormularioAnadirCarrito extends Formulario
         <div class="tallas">
             <label class="talla" for="xs">
             <input type="radio" id="xs" name="size" value="xs">
-             XS
+             <span> XS </span>
             </label>
             <label class="talla" for="s">
             <input type="radio" id="s" name="size" value="s">
-             S
+            <span> S </span>
             </label>
             <label class="talla" for="m">
             <input type="radio" id="m" name="size" value="m">
-            M
+            <span> M </span>
             </label>
             <label class="talla" for="l">
             <input type="radio" id="l" name="size" value="l">
-            L
+            <span> L </span>
             </label>
             <label class="talla" for="xl">
             <input type="radio" id="xl" name="size" value="xl">
-            XL
+            <span> XL </span>
             </label>
         </div>
         <div class="stockTallas">
