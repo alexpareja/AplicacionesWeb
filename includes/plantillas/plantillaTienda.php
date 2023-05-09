@@ -8,7 +8,7 @@
 	<link rel="stylesheet" type="text/css" href="css/tienda.css">
 	<link rel="stylesheet" type="text/css" href="css/accesibilidad.css">
 	<link rel="shortcut icon" href="img/logo.ico" type="image/x-icon">
-	<script src="js/codigo.js"></script>
+	<script src="js/codigoTienda.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 	<title><?= $tituloPagina ?></title></head>
 <body>

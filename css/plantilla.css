@@ -1780,6 +1780,63 @@ input[type="text"].cupon-input:valid {
   color: #202020;
 }
 
+.comentariosProd-form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  width: 90%;
+  max-width: 600px;
+}
+
+.comentariosProd-form input,
+.comentariosProd-form textarea
+{
+  margin-bottom: 10px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.comentariosProd-form button{
+  background-color: #800080;
+  color: white;
+  padding: 0.4375rem 0.4375rem;
+  border: 0.125rem solid #800080;
+  border-radius: 0.3125rem;
+  cursor: pointer;
+  margin-bottom: 0.625rem;
+  font-size: medium;
+}
+
+.comentariosBProd-form button:hover{
+  background: none;
+  color: #202020;
+}
+.estrellas {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+.estrellas input[type="radio"] {
+  display: none;
+}
+.estrellas label {
+  margin: 0 5px;
+  cursor: pointer;
+}
+.estrellas label img {
+  width: 30px;
+  height: 30px;
+}
+.estrellas label:hover img,
+.estrellas input[type="radio"]:checked + label img {
+  filter: none;
+}
+.estrellas label:hover ~ label img,
+.estrellas input[type="radio"]:checked + label ~ label img {
+  filter: grayscale(100%);
+}
 /*confirmación premium y darse de baja*/
 
 .hazte-premium {

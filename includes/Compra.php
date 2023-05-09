@@ -43,6 +43,12 @@ class Compra
         return $compraDAO->buscaPorProducto($idProducto);
     }
 
+    public static function buscaPorProductoYUsuario($idProducto,$idUsuario)
+    {
+        $compraDAO= new CompraDAO();
+        return $compraDAO->buscaPorProductoYUsuario($idProducto,$idUsuario);
+    }
+
 
     public static function crea($idUsuario, $idProducto, $talla, $cantidad, $precio, $idCupon)
     {

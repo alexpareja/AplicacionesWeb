@@ -50,6 +50,26 @@ class CompraDAO
         return false;
     }
 
+    public function buscaPorProductoYUsuario($idProducto,$idUsuario)
+    {
+        
+        $query = sprintf("SELECT * FROM compras WHERE usuario =%d AND producto =%d" , $idUsuario, $idProducto);
+        $rs = $this->conn->query($query);
+        if ($rs) {
+            $fila = $rs->fetch_assoc();
+            if($fila){
+            $compra = new Compra($fila['id'], $fila['usuario'], $fila['producto'],$fila['talla'], $fila['fecha'], 
+            $fila['cantidad'], $fila['precio'], $fila['cupon']);
+            $rs->free();
+                
+            return $compra;
+            }
+        } else {
+            error_log("Error BD ({$this->conn->errno}): {$this->conn->error}");
+        }
+        return false;
+    }
+
 
     //crea una nueva compra, con la fecha actual 
     public function crea($idUsuario, $idProducto, $talla,$fecha,$cantidad,$precio,$idCupon)
