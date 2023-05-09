@@ -70,6 +70,12 @@ ul.lista-productos-premium li{
 	font-size:110%;
 }
 
+.precioOferta {
+	text-decoration: none;
+	color: red;
+	font-size:110%;
+}
+
 .sin-stock{
 	color: red;
 }

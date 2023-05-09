@@ -1416,11 +1416,40 @@ h2.error {
 
 
 
+
 .producto .infoProducto {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
+
+.precioProducto {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.precioOriginal {
+  font-size: 20px;
+  text-decoration: line-through;
+  color: black;
+  margin-right: 10px;
+}
+
+.precioConOferta {
+  font-size: 30px;
+  color: red;
+}
+
+.oferta {
+  font-size: 12px;
+  color: gray;
+  margin-left: 10px;
+}
+
+
+
 
 .producto .product-form {
   display: flex;

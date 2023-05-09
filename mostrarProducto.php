@@ -29,7 +29,7 @@ $desc=$producto->getDescripcion();
 $oferta= $producto->getOferta();
 $precio=$producto->getPrecio();
 if($oferta > 0) {
-	$precio=$precio * (100- $oferta) /100;
+	$precioF=round($precio * (100- $oferta) /100,2);
 }
 $form = new es\ucm\fdi\aw\FormularioAnadirCarrito();
 $form->setProducto($producto);
@@ -39,7 +39,16 @@ $contenidoPrincipal .= <<<EOS
             <div class="infoProducto">
             <h2>$nombre</h2>
             <p>$desc</p>
-            <h3> $precio € </h3>
+            <div class="precioProducto">
+            <span class="precioOriginal">$precio €</span>
+EOS;
+            if($precioF>0){
+$contenidoPrincipal .= <<<EOS
+            <span class="precioConOferta">$precioF €</span>
+            <span class="oferta">($oferta% de descuento)</span>
+EOS;
+}
+$contenidoPrincipal .= <<<EOS
             </div>
             $htmlFormRegistro
             </div>

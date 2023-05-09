@@ -26,6 +26,7 @@ class FormularioAnadirCarrito extends Formulario
         $talla = $datos['talla'] ?? '';
         $cantidad = $datos['quantity'] ?? '';
         $precio = $datos['precio'] ?? '';
+
         
 
         // Se generan los mensajes de error si existen.
@@ -38,6 +39,7 @@ class FormularioAnadirCarrito extends Formulario
         <input type="hidden" name="id" value="{$this->producto->getId()}">
         <input type="hidden" name="name" value="{$this->producto->getNombre()}">
         <input type="hidden" name="price" value="{$this->producto->getPrecio()}">
+        <input type="hidden" name="oferta" value="{$this->producto->getOferta()}">
         <div class="tallas">
             <label class="talla" for="xs">
             <input type="radio" id="xs" name="size" value="xs">
@@ -122,6 +124,10 @@ class FormularioAnadirCarrito extends Formulario
     			$name = $datos['name'];
     			$quantity = $datos['quantity'];
     			$price = $datos['price'];
+				$oferta = $datos['oferta']; 
+				if($oferta>0){
+					$price = round($price * (100- $oferta) /100,2);
+				}
     			$size = $datos['size'];
     			$cogerStockTalla= "getStock$size";
     	// Si el producto ya está en el carrito, se suma la cantidad nueva a la cantidad que ya tiene el producto

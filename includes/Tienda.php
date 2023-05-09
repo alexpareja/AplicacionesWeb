@@ -25,7 +25,7 @@ class Tienda {
 				$oferta = $prod->getOferta();
 				$precio = $prod->getPrecio();
 				if($oferta>0){
-					$precio=$precio * (100- $oferta) /100;
+					$precio=round($precio * (100- $oferta) /100, 2);
 				}
 				$tallas = $prod->getTallasDisponibles();
 				if($tallas !== '' || isset($_SESSION['admin']) && $_SESSION['admin']){
@@ -44,8 +44,16 @@ class Tienda {
 						' src='$src' alt='$alt'>
 							</div>
 							<br>
-							$nombre <span class='precio'> $precio € </span>						
-				EOS;
+					EOS;
+					if($oferta > 0) {
+						$html .= <<<EOS
+						$nombre <span class='precioOferta'> $precio € </span>
+						EOS;
+						} else {
+						$html .= <<<EOS
+						$nombre <span class='precio'> $precio € </span>	
+						EOS;	
+							}					
 					if($tallas == ''){
 						$html .= <<<EOS
 						<span class = "sin-stock"> sin stock </span>
