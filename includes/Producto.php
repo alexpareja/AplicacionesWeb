@@ -10,6 +10,8 @@ class Producto
     private $descripcion;
 
     private $precio;
+	
+	private $oferta; 
 
     private $stockXS;
 
@@ -21,13 +23,13 @@ class Producto
 
     private $stockXL;
 
-    public function __construct($id=null, $nombre, $descripcion, $precio, $stockXS,$stockS,$stockM,$stockL,$stockXL)
+    public function __construct($id=null, $nombre, $descripcion, $precio, $oferta, $stockXS,$stockS,$stockM,$stockL,$stockXL)
     {
         $this->id = $id;
         $this->nombre = $nombre;
         $this->descripcion = $descripcion;
         $this->precio = $precio;
-        $this->stockM = $stockM;
+		$this->oferta = $oferta;
         $this->stockXS=$stockXS;
         $this->stockS=$stockS;
         $this->stockM=$stockM;
@@ -35,7 +37,7 @@ class Producto
         $this->stockXL=$stockXL;
     }
 
-    public static function buscaPorId($idProducto)
+	public static function buscaPorId($idProducto)
     {
         $ProductoDAO= new ProductoDAO();
         return $ProductoDAO->buscaPorId($idProducto);
@@ -54,10 +56,10 @@ class Producto
         return $ProductoDAO->getTienda();
     }
 
-    public static function crea($id, $nombre, $descripcion, $precio, $xs, $s, $m, $l, $xl)
+    public static function crea($id, $nombre, $descripcion, $precio,$oferta, $xs, $s, $m, $l, $xl)
     {
         $ProductoDAO= new ProductoDAO();
-        return $ProductoDAO->crea($id, $nombre, $descripcion, $precio, $xs, $s, $m, $l, $xl);
+        return $ProductoDAO->crea($id, $nombre, $descripcion, $precio, $oferta,  $xs, $s, $m, $l, $xl);
     }
 
     public static function borra($producto)
@@ -128,6 +130,11 @@ class Producto
     public function getStockXL()
     {
         return $this->stockXL;
+    }
+	
+	 public function getOferta()
+    {
+        return $this->oferta;
     }
 	
 	function getTallasDisponibles() {

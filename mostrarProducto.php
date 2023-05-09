@@ -26,7 +26,11 @@ $imagenProducto = "img/producto_" . $producto->getId() . ".png";
 $nombre=$producto->getNombre();
 $tituloPagina = $nombre;
 $desc=$producto->getDescripcion();
+$oferta= $producto->getOferta();
 $precio=$producto->getPrecio();
+if($oferta > 0) {
+	$precio=$precio * (100- $oferta) /100;
+}
 $form = new es\ucm\fdi\aw\FormularioAnadirCarrito();
 $form->setProducto($producto);
 $htmlFormRegistro = $form->gestiona();
@@ -35,7 +39,7 @@ $contenidoPrincipal .= <<<EOS
     <div class="infoProducto">
     <h2>$nombre</h2>
     <p>$desc</p>
-    <h3>$precio €</h3>
+    <h3> $precio € </h3>
     </div>
     $htmlFormRegistro
     </div>

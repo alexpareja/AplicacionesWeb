@@ -19,7 +19,7 @@ class ProductoDAO
         if ($rs->num_rows>0) {
             $fila = $rs->fetch_assoc();
             if($fila){
-            $prod = new Producto($fila['id'], $fila['nombre'], $fila['descripcion'], $fila['precio'], 
+            $prod = new Producto($fila['id'], $fila['nombre'], $fila['descripcion'], $fila['precio'], $fila['oferta'],
             $fila['stockXS'], $fila['stockS'], $fila['stockM'], $fila['stockL'], $fila['stockXL']);
             $rs->free();
 
@@ -39,7 +39,7 @@ class ProductoDAO
         if ($rs->num_rows>0) {
             $fila = $rs->fetch_assoc();
             if($fila){
-            $prod = new Producto($fila['id'], $fila['nombre'], $fila['descripcion'], $fila['precio'], 
+            $prod = new Producto($fila['id'], $fila['nombre'], $fila['descripcion'], $fila['precio'], $fila['oferta'],
             $fila['stockXS'], $fila['stockS'], $fila['stockM'], $fila['stockL'], $fila['stockXL']);
             $rs->free();
 
@@ -62,7 +62,7 @@ class ProductoDAO
             while($row=$rs->fetch_assoc())
             {
                 $id=$row['id'];
-                $productos[$id] = new Producto($row['id'], $row['nombre'], $row['descripcion'], $row['precio'],
+                $productos[$id] = new Producto($row['id'], $row['nombre'], $row['descripcion'], $row['precio'], $row['oferta'],
                 $row['stockXS'],$row['stockS'],$row['stockM'],$row['stockL'],$row['stockXL']);
             }
         }
@@ -70,19 +70,20 @@ class ProductoDAO
     }
 
     //crea un nuevo producto, con stock 0 
-    public function crea($id, $nombre, $descripcion, $precio, $xs, $s, $m, $l, $xl)
+    public function crea($id, $nombre, $descripcion, $precio, $oferta, $xs, $s, $m, $l, $xl)
     {
-        $prod = new Producto($id,$nombre,$descripcion,$precio,$xs,$s,$m,$l,$xl);
+        $prod = new Producto($id,$nombre,$descripcion,$precio,$oferta,$xs,$s,$m,$l,$xl);
         return self::guarda($prod);
     }
 
     //inserta nuevo producto
     private function inserta($producto)
     {
-        $query=sprintf("INSERT INTO productos(nombre, descripcion, precio, stockXS, stockS, stockM, stockL,stockXL) VALUES ('%s', '%s', '%f','%d', '%d', '%d','%d','%d')"
+        $query=sprintf("INSERT INTO productos(nombre, descripcion, precio, oferta, stockXS, stockS, stockM, stockL,stockXL) VALUES ('%s', '%s', '%f','%f','%d', '%d', '%d','%d','%d')"
             , $this->conn->real_escape_string($producto->getNombre())
             , $this->conn->real_escape_string($producto->getDescripcion())
             , $this->conn->real_escape_string($producto->getPrecio())
+			, $this->conn->real_escape_string($producto->getOferta())
             , $producto->getStockXS()
             , $producto->getStockS()
             , $producto->getStockM()
@@ -167,10 +168,11 @@ class ProductoDAO
             return false;
         } 
 
-		$query=sprintf("UPDATE productos SET nombre = '%s', descripcion = '%s', precio = '%f', stockXS = '%d', stockS = '%d', stockM = '%d', stockL = '%d',stockXL = '%d' where id = '%d'"
+		$query=sprintf("UPDATE productos SET nombre = '%s', descripcion = '%s', precio = '%f', oferta = '%f', stockXS = '%d', stockS = '%d', stockM = '%d', stockL = '%d',stockXL = '%d' where id = '%d'"
             , $this->conn->real_escape_string($producto->getNombre())
             , $this->conn->real_escape_string($producto->getDescripcion())
             , $this->conn->real_escape_string($producto->getPrecio())
+			, $this->conn->real_escape_string($producto->getOferta())
             , $producto->getStockXS()
             , $producto->getStockS()
             , $producto->getStockM()

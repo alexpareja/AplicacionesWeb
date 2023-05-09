@@ -20,7 +20,11 @@ class Tienda {
             $src = 'img/producto_'.$prod->getId().'.png';
             $alt = 'Imagen de Producto '.$prod->getId();
             $nombre = $prod->getNombre();
+			$oferta = $prod->getOferta();
             $precio = $prod->getPrecio();
+			if($oferta>0){
+				$precio=$precio * (100- $oferta) /100;
+			}
 			$tallas = $prod->getTallasDisponibles();
 			if($tallas !== '' || isset($_SESSION['admin']) && $_SESSION['admin']){
 				$html .= <<<EOS

@@ -15,6 +15,7 @@ if($producto)
 	$tituloPagina = $nombre;
 	$desc=$producto->getDescripcion();
 	$precio=$producto->getPrecio();
+	$oferta=$producto->getOferta();
 	$form = new es\ucm\fdi\aw\FormularioEditarProducto();
 	$form->setProducto($producto);
 	$htmlFormNProd = $form->gestiona();

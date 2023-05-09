@@ -13,7 +13,7 @@ class FormularioNuevoProducto extends Formulario
 		$nombre = $datos['nombre'] ?? '';
 		
 		$htmlErroresGlobales = self::generaListaErroresGlobales($this->errores);
-		$erroresCampos = self::generaErroresCampos(['nombre', 'precio', 'imagen'], $this->errores, 'span', array('class' => 'error'));
+		$erroresCampos = self::generaErroresCampos(['nombre', 'precio', 'imagen', 'oferta'], $this->errores, 'span', array('class' => 'error'));
 
 
         // Se genera el HTML asociado a los campos del formulario y los mensajes de error.
@@ -36,7 +36,11 @@ class FormularioNuevoProducto extends Formulario
 					<p><input id="precio" class="quantity" type="number" step="0.01" min="0" name="precio"></p>
 					{$erroresCampos['precio']}
 				</div>
-				
+				<div>
+					<p><label for="oferta">Oferta:</label></p>
+					<p><input id="oferta" class="quantity" type="number" step="0.01" min="0" max="100" name="oferta"></p>
+					{$erroresCampos['oferta']}
+				</div>
 				<div>
 				<label>Imagen:</label>
 					<div id='subir-archivo1' class='subir-archivo1'>
@@ -106,6 +110,7 @@ class FormularioNuevoProducto extends Formulario
         $descripcion = filter_var($descripcion, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 		
 		$precio= $datos['precio'];
+		$oferta= $datos['oferta'];
 		
 		$xs= $datos['XS'];
 		$s= $datos['S'];
@@ -121,13 +126,16 @@ class FormularioNuevoProducto extends Formulario
 		if ( ! $precio || empty($precio)) {
             $this->errores['precio'] = 'Se debe especificar el precio del producto que se quiere introducir.';
         }
+		if ( ! $oferta|| empty($oferta)) {
+            $this->errores['oferta'] = 'Se debe especificar la oferta del producto que se quiere introducir. En caso de no querer ponerlo en oferta, introduzca 0';
+        }
 		
         if (count($this->errores) === 0) {
 			$tipoArchivo = $imagen['type'];
 			$rutaArchivo = $imagen['tmp_name'];
 			
 			if($tipoArchivo == 'image/jpeg' || $tipoArchivo == 'image/png') {
-				$producto = Producto::crea(null,$nombre, $descripcion, $precio, $xs, $s, $m, $l, $xl);
+				$producto = Producto::crea(null,$nombre, $descripcion, $precio, $oferta, $xs, $s, $m, $l, $xl);
 	
 				$nombreImagen = 'producto_'.$producto->getID().'.png'; // Nombre de la imagen que se guardará
 				$ruta = 'img/'.$nombreImagen; // Ruta donde se guardará la imagen

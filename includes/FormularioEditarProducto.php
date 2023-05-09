@@ -19,7 +19,7 @@ class FormularioEditarProducto extends Formulario
 		$nombre = $datos['nombre'] ?? '';
 		
 		$htmlErroresGlobales = self::generaListaErroresGlobales($this->errores);
-		$erroresCampos = self::generaErroresCampos(['nombre', 'precio', 'imagen'], $this->errores, 'span', array('class' => 'error'));
+		$erroresCampos = self::generaErroresCampos(['nombre', 'precio', 'imagen', 'oferta'], $this->errores, 'span', array('class' => 'error'));
 
 		
 
@@ -43,6 +43,12 @@ class FormularioEditarProducto extends Formulario
 					<p><label for="precio">Precio:</label></p>
 					<p><input id="precio" class="quantity" type="number" step="0.01" min="0" name="precio" value="{$this->producto->getPrecio()}"></p>
 					{$erroresCampos['precio']}
+				</div>
+				
+				<div>
+					<p><label for="oferta">Oferta:</label></p>
+					<p><input id="oferta" class="quantity" type="number" step="0.01" min="0" max = 100 name="oferta" value="{$this->producto->getOferta()}"></p>
+					{$erroresCampos['oferta']}
 				</div>
 				
 				<div>
@@ -128,6 +134,7 @@ class FormularioEditarProducto extends Formulario
         $descripcion = filter_var($descripcion, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 		
 		$precio= $datos['precio'];
+		$oferta= $datos['oferta'];
 		$id = $datos['id'];
 		$xs= $datos['XS'];
 		$s= $datos['S'];
@@ -143,13 +150,16 @@ class FormularioEditarProducto extends Formulario
 		if ( ! $precio || empty($precio)) {
             $this->errores['precio'] = 'Se debe especificar el precio del producto que se quiere introducir.';
         }
+		if ( ! $oferta || empty($oferta)) {
+           $this->errores['oferta'] = 'Se debe especificar la oferta del producto que se quiere introducir. En caso de no querer ponerlo en oferta, introduzca 0';
+        }
 		
         if (count($this->errores) === 0) {
 			if(isset($imagen['error']) && $imagen['error'] === UPLOAD_ERR_OK){
 				$tipoArchivo = $imagen['type'];
 				$rutaArchivo = $imagen['tmp_name'];				
 				if($tipoArchivo == 'image/jpeg' || $tipoArchivo == 'image/png') {
-					$producto = Producto::crea($id, $nombre, $descripcion, $precio, $xs, $s, $m, $l, $xl);
+					$producto = Producto::crea($id, $nombre, $descripcion, $precio, $oferta, $xs, $s, $m, $l, $xl);
 					$nombreImagen = 'producto_'.$id.'.png'; // Nombre de la imagen que se guardará
 					$ruta = 'img/'.$nombreImagen; // Ruta donde se guardará la imagen
 				move_uploaded_file($rutaArchivo, $ruta);
@@ -157,7 +167,7 @@ class FormularioEditarProducto extends Formulario
 				$this->errores['imagen'] = 'El archivo introducido no es valido';		
 				}				
 			}else{
-				$producto = Producto::crea($id, $nombre, $descripcion, $precio, $xs, $s, $m, $l, $xl);	
+				$producto = Producto::crea($id, $nombre, $descripcion, $precio, $oferta, $xs, $s, $m, $l, $xl);	
 			}			
         }
 		}

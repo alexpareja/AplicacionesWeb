@@ -12,6 +12,7 @@ CREATE TABLE `productos` (
   `nombre` varchar(20) NOT NULL,
   `descripcion` text NOT NULL,
   `precio` float UNSIGNED NOT NULL,
+  `oferta` float UNSIGNED NOT NULL,
   `stockXS` int(10) UNSIGNED NOT NULL,
   `stockS` int(10) UNSIGNED NOT NULL,
   `stockM` int(10) UNSIGNED NOT NULL,
