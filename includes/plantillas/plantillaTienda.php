@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 	<link rel="stylesheet" type="text/css" href="css/tienda.css">
-	<link rel="stylesheet" type="text/css" href="css/accesibilidad.css">
 	<link rel="shortcut icon" href="img/logo.ico" type="image/x-icon">
 	<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<script src="js/codigoTienda.js"></script>
@@ -25,7 +24,6 @@ require(dirname(__DIR__).'/comun/menuIzqTienda.php');
 		</article>
 	</main>
 <?php
-require(dirname(__DIR__).'/comun/accesibilidad.php');
 require(dirname(__DIR__).'/comun/pie.php');
 ?>
 </div>

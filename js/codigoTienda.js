@@ -612,7 +612,6 @@ $(document).ready(function() {
 		}
 	}
 	function procesaCompra(response) {
-		console.log("HOLA");
 	}
 	function mostrarMensajeError(mensaje) {
 		mensajeError.text(mensaje);
@@ -621,30 +620,6 @@ $(document).ready(function() {
 		mensajeCupon.text(mensaje);
 	}
 });
-
-function toggleAccesibilidad() {
-  var btnaccesibilidad = $("#accesibilidad-btn");
-  var accesibilidad = $("#divAccess");
-  if(accesibilidad.css("display") === "none"){
-	    accesibilidad.show();
-		btnaccesibilidad.hide();
-
-  }else{
-	    accesibilidad.hide();
-		btnaccesibilidad.show();
-
-  }
-}
-
-function activarAltoContraste() {
-  var elementoHtml = document.querySelector('main');
-  elementoHtml.classList.toggle('alto-contraste');
-}
-
-function aumentarTamanoFuente() {
-  var elementoHtml = document.querySelector('html');
-  elementoHtml.classList.toggle('tamano-grande');
-}
 
 //Ventana pago confirmado
 function aceptarCompra(){
