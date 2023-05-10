@@ -827,3 +827,7 @@ function mostrarFiltrosBlog(){
 	}
 	
 }
+
+function seleccionarTalla(talla) {
+  document.getElementById('tallaSeleccionada').value = talla;
+}

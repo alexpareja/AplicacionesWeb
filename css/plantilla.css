@@ -2117,6 +2117,49 @@ vertical-align: middle;
   border: 0.125rem solid #800080;
 }
 
+.hazte-premium label.talla {
+    display: inline-block;
+    position: relative;
+    padding: 0.5rem 1rem;
+    margin-bottom: 2rem;
+    border: 1px solid #ccc;
+    border-radius: 0.3125rem;
+    cursor: pointer;
+    text-align: center;
+}
+
+.hazte-premium label.talla input[type="radio"] {
+    display: none;
+}
+
+.hazte-premium label.talla span {
+    display: block;
+}
+
+.hazte-premium label.talla::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: transparent;
+    border-radius: 0.3125rem;
+    border: 1px solid #ccc;
+}
+
+.hazte-premium label.talla:hover {
+    background-color: #f5f5f5;
+}
+
+.hazte-premium label.talla input[type="radio"]:checked + span {
+    font-weight: bold;
+  color: #6f42c1;
+}
+
+
+
 /*suscripciones*/
 
 .tipos-suscripcion {

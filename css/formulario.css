@@ -180,7 +180,7 @@ button[type="submit"]:hover {
   position: relative;
 }
 
-.inputbox #errorEmail, #errorNombre, #errorApellido, #errorPass, #errorPass2, #errorDir {
+.inputbox #errorEmail, #errorNombre, #errorApellido, #errorPass, #errorPass2, #errorDir, #errorNewPass, #errorNewPass2 {
   color: red;
 }
 

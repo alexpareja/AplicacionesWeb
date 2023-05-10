@@ -6,12 +6,14 @@ class CajaSuscripcion
     private $id;
     private $usuario;
     private $fechaCaja;
+    private $talla;
 
-    public function __construct($id=null, $usuario, $fechaCaja)
+    public function __construct($id=null, $usuario, $fechaCaja, $talla)
     {
         $this->id = $id;
         $this->usuario = $usuario;
         $this->fechaCaja = $fechaCaja;
+        $this->talla = $talla;
     }
 
     public static function buscaPorId($id)
@@ -26,16 +28,16 @@ class CajaSuscripcion
         return $CajaSuscripcionDAO->buscaPorUsuario($usuario);
     }
     
-    public static function crea($usuario, $fechaCaja)
+    public static function crea($usuario, $fechaCaja, $talla)
     {
         $CajaSuscripcionDAO= new CajaSuscripcionDAO();
-        return $CajaSuscripcionDAO->crea($usuario, $fechaCaja);
+        return $CajaSuscripcionDAO->crea($usuario, $fechaCaja, $talla);
     }
 
-    public static function edita($id, $usuario, $fechaCaja)
+    public static function edita($id, $usuario, $fechaCaja, $talla)
     {
         $CajaSuscripcionDAO= new CajaSuscripcionDAO();
-        return $CajaSuscripcionDAO->actualiza($id, $usuario, $fechaCaja);
+        return $CajaSuscripcionDAO->actualiza($id, $usuario, $fechaCaja, $talla);
     }
 
     public static function borra($id)
@@ -62,6 +64,11 @@ class CajaSuscripcion
     public function getFechaCaja()
     {
         return $this->fechaCaja;
+    }
+
+    public function getTalla()
+    {
+        return $this->talla;
     }
 }
 ?>
