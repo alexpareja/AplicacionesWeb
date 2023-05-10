@@ -30,6 +30,7 @@ if (isset($_SESSION['admin']) && $_SESSION['admin']) {
 
 $contenidoPrincipal .= <<<EOS
 	</section>
+	<button id="btnFB" type="submit" onclick="mostrarFiltrosBlog()" class="btnFB"><i class="fas fa-sliders-h white"></i></button>
 	<section class="titBlog">
 		<h2 class="subtituloBlog">
 			ÚLTIMAS NOTICIAS
@@ -42,6 +43,26 @@ $blog = new es\ucm\fdi\aw\Periodico();
 $contenidoPrincipal .= $blog->entradasEnBlog();
 
 $contenidoPrincipal .= <<<EOS
+	<div class="filBlog">
+		<h2 class="titFB">Filtros</h2>
+		<p class="letrasFB">Ordenador por:</p>
+		<select id="ordenar-blogs" name="ordenar-blogs" onchange="ordenarBlogs()">
+			<option value="nombreAB">Nombre (A -> Z)</option>
+			<option value="nombreZB">Nombre (Z -> A)</option>
+		</select>
+		<p class="letrasFB">Buscador de productos:</p>
+		<input type="text" id="campo-busqueda-blog" class="campo-busqueda-blog" placeholder="Buscar..." oninput="buscarBlogs()">
+		<p class="letrasFB">Categoría:</p>
+		<ul class ="checkfiltros">
+			<li><input type="checkbox" name="cat" value="Sostenibilidad" onclick="filtrarBlogs()">Sostenibilidad</li>
+			<li><input type="checkbox" name="cat" value="Moda" onclick="filtrarBlogs()">Moda</li>
+			<li><input type="checkbox" name="cat" value="Actualidad" onclick="filtrarBlogs()">Actualidad</li>
+		</ul>
+		<button type="submit" class="botones-filtros-blog" onclick="quitarFiltrosBlog()">Resetear filtros</button>
+		<button type="submit" class="botones-filtros-blog" onclick="ocultarFiltrosBlog()">Ocultar filtros</button>
+	</div>
+
+
 </div>
 EOS;
 
