@@ -53,13 +53,49 @@ foreach ($cart_products as $product) {
     </li>
 EOS;
 }
-
+$contenidoPrincipal .= <<<EOS
+    <li>
+        <strong>Subtotal: $total_price €</strong>
+    </li>
+EOS;
 $descuentoPremium = 0;
 if ($_SESSION['rol'] == 'P') {
     $descuentoPremium = $total_price * 0.1;
+    $descuentoPremium = round($descuentoPremium, 2);
+    $contenidoPrincipal .= <<<EOS
+    <li>
+        <strong>Descuento premium (10%): $descuentoPremium €</strong>
+    </li>
+    <li>
+        <strong>Gastos de envío: Gratis</strong>
+        <br>
+        <p>*Gratis para suscriptores premium</p>
+    </li>
+EOS;
+}
+else{
+    if($total_price>=30){
+        $contenidoPrincipal .= <<<EOS
+    <li>
+        <strong>Gastos de envío: Gratis</strong>
+        <br>
+        <p>*Gratis para compras igual o superiores a 30€</p>
+    </li>
+EOS;
+    }
+    else{
+        $total_price += 4.99;
+        $contenidoPrincipal .= <<<EOS
+    <li>
+        <strong>Gastos de envío: 4.99 €</strong>
+        <br>
+        <p>*Gratis para compras igual o superiores a 30€</p>
+    </li>
+EOS;
+    }
 }
 
-$total_price = round($total_price - $descuentoPremium, 2);
+$total_price = $total_price - $descuentoPremium;
 
 $contenidoPrincipal .= <<<EOS
     </ul>
