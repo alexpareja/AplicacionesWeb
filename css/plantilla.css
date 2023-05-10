@@ -617,7 +617,7 @@ main {
 .menuFaqs .submenuFaqs{
   padding: 1rem;
   text-align: justify;
-  
+  display:none;
 }
 
 

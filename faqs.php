@@ -12,7 +12,7 @@ $contenidoPrincipal = <<<EOS
 	<nav class="menuFaqs">
 		<ul>
 			<li class="opcion">
-				<button class="pregunta">
+				<button class="pregunta" type="submit" onclick="mostrarRespuesta()">
 					¿CÓMO RECIBIRÉ EL IMPORTE DE MI DEVOLUCIÓN?
 					<span><i class="fas fa-chevron-down"></i></span>
 				</button>
@@ -23,7 +23,7 @@ $contenidoPrincipal = <<<EOS
 				</div>
 			</li>
 			<li class="opcion">
-				<button class="pregunta">
+			<button class="pregunta" type="submit" onclick="mostrarRespuesta()">
 					¿TENGO QUE PAGAR ALGO POR MI DEVOLUCIÓN?
 					<span><i class="fas fa-chevron-down"></i></span>
 				</button>
@@ -34,7 +34,7 @@ $contenidoPrincipal = <<<EOS
 				</div>
 			</li>
 			<li class="opcion">
-				<button class="pregunta">
+				<button class="pregunta" type="submit" onclick="mostrarRespuesta()">
 					¿CUÁL ES EL PLAZO PARA PODER REALIZAR UNA DEVOLUCIÓN?
 					<span><i class="fas fa-chevron-down"></i></span>
 				</button>
@@ -45,7 +45,7 @@ $contenidoPrincipal = <<<EOS
 				</div>
 			</li>
 			<li class="opcion">
-				<button class="pregunta">
+				<button class="pregunta" type="submit" onclick="mostrarRespuesta()">
 					¿CÓMO PUEDO DEVOLVER UN ARTÍCULO?
 					<span><i class="fas fa-chevron-down"></i></span>
 				</button>
@@ -57,7 +57,7 @@ $contenidoPrincipal = <<<EOS
 				</div>
 			</li>
 			<li class="opcion">
-				<button class="pregunta">
+				<button class="pregunta" type="submit" onclick="mostrarRespuesta()">
 					¿CÓMO SE REALIZA UN PEDIDO?
 					<span><i class="fas fa-chevron-down"></i></span>
 				</button>
@@ -68,7 +68,7 @@ $contenidoPrincipal = <<<EOS
 				</div>
 			</li>
 			<li class="opcion">
-				<button class="pregunta">
+				<button class="pregunta" type="submit" onclick="mostrarRespuesta()">
 					¿CUÁNDO RECIBIRÉ EL IMPORTE DE MI DEVOLUCIÓN?
 					<span><i class="fas fa-chevron-down"></i></span>
 				</button>
@@ -79,7 +79,7 @@ $contenidoPrincipal = <<<EOS
 				</div>
 			</li>
 			<li class="opcion">
-				<button class="pregunta">
+				<button class="pregunta" type="submit" onclick="mostrarRespuesta()">
 					¿DÓNDE PUEDO RECIBIR MI PEDIDO?
 					<span><i class="fas fa-chevron-down"></i></span>
 				</button>
@@ -91,7 +91,7 @@ $contenidoPrincipal = <<<EOS
 				</div>
 			</li>
 			<li class="opcion">
-				<button class="pregunta">
+				<button class="pregunta" type="submit" onclick="mostrarRespuesta()">
 					¿PUEDEN EXISTIR VARIACIONES ENTRE LA FOTO Y EL PRODUCTO?
 					<span><i class="fas fa-chevron-down"></i></span>
 				</button>

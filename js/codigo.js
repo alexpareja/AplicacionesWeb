@@ -818,3 +818,18 @@ function aumentarTamanoFuente() {
 function aceptarCompra(){
     window.alert("Pago confirmado");
 }
+
+function mostrarRespuesta() {
+	const botones = document.querySelectorAll('.pregunta');
+
+	botones.forEach(function(boton){
+		boton.addEventListener('click', function(){
+			const submenu = boton.nextElementSibling;
+			if(submenu.style.display === 'none'){
+				submenu.style.display = 'block';
+			} else {
+				submenu.style.display = 'none';
+			}
+		});
+	});
+}
