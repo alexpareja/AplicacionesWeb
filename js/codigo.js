@@ -47,6 +47,7 @@ window.onload = function() {
   // Filtrar los productos iniciales
   filtrarProductos();
 }
+
 //filtrar productos por talla y precio en Tienda y en Compras
 function filtrarProductos() {
   // Obtener el valor máximo del precio
@@ -803,6 +804,7 @@ function aceptarCompra(){
     window.alert("Pago confirmado");
 }
 
+
 function mostrarRespuesta() {
 	const h2 = document.querySelectorAll('.pregunta');
 	const p = document.querySelectorAll('.submenuFaqs');
@@ -818,12 +820,75 @@ function mostrarRespuesta() {
 }
 
 function mostrarFiltrosBlog(){
-	const menu = document.querySelector('.filBlog');
+	var menu = document.querySelector('.filBlog');
 	if(menu.style.display === 'none'){
 		menu.style.display = 'block';
 	}
 	else {
 		menu.style.display = 'none';
 	}
-	
+	inicializarBuscador();
+	ordenarBlogs();
 }
+
+function inicializarBuscador(){
+	const inputBusqueda = document.querySelector('#campo-busqueda-blog');
+	const contenedorArticulos = document.querySelector('.panelBlog');
+	
+	inputBusqueda.addEventListener('input', () => {
+		const busqueda = inputBusqueda.value.toLowerCase();
+		const articulos = contenedorArticulos.querySelectorAll('.articulo');
+		articulos.forEach((articulo) => {
+			const titulo = articulo.querySelector('.tituloArt').textContent.toLowerCase();
+			const descripcion = articulo.querySelector('.descripcionArt').textContent.toLowerCase();
+			const autor = articulo.querySelector('.autorArt').textContent.toLowerCase();
+
+			if(titulo.includes(busqueda) || descripcion.includes(busqueda) || autor.includes(busqueda)){
+				articulo.style.display = 'flex';
+			} else {
+				articulo.style.display = 'none';
+			}
+		});
+	});
+}
+
+function ordenarBlogs() {
+	const selectorOrden = document.querySelector('#ordenar-blogs');
+	const contenedorArticulos = document.querySelector('.panelBlog');
+	const articulos = Array.from(contenedorArticulos.querySelectorAll('.articulo'));
+	
+	contenedorArticulos.style.display = 'none';
+	selectorOrden.addEventListener('change', () => {
+		const opcionSeleccionada = selectorOrden.value;
+	
+		if (opcionSeleccionada === "nombreAB") {
+			articulos.sort((a, b) => {
+			const tituloA = a.querySelector('.tituloArt').textContent.toLowerCase();
+			const tituloB = b.querySelector('.tituloArt').textContent.toLowerCase();
+			return tituloA.localeCompare(tituloB);
+			});
+		} else if (opcionSeleccionada === "nombreZB") {
+			articulos.sort((a, b) => {
+			const tituloA = a.querySelector('.tituloArt').textContent.toLowerCase();
+			const tituloB = b.querySelector('.tituloArt').textContent.toLowerCase();
+			return tituloB.localeCompare(tituloA);
+			});
+		}
+	
+		articulos.forEach((articulo) => {
+			contenedorArticulos.appendChild(articulo);
+		});
+	  	
+	});
+	contenedorArticulos.style.display = 'flex';
+}
+
+function quitarFiltrosBlog(){
+	document.getElementById("campo-busqueda-blog").value = "";
+}
+
+  
+  
+
+
+

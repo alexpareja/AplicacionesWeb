@@ -978,8 +978,6 @@ text-shadow: 0.125rem 0.125rem 0.25rem #38313839;
 
 /*Hoja de estilo Blog*/
 .blog{
-  display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
@@ -1035,90 +1033,18 @@ text-shadow: 0.125rem 0.125rem 0.25rem #38313839;
   color: #383138;
 }
 
-.titBlog .subtituloBlog{
-  text-align: center;
-  padding: 3rem 0;
-}
-
-.panelBlog{
+.contenidoPer{
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  text-align: center;
-  
-}
-
-.articulo{
-  border-radius: 1rem;
-  width: 30rem;
-  background-color: #84c3be;
-  text-decoration: none;
-  color: white;
-  margin-bottom: 2rem;
-  margin-right: 1rem;
-}
-
-.imagenBlog{
-  width: 30rem;
-  height: 20rem;
-  border-top-left-radius: 0.3125rem;
-  border-top-right-radius: 0.3125rem;
-}
-.articulo a{
-  text-decoration: none;
-  color: rgb(52, 55, 55);
-}
-
-.tituloArt{
-  margin-top: 2rem;
-  padding: 0.5rem;
-  font-size: 1.5rem;
-  font-weight: 600;
-}
-
-.descripcionArt{
-  padding: 0.5rem;
-  text-align: justify;
-}
-
-.autorArt{
-  padding:0.5rem;
-  font-weight: 600;
-  font-size: 0.8rem;
-  margin-bottom: 3rem;
-}
-
-.filtrosBlog:hover{
-  color: #800080;
-  transform: scale(1.1);
-  cursor: pointer;
-}
-
-.filtrosBlog{
-  width: 1.5625rem; 
-  height: 1.5625rem;
-  justify-content: left;
-  margin-top: 3.75rem;
-  position: absolute;
-  z-index: 1;
-  left: 1.5rem;
-}
-
-.filBlog{display:none;}
-
-.btnFB{
-  background-color: white;
-  cursor: pointer;
+  flex: row;
+  width: 30%;
 }
 
 .filBlog {
-  position: absolute;
   left:0;
   top: 32.859rem;
-  z-index:1;
   background-color:#f5f5f5;
-  height: 86.3%;
   padding: 1.25rem;
+  display:none;
 }
 
 .titFB{
@@ -1144,12 +1070,13 @@ text-shadow: 0.125rem 0.125rem 0.25rem #38313839;
   width: 100%;
 }
 
+.checkfiltros{
+  margin-bottom: 3rem;
+}
+
 .checkfiltros li{
   display: flex;
   flex: row;
-}
-.checkfiltros{
-  margin-bottom: 3rem;
 }
 
 .botones-filtros-blog{
@@ -1169,6 +1096,80 @@ text-shadow: 0.125rem 0.125rem 0.25rem #38313839;
   background: none;
   color: #383138;
 }
+
+.contenidoBlog-articulos{
+
+}
+
+.titBlog .subtituloBlog{
+  text-align: center;
+  padding: 3rem 0;
+}
+
+.btnFB{
+  background-color: #800080;
+  padding: 0.4rem;
+  cursor: pointer;
+  position: absolute;
+  z-index: 1;
+  left: 1.5rem;
+  top: 36rem;
+  border-radius: 0.3125rem;
+  text-align: center;
+}
+
+.btnFB i{
+  color: white;
+}
+
+.panelBlog{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+}
+
+.articulo{
+  border-radius: 1rem;
+  width: 30rem;
+  background-color: #84c3be;
+  text-decoration: none;
+  color: white;
+  margin-bottom: 2rem;
+  margin-right: 1rem;
+}
+
+.articulo a{
+  text-decoration: none;
+  color: rgb(52, 55, 55);
+}
+
+.imagenBlog{
+  width: 30rem;
+  height: 20rem;
+  border-top-left-radius: 0.3125rem;
+  border-top-right-radius: 0.3125rem;
+}
+
+.tituloArt{
+  margin-top: 2rem;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.descripcionArt{
+  padding: 0.5rem;
+  text-align: justify;
+}
+
+.autorArt{
+  padding:0.5rem;
+  font-weight: 600;
+  font-size: 0.8rem;
+  margin-bottom: 3rem;
+}
+
 
 
 /*Hoja de estilo Bocetos*/
