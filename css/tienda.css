@@ -208,6 +208,14 @@ table.compras tr:hover {
 	text-align: center;
 }
 
+/*Lista de deseos*/
+.comprar-eliminar-producto{
+    margin-top: 1rem;
+    display: flex;
+    gap: 1em;
+    margin-left: 1.9em;
+}
+
 /*Menu Izq*/
 .mostrarMenu {
 	margin-left: 18.75rem;
