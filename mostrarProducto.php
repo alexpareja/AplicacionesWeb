@@ -63,7 +63,7 @@ $contenidoPrincipal .= <<<EOS
             </div>
             <div class="comentarios">
             <div class="comentarios">
-            <h3>Comentarios</h3>
+            <h2>Comentarios</h2>
             EOS;
             if (!isset($_SESSION['login'])) {
             $contenidoPrincipal .= <<<EOS

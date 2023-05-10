@@ -1759,9 +1759,10 @@ input[type="text"].cupon-input:valid {
 
 /*comentarios*/
 
-.comentarios h3{
+.comentarios h2{
+  margin-top: 1.5rem;
   color: #800080;
-  font-size: x-large;
+  font-size: xx-large;
 }
 
 .listaComentarios, .comentarios{
@@ -1772,7 +1773,6 @@ input[type="text"].cupon-input:valid {
   clear: both;
   text-align: center;
 }
-
 
 .comentario {
   display: flex;
@@ -2221,6 +2221,7 @@ ul.lista-productos li {
 
 .titulo2 {
   margin-top: 5rem;
+  color: #800080;
   font-size: xx-large;
   text-align: center;
 }
