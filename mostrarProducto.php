@@ -36,6 +36,9 @@ $form->setProducto($producto);
 $htmlFormRegistro = $form->gestiona();
 $contenidoPrincipal .= <<<EOS
             <img class='imgProducto' src="$imagenProducto" alt='Imagen del producto'>
+            <div class="mediaProducto">
+            <p>Sin valoraciones</p>
+            </div>
             <div class="infoProducto">
 			<fieldset>
             <h2>$nombre</h2>
@@ -85,6 +88,8 @@ $contenidoPrincipal .= <<<EOS
             <input type="hidden" name="fecha" value="{$fechaNuevoComentario}">
             <textarea class="comentarioProd" name="comentarioProd" required placeholder="Escribe aquí tu comentario"></textarea>
             <div class="estrellas">
+            <input type="radio" name="valoracion" id="estrella0" value="0" checked="checked" />
+            <label for="estrella0"></label>
             <input type="radio" name="valoracion" id="estrella1" value="1" />
             <label for="estrella1"><img src="img/estrellaVacia.png" /></label>
             <input type="radio" name="valoracion" id="estrella2" value="2" />

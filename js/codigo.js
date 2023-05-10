@@ -386,6 +386,7 @@ function ordenarProductos() {
 				insertaNuevoComentario(nuevoComentario,listaComentarios);  
 				comentarios.push(nuevoComentario);
 				alert("Tu comentario ha sido enviado con éxito");
+				$('textarea[name="comentarioBlog"]').val("");
 			  },
 			  error: function(jqXHR, textStatus, errorThrown) {
 				
@@ -505,8 +506,9 @@ function ordenarProductos() {
 				  divPadre.append(ulRespuestas);
 				 
 				
-			  }
+			  } 
 			  alert("Tu respuesta ha sido enviada con éxito");
+			  $('textarea[name="textoRespuesta"]').val("");
 			},
 			  error: function(jqXHR, textStatus, errorThrown) {
 				
