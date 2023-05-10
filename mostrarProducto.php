@@ -105,12 +105,12 @@ $contenidoPrincipal .= <<<EOS
             </form>
             EOS;
             }
-            $contenidoPrincipal .= <<<EOS
-            <ul class="listaComentarios">
-            </ul>
-            </div>
-            EOS;
           }
+          $contenidoPrincipal .= <<<EOS
+          <ul class="listaComentarios">
+          </ul>
+          </div>
+          EOS;
 }
 else{ //si no se encuentra el producto
   $tituloPagina = "Producto no encontrado";
