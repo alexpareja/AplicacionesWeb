@@ -439,7 +439,12 @@ function ordenarProductos() {
 
 			enviar.click(function() {
 				
-				if ($('.textoRespuesta').val().trim() == '') {
+				if(idValor==null){
+					
+					mensajeError.text('Debes iniciar sesión').show();
+					return false;
+				}
+				else if ($('.textoRespuesta').val().trim() == '') {
 					mensajeError.text('Debes ingresar un comentario').show();
 					return false;
 				} else {
