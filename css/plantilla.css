@@ -1726,7 +1726,11 @@ input.quantity {
   align-items: center;
   justify-content: center;
   text-align: center;
-	margin: 0 37.7%;
+	width: fit-content;
+    margin: auto;
+    padding: 1.1em;
+    padding-left: 4.1em;
+    padding-right: 4.1em;
 }
 	
 input[type="text"].cupon-input {
