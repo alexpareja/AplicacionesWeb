@@ -98,13 +98,14 @@ function filtrarProductos() {
 	}
 	if (tablaCompras !== null) {
 	  var elementosTabla = tablaCompras.getElementsByTagName("tr");
-		for (var i = 0; i < elementosTabla.length; i++) {
+		for (var i = 1; i < elementosTabla.length; i++) {
 			var mostrar = true; 
 			var elemento = elementosTabla[i];
 			var precio = parseFloat(elemento.getAttribute("data-precio"));
-			var talla = elemento.getAttribute("data-talla");
+			var tallas = elemento.getAttribute("data-talla");
+			var tallasSeparadas = tallas.split("<br>");
 			for (var j = 0; j < tallasSeleccionadas.length; j++) {
-				if (talla !== tallasSeleccionadas[j] && talla !== null) {
+				if (!tallasSeparadas.includes(tallasSeleccionadas[j])) {
 				mostrar = false;
 				}
 				else{
@@ -299,6 +300,14 @@ function ordenarProductos() {
 				listaComentarios.after(botonMostrarMas);
 				botonMostrarMas.style.display = 'block';
 			  }
+			  if(comentarios.length>0)
+			 {
+			calcularMedia(comentarios);
+			const estrellaLlena = '<img class="estrella" src="img/estrellaLlena.png">';
+			$('.mediaProducto').append(estrellaLlena);
+			
+			}
+
 		  });
 
 		  $('input[type="radio"]').click(function() {
@@ -347,16 +356,28 @@ function ordenarProductos() {
 					review: $('input[name="valoracion"]:checked').val(),
 					fecha: $('input[name="fecha"]').val()
 				  };
-				  console.log(nuevoComentario);
+				  
 				insertaNuevoComentario(nuevoComentario,listaComentarios);  
 				comentarios.push(nuevoComentario);
 				alert("Tu review ha sido enviado con éxito");
+
+				$('textarea[name="comentarioProd"]').val("");
+				calcularMedia(comentarios);
+				
+				if(comentarios.length==1)
+				{
+					const estrellaLlena = '<img class="estrella" src="img/estrellaLlena.png">';
+					$('.mediaProducto').append(estrellaLlena);
+			   }
+			  
+
 			  },
 			  error: function(jqXHR, textStatus, errorThrown) {
 				
 				alert("Ha ocurrido un error al enviar tu review: " + textStatus + " " + errorThrown);
 			  }
 			});
+			
 		  });
 
 		  
@@ -381,7 +402,7 @@ function mostrarComentario(comentario,listaComentarios) {
 
 		const divReview = document.createElement('div');
 		divReview.classList.add('comentario-review');
-		divReview.textContent = comentario.review;
+		divReview.innerHTML = generarEstrellas(comentario.review);
   	
 
   		// Agregar los elementos al comentario
@@ -394,10 +415,48 @@ function mostrarComentario(comentario,listaComentarios) {
   		listaComentarios.append(divComentario);
   }
 
+  function calcularMedia(comentarios) {
+	var suma=0;
+	for(var i=0;i<comentarios.length;i++)
+	{
+		suma+=parseInt(comentarios[i].review);
+		
+	}
+	var media=suma/comentarios.length;
+	media = Number(media.toFixed(2));
+	$('.mediaProducto p').text(media+ "/5");
+	estableceColor(media);
+}
+
+function estableceColor(media) {
+	var r = Math.round(255 - (media / 5) * 255);
+	var g = Math.round((media / 5) * 255);
+	var b = 0;
+	$('.mediaProducto p').css("backgroundColor","rgb(" + r + "," + g + "," + b + ")");
+}
+
+
+  function generarEstrellas(cantidad) {
+	const estrellaVacia = '<img src="img/estrellaVacia.png">';
+	const estrellaLlena = '<img src="img/estrellaLlena.png">';
+	let estrellasHtml = '';
+	
+	for (let i = 1; i <= 5; i++) {
+	  if (i <= cantidad) {
+		estrellasHtml += estrellaLlena;
+	  } else {
+		estrellasHtml += estrellaVacia;
+	  }
+	}
+	
+	return estrellasHtml;
+  }
+
   function insertaNuevoComentario(comentario,listaComentarios) {
 	const divComentario = document.createElement('div');
 	  divComentario.classList.add('comentario');
 	  divComentario.setAttribute('idComentario', comentario.id);
+	  divComentario.classList.add('nuevoComentario');
 
 	  const divAutor = document.createElement('div');
 	  divAutor.classList.add('comentario-autor');
@@ -413,7 +472,7 @@ function mostrarComentario(comentario,listaComentarios) {
 
 	  const divReview = document.createElement('div');
 	  divReview.classList.add('comentario-review');
-	  divReview.textContent = comentario.review;
+	  divReview.innerHTML = generarEstrellas(comentario.review);
 	
 
 	  // Agregar los elementos al comentario
@@ -562,4 +621,14 @@ function aumentarTamanoFuente() {
 //Ventana pago confirmado
 function aceptarCompra(){
     window.alert("Pago confirmado");
+}
+
+//Ventana pago confirmado
+function confirmarEditar(){
+    window.alert("Has editado el producto con éxito");
+}
+
+//Ventana pago confirmado
+function confirmarEliminar(){
+    window.alert("Has elimado el producto con éxito. En caso de que existan compras de dicho producto se ha reducido el stock a 0 y solo será visible para los administradores");
 }
