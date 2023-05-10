@@ -23,7 +23,7 @@ class FormularioCambiarContrasena extends Formulario
         $htmlErroresGlobales
         <div class="login-registro-form">
             <fieldset>
-                <legend>Información usuario</legend>
+                <legend>Cambiar contraseña</legend>
                 <div class="inputbox">
                     <input id="pass" type="password" name="pass" placeholder="Introduce tu contraseña actual">
                     <label for="pass">Contraseña actual</label>
