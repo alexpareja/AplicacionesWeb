@@ -30,7 +30,8 @@ if ($_SESSION['rol'] == 'U') {
         <ul>
           <li>Comprar en La Quinta Caja.</li>
           <li>Acceso a la zona Mi Cuenta (favoritos, ver compras realizadas, perfil y plan de suscripción).</li>
-          <li>Dejar comentarios en los productos de la tienda y entradas del blog.</li>
+          <li>Dejar comentarios en los productos de la tienda que hayas comprado y entradas del blog.</li>
+          <li>Dejar valoraciones en los productos de la tienda que hayas comprado.</li>
         </ul>
       </div>
     </div>
@@ -63,7 +64,8 @@ EOS;
         <ul>
           <li>Comprar en La Quinta Caja.</li>
           <li>Acceso a la zona Mi Cuenta (favoritos, ver compras realizadas, perfil y plan de suscripción).</li>
-          <li>Dejar comentarios en los productos de la tienda y entradas del blog.</li>
+          <li>Dejar comentarios en los productos de la tienda que hayas comprado y entradas del blog.</li>
+          <li>Dejar valoraciones en los productos de la tienda que hayas comprado.</li>
         </ul>     
       </div>
     </div>
@@ -95,7 +97,8 @@ EOS;
         <ul>
           <li>Comprar en La Quinta Caja.</li>
           <li>Acceso a la zona Mi Cuenta (favoritos, ver compras realizadas, perfil y plan de suscripción).</li>
-          <li>Dejar comentarios en los productos de la tienda y entradas del blog.</li>
+          <li>Dejar comentarios en los productos de la tienda que hayas comprado y entradas del blog.</li>
+          <li>Dejar valoraciones en los productos de la tienda que hayas comprado.</li>
         </ul>
       </div>
     </div>

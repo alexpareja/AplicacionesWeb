@@ -14,12 +14,13 @@ $email = $_SESSION['email'];
 $direccion = $_SESSION['direccion'];
 
 if ($_SESSION['rol'] == 'U') {
-    $suscripcionCabecera = '<h2>La Quinta Caja Free:</h2>';
+    $suscripcionCabecera = '<h2>La Quinta Caja Free</h2>';
     $suscripcionContenido = '<p>Información sobre la cuenta gratuita:</p>
                              <ul>
                                 <li>Comprar en La Quinta Caja.</li>
                                 <li>Acceso a la zona Mi Cuenta (favoritos, ver compras realizadas, perfil y plan de suscripción).</li>
-                                <li>Dejar comentarios en los productos de la tienda y entradas del blog.</li>
+                                <li>Dejar comentarios en los productos de la tienda que hayas comprado y entradas del blog.</li>
+                                <li>Dejar valoraciones en los productos de la tienda que hayas comprado.</li>
                              </ul>
                              <a href="suscripcion.php" class="boton-suscripcion">Hazte premium</a>';
     $claseCabecera = "cabecera-free";
@@ -37,7 +38,7 @@ if ($_SESSION['rol'] == 'U') {
       $fechaCaja = $caja->getFechaCaja();
     }
 
-    $suscripcionCabecera = '<h2>La Quinta Caja Premium:</h2>';
+    $suscripcionCabecera = '<h2>La Quinta Caja Premium</h2>';
     $suscripcionContenido = '<p>Información sobre la cuenta premium:</p>
                          <ul>
                             <li>Ventajas de usuario La Quinta Caja Free.</li>
