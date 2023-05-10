@@ -13,7 +13,7 @@ class FormularioNuevoProducto extends Formulario
 		$nombre = $datos['nombre'] ?? '';
 		
 		$htmlErroresGlobales = self::generaListaErroresGlobales($this->errores);
-		$erroresCampos = self::generaErroresCampos(['nombre', 'precio', 'imagen', 'oferta'], $this->errores, 'span', array('class' => 'error'));
+		$erroresCampos = self::generaErroresCampos(['nombre', 'precio', 'imagen'], $this->errores, 'span', array('class' => 'error'));
 
 
         // Se genera el HTML asociado a los campos del formulario y los mensajes de error.
@@ -38,8 +38,7 @@ class FormularioNuevoProducto extends Formulario
 				</div>
 				<div>
 					<p><label for="oferta">Oferta:</label></p>
-					<p><input id="oferta" class="quantity" type="number" step="0.01" min="0" max="100" name="oferta"></p>
-					{$erroresCampos['oferta']}
+					<p><input id="oferta" class="quantity" type="number" step="0.01" min="0" max="100" name="oferta" value="0" required></p>
 				</div>
 
 				<div>
@@ -134,9 +133,6 @@ class FormularioNuevoProducto extends Formulario
         }
 		if ( ! $precio || empty($precio)) {
             $this->errores['precio'] = 'Se debe especificar el precio del producto que se quiere introducir.';
-        }
-		if ( ! $oferta|| empty($oferta)) {
-            $this->errores['oferta'] = 'Se debe especificar la oferta del producto que se quiere introducir. En caso de no querer ponerlo en oferta, introduzca 0';
         }
 		
         if (count($this->errores) === 0) {

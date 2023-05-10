@@ -19,7 +19,7 @@ class FormularioEditarProducto extends Formulario
 		$nombre = $datos['nombre'] ?? '';
 		
 		$htmlErroresGlobales = self::generaListaErroresGlobales($this->errores);
-		$erroresCampos = self::generaErroresCampos(['nombre', 'precio', 'imagen', 'oferta'], $this->errores, 'span', array('class' => 'error'));
+		$erroresCampos = self::generaErroresCampos(['nombre', 'precio', 'imagen'], $this->errores, 'span', array('class' => 'error'));
 
 		if($this->producto->getPremium()) {
 			$checkedSi = 'checked';
@@ -53,8 +53,7 @@ class FormularioEditarProducto extends Formulario
 				
 				<div>
 					<p><label for="oferta">Oferta:</label></p>
-					<p><input id="oferta" class="quantity" type="number" step="0.01" min="0" max = 100 name="oferta" value="{$this->producto->getOferta()}"></p>
-					{$erroresCampos['oferta']}
+					<p><input id="oferta" class="quantity" type="number" step="0.01" min="0" max = 100 name="oferta" value="{$this->producto->getOferta()}" required></p>
 				</div>
 
 				<div>
@@ -164,9 +163,6 @@ class FormularioEditarProducto extends Formulario
         }
 		if ( ! $precio || empty($precio)) {
             $this->errores['precio'] = 'Se debe especificar el precio del producto que se quiere introducir.';
-        }
-		if ( ! $oferta || empty($oferta)) {
-           $this->errores['oferta'] = 'Se debe especificar la oferta del producto que se quiere introducir. En caso de no querer ponerlo en oferta, introduzca 0';
         }
 		
         if (count($this->errores) === 0) {
