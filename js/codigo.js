@@ -820,16 +820,15 @@ function aceptarCompra(){
 }
 
 function mostrarRespuesta() {
-	const botones = document.querySelectorAll('.pregunta');
+	const h2 = document.querySelectorAll('.pregunta');
+	const p = document.querySelectorAll('.submenuFaqs');
 
-	botones.forEach(function(boton){
-		boton.addEventListener('click', function(){
-			const submenu = boton.nextElementSibling;
-			if(submenu.style.display === 'none'){
-				submenu.style.display = 'block';
-			} else {
-				submenu.style.display = 'none';
-			}
+	h2.forEach((cadaH2, i)=>{
+		h2[i].addEventListener('click',()=>{
+			p.forEach((cadaP, i)=>{
+				p[i].style.display = 'none';
+			});
+			p[i].style.display = 'block';
 		});
 	});
 }
