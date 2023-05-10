@@ -34,7 +34,7 @@
 				<div id="filtro-valoracion">
 					<p>Valoración mínima:</p>
 					<div class="estrellas">
-						<input type="radio" name="valoracion" id="estrella1" value="1" checked onclick="filtrarProductos()"/>
+						<input type="radio" name="valoracion" id="estrella1" value="1" onclick="filtrarProductos()"/>
 						<label for="estrella1"><img src="img/estrellaVacia.png" /></label>
 						<input type="radio" name="valoracion" id="estrella2" value="2" onclick="filtrarProductos()"/>
 						<label for="estrella2"><img src="img/estrellaVacia.png" /></label>
