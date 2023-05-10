@@ -39,6 +39,43 @@ class Periodico {
         return $html;
     }
 
+    public function blogsAleatorios() {
+        $html = <<<EOS
+        <h2 class="tituloBlogRec">Sugerencias</h2>
+        <div class="panelRecomendacionesBlog">
+        EOS;
+        
+        // Obtener una lista aleatoria de tres productos
+        $blogs_aleatorios = array_rand($this->entradas, 2);
+        
+        foreach($blogs_aleatorios as $key => $value) {
+            $blog = $this->entradas[$value];
+            $link = 'entradaBlog.php?id='.$blog->getId();
+            $src = 'img/blog_'.$blog->getId().'.png';
+            $alt = 'Imagen de Blog '.$blog->getId();
+            $titulo = $blog->getTitulo();
+            $idAutor = $blog->getAutor();
+            $autor=Usuario::buscaPorId($idAutor)->getNombre();
+
+            
+            $html .= <<<EOS
+                <div class="blogRecomendado">
+                    <a href='$link'>
+                        <img class='imagenRecBlog' src='$src' alt='$alt'>
+                        <p class="tituloRecBlog">$titulo</p>
+                        <p class="autorRecBlog">Escrito por $autor</p>
+                    </a>
+                </div>                 
+            EOS;
+        }
+        
+        $html .= <<<EOS
+        </div>
+        EOS;
+        return $html;
+    }
+    
+
 }
 
 ?>

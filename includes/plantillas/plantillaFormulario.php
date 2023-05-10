@@ -9,6 +9,7 @@
 	<link rel="shortcut icon" href="img/logo.ico" type="image/x-icon">
 		<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/codigo.js"></script>
+	<script src="js/codigoTienda.js"></script>
  	<title><?= $tituloPagina ?></title>
 </head>
 <body>

@@ -1539,7 +1539,7 @@ input.quantity {
   border-radius: 0.3125rem;
   border: 0.0625rem solid #800080;
   margin-bottom: 0.5rem;
-  width: 50%;
+  width: 20%;
 }
 
 
@@ -1780,7 +1780,7 @@ input[type="text"].cupon-input:valid {
   align-items: center;
   margin: 10px;
   padding: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid #000000;
   border-radius: 5px;
   width: 90%;
   max-width: 600px;
@@ -1795,6 +1795,13 @@ input[type="text"].cupon-input:valid {
   margin-bottom: 10px;
 }
 
+.nuevoComentario {
+  background-color: #800080; /* Establece un color de fondo diferente */
+  color: white;
+}
+
+
+
 .comentario-responder {
   background-color: #800080;
   color: white;
@@ -1804,6 +1811,7 @@ input[type="text"].cupon-input:valid {
   cursor: pointer;
   margin-bottom: 0.625rem;
   font-size: medium;
+  margin-top: 1%;
 }
 
 .respuestas {
@@ -1842,6 +1850,12 @@ input[type="text"].cupon-input:valid {
   border: 1px solid #ccc;
 }
 
+.resaltarComentario, .responder-form{
+
+  border: 2px solid #800080;
+  border-radius: 10px;
+
+}
 .comentariosBlog-form button,
 .responder-form button {
   background-color: #800080;
@@ -1895,7 +1909,8 @@ input[type="text"].cupon-input:valid {
 .estrellas {
   display: flex;
   justify-content: center;
-  margin-top: 10px;
+  margin-top: 3%;
+  margin-bottom: 3%;
 }
 .estrellas input[type="radio"] {
   display: none;
@@ -1908,13 +1923,66 @@ input[type="text"].cupon-input:valid {
   width: 30px;
   height: 30px;
 }
+
 .estrellas label:hover img,
 .estrellas input[type="radio"]:checked + label img {
   filter: none;
 }
-.estrellas label:hover ~ label img,
-.estrellas input[type="radio"]:checked + label ~ label img {
+
+.estrellas label[for="estrella0"] {
+  background-color: #e0e0e0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.estrellas label[for="estrella0"]:hover {
+  background-color: #ccc;
+}
+
+
+.estrellas label[for="estrella0"]::before {
+  content: "Reset review";
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.comentario-review img {
+  width: 20px;
+  height: 20px;
+}
+
+.comentario-review img.estrellaVacia {
   filter: grayscale(100%);
+}
+
+.comentario-review img.estrellaLlena {
+  filter: none;
+}
+
+.mediaProducto {
+vertical-align: middle;
+ float: left;
+ clear: left;
+}
+.mediaProducto p {
+  font-size: 40px; /* igual al tamaño de la imagen */
+  font-weight: bold;
+  display: inline-block; /* para que la imagen aparezca en línea */
+  vertical-align: middle; /* para que la imagen quede centrada verticalmente */
+  border-radius: 10px;
+}
+
+.mediaProducto img {
+  width: 50px;
+  height: 50px;
+  display: inline-block; /* para que la imagen aparezca en línea */
+  vertical-align: middle; /* para que la imagen quede centrada verticalmente */
 }
 /*confirmación premium y darse de baja*/
 
@@ -2154,5 +2222,57 @@ ul.lista-productos li {
 .titulo2 {
   margin-top: 5rem;
   font-size: xx-large;
+  text-align: center;
+}
+
+/*blogs recomendados*/
+.tituloBlogRec{
+  margin-top: 5rem;
+  font-size: xx-large;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.panelRecomendacionesBlog{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+}
+
+.blogRecomendado{
+  border-radius: 1rem;
+  width: 15rem;
+  background-color: #84c3be73;
+  text-decoration: none;
+  color: white;
+  margin-bottom: 2rem;
+  margin-right: 1rem;
+}
+
+.imagenRecBlog{
+  width: 15rem;
+  height: 10rem;
+  border-top-left-radius: 0.3125rem;
+  border-top-right-radius: 0.3125rem;
+}
+.blogRecomendado a{
+  text-decoration: none;
+  color: rgb(52, 55, 55);
+}
+
+.tituloRecBlog{
+  margin-top: 1rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.autorRecBlog{
+  padding:0.5rem;
+  font-weight: 600;
+  font-size: 0.7rem;
+  margin-bottom: 1rem;
   text-align: center;
 }

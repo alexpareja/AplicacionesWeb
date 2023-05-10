@@ -76,6 +76,10 @@ else{ //si no está definido parámetro id en GET
   <h2 class="error"> Se ha producido un error </h2>
   EOS;
 }
+    //Se muestran los porductos de la tienda
+    $rec = new es\ucm\fdi\aw\Periodico();
+    $contenidoPrincipal .= $rec->blogsAleatorios();
+
 
 require __DIR__.'/includes/plantillas/plantilla.php';
 ?>

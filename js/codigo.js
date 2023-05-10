@@ -386,6 +386,7 @@ function ordenarProductos() {
 				insertaNuevoComentario(nuevoComentario,listaComentarios);  
 				comentarios.push(nuevoComentario);
 				alert("Tu comentario ha sido enviado con éxito");
+				$('textarea[name="comentarioBlog"]').val("");
 			  },
 			  error: function(jqXHR, textStatus, errorThrown) {
 				
@@ -505,8 +506,9 @@ function ordenarProductos() {
 				  divPadre.append(ulRespuestas);
 				 
 				
-			  }
+			  } 
 			  alert("Tu respuesta ha sido enviada con éxito");
+			  $('textarea[name="textoRespuesta"]').val("");
 			},
 			  error: function(jqXHR, textStatus, errorThrown) {
 				
@@ -573,6 +575,7 @@ function mostrarComentario(comentario,listaComentarios) {
 	const divComentario = document.createElement('div');
 	  divComentario.classList.add('comentario');
 	  divComentario.setAttribute('idComentario', comentario.id);
+	  divComentario.classList.add('resaltarComentario');
 
 	  const divAutor = document.createElement('div');
 	  divAutor.classList.add('comentario-autor');
