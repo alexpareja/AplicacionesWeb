@@ -2,6 +2,7 @@
 	<ul>
 		<li><a href="miPerfil.php">Mi perfil</a></li>
 		<li><a href="editarUsuario.php">Editar usuario</a></li>
+		<li><a href="cambiarContrasena.php">Cambiar contraseña</a></li>
 		<li><a href="listadeseos.php">Favoritos</a></li>
 		<li><a href="misCompras.php">Mis compras</a></li>
 		<li><a href="contacto.php">Contacto</a></li>
