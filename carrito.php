@@ -68,7 +68,7 @@ if (isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
                         <p>$nombre ($talla, $precio €): $cantidad</p>
                         <div class="eliminar-producto">
                         <form method="post">
-                            <input type="number" name="quantity_to_remove" value = "0" min = "0" max="$cantidad">
+                            <input type="number" name="quantity_to_remove" value = "1" min = "0" max="$cantidad">
                             <button type="submit" name="remove_quantity" value="$id|$size">Eliminar</button>
                         </form>
                         </div>
