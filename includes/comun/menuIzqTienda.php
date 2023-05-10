@@ -30,6 +30,23 @@
 					<p>Precio máximo: <span id="valor-precio">200</span> euros</p>
 					<input type="range" id="slider" min="0" step="1">
 				</li>
+				<li>
+				<div id="filtro-valoracion">
+					<p>Valoración mínima:</p>
+					<div class="estrellas">
+						<input type="radio" name="valoracion" id="estrella1" value="1" checked onclick="filtrarProductos()"/>
+						<label for="estrella1"><img src="img/estrellaVacia.png" /></label>
+						<input type="radio" name="valoracion" id="estrella2" value="2" onclick="filtrarProductos()"/>
+						<label for="estrella2"><img src="img/estrellaVacia.png" /></label>
+						<input type="radio" name="valoracion" id="estrella3" value="3" onclick="filtrarProductos()"/>
+						<label for="estrella3"><img src="img/estrellaVacia.png" /></label>
+						<input type="radio" name="valoracion" id="estrella4" value="4" onclick="filtrarProductos()"/>
+						<label for="estrella4"><img src="img/estrellaVacia.png" /></label>
+						<input type="radio" name="valoracion" id="estrella5" value="5"  onclick="filtrarProductos()"/>
+						<label for="estrella5"><img src="img/estrellaVacia.png" /></label>
+            </div>
+				</div>
+				</li>
 				
 				<li>
 					<button type="submit" class="botones-filtros" onclick="quitarFiltros()">Resetear filtros</button>
