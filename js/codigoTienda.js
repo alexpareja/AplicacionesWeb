@@ -456,6 +456,7 @@ function estableceColor(media) {
 	const divComentario = document.createElement('div');
 	  divComentario.classList.add('comentario');
 	  divComentario.setAttribute('idComentario', comentario.id);
+	  divComentario.classList.add('nuevoComentario');
 
 	  const divAutor = document.createElement('div');
 	  divAutor.classList.add('comentario-autor');
