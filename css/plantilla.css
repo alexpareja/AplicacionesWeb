@@ -1507,20 +1507,31 @@ h2.error {
 
 
 .stockTallas {
-  margin-top: 0.5rem;
-  display: inline-block;
+  margin-top: 0.2rem;
+  display: flex;
 }
 
 .stockTallas p {
   padding: 0.5rem 0.5rem;
   display: inline-block;
-  border: 0.125rem solid #ccc;
-  border-radius: 5px;
+  font-size: 0.8rem; 
+}
+
+.stockTallas h3{
+  color: #800080;
+  font-size: small;
 }
 
 input[type="radio"]{
   accent-color:#800080;
 }
+
+.anadir-carrito {
+  display: flex;
+  align-items: center; 
+  gap: 1rem; 
+}
+
 
 input.quantity {
   font-size: medium;
@@ -1528,6 +1539,7 @@ input.quantity {
   border-radius: 0.3125rem;
   border: 0.0625rem solid #800080;
   margin-bottom: 0.5rem;
+  width: 50%;
 }
 
 
@@ -2125,6 +2137,12 @@ ul.lista-productos li {
   text-decoration: none;
   color: #800080;
   font-size:150%;
+}
+
+.precioOferta {
+	text-decoration: none;
+	color: red;
+	font-size:150%;
 }
 
 .titulo1 {

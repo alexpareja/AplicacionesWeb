@@ -148,17 +148,31 @@ class Tienda {
         $alt = 'Imagen de Producto '.$prod->getId();
         $nombre = $prod->getNombre();
         $precio = $prod->getPrecio();
+		$oferta = $prod->getOferta();
+		if($oferta>0){
+					$precio=round($precio * (100- $oferta) /100, 2);
+				}
         $tallas = $prod->getTallasDisponibles();
         if($tallas !== '' || isset($_SESSION['admin']) && $_SESSION['admin']){
             $html .= <<<EOS
-                <li class="producto" data-precio='$precio' data-talla='$tallas' data-nombre='$nombre'>
+                    <li class="producto" data-precio='$precio' data-talla='$tallas' data-nombre='$nombre'>
                     <a href='$link'>
                     <div class="producto-imagen">
                     <img class='imgProducto' src='$src' alt='$alt'>
                     </div>
                     <br>
                     <div class="info-prod">
-                    $nombre <span class='precio'> $precio € </span>
+                    EOS;
+					if($oferta > 0) {
+						$html .= <<<EOS
+						$nombre <span class='precioOferta'> $precio € </span>
+						EOS;
+						} else {
+						$html .= <<<EOS
+						$nombre <span class='precio'> $precio € </span>	
+						EOS;	
+							}
+$html .= <<<EOS
                     </div>
                     </a>
                 </li>                 

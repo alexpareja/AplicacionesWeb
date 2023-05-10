@@ -70,9 +70,11 @@ class FormularioAnadirCarrito extends Formulario
             <p>L: {$this->producto->getStockL()}</p>
             <p>XL: {$this->producto->getStockXL()}</p>
         </div>
+        <div class="anadir-carrito">
         <h3>Cantidad:</h3>
         <input type="number" id="quantity" class="quantity" name="quantity" value="1" min="0"> <!-- Con javascript solo se podrá seleccionar como máximo el stock que tenga cada talla-->
-        <button type="submit" name="accion" value="add">Añadir al carrito</button>
+        <button type="submit" name="accion" id="boton" value="add">Añadir al carrito</button>
+        </div>
         <button type="submit" name="accion" value="favorite">Añadir a favoritos</button>
         </div>
         <span class="error">{$erroresCampos['noStock']}</span>
@@ -154,6 +156,10 @@ class FormularioAnadirCarrito extends Formulario
                 $id = $datos['id'];
                 $name = $datos['name'];
                 $price = $datos['price'];
+				$oferta = $datos['oferta']; 
+				if($oferta>0){
+					$price = round($price * (100- $oferta) /100,2);
+				}
 
                 // Comprueba si el producto no está en la lista de deseos y tiene sesión iniciada
                 if(isset($_SESSION['login'])) {

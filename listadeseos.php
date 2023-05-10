@@ -33,6 +33,10 @@ EOS;
             $alt = 'Imagen de Producto ' . $fav->getProducto();
             $nombre = $prod->getNombre();
             $precio = $prod->getPrecio();
+			$oferta = $prod->getOferta(); 
+				if($oferta>0){
+					$precio = round($precio * (100- $oferta) /100,2);
+				}
             $idProd=$prod->getId();
             $contenidoPrincipal .= <<<EOS
                 <li>
@@ -40,7 +44,17 @@ EOS;
                     <img class='imgProducto' id='imgProducto' src='$src' alt='$alt'>
                     </div>
                     <br>
-                    $nombre <span class='precio'> $precio € </span>
+EOS;
+if($oferta>0){
+$contenidoPrincipal .= <<<EOS
+                    $nombre <span class='precioOferta'> $precio € </span>
+EOS;
+} else{
+$contenidoPrincipal .= <<<EOS
+$nombre <span class='precio'> $precio € </span>
+EOS;
+}
+$contenidoPrincipal .= <<<EOS
                     <div class="comprar-eliminar-producto">
                     <form method="post">
                         <button type="submit" name="remove" value="$idProd">Eliminar</button>

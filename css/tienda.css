@@ -70,7 +70,7 @@ ul.lista-productos-premium li{
 	font-size:110%;
 }
 
-.precioOferta {
+span.precioOferta {
 	text-decoration: none;
 	color: red;
 	font-size:110%;
