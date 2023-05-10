@@ -98,13 +98,14 @@ function filtrarProductos() {
 	}
 	if (tablaCompras !== null) {
 	  var elementosTabla = tablaCompras.getElementsByTagName("tr");
-		for (var i = 0; i < elementosTabla.length; i++) {
+		for (var i = 1; i < elementosTabla.length; i++) {
 			var mostrar = true; 
 			var elemento = elementosTabla[i];
 			var precio = parseFloat(elemento.getAttribute("data-precio"));
-			var talla = elemento.getAttribute("data-talla");
+			var tallas = elemento.getAttribute("data-talla");
+			var tallasSeparadas = tallas.split("<br>");
 			for (var j = 0; j < tallasSeleccionadas.length; j++) {
-				if (talla !== tallasSeleccionadas[j] && talla !== null) {
+				if (!tallasSeparadas.includes(tallasSeleccionadas[j])) {
 				mostrar = false;
 				}
 				else{
