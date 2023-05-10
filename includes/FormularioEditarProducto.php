@@ -7,7 +7,7 @@ class FormularioEditarProducto extends Formulario
 	 private $producto;
 
     public function __construct() {
-        parent::__construct('formEditarProd', array('urlRedireccion' => 'editarConfirmado.php', 'enctype' => 'multipart/form-data'));
+        parent::__construct('formEditarProd', array('urlRedireccion' => 'index.php', 'enctype' => 'multipart/form-data'));
     }
 	
 	 public function setProducto($producto) {
@@ -109,10 +109,10 @@ class FormularioEditarProducto extends Formulario
 				<div>
 					<ul class= "botones">
 						<li>
-						<button type="submit" name="edit">Editar Producto</button>
+						<button type="submit" name="edit" id="editar" onclick="confirmarEditar()">Editar Producto</button>
 						</li>
 						<li>
-						<button type="submit" name="delete">Eliminar producto</button>
+						<button type="submit" name="delete"  id="eliminar" onclick="confirmarEliminar()" >Eliminar producto</button>
 						</li>
 					</ul>
 					<button type="submit" formaction="tienda.php">Volver a la tienda</button>

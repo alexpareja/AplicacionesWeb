@@ -78,6 +78,8 @@ class Compra
         return $compraDAO->getAllComprasUsuario($idUsuario);
     }
 	
+
+	
 	public static function mostrarTablaCompras($compras){
 		$html = '';
 		$html .= <<<EOF
@@ -85,51 +87,82 @@ class Compra
 					<tr>
 						<th>Fecha</th>
 						<th>Usuario</th>
-						<th>Producto</th>
-						<th>Talla</th>
+						<th>Productos</th>
+						<th>Tallas</th>
 						<th>Cantidad</th>
 						<th>Total</th>
 						<th>Codigo descuento</th>
 						<th>Total con descuento</th>
 					</tr>
 		EOF;
-		foreach($compras as $c){
-			$fecha = $c->getFecha();
+		
+		    // Agrupar compras por fecha
+    $comprasPorFecha = [];
+    foreach($compras as $c) {
+        $fecha = $c->getFecha();
+        if(!isset($comprasPorFecha[$fecha])) {
+            $comprasPorFecha[$fecha] = [];
+        }
+        $comprasPorFecha[$fecha][] = $c;
+    }
+
+    foreach($comprasPorFecha as $fecha => $comprasAgrupadas) {
+        $nombrePs = [];
+        $tallas = [];
+        $cantidades = [];
+        $precios = [];
+        $descuentos = 0;
+		$totalCompra = 0;
+        $totalesConDescuento = 0;
+
+        foreach($comprasAgrupadas as $c){
+            $producto = Producto::buscaPorID($c->getIdProducto());
+            $nombrePs[] = $producto->getNombre();
 			
 			$usuario = Usuario::buscaPorID($c->getIdUsuario());
 			$nombreU = $usuario->getNombre();
-			
-			$producto = Producto::buscaPorID($c->getIdProducto());
-			$nombreP = $producto->getNombre();
-			
-			$talla = strtoupper($c->getTalla());
-			
-			$cantidad = $c->getCantidad();
-			$precio = $c->getPrecio();
-			
-			if($c->getIdCupon() !== null){
-				$cupon = Cupon::buscaPorId($c->getIdCupon());
-				$nombreC = $cupon->getDescuento();
-				$totalConDesc= (100 - floatval($nombreC)) * floatval($precio) /100;
-				$totalConDescRed= round($totalConDesc, 2);
-			}
-			else{
-				$nombreC = 0;
-			}
-			
-			$html .= <<<EOF
-					<tr data-fecha=$fecha data-user='$nombreU' data-nombre='$nombreP' data-talla=$talla data-cantidad=$cantidad data-precio=$precio>
-						<td>$fecha</td>
-						<td>$nombreU</td>
-						<td>$nombreP</td>
-						<td>$talla</td>
-						<td>$cantidad</td>
-						<td>$precio €</td>
-						<td>$nombreC %</td>
-						<td>$totalConDescRed €</td>
-					</tr>
-			EOF;	
-		}
+
+            $tallas[] = strtoupper($c->getTalla());
+
+            $cantidades[] = $c->getCantidad();
+            $precios[] = $c->getPrecio().'€';
+			$totalCompra += $c->getPrecio();
+
+
+            if($c->getIdCupon() !== null){
+                $cupon = Cupon::buscaPorId($c->getIdCupon());
+                $nombreC = $cupon->getDescuento();
+                $totalConDesc= (100 - floatval($nombreC)) * floatval($totalCompra) /100;
+                $totalConDescRed= round($totalConDesc, 2);
+            }
+            else{
+                $nombreC = 0;
+                $totalConDescRed = $c->getPrecio();
+            }
+
+            $descuentos = $nombreC . '%';
+            $totalesConDescuento = $totalConDescRed . ' €';
+        }
+
+        $nombrePsStr = implode('<br>', $nombrePs);
+        $tallasStr = implode('<br>', $tallas);
+        $cantidadesStr = implode('<br>', $cantidades);
+        $preciosStr = implode('<br>', $precios);
+
+		
+        $html .= <<<EOF
+                <tr data-fecha=$fecha data-user='$nombreU' data-nombre='$nombrePsStr' data-talla='$tallasStr' data-cantidad='$cantidadesStr' data-precio='$totalesConDescuento'>
+                    <td>$fecha</td>
+                    <td>$nombreU</td>
+                    <td>$nombrePsStr</td>
+                    <td>$tallasStr</td>
+                    <td>$cantidadesStr</td>
+                    <td>$preciosStr</td>
+                    <td>$descuentos</td>
+                    <td>$totalesConDescuento</td>
+                </tr>
+        EOF;
+	}	
 		
 		$html .= <<<EOF
 			</table>
@@ -143,49 +176,77 @@ class Compra
                 <table class="compras" id="tabla-compras">
                     <tr>
                         <th>Fecha</th>
-                        <th>Producto</th>
-                        <th>Talla</th>
+                        <th>Productos</th>
+                        <th>Tallas</th>
                         <th>Cantidad</th>
                         <th>Total</th>
                         <th>Descuento</th>
                         <th>Total con descuento</th>
                     </tr>
         EOF;
-        foreach($compras as $c){
-            $fecha = $c->getFecha();
-            
-            $producto = Producto::buscaPorID($c->getIdProducto());
-            $nombreP = $producto->getNombre();
-			
 
-            
-            $talla = strtoupper($c->getTalla());
-            
-            $cantidad = $c->getCantidad();
-            $precio = $c->getPrecio();
-			
-			if($c->getIdCupon() !== null){
-				$cupon = Cupon::buscaPorId($c->getIdCupon());
-				$nombreC = $cupon->getDescuento();
-				$totalConDesc= (100 - floatval($nombreC)) * floatval($precio) /100;
-				$totalConDescRed= round($totalConDesc, 2);
-			}
-			else{
-				$nombreC = 0;
-			}			
-			
-            $html .= <<<EOF
-                    <tr data-fecha=$fecha data-nombre='$nombreP' data-talla=$talla data-cantidad=$cantidad data-precio=$precio>
-                        <td>$fecha</td>
-                        <td>$nombreP</td>
-                        <td>$talla</td>
-                        <td>$cantidad</td>
-                        <td>$precio €</td>
-                        <td>$nombreC %</td>
-                        <td>$totalConDescRed €</td>
-                    </tr>
-            EOF;    
+    // Agrupar compras por fecha
+    $comprasPorFecha = [];
+    foreach($compras as $c) {
+        $fecha = $c->getFecha();
+        if(!isset($comprasPorFecha[$fecha])) {
+            $comprasPorFecha[$fecha] = [];
         }
+        $comprasPorFecha[$fecha][] = $c;
+    }
+
+    foreach($comprasPorFecha as $fecha => $comprasAgrupadas) {
+        $nombrePs = [];
+        $tallas = [];
+        $cantidades = [];
+        $precios = [];
+        $descuentos = 0;
+		$totalCompra = 0;
+        $totalesConDescuento = 0;
+
+        foreach($comprasAgrupadas as $c){
+            $producto = Producto::buscaPorID($c->getIdProducto());
+            $nombrePs[] = $producto->getNombre();
+
+            $tallas[] = strtoupper($c->getTalla());
+
+            $cantidades[] = $c->getCantidad();
+            $precios[] = $c->getPrecio();
+			$totalCompra += $c->getPrecio();
+
+
+            if($c->getIdCupon() !== null){
+                $cupon = Cupon::buscaPorId($c->getIdCupon());
+                $nombreC = $cupon->getDescuento();
+                $totalConDesc= (100 - floatval($nombreC)) * floatval($totalCompra) /100;
+                $totalConDescRed= round($totalConDesc, 2);
+            }
+            else{
+                $nombreC = 0;
+                $totalConDescRed = $c->getPrecio();
+            }
+
+            $descuentos = $nombreC . '%';
+            $totalesConDescuento = $totalConDescRed . ' €';
+        }
+
+        $nombrePsStr = implode('<br>', $nombrePs);
+        $tallasStr = implode('<br>', $tallas);
+        $cantidadesStr = implode('<br>', $cantidades);
+        $preciosStr = implode('<br>', $precios);
+
+        $html .= <<<EOF
+                <tr data-fecha=$fecha data-nombre='$nombrePsStr' data-talla='$tallasStr' data-cantidad='$cantidadesStr' data-precio='$totalesConDescuento'>
+                    <td>$fecha</td>
+                    <td>$nombrePsStr</td>
+                    <td>$tallasStr</td>
+                    <td>$cantidadesStr</td>
+                    <td>$preciosStr €</td>
+                    <td>$descuentos</td>
+                    <td>$totalesConDescuento</td>
+                </tr>
+        EOF;
+    }
         
         $html .= <<<EOF
             </table>
