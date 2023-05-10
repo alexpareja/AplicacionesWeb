@@ -192,6 +192,16 @@ function quitarFiltros(){
 	for (var i = 0; i < tallas.length; i++) {
 		tallas[i].checked = false;
 	}
+	
+	var valoracionRadios = document.getElementsByName("valoracion");
+	for (var i = 0; i < valoracionRadios.length; i++) {
+		valoracionRadios[i].checked = false;
+	}
+	$('.estrellas img').attr('src', 'img/estrellaVacia.png');
+	var estrellasSeleccionadas = $('input[name="valoracion"]:checked').val();		
+	for (var i = 1; i <= estrellasSeleccionadas; i++) {
+		$('.estrellas img').eq(i - 1).attr('src', 'img/estrellaLlena.png');
+  	}
   
 	document.getElementById("campo-busqueda").value = "";
   
