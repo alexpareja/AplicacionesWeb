@@ -40,21 +40,18 @@ class FormularioNuevoProducto extends Formulario
 					<p><label for="oferta">Oferta:</label></p>
 					<p><input id="oferta" class="quantity" type="number" step="0.01" min="0" max="100" name="oferta" value="0" required></p>
 				</div>
-
 				<div>
 				    <p><label for="premium">Premium:</label> 
-				    <input type="radio" id="si" name="premium" value="1" >
+				    <input type="radio" id="si" name="premium" value="1">
 				    <label for="si" class="izq">Sí</label>
 				    <input type="radio" id="no" name="premium" value="0" checked>
 				    <label for="no" class="izq">No</label></p>
 				</div>
-
 				<div>
 				<label>Imagen:</label>
 					<div id='subir-archivo1' class='subir-archivo1'>
 						<p>Previsualización de la imagen</p>
 					</div>
-					
 					<div class="subir-archivo2" onchange="changeHandler(event);">
 						<label for="imagen" class="upload_button">
 						Elige la imagen del producto
@@ -62,9 +59,7 @@ class FormularioNuevoProducto extends Formulario
 						</label>
 					</div>
 					{$erroresCampos['imagen']}
-
 				</div>
-				
 				<div>
 					<p><label>Tallas en Stock:</label></p>
 					<ul class="tallas">

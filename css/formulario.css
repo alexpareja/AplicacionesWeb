@@ -284,6 +284,11 @@ button[type="submit"]:hover {
   margin-right: 0.8rem;
 }
 
+.newE-form label.dede {
+  display: inline-block;
+  margin-right: 0.8rem;
+}
+
 .newP-form input[type="radio"]:checked + label {
   color: #800080;
 }
@@ -406,6 +411,11 @@ input.quantity{
   display: inline-block;
   margin-right: 0.8rem;
 }
+.product-form label.dede {
+  display: inline-block;
+  margin-right: 0.8rem;
+}
+
 
 .product-form input[type="radio"]:checked + label {
   color: #800080;

@@ -13,13 +13,16 @@ class Blog
     
     private $autor;
 
-    public function __construct($id=null, $titulo, $contenido, $descripcion, $autor)
+    private $categoria;
+
+    public function __construct($id=null, $titulo, $contenido, $descripcion, $autor, $categoria)
     {
         $this->id = $id;
         $this->descripcion = $descripcion;
         $this->titulo = $titulo;
         $this->contenido = $contenido;
         $this->autor=$autor;
+        $this->categoria=$categoria;
     }
 
     public static function buscaPorId($idBlog)
@@ -41,16 +44,16 @@ class Blog
         return $BlogDAO->getBlog();
     }
 
-    public static function crea($titulo, $contenido, $descripcion, $autor)
+    public static function crea($titulo, $contenido, $descripcion, $autor, $categoria)
     {
         $BlogDAO= new BlogDAO();
-        return $BlogDAO->crea($titulo, $contenido, $descripcion, $autor);
+        return $BlogDAO->crea($titulo, $contenido, $descripcion, $autor, $categoria);
     }
 
-    public static function edita($id,$titulo, $contenido, $descripcion)
+    public static function edita($id,$titulo, $contenido, $descripcion, $categoria)
     {
         $BlogDAO= new BlogDAO();
-        return $BlogDAO->actualiza($id,$titulo, $contenido, $descripcion);
+        return $BlogDAO->actualiza($id,$titulo, $contenido, $descripcion, $categoria);
     }
 
     public static function borra($id)
@@ -88,6 +91,11 @@ class Blog
     public function getAutor()
     {
         return $this->autor;
+    }
+
+    public function getCategoria()
+    {
+        return $this->categoria;
     }
 }
 ?>

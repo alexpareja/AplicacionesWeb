@@ -19,6 +19,21 @@ class FormularioEditarEntrada extends Formulario
 		$htmlErroresGlobales = self::generaListaErroresGlobales($this->errores);
 		$erroresCampos = self::generaErroresCampos(['titulo', 'contenido','descripcion','imagen'], $this->errores, 'span', array('class' => 'error'));
 
+		if($this->entrada->getCategoria()==="sostenibilidad") {
+			$sostenibilidad = 'checked';
+			$moda = '';
+			$actualidad = '';
+		} else if ($this->entrada->getCategoria()==="actualidad"){
+			$sostenibilidad = '';
+			$moda = '';
+			$actualidad = 'checked';
+		}
+		else{
+			$sostenibilidad = '';
+			$moda = 'checked';
+			$actualidad = '';
+		}
+
 		// Se genera el HTML asociado a los campos del formulario y los mensajes de error.
 		$html=<<<EOF
 		$htmlErroresGlobales
@@ -40,6 +55,17 @@ class FormularioEditarEntrada extends Formulario
 				<p><label for="contenido">Contenido:</label></p>
 				<p><textarea id="contenido" name="contenido" class="contenido">{$this->entrada->getContenido()}</textarea></p>
 				{$erroresCampos['contenido']}
+				</div>
+				<div>
+					<p>
+						<label for="categoria">Categoría:</label>
+						<input type="radio" id="sostenibilidad" name="categoria" value="sostenibilidad" $sostenibilidad>
+						<label for="sostenibilidad" class="dede">Sostenibilidad</label>
+						<input type="radio" id="moda" name="categoria" value="moda" $moda>
+						<label for="moda" class="dede">Moda</label>
+						<input type="radio" id="actualidad" name="categoria" value="actualidad" $actualidad>
+						<label for="actualidad" class="dede">Actualidad</label>
+					</p>
 				</div>
 				<div>
 					<label>Imagen:</label>
@@ -90,6 +116,9 @@ class FormularioEditarEntrada extends Formulario
 		$contenido = trim($datos['contenido'] ??   '' );
 		$contenido = filter_var($contenido, FILTER_SANITIZE_FULL_SPECIAL_CHARS);	
 		
+		$categoria = trim($datos['categoria'] ?? '');
+        $categoria = filter_var($categoria, FILTER_SANITIZE_FULL_SPECIAL_CHARS);		
+
 		$imagen = $_FILES['imagen'];
 		if (isset($_POST["accion"]) && $_POST["accion"] == "editar") {
 		if ( ! $titulo || empty($titulo)) {
@@ -107,7 +136,7 @@ class FormularioEditarEntrada extends Formulario
 				$tipoArchivo = $imagen['type'];
 				$rutaArchivo = $imagen['tmp_name'];				
 				if($tipoArchivo == 'image/jpeg' || $tipoArchivo == 'image/png') {
-					$entrada = Blog::edita($id, $titulo, $contenido, $descripcion);
+					$entrada = Blog::edita($id, $titulo, $contenido, $descripcion,$categoria);
 					$nombreImagen = 'blog_'.$id.'.png'; // Nombre de la imagen que se guardará
 					$ruta = 'img/'.$nombreImagen; // Ruta donde se guardará la imagen
 				move_uploaded_file($rutaArchivo, $ruta);
@@ -115,7 +144,7 @@ class FormularioEditarEntrada extends Formulario
 				$this->errores['imagen'] = 'El archivo introducido no es valido';		
 				}				
 			}else{
-				$entrada = Blog::edita($id, $titulo, $contenido, $descripcion);
+				$entrada = Blog::edita($id, $titulo, $contenido, $descripcion, $categoria);
 			}			
 		}
 	}

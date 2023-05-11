@@ -20,7 +20,7 @@ class BlogDAO
             $fila = $rs->fetch_assoc();
             if($fila){
             $blog = new Blog($fila['id'], $fila['titulo'], $fila['contenido'], $fila['descripcion'], 
-            $fila['autor']);
+            $fila['autor'], $fila['categoria']);
             $rs->free();
 
             return $blog;
@@ -40,7 +40,7 @@ class BlogDAO
             $fila = $rs->fetch_assoc();
             if($fila){
             $blog = new Blog($fila['id'], $fila['titulo'], $fila['contenido'], $fila['descripcion'], 
-            $fila['autor']);
+            $fila['autor'], $fila['categoria']);
             $rs->free();
 
             return $blog;
@@ -63,28 +63,29 @@ class BlogDAO
             {
                 $id=$row['id'];
                 $blog[$id] = new Blog($row['id'], $row['titulo'], $row['contenido'], $row['descripcion'], 
-                $row['autor']);
+                $row['autor'], $row['categoria']);
             }
         }
         return $blog;
     }
 
     //crea una nueva entrada
-    public function crea($titulo, $contenido, $descripcion, $autor)
+    public function crea($titulo, $contenido, $descripcion, $autor, $categoria)
     {
-        $blog = new Blog($nuevaId=null,$titulo,$contenido,$descripcion,$autor);
+        $blog = new Blog($nuevaId=null,$titulo,$contenido,$descripcion,$autor,$categoria);
         return self::inserta($blog);
     }
 
-    public function actualiza($id,$titulo,$contenido,$descripcion)
+    public function actualiza($id,$titulo,$contenido,$descripcion,$categoria)
     {
         if (!$id) {
             return false;
         } 
-		$query=sprintf("UPDATE blog SET titulo = '%s', contenido = '%s', descripcion = '%s' where id = '%d'"
+		$query=sprintf("UPDATE blog SET titulo = '%s', contenido = '%s', descripcion = '%s', categoria = '%s' where id = '%d'"
             , $this->conn->real_escape_string($titulo)
             , $this->conn->real_escape_string($contenido)
             , $this->conn->real_escape_string($descripcion)
+            , $this->conn->real_escape_string($categoria)
             , $id
         );
 		
@@ -99,11 +100,12 @@ class BlogDAO
     //inserta nuevo producto
     private function inserta($blog)
     {
-        $query=sprintf("INSERT INTO blog(titulo, contenido, descripcion, autor) VALUES ('%s', '%s', '%s','%d')"
+        $query=sprintf("INSERT INTO blog(titulo, contenido, descripcion, autor, categoria) VALUES ('%s', '%s', '%s','%s','%d')"
             , $this->conn->real_escape_string($blog->getTitulo())
             , $this->conn->real_escape_string($blog->getContenido())
             , $this->conn->real_escape_string($blog->getDescripcion())
             , $blog->getAutor()
+            , $this->conn->real_escape_string($blog->getCategoria())
         );
         if ( $this->conn->query($query) ) {
             $blog->setId($this->conn->insert_id);

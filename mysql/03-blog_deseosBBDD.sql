@@ -14,7 +14,8 @@ CREATE TABLE `blog` (
   `titulo` varchar(40) NOT NULL,
   `contenido` text NOT NULL,
   `descripcion` text NOT NULL,
-  `autor` int(10) UNSIGNED NOT NULL
+  `autor` int(10) UNSIGNED NOT NULL,
+  `categoria` varchar(12) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------

@@ -48,6 +48,17 @@ class FormularioNuevaEntrada extends Formulario
 					{$erroresCampos['contenido']}
 				</div>
 				<div>
+					<p>
+						<label for="categoria">Categoría:</label>
+						<input type="radio" id="sostenibilidad" name="categoria" value="sostenibilidad" required>
+						<label for="sostenibilidad" class="dede">Sostenibilidad</label>
+						<input type="radio" id="moda" name="categoria" value="moda">
+						<label for="moda" class="dede">Moda</label>
+						<input type="radio" id="actualidad" name="categoria" value="actualidad">
+						<label for="actualidad" class="dede">Actualidad</label>
+					</p>
+				</div>
+				<div>
 				<label>Imagen:</label>
 					<div id='subir-archivo1' class='subir-archivo1'>
 						<p>Previsualización de la imagen</p>
@@ -91,6 +102,8 @@ class FormularioNuevaEntrada extends Formulario
 		$contenido = trim($datos['contenido'] ?? '');
         $contenido = filter_var($contenido, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 		
+		$categoria = $_POST['categoria'];
+
 		$imagen = $_FILES['imagen'];
 		
 		if ( ! $titulo || empty($titulo)) {
@@ -108,7 +121,7 @@ class FormularioNuevaEntrada extends Formulario
 			$rutaArchivo = $imagen['tmp_name'];
 			
 			if($tipoArchivo == 'image/jpeg' || $tipoArchivo == 'image/png') {
-				$blog = Blog::crea($titulo, $contenido, $descripcion, $this->idAutor);
+				$blog = Blog::crea($titulo, $contenido, $descripcion, $this->idAutor, $categoria);
 				echo $titulo;
 				echo $contenido;
 				echo $descripcion;
