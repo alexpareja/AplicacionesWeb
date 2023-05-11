@@ -54,4 +54,10 @@ spl_autoload_register(function ($class) {
         require $file;
     }
 });
+
+if (!isset($_SESSION['cart'])) {
+    $_SESSION['numprodcarrito'] = 0;
+    $_SESSION['precioTotal'] = 0;
+}
+
 ?>
