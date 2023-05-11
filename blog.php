@@ -30,7 +30,7 @@ if (isset($_SESSION['admin']) && $_SESSION['admin']) {
 
 $contenidoPrincipal .= <<<EOS
 	</div>
-	<div="contenidoBlog-total">
+	<div="contenidoPer">
 		<div class="filBlog">
 			<h2 class="titFB">Filtros</h2>
 			<p class="letrasFB">Ordenado por:</p>
