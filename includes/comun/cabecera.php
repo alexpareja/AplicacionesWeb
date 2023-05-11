@@ -39,6 +39,7 @@ else{
 					} else {
 						?>
 						<p>Tienes <?php echo $_SESSION['numprodcarrito']; echo $mensaje; ?> en el carrito</p>
+						<div class="linea-carrito"></div>
                 		<p>Total: <?php echo $_SESSION['precioTotal']; ?>€</p>
 						<?php
 					}

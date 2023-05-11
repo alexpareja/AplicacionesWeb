@@ -822,7 +822,7 @@ function mostrarRespuesta() {
 function mostrarFiltrosBlog(){
 	var menu = document.querySelector('.filBlog');
 	if(menu.style.display === 'none'){
-		menu.style.display = 'block';
+		menu.style.display = 'table-cell';
 	}
 	else {
 		menu.style.display = 'none';

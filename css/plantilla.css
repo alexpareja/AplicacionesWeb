@@ -977,16 +977,10 @@ text-shadow: 0.125rem 0.125rem 0.25rem #38313839;
 }
 
 /*Hoja de estilo Blog*/
-.blog{
-  align-items: center;
-  justify-content: center;
-}
-
 .cabeceraBlog{
   background-color: #f0e8e0ff;
-  background-position: center;
-  background-size: cover;
   width: 100%;
+  height: 25rem;
   align-items: center;
   text-align: center;
   text-shadow: 0.13rem 0.13rem 0.3rem #413a415a;
@@ -1033,18 +1027,21 @@ text-shadow: 0.125rem 0.125rem 0.25rem #38313839;
   color: #383138;
 }
 
-.contenidoPer{
-  display: flex;
-  flex: row;
-  width: 30%;
+.contenidoPer {
+  display: table;
+  width: 100%;
 }
 
 .filBlog {
-  left:0;
-  top: 32.859rem;
+  display: none;
   background-color:#f5f5f5;
   padding: 1.25rem;
-  display:none;
+  width: 15rem;
+}
+
+.contenidoArticulos {
+  display: table-cell;
+  overflow: hidden;
 }
 
 .titFB{
@@ -1098,7 +1095,6 @@ text-shadow: 0.125rem 0.125rem 0.25rem #38313839;
 }
 
 .contenidoBlog-articulos{
-
 }
 
 .titBlog .subtituloBlog{
@@ -1110,10 +1106,10 @@ text-shadow: 0.125rem 0.125rem 0.25rem #38313839;
   background-color: #800080;
   padding: 0.4rem;
   cursor: pointer;
-  position: absolute;
+  position: relative;
   z-index: 1;
   left: 1.5rem;
-  top: 36rem;
+  top: 5.5rem;
   border-radius: 0.3125rem;
   text-align: center;
 }
@@ -1323,6 +1319,7 @@ li:hover .tooltip {
 }
 
 .pie {
+  z-index: 1;
   width: 100%;
   background-color: #80008041;
 }
@@ -1476,6 +1473,10 @@ li:hover .tooltip {
   /*SOBRE NOSOTROS*/
   .nosotrosTexto p{
     font-size: small;
+  }
+
+  .articulo{
+    padding: 0rem;
   }
 
   /*PIE*/

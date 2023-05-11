@@ -30,7 +30,7 @@ if (isset($_SESSION['admin']) && $_SESSION['admin']) {
 
 $contenidoPrincipal .= <<<EOS
 	</div>
-	<div="contenidoPer">
+	<div class="contenidoPer">
 		<div class="filBlog">
 			<h2 class="titFB">Filtros</h2>
 			<p class="letrasFB">Ordenado por:</p>
@@ -38,7 +38,7 @@ $contenidoPrincipal .= <<<EOS
 				<option value="nombreAB">Nombre (A -> Z)</option>
 				<option value="nombreZB">Nombre (Z -> A)</option>
 			</select>
-			<p class="letrasFB">Buscador de productos:</p>
+			<p class="letrasFB">Buscador de entradas:</p>
 			<input type="text" id="campo-busqueda-blog" class="campo-busqueda-blog" placeholder="Buscar...">
 			<p class="letrasFB">Categoría:</p>
 			<ul class ="checkfiltros">
@@ -50,12 +50,12 @@ $contenidoPrincipal .= <<<EOS
 			<button type="submit" class="botones-filtros-blog" onclick="mostrarFiltrosBlog()">Ocultar filtros</button>
 		</div>
 		<div class="contenidoArticulos">
-			<section class="titBlog">
+			<div class="titBlog">
+				<button id="btnFB" type="submit" onclick="mostrarFiltrosBlog()" class="btnFB"><i class="fas fa-sliders-h white"></i></button>
 				<h2 class="subtituloBlog">
 					ÚLTIMAS NOTICIAS
 				</h2>
-				<button id="btnFB" type="submit" onclick="mostrarFiltrosBlog()" class="btnFB"><i class="fas fa-sliders-h white"></i></button>
-			</section>
+			</div>
 	EOS;
 
 //Se muestran las entradas del blog
