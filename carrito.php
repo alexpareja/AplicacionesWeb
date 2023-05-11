@@ -23,17 +23,20 @@ if (isset($_POST['remove_quantity'])) {
 // Calcular el precio total del carrito de compras
 $total_price = 0;
 $cart_products = array();
+$numProd = 0;
 if (isset($_SESSION['cart'])) {
     foreach ($_SESSION['cart'] as $product) {
         foreach ($product as $size => $item) {
             if (is_array($item)) {
                 $total_price += $item['price'] * $item['cantidad'];
                 $cart_products[] = $item;
+                $numProd++;
             }
         }
     }
 }
-
+$_SESSION['numprodcarrito'] = $numProd;
+$_SESSION['precioTotal'] = $total_price;
 // Generar el contenido de la página
 $tituloPagina = 'Carrito';
 $contenidoPrincipal = '';

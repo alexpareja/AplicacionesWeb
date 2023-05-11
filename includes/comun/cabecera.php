@@ -1,3 +1,11 @@
+<?php
+if($_SESSION['numprodcarrito'] == 1){
+    $mensaje = " producto";
+}
+else{
+    $mensaje = " productos";
+}
+?>
 <header class="cabecera">
 	<div class="contenedor-flex">
 		<div class="oculto">
@@ -19,7 +27,12 @@
 		<div class="iconos">
 			<ul>
 				<li><a href="faqs.php"><i class="fas fa-question-circle"></i></a></li>
-				<li><a href="carrito.php"><i class="fas fa-shopping-cart"></i></a></li>
+				<li><a href="carrito.php" onmouseover="mostrarTooltip()" onmouseout="ocultarTooltip()"><i class="fas fa-shopping-cart"></i></a>
+                <span class="tooltip" id="tooltip-carrito">
+                <p>Tienes <?php echo $_SESSION['numprodcarrito']; echo $mensaje; ?> en el carrito</p>
+                <p>Total: <?php echo $_SESSION['precioTotal']; ?>€</p>
+                </span>
+                </li>
 
 				<?php
 					if(!isset($_SESSION["login"])){
