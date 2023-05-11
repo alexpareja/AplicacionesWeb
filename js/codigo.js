@@ -831,19 +831,3 @@ function mostrarFiltrosBlog(){
 function seleccionarTalla(talla) {
   document.getElementById('tallaSeleccionada').value = talla;
 }
-
-function mostrarTooltip() {
-  // Obtener el elemento que contiene el tooltip
-  var tooltip = document.getElementById("tooltip-carrito");
-  
-  // Mostrar el tooltip
-  tooltip.style.display = "inline-block";
-}
-
-function ocultarTooltip() {
-  // Obtener el elemento que contiene el tooltip
-  var tooltip = document.getElementById("tooltip-carrito");
-  
-  // Ocultar el tooltip
-  tooltip.style.display = "none";
-}
