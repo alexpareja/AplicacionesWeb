@@ -100,7 +100,7 @@ class BlogDAO
     //inserta nuevo producto
     private function inserta($blog)
     {
-        $query=sprintf("INSERT INTO blog(titulo, contenido, descripcion, autor, categoria) VALUES ('%s', '%s', '%s','%s','%d')"
+        $query=sprintf("INSERT INTO blog(titulo, contenido, descripcion, autor, categoria) VALUES ('%s', '%s', '%s','%d','%s')"
             , $this->conn->real_escape_string($blog->getTitulo())
             , $this->conn->real_escape_string($blog->getContenido())
             , $this->conn->real_escape_string($blog->getDescripcion())
