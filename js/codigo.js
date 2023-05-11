@@ -892,3 +892,8 @@ function quitarFiltrosBlog(){
 
 
 
+
+
+function seleccionarTalla(talla) {
+  document.getElementById('tallaSeleccionada').value = talla;
+}

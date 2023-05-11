@@ -1,7 +1,9 @@
 <?php
 use es\ucm\fdi\aw\CajaSuscripcion;
+use es\ucm\fdi\aw\Compra;
 require_once __DIR__.'/includes/configuracion.php';
 require_once __DIR__.'/includes/CajaSuscripcion.php';
+require_once __DIR__.'/includes/Compra.php';
 
 $tituloPagina = 'Mi Perfil';
 $contenidoPrincipal = '';
@@ -34,8 +36,10 @@ if ($_SESSION['rol'] == 'U') {
     
     if ($fechaActual->format('Y-m-d') === $fechaCajaFormato->format('Y-m-d')) {
       $fechaActualMasUnMes = $fechaActual->modify('+1 month')->format('Y-m-d H:i:s');
-      CajaSuscripcion::edita($idCaja, $id, $fechaActualMasUnMes);
+      $tallaCaja = $caja->getTalla();
+      CajaSuscripcion::edita($idCaja, $id, $fechaActualMasUnMes, $tallaCaja);
       $fechaCaja = $caja->getFechaCaja();
+      $compra = Compra::crea($id, 8, $tallaCaja, 1, 0, 0);
     }
 
     $suscripcionCabecera = '<h2>La Quinta Caja Premium</h2>';

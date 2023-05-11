@@ -19,7 +19,7 @@ class CajaSuscripcionDAO
         if($rs->num_rows>0){
             $row=$rs->fetch_assoc();
 			if($row){
-            $cajaSuscripcion = new CajaSuscripcion($row['id'], $row['usuario'], $row['fechaCaja']);
+            $cajaSuscripcion = new CajaSuscripcion($row['id'], $row['usuario'], $row['fechaCaja'], $row['talla']);
 			$rs->free();
 			return $cajaSuscripcion;
 			}
@@ -30,20 +30,21 @@ class CajaSuscripcionDAO
     }
 
     //crea una nueva caja
-    public function crea($usuario, $fechaCaja)
+    public function crea($usuario, $fechaCaja, $talla)
     {
-        $cajaSuscripcion = new cajaSuscripcion($nuevaId=null,$usuario, $fechaCaja);
+        $cajaSuscripcion = new cajaSuscripcion($nuevaId=null,$usuario, $fechaCaja, $talla);
         return self::inserta($cajaSuscripcion);
     }
 
-    public function actualiza($id, $usuario, $fechaCaja)
+    public function actualiza($id, $usuario, $fechaCaja, $talla)
     {
         if (!$id) {
             return false;
         } 
-		$query = sprintf("UPDATE suscripcion SET usuario = '%d', fechaCaja = '%s' WHERE id = '%d'",
+		$query = sprintf("UPDATE suscripcion SET usuario = '%d', fechaCaja = '%s', talla = '%s' WHERE id = '%d'",
             $this->conn->real_escape_string($usuario),
             $this->conn->real_escape_string($fechaCaja),
+            $this->conn->real_escape_string($talla),
             $id
         );
 		
@@ -58,9 +59,10 @@ class CajaSuscripcionDAO
     //inserta nueva caja
     private function inserta($cajaSuscripcion)
     {
-        $query=sprintf("INSERT INTO suscripcion(usuario, fechaCaja) VALUES ('%d', '%s')"
+        $query=sprintf("INSERT INTO suscripcion(usuario, fechaCaja, talla) VALUES ('%d', '%s', '%s')"
             , $this->conn->real_escape_string($cajaSuscripcion->getUsuario())
             , $this->conn->real_escape_string($cajaSuscripcion->getFechaCaja())
+            , $this->conn->real_escape_string($cajaSuscripcion->getTalla())
         );
         if ( $this->conn->query($query) ) {
             $cajaSuscripcion->setId($this->conn->insert_id);

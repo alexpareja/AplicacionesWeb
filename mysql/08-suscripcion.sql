@@ -30,7 +30,8 @@ SET time_zone = "+00:00";
 CREATE TABLE `suscripcion` (
   `id` int(11) NOT NULL,
   `usuario` int(10) UNSIGNED NOT NULL,
-  `fechaCaja` datetime NOT NULL
+  `fechaCaja` datetime NOT NULL,
+  `talla` enum('xs','s','m','l','xl') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
