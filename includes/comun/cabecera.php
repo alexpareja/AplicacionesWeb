@@ -29,8 +29,20 @@ else{
 				<li><a href="faqs.php"><i class="fas fa-question-circle"></i></a></li>
 				<li><a href="carrito.php"><i class="fas fa-shopping-cart"></i></a>
                 <span class="tooltip" id="tooltip-carrito">
-                <p>Tienes <?php echo $_SESSION['numprodcarrito']; echo $mensaje; ?> en el carrito</p>
-                <p>Total: <?php echo $_SESSION['precioTotal']; ?>€</p>
+					<?php
+					if ($_SESSION['numprodcarrito'] === 0){
+						?>
+						<p>Tu bolsa de la compra está vacía</p>
+						<div class="linea-carrito"></div>
+						<p>Total: <?php echo $_SESSION['precioTotal']; ?>€</p>
+						<?php
+					} else {
+						?>
+						<p>Tienes <?php echo $_SESSION['numprodcarrito']; echo $mensaje; ?> en el carrito</p>
+                		<p>Total: <?php echo $_SESSION['precioTotal']; ?>€</p>
+						<?php
+					}
+					?>
                 </span>
                 </li>
 

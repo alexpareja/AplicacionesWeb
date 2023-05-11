@@ -1254,14 +1254,20 @@ text-shadow: 0.125rem 0.125rem 0.25rem #38313839;
   display: none;
   position: absolute;
   background-color: rgb(240, 240, 240);
+  border: 0.5rem solid #80008041;
   color: black;
-  font-size: 0.8rem;
+  font-size: small;
   padding: 1rem;
   width: 17rem;
-  border-radius: 1rem;
-  z-index: 9999;
+  border-bottom-left-radius: 0.3125rem;
+  border-bottom-right-radius: 0.3125rem;
+  z-index: 3;
   right: 1.5rem;
-  top: 4rem;
+  top: 3.5rem;
+}
+
+.tooltip p{
+  font-size: small;
 }
 
 li:hover .tooltip {
@@ -1269,12 +1275,17 @@ li:hover .tooltip {
 }
 
 .tooltip p:first-child {
-  border-bottom: 0.063rem solid #ccc;
   padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.linea-carrito{
+  border-bottom: 0.063rem solid #ccc;
 }
 
 .tooltip p:last-child {
-  margin-top: 0.5rem;
+  margin-top: 1rem;
+  padding-bottom: 0.5rem;
 }
 
 .menu:hover, .letras:hover{
@@ -1459,6 +1470,7 @@ li:hover .tooltip {
     padding: 0.5rem;
     background: #f3eeee;
     display: block;
+    border-radius: 0.3125rem;
   }
 
   /*SOBRE NOSOTROS*/
