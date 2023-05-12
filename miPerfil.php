@@ -46,7 +46,7 @@ if ($_SESSION['rol'] == 'U') {
     $suscripcionContenido = '<p>Información sobre la cuenta premium:</p>
                          <ul>
                             <li>Ventajas de usuario La Quinta Caja Free.</li>
-                            <li>10% de descuento en todas las compras y acceso a productos exclusivos.</li>
+                            <li>10% de descuento en todas las compras, gastos de envío gratuitos y acceso a productos exclusivos.</li>
                             <li>Caja gratuita de forma mensual.</li>
                          </ul>
                          <p class="caja">Fecha de la próxima caja gratuita: ' . date("d/m/Y", strtotime($fechaCaja)) . '</p>
