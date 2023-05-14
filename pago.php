@@ -118,6 +118,10 @@ $contenidoPrincipal .= <<<EOS
 EOS;
 
 if (isset($_POST['pay'])) {
+    $descuentoPorProd=1;
+    if ($_SESSION['rol'] == 'P') {
+        $descuentoPorProd=0.9;
+    }
     $idUsuario = $_SESSION['id'];
     if(isset($_SESSION['cupon_descuento'])){
         $descuento = $_SESSION['cupon_descuento'];
@@ -129,7 +133,7 @@ if (isset($_POST['pay'])) {
         foreach ($_SESSION['cart'] as $product) {
             foreach ($product as $size => $item) {
                 if (is_array($item)) {
-                    $total = round($item['price'] * $item['cantidad'] - $descuentoPremium, 2);
+                    $total = round($item['price'] * $item['cantidad'] * $descuentoPorProd, 2);
                     $compra = es\ucm\fdi\aw\Compra::crea($idUsuario, $item['id'], strtolower($item['size']), $item['cantidad'], $total, $descuento);
                 }
             }
