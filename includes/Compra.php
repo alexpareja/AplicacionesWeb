@@ -108,6 +108,8 @@ class Compra
 
     foreach($comprasPorFecha as $fecha => $comprasAgrupadas) {
         $nombrePs = [];
+		$srcArray = [];
+		$altArray = [];
         $tallas = [];
         $cantidades = [];
         $precios = [];
@@ -118,7 +120,9 @@ class Compra
         foreach($comprasAgrupadas as $c){
             $producto = Producto::buscaPorID($c->getIdProducto());
             $nombrePs[] = $producto->getNombre();
-			
+			$srcArray[] = 'img/producto_'.$producto->getId().'.png';
+			$altArray[] = 'Imagen de Producto '.$producto->getId();
+
 			$usuario = Usuario::buscaPorID($c->getIdUsuario());
 			$nombreU = $usuario->getNombre();
 
@@ -145,6 +149,15 @@ class Compra
         }
 
         $nombrePsStr = implode('<br>', $nombrePs);
+		
+		$imagenes = [];
+		
+		for ($i = 0; $i < count($srcArray); $i++) {
+			$imagen = "<img class='imgProducto-compras' src='$srcArray[$i]' alt='$altArray[$i]'><a> $nombrePs[$i]</a>";
+			$imagenes[] = $imagen;
+		}
+		
+		$prodStr = implode('<br>', $imagenes);
         $tallasStr = implode('<br>', $tallas);
         $cantidadesStr = implode('<br>', $cantidades);
         $preciosStr = implode('<br>', $precios);
@@ -154,7 +167,7 @@ class Compra
                 <tr data-fecha=$fecha data-user='$nombreU' data-nombre='$nombrePsStr' data-talla='$tallasStr' data-cantidad='$cantidadesStr' data-precio='$totalesConDescuento'>
                     <td>$fecha</td>
                     <td>$nombreU</td>
-                    <td>$nombrePsStr</td>
+                    <td>$prodStr</td>
                     <td>$tallasStr</td>
                     <td>$cantidadesStr</td>
                     <td>$preciosStr</td>
@@ -197,6 +210,8 @@ class Compra
 
     foreach($comprasPorFecha as $fecha => $comprasAgrupadas) {
         $nombrePs = [];
+		$srcArray = [];
+		$altArray = [];
         $tallas = [];
         $cantidades = [];
         $precios = [];
@@ -207,6 +222,8 @@ class Compra
         foreach($comprasAgrupadas as $c){
             $producto = Producto::buscaPorID($c->getIdProducto());
             $nombrePs[] = $producto->getNombre();
+			$srcArray[] = 'img/producto_'.$producto->getId().'.png';
+			$altArray[] = 'Imagen de Producto '.$producto->getId();
 
             $tallas[] = strtoupper($c->getTalla());
 
@@ -231,6 +248,16 @@ class Compra
         }
 
         $nombrePsStr = implode('<br>', $nombrePs);
+		
+		$imagenes = [];
+		
+		for ($i = 0; $i < count($srcArray); $i++) {
+			$imagen = "<img class='imgProducto-compras' src='$srcArray[$i]' alt='$altArray[$i]'><a> $nombrePs[$i]</a>";
+			$imagenes[] = $imagen;
+		}
+		
+		$prodStr = implode('<br>', $imagenes);
+		
         $tallasStr = implode('<br>', $tallas);
         $cantidadesStr = implode('<br>', $cantidades);
         $preciosStr = implode('<br>', $precios);
@@ -238,7 +265,7 @@ class Compra
         $html .= <<<EOF
                 <tr data-fecha=$fecha data-nombre='$nombrePsStr' data-talla='$tallasStr' data-cantidad='$cantidadesStr' data-precio='$totalesConDescuento'>
                     <td>$fecha</td>
-                    <td>$nombrePsStr</td>
+                    <td>$prodStr</td>
                     <td>$tallasStr</td>
                     <td>$cantidadesStr</td>
                     <td>$preciosStr €</td>

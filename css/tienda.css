@@ -64,6 +64,10 @@ ul.lista-productos-premium li{
 	transform: scale(1.05);
 }
 
+.imgProducto-compras{
+	max-width: 3rem;
+}
+
 .precio {
 	text-decoration: none;
 	color: #800080;
