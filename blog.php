@@ -42,12 +42,12 @@ $contenidoPrincipal .= <<<EOS
 			<input type="text" id="campo-busqueda-blog" class="campo-busqueda-blog" placeholder="Buscar...">
 			<p class="letrasFB">Categoría:</p>
 			<ul class ="checkfiltros">
-				<li><input type="checkbox" name="cat" value="Sostenibilidad" onclick="filtrarBlogs()">Sostenibilidad</li>
-				<li><input type="checkbox" name="cat" value="Moda" onclick="filtrarBlogs()">Moda</li>
-				<li><input type="checkbox" name="cat" value="Actualidad" onclick="filtrarBlogs()">Actualidad</li>
+				<li data-categoria="sostenibilidad"><input type="checkbox" class="filtro-categoria" name="cat" value="sostenibilidad" onclick="filtrarBlogs()">Sostenibilidad</li>
+				<li data-categoria="moda"><input type="checkbox" class="filtro-categoria" name="cat" value="moda" onclick="filtrarBlogs()">Moda</li>
+				<li data-categoria="actualidad"><input type="checkbox" class="filtro-categoria" name="cat" value="actualidad" onclick="filtrarBlogs()">Actualidad</li>
 			</ul>
-			<button type="submit" class="botones-filtros-blog" onclick="quitarFiltrosBlog()">Resetear filtros</button>
-			<button type="submit" class="botones-filtros-blog" onclick="mostrarFiltrosBlog()">Ocultar filtros</button>
+			<button type="submit" class="botones-filtros-blog1" onclick="quitarFiltrosBlog()">Resetear filtros</button>
+			<button type="submit" class="botones-filtros-blog2" onclick="mostrarFiltrosBlog()">Ocultar filtros</button>
 		</div>
 		<div class="contenidoArticulos">
 			<div class="titBlog">

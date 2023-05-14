@@ -821,14 +821,18 @@ function mostrarRespuesta() {
 
 function mostrarFiltrosBlog(){
 	var menu = document.querySelector('.filBlog');
+	
 	if(menu.style.display === 'none'){
 		menu.style.display = 'table-cell';
 	}
 	else {
 		menu.style.display = 'none';
 	}
+
 	inicializarBuscador();
 	ordenarBlogs();
+	quitarFiltrosBlog();
+	filtrarBlogs();
 }
 
 function inicializarBuscador(){
@@ -857,7 +861,6 @@ function ordenarBlogs() {
 	const contenedorArticulos = document.querySelector('.panelBlog');
 	const articulos = Array.from(contenedorArticulos.querySelectorAll('.articulo'));
 	
-	contenedorArticulos.style.display = 'none';
 	selectorOrden.addEventListener('change', () => {
 		const opcionSeleccionada = selectorOrden.value;
 	
@@ -880,11 +883,59 @@ function ordenarBlogs() {
 		});
 	  	
 	});
-	contenedorArticulos.style.display = 'flex';
 }
 
 function quitarFiltrosBlog(){
-	document.getElementById("campo-busqueda-blog").value = "";
+	const contenedorArticulos = document.querySelector('.panelBlog');
+	
+
+	const btn = document.querySelector('.botones-filtros-blog1');
+	const campo = document.querySelector('#campo-busqueda-blog');
+	btn.addEventListener(
+		'click', ()=>{
+			const checkboxes = document.querySelectorAll('input[name="cat"]');
+			checkboxes.forEach(checkbox => checkbox.checked = false);
+			
+			campo.value="";
+			const articulos = contenedorArticulos.querySelectorAll('.articulo');
+			articulos.forEach((articulo) => {
+				if(articulo.style.display === 'none'){
+					articulo.style.display = 'flex';
+				}
+			});
+		}
+	);
+}
+
+function filtrarBlogs(){
+	const checkboxes = document.querySelectorAll('.filtro-categoria');
+	const contenedorArticulos = document.querySelector('.panelBlog');
+
+	checkboxes.forEach(checkbox => {
+		checkbox.addEventListener('click', () => {
+			var categorias = document.querySelectorAll('input[name="cat"]:checked');
+			var articulos = contenedorArticulos.querySelectorAll('.articulo');
+
+			for(var i = 0; i < articulos.length; i++){
+				articulos[i].style.display = 'flex';
+
+				const categoria = articulos[i].querySelector('.categoriaArt').textContent.toLowerCase();
+				var encontrado = false;
+				for(var j = 0; j < categorias.length; j++){
+					if(categoria === categorias[j].value){
+						encontrado=true;
+						break;
+					}
+				}
+
+				if(!encontrado && categorias.length > 0){
+					articulos[i].style.display = 'none';
+				}
+			}
+		});
+	});
+
+
 }
 
   

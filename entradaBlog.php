@@ -29,7 +29,9 @@ $tituloPagina = $titulo;
 $cont=$blog->getContenido();
 $autor = es\ucm\fdi\aw\Usuario::buscaPorId($blog->getAutor()); 
 $nombreAutor=$autor->getNombre();
+$categoria = $blog->getCategoria();
 $contenidoPrincipal .= <<<EOS
+    <p class="categoriaArt">$categoria</p>
     <img class='imgEntrada' src="$imagenEntrada" alt='Imagen de la entrada'>
     <h2>$titulo</h2>
     <p>$cont</p>

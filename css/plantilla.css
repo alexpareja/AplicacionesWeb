@@ -470,6 +470,7 @@ main {
 
 .sau{
   padding: 1rem 0;
+  height: 35rem !important;
 }
 
 .box-container{
@@ -518,7 +519,7 @@ main {
 } 
 
 .about{
-  height: 42vh !important;
+  height: 20rem !important;
   background: #f0e8e0ff;
 }
 
@@ -534,11 +535,12 @@ main {
   background-attachment: fixed;
   background-size: cover;
   text-align: center;
-  height: 38vh !important;
+  height: 20rem !important;
 }
 
 .news{
   background: #f0e8e0ff;
+  height: 30rem !important;
 }
 
 .inicioBlog{
@@ -1029,10 +1031,16 @@ text-shadow: 0.125rem 0.125rem 0.25rem #38313839;
 .contenidoPer {
   display: table;
   width: 100%;
+  overflow: scroll;
 }
 
 .filBlog {
   display: none;
+  /*
+  position: fixed;
+  top:3.5rem;
+  height: 100vh;
+  z-index: 2;*/
   background-color:#f5f5f5;
   padding: 1.25rem;
   width: 15rem;
@@ -1075,7 +1083,7 @@ text-shadow: 0.125rem 0.125rem 0.25rem #38313839;
   flex: row;
 }
 
-.botones-filtros-blog{
+.botones-filtros-blog1, .botones-filtros-blog2{
   display: inline-block;
   margin-top: 0.94rem;
   width: 100%;
@@ -1088,13 +1096,11 @@ text-shadow: 0.125rem 0.125rem 0.25rem #38313839;
   cursor: pointer;
 }
 
-.botones-filtros-blog:hover {
+.botones-filtros-blog1:hover, .botones-filtros-blog2:hover {
   background: none;
   color: #383138;
 }
 
-.contenidoBlog-articulos{
-}
 
 .titBlog .subtituloBlog{
   text-align: center;
@@ -1163,6 +1169,15 @@ text-shadow: 0.125rem 0.125rem 0.25rem #38313839;
   font-weight: 600;
   font-size: 0.8rem;
   margin-bottom: 3rem;
+}
+
+.categoriaArt{
+  margin-bottom: 1rem;
+  margin-right: 0.5rem;
+  font-size: small;
+  font-weight: bold;
+  text-align: right;
+  text-transform: uppercase;
 }
 
 

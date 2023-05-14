@@ -20,6 +20,7 @@ class Periodico {
             $descripcion = $ent->getDescripcion();
             $idAutor = $ent->getAutor();
             $autor=Usuario::buscaPorId($idAutor)->getNombre();
+            $categoria = $ent->getCategoria();
 
             $html .= <<<EOS
                         <div class="articulo">
@@ -28,6 +29,7 @@ class Periodico {
                                 <p class="tituloArt">$titulo</p>
                                 <p class="descripcionArt">$descripcion</p>
                                 <p class="autorArt">Escrito por $autor</p>
+                                <p class="categoriaArt">$categoria</p>
                             </a>
                         </div>
                 EOS;
@@ -46,7 +48,7 @@ class Periodico {
         EOS;
         
         // Obtener una lista aleatoria de tres productos
-        $blogs_aleatorios = array_rand($this->entradas, 2);
+        $blogs_aleatorios = array_rand($this->entradas, 3);
         
         foreach($blogs_aleatorios as $key => $value) {
             $blog = $this->entradas[$value];
