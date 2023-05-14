@@ -40,9 +40,9 @@ window.onload = function() {
   }
   
   var precioMaximo = Math.max.apply(Math, precios);
-  slider.max = (precioMaximo + 0.5) | 0;
-  valorPrecio.innerText = (precioMaximo + 0.5) | 0;
-  slider.value = (precioMaximo + 0.5) | 0;
+  slider.max = (precioMaximo + 1) | 0;
+  valorPrecio.innerText = (precioMaximo + 1) | 0;
+  slider.value = (precioMaximo + 1) | 0;
 
   // Inicializar el rango
   slider.oninput = function() {
