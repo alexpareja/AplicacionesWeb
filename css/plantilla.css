@@ -2437,12 +2437,17 @@ ul.lista-productos li {
   margin-right: 1rem;
 }
 
+.blogRecomendado:hover{
+  transform: scale(1.05);
+}
+
 .imagenRecBlog{
   width: 15rem;
   height: 10rem;
   border-top-left-radius: 0.3125rem;
   border-top-right-radius: 0.3125rem;
 }
+
 .blogRecomendado a{
   text-decoration: none;
   color: rgb(52, 55, 55);

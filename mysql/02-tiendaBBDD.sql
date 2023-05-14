@@ -9,7 +9,7 @@ DROP TABLE IF EXISTS `compras`;
 
 CREATE TABLE `productos` (
   `id` int(10) UNSIGNED NOT NULL,
-  `nombre` varchar(20) NOT NULL,
+  `nombre` varchar(80) NOT NULL,
   `descripcion` text NOT NULL,
   `precio` float UNSIGNED NOT NULL,
   `oferta` float UNSIGNED NOT NULL,

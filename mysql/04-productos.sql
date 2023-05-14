@@ -6,4 +6,31 @@ INSERT INTO `productos` (`id`, `nombre`, `descripcion`, `precio`, `oferta`, `pre
 (5, 'Caja ExtraGrande', 'En esta caja, de nivel superior, encontrarás una gran cantidad de artículos de calidad', 59.99, 0, 0, 34, 13, 14, 13, 1),
 (6, 'Caja Premium', 'Esta caja es exclusiva para usuarios premium', 19.99, 0, 1, 20, 32, 48, 50, 21),
 (7, 'Caja Premium+', 'Esta caja es exclusiva para usuarios premium y tiene productos muy valorados. Solo hay 10 unidades por talla', 64.99, 0, 1, 10, 10, 10, 10, 10),
-(8, 'Caja Aleatoria', 'Esta caja contiene productos aleatorios. A los usuarios premium se le envía una todos los meses de forma gratuita', 4.99, 0, 0, 18, 30, 25, 35, 15);
+(8, 'Caja Aleatoria', 'Esta caja contiene productos aleatorios. A los usuarios premium se le envía una todos los meses de forma gratuita', 4.99, 0, 0, 18, 30, 25, 35, 15),
+(9, 'Caja Fashionista', 'Esta caja está pensada para aquellas personas que aman la moda y quieren estar a la vanguardia de las últimas tendencias. Contiene prendas, accesorios y productos que son tendencia en la moda.', 49.99, 0, 0, 18, 30, 25, 35, 15),
+(10, 'Caja de Lujo', 'Esta caja es la elección perfecta para aquellos que buscan la elegancia y la exclusividad en su ropa y accesorios. Contiene productos de alta calidad, confeccionados con materiales lujosos y con diseños exclusivos.', 99.99, 0, 1, 18, 30, 25, 35, 15),
+(11, 'Caja de Outfits', 'Esta caja contiene un conjunto completo de ropa y accesorios para armar un outfit completo y perfectamente coordinado, ideal para aquellas personas que quieren ahorrar tiempo y preocupaciones a la hora de vestirse.', 69.99, 0, 0, 18, 30, 25, 35, 15),
+(12, 'Caja de Calzado', 'Esta caja está especialmente pensada para los amantes del calzado, y contiene una selección de zapatos de alta calidad y estilo, que se adaptan a todo tipo de outfits.', 59.99, 0, 0, 18, 30, 25, 35, 15),
+(13, 'Caja de Combinaciones', 'Esta caja contiene una selección de prendas y accesorios cuidadosamente combinados entre sí, para que puedas crear diferentes outfits y estilos de manera fácil y rápida.', 79.99, 0, 0, 18, 30, 25, 35, 15),
+(14, 'Caja de Estilo Personalizado', 'Esta caja está diseñada para adaptarse al estilo y gustos de cada cliente de manera personalizada. Contiene productos seleccionados de acuerdo a las preferencias y necesidades de cada persona.', 99.99, 0, 1, 18, 30, 25, 35, 15),
+(15, 'Caja de Colección', ' Esta caja contiene productos de una colección exclusiva, que no se encuentran disponibles en otras tiendas. Ideal para aquellos que buscan productos únicos y exclusivos.', 149.99, 0, 1, 18, 30, 25, 35, 15),
+(16, 'Caja de Outfits Premium', 'Esta caja contiene outfits de alta calidad y estilo, diseñados para aquellos que buscan lo mejor en cuanto a moda y diseño. Contiene prendas y accesorios de marcas reconocidas y de alta calidad.', 119.99, 0, 1, 18, 30, 25, 35, 15),
+(17, 'Caja de Streetwear', 'Esta caja contiene productos de estilo urbano y casual, ideales para aquellos que quieren destacar en la calle con un estilo único y auténtico.', 39.99, 0, 0, 18, 30, 25, 35, 15),
+(18, 'Caja de Moda Sostenible', 'Esta caja contiene productos que se han producido de manera responsable y sostenible, para aquellos que buscan moda y estilo sin comprometer el cuidado del medio ambiente.', 49.99, 0, 0, 18, 30, 25, 35, 15),
+(19, 'Caja Sorpresa', 'Esta caja contiene una selección de ropa y accesorios elegidos especialmente para sorprenderte. No sabrás exactamente lo que hay dentro hasta que la abras.', 19.99, 0, 0, 18, 30, 25, 35, 15),
+(20, 'Caja Esencial', 'Esta caja contiene una selección de prendas que toda persona necesita en su guardarropa, como una chaqueta de mezclilla, unos pantalones de vestir y una camisa blanca.', 29.99, 0, 0, 18, 30, 25, 35, 15),
+(21, 'Caja Trendy', 'Esta caja contiene ropa y accesorios siguiendo las últimas tendencias de la moda. Ideal para aquellos que quieren estar a la moda y destacar en su estilo.', 39.99, 0, 0, 18, 30, 25, 35, 15),
+(22, 'Caja Elegante', 'Esta caja contiene ropa y accesorios elegantes y sofisticados para eventos formales y ocasiones especiales.', 19.99, 0, 0, 18, 30, 25, 35, 15),
+(23, 'Caja Casual', 'Esta caja contiene ropa cómoda y relajada para el uso diario, como sudaderas, playeras y pantalones deportivos.', 29.99, 0, 0, 18, 30, 25, 35, 15),
+(24, 'Caja de Temporada', 'Esta caja contiene ropa y accesorios diseñados específicamente para la temporada en que se adquieren. Incluye prendas para invierno, primavera, verano y otoño.', 49.99, 0, 0, 18, 30, 25, 35, 15),
+(25, 'Caja de Estilo', 'Esta caja contiene prendas seleccionadas cuidadosamente para que se adapten al estilo personal de cada persona, con un enfoque en la calidad y la durabilidad.', 19.99, 0, 0, 18, 30, 25, 35, 15),
+(26, 'Caja de Accesorios', 'Esta caja contiene una selección de accesorios para complementar cualquier outfit, como joyería, sombreros, bolsas y cinturones.', 29.99, 0, 0, 18, 30, 25, 35, 15),
+(27, 'Caja de exclusividad italiana', 'Esta caja podría incluir productos de alta calidad con diseños minimalistas y elegantes, como carteras, billeteras, gafas de sol, entre otros.', 99.99, 0, 1, 18, 30, 25, 35, 15),
+(28, 'Caja de lujo francés', 'Esta caja podría incluir productos icónicos de la marca como bolsos, carteras, ropa, accesorios y otros artículos de lujo.', 119.99, 0, 1, 18, 30, 25, 35, 15),
+(29, 'Caja de extravagancia italiana', 'Esta caja podría incluir productos de la marca con diseños audaces y coloridos como bolsos, zapatos, gafas de sol y otros accesorios.',109.99, 0, 1, 18, 30, 25, 35, 15),
+(30, 'Caja de artesanía de alta calidad', 'Esta caja podría incluir productos de la marca con diseños sofisticados y elegantes como carteras, relojes, perfumes y otros artículos de alta calidad.', 129.99, 0, 1, 18, 30, 25, 35, 15),
+(31, 'Caja de estilo clásico', 'Esta caja podría incluir productos icónicos de la marca como bolsos, perfumes, joyas, ropa y otros artículos de lujo con diseños clásicos y elegantes.', 139.99, 0, 1, 18, 30, 25, 35, 15),
+(32, 'Caja de estilo opulento', ' Esta caja podría incluir productos con diseños atrevidos y extravagantes como ropa, zapatos, accesorios y otros artículos de lujo.', 99.99, 0, 1, 18, 30, 25, 35, 15);
+
+
+
