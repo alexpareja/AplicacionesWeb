@@ -1,0 +1,313 @@
+/*Cabecera*/
+*{margin:0;}
+
+.cabecera {
+  background: white;
+  box-shadow: 0 0.5rem 1rem #f3eeee;
+  padding: 0.5rem 0;
+
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 4;
+}
+
+.contenedor-flex{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contenedor-flex ul{
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: bold;
+  font-size: small;
+  letter-spacing: 0.125rem;
+  margin:0;
+  padding: 0;
+  list-style: none;
+}
+
+.contenedor-flex ul li{
+  display: inline-block;
+}
+
+.contenedor-flex ul li a{
+  color: hsl(0, 5%, 19%);
+  text-decoration: none;
+  display: block;
+  padding: 0.5rem 1rem;
+}
+
+.fas{
+  font-family: "Font Awesome 5 Free", 'Ubuntu';
+  font-size: x-large;
+  letter-spacing: 0.125rem;
+  color: hsl(0, 5%, 19%);
+}
+
+.tooltip {
+  display: none;
+  position: absolute;
+  background-color: rgb(240, 240, 240);
+  border: 0.5rem solid #80008041;
+  color: black;
+  font-size: small;
+  padding: 1rem;
+  width: 17rem;
+  border-bottom-left-radius: 0.3125rem;
+  border-bottom-right-radius: 0.3125rem;
+  z-index: 3;
+  right: 1.5rem;
+  top: 3rem;
+}
+
+.tooltip p{
+  font-size: small;
+}
+
+li:hover .tooltip {
+  display: block;
+}
+
+.tooltip:hover {
+  display: block;
+}
+
+.bolsa {
+  padding-bottom: 0.5rem;
+  font-size: 0.95em;
+}
+
+.tooltip button{
+  display: block;
+  margin: 0.1rem auto;
+  margin-bottom: 0.6rem;
+  padding: 0.8rem;
+  padding-left: 4.7rem;
+  padding-right: 4.7rem; 
+  background-color: black;
+  color: white;
+  border: none;
+  font-size: 1.2em;
+}
+
+.tooltip button:hover {
+  background-color: #555;
+}
+
+.enlace {
+    font-size: 1em;
+}
+
+.enlace-sus {
+    font-size: 0.73em;
+}
+
+.linea-carrito{
+  border-bottom: 0.063rem solid #ccc;
+}
+
+.total {
+  margin-top: 1rem;
+  padding-bottom: 0.5rem;
+  font-size: 0.9em;
+}
+
+
+.menu:hover, .letras:hover{
+  color: #800080;
+  transform: scale(1.1);
+}
+
+.contenedor-flex ul li a:hover{
+  color: #800080;
+}
+
+.contenedor-flex ul li a i:hover{
+  color: #800080;
+  transform: scale(1.1);
+}
+
+.letras{
+  font-size: 1.2rem;
+  letter-spacing: 0.2rem;
+  font-family: 'Ubuntu', sans-serif;
+  text-decoration: none;
+  font-weight: bold;
+  color: #333;
+}
+
+.menu{display:none; width: 1.5625rem; height: 1.5625rem;}
+#menu-icono{display:none;}
+
+.white{
+	color: white;
+}
+
+/*pie*/
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.pie {
+  background-color: #80008041;
+  transition: all 0.3s ease-in-out;
+
+}
+
+.grupo1 {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 0;
+}
+
+.boxLogo, .boxPaginas, .boxRedes{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.logopie {
+  margin-top: 3.5rem;
+  text-align: center;
+  width: 15rem;
+}
+
+.instagram, .twitter{
+  width: 3.125rem;
+  height: 3.125rem;
+  margin-top: 1rem;
+}
+
+.boxPaginas {
+  text-align: center;
+  font-weight: bold;
+  font-size: small;
+  letter-spacing: 0.0625rem;
+  list-style: none;
+} 
+
+.boxPaginas li{
+  display: block;
+  padding: 0.5rem;
+}
+
+.boxPaginas li a {
+  color: #202020;
+  text-decoration: none;
+}
+
+.boxPaginas li a:hover{
+  color: #800080;
+}
+
+.boxRedes h2 {
+  margin-top: 0.5rem;
+  color: #202020;
+  font-size: 0.8125rem;
+  font-weight: bold;
+  text-align: center;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.redSocial a{
+  display: block;
+  margin-top: 1rem;
+}
+
+.grupo1 .boxRedes .redSocial a:hover {
+  color: #800080;
+}
+
+.instagram:hover, .twitter:hover{
+  transform: scale(1.1);
+}
+
+.grupo2 {
+  color: hsl(0, 50%, 94%);
+  background-color: #572364;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+.grupo2 small {
+  font-size: small;
+}
+
+@media only screen and (max-width: 735px){
+  /*CABECERA*/
+  .contenedor-flex ul li a {
+    padding: 0.5rem 0.5rem;
+  }
+
+  /*PIE*/
+  .logopie {
+    margin-top: 3.5rem;
+    width: 10rem;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media only screen and (max-width: 635px){
+  /*CABECERA*/
+  .menu {
+    display: block;
+    margin: 0.5rem;
+  }
+
+  .menu:hover{
+    cursor: pointer;
+  }
+
+  .paginas{
+    position: absolute;
+    top: 100%; left: 0; right: 0;
+    background: #80008041;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+
+  #menu-icono:checked ~ .paginas{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+
+  .menu{
+    top:0; left:0; right:0;
+  }
+
+  .paginas ul li{
+    margin: 0.5rem;
+    padding: 0.5rem;
+    background: #f3eeee;
+    display: block;
+  }
+
+  /*PIE*/
+  .grupo1 {
+    width: 100%;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .boxLogo{
+    text-align: center;
+  }
+  .logopie{
+    width: 15rem;
+    margin-top: 1rem;
+  }
+  .redSocial{
+    display: flex;
+    justify-content: center;
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+}
+
+::-webkit-scrollbar {
+  display: none;
+}

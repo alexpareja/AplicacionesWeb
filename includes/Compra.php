@@ -260,7 +260,7 @@ class Compra
 		
         $tallasStr = implode('<br>', $tallas);
         $cantidadesStr = implode('<br>', $cantidades);
-        $preciosStr = implode('<br>', $precios);
+        $preciosStr = implode(' € <br>', $precios);
 
         $html .= <<<EOF
                 <tr data-fecha=$fecha data-nombre='$nombrePsStr' data-talla='$tallasStr' data-cantidad='$cantidadesStr' data-precio='$totalesConDescuento'>
