@@ -49,10 +49,33 @@ else{
 
 				<?php
 					if(!isset($_SESSION["login"])){
-						echo "<li><a href='login.php'><i class='fas fa-sign-in-alt'></i></a></li>";
+                        ?>
+						<li><a href='login.php'><i class='fas fa-sign-in-alt'></i></a>
+                        <span class="tooltip">
+                        <a href="login.php"><button>Iniciar sesión</button></a>
+                        <a class= "enlace-sus" href='registro.php'>¿No estás registrado? Regístrate aquí</a>
+                        </span>
+                        </li>
+                        <?php
 					}
 					else{
-						echo "<li><a href='miCuenta.php'><i class='fas fa-user'></i></a></li>";
+                        ?>
+						<li><a href='miCuenta.php'><i class='fas fa-user'></i></a>
+                        <span class="tooltip">
+                        <a class= "enlace" href='miCuenta.php'>Mi cuenta</a>
+                        <a class= "enlace" href='listadeseos.php'>Favoritos</a>
+                        <?php
+                        if($_SESSION['rol'] === "U") {
+                        ?>
+                        <a class= "enlace-sus" href='suscripcion.php'>¿Aún no eres premium? Suscríbete aquí</a>
+                        <?php
+                        }
+                        ?>
+                        <a class= "enlace-sus" href='logout.php'>Cerrar sesión</a>
+                        </span>
+                        </li>
+                        </li>
+                        <?php
 					}
 				?>
 			</ul>
