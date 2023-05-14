@@ -32,15 +32,15 @@ else{
 					<?php
 					if ($_SESSION['numprodcarrito'] === 0){
 						?>
-						<p>Tu bolsa de la compra está vacía</p>
-						<div class="linea-carrito"></div>
-						<p>Total: <?php echo $_SESSION['precioTotal']; ?>€</p>
+						<a class="bolsa">Tu bolsa de la compra está vacía</a>
+						<a class="linea-carrito"></a>
+						<a class="total">Total: <?php echo $_SESSION['precioTotal']; ?>€</a>
 						<?php
 					} else {
 						?>
-						<p>Tienes <?php echo $_SESSION['numprodcarrito']; echo $mensaje; ?> en el carrito</p>
-						<div class="linea-carrito"></div>
-                		<p>Total: <?php echo $_SESSION['precioTotal']; ?>€</p>
+						<a class="bolsa">Tienes <?php echo $_SESSION['numprodcarrito']; echo $mensaje; ?> en el carrito</a>
+						<a class="linea-carrito"></a>
+                		<a class="total">Total: <?php echo $_SESSION['precioTotal']; ?>€</a>
 						<?php
 					}
 					?>
@@ -73,7 +73,6 @@ else{
                         ?>
                         <a class= "enlace-sus" href='logout.php'>Cerrar sesión</a>
                         </span>
-                        </li>
                         </li>
                         <?php
 					}

@@ -1287,9 +1287,9 @@ li:hover .tooltip {
   display: block;
 }
 
-.tooltip p:first-child {
+.bolsa {
   padding-bottom: 0.5rem;
-  margin-bottom: 1rem;
+  font-size: 0.95em;
 }
 
 .tooltip button{
@@ -1321,9 +1321,10 @@ li:hover .tooltip {
   border-bottom: 0.063rem solid #ccc;
 }
 
-.tooltip p:last-child {
+.total {
   margin-top: 1rem;
   padding-bottom: 0.5rem;
+  font-size: 0.9em;
 }
 
 .menu:hover, .letras:hover{
