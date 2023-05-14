@@ -37,6 +37,10 @@ if ($_SESSION['rol'] == 'U') {
     if ($fechaActual->format('Y-m-d') === $fechaCajaFormato->format('Y-m-d')) {
       $fechaActualMasUnMes = $fechaActual->modify('+1 month')->format('Y-m-d H:i:s');
       $tallaCaja = $caja->getTalla();
+      if (empty($tallaCaja)) {
+        $tallasDisponibles = array('xs', 's', 'm', 'l', 'xl');
+        $tallaCaja = $tallasDisponibles[array_rand($tallasDisponibles)];
+      }
       CajaSuscripcion::edita($idCaja, $id, $fechaActualMasUnMes, $tallaCaja);
       $fechaCaja = $caja->getFechaCaja();
       $compra = Compra::crea($id, 8, $tallaCaja, 1, 0, 0);
