@@ -804,21 +804,36 @@ function aceptarCompra(){
     window.alert("Pago confirmado");
 }
 
+//FAQS
+window.onload = function(){mostrarRespuesta();}
 
-function mostrarRespuesta() {
-	const h2 = document.querySelectorAll('.pregunta');
-	const p = document.querySelectorAll('.submenuFaqs');
+function mostrarRespuesta(numero) {
+  const menu = document.querySelector('.menuFaqs');
+  const opciones = menu.querySelectorAll('.opcion');
+  const respuestas = menu.querySelectorAll('.submenuFaqs');
 
-	h2.forEach((cadaH2, i)=>{
-		h2[i].addEventListener('click',()=>{
-			p.forEach((cadaP, i)=>{
-				p[i].style.display = 'none';
-			});
-			p[i].style.display = 'block';
-		});
-	});
+  if (respuestas[numero].style.display === 'block') {
+    respuestas[numero].style.display = 'none';
+  } else {
+    respuestas.forEach((respuesta) => {
+      respuesta.style.display = 'none';
+    });
+    respuestas[numero].style.display = 'block';
+  }
 }
 
+
+//Filtros Blog
+window.onload = function () {
+	mostrarFiltrosBlog();
+
+	inicializarBuscador();
+	ordenarBlogs();
+	quitarFiltrosBlog();
+	filtrarBlogs();
+}
+
+//barra lateral
 function mostrarFiltrosBlog(){
 	var menu = document.querySelector('.filBlog');
 	
@@ -828,13 +843,9 @@ function mostrarFiltrosBlog(){
 	else {
 		menu.style.display = 'none';
 	}
-
-	inicializarBuscador();
-	ordenarBlogs();
-	quitarFiltrosBlog();
-	filtrarBlogs();
 }
 
+//buscador por autor, titulo o descripcion
 function inicializarBuscador(){
 	const inputBusqueda = document.querySelector('#campo-busqueda-blog');
 	const contenedorArticulos = document.querySelector('.panelBlog');
@@ -856,6 +867,7 @@ function inicializarBuscador(){
 	});
 }
 
+//ordenar por titulo
 function ordenarBlogs() {
 	const selectorOrden = document.querySelector('#ordenar-blogs');
 	const contenedorArticulos = document.querySelector('.panelBlog');
@@ -885,10 +897,10 @@ function ordenarBlogs() {
 	});
 }
 
+//quitar los filtros
 function quitarFiltrosBlog(){
 	const contenedorArticulos = document.querySelector('.panelBlog');
 	
-
 	const btn = document.querySelector('.botones-filtros-blog1');
 	const campo = document.querySelector('#campo-busqueda-blog');
 	btn.addEventListener(
@@ -907,6 +919,7 @@ function quitarFiltrosBlog(){
 	);
 }
 
+//tipos de categoria blog
 function filtrarBlogs(){
 	const checkboxes = document.querySelectorAll('.filtro-categoria');
 	const contenedorArticulos = document.querySelector('.panelBlog');
@@ -934,14 +947,7 @@ function filtrarBlogs(){
 			}
 		});
 	});
-
-
 }
-
-  
-  
-
-
 
 
 
