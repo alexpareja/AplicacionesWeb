@@ -282,24 +282,6 @@ function ordenarProductos() {
   }
 }
 
-//mostrar previsualizacion imagen del producto en los formularios
-	function changeHandler(ev) {
-		var archivo = ev.target.files[0];
-		var subirArchivo1 = document.getElementById('subir-archivo1');
-		var reader = new FileReader();
-		reader.onload = function(event) {
-			var imagen = document.createElement('img');
-			imagen.src = event.target.result;
-			subirArchivo1.innerHTML = '';
-			subirArchivo1.appendChild(imagen);
-			var nombreArchivo = document.createElement('p');
-			nombreArchivo.innerHTML = archivo.name;
-			subirArchivo1.appendChild(nombreArchivo);
-			imagenPrevia = imagen;
-		}
-  reader.readAsDataURL(archivo);
-    }
-
 	$(document).ready(function(){
 		var urlParams = new URLSearchParams(window.location.search);
 		var id = urlParams.get('id');
@@ -557,74 +539,6 @@ $(document).ready(function() {
   });
 });
 
-//canjear cupones de descuento
-$(document).ready(function() {
-	var cuponUtilizado = false;
-	var descuentoSeleccionado = 0;
-	var mensajeError = $("#mensaje_error");
-	var mensajeCupon = $("#mensaje_cupon");
-
-	var botonValidarCupon = $("#validar_cupon");
-	var botonValidarCompra = $("#validar_compra");
-
-	botonValidarCupon.click(function() {
-		if (cuponUtilizado) {
-			mostrarMensajeError("Solo se puede utilizar un cupón por compra.");
-		}
-		else{
-			var codigo_cupon = $("#codigo_cupon").val();
-			var url="verificar_cupon.php?codigo_cupon=" + codigo_cupon;
-			$.get(url,canjearCupon);
-		}
-	});
-	
-	botonValidarCompra.click(function() {
-			if(cuponUtilizado === true){
-				var url="procesar_cupon.php?idCupon=" + descuentoSeleccionado;
-				$.get(url,procesaCompra);
-			}
-	});
-	
-	function canjearCupon(response) {
-		
-		var cupon = JSON.parse(response);
-		if (cupon.valido == true) {
-			
-			var fechaExpiracion = new Date(cupon.fechaExpiracion);
-			
-			if (fechaExpiracion < new Date()) {
-				mostrarMensajeError("El cupón ha caducado.");
-			}else{
-				mostrarMensajeError("");
-				mostrarDescuentoAplicado("Se aplicó un descuento del " + cupon.descuento + "%.");
-				
-				var totalActual = parseFloat($("#total_compra").text());
-				var montoDescuento = totalActual * (cupon.descuento / 100);
-				var totalConDescuento = totalActual - montoDescuento;
-				totalConDescuento = totalConDescuento.toFixed(2);
-				$("#total_compra").text(totalConDescuento);
-				cuponUtilizado = true;
-				descuentoSeleccionado = cupon.id;
-			}
-
-		} else {
-			mostrarMensajeError("El cupón no es válido.");
-		}
-	}
-	function procesaCompra(response) {
-	}
-	function mostrarMensajeError(mensaje) {
-		mensajeError.text(mensaje);
-	}
-	function mostrarDescuentoAplicado(mensaje) {
-		mensajeCupon.text(mensaje);
-	}
-});
-
-//Ventana pago confirmado
-function aceptarCompra(){
-    window.alert("Pago confirmado");
-}
 
 //Ventana pago confirmado
 function confirmarEditar(){
