@@ -25,12 +25,9 @@ INSERT INTO `productos` (`id`, `nombre`, `descripcion`, `precio`, `oferta`, `pre
 (24, 'Caja de Temporada', 'Esta caja contiene ropa y accesorios diseñados específicamente para la temporada en que se adquieren. Incluye prendas para invierno, primavera, verano y otoño.', 49.99, 0, 0, 18, 30, 25, 35, 15),
 (25, 'Caja de Estilo', 'Esta caja contiene prendas seleccionadas cuidadosamente para que se adapten al estilo personal de cada persona, con un enfoque en la calidad y la durabilidad.', 19.99, 0, 0, 18, 30, 25, 35, 15),
 (26, 'Caja de Accesorios', 'Esta caja contiene una selección de accesorios para complementar cualquier outfit, como joyería, sombreros, bolsas y cinturones.', 29.99, 0, 0, 18, 30, 25, 35, 15),
-(27, 'Caja de exclusividad italiana', 'Esta caja podría incluir productos de alta calidad con diseños minimalistas y elegantes, como carteras, billeteras, gafas de sol, entre otros.', 99.99, 0, 1, 18, 30, 25, 35, 15),
+(27, 'Caja exclusiva italiana', 'Esta caja podría incluir productos de alta calidad con diseños minimalistas y elegantes, como carteras, billeteras, gafas de sol, entre otros.', 99.99, 0, 1, 18, 30, 25, 35, 15),
 (28, 'Caja de lujo francés', 'Esta caja podría incluir productos icónicos de la marca como bolsos, carteras, ropa, accesorios y otros artículos de lujo.', 119.99, 0, 1, 18, 30, 25, 35, 15),
-(29, 'Caja de extravagancia italiana', 'Esta caja podría incluir productos de la marca con diseños audaces y coloridos como bolsos, zapatos, gafas de sol y otros accesorios.',109.99, 0, 1, 18, 30, 25, 35, 15),
-(30, 'Caja de artesanía de alta calidad', 'Esta caja podría incluir productos de la marca con diseños sofisticados y elegantes como carteras, relojes, perfumes y otros artículos de alta calidad.', 129.99, 0, 1, 18, 30, 25, 35, 15),
+(29, 'Caja extravagante italiana', 'Esta caja podría incluir productos de la marca con diseños audaces y coloridos como bolsos, zapatos, gafas de sol y otros accesorios.', 109.99, 0, 1, 18, 30, 25, 35, 15),
+(30, 'Caja artesana', 'Esta caja podría incluir productos de la marca con diseños sofisticados y elegantes como carteras, relojes, perfumes y otros artículos de alta calidad.', 129.99, 0, 1, 18, 30, 25, 35, 15),
 (31, 'Caja de estilo clásico', 'Esta caja podría incluir productos icónicos de la marca como bolsos, perfumes, joyas, ropa y otros artículos de lujo con diseños clásicos y elegantes.', 139.99, 0, 1, 18, 30, 25, 35, 15),
 (32, 'Caja de estilo opulento', ' Esta caja podría incluir productos con diseños atrevidos y extravagantes como ropa, zapatos, accesorios y otros artículos de lujo.', 99.99, 0, 1, 18, 30, 25, 35, 15);
-
-
-
