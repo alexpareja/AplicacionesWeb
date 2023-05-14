@@ -1080,7 +1080,6 @@ text-shadow: 0.125rem 0.125rem 0.25rem #38313839;
 
 .checkfiltros li{
   display: flex;
-  flex: row;
 }
 
 .botones-filtros-blog1, .botones-filtros-blog2{
