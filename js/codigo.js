@@ -715,3 +715,7 @@ function terminos(){
 		});
 	});
 }
+
+function irLogin(){
+	window.location.href = "login.php";
+}

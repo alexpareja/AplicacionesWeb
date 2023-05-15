@@ -52,7 +52,7 @@ else{
                         ?>
 						<li><a href='login.php'><i class='fas fa-user'></i></a>
                         <span class="tooltip">
-                        <a href="login.php"><button>Iniciar sesión</button></a>
+                        <button onclick="irLogin()">Iniciar sesión</button>
                         <a class= "enlace-sus" href='registro.php'>¿No estás registrado? Regístrate aquí</a>
                         </span>
                         </li>
