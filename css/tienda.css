@@ -327,7 +327,4 @@ input[type=range]::-webkit-slider-thumb {
 .estrellas input[type="radio"]:checked + label img {
   filter: none;
 }
-.estrellas label:hover ~ label img,
-.estrellas input[type="radio"]:checked + label ~ label img {
-  filter: grayscale(100%);
-}
+
