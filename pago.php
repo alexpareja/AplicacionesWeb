@@ -77,7 +77,7 @@ else{
     if($total_price>=30){
         $contenidoPrincipal .= <<<EOS
     <li>
-        <strong>Gastos de envío: Gratis</strong>
+        <p class="strong">Gastos de envío: Gratis</p>
         <br>
         <p>*Gratis para compras igual o superiores a 30€</p>
     </li>
@@ -87,7 +87,7 @@ EOS;
         $total_price += 4.99;
         $contenidoPrincipal .= <<<EOS
     <li>
-        <strong>Gastos de envío: 4.99 €</strong>
+        <p class="strong">Gastos de envío: 4.99 €</p>
         <br>
         <p>*Gratis para compras igual o superiores a 30€</p>
     </li>
