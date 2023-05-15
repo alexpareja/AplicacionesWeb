@@ -1118,7 +1118,6 @@ text-shadow: 0.125rem 0.125rem 0.25rem #38313839;
 .contenidoArticulos {
   background-color: white;
   min-height: 100vh;
-  min-width:min-content;
 }
 
 .titFB{
