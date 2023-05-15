@@ -587,6 +587,11 @@ function mostrarFiltrosBlog(){
 	else {
 		menu.style.display = 'none';
 	}
+
+	inicializarBuscador();
+	ordenarBlogs();
+	quitarFiltrosBlog();
+	filtrarBlogs();
 }
 
 //buscador por autor, titulo o descripcion

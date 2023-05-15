@@ -1168,26 +1168,41 @@ text-shadow: 0.125rem 0.125rem 0.25rem #38313839;
   color: #383138;
 }
 
+.titBlog{
+  display: flex;
+  align-items: flex-start;
+  -webkit-box-pack: justify;
+  justify-content:space-between;
+}
+
 
 .titBlog .subtituloBlog{
   text-align: center;
-  padding: 3rem 0;
+  margin-top: 2rem;
 }
 
 .btnFB{
   background-color: #800080;
+  border: 0.125rem solid #800080;
   padding: 0.4rem;
   cursor: pointer;
-  position: relative;
-  z-index: 1;
-  left: 1.5rem;
-  top: 5.5rem;
+  margin-top: 3.5rem;
+  margin-left: 3rem;
   border-radius: 0.3125rem;
   text-align: center;
+  text-shadow: 0.125rem 0.125rem 0.25rem #38313860;
 }
 
 .btnFB i{
   color: white;
+}
+
+.btnFB:hover{
+  background-color: transparent;
+}
+
+.btnFB i:hover{
+  color:#333;
 }
 
 .panelBlog{
@@ -1196,6 +1211,7 @@ text-shadow: 0.125rem 0.125rem 0.25rem #38313839;
   justify-content: center;
   text-align: center;
   gap: 2rem;
+  padding: 0 1rem;
 }
 
 .articulo{
