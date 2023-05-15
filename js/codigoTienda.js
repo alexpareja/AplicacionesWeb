@@ -16,8 +16,6 @@ function mostrarMenu() {
   if(tablaCompras !== null){
 		var valoracion = document.getElementById("filtro-valoracion");
 		valoracion.classList.add("ocultoFiltro");
-		var premium = document.getElementById("premium-filtros");
-		premium.classList.add("ocultoFiltro");
   }; 
 }
 //Slider precio se actualiza automáticamente
@@ -68,8 +66,6 @@ function filtrarProductos() {
 			tallasSeleccionadas.push(opcionesTalla[i].value);
 		}
 	}
- 
-
 
   // Obtener la lista de productos y los elementos de la lista
   var listaProductos = document.getElementById("lista-productos");
@@ -86,22 +82,11 @@ function filtrarProductos() {
 			break;
 		}
 	}  
-	
-	// Obtener tipo prod
-	var tiposSeleccionados = [];
-	var opcionesTipo = document.getElementsByName("tipo");
-	for (var i = 0; i < opcionesTipo.length; i++) {
-		if (opcionesTipo[i].checked) {
-			tiposSeleccionados.push(opcionesTipo[i].value);
-		}
-	}
-	
 	    for (var i = 0; i < elementosLista.length; i++) {
 			var mostrar = true; 
 			var elemento = elementosLista[i];
 			var precio = parseFloat(elemento.getAttribute("data-precio"));
 			var tallas = elemento.getAttribute("data-talla").split(",");
-			var premium = elemento.getAttribute("data-premium");
 			var valoracionProducto = parseFloat(elemento.getAttribute("data-valoracion"));
 			
 			if (valoracionProducto < valoracionSeleccionada) {
@@ -110,16 +95,6 @@ function filtrarProductos() {
 			for (var j = 0; j < tallasSeleccionadas.length; j++) {
 				if (!tallas.includes(tallasSeleccionadas[j])) {
 				mostrar = false;
-				}
-				else{
-					mostrar = true;
-					break;
-				}
-			}
-			
-			for (var j = 0; j < tiposSeleccionados.length; j++) {
-				if (tiposSeleccionados[j] !== premium) {
-					mostrar = false;
 				}
 				else{
 					mostrar = true;
