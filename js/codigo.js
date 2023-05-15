@@ -581,7 +581,7 @@ window.onload = function () {
 function mostrarFiltrosBlog(){
 	var menu = document.querySelector('.filBlog');
 	
-	if(menu.style.display === 'none'){
+	if(menu.style.display === 'none' || menu.style.display === ''){
 		menu.style.display = 'block';
 	}
 	else {
@@ -704,7 +704,7 @@ function terminos(){
 	const terminos = document.querySelectorAll('.ter');
 	terminos.forEach(termino => {
 		termino.addEventListener('click', () =>{
-			if (termino.querySelector('.deUso').style.display==='none'){
+			if (termino.querySelector('.deUso').style.display==='none' || termino.querySelector('.deUso').style.display===''){
 				termino.querySelector('.deUso').style.display='block';
 			}
 			else{
