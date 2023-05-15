@@ -105,13 +105,28 @@ class Tienda {
 				$nombre = $prod->getNombre();
 				$oferta = $prod->getOferta();
 				$precio = $prod->getPrecio();
+				$comentarios = ComentariosProd::buscaPorProducto($prod->getId());
+				$puntuaciones = array();
+				foreach ($puntuaciones as $clave => $valor) {
+					unset($puntuaciones[$clave]);
+				}
+				$suma = 0;
+				$media = 1;
+				if(count($comentarios) > 0){
+					foreach ($comentarios as $comentario) {
+						$puntuaciones[] = $comentario->getReview();
+					}
+					
+					$suma = array_sum($puntuaciones);
+					$media = $suma / count($puntuaciones);
+				}
 				if($oferta>0){
 					$precio=$precio * (100- $oferta) /100;
 				}
 				$tallas = $prod->getTallasDisponibles();
 				if($tallas !== '' || isset($_SESSION['admin']) && $_SESSION['admin']){
 					$html .= <<<EOS
-						<li class="producto-premium" data-precio='$precio' data-talla='$tallas' data-nombre='$nombre'>
+						<li class="producto-premium" data-precio='$precio' data-talla='$tallas' data-nombre='$nombre' data-valoracion='$media'>
 							<a href='$link'>
 							<div class="producto-imagen">
 							<img class='imgProducto
