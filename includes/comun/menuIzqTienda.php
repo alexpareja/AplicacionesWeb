@@ -35,15 +35,15 @@
 					<p>Valoración mínima:</p>
 					<div class="estrellas">
 						<input type="radio" name="valoracion" id="estrella1" value="1" onclick="filtrarProductos()"/>
-						<label for="estrella1"><img src="img/estrellaVacia.png" /></label>
+						<label for="estrella1"><img src="img/estrellaVacia.png" alt="estrella1"/></label>
 						<input type="radio" name="valoracion" id="estrella2" value="2" onclick="filtrarProductos()"/>
-						<label for="estrella2"><img src="img/estrellaVacia.png" /></label>
+						<label for="estrella2"><img src="img/estrellaVacia.png" alt="estrella2"/></label>
 						<input type="radio" name="valoracion" id="estrella3" value="3" onclick="filtrarProductos()"/>
-						<label for="estrella3"><img src="img/estrellaVacia.png" /></label>
+						<label for="estrella3"><img src="img/estrellaVacia.png" alt="estrella3"/></label>
 						<input type="radio" name="valoracion" id="estrella4" value="4" onclick="filtrarProductos()"/>
-						<label for="estrella4"><img src="img/estrellaVacia.png" /></label>
+						<label for="estrella4"><img src="img/estrellaVacia.png" alt="estrella4"/></label>
 						<input type="radio" name="valoracion" id="estrella5" value="5"  onclick="filtrarProductos()"/>
-						<label for="estrella5"><img src="img/estrellaVacia.png" /></label>
+						<label for="estrella5"><img src="img/estrellaVacia.png" alt="estrella5"/></label>
             </div>
 				</div>
 				</li>
