@@ -866,12 +866,12 @@ text-shadow: 0.125rem 0.125rem 0.25rem #38313839;
   background-color: white;
 }
 
-.contenidoTC article{
+.contenidoTC article, .acercaDe{
   padding: 2rem;
   line-height: 1.5rem;
 }
 
-.contenidoTC article h2{
+.contenidoTC article h2, .acercaDe h2{
   font-size: 1.5rem;
   padding: 1rem 0;
 }

@@ -20,7 +20,7 @@ $contenidoPrincipal = <<<EOS
 			<li><a href="#terminosAPI">Términos de la API</a></li>
 		</ul>
 		<div class="contenidoTC">
-			<article>
+			<div class="acercaDe">
 				<h2>Acerca de</h2>
 				<p>Estamos comprometidos con los derechos de privacidad
 				de nuestros usuarios. Nos compremetemos a compartit
@@ -30,8 +30,8 @@ $contenidoPrincipal = <<<EOS
 				personales, y apoyamos plenamente los esfuerzos para 
 				garantizar su protección en línea.</p>
 				<p>La siguiente es una recopilación de información y recursos para ayudar a responder cualquier pregunta que tenga sobre su experiencia con La Quinta Caja. ¡Estamos agradecidos por su interés y orgullosos de tenerlo como parte de nuestra comunidad!</p>
-			</article>
-			<article id="condicionesUso">
+			</div>
+			<article id="condicionesUso" class="ter">
 				<div class="termino">
 					<h2>Condiciones de uso</h2>
 					<span><i class="fas fa-chevron-down"></i></span>
@@ -41,7 +41,7 @@ $contenidoPrincipal = <<<EOS
 					<p>La Quinta Caja se reserva el derecho de modificar o descontinuar todo o parte del Servicio en cualquier momento (incluyendo la limitación o descontinuación de ciertas características del Servicio), temporal o permanentemente, sin previo aviso. La Quinta Caja no tendrá ninguna responsabilidad por ningún cambio en el Servicio, incluidas las funcionalidades pagadas del Servicio, o cualquier suspensión o terminación de su acceso o uso del Servicio. Las tarifas de servicio no son reembolsables. Debe conservar copias de cualquier Contenido de usuario que publique en el Servicio para tener copias permanentes en caso de que el Servicio se modifique de tal manera que pierda el acceso al Contenido de usuario que publicó en el Servicio.</p>
 				</div>
 			</article>
-			<article id="politicaPrivacidad">
+			<article id="politicaPrivacidad" class="ter">
 				<div class="termino">
 					<h2>Política de privacidad</h2>
 					<span><i class="fas fa-chevron-down"></i></span>
@@ -53,7 +53,7 @@ $contenidoPrincipal = <<<EOS
 					<p>En su caso, indicamos si y por qué debe proporcionarnos su información personal, así como las consecuencias de no hacerlo. Si no proporciona Información personal cuando se le solicita, es posible que no pueda beneficiarse de nuestro Servicio si esa información es necesaria para brindarle el servicio o si estamos legalmente obligados a recopilarla.</p>
 				</div>
 			</article>
-			<article id="rgpd">
+			<article id="rgpd" class="ter">
 				<div class="termino">
 					<h2>RGPD</h2>
 					<span><i class="fas fa-chevron-down"></i></span>
@@ -64,7 +64,7 @@ $contenidoPrincipal = <<<EOS
 					<p>En cualquier momento, puede solicitar que su información se exporte y se le envíe para su revisión, y cumpliremos de inmediato cualquier solicitud suya para que su información sea eliminada y olvidada.</p>
 				</div>
 			</article>
-			<article id="seguridad">
+			<article id="seguridad" class="ter">
 				<div class="termino">
 					<h2>Seguridad</h2>
 					<span><i class="fas fa-chevron-down"></i></span>
@@ -74,7 +74,7 @@ $contenidoPrincipal = <<<EOS
 					<p>Estamos eternamente agradecidos por todos aquellos que trabajaron arduamente para identificar las debilidades dentro de La Quinta Caja. Para informes que no son no vulnerabilidades comunes, nos gusta recompensar a aquellos que revelan vulnerabilidades de manera responsable con un reconocimiento, botín o dinero de recompensa.</p>
 				</div>
 			</article>
-			<article id="avisoRetencion">
+			<article id="avisoRetencion" class="ter">
 				<div class="termino">
 					<h2>Aviso de retención de datos</h2>
 					<span><i class="fas fa-chevron-down"></i></span>
@@ -85,7 +85,7 @@ $contenidoPrincipal = <<<EOS
 					<p>Esta política cubre los datos que tienen terceros en nuestro nombre, por ejemplo, proveedores de almacenamiento en la nube o almacenamiento de registros fuera del sitio. También cubre datos que nos pertenecen pero que están en manos de empleados en dispositivos personales.</p>
 				</div>
 			</article>
-			<article id="terminosAPI">
+			<article id="terminosAPI" class="ter">
 				<div class="termino">
 					<h2>Términos de la API</h2>
 					<span><i class="fas fa-chevron-down"></i></span>

@@ -694,7 +694,24 @@ function filtrarBlogs(){
 }
 
 
-
 function seleccionarTalla(talla) {
   document.getElementById('tallaSeleccionada').value = talla;
+}
+
+window.onload = function () {
+	terminos();
+}
+
+function terminos(){
+	const terminos = document.querySelectorAll('.ter');
+	terminos.forEach(termino => {
+		termino.addEventListener('click', () =>{
+			if (termino.querySelector('.deUso').style.display==='none'){
+				termino.querySelector('.deUso').style.display='block';
+			}
+			else{
+				termino.querySelector('.deUso').style.display='none';
+			}
+		});
+	});
 }
