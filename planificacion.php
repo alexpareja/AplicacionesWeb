@@ -361,7 +361,7 @@ $contenidoPrincipal = <<<EOS
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                    <div class="timeline-date">25 abril</div>
+                    <div class="timeline-date">20 abril</div>
                     <div class="timeline-content">
                         <h3 class="tituloTime">Etapa 4.1</h3>
                         <p class="descripcionTime">Corrección práctica 3</p>
@@ -370,10 +370,181 @@ $contenidoPrincipal = <<<EOS
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
+                    <div class="timeline-date">22 abril</div>
+                    <div class="timeline-content">
+                        <h3 class="tituloTime">Etapa 4.2</h3>
+                        <p class="descripcionTime">Finalización de la implementación de los filtros en la tienda</p>
+                        <p class="miembrosTime">Alejandro Pareja</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">02 mayo</div>
+                    <div class="timeline-content">
+                        <h3 class="tituloTime">Etapa 4.3</h3>
+                        <p class="descripcionTime">Añadir la implementación de los comentarios en las entradas del blog</p>
+                        <p class="miembrosTime">Sergio Atienza</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">03 mayo</div>
+                    <div class="timeline-content">
+                        <h3 class="tituloTime">Etapa 4.4</h3>
+                        <p class="descripcionTime">Añadir usuario premium y darse de baja del mismo</p>
+                        <p class="miembrosTime">Cristina Morillo</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">04 mayo</div>
+                    <div class="timeline-content">
+                        <h3 class="tituloTime">Etapa 4.5</h3>
+                        <p class="descripcionTime">Añadir responder a comentarios dentro del blog</p>
+                        <p class="miembrosTime">Sergio Atienza</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
                     <div class="timeline-date">05 mayo</div>
                     <div class="timeline-content">
-                        <h3 class="tituloTime">Entrega final</h3>
-                        <p class="descripcionTime">Aplicación Web completa y funcional</p>
+                        <h3 class="tituloTime">Etapa 4.6</h3>
+                        <p class="descripcionTime">Añadir página de Suscripción</p>
+                        <p class="miembrosTime">Cristina Morillo</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">06 mayo</div>
+                    <div class="timeline-content">
+                        <h3 class="tituloTime">Etapa 4.7</h3>
+                        <p class="descripcionTime">Añadir códigos de descuento en la compra de productos</p>
+                        <p class="miembrosTime">Alejandro Pareja y Elena Basca</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">07 mayo</div>
+                    <div class="timeline-content">
+                        <h3 class="tituloTime">Etapa 4.8</h3>
+                        <p class="descripcionTime">Añadir la función de recibir una caja gratis al mes</p>
+                        <p class="miembrosTime">Cristina Morillo</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">08 mayo</div>
+                    <div class="timeline-content">
+                        <h3 class="tituloTime">Etapa 4.9</h3>
+                        <p class="descripcionTime">Añadido botón de accesibilidad</p>
+                        <p class="miembrosTime">Alejandro Pareja</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">09 mayo</div>
+                    <div class="timeline-content">
+                        <h3 class="tituloTime">Etapa 4.10</h3>
+                        <p class="descripcionTime">Mejora CSS página miPerfil y suscripción, y añadidos nuevos formularios</p>
+                        <p class="miembrosTime">Cristina Morillo</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">09 mayo</div>
+                    <div class="timeline-content">
+                        <h3 class="tituloTime">Etapa 4.11</h3>
+                        <p class="descripcionTime">Mejora CSS página mostrarProducto</p>
+                        <p class="miembrosTime">Elena Basca</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">10 mayo</div>
+                    <div class="timeline-content">
+                        <h3 class="tituloTime">Etapa 4.12</h3>
+                        <p class="descripcionTime">Mejora CSS páginas Términos y Condiciones, Bocetos y Propuesta</p>
+                        <p class="miembrosTime">Lucero Abregú</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">10 mayo</div>
+                    <div class="timeline-content">
+                        <h3 class="tituloTime">Etapa 4.13</h3>
+                        <p class="descripcionTime">Implementación de productos Premium</p>
+                        <p class="miembrosTime">Cristina Morillo</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">11 mayo</div>
+                    <div class="timeline-content">
+                        <h3 class="tituloTime">Etapa 4.14</h3>
+                        <p class="descripcionTime">Añadido blogs recomendados</p>
+                        <p class="miembrosTime">Lucero Abregú</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">12 mayo</div>
+                    <div class="timeline-content">
+                        <h3 class="tituloTime">Etapa 4.15</h3>
+                        <p class="descripcionTime">Añadidas ventanas emergentes al editar y borrar</p>
+                        <p class="miembrosTime">Elena Basca</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">12 mayo</div>
+                    <div class="timeline-content">
+                        <h3 class="tituloTime">Etapa 4.16</h3>
+                        <p class="descripcionTime">Añadida la opción de poder cambiar de contraseña</p>
+                        <p class="miembrosTime">Cristina Morillo</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">12 mayo</div>
+                    <div class="timeline-content">
+                        <h3 class="tituloTime">Etapa 4.17</h3>
+                        <p class="descripcionTime">Añadir gastos de envío en las compras y ventanas emergentes cabecera</p>
+                        <p class="miembrosTime">Jesús Hernández</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">13 mayo</div>
+                    <div class="timeline-content">
+                        <h3 class="tituloTime">Etapa 4.18</h3>
+                        <p class="descripcionTime">Añadir filtros en el blog y, añadir nuevos blogs y productos a la BBDD</p>
+                        <p class="miembrosTime">Lucero Abregú</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">14 mayo</div>
+                    <div class="timeline-content">
+                        <h3 class="tituloTime">Etapa 4.19</h3>
+                        <p class="descripcionTime">Añadir valoración a los productos</p>
+                        <p class="miembrosTime">Sergio Atienza</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">14 mayo</div>
+                    <div class="timeline-content">
+                        <h3 class="tituloTime">Etapa 4.20</h3>
+                        <p class="descripcionTime">Validar CSS y HTML</p>
+                        <p class="miembrosTime">TODOS</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">15 mayo</div>
+                    <div class="timeline-content">
+                        <h3 class="tituloTime">Etapa 4.21</h3>
+                        <p class="descripcionTime">Entrega FINAL</p>
                         <p class="miembrosTime">TODOS</p>
                     </div>
                 </div>

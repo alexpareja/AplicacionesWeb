@@ -50,7 +50,7 @@ else{
 				<?php
 					if(!isset($_SESSION["login"])){
                         ?>
-						<li><a href='login.php'><i class='fas fa-sign-in-alt'></i></a>
+						<li><a href='login.php'><i class='fas fa-user'></i></a>
                         <span class="tooltip">
                         <a href="login.php"><button>Iniciar sesión</button></a>
                         <a class= "enlace-sus" href='registro.php'>¿No estás registrado? Regístrate aquí</a>

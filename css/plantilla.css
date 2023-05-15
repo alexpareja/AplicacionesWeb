@@ -728,7 +728,7 @@ text-shadow: 0.125rem 0.125rem 0.25rem #38313839;
   position: absolute;
   width: 0.125rem;
   height: 100%;
-  background-color: #f0e8e0ff;
+  background-color: #80008041;
   left: calc(50% - 0.0625rem);
 }
 
@@ -768,7 +768,7 @@ text-shadow: 0.125rem 0.125rem 0.25rem #38313839;
 }
 
 .timeline-content{
-  background-color: #f0e8e0ff;
+  background-color: #80008041;
   padding: 1.125rem;
   border-radius: 0.3125rem;
 }
