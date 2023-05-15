@@ -47,7 +47,7 @@ $contenidoPrincipal .= <<<EOS
             </div>
             <div class="boxInicio">
                 <i class="fas fa-star-of-david"></i>
-                <h3>Caja especial</h3>
+                <h3>Caja premium</h3>
                 <p>Caja disponible con la suscripción premium</p>
             </div>
         </div>
