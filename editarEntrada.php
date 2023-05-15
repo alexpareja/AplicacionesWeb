@@ -34,7 +34,6 @@ $contenidoPrincipal .= <<<EOS
 EOS;
 		}
 	}	
-	
 	else{ //si no está definido parámetro id en GET
   $tituloPagina = "Error de búsqueda";
   $contenidoPrincipal .= <<<EOS
