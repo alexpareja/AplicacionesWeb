@@ -116,7 +116,13 @@ button[type="submit"]:hover {
   text-shadow: 0.13rem 0.13rem 0.3rem #332e33;
 }
 
+.boton-premium {
+		
+color:#800080;
+padding: 10px 20px;
+text-decoration: none;
 
+	}
 
 /*compras*/
 table.compras {

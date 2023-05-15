@@ -35,17 +35,33 @@ if (isset($_SESSION['admin']) && $_SESSION['admin']) {
 		<h2 class="titulo1">Productos</h2>
 		<h2 class="titulo2">de La Quinta Caja</h2>
 	EOS;
-	//Se muestran los porductos de la tienda
-	$tienda = new es\ucm\fdi\aw\Tienda();
-	$contenidoPrincipal .= $tienda->productosEnTienda();
-	
 	if(isset($_SESSION['rol'])){
 		if($_SESSION['rol'] == 'A' || $_SESSION['rol'] == 'P') {
 			$contenidoPrincipal .= <<<EOS
 			<br>
 			<br>
+			<a href="#premium-titulo" class="boton-premium">Ver Productos Premium</a>
+
+			EOS;
+		}
+	}
+	//Se muestran los porductos de la tienda
+	$tienda = new es\ucm\fdi\aw\Tienda();
+	$contenidoPrincipal .= $tienda->productosEnTienda();
+	
+	
+	if(isset($_SESSION['rol'])){
+		if($_SESSION['rol'] == 'A' || $_SESSION['rol'] == 'P') {
+			$contenidoPrincipal .= <<<EOS
+			<div id="premium-titulo">
+			<br>
+			<br>
 				<h2 class="titulo1">Productos Premium</h2>
 				<h2 class="titulo2">de La Quinta Caja</h2>
+				<br>
+				<br>
+				<a href="#tienda" class="boton-premium">Volver arriba</a>
+			</div>
 			EOS;
 			$contenidoPrincipal .= $tienda->productosEnTiendaPremium();
 		}
