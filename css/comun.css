@@ -313,6 +313,8 @@ li:hover .tooltip {
   display: none;
 }
 
-
+.strong{
+  font-weight: bold;
+}
 
 
