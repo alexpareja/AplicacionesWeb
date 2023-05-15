@@ -61,7 +61,7 @@ $contenidoPrincipal .= <<<EOS
             </div>
             $htmlFormRegistro
             </div>
-            <div class="comentarios">
+            </div>
             <div class="comentarios">
             <h2>Comentarios</h2>
             EOS;
@@ -91,15 +91,15 @@ $contenidoPrincipal .= <<<EOS
             <input type="radio" name="valoracion" id="estrella0" value="0" checked="checked" />
             <label for="estrella0"></label>
             <input type="radio" name="valoracion" id="estrella1" value="1" />
-            <label for="estrella1"><img src="img/estrellaVacia.png" /></label>
+            <label for="estrella1"><img alt="EstrellaVacia" src="img/estrellaVacia.png" /></label>
             <input type="radio" name="valoracion" id="estrella2" value="2" />
-            <label for="estrella2"><img src="img/estrellaVacia.png" /></label>
+            <label for="estrella2"><img alt="EstrellaVacia" src="img/estrellaVacia.png" /></label>
             <input type="radio" name="valoracion" id="estrella3" value="3" />
-            <label for="estrella3"><img src="img/estrellaVacia.png" /></label>
+            <label for="estrella3"><img alt="EstrellaVacia" src="img/estrellaVacia.png" /></label>
             <input type="radio" name="valoracion" id="estrella4" value="4" />
-            <label for="estrella4"><img src="img/estrellaVacia.png" /></label>
+            <label for="estrella4"><img alt="EstrellaVacia" src="img/estrellaVacia.png" /></label>
             <input type="radio" name="valoracion" id="estrella5" value="5" />
-            <label for="estrella5"><img src="img/estrellaVacia.png" /></label>
+            <label for="estrella5"><img alt="EstrellaVacia" src="img/estrellaVacia.png" /></label>
             </div>
             <button type="submit">Enviar comentario</button>
             </form>

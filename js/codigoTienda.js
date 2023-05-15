@@ -310,9 +310,11 @@ function quitarFiltros(){
 		valoracionRadios[i].checked = false;
 	}
 	$('.estrellas img').attr('src', 'img/estrellaVacia.png');
+	$('.estrellas img').attr('alt', 'EstrellaVacia');
 	var estrellasSeleccionadas = $('input[name="valoracion"]:checked').val();		
 	for (var i = 1; i <= estrellasSeleccionadas; i++) {
 		$('.estrellas img').eq(i - 1).attr('src', 'img/estrellaLlena.png');
+		$('.estrellas img').eq(i - 1).attr('alt', 'EstrellaLlena');
   	}
   
 	document.getElementById("campo-busqueda").value = "";
@@ -473,7 +475,7 @@ function ordenarProductos() {
 			  if(comentarios.length>0)
 			 {
 			calcularMedia(comentarios);
-			const estrellaLlena = '<img class="estrella" src="img/estrellaLlena.png">';
+			const estrellaLlena = '<img alt="EstrellaLlena" class="estrella" src="img/estrellaLlena.png">';
 			$('.mediaProducto').append(estrellaLlena);
 			
 			}
@@ -482,10 +484,12 @@ function ordenarProductos() {
 
 		  $('input[type="radio"]').click(function() {
 			$('.estrellas img').attr('src', 'img/estrellaVacia.png');
+			$('.estrellas img').attr('alt', 'EstrellaVacia');
 			var estrellasSeleccionadas = $('input[name="valoracion"]:checked').val();
 			
 			for (var i = 1; i <= estrellasSeleccionadas; i++) {
 				$('.estrellas img').eq(i - 1).attr('src', 'img/estrellaLlena.png');
+				$('.estrellas img').eq(i - 1).attr('alt', 'EstrellaLlena');
 			  	}
 		  });
 
@@ -536,7 +540,7 @@ function ordenarProductos() {
 				
 				if(comentarios.length==1)
 				{
-					const estrellaLlena = '<img class="estrella" src="img/estrellaLlena.png">';
+					const estrellaLlena = '<img alt="estrellaLlena" class="estrella" src="img/estrellaLlena.png">';
 					$('.mediaProducto').append(estrellaLlena);
 			   }
 			  
@@ -607,8 +611,8 @@ function estableceColor(media) {
 
 
   function generarEstrellas(cantidad) {
-	const estrellaVacia = '<img src="img/estrellaVacia.png">';
-	const estrellaLlena = '<img src="img/estrellaLlena.png">';
+	const estrellaVacia = '<img alt ="EstrellaVacia" src="img/estrellaVacia.png">';
+	const estrellaLlena = '<img alt ="EstrellaLlena" src="img/estrellaLlena.png">';
 	let estrellasHtml = '';
 	
 	for (let i = 1; i <= 5; i++) {
