@@ -11,7 +11,7 @@
 
 CREATE TABLE `blog` (
   `id` int(10) UNSIGNED NOT NULL,
-  `titulo` varchar(40) NOT NULL,
+  `titulo` varchar(250) NOT NULL,
   `contenido` text NOT NULL,
   `descripcion` text NOT NULL,
   `autor` int(10) UNSIGNED NOT NULL,
