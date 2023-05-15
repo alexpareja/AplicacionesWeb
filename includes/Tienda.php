@@ -26,6 +26,7 @@ class Tienda {
 				$nombre = $prod->getNombre();
 				$oferta = $prod->getOferta();
 				$precio = $prod->getPrecio();
+				$tipo = $prod->getPremium();
 				$comentarios = ComentariosProd::buscaPorProducto($prod->getId());
 				$puntuaciones = array();
 				foreach ($puntuaciones as $clave => $valor) {
@@ -47,7 +48,7 @@ class Tienda {
 				$tallas = $prod->getTallasDisponibles();
 				if($tallas !== '' || isset($_SESSION['admin']) && $_SESSION['admin']){
 					$html .= <<<EOS
-						<li class="producto" data-precio='$precio' data-talla='$tallas' data-nombre='$nombre' data-valoracion='$media'>
+						<li class="producto" data-precio='$precio' data-talla='$tallas' data-nombre='$nombre' data-valoracion='$media' data-premium='$tipo'>
 							<a href='$link'>
 							<div class="producto-imagen">
 							<img class='imgProducto

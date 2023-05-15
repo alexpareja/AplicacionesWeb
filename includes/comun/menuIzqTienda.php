@@ -27,6 +27,16 @@
 				</li>
 				
 				<li>
+				<div id="premium-filtros">
+					<p>Tipo de producto:</p>
+					<ul class ="checkfiltros">
+						<li><input type="checkbox" name="tipo" value="1" onclick="filtrarProductos()">Premium</li>
+						<li><input type="checkbox" name="tipo" value="0" onclick="filtrarProductos()">No premium</li>
+					</ul>
+					</div>
+				</li>
+				
+				<li>
 					<p>Precio máximo: <span id="valor-precio">200</span> euros</p>
 					<input type="range" id="slider" min="0" step="1">
 				</li>
@@ -44,7 +54,7 @@
 						<label for="estrella4"><img src="img/estrellaVacia.png" /></label>
 						<input type="radio" name="valoracion" id="estrella5" value="5"  onclick="filtrarProductos()"/>
 						<label for="estrella5"><img src="img/estrellaVacia.png" /></label>
-            </div>
+					</div>
 				</div>
 				</li>
 				
