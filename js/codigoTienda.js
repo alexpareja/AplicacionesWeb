@@ -25,18 +25,36 @@ window.onload = function() {
   var valorPrecio = document.getElementById("valor-precio");
   
   var listaProductos = document.getElementById("lista-productos");
+  var listaProductosPremium = document.getElementById("lista-productos-premium");
+
   var tablaCompras = document.getElementById("tabla-compras");
+  var precios = [];
   
   if(listaProductos !== null){
-	var precios = Array.from(listaProductos.getElementsByTagName("li")).map(function(li) {
+	var preciosNormales = Array.from(listaProductos.getElementsByTagName("li")).map(function(li) {
     return parseFloat(li.getAttribute("data-precio")) || 0;
   });
+	for (var i = 0; i < preciosNormales.length; i++) {
+    precios.push(preciosNormales[i]); 
+	}
   }
-  
+  if(listaProductosPremium !== null){
+	var preciosPremium = Array.from(listaProductosPremium.getElementsByTagName("li")).map(function(li) {
+    return parseFloat(li.getAttribute("data-precio")) || 0;
+  });
+	for (var i = 0; i < preciosPremium.length; i++) {
+    precios.push(preciosPremium[i]); 
+	}
+  }
+    
   if(tablaCompras !== null){
-	var precios = Array.from(tablaCompras.getElementsByTagName("tr")).map(function(tr) {
+	var preciosTabla = Array.from(tablaCompras.getElementsByTagName("tr")).map(function(tr) {
     return parseFloat(tr.getAttribute("data-precio")) || 0;
   });  
+	for (var i = 0; i < preciosTabla.length; i++) {
+    precios.push(preciosTabla[i]); 
+	}
+
   }
   
   var precioMaximo = Math.max.apply(Math, precios);
@@ -69,6 +87,8 @@ function filtrarProductos() {
 
   // Obtener la lista de productos y los elementos de la lista
   var listaProductos = document.getElementById("lista-productos");
+  var listaProductosPremium = document.getElementById("lista-productos-premium");
+
   // Obtener la lista de las compras
   var tablaCompras = document.getElementById("tabla-compras");
   
@@ -85,6 +105,49 @@ function filtrarProductos() {
 	    for (var i = 0; i < elementosLista.length; i++) {
 			var mostrar = true; 
 			var elemento = elementosLista[i];
+			var precio = parseFloat(elemento.getAttribute("data-precio"));
+			var tallas = elemento.getAttribute("data-talla").split(",");
+			var valoracionProducto = parseFloat(elemento.getAttribute("data-valoracion"));
+			
+			if (valoracionProducto < valoracionSeleccionada) {
+				mostrar = false;
+			}
+			for (var j = 0; j < tallasSeleccionadas.length; j++) {
+				if (!tallas.includes(tallasSeleccionadas[j])) {
+				mostrar = false;
+				}
+				else{
+					mostrar = true;
+					break;
+				}
+			}
+	
+			if(precio > precioMaximo){
+				mostrar=false;
+			}
+	
+			// Mostrar u ocultar el elemento según el precio
+			if (mostrar) {
+				elemento.style.display =  "inline-block";
+			} else {
+				elemento.style.display = "none";
+			}
+		}  
+	}
+	
+	if (listaProductosPremium !== null) {
+	var elementosListaPremium = listaProductosPremium.getElementsByTagName("li");
+	var valoracionSeleccionada = "";
+	var radiosValoracion = document.getElementsByName("valoracion");
+	for (var i = 0; i < radiosValoracion.length; i++) {
+		if (radiosValoracion[i].checked) {
+			valoracionSeleccionada = radiosValoracion[i].value;
+			break;
+		}
+	}  
+	    for (var i = 0; i < elementosListaPremium.length; i++) {
+			var mostrar = true; 
+			var elemento = elementosListaPremium[i];
 			var precio = parseFloat(elemento.getAttribute("data-precio"));
 			var tallas = elemento.getAttribute("data-talla").split(",");
 			var valoracionProducto = parseFloat(elemento.getAttribute("data-valoracion"));
@@ -151,12 +214,26 @@ function buscarProductos() {
   var filtro = input.value.toUpperCase();
   
   var listaProductos = document.getElementById("lista-productos");
+  var listaProductosPremium = document.getElementById("lista-productos-premium");
   var tablaCompras = document.getElementById("tabla-compras");
 
   if(listaProductos !== null){
 	var elementosLista = listaProductos.getElementsByTagName("li");
 	for (var i = 0; i < elementosLista.length; i++) {
 		var elemento = elementosLista[i];
+		var nombre = elemento.getAttribute("data-nombre").toUpperCase();
+		if (nombre.indexOf(filtro) > -1) {
+			elemento.style.display = "inline-block";
+		} else {
+			elemento.style.display = "none";
+		}
+	}
+  }
+  
+    if(listaProductosPremium !== null){
+	var elementosListaPremium = listaProductosPremium.getElementsByTagName("li");
+	for (var i = 0; i < elementosListaPremium.length; i++) {
+		var elemento = elementosListaPremium[i];
 		var nombre = elemento.getAttribute("data-nombre").toUpperCase();
 		if (nombre.indexOf(filtro) > -1) {
 			elemento.style.display = "inline-block";
@@ -184,9 +261,44 @@ function buscarProductos() {
 function quitarFiltros(){
 	var slider = document.getElementById("slider");
 	var valorPrecio = document.getElementById("valor-precio");
+	
+	var listaProductos = document.getElementById("lista-productos");
+	var listaProductosPremium = document.getElementById("lista-productos-premium");
+	var tablaCompras = document.getElementById("tabla-compras");
+	
+	var precios = [];
+  
+	if(listaProductos !== null){
+	var preciosNormales = Array.from(listaProductos.getElementsByTagName("li")).map(function(li) {
+    return parseFloat(li.getAttribute("data-precio")) || 0;
+  });
+	for (var i = 0; i < preciosNormales.length; i++) {
+    precios.push(preciosNormales[i]); 
+	}
+  }
+  if(listaProductosPremium !== null){
+	var preciosPremium = Array.from(listaProductosPremium.getElementsByTagName("li")).map(function(li) {
+    return parseFloat(li.getAttribute("data-precio")) || 0;
+  });
+	for (var i = 0; i < preciosPremium.length; i++) {
+    precios.push(preciosPremium[i]); 
+	}
+  }
+    
+  if(tablaCompras !== null){
+	var preciosTabla = Array.from(tablaCompras.getElementsByTagName("tr")).map(function(tr) {
+    return parseFloat(tr.getAttribute("data-precio")) || 0;
+  });  
+	for (var i = 0; i < preciosTabla.length; i++) {
+    precios.push(preciosTabla[i]); 
+	}
 
-	slider.value = 200;
-	valorPrecio.innerText = slider.value;  
+  }
+  
+  var precioMaximo = Math.max.apply(Math, precios);
+  slider.max = (precioMaximo + 1) | 0;
+  valorPrecio.innerText = (precioMaximo + 1) | 0;
+  slider.value = (precioMaximo + 1) | 0;
 	
 	var tallas = document.getElementsByName("tamano");
 	for (var i = 0; i < tallas.length; i++) {
@@ -211,6 +323,7 @@ function quitarFiltros(){
 function ordenarProductos() {
   // Obtener la lista de productos y los elementos de la lista
   var listaProductos = document.getElementById("lista-productos");
+  var listaProductosPremium = document.getElementById("lista-productos-premium");
   var tablaCompras = document.getElementById("tabla-compras");
 
   // Obtener el valor seleccionado en el menú desplegable "Ordenar por"
@@ -220,7 +333,16 @@ function ordenarProductos() {
   if(listaProductos !== null){
 	var elementosLista = listaProductos.getElementsByTagName("li");
 	var arrayElementos = Array.prototype.slice.call(elementosLista);
-  }else{
+  }
+  
+  if(listaProductosPremium !== null){
+	var elementosListaPremium = listaProductosPremium.getElementsByTagName("li");
+	var arrayElementosPremium = Array.prototype.slice.call(elementosListaPremium);
+	console.log(arrayElementosPremium);
+  }
+  
+  
+  if(tablaCompras !== null){
   	var elementosTabla = tablaCompras.getElementsByTagName("tr");
 	var arrayElementos = Array.prototype.slice.call(elementosTabla);
   }
@@ -229,6 +351,17 @@ function ordenarProductos() {
   switch (ordenSeleccionado) {
 	case 'nombreA':
 		arrayElementos.sort(function(a, b) {
+			var nombreA = a.getAttribute("data-nombre");
+			var nombreB = b.getAttribute("data-nombre");
+			if (nombreA < nombreB) {
+				return -1;
+			}
+			if (nombreA > nombreB) {
+				return 1;
+			}
+			return 0;
+		});
+		arrayElementosPremium.sort(function(a, b) {
 			var nombreA = a.getAttribute("data-nombre");
 			var nombreB = b.getAttribute("data-nombre");
 			if (nombreA < nombreB) {
@@ -252,6 +385,17 @@ function ordenarProductos() {
 			}
 			return 0;
 		});
+		arrayElementosPremium.sort(function(a, b) {
+			var nombreA = a.getAttribute('data-nombre');
+			var nombreB = b.getAttribute('data-nombre');
+			if (nombreA > nombreB) {
+				return -1;
+			}
+			if (nombreA < nombreB) {
+				return 1;
+			}
+			return 0;
+		});
     break;
 	case 'precioA':
 		arrayElementos.sort(function(a, b) {
@@ -259,9 +403,19 @@ function ordenarProductos() {
 			var precioB = parseFloat(b.getAttribute('data-precio'));
 			return precioA - precioB;
 		});
+		arrayElementosPremium.sort(function(a, b) {
+			var precioA = parseFloat(a.getAttribute('data-precio'));
+			var precioB = parseFloat(b.getAttribute('data-precio'));
+			return precioA - precioB;
+		});
     break;
   case 'precioD':
 		arrayElementos.sort(function(a, b) {
+			var precioA = parseFloat(a.getAttribute('data-precio'));
+			var precioB = parseFloat(b.getAttribute('data-precio'));
+			return precioB - precioA;
+		});
+		arrayElementosPremium.sort(function(a, b) {
 			var precioA = parseFloat(a.getAttribute('data-precio'));
 			var precioB = parseFloat(b.getAttribute('data-precio'));
 			return precioB - precioA;
@@ -280,6 +434,12 @@ function ordenarProductos() {
 		tablaCompras.appendChild(arrayElementos[i]);
 	}
   }
+  for (var i = 1; i < arrayElementosPremium.length; i++) {
+	if(listaProductosPremium !== null){
+		listaProductosPremium.appendChild(arrayElementosPremium[i]);
+	}
+  }
+  
 }
 
 	$(document).ready(function(){
