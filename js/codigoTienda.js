@@ -704,12 +704,10 @@ $(document).ready(function() {
 });
 
 
-//Ventana pago confirmado
 function confirmarEditar(){
     window.alert("Has editado el producto con éxito");
 }
 
-//Ventana pago confirmado
 function confirmarEliminar(){
     window.alert("Has elimado el producto con éxito. En caso de que existan compras de dicho producto se ha reducido el stock a 0 y solo será visible para los administradores");
 }
