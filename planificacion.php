@@ -433,15 +433,6 @@ $contenidoPrincipal = <<<EOS
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                    <div class="timeline-date">08 mayo</div>
-                    <div class="timeline-content">
-                        <h3 class="tituloTime">Etapa 4.9</h3>
-                        <p class="descripcionTime">Añadido botón de accesibilidad</p>
-                        <p class="miembrosTime">Alejandro Pareja</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
                     <div class="timeline-date">09 mayo</div>
                     <div class="timeline-content">
                         <h3 class="tituloTime">Etapa 4.10</h3>
