@@ -582,7 +582,7 @@ function mostrarFiltrosBlog(){
 	var menu = document.querySelector('.filBlog');
 	
 	if(menu.style.display === 'none'){
-		menu.style.display = 'table-cell';
+		menu.style.display = 'block';
 	}
 	else {
 		menu.style.display = 'none';
@@ -698,9 +698,7 @@ function seleccionarTalla(talla) {
   document.getElementById('tallaSeleccionada').value = talla;
 }
 
-window.onload = function () {
-	terminos();
-}
+
 
 function terminos(){
 	const terminos = document.querySelectorAll('.ter');
@@ -715,7 +713,9 @@ function terminos(){
 		});
 	});
 }
-
+window.onload = function () {
+	terminos();
+}
 function irLogin(){
 	window.location.href = "login.php";
 }

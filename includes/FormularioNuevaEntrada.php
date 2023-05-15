@@ -49,7 +49,7 @@ class FormularioNuevaEntrada extends Formulario
 				</div>
 				<div>
 					<p>
-						<label for="categoria">Categoría:</label>
+						<label class="categoria">Categoría:</label>
 						<input type="radio" id="sostenibilidad" name="categoria" value="sostenibilidad" required>
 						<label for="sostenibilidad" class="dede">Sostenibilidad</label>
 						<input type="radio" id="moda" name="categoria" value="moda">

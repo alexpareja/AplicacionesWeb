@@ -1077,7 +1077,6 @@ text-shadow: 0.125rem 0.125rem 0.25rem #38313839;
 .contenidoBlog{
   color: #383138;
   font-weight: 600;
-  margin-bottom: 2rem;
   padding: 1rem 3rem;
   letter-spacing: 0.1rem;
 }
@@ -1095,32 +1094,29 @@ text-shadow: 0.125rem 0.125rem 0.25rem #38313839;
   border-radius: 0.3125rem;
 }
 
-.btnBlog:hover{
+.btnBlog:hover, .comentario-mostrarMas:hover{
   background: none;
   color: #383138;
 }
 
 .contenidoPer {
-  display: table;
-  width: 100%;
-  overflow: scroll;
+  display: flex;
+  flex-flow: row;
+  align-items: flex-start;
+  gap:4rem;
+  background-color:#f5f5f5;
 }
 
 .filBlog {
   display: none;
-  /*
-  position: fixed;
-  top:3.5rem;
-  height: 100vh;
-  z-index: 2;*/
-  background-color:#f5f5f5;
-  padding: 1.25rem;
-  width: 15rem;
+  margin-left: 1.5rem;
+  padding: 1.5rem 0rem;
+  position: sticky;
+  top: 3rem;
 }
 
 .contenidoArticulos {
-  display: table-cell;
-  overflow: hidden;
+  background-color: white;
 }
 
 .titFB{
@@ -1133,7 +1129,7 @@ text-shadow: 0.125rem 0.125rem 0.25rem #38313839;
   padding: 1rem 0rem;
 }
 
-#ordenar-blogs{
+.ordenar-blogs{
   width: 100%;
   text-align: center;
 }
@@ -1204,8 +1200,8 @@ text-shadow: 0.125rem 0.125rem 0.25rem #38313839;
 
 .articulo{
   border-radius: 1rem;
-  width: 30rem;
-  background-color: #84c3be;
+  width: 25rem;
+  background-color: #84c3be9d;
   text-decoration: none;
   color: white;
   margin-bottom: 2rem;
@@ -1216,9 +1212,14 @@ text-shadow: 0.125rem 0.125rem 0.25rem #38313839;
   color: rgb(52, 55, 55);
 }
 
+.articulo a:hover{
+  color:#800080;
+}
+
 .imagenBlog{
-  width: 30rem;
-  height: 20rem;
+  width: 25rem;
+  min-height: 22rem;
+  max-height: 25rem;
   border-top-left-radius: 0.3125rem;
   border-top-right-radius: 0.3125rem;
 }
@@ -1231,12 +1232,12 @@ text-shadow: 0.125rem 0.125rem 0.25rem #38313839;
 }
 
 .descripcionArt{
-  padding: 0.5rem;
+  padding: 1rem;
   text-align: justify;
 }
 
 .autorArt{
-  padding:0.5rem;
+  padding: 0.5rem;
   font-weight: 600;
   font-size: 0.8rem;
   margin-bottom: 3rem;
@@ -1744,12 +1745,13 @@ input[type="text"].cupon-input:valid {
   background-color: #800080;
   color: white;
   padding: 0.4375rem 0.4375rem;
-  border: none;
   border-radius: 0.3125rem;
   cursor: pointer;
   margin-bottom: 0.625rem;
   font-size: medium;
   margin-top: 1%;
+  border: 0.125rem solid #800080;
+  text-shadow: 0.125rem 0.125rem 0.25rem #383138;
 }
 
 .respuestas {
@@ -1767,6 +1769,19 @@ input[type="text"].cupon-input:valid {
 
 .comentario-mostrarRespuestas:hover, .comentario-ocultarRespuestas:hover {
   text-decoration: underline;
+}
+
+.comentario-mostrarMas{
+  display: inline-block;
+  margin: 3rem 0;
+  background-color: #800080;
+  padding: 0.625rem 2.5rem;
+  color: white;
+  text-decoration: none;
+  border: 0.125rem solid #800080;
+  text-shadow: 0.125rem 0.125rem 0.25rem #383138;
+  border-radius: 0.3125rem;
+  cursor: pointer;
 }
 
 .comentariosBlog-form, .responder-form{
